@@ -68,9 +68,7 @@ switch(playerSide) do {
 		};
 		//posicion
 		life_civ_position = [_this, 9, [], [[]]] call BIS_fnc_param;
-		_posDefined = false;
-		try{ _posDefined = !(isNull life_civ_position); if(_posDefined) then {_posDefined = (typeName life_civ_position == "ARRAY");};};
-		if!(_posDefined) then {life_civ_position = [0,0,0];};
+		if(count life_civ_position != 3) then {civ_position = [0,0,0];};
         life_is_alive = [_this, 10, false, [false]] call BIS_fnc_param;
 
 		[] spawn life_fnc_initHouses;
