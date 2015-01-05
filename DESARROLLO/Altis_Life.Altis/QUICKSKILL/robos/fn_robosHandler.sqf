@@ -70,7 +70,7 @@ sleep _tiempoRegenerarRobo;
 
 
 //añadimos otra vez la opcion de robar
-_action = _vendedor addAction[format["Robar %",_nombreRobo],QUICK_fnc_robosHandler,{_nombreRobo,_tiempoRobo,_dinero,_metros_cancelar_robo,_policias,_itemsRecompensa}];	
+_action = _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,{_nombreRobo,_tiempoRobo,_dinero,_metros_cancelar_robo,_policias,_itemsRecompensa}];	
 
 
 ////funciones robo ////
@@ -154,7 +154,7 @@ if(_time < 1) then{
 
         //informar al jugador
 		
-		[]spawn{sleep 1;hint format["Has robado ",_this select 0];sleep 3;hint ""};
+		[]spawn{sleep 1;hint format["Has robado %1 ",_nombreRobo];sleep 3;hint ""};
 
 
 
