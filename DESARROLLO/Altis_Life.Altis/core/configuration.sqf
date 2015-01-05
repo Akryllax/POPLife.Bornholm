@@ -33,6 +33,7 @@ life_action_gathering = false;
 life_smartphoneTarget = ObjNull;
 //Variables POP Ordenaditas ;D
 life_is_alive = true;
+life_civ_position = nil;
 
 
 //Persistent Saving

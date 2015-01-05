@@ -67,9 +67,9 @@ switch(playerSide) do {
 			[] spawn life_fnc_initGang;
 		};
 		//posicion
-		civ_position = _this select 9;
+		life_civ_position = [_this, 9, [], [[]]] call BIS_fnc_param;
 		if(count life_civ_position != 3) then {civ_position = [0,0,0];};
-        life_is_alive = _this select 10;
+		life_is_alive = [_this, 10, false, [false]] call BIS_fnc_param;
 		[] spawn life_fnc_initHouses;
 	};
 
