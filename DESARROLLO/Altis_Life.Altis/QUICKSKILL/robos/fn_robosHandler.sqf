@@ -1,5 +1,5 @@
 //ejemplo
-//this addAction[format["Robar %1","Camello del bar"],QUICK_fnc_robosHandler,{"Camello del bar",15,round random 200000,50,0,["marijuana"]]}];	
+//this addAction[format["Robar %1","Camello del bar"],QUICK_fnc_robosHandler,{"Camello del bar",15,round random 200000,50,0,["marijuana"]}];	
 //variables privadas generales
 private["_vendedor","_ladron","_action","_nombreRobo","_tiempoRobo","_dinero","_metros_cancelar_robo","_policias","_robosActivados","_cops","_policias","_Pos","_marker","_markerIDrandom"];
 
