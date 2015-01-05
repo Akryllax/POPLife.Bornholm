@@ -70,7 +70,7 @@ sleep _tiempoRegenerarRobo;
 
 
 //añadimos otra vez la opcion de robar
-_action = _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,{_nombreRobo,_tiempoRobo,_dinero,_metros_cancelar_robo,_policias,_itemsRecompensa}];	
+_action = _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,{_nombreRobo,_tiempoRobo,_vendedor,_ladron,_dinero,_metros_cancelar_robo,_policias,_itemsRecompensa}];	
 
 
 ////funciones robo ////
@@ -89,17 +89,17 @@ private "_pagar_ladron";
 private "_itemsRecompensa";
 
 
-_time = _this select 0;
-_vendedor = _this select 1;
-_ladron = _this select 2;
-_metros =  _vendedor distance _ladron;
-_metros_cancelar_robo = _this select 3;
+_nombreRobo =  _this select 0;
+_time = _this select 1;
+_vendedor = _this select 2;
+_ladron = _this select 3;
 _dinero = _this select 4;
-_itemsRecompensa = _this select 4;
+_metros_cancelar_robo = _this select 5;
+_itemsRecompensa = _this select 6;
+_metros =  _vendedor distance _ladron;
 _pagar_ladron = "no";
 
 while {_time > 0} do {
-
 
 	//mirar la distancia entre ladron i vendedor
 	_metros =  _vendedor distance _ladron;
@@ -114,8 +114,7 @@ while {_time > 0} do {
 
 	};
     	
-/// si muere no le pagamos
-
+/// si muere quitamos el timer
 	if !(alive _ladron) then {
 
 		_time = 0;
