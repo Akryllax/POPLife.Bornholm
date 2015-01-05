@@ -8,7 +8,6 @@
 */
 private["_spawnPos","_playerPosition"];
 //Posicion2
-_playerPosition = civ_position;
 diag_log format ["%1",_playerPosition];
 civ_spawn_1 = nearestObjects[getMarkerPos  "civ_spawn_1", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
 civ_spawn_2 = nearestObjects[getMarkerPos  "civ_spawn_2", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
@@ -17,7 +16,7 @@ civ_spawn_4 = nearestObjects[getMarkerPos  "civ_spawn_4", ["Land_i_Shop_01_V1_F"
 waitUntil {!(isNull (findDisplay 46))};
 
 
-if (!life_is_alive) then
+if (!life_is_alive OR life_civ_position isEqualTo [0,0,0]) then
 {
 	[] call life_fnc_spawnMenu;
 	waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
