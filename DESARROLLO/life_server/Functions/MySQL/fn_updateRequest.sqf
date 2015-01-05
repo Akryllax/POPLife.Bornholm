@@ -5,7 +5,7 @@
 	Description:
 	Ain't got time to describe it, READ THE FILE NAME!
 */
-private["_uid","_side","_cash","_bank","_licenses","_gear","_name","_query","_thread"];
+private["_uid","_side","_cash","_bank","_licenses","_gear","_name","_query","_thread","_civPosition","_alive"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _name = [_this,1,"",[""]] call BIS_fnc_param;
 _side = [_this,2,sideUnknown,[civilian]] call BIS_fnc_param;
@@ -14,7 +14,8 @@ _bank = [_this,4,5000,[0]] call BIS_fnc_param;
 _licenses = [_this,5,[],[[]]] call BIS_fnc_param;
 _gear = [_this,6,[],[[]]] call BIS_fnc_param;
 //Posicion
-_civPosition = [_this,8,""] call BIS_fnc_param;
+_civPosition = [_this,8,[],[[]]] call BIS_fnc_param;
+_alive = [_this,9,false,[false]] call BIS_fnc_param;
 
 //Get to those error checks.
 if((_uid == "") OR (_name == "")) exitWith {};
@@ -32,6 +33,7 @@ for "_i" from 0 to count(_licenses)-1 do {
 };
 
 _licenses = [_licenses] call DB_fnc_mresArray;
+diag_log format["civPosition: %1", _civPosition];
 
 switch (_side) do {
 	case west: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', cop_gear='%4', cop_licenses='%5' WHERE playerid='%6'",_name,_cash,_bank,_gear,_licenses,_uid];};
@@ -41,3 +43,8 @@ switch (_side) do {
 
 waitUntil {sleep (random 0.3); !DB_Async_Active};
 _queryResult = [_query,1] call DB_fnc_asyncCall;
+
+diag_log "------------- Client Query Request -------------";
+diag_log format["QUERY: %1",_query];
+diag_log format["RESULT: %1",_query];
+diag_log "------------------------------------------------";
