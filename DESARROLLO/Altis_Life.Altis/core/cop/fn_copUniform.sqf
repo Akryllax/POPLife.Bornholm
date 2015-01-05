@@ -31,7 +31,8 @@
 		switch (_lvl) do {
 			case 1: {
 			    player forceAddUniform "U_Rangemaster";
-				player setObjectTextureGlobal [0, "textures\COP\policia.jpg"]; // Recluta
+				//skin de reluta por jip
+				[[[],{player setObjectTextureGlobal [0, "textures\COP\policia.jpg"];}],"BIS_fnc_execVM",false,true] call BIS_fnc_MP;
 			};
 			case 2: {
 			    player forceAddUniform "U_Rangemaster";
