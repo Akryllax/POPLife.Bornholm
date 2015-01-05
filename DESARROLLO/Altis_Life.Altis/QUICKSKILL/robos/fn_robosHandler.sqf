@@ -13,7 +13,7 @@ _dinero = _this select 3 select 2;//round( random( 100000) + 25000);
 _metros_cancelar_robo = _this select 3 select 3;//50
 _policias = _this select 3 select 4;//3;
 //_robosActivados = robosActivados ;
-_itemsRecompensa =_this select 3 select 5//["marijuana","cocainep","heroinep"];
+_itemsRecompensa =_this select 3 select 5;//["marijuana","cocainep","heroinep"];
 _cops = (west countSide playableUnits);
 
 //si no hay x policias no se puede robar
@@ -95,7 +95,7 @@ _ladron = _this select 2;
 _metros =  _vendedor distance _ladron;
 _metros_cancelar_robo = _this select 3;
 _dinero = _this select 4;
-_itemsRecompensa _this select 4;
+_itemsRecompensa = _this select 4;
 _pagar_ladron = "no";
 
 while {_time > 0} do {
