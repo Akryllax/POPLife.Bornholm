@@ -2,19 +2,29 @@
 /*
 	File: fn_copLoadout.sqf
 	Author: Bryan "Tonic" Boardwine
-	Edited: Itsyuka
+	Edited: Itsyuka,Quickskill
 	
 	Description:
 	Loads the cops out with the default gear.
 */
-private["_handle"];
+
+private["_handle","_lvl"];
+#define __GETC__(var) (call var)
+
+if(__GETC__(life_coplevel) > 0) then {
+_lvl = __GETC__(life_coplevel);
+};
+
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
+	
+
+
 //Recluta
-if(__GETC__(life_coplevel) == 1 ) then
+if(_lvl == 1 ) then
 	{
-		player addUniform "U_Rangemaster";
+		
 		player addItem "ItemRadio"; //ADD THIS
 		player assignItem "ItemRadio"; //ADD THIS
 		player addBackpack "B_Carryall_Base";
@@ -40,9 +50,9 @@ if(__GETC__(life_coplevel) == 1 ) then
 	};
 
 //Municipal
-if(__GETC__(life_coplevel) == 2) then
+if(_lvl == 2) then
 	{
-		player addUniform "U_Rangemaster";
+		
 		player addItem "ItemRadio"; //ADD THIS
 		player assignItem "ItemRadio"; //ADD THIS
 		player addVest "V_TacVest_blk_POLICE";
@@ -71,9 +81,9 @@ if(__GETC__(life_coplevel) == 2) then
 	};
 
 //Nacional 1
-if(__GETC__(life_coplevel) == 3 ) then
+if(_lvl == 3 ) then
 	{
-		player addUniform "U_Rangemaster";
+		
 		player addItem "ItemRadio"; //ADD THIS
 		player assignItem "ItemRadio"; //ADD THIS
 		player addVest "V_TacVest_blk_POLICE";
@@ -102,9 +112,9 @@ if(__GETC__(life_coplevel) == 3 ) then
 	};
 
 //Nacional 2
-if(__GETC__(life_coplevel) == 4 ) then
+if(_lvl == 4 ) then
 	{
-		player addUniform "U_Rangemaster";
+		
 		player addItem "ItemRadio"; //ADD THIS
 		player assignItem "ItemRadio"; //ADD THIS
 		player addVest "V_TacVest_blk_POLICE";
@@ -135,9 +145,9 @@ if(__GETC__(life_coplevel) == 4 ) then
 	};
 
 //Nacional 3
-if(__GETC__(life_coplevel) == 5 ) then
+if(_lvl == 5 ) then
 	{
-		player addUniform "U_Rangemaster";
+		
 		player addItem "ItemRadio"; //ADD THIS
 		player assignItem "ItemRadio"; //ADD THIS
 		player addVest "V_TacVest_blk_POLICE";
@@ -171,9 +181,9 @@ if(__GETC__(life_coplevel) == 5 ) then
 	};
 	
 //Guardia Civil
-if(__GETC__(life_coplevel) == 6 ) then
+if(_lvl == 6 ) then
 	{
-		player addUniform "U_B_CombatUniform_mcam_vest";
+		
 		player addItem "ItemRadio"; //ADD THIS
 		player assignItem "ItemRadio"; //ADD THIS
 		player addVest "V_PlateCarrier1_blk";
@@ -207,9 +217,9 @@ if(__GETC__(life_coplevel) == 6 ) then
 	};
 
 //Guardia Civil
-if(__GETC__(life_coplevel) == 7) then
+if(_lvl == 7) then
 	{
-		player addUniform "U_B_CombatUniform_mcam_vest";
+		
 		player addItem "ItemRadio"; //ADD THIS
 		player assignItem "ItemRadio"; //ADD THIS
 		removeHeadGear player;
@@ -247,9 +257,9 @@ if(__GETC__(life_coplevel) == 7) then
 	};
 
 //GEO
-if(__GETC__(life_coplevel) == 8) then
+if(_lvl == 8) then
 	{
-		player addUniform "U_B_CombatUniform_mcam_vest";
+		
 		player addGoggles "G_Balaclava_Lowprofile";
 		player addItem "ItemRadio"; //ADD THIS
 		player assignItem "ItemRadio"; //ADD THIS
@@ -285,9 +295,9 @@ if(__GETC__(life_coplevel) == 8) then
 	};
 	
 //Capitan
-if(__GETC__(life_coplevel) == 9) then
+if(_lvl == 9) then
 	{
-		player addUniform "U_B_CombatUniform_mcam_vest";
+		
 		player addItem "ItemRadio"; //ADD THIS
 		player assignItem "ItemRadio"; //ADD THIS
 		removeHeadGear player;
