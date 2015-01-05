@@ -1,4 +1,6 @@
-//variables privadas genrales
+//ejemplo
+//this addAction[format["Robar %1","Camello del bar"],QUICK_fnc_robosHandler,{"Camello del bar",15,round random 200000,50,0,["marijuana"]]}];	
+//variables privadas generales
 private["_vendedor","_ladron","_action","_nombreRobo","_tiempoRobo","_dinero","_metros_cancelar_robo","_policias","_robosActivados","_cops","_policias","_Pos","_marker","_markerIDrandom"];
 
 //to?who?what?
@@ -70,7 +72,7 @@ sleep _tiempoRegenerarRobo;
 
 
 //añadimos otra vez la opcion de robar
-_action = _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,{_nombreRobo,_tiempoRobo,_vendedor,_ladron,_dinero,_metros_cancelar_robo,_policias,_itemsRecompensa}];	
+_action = _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,{_nombreRobo,_tiempoRobo,_dinero,_metros_cancelar_robo,_policias,_itemsRecompensa}];	
 
 
 ////funciones robo ////
