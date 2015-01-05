@@ -45,9 +45,11 @@ _marker setMarkerColor "ColorRed";
 _marker setMarkerText "!ATENCION! Estan robando aqui!";
 _marker setMarkerType "mil_warning";	
 
-//iniciar timer robo
-_script_handler = [_tiempoRobo,_vendedor,_ladron,_metros_cancelar_robo,_dinero,_itemsRecompensa] spawn QUICK_timerRobo;
+
+
+_script_handler = [_nombreRobo,_tiempoRobo,_vendedor,_ladron,_metros_cancelar_robo,_dinero,_itemsRecompensa] execVM QUICK_timerRobo;
 waitUntil { scriptDone _script_handler };
+
 
 
 //borrar marcador robo
@@ -80,7 +82,7 @@ _action = _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHand
 QUICK_timerRobo = {
 
         _this spawn{
-
+private "_nombreRobo";
 private "_time";
 private "_vendedor";
 private "_ladron";
@@ -149,7 +151,7 @@ if(_time < 1) then{
 		//dar item especiales
 		 { 
 
-		 [true,_x,round(2 + random(8))] call life_fnc_handleInv;
+		 [true,_x,5] call life_fnc_handleInv;
 
 		} forEach _itemsRecompensa;		
 
@@ -162,9 +164,8 @@ if(_time < 1) then{
 	};//end pagar al ladron
 
 
-	//terminar script
-	
-	if(true) exitWith{ return true};//devolvemos el true para que el waituntil funcione
+	//terminar script	
+	if(true) exitWith{true};//devolvemos el true para que el waituntil funcione
 
 };//end ha terminado el timer
      
