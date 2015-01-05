@@ -178,6 +178,7 @@ class Life_Client_Core
 		class smartphone {};
 		class newMsg {};
 		class showMsg {};
+		class wantedAddP {};
 	};
 	
 	class Functions
@@ -297,6 +298,7 @@ class Life_Client_Core
 		class copLoadout {};
 		class copUniform {};
 		class ticketPaid {};
+		class wantedGrab {};
 	};
 	
 	class Gangs

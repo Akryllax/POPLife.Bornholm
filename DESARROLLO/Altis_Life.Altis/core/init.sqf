@@ -44,6 +44,8 @@ waitUntil {life_session_completed};
 //diag_log "::Life Client:: Group Base Execution";
 [] spawn life_fnc_escInterupt;
 
+[[getPlayerUID player,player getVariable["realname",name player]],"life_fnc_wantedProfUpdate",false,false] spawn life_fnc_MP;
+
 switch (playerSide) do
 {
 	case west:
