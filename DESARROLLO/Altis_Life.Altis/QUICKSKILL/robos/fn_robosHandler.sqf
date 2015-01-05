@@ -23,7 +23,6 @@ _itemsRecompensa = _this select 6;
 _metros =  _vendedor distance _ladron;
 _pagar_ladron = "no";
 
-hint format["nombrerobo: %1 - _timepo %2 -- vendedor %3 - ladron %4 - dinero %5 - metro cancelar %6 - _itemsRecompensa %7 -  metros  %8 -pagar %9",_nombreRobo,_time,_vendedor,_ladron,_dinero,_metros_cancelar_robo,_itemsRecompensa,_metros,_pagar_ladron];
 
 while {_time > 0} do {
 
@@ -112,11 +111,11 @@ _ladron = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _action = [_this,2] call BIS_fnc_param;//Action name
 
 //config
-_nombreRobo =_this select 3 select 0;//"camello del bar" _this select 3 select 0
-_tiempoRobo = _this select 3 select 1;// 300
-_dinero = _this select 3 select 2;//round( random( 100000) + 25000);
-_metros_cancelar_robo = _this select 3 select 3;//50
-_policias = _this select 3 select 4;//3;
+_nombreRobo =_this select 3 select 0 select 0;//"camello del bar" _this select 3 select 0
+_tiempoRobo = _this select 3 select 0 select 1;// 300
+_dinero = _this select 3 select 0 select 2;//round( random( 100000) + 25000);
+_metros_cancelar_robo = _this select 3 select 0 select 3;//50
+_policias = _this select 3 select 0 select 4;//3;
 //_robosActivados = robosActivados ;
 _itemsRecompensa =_this select 3 select 5;//["marijuana","cocainep","heroinep"];
 _cops = (west countSide playableUnits);
