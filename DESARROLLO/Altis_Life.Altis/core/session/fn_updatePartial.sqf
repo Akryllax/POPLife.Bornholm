@@ -50,6 +50,15 @@ switch(_mode) do {
 		_packet set[2,life_cash];
 		_packet set[4,life_atmcash];
 	};
+	case 7: {
+		//RESERVED - DO NOT USE
+	};
+	case 8: {
+		_packet set[2,getPos player];
+	};
+	case 9: {
+		_packet set[2,getPos life_is_alive];
+	};
 };
 
 [_packet,"DB_fnc_updatePartial",false,false] call life_fnc_MP;

@@ -75,6 +75,12 @@ switch(_mode) do {
 		_array = [_this,2,[],[[]]] call BIS_fnc_param;
 		[_uid,_side,_array,0] call TON_fnc_keyManagement;
 	};
+	case 8: {
+		_query = format["UPDATE players SET civPosition='""%1""' WHERE playerid='%2'",_value,_uid];
+	};
+	case 9: {
+		_query = format["UPDATE players SET alive='%1' WHERE playerid='%2'",[_value, 0] call DB_fnc_bool,_uid];
+	};
 };
 
 if(_query == "") exitWith {};
