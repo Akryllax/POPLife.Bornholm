@@ -13,7 +13,9 @@ private["_handle","_lvl"];
 
 if(__GETC__(life_coplevel) > 0) then {
 _lvl = __GETC__(life_coplevel);
-};
+}else{
+_lvl = 1;
+}
 
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};

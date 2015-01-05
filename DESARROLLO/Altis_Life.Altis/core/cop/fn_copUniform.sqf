@@ -30,40 +30,30 @@
 		
 		switch (_lvl) do {
 			case 1: {
-			    player forceAddUniform "U_Rangemaster";
-				//skin de reluta por jip
-				[[[],{player setObjectTextureGlobal [0, "textures\COP\policia.jpg"];}],"BIS_fnc_execVM",false,true] call BIS_fnc_MP;
+				player setObjectTextureGlobal [0, "textures\COP\policia.jpg"]; // Recluta
 			};
 			case 2: {
-			    player forceAddUniform "U_Rangemaster";
 				player setObjectTextureGlobal [0, "textures\COP\policia.jpg"]; // Municipal
 			};
 			case 3: {
-			    player forceAddUniform "U_Rangemaster";
 				player setObjectTextureGlobal [0, "textures\COP\patrullero.jpg"]; // Guardia Civil
 			};
 			case 4: {
-			player forceAddUniform "U_Rangemaster";
 				player setObjectTextureGlobal [0, "textures\COP\patrullero.jpg"]; // Guardia Civil
 			};
 			case 5: {
-			    player forceAddUniform "U_Rangemaster";
 				player setObjectTextureGlobal [0, "textures\COP\patrullero.jpg"]; // Guardia Civil
 			};
 			case 6: {
-			    player forceAddUniform "U_B_CombatUniform_mcam_vest";
 				player setObjectTextureGlobal [0, "textures\COP\agente_montana.jpg"]; // this is for all cops whitelisted or public.
 			};
 			case 7: {
-			    player forceAddUniform "U_B_CombatUniform_mcam_vest";
 				player setObjectTextureGlobal [0, "textures\COP\agente_montana.jpg"]; // this is for all cops whitelisted or public.
 			};
 			case 8: {
-			    player forceAddUniform "U_B_CombatUniform_mcam_vest";
 				player setObjectTextureGlobal [0, "textures\COP\geo.jpg"]; // this is for all cops whitelisted or public.
 			};
 			case 9: {
-			    player forceAddUniform "U_B_CombatUniform_mcam_vest";
 				player setObjectTextureGlobal [0, "textures\COP\geo.jpg"]; // this is for all cops whitelisted or public.
 				player setObjectTextureGlobal [1, "#(argb,8,8,3)color(1.0,0.0,0.0,1)"];
 			};
