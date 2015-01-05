@@ -462,4 +462,15 @@ class Quickskill
 	};
 	
 	
+	class Robos
+	{
+		file = "QUICKSKILL\robos";
+	
+		class robosHandler {};
+			
+		
+		
+	};
+	
+	
 };
