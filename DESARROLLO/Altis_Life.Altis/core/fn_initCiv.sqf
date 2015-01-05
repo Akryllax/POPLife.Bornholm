@@ -31,18 +31,12 @@ if (!life_is_alive) then
 		life_is_arrested = false;
 		[player,true] spawn life_fnc_jail;
 	} else {
-		_posDefined = false;
-		try {
-			_posDefined = !(isNull life_civ_position);
+		if(life_civ_position isEqualTo [0,0,0]) then {
+			[] call _spawnMenu;
+		} else {
+			player setPos life_civ_position;
+			hint format["Sigues vivo y estas donde la ultima vez..."];
 		};
-		if(_posDefined) then {
-			if(life_civ_position isEqualTo [0,0,0]) then {
-				[] call _spawnMenu;
-			} else {
-				player setPos _playerPosition;
-				hint format["Sigues vivo y estas donde la ultima vez..."];
-			};
-		};		
 	};
 	life_is_alive = true;
 };
