@@ -1,5 +1,5 @@
-author = "Tonic, Edquipo de Plata o Plomo";
-onLoadName = "Altis Life RPG POP VERSION  v1";
+author = "Tonic, Equipo de Plata o Plomo";
+onLoadName = "Altis Life RPG POP VERSION ";
 onLoadMission = "Editado por el equipo de Plata o Plomo";
 
 joinUnassigned = 1;
@@ -9,7 +9,7 @@ disabledAI = true;
 disableChannels[]={0,1,2};
 enableDebugConsole = 1;
 respawnDialog = 0;
-
+life_respawn_timer = 30;
 class Header
 {
 	gameType = RPG;
