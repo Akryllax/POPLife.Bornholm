@@ -68,13 +68,11 @@ switch(playerSide) do {
 		};
 		//posicion
 		life_civ_position = [_this, 9, [], [[]]] call BIS_fnc_param;
-<<<<<<< HEAD
+
 		if(count life_civ_position != 3) then {
 			life_civ_position = [0,0,0];
 		};
-=======
 		if(count life_civ_position != 3) then {civ_position = [0,0,0];};
->>>>>>> origin/master
         life_is_alive = [_this, 10, false, [false]] call BIS_fnc_param;
 
 		[] spawn life_fnc_initHouses;
@@ -86,8 +84,8 @@ switch(playerSide) do {
 	};
 };
 
-if(count (_this select 12) > 0) then {
-	{life_vehicles pushBack _x;} foreach (_this select 12);
+if(count (_this select 13) > 0) then {
+	{life_vehicles pushBack _x;} foreach (_this select 13);
 };
 
 life_session_completed = true;

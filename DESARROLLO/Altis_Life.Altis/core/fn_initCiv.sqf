@@ -19,7 +19,7 @@ _spawnMenu = {
 	[] call life_fnc_spawnMenu;
 	waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
-	life_is_alive = false; //Just to avoid that users appear in the debug island.
+	life_is_alive = true; //Just to avoid that users appear in the debug island.
 };
 
 if (!life_is_alive) then
