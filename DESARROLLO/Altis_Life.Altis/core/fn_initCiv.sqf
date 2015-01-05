@@ -6,7 +6,7 @@
 	Description:
 	Initializes the civilian.
 */
-private["_spawnPos","_playerPosition"];
+private["_spawnPos"];
 //Posicion2
 diag_log format ["%1",life_civ_position];
 civ_spawn_1 = nearestObjects[getMarkerPos  "civ_spawn_1", ["Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Shop_03_V1_F","Land_i_Stone_HouseBig_V1_F"],250];
