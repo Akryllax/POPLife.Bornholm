@@ -415,14 +415,6 @@
 			<French>Votre Niveau admin n'est pas suffisamment élevée</French>
 			<Spanish>Marcadores de jugadores activados</Spanish>
 		</Key>
-		<Key ID="STR_Global_No">
-			<Original>No</Original>
-			<English>No</English>
-			<German>Nein</German>
-			<French>Aucun</French>
-			<Spanish>No</Spanish>
-
-		</Key>
 	</Package>
 	<Package name="Admin_Notifications">
 		<Key ID="STR_ANOTF_Query">
@@ -6479,10 +6471,6 @@
 		<Key ID="STR_SMARTPHONE_RANDOMTITLE">
 			<Original>Select the message to show</Original>
 			<Spanish>Seleccione un mensaje para leerlo</Spanish>
-		</Key>
-		<Key ID="STR_Global_Close">
-			<Original>Close</Original>
-			<Spanish>Cerrar</Spanish>
 		</Key>
 		<Key ID="STR_SMARTPHONE_SCHREIBEN">
 			<Original>Write</Original>
