@@ -1,0 +1,80 @@
+class Quickskill
+{
+	tag = "QUICK";
+	
+	class Clases
+	{
+		file = "core\clases";
+		class comprarClaseGangster {};
+		class comprarClasePeriodista {};
+		class comprarClasePiloto {};
+		class comprarClaseTransportista {};
+		class comprarClaseLadron {};
+                class comprarClaseTaliban {};
+                class comprarClaseTerroristaPesado {};
+		class comprarClaseTerroristaRifle {};
+		class comprarClaseTerroristaRifle2 {};
+                class comprarClaseTerroristaSilenciado {};
+                class comprarClaseTerroristaSniper {};
+                class comprarCocheBomba {};
+	};
+
+     class Plantar
+	{
+		file = "QUICKSKILL\items";
+	
+		class plantarMaria {};
+                class plantarCoca {};
+                class plantarMaiz {};
+                class plantarTomates {};
+		
+		
+	};
+	
+	class EfectosDrogas
+	{
+		file = "QUICKSKILL\items";
+		class drugsEffects {};
+
+		
+	};
+
+     class ItemsCiviles
+	{
+		file = "QUICKSKILL\items";
+	
+		class gpsEspia {};
+		
+		
+	};
+	
+	class ItemsPolicia
+	{
+		file = "QUICKSKILL\items\POLICIA";
+	
+		class barrera {};
+		class packUpbarrera {};
+		class barricada {};
+		class packUpbarricada {};
+		class cono {};
+		class packupcono {};
+		class muro {};
+		class packupmuro {};
+		class valla {};
+		class packUpvalla {};
+		
+	};
+	
+	class RoleMode
+	{
+		file = "QUICKSKILL\rolemode";
+	
+		class roleMode {};
+		class roleModeCops {};
+		
+		
+		
+	};
+	
+	
+};

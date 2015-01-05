@@ -1,0 +1,31 @@
+///como se usa ///
+
+agregar objeto a la lista de objetos virtuales , archivo : core/configuration.sqf;
+
+"life_inv_gpsEspia"
+
+//agregar a la stringtovar para que el salga el nombre mas descriptivo al jugador , archivo core/config/varToStr,sqf
+
+case "life_inv_gpsEspia": { ("GPS Espia") };
+
+//agregar la accion de usar el objeto en el archivo de core/pmenu/fn_useItem.sqf
+
+    //usar gps
+	case (_item == "gpsEspia"): {
+		///usar gps espia en jugador
+		if(([false,_item,1] call life_fnc_handleInv)) then{
+
+			_espia = player;
+			_espiado = cursorTarget;
+
+			_script_handler = [_espia,_espiado,] execVM "QUICKSKILL\items\gps_espia.sqf";
+
+		};
+
+	};
+
+
+//init para el npc
+
+this addAction["Comprar clase espia","QUICKSKILL\items\comprar_clase_espia.sqf"];
+

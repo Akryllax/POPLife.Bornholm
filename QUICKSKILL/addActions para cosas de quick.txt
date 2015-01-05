@@ -1,0 +1,35 @@
+//////////ACTIONS PARA EQUPACIONES CIVILES /////////////// no copiar esta linia en el init PACO!!!!!!!
+
+this allowDamage false; this enableSimulation false; 
+this addAction["Comprar clase Gangster 55000$", QUICK_fnc_comprarClaseGangster];
+this addAction["Comprar clase Piloto 55000$",QUICK_fnc_comprarClasePiloto];
+this addAction["Comprar clase Transportista 55000$", QUICK_fnc_comprarClaseTransportista];
+this addAction["Comprar clase Periodista 55000$",QUICK_fnc_comprarClasePeriodista];
+this addAction["Equipar Clase Ladron 75000$",QUICK_fnc_comprarClaseLadron];
+
+
+
+
+
+
+//////////ACTIONS PARA EQUPACIONES REBELES /////////////// no copiar esta linia en el init PACO!!!!!!!
+
+this enableSimulation false;
+this allowDamage false;
+this addAction["Equipar Clase Rifle mxc  80000$",QUICK_fnc_comprarClaseTerroristaRifle];  
+this addAction["Equipar Clase Katiba silenciada 100000$",QUICK_fnc_comprarClaseTerroristaSilenciado];  
+this addAction["Equipar Clase Rifle mk18  150000$",QUICK_fnc_comprarClaseTerroristaRifle2];
+this addAction["Equipar Clase Rifle mxc  80000$",QUICK_fnc_comprarClaseTerroristaRifle];  
+this addAction["Equipar Clase mk200 175000$",QUICK_fnc_comprarClaseTerroristaPesado];  
+this addAction["Equipar Clase Lynx 325000$",QUICK_fnc_comprarClaseTerroristaSniper];
+
+//////////ACTIONS PARA EQUPACIONES Terroristas /////////////// no copiar esta linia en el init PACO!!!!!!!
+
+this enableSimulation false;
+this allowDamage false;
+this addAction["Comprar Coche Bomba 550000$",QUICK_fnc_comprarClaseCocheBomba]; 
+this addAction["Comprar Clase Taliban Suicida 350000$",QUICK_fnc_comprarClaseTaliban];
+
+//////////ACTIONS PARA ESPIA /////////////// no copiar esta linia en el init PACO!!!!!!!
+
+this addAction["Equipar Clase ESPIA 250000$",QUICK_fnc_comprarClaseEspia];

@@ -1,0 +1,69 @@
+fn_kry_handler.sqf;
+//role mode con c
+	
+
+case 46:
+	{
+
+		if(!life_action_inUse) then {
+
+			
+
+
+switch (playerSide) do 
+	{			
+			
+			
+
+
+case west: {if(!visibleMap) then { 	
+
+[] spawn 
+{
+			
+_handle = [] spawn QUICK_fnc_roleModeCops;
+	        
+waitUntil {scriptDone _handle};
+			
+sleep 3;
+			
+life_action_inUse = false;
+			
+};
+			
+			
+};};
+	
+		
+case independent: {if(!visibleMap) then {                           }};
+
+
+case civilian: {if(!visibleMap) then {
+			
+[] spawn 
+{
+			
+_handle = [] spawn QUICK_fnc_roleMode;
+	        
+waitUntil {scriptDone _handle};
+			
+sleep 3;
+			
+life_action_inUse = false;
+			
+};
+			
+};};
+
+			
+};
+ 
+           
+            
+		
+};
+
+		
+		
+	
+};
