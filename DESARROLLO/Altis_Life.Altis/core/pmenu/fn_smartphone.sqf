@@ -38,6 +38,7 @@ switch(_type) do
 		} forEach playableUnits;
 		
 		[[getPlayerUID player, player],"GHB_fnc_msgRequest",false] spawn life_fnc_MP;
+		[[getPlayerUID player, player],"TON_fnc_msgRequest",false] spawn life_fnc_MP;
 		ctrlEnable[887892,false];
 	};
 	case 1:
@@ -57,7 +58,7 @@ switch(_type) do
 	case 4:
 	{
 		createDialog "Life_smartphone_schreiben";
-		ctrlSetText[88886, format["Nachricht an: %1",name life_smartphoneTarget]];
+		ctrlSetText[88886, format["Mensaje para: %1",name life_smartphoneTarget]];
 		if((__GETC__(life_adminlevel) < 1)) then
 		{
 			ctrlShow[888897,false];
