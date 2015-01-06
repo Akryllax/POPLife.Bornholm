@@ -9,7 +9,7 @@
 	
 	Example:
 	
-		this addAction["Robar X", QUICK_fnc_robosHandler, ["Camellito camello", TIMEPO, DINERO, METROS DE ROBO, ITEMS RECOMPENSA]];
+		this addAction["Robar X", QUICK_fnc_robosHandler, ["Camellito camello", TIMEPO, DINERO, METROS DE ROBO, ITEMS RECOMPENSA, POLICIA]];
 */
 	
 //Variables privadas generales
@@ -30,7 +30,7 @@ _params pushBack _ladron;
 _cops = (west countSide playableUnits);
 
 //Si no hay x policias no se puede robar
-if(_cops < (_params select 4)) exitWith {
+if(_cops < (_params select 5)) exitWith {
 	hint "No hay suficiente policía para robar.";
 };
 
