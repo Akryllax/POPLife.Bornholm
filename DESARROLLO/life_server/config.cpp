@@ -133,6 +133,13 @@ class CfgFunctions
 				class handleMessages {};
 				class msgRequest {};
 		};	
+
+		class RandomEvent
+		{
+			  file = "\life_server\Functions\WarBlast";
+			class spawnHeliCrash {};
+			class spawnNaufragios {};
+		}
 	};
 };
 

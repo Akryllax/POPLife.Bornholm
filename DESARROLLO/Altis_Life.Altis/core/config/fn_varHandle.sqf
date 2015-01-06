@@ -1,7 +1,7 @@
 /*
 	File: fn_varHandle.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master handler for getting a variables name, short name, etc.
 */
@@ -65,9 +65,27 @@ switch (_mode) do
 			case "defusekit": {"life_inv_defusekit"};
 			case "storagesmall": {"life_inv_storagesmall"};
 			case "storagebig": {"life_inv_storagebig"};
+			// Helicrash
+			case "centralita": {"life_inv_centralita"};
+			case "trajesoldado": {"life_inv_trajesoldado"};
+			case "chatarra": {"life_inv_chatarra"};
+			case "piezasmotor": {"life_inv_piezasmotor"};
+			case "municionmilitar": {"life_inv_municionmilitar"};
+			case "medallas": {"life_inv_medallas"};
+			case "kevlar": {"life_inv_kevlar"};
+			// Naufragio
+			case "pergamino": {"life_inv_pergamino"};
+			case "vasija": {"life_inv_vasija"};
+			case "jarron": {"life_inv_jarron"};
+			case "doblon": {"life_inv_doblon"};
+			case "brazalete": {"life_inv_brazalete"};
+			case "catalejo": {"life_inv_catalejo"};
+			case "abrecartas": {"life_inv_abrecartas"};
+			case "collar": {"life_inv_collar"};
+			case "cetro": {"life_inv_cetro"};
 		};
 	};
-	
+
 	case 1:
 	{
 		switch (_var) do
@@ -121,6 +139,24 @@ switch (_mode) do
 			case "life_inv_defusekit": {"defusekit"};
 			case "life_inv_storagesmall": {"storagesmall"};
 			case "life_inv_storagebig": {"storagebig"};
+			// Helicrash
+			case "life_inv_centralita": {"centralita"};
+			case "life_inv_trajesoldado": {"trajesoldado"};
+			case "life_inv_chatarra": {"chatarra"};
+			case "life_inv_piezasmotor": {"piezasmotor"};
+			case "life_inv_municionmilitar": {"municionmilitar"};
+			case "life_inv_medallas": {"medallas"};
+			case "life_inv_kevlar": {"kevlar"};
+			// Naufragio
+			case "life_inv_pergamino": {"pergamino"};
+			case "life_inv_vasija": {"vasija"};
+			case "life_inv_jarron": {"jarron"};
+			case "life_inv_doblon": {"doblon"};
+			case "life_inv_brazalete": {"brazalete"};
+			case "life_inv_catalejo": {"catalejo"};
+			case "life_inv_abrecartas": {"abrecartas"};
+			case "life_inv_collar": {"collar"};
+			case "life_inv_cetro": {"cetro"};
 		};
 	};
 };

@@ -393,7 +393,17 @@ class Life_Client_Core
 		class gangDeposit {};
 	};
 };
+class WarBlast
+{
+	tag = "War";
 
+ 	class DynamicMap
+	{
+		file = "core\WarBlast\DynamicMap";
+		class dynamicMapHeliCrash {}; // WarBlast: DynamicMap
+		class dynamicMapNaufragios {}; // WarBlast: DynamicMap
+	};
+};
 class Quickskill
 {
 	tag = "QUICK";

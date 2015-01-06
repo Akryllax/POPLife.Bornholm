@@ -1,7 +1,7 @@
 /*
 	File: fn_itemWeight.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Gets the items weight and returns it.
 */
@@ -56,5 +56,23 @@ switch (_item) do
 	case "defusekit": {2};
 	case "storagesmall": {5};
 	case "storagebig": {10};
+	// Helicrash
+	case "centralita": {4};
+	case "trajesoldado": {4};
+	case "chatarra": {4};
+	case "piezasmotor": {6};
+	case "municionmilitar": {6};
+	case "medallas": {8};
+	case "kevlar": {8};
+	// Naufragios
+	case "pergamino": {4};
+	case "vasija": {4};
+	case "jarron": {4};
+	case "doblon": {6};
+	case "brazalete": {6};
+	case "catalejo": {8};
+	case "abrecartas": {6};
+	case "collar": {8};
+	case "cetro": {8};
 	default {1};
 };

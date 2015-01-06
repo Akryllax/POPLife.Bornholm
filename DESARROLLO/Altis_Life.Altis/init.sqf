@@ -22,11 +22,11 @@ StartProgress = true;
 	    0 setOvercast 0;
 		0 setRain 0;
 		0 setFog 0;
-		
+
 		_timeCTiempo = nextWeatherChange;
 
 		sleep _timeCTiempo;
-		
+
 
 };
 
@@ -49,6 +49,6 @@ if(isServer) then {
 } else {
 
 };
-
+{_x setMarkerAlphaLocal 0} forEach ["helicrash_1","helicrash_2","helicrash_3","helicrash_4","wreck_1","wreck_2","wreck_3","wreck_4"];
 
 

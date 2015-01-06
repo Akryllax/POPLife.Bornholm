@@ -164,7 +164,25 @@ life_inv_items =
 	"life_inv_boltcutter",
 	"life_inv_defusekit",
 	"life_inv_storagesmall",
-	"life_inv_storagebig"
+	"life_inv_storagebig",
+	// Helicrash
+	"life_inv_centralita",
+	"life_inv_trajesoldado",
+	"life_inv_chatarra",
+	"life_inv_piezasmotor",
+	"life_inv_municionmilitar",
+	"life_inv_medallas",
+	"life_inv_kevlar",
+	// Naufragios
+	"life_inv_pergamino",
+	"life_inv_vasija",
+	"life_inv_jarron",
+	"life_inv_doblon",
+	"life_inv_brazalete",
+	"life_inv_abrecartas",
+	"life_inv_catalejo",
+	"life_inv_collar",
+	"life_inv_cetro"
 ];
 
 //Setup variable inv vars.
@@ -243,7 +261,25 @@ sell_array =
 	["fuelF",500],
 	["spikeStrip",1200],
 	["cement",1950],
-	["goldbar",95000]
+	["goldbar",95000],
+	// Helicrash
+	["centralita",100],
+	["trajesoldado",100],
+	["chatarra",100],
+	["piezasmotor",100],
+	["municionmilitar",100],
+	["medallas",100],
+	["kevlar",100],
+	// Naufragios
+	["pergamino",100],
+	["vasija",100],
+	["jarron",100],
+	["doblon",100],
+	["brazalete",100],
+	["abrecartas",100],
+	["catalejo",100],
+	["collar",100],
+	["cetro",100]
 ];
 __CONST__(sell_array,sell_array);
 

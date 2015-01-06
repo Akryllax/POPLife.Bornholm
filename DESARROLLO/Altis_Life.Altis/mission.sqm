@@ -10621,6 +10621,100 @@ class Mission
 			type="mil_dot";
 			colorName="ColorRed";
 		};
+		class Item274
+		{
+			position[]={11497.573,131.31902,7860.9644};
+			name="helicrash_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			a=1000;
+			b=1000;
+		};
+		class Item275
+		{
+			position[]={20879.709,42.906197,6280.9141};
+			name="helicrash_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			a=800;
+			b=800;
+		};
+		class Item276
+		{
+			position[]={4263.397,278.45416,19545.607};
+			name="helicrash_3";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			a=1000;
+			b=1500;
+		};
+		class Item277
+		{
+			position[]={10147.808,109.56047,21302.482};
+			name="helicrash_4";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			a=1500;
+			b=900;
+		};
+		class Item287
+		{
+			position[]={1669.7471,-185.97,29809.531};
+			name="helicrash_dropeffects";
+			type="Empty";
+		};
+		class Item288
+		{
+			position[]={11011.64,39.386761,14849.243};
+			name="Veterano de guerra";
+			text="Veterano de guerra";
+			type="o_service";
+			colorName="ColorGUER";
+		};
+		class Item290
+		{
+			position[]={11592.553,-0.27453285,5633.3345};
+			name="wreck_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorGreen";
+			a=2000;
+			b=500;
+		};
+		class Item291
+		{
+			position[]={5109.3765,-0.20885138,8686.8398};
+			name="wreck_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorGreen";
+			a=3000;
+			b=500;
+		};
+		class Item292
+		{
+			position[]={23367.809,-0.16490236,10901.898};
+			name="wreck_4";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorGreen";
+			a=800;
+			b=2000;
+		};
+		class Item293
+		{
+			position[]={2919.1968,0.12079627,16142.447};
+			name="wreck_3";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorGreen";
+			a=500;
+			b=1000;
+		};
 	};
 };
 class Intro

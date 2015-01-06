@@ -2,7 +2,7 @@
 /*
 	File: fn_actionKeyHandler.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master action key handler, handles requests for picking up various items and
 	interacting with other players (Cops = Cop Menu for unrestrain,escort,stop escort, arrest (if near cop hq), etc).
@@ -18,12 +18,17 @@ if(isNull _curTarget) exitWith {
 		_fish = (nearestObjects[getPos player,["Fish_Base_F"],3]) select 0;
 		if(!isNil "_fish") then {
 			[_fish] call life_fnc_catchFish;
+			} else {
+			// WarBlast: Dynamic Map
+			[] spawn life_fnc_dynamicMapNaufragios;
 		};
 	} else {
 		if(playerSide == civilian && !life_action_gathering) then {
 			_handle = [] spawn life_fnc_gather;
 			waitUntil {scriptDone _handle};
 			life_action_gathering = false;
+			// WarBlast: Dynamic Map
+			[] spawn life_fnc_dynamicMapHeliCrash;
 		};
 	};
 };
@@ -63,7 +68,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	_miscItems = ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"];
 	_animalTypes = ["Salema_F","Ornate_random_F","Mackerel_F","Tuna_F","Mullet_F","CatShark_F","Turtle_F"];
 	_money = "Land_Money_F";
-	
+
 	//It's a vehicle! open the vehicle interaction key!
 	if(_isVehicle) then {
 		if(!dialog) then {
