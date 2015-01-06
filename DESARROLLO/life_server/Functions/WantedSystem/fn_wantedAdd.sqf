@@ -18,6 +18,9 @@ if(_uid == "" OR _type == "" OR _name == "") exitWith {}; //Bad data passed.
 //What is the crime?
 switch(_type) do
 {
+	//What is the crime?
+switch(_type) do
+{
 	case "187V": {_type = ["187V",6500]};
 	case "187": {_type = ["187",20000]};
 	case "901": {_type = ["901",4500]};
@@ -48,6 +51,7 @@ switch(_type) do
     case "6": {_type = ["6",5000]};
 	case "7": {_type = ["7",10000]};
 	default {_type = [];};
+};
 };
 
 if(count _type == 0) exitWith {}; //Not our information being passed...
