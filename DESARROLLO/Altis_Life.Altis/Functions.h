@@ -399,7 +399,7 @@ class WarBlast
 
  	class DynamicMap
 	{
-		file = "core\WarBlast\DynamicMap";
+		file = "WarBlast\DynamicMap";
 		class dynamicMapHeliCrash {}; // WarBlast: DynamicMap
 		class dynamicMapNaufragios {}; // WarBlast: DynamicMap
 	};
