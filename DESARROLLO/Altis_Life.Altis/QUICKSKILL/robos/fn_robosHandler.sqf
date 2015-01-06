@@ -20,7 +20,7 @@ _vendedor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _ladron = 	[_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _action = 	[_this,2] call BIS_fnc_param;//Action name
 
-_params = [_this, 3, [], [[]] call BIS_fnc_param;
+_params = [_this, 3, [], [[]]] call BIS_fnc_param;
 
 if!(count _params > 0) exitWith{}; //WHAT THE FUCKING FUCKED FUCK ARMA, STOP MESSING ARROUND
 _params pushBack _vendedor;
