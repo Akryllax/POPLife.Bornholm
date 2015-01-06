@@ -1,96 +1,98 @@
 ////////funcion timer para el robo, no tocar////
 _QUICK_timerRobo = {
 
-_this spawn{
-private ["_nombreRobo", "_time", "_vendedor", "_ladron", "_metros", "_metros_cancelar_robo", "_dinero", "_pagar_ladron", "_itemsRecompensa"];
+	_this spawn{
+	private ["_nombreRobo", "_time", "_vendedor", "_ladron", "_metros", "_metros_cancelar_robo", "_dinero", "_pagar_ladron", "_itemsRecompensa"];
 
-_nombreRobo =  			[_this, 0, "",[""]] call BIS_fnc_param;
-_time = 				[_this, 1, -1,[-1]] call BIS_fnc_param;
-_vendedor = 			[_this, 2, objNull,[objNull]] call BIS_fnc_param;
-_ladron = 				[_this, 3, objNull,[objNull]] call BIS_fnc_param;
-_dinero = 				[_this, 4, -1,[-1]] call BIS_fnc_param;
-_metros_cancelar_robo = [_this, 5, -1,[-1]] call BIS_fnc_param;
-_itemsRecompensa = 		[_this, 6, [],[[]]] call BIS_fnc_param;
-_pagar_ladron = 		"no";
+	_nombreRobo =  			[_this, 0, "",[""]] call BIS_fnc_param;
+	_time = 				[_this, 1, -1,[-1]] call BIS_fnc_param;
+	_vendedor = 			[_this, 2, objNull,[objNull]] call BIS_fnc_param;
+	_ladron = 				[_this, 3, objNull,[objNull]] call BIS_fnc_param;
+	_dinero = 				[_this, 4, -1,[-1]] call BIS_fnc_param;
+	_metros_cancelar_robo = [_this, 5, -1,[-1]] call BIS_fnc_param;
+	_itemsRecompensa = 		[_this, 6, [],[[]]] call BIS_fnc_param;
+	_pagar_ladron = 		"no";
 
-//Error checking
-if!(count _nombreRobo > 0) exitWith{hint "Error, _nombreRobo is null";};
-if(_time < 0) exitWith{ hint "Error, _time is null";};
-if(isNull _vendedor) exitWith{ hint "Error, _vendedor is null"};
-if(_dinero < 0) exitWith{ hint "Error, _dinero is null"};
-if(_metros_cancelar_robo) exitWith{ hint "Error, _metros_cancelar_robo is null"};
-if!(count _itemsRecompensa > 0) exitWith{ hint "Error, _itemsRecompensa is null"};
+	//Error checking
+	if!(count _nombreRobo > 0) exitWith{hint "Error, _nombreRobo is null";};
+	if(_time < 0) exitWith{ hint "Error, _time is null";};
+	if(isNull _vendedor) exitWith{ hint "Error, _vendedor is null"};
+	if(_dinero < 0) exitWith{ hint "Error, _dinero is null"};
+	if(_metros_cancelar_robo) exitWith{ hint "Error, _metros_cancelar_robo is null"};
+	if!(count _itemsRecompensa > 0) exitWith{ hint "Error, _itemsRecompensa is null"};
 
-_metros = _vendedor distance _ladron;
+	_metros = _vendedor distance _ladron;
 
-while {_time > 0} do {
-
-	//mirar la distancia entre ladron i vendedor
-	_metros =  _vendedor distance _ladron;
-
-	//abandono zona de robo
-	if(_metros > _metros_cancelar_robo) then{		
+	//Guardamos el tiempo de inicio del robo.
+	_timestamp = time;
 	
-			hintSilent format["Has abandonado la zona de robo estabas a %1m del vendedor",round (_metros)];
+	while {time < _timestamp + _time} do {
+
+		//mirar la distancia entre ladron i vendedor
+		_metros =  _vendedor distance _ladron;
+
+		//abandono zona de robo
+		if(_metros > _metros_cancelar_robo) then{		
+		
+				hintSilent format["Has abandonado la zona de robo estabas a %1m del vendedor",round (_metros)];
+				_time = 0;
+				_pagar_ladron = "no";
+				sleep 1;
+
+		};
+			
+	/// si muere quitamos el timer
+		if !(alive _ladron) then {
+
 			_time = 0;
-			_pagar_ladron = "no";
+
+		};
+
+	//mientras este dentro de rango que cuente el tiempo
+		if(_metros < _metros_cancelar_robo) then{		
+			//contar tiempo
+			_time = _time - 1;  
+			hintSilent format["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_cancelar_robo];	
 			sleep 1;
+			_pagar_ladron = "si";
 
-	};
-    	
-/// si muere quitamos el timer
-	if !(alive _ladron) then {
+		};
+				
+			
+	};//en while timer
 
-		_time = 0;
+	//si el tiempo es mas pequeño que 1 ha termiando el robo
+	if(_time < 1) then{
 
-	};
-
-//mientras este dentro de rango que cuente el tiempo
-	if(_metros < _metros_cancelar_robo) then{		
-	
-	//contar tiempo
-	_time = _time - 1;  
-	hintSilent format["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_cancelar_robo];	
-	sleep 1;
-	_pagar_ladron = "si";
-
-	};
-    		
+		//si a robado pagar al ladron
+		if(_pagar_ladron == "si" and alive _ladron) then {
 		
-};//en while timer
+			//dar pasta
+			life_cash = life_cash + _dinero;
 
-//si el tiempo es mas pequeño que 1 ha termiando el robo
-if(_time < 1) then{
+			//dar item especiales
+			 { 
 
-	//si a robado pagar al ladron
-	if(_pagar_ladron == "si" and alive _ladron) then {
-	
-		//dar pasta
-		life_cash = life_cash + _dinero;
+			 [true,_x,5] call life_fnc_handleInv;
 
-		//dar item especiales
-		 { 
+			} forEach _itemsRecompensa;		
 
-		 [true,_x,5] call life_fnc_handleInv;
-
-		} forEach _itemsRecompensa;		
-
-        //informar al jugador
-		
-		[]spawn{sleep 1;hint format["Has robado %1 ",_nombreRobo];sleep 3;hint ""};
+			//informar al jugador
+			
+			[]spawn{sleep 1;hint format["Has robado %1 ",_nombreRobo];sleep 3;hint ""};
 
 
 
-	};//end pagar al ladron
+		};//end pagar al ladron
 
 
-	//terminar script	
-	if(true) exitWith{};
+		//terminar script	
+		if(true) exitWith{};
 
-};//end ha terminado el timer
-     
+	};//end ha terminado el timer
+		 
 
-       };//end this spawn
+		   };//end this spawn
 
 };//end funcion quicktimerobo
 
