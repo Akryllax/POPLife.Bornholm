@@ -1,0 +1,7 @@
+enableDebugConsole = 1;
+
+class CfgFunctions
+{
+	preInit = 1;
+	#include "Functions.h"
+};

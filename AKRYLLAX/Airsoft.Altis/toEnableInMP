@@ -1,0 +1,14 @@
+AKR_fnc_AddAction = {
+
+	_var = _this select 0;
+
+	removeAllActions _var;
+
+	_var addAction ["Entrar como RED", AKR_fnc_createAvatar, ["red"]];
+	_var addAction ["Entrar como BLUE", AKR_fnc_createAvatar, ["blue"]];
+
+};
+
+publicVariable "AKR_fnc_AddAction";
+
+[[cursorTarget],"AKR_fnc_AddAction", true, true] call BIS_fnc_mp;
