@@ -1,7 +1,7 @@
 /*
 	File: fn_gather.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Main functionality for gathering.
 */
@@ -18,6 +18,9 @@ life_action_gathering = true;
 } foreach _resourceZones;
 
 if(_zone == "") exitWith {
+	//WarBlast:Helicrash
+	_handle = [] spawn life_fnc_dynamicMapHeliCrash;
+	waitUntil {scriptDone _handle};
 	life_action_inUse = false;
 };
 

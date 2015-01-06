@@ -27,8 +27,6 @@ if(isNull _curTarget) exitWith {
 			_handle = [] spawn life_fnc_gather;
 			waitUntil {scriptDone _handle};
 			life_action_gathering = false;
-			// WarBlast: Dynamic Map
-			[] spawn life_fnc_dynamicMapHeliCrash;
 		};
 	};
 };
