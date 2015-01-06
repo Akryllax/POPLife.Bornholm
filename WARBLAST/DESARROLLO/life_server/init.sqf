@@ -130,5 +130,6 @@ _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
 [] execVM "\life_server\Functions\POP\RandomEvents\fn_spawnHeliCrash.sqf";
+call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
 life_server_isReady = true;
 publicVariable "life_server_isReady";
