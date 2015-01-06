@@ -1,27 +1,27 @@
 ////////funcion timer para el robo, no tocar////
 _QUICK_timerRobo = {
 
-        _this spawn{
-private "_nombreRobo";
-private "_time";
-private "_vendedor";
-private "_ladron";
-private "_metros";
-private "_metros_cancelar_robo";
-private "_dinero";
-private "_pagar_ladron";
-private "_itemsRecompensa";
+_this spawn{
+private ["_nombreRobo", "_time", "_vendedor", "_ladron", "_metros", "_metros_cancelar_robo", "_dinero", "_pagar_ladron", "_itemsRecompensa"];
 
+_nombreRobo =  			[_this, 0, "",[""]] call BIS_fnc_param;
+_time = 				[_this, 1, -1,[-1]] call BIS_fnc_param;
+_vendedor = 			[_this, 2, objNull,[objNull]] call BIS_fnc_param;
+_ladron = 				[_this, 3, objNull,[objNull]] call BIS_fnc_param;
+_dinero = 				[_this, 4, -1,[-1]] call BIS_fnc_param;
+_metros_cancelar_robo = [_this, 5, -1,[-1]] call BIS_fnc_param;
+_itemsRecompensa = 		[_this, 6, [],[[]]] call BIS_fnc_param;
+_pagar_ladron = 		"no";
 
-_nombreRobo =  _this select 0;
-_time = _this select 1;
-_vendedor = _this select 2;
-_ladron = _this select 3;
-_dinero = _this select 4;
-_metros_cancelar_robo = _this select 5;
-_itemsRecompensa = _this select 6;
-_metros =  _vendedor distance _ladron;
-_pagar_ladron = "no";
+//Error checking
+if!(count _nombreRobo > 0) exitWith{hint "Error, _nombreRobo is null";};
+if(_time < 0) exitWith{ hint "Error, _time is null";};
+if(isNull _vendedor) exitWith{ hint "Error, _vendedor is null"};
+if(_dinero < 0) exitWith{ hint "Error, _dinero is null"};
+if(_metros_cancelar_robo) exitWith{ hint "Error, _metros_cancelar_robo is null"};
+if!(count _itemsRecompensa > 0) exitWith{ hint "Error, _itemsRecompensa is null"};
+
+_metros = _vendedor distance _ladron;
 
 while {_time > 0} do {
 
