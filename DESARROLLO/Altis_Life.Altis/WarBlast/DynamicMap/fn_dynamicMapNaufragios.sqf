@@ -1,15 +1,16 @@
 /*
 	File: fn_dynamicMapNaufragios.sqf
-	Author: Telo
+	Author: WarBlast
 
 	Description:
 	Mapa dinamico para Naufragios
 */
-private["_item","_chance","_itemName","_resourceZones","_zone","_pos","_diff","_chance_common_naufragios","_chance_uncommon_naufragios","_chance_rare_naufragios","_chance_epic_naufragios","_common_dropNaufragios","_uncommon_dropNaufragios","_rare_dropNaufragios","_epic_dropNaufragios"];
+private["_item","_chance","_diff","_itemName","_resourceZones","_zone","_pos","_diff","_chance_common_naufragios","_chance_uncommon_naufragios","_chance_rare_naufragios","_chance_epic_naufragios","_common_dropNaufragios","_uncommon_dropNaufragios","_rare_dropNaufragios","_epic_dropNaufragios"];
 _resourceZones = ["textWreck1","textWreck2","textWreck3","textWreck4"];
 _zone = "";
 
-if(life_action_inUse) exitWith {}; // Telo: Preveemos el exploit
+if(life_action_gathering) exitWith {}; // WarBlast: Preveemos el exploit
+life_action_gathering = true; // WarBlast: Preveemos el exploit
 if(vehicle player != player) exitWith {/*hint localize "STR_NOTF_GatherVeh";*/};
 
 {
@@ -20,16 +21,16 @@ if(_zone == "") exitWith {
 	life_action_inUse = false;
 };
 
-// Telo: Niveles de chance del loot de los Naufragios
+// WarBlast: Niveles de chance del loot de los Naufragios
 _chance_common_naufragios = 60;
 _chance_uncommon_naufragios = 85;
 _chance_rare_naufragios = 97;
 _chance_epic_naufragios = 100;
 
-// Telo: Tablas de loot de los Naufragios
+// WarBlast: Tablas de loot de los Naufragios
 _common_dropNaufragios =
 [
-	"", // No se encontro nada
+	"nada", // No se encontro nada
 	"pergamino",
 	"vasija",
 	"jarron"
@@ -52,7 +53,7 @@ _epic_dropNaufragios =
 ];
 
 life_action_inUse = true;
-_chance = floor random 100;
+_chance = random 100;
 switch (true) do
 {
 	case (_chance < _chance_common_naufragios) : { _item = _common_dropNaufragios call BIS_fnc_selectRandom; };
@@ -72,7 +73,7 @@ for "_i" from 0 to 4 do
 	titleText[" ","PLAIN"];
 };
 
-if (_item == "") exitWith {life_action_inUse = false; titleText["No encontraste nada","PLAIN"];};
+if (_item == "nada") exitWith { life_action_inUse = false; titleText["No encontraste nada","PLAIN"];};
 
 if(([true,_item,1] call life_fnc_handleInv)) then
 {

@@ -1,14 +1,13 @@
 /*
 	file: fn_dynamicMapHeliCrash.sqf
-	Author: Telo
+	Author: WarBlast
 
 	Description: Mapa dinamico para Helicrash
 */
-private["_item","_chance","_itemName","_resourceZones","_zone","_chance_common_helicrash","_chance_uncommon_helicrash","_chance_rare_helicrash","_common_dropHelicrash","_uncommon_dropHelicrash","_rare_dropHelicrash"];
+private["_item","_chance","_diff","_itemName","_resourceZones","_zone","_chance_common_helicrash","_chance_uncommon_helicrash","_chance_rare_helicrash","_common_dropHelicrash","_uncommon_dropHelicrash","_rare_dropHelicrash","_rare_rare_dropHelicrash"];
 _resourceZones = ["textHeliCrash1","textHeliCrash2","textHeliCrash3","textHeliCrash4"];
 _zone = "";
 
-if(life_action_inUse) exitWith {}; // Telo: Preveemos el exploit
 if(vehicle player != player) exitWith {/*hint localize "STR_NOTF_GatherVeh";*/};
 
 {
@@ -19,15 +18,16 @@ if(_zone == "") exitWith {
 	life_action_inUse = false;
 };
 
-// Telo: Niveles de chance del loot de los helicrash
+// WarBlast: Niveles de chance del loot de los helicrash
 _chance_common_helicrash = 55; // 0 a 55 = 56%
 _chance_uncommon_helicrash = 85; // 55 a 85 = 30%
-_chance_rare_helicrash = 100; // 85 a 100 = 15%
+_chance_rare_helicrash = 95; // 85 a 100 = 15%
 
-// Telo: Tablas de loot de los helicrash
+
+// WarBlast: Tablas de loot de los helicrash
 _common_dropHelicrash =
 [
-	"", // No se encontro nada
+	"nada", // No se encontro nada
 	"centralita",
 	"trajesoldado",
 	"chatarra"
@@ -36,12 +36,17 @@ _uncommon_dropHelicrash =
 [
 	"piezasmotor",
 	"municionmilitar"
+
 ];
 _rare_dropHelicrash =
 [
 	"medallas",
 	"kevlar"
+
+
 ];
+
+
 
 life_action_inUse = true;
 _chance = floor random 100;
@@ -53,8 +58,9 @@ switch (true) do
 	default { _item = ""; };
 };
 
-_diff = [_item,1,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
+_diff = [_item,1,life_carryWeight, life_maxWeight] call life_fnc_calWeightDiff;
 if(_diff == 0) exitWith { life_action_inUse = false; hint localize "STR_NOTF_InvFull" };
+
 
 titleText["Explorando el helicotero accidentado...","PLAIN"];
 for "_i" from 0 to 2 do
@@ -64,7 +70,7 @@ for "_i" from 0 to 2 do
 	sleep 2;
 };
 
-if (_item == "") exitWith {life_action_inUse = false; titleText["No encontraste nada. ¡Busca mejor!","PLAIN"];};
+if (_item == "nada") exitWith {life_action_inUse = false; titleText["No encontraste nada. ¡Busca mejor!","PLAIN"];};
 
 if(([true,_item,1] call life_fnc_handleInv)) then
 {
