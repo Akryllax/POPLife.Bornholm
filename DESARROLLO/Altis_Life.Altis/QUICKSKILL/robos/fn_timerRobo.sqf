@@ -32,19 +32,21 @@ _timestamp = time;
 
 while {time < _timestamp + _time} do {
 	_metros =  _vendedor distance _ladron;
+	
 	if(_metros > _metros_cancelar_robo) exitWith{		
 		hintSilent format["Has abandonado la zona de robo estabas a %1m del vendedor",round (_metros)];
 		_pagar_ladron = false;
 		deleteMarker _markerID;
 	};
+	
 	//Si muere quitamos el timer y el marcador de robo.
 	if !(alive _ladron) exitWith{
 		deleteMarker _markerID;
 	};
 
 	hintSilent format["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_timestamp + _time - time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_cancelar_robo];	
-	sleep 1;
 	_pagar_ladron = true;
+	sleep 1;
 };
 
 if!(alive _ladron) exitWith{};
@@ -60,6 +62,7 @@ if(_pagar_ladron) then {
 
 	//Informar al jugador
 	hint format["Has robado %1 ",_nombreRobo];
+	deleteMarker _markerID;
 
 	//Crear marcador ultima posicion del ladron
 	_pos = position _ladron; 

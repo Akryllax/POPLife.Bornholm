@@ -26,13 +26,11 @@ if!(count _params > 0) exitWith{}; //WHAT THE FUCKING FUCKED FUCK ARMA, STOP MES
 _params pushBack _vendedor;
 _params pushBack _ladron;
 
-//_policias = _this select 3 select 4;//3;
 //_robosActivados = robosActivados ;
-//_itemsRecompensa =_this select 3 select 5;//["marijuana","cocainep","heroinep"];
 _cops = (west countSide playableUnits);
 
 //Si no hay x policias no se puede robar
-if(_cops < _params select 4) exitWith {
+if(_cops < (_params select 4)) exitWith {
 	hint "No hay suficiente policía para robar.";
 };
 
@@ -67,15 +65,17 @@ _marker setMarkerType "mil_warning";
 _params pushBack _markerID;
 
 //Iniciar timer robo
-_params spawn _QUICK_timerRobo;
+_params spawn QUICK_fnc_timerRobo;
 
 //Borrar marcador robo
 deleteMarker _marker; // by ehno delete maker
 
-//regeneramos la accion de poder robar
-sleep _tiempoRegenerarRobo;
+//Regeneramos la accion de poder robar
+sleep 15 * 60; //Wait
 
+//Reset the params
+_params resize ((count _params) - 3);
 
-//añadimos otra vez la opcion de robar
-_action = _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,[_nombreRobo,_tiempoRobo,_dinero,_metros_cancelar_robo,_policias,_itemsRecompensa]];	
+//Añadimos otra vez la opcion de robar
+_vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,_params];	
 
