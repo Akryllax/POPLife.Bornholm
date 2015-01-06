@@ -112,7 +112,7 @@ class life_wanted_menu {
 		class PardonButtonKey : Life_RscButtonMenu {
 			idc = 2405;
 			text = "$STR_Wanted_Pardon";
-			onButtonClick = "[] call life_fnc_wantedRemove; closeDialog 0;";
+			onButtonClick = "[] call life_fnc_pardon; closeDialog 0;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
