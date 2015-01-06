@@ -50,13 +50,13 @@ _vendedor removeAction _action;
 
 //Poner marcador de robo
 _pos = position _vendedor;
-
 //Generate Location ID (non collision)
 _i = 1;
 _markerID = getMarkerPos format["marker_%1",_i];
 while{ !((getMarkerPos _markerID) isEqualTo [0,0,0])} do {
 	_markerID = format["marker_%1",_i];
-}; 
+	_i = _i + 1;
+};
 _marker = createMarker [ _markerID, _pos];
 _marker setMarkerColor "ColorRed";
 _marker setMarkerText "!ATENCION! Estan robando aqui!";
