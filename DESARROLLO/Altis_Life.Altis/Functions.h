@@ -484,4 +484,10 @@ class Akryllax {
 		file = "core\AKR\tracking";
 		class suspectTracking {};
 	};
+	
+	class Util
+	{
+		file = "core\AKR\util";
+		class say3DGlobal {};
+	};
 };
