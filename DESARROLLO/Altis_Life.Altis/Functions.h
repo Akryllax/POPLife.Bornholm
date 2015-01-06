@@ -423,32 +423,23 @@ class Quickskill
         class plantarCoca {};
         class plantarMaiz {};
         class plantarTomates {};
-		
-		
 	};
 	
 	class EfectosDrogas
 	{
 		file = "QUICKSKILL\items";
 		class drugsEffects {};
-
-		
 	};
 
      class ItemsCiviles
 	{
 		file = "QUICKSKILL\items";
-	
 		class gpsEspia {};
-		
-		
-		
 	};
 	
 	class ItemsPolicia
 	{
 		file = "QUICKSKILL\items\POLICIA";
-	
 		class barrera {};
 		class packUpbarrera {};
 		class barricada {};
@@ -459,31 +450,19 @@ class Quickskill
 		class packupmuro {};
 		class valla {};
 		class packUpvalla {};
-		
 	};
 	
 	class RoleMode
 	{
 		file = "QUICKSKILL\rolemode";
-	
 		class roleMode {};
-		class roleModeCops {};
-		
-		
-		
+		class roleModeCops {};	
 	};
-	
 	
 	class Robos
 	{
 		file = "QUICKSKILL\robos";
-	
 		class robosHandler {};
-		
-			
-		
-		
+		class timerRobo {};
 	};
-	
-	
 };
