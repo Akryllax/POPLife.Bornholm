@@ -1,16 +1,10 @@
+//variables privadas generales
+private["_vendedor","_ladron","_action","_nombreRobo","_tiempoRobo","_dinero","_metros_cancelar_robo","_policias","_robosActivados","_cops","_policias","_Pos","_marker","_markerIDrandom"];
 ////////funcion timer para el robo, no tocar////
-_QUICK_timerRobo = {
+QUICK_timerRobo = {
 
         _this spawn{
-private "_nombreRobo";
-private "_time";
-private "_vendedor";
-private "_ladron";
-private "_metros";
-private "_metros_cancelar_robo";
-private "_dinero";
-private "_pagar_ladron";
-private "_itemsRecompensa";
+
 
 
 _nombreRobo =  _this select 0;
@@ -22,6 +16,8 @@ _metros_cancelar_robo = _this select 5;
 _itemsRecompensa = _this select 6;
 _metros =  _vendedor distance _ladron;
 _pagar_ladron = "no";
+
+
 
 while {_time > 0} do {
 
@@ -101,8 +97,6 @@ if(_time < 1) then{
 //this addAction[format["Robar %1","Camello del bar"],QUICK_fnc_robosHandler,["Camello del bar",15,round random 200000,50,0,["marijuana"]]];
 
 	
-//variables privadas generales
-private["_vendedor","_ladron","_action","_nombreRobo","_tiempoRobo","_dinero","_metros_cancelar_robo","_policias","_robosActivados","_cops","_policias","_Pos","_marker","_markerIDrandom"];
 
 //to?who?what?
 _vendedor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
@@ -129,6 +123,7 @@ if (currentWeapon _ladron == "") exitWith { hint "¡No me amenaces! ¡Fuera de a
 //avisar a la policia
 [[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 
+
 //añadir robo al ladron
 [[getPlayerUID _ladron,name _ladron,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
@@ -145,7 +140,7 @@ _marker setMarkerType "mil_warning";
 
 
 //iniciar timer robo
-_script_handler = [_nombreRobo,_tiempoRobo,_vendedor,_ladron,_metros_cancelar_robo,_dinero,_itemsRecompensa] spawn _QUICK_timerRobo;
+_script_handler = [_nombreRobo,_tiempoRobo,_vendedor,_ladron,_metros_cancelar_robo,_dinero,_itemsRecompensa] spawn QUICK_timerRobo;
 waitUntil { scriptDone _script_handler };
 
 

@@ -479,6 +479,7 @@ class Quickskill
 		file = "QUICKSKILL\robos";
 	
 		class robosHandler {};
+		
 			
 		
 		
