@@ -129,6 +129,6 @@ for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,t
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
-[] execVM "\life_server\Functions\Mafia\RandomEvents\fn_spawnHeliCrash.sqf";
+[] execVM "\life_server\Functions\POP\RandomEvents\fn_spawnHeliCrash.sqf";
 life_server_isReady = true;
 publicVariable "life_server_isReady";
