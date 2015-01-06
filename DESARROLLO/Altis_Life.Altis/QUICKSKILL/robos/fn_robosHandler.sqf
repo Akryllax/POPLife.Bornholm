@@ -1,5 +1,5 @@
 ////////funcion timer para el robo, no tocar////
-QUICK_timerRobo = {
+_QUICK_timerRobo = {
 
         _this spawn{
 private "_nombreRobo";
@@ -129,9 +129,6 @@ if (currentWeapon _ladron == "") exitWith { hint "¡No me amenaces! ¡Fuera de a
 //avisar a la policia
 [[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 
-//+1 robo activo 
-//robosActivados = robosActivados + 1;
-
 //añadir robo al ladron
 [[getPlayerUID _ladron,name _ladron,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
@@ -148,7 +145,7 @@ _marker setMarkerType "mil_warning";
 
 
 //iniciar timer robo
-_script_handler = [_nombreRobo,_tiempoRobo,_vendedor,_ladron,_metros_cancelar_robo,_dinero,_itemsRecompensa] spawn QUICK_timerRobo;
+_script_handler = [_nombreRobo,_tiempoRobo,_vendedor,_ladron,_metros_cancelar_robo,_dinero,_itemsRecompensa] spawn _QUICK_timerRobo;
 waitUntil { scriptDone _script_handler };
 
 
