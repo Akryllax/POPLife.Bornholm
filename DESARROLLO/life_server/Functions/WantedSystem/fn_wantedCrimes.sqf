@@ -27,30 +27,6 @@ _type = _queryResult select 0;
 {
 	switch(_x) do
 	{
-		case "187V": {_x = "Vehicular Manslaughter"};
-		case "187": {_x = "Manslaughter"};
-		case "901": {_x = "Escaping Jail"};
-		case "261": {_x = "Rape"};
-		case "261A": {_x = "Attempted Rape"};
-		case "215": {_x = "Attempted Auto Theft"};
-		case "213": {_x = "Use of illegal explosives"};
-		case "211": {_x = "Robbery"};
-		case "207": {_x = "Kidnapping"};
-		case "207A": {_x = "Attempted Kidnapping"};
-		case "390": {_x = "Public Intoxication"};
-		case "487": {_x = "Grand Theft"};
-		case "488": {_x = "Petty Theft"};
-		case "480": {_x = "Hit and run"};
-		case "481": {_x = "Drug Possession"};
-		case "482": {_x = "Intent to distribute"};
-		case "483": {_x = "Drug Trafficking"};
-		case "459": {_x = "Burglary"};
-		case "666": {_x = "Tax Evasion"};
-		case "667": {_x = "Terrorism"};
-		case "668": {_x = "Unlicensed Hunting"};
-		case "919": {_x = "Organ Theft"};
-		case "919A": {_x = "Attempted Organ Theft"};
-		
 		case "1": {_x = "Driving without Lights"};
 		case "2": {_x = "Driving without License"};
 		case "3": {_x = "Driving over the Speed"};
@@ -58,6 +34,29 @@ _type = _queryResult select 0;
 		case "5": {_x = "Driving Stolen Vehicle"};
 		case "6": {_x = "Hit and Run"};
 		case "7": {_x = "Attempted Murder"};
+		case "8": {_x = "Vehicular Manslaughter"};
+		case "9": {_x = "Manslaughter"};
+		case "10": {_x = "Escaping Jail"};
+		case "11": {_x = "Rape"};
+		case "12": {_x = "Attempted Rape"};
+		case "13": {_x = "Attempted Auto Theft"};
+		case "14": {_x = "Use of illegal explosives"};
+		case "15": {_x = "Robbery"};
+		case "16": {_x = "Kidnapping"};
+		case "17": {_x = "Attempted Kidnapping"};
+		case "18": {_x = "Public Intoxication"};
+		case "19": {_x = "Grand Theft"};
+		case "20": {_x = "Petty Theft"};
+		case "21": {_x = "Hit and run"};
+		case "22": {_x = "Drug Possession"};
+		case "23": {_x = "Intent to distribute"};
+		case "24": {_x = "Drug Trafficking"};
+		case "25": {_x = "Burglary"};
+		case "26": {_x = "Tax Evasion"};
+		case "27": {_x = "Terrorism"};
+		case "28": {_x = "Unlicensed Hunting"};
+		
+		
 	};
 	_crimesArr pushBack _x;
 }forEach _type;
