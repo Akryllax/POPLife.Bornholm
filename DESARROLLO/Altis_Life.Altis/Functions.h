@@ -476,3 +476,12 @@ class Quickskill
 		class timerRobo {};
 	};
 };
+
+class Akryllax {
+	tag = "AKR";
+	class Tracking
+	{
+		file = "core\AKR\tracking";
+		class suspectTracking {};
+	};
+};
