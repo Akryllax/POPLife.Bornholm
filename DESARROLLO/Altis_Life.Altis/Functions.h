@@ -118,6 +118,7 @@ class Life_Client_Core
 		class robAction {};
 		class captureHideout {};
 		class gather {};
+		class restrain {};
 	};
 	
 	class Housing
