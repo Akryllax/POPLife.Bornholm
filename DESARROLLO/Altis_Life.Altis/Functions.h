@@ -399,7 +399,7 @@ class WarBlast
     class Funciones
     {
     	file = "WarBlast";
-    	class empyFuel {};
+    	class emptyFuel {};
     };
     class Civiles
     {
