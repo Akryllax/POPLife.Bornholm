@@ -19,7 +19,7 @@ life_action_gathering = true;
 
 if(_zone == "") exitWith {
 	//WarBlast:Helicrash
-	_handle = [] spawn life_fnc_dynamicMapHeliCrash;
+	_handle = [] spawn War_fnc_dynamicMapHeliCrash;
 	waitUntil {scriptDone _handle};
 	life_action_inUse = false;
 };
