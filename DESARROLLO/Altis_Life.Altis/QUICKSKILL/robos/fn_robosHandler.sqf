@@ -71,7 +71,6 @@ _parametrosTimer pushBack _vendedor;
 _parametrosTimer pushBack _ladron;
 
 //Iniciar timer robo
-
 _script_handler = _parametrosTimer spawn QUICK_fnc_timerRobo;
 waitUntil { scriptDone _script_handler };
 
