@@ -401,7 +401,11 @@ class WarBlast
     	file = "WarBlast";
     	class empyFuel {};
     };
-    
+    class Civiles
+    {
+    	file = "WarBlast\Civiles";
+    	class civMarkers {};
+    };
  	class DynamicMap
 	{
 		file = "WarBlast\DynamicMap";
