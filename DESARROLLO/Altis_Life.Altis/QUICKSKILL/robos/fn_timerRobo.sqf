@@ -81,7 +81,7 @@ if(_time < 1) then{
 			} forEach _itemsRecompensa;
 
 			//dar Armas
-			if(_darArmas == true) then {
+			if(_darArmas == "si") then {
 
 
 				//crear caja de armas 
@@ -159,7 +159,7 @@ if(_time < 1) then{
 			};//end dar armas
 
 			//dar vehiculos
-			if(_darVehiculo == true) then {
+			if(_darVehiculo == "si") then {
 
 				//crear coche del jugadro que peude abrir errar y vender
 				_pagar_random = random 6;

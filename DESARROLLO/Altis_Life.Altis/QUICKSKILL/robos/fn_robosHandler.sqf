@@ -5,7 +5,7 @@
 	Desc: wacha gona dú güen dei come for yú
 
 	
-	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","marijuana","cocainep","cocainep"],0,false,false]];
+	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","marijuana","cocainep","cocainep"],0,"no","no"]];
 	
 	Example:
 	
@@ -32,7 +32,7 @@ _dinero =               _params select 2;
 _metros_cancelar_robo = _params select 3;
 _itemsRecompensa =      _params select 4;
 _policias =             _params select 5;
-_darArmas =             _parmas select 6;
+_darArmas =             _params select 6;
 _darVehiculo =          _params select 7;
 
 
