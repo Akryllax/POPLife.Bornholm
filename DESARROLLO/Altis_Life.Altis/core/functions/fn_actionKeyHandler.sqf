@@ -70,10 +70,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 		
 		
 	};
-	//Menu de interaccion con esposas
-	if((_curTarget getVariable["restrained",false]) && {!(player getVariable["restrained",false])} && !dialog && {playerSide in [west,civilian,independent]}) then{
-		
-	};
+
 } else {
 	//OK, it wasn't a player so what is it?
 	private["_isVehicle","_miscItems","_money"];
