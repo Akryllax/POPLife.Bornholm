@@ -1,6 +1,6 @@
 /*
 	File: initPlayerLocal.sqf
-	
+
 	Description:
 	Starts the initialization of the player.
 */
@@ -10,6 +10,7 @@ if(!hasInterface) exitWith {}; //This is a headless client, he doesn't need to d
 __CONST__(BIS_fnc_endMission,BIS_fnc_endMission);
 [] execVM "SpyGlass\fn_initSpy.sqf";
 [] execVM "core\init.sqf";
+[] execVM "WarBlast\fn_emptyFuel.sqf";
 
 //Execute JIP code.
 if((_this select 1)) then {

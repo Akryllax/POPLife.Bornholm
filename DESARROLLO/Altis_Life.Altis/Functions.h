@@ -396,7 +396,12 @@ class Life_Client_Core
 class WarBlast
 {
 	tag = "War";
-
+    class Funciones
+    {
+    	file = "WarBlast";
+    	class empyFuel {};
+    };
+    
  	class DynamicMap
 	{
 		file = "WarBlast\DynamicMap";
