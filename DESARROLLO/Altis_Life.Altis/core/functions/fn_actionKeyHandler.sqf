@@ -55,12 +55,24 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 
 //If target is a player then check if we can use the cop menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
-	if((_curTarget getVariable["restrained",false]) &&  {!(player getVariable["restrained",false])} && !dialog && playerSide == west) then {
-		[_curTarget] call life_fnc_copInteractionMenu;
+	if((_curTarget getVariable["restrained",false]) &&  {!(player getVariable["restrained",false])} && !dialog && playerSide in [west,civilian,independent]) then {
+	    //menu para policia
+	    if(playerSide == west) then{
+
+	    	[_curTarget] call life_fnc_copInteractionMenu;
+	    };
+
+	    //menu para civil
+	     if(playerSide == civilian) then{
+
+	    	[_curTarget] call life_fnc_InteractionMenu;
+	    };
+		
+		
 	};
 	//Menu de interaccion con esposas
-	if((_curTarget getVariable["restrained",false]) && {!(player getVariable["restrained",false])} && !dialog && {playerSide in [civilian,independent]}) then{
-		[_curTarget] call life_fnc_InteractionMenu;
+	if((_curTarget getVariable["restrained",false]) && {!(player getVariable["restrained",false])} && !dialog && {playerSide in [west,civilian,independent]}) then{
+		
 	};
 } else {
 	//OK, it wasn't a player so what is it?
