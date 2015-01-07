@@ -14,7 +14,7 @@ if((_unit getVariable "restrained")) exitWith {};
 if(player == _unit) exitWith {};
 if(!isPlayer _unit) exitWith {};
 //Broadcast!
-player say3D "handcuffs";
+player say3D "esposas";
 
 _unit setVariable["restrained",true,true];
 [[player], "life_fnc_restrain", _unit, false] spawn life_fnc_MP;
