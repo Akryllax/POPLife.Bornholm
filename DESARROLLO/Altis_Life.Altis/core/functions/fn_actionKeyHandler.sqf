@@ -59,7 +59,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 		[_curTarget] call life_fnc_copInteractionMenu;
 	};
 	//Menu de interaccion con esposas
-	if((_curTarget getVariable["restrained",false]) && {!(player getVariable["restrained",false])} && !dialog && {playerSide in [civilian,independent]}) exitWith {
+	if((_curTarget getVariable["restrained",false]) && {!(player getVariable["restrained",false])} && !dialog && {playerSide in [civilian,independent]}) then{
 		[_curTarget] call life_fnc_InteractionMenu;
 	};
 } else {
