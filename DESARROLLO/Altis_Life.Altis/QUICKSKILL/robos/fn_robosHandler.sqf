@@ -5,7 +5,7 @@
 	Desc: wacha gona dú güen dei come for yú
 
 	
-	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,round random 200000,50,["marijuana"],0]];
+	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","cocainep"],0]];
 	
 	Example:
 	

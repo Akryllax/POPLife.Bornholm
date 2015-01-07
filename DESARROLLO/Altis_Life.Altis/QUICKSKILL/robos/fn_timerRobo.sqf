@@ -17,7 +17,7 @@ _ladron = 				[_this, 6, objNull,[objNull]] call BIS_fnc_param;
 _pagar_ladron = 		false;
 
 //Error checking 'n shit, fucking Arma 3
-if!(count _nombreRobo > 0) exitWith{hint "Error, _nombreRobo is null";};
+if(_nombreRobo == "") exitWith{hint "Error, _nombreRobo is null";};
 if(_time < 0) exitWith{ hint "Error, _time is null";};
 if(isNull _vendedor) exitWith{ hint "Error, _vendedor is null"};
 if(isNull _ladron) exitWith{ hint "Error, _ladron is null"};
@@ -75,12 +75,13 @@ if(_time < 1) then{
 			} forEach _itemsRecompensa;
 
 			//pagar al jugador
-			[_nombreRobo]spawn{sleep 2;hint format["Has robado ",_this select 0];sleep 3;hint ""};
+			_nombreRoboHINT = format["Has robado ",_this select 0]
+			hint _nombreRoboHINT;
 
 
 	};
 	
 	//terminar script	
-	if(true) exitWith{[]spawn { sleep 1;hint "";} };
+	if(true) exitWith{[]spawn { sleep 3;hint "";} };
 
 };
