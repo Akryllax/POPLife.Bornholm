@@ -74,5 +74,8 @@ switch (_item) do
 	case "abrecartas": {6};
 	case "collar": {8};
 	case "cetro": {8};
+	//esposas
+	case "esposas": {2};
+	case "llaveesposas": {1};
 	default {1};
 };

@@ -34,6 +34,8 @@ life_smartphoneTarget = ObjNull;
 //Variables POP Ordenaditas ;D
 life_is_alive = true;
 life_civ_position = nil;
+life_esposas = ObjNull;
+life_llaveesposas = ObjNull;
 
 
 //Persistent Saving
@@ -182,7 +184,10 @@ life_inv_items =
 	"life_inv_abrecartas",
 	"life_inv_catalejo",
 	"life_inv_collar",
-	"life_inv_cetro"
+	"life_inv_cetro",
+	//Esposas
+	"life_inv_esposas",
+	"life_inv_llaveesposas"
 ];
 
 //Setup variable inv vars.
@@ -309,7 +314,9 @@ buy_array =
 	["boltcutter",7500],
 	["defusekit",2500],
 	["storagesmall",75000],
-	["storagebig",150000]
+	["storagebig",150000],
+	["esposas",500],
+	["llaveesposas",700]
 ];
 __CONST__(buy_array,buy_array);
 

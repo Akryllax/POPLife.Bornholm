@@ -292,7 +292,7 @@ class Life_Client_Core
 		class copSearch {};
 		class bountyReceive {};
 		class searchClient {};
-		class restrain {};
+//		class restrain {};
 		class ticketGive {};
 		class ticketPay {};
 		class ticketPrompt {};
@@ -405,6 +405,7 @@ class WarBlast
     {
     	file = "WarBlast\Civiles";
     	class civMarkers {};
+    	class InteractionMenu {};
     };
  	class DynamicMap
 	{

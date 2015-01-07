@@ -1,7 +1,7 @@
 /*
 	File: fn_lockpick.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Main functionality for lock-picking.
 */
@@ -67,9 +67,17 @@ if(!([false,"lockpick",1] call life_fnc_handleInv)) exitWith {life_action_inUse 
 life_action_inUse = false;
 
 if(!_isVehicle) then {
-	_curTarget setVariable["restrained",false,true];
-	_curTarget setVariable["Escorting",false,true];
-	_curTarget setVariable["transporting",false,true];
+	_dice = random(100);
+	if(_dice < 70) then {
+		titleText[localize "STR_ISTR_LockHandcuffs_Success","PLAIN"];
+		_curTarget setVariable["restrained",false,true];
+		_curTarget setVariable["Escorting",false,true];
+		_curTarget setVariable["transporting",false,true];
+		[[getPlayerUID player,profileName,"486"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+	} else {
+		titleText[localize "STR_ISTR_Lock_Failed","PLAIN"];
+		[[getPlayerUID player,profileName,"485"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+	};
 } else {
 	_dice = random(100);
 	if(_dice < 30) then {

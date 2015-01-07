@@ -83,6 +83,10 @@ switch (_mode) do
 			case "abrecartas": {"life_inv_abrecartas"};
 			case "collar": {"life_inv_collar"};
 			case "cetro": {"life_inv_cetro"};
+			//esposas
+
+			case "esposas": {"life_inv_esposas"};
+            case "llaveesposas": {"life_inv_llaveesposas"};
 		};
 	};
 
@@ -157,6 +161,8 @@ switch (_mode) do
 			case "life_inv_abrecartas": {"abrecartas"};
 			case "life_inv_collar": {"collar"};
 			case "life_inv_cetro": {"cetro"};
+			case "life_inv_esposas": {"esposas"};
+            case "life_inv_llaveesposas": {"llaveesposas"};
 		};
 	};
 };

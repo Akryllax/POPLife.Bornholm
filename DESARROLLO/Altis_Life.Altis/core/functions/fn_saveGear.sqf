@@ -3,7 +3,7 @@
     Author: Bryan "Tonic" Boardwine
     Full Gear/Y-Menu Save by Vampire
     Edited: Itsyuka
-    
+
     Description:
     Saves the players gear for syncing to the database for persistence..
 */
@@ -170,7 +170,9 @@ if(count (handGunItems player) > 0) then
     ["life_inv_spikeStrip", life_inv_spikeStrip],
     ["life_inv_defusekit", life_inv_defusekit],
     ["life_inv_storagesmall", life_inv_storagesmall],
-    ["life_inv_storagebig", life_inv_storagebig]
+    ["life_inv_storagebig", life_inv_storagebig],
+    ["life_inv_esposas", life_inv_esposas],
+    ["life_inv_llaveesposas", life_inv_llaveesposas]
 ];
 
 _return pushBack _uItems;

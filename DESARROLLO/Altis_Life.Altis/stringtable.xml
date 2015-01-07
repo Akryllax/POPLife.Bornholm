@@ -417,6 +417,22 @@
 		</Key>
 	</Package>
 	<Package name="Admin_Notifications">
+		<Key ID="STR_NOTF_RestrainedPerson">
+            <Original>Esta persona esta arrestada!</Original>
+            <English>The person is now tied up!</English>
+            <German>Die Person ist nun Gefesselt!</German>
+            <French>%1 a été menotté par %2</French>
+            <Italian>%1 è stato ammanettato da %2</Italian>
+            <Portuguese>%1 foi imobilizado por %2</Portuguese>
+        </Key>
+        <Key ID="STR_NOTF_NoHandcuffs">
+            <Original>No tienes esposas</Original>
+            <English>You dont have Handcuffs</English>
+            <German>Du hast keine Handschellen</German>
+            <French>No Handcuffs</French>
+            <Italian>No Handcuffs</Italian>
+            <Portuguese>Maconha não Processada</Portuguese>
+        </Key>
 		<Key ID="STR_ANOTF_Query">
 			<Original>Querying...</Original>
 			<English>Querying...</English>
@@ -424,9 +440,6 @@
 			<French>Interrogation...</French>
 			<Italian>Ricerca...</Italian>
 			<Portuguese>Pesquisando...</Portuguese>
-
-			<Spanish>Consultando</Spanish>
-
 			<Spanish>Consultando...</Spanish>
 
 		</Key>
@@ -4390,7 +4403,17 @@
 		<Key ID="STR_Item_medicCalor">
 			<Original>Bolsa de calor</Original>
 		</Key>
-		
+		<Key ID="STR_Item_Esposas">
+			<Original>Esposas</Original>
+			<English>Handcuffs</English>
+			<German>Handschellen</German>
+		</Key>
+
+		<Key ID="STR_Item_llaveesposas">
+			<Original>LLave esposas</Original>
+			<English>Handcuffkeys</English>
+			<German>Handschellenschlüssel</German>
+		</Key>
 	</Package>
 	<Package name="Life_License">
 		<Key ID="STR_License_Zumos">
