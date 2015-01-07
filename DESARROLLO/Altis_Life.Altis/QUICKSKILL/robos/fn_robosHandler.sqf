@@ -9,7 +9,7 @@
 	
 	Example:
 	
-		this addAction["Robar X", QUICK_fnc_robosHandler, ["Camellito camello", TIMEPO, DINERO, METROS DE ROBO, ITEMS RECOMPENSA, POLICIA]];
+		this addAction["Robar X", QUICK_fnc_robosHandler, ["Camellito camello", TIMEPO, DINERO, METROS DE ROBO, ITEMS RECOMPENSA, POLICIA, DAR ARMAs , DAR VEHICULOS]];
 */
 	
 //Variables privadas generales

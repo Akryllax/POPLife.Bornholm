@@ -5,7 +5,7 @@
 	Desc: wacha gona dú güen dei come for yú
 */
 
-private ["_nombreRobo", "_time", "_metros", "_metros_cancelar_robo", "_dinero", "_pagar_ladron", "_itemsRecompensa", "_vendedor", "_ladron", "_marker"];
+private ["_nombreRobo", "_time", "_metros", "_metros_cancelar_robo", "_dinero", "_pagar_ladron", "_itemsRecompensa", "_vendedor", "_ladron", "_darArmas","_darVehiculo"];
 
 _nombreRobo =  			[_this, 0, "",[""]] call BIS_fnc_param;
 _time = 				[_this, 1, -1,[-1]] call BIS_fnc_param;
@@ -81,7 +81,7 @@ if(_time < 1) then{
 			} forEach _itemsRecompensa;
 
 			//dar Armas
-			if(_darArmas == true){
+			if(_darArmas == true) then {
 
 
 				//crear caja de armas 
@@ -122,7 +122,6 @@ if(_time < 1) then{
 					_ammoBox addItemCargoGlobal ["optic_SOS",1];
 					_ammoBox addMagazineCargoGlobal ["7Rnd_408_Mag",8]; 
 				};
-
 				if(_pagar_random == 4) then {
 					//mx negra
 					_ammoBox addWeaponCargoGlobal ["arifle_MX_Black_F",1];
@@ -157,12 +156,10 @@ if(_time < 1) then{
 				//tiene 30 segundos pa coger el arma
 				_ammoBox spawn { sleep 30; deleteVehicle _this; }
 
-
-
 			};//end dar armas
 
 			//dar vehiculos
-			if(_darVehiculo == true){
+			if(_darVehiculo == true) then {
 
 				//crear coche del jugadro que peude abrir errar y vender
 				_pagar_random = random 6;
@@ -178,8 +175,7 @@ if(_time < 1) then{
 					life_vehicles pushBack _coche;
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 
-					};
-
+				};
 				if(_pagar_random == 1) then {
 					//sport tunning
 					_coche = "C_Offroad_01_F" createVehicle position _vendedor;
@@ -220,10 +216,8 @@ if(_time < 1) then{
 
 			};//end dar vehiculo
 
-			
 
-
-	};
+	};//end pagar ladron
 	
 	//terminar script	
 	if(true) exitWith{[]spawn { sleep 3;hint "";} };
