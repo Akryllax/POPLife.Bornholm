@@ -65,6 +65,7 @@ switch (_code) do
 		{
 			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
+			case civilian: {if(!visibleMap) then {[] spawn life_fnc_civMarkers;}};
 		};
 	};
 
@@ -131,7 +132,7 @@ switch (_code) do
   };//end switch
 
 };//end case shift r
-	
+
 
 	//Knock out, this is experimental and yeah...
 	case 34:
