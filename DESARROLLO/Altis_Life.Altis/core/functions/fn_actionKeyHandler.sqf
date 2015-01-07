@@ -65,7 +65,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	    //menu para civil
 	     if(playerSide == civilian) then{
 
-	    	[_curTarget] call life_fnc_InteractionMenu;
+	    	[_curTarget] call War_fnc_InteractionMenu;
 	    };
 		
 		
