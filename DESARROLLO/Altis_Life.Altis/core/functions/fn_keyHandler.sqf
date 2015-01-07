@@ -109,9 +109,9 @@ switch (_code) do
 		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
 		  {
 			[] call life_fnc_restrainAction;
+			systemChat localize "STR_NOTF_RestrainedPerson";
 		  };
 	    };
-      };
 
        case civilian:
 	   {
