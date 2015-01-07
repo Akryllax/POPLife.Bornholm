@@ -55,7 +55,7 @@ _vendedor removeAction _action;
 
 //Poner marcador de robo
 _pos = position _vendedor;
-_markerID = format["marker_%1",floor(random 10000)];
+_markerID = format["marker_%1",floor(random 1000)];
 _marker = createMarker [ _markerID, _pos];
 _marker setMarkerColor "ColorRed";
 _marker setMarkerText "!ATENCION! Estan robando aqui!";
@@ -71,10 +71,24 @@ _parametrosTimer pushBack _vendedor;
 _parametrosTimer pushBack _ladron;
 
 //Iniciar timer robo
-_parametrosTimer spawn QUICK_fnc_timerRobo;
+
+_script_handler = _parametrosTimer spawn QUICK_fnc_timerRobo;
+waitUntil { scriptDone _script_handler };
 
 //Borrar marcador robo
-deleteMarker _marker; // by ehno delete maker
+deleteMarker _marker;
+
+//crear marcador ultima posicion del ladron
+_pos = position _ladron; 
+ _markerID = format["marker_%1",floor(random 1000)];
+_marker = createMarker [ _markerID, _pos];
+_marker setMarkerColor "ColorRed";
+_marker setMarkerText "Ladrón visto aqui por última vez";
+_marker setMarkerType "mil_warning";
+
+sleep 15;
+
+deleteMarker _marker; 
 
 //Regeneramos la accion de poder robar
 sleep _tiempoRegenerarRobo; //Wait
