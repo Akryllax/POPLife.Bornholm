@@ -34,11 +34,11 @@ if((_curTarget getVariable["Escorting",false])) then {
 };
 
 //Set Unrestrain Button
-if([false,"handcuffkeys",1] call life_fnc_handleInv) then
+if([false,"llaveesposas",1] call life_fnc_handleInv) then
 {
 //Set Unrestrain Button
 _Btn2 ctrlSetText localize "STR_pInAct_Unrestrain";
-_Btn2 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain;[true,"handcuffs",1] call life_fnc_handleInv; closeDialog 0;";
+_Btn2 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain;[true,""esposas"",1] call life_fnc_handleInv; closeDialog 0;";
 }else{
 _Btn2 ctrlSetText localize "STR_pInAct_Unrestrain";
 _Btn2 buttonSetAction "[] spawn life_fnc_lockpick; closeDialog 0;";
