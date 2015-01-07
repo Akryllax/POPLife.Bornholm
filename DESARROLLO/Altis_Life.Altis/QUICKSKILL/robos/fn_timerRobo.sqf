@@ -71,11 +71,11 @@ if(_time < 1) then{
 
 			//Dar item especiales
 			{
-				[true,_x,5] call life_fnc_handleInv;
+				[true,_x,2] call life_fnc_handleInv;
 			} forEach _itemsRecompensa;
 
 			//pagar al jugador
-			_nombreRoboHINT = format["Has robado ",_this select 0]
+			_nombreRoboHINT = format["Has robado %1, corre antes de que te pille la policia!!",_nombreRobo];
 			hint _nombreRoboHINT;
 
 
