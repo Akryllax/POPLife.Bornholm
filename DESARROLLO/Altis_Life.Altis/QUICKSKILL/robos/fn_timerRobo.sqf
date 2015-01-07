@@ -97,7 +97,7 @@ if(_time < 1) then{
 				//ninja code fix
 				if(_pagar_random == 9) then {
 				   _pagar_random = 8;
-				}
+				};
 				if(_pagar_random == 0) then {
 					//mx f
 					_ammoBox addWeaponCargoGlobal ["arifle_MX_F",1];
@@ -168,7 +168,8 @@ if(_time < 1) then{
 				//ninja code fix
 				if(_pagar_random == 6) then {
 				   _pagar_random = 5;
-				}
+				};
+				
 				if(_pagar_random == 0) then {
 					//turismo rapido
 					_coche = "C_Hatchback_01_sport_F" createVehicle position _vendedor;
