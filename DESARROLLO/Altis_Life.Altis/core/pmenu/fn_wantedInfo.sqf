@@ -13,9 +13,9 @@ _display = findDisplay 2400;
 _list = _display displayCtrl 2402;
 _mylist = [];
 _data = call compile format["%1", _data];
-if(isNil "_data") exitWith {hint "Failed to fetch crimes";};
-if(typeName _data != "ARRAY") exitWith {hint "Failed to fetch crimes";};
-if(count _data == 0) exitWith {hint "Failed to fetch crimes";};
+if(isNil "_data") exitWith {hint "Error al buscar crimenes";};
+if(typeName _data != "ARRAY") exitWith {hint "Error al buscar crimenes";};
+if(count _data == 0) exitWith {hint "Error al buscar crimenes";};
 lbClear _list;
 
 _crimes = _data select 0;
@@ -30,4 +30,4 @@ _bounty = _data select 1;
 	};
 } foreach _crimes;
 
-ctrlSetText[2403,format["Current Bounty Price: $%1",[_bounty] call life_fnc_numberText]]; 
+ctrlSetText[2403,format["Recompensa actual: $%1",[_bounty] call life_fnc_numberText]]; 

@@ -43,7 +43,7 @@ _crimes = [["Atropello","25000","1"],["Asesinato","50000","2"],["Fuga","50000","
 	_list2 lbSetData [(lbSize _list2)-1,(_x select 2)];
 } foreach _crimes;
 
-ctrlSetText[2404,"Establishing connection..."];
+ctrlSetText[2404,"Estableciendo conexion..."];
 
 if(__GETC__(life_coplevel) < 3 && __GETC__(life_adminlevel) == 0) then
 {

@@ -17,7 +17,7 @@ _name = [_name] call DB_fnc_mresString;
 _wantedCheck = format["SELECT wantedName FROM wanted WHERE wantedID='%1'",_uid];
 waitUntil{!DB_Async_Active};
 _wantedQuery = [_wantedCheck,2] call DB_fnc_asyncCall;
-if(count _wantedQuery == 0) exitWith {diag_log "Person not wanted, no update";};
+if(count _wantedQuery == 0) exitWith {diag_log "Persona no buscada.";};
 _wantedQuery = call compile format["%1",_wantedQuery];
 
 if(_name != (_wantedQuery select 0)) then
@@ -33,4 +33,4 @@ if(_name != (_wantedQuery select 0)) then
 	diag_log format["Req By: %1",_name];
 	diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];
 	diag_log "--------------Person Is Wanted-----------------";
-} else {diag_log "Name Matches, no change needed";};
+} else {diag_log "Nombre coincide, no se necesitan cambios.";};

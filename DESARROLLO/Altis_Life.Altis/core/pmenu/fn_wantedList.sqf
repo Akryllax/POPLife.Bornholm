@@ -19,9 +19,9 @@ _list = _display displayctrl 2401;
 	_list lbSetData [(lbSize _list)-1,str(_entry)];
 } forEach _info;
 
-ctrlSetText[2404,"Connection Established"];
+ctrlSetText[2404,"Conexion establecida"];
 
 if(((lbSize _list)-1) == -1) then
 {
-	_list lbAdd "No criminals";
+	_list lbAdd "No hay criminales";
 }; 
