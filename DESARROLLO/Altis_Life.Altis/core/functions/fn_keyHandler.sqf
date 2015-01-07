@@ -111,6 +111,7 @@ switch (_code) do
                     {
                         [] call life_fnc_restrainAction;
                         systemChat localize "STR_NOTF_RestrainedPerson";
+						
                     };
             };
             case civilian:
