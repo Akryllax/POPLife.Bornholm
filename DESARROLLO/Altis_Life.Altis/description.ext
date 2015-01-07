@@ -61,7 +61,7 @@ class CfgSounds
 		name = "flashbang";
 		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
 		titles[] = {};
-	};
+	};	
 };
 
 class CfgDebriefing
