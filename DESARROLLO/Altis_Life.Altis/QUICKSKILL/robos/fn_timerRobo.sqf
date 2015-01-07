@@ -75,7 +75,7 @@ if(_time < 1) then{
 			} forEach _itemsRecompensa;
 
 			//pagar al jugador
-			[]spawn{sleep 2;hint format["Has robado %1",_nombreRobo];sleep 3;hint ""};
+			[_nombreRobo]spawn{sleep 2;hint format["Has robado ",_this select 0];sleep 3;hint ""};
 
 
 	};
