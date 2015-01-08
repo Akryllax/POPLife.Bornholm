@@ -31,7 +31,7 @@ lbClear _list2; //Purge the list
 _crimes = [["Atropello","25000","1"],["Asesinato","50000","2"],["Fuga","50000","3"],
 ["Violacion","15000","4"],["Robo","20000","5"],["Uso ilegal de explosivos","60000","6"],
 ["Hurto menor","10000","7"],["Secuestro","40000","8"],["Posesion de drogas","30000","9"],
-["Trafico de drogas","50000","10"],["Asalto armado","40000","11"],["Conducir sin licencia","15001","12"],
+["Trafico de drogas","50000","10"],["Asalto armado","40000","11"],["Conducir sin licencia","1500","12"],
 ["Conducir sin luces","200","13"],["Exceso de velocidad","500","14"],["Violacion zona de exclusion aerea","50000","15"],
 ["Conduccion temeraria","2000","16"],["Desorden civil","5000","17"],["Falta de respeto a la autoridad","500","18"],
 ["Entrar en zona restringida","1000","19"],["Posesion de armas sin licencia","20000","20"],["Secuestro con asesinato","40000","21"],
