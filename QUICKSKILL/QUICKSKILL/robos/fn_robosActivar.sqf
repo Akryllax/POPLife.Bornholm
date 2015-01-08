@@ -46,10 +46,9 @@ _robosActivosCount = 0;
 _iFindID = 0;
 {
 
-	 // ya estan robando actualizar numero de ladrones
+	 // mirar cuantos ladrones hay en cada robo
    _ladronesEnRobo = robosActivosGLOBAL select _iFindID;
    _ladronesEnRobo  = _ladronesEnRobo  select 1;
-
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_ladronesEnRobo > 1) then {

@@ -5,15 +5,15 @@
 	Desc: wacha gona dú güen dei come for yú
 
 	
-	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","marijuana","cocainep","cocainep"],0]];
+	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","marijuana","cocainep","cocainep"],0,"no","no"]];
 	
 	Example:
 	
-		this addAction["Robar X", QUICK_fnc_robosHandler, ["Camellito camello", TIMEPO, DINERO, METROS DE ROBO, ITEMS RECOMPENSA, POLICIA]];
+		this addAction["Robar X", QUICK_fnc_robosHandler, ["Camellito camello", TIMEPO, DINERO, METROS DE ROBO, ITEMS RECOMPENSA, POLICIA, DAR ARMAs , DAR VEHICULOS]];
 */
 	
 //Variables privadas generales
-private["_vendedor","_ladron","_action","_nombreRobo","_tiempoRobo","_dinero","_metros_cancelar_robo","_policias","_robosActivados","_cops","_Pos","_marker","_markerIDrandom"];
+private["_vendedor","_ladron","_action","_nombreRobo","_tiempoRobo","_dinero","_metros_cancelar_robo","_policias","_robosActivados","_cops","_Pos","_marker","_markerIDrandom","_darArmas","_darVehiculo"];
 
 //to?who?what?
 _vendedor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
@@ -26,12 +26,14 @@ _cops = (west countSide playableUnits);
 _params = [_this, 3, [], [[]]] call BIS_fnc_param;
 
 //variables a utilizar
-_nombreRobo = _params select 0;
-_tiempoRobo =  _params select 1;
-_dinero =  _params select 2;
-_metros_cancelar_robo =  _params select 3;
-_itemsRecompensa = _params select 4;
-_policias = _params select 5;
+_nombreRobo =           _params select 0;
+_tiempoRobo =           _params select 1;
+_dinero =               _params select 2;
+_metros_cancelar_robo = _params select 3;
+_itemsRecompensa =      _params select 4;
+_policias =             _params select 5;
+_darArmas =             _params select 6;
+_darVehiculo =          _params select 7;
 
 
 //Si no hay x policias no se puede robar
@@ -48,7 +50,7 @@ if (currentWeapon _ladron == "") exitWith {
 [[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 
 //Añadir robo al ladron
-[[getPlayerUID _ladron,name _ladron,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+[[getPlayerUID _ladron,name _ladron,5],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
 //Quitar opcion del robo
 _vendedor removeAction _action;
@@ -69,6 +71,8 @@ _parametrosTimer pushBack _metros_cancelar_robo;
 _parametrosTimer pushBack _itemsRecompensa;
 _parametrosTimer pushBack _vendedor;
 _parametrosTimer pushBack _ladron;
+_parametrosTimer pushBack _darArmas;
+_parametrosTimer pushBack _darVehiculo;
 
 //Iniciar timer robo
 _script_handler = _parametrosTimer spawn QUICK_fnc_timerRobo;
