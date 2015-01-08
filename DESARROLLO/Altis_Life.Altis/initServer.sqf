@@ -25,3 +25,7 @@ onMapSingleClick "if(_alt) then {vehicle player setPos _pos};";
 } foreach ["hospital_2","hospital_3"];
 
 [8,true,12] execFSM "core\fsm\timeModule.fsm";
+
+//activar controlador de robos activos by quick
+	robosActivosGLOBAL = [];
+	publicVariable robosActivosGLOBAL;
