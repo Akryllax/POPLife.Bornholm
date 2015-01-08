@@ -486,7 +486,7 @@ class Quickskill
 		class robosHandler {};
 		class timerRobo {};
 		class robosActivar{};
-		class robosDesactivados{};
+		class robosDesactivar{};
 	};
 };
 
