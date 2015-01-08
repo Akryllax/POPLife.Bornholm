@@ -1,13 +1,11 @@
 /*
 	File: fn_robosActivos.sqf
 	Author: Quickskill
-	Desc: Desactivar Robo Activo
+	Desc: Desactivar Robo Activo "-1 a numero de ladroens robandolo"
 */
 private ["_maximoRobosActivo", "_nombreRobo ", "_roboActivo ", "_ladronesEnRobo", "_iFindID"];
-
-
+//params
 _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
-
 
 ///for de robos activos
 _iFindID = 0;
