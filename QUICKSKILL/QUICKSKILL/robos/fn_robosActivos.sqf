@@ -12,12 +12,17 @@ _roboActivo = "no";
 ///for de robos activos
 _iFindID = 0;
 {
+//nombre robo del array global de robos activos
+_nombreRoboCompare = robosActivosGLOBAL select _iFindID;
+_nombreRoboCompare = _nombreRoboCompare select 0;
+
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
-if (_nombreRobo == _x) then {
+if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
-  _ladronesEnRobo =_x _select 1;
+   _ladronesEnRobo = robosActivosGLOBAL select _iFindID;
+   _ladronesEnRobo  = _ladronesEnRobo  select 1;
   robosActivosGLOBAL  set [_iFindID,_ladronesEnRobo + 1]
-}
+};
 
 //siguiente id 
 _iFindID = _iFindID +1;
@@ -35,5 +40,28 @@ publicVariable robosActivosGLOBAL;
 
 	
 //terminar script si hay mas de 2 robos activos
-if(count robosActivosGLOBAL > _maximoRobosActivos ) exitWith{[]spawn { sleep 3;hint "Hay demasiados robos activos, espera a que terminen para poder robar";sleep 3;} };
+
+///for de robos activos
+_robosActivosCount = 0;
+_iFindID = 0;
+{
+
+	 // ya estan robando actualizar numero de ladrones
+   _ladronesEnRobo = robosActivosGLOBAL select _iFindID;
+   _ladronesEnRobo  = _ladronesEnRobo  select 1;
+
+
+//buscar si no hay ningun robo con ese nombre en el array de robos activos
+if (_ladronesEnRobo > 1) then {
+ 
+  _robosActivosCount = _robosActivosCount +1;
+};
+
+//siguiente id 
+_iFindID = _iFindID +1;
+
+} forEach robosActivosGLOBAL;
+
+
+if(_robosActivosCount > _maximoRobosActivos ) exitWith{[]spawn { sleep 3;hint "Hay demasiados robos activos, espera a que terminen para poder robar";sleep 3;} };
 
