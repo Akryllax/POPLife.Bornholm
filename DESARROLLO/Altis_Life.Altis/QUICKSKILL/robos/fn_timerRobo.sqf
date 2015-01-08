@@ -132,7 +132,7 @@ if(_time < 1) then{
 					//mk18 silenciada
 					_ammoBox addWeaponCargoGlobal ["srifle_EBR_DMS_F",1];
 					_ammoBox addItemCargoGlobal ["muzzle_snds_B",1];
-					_ammoBox addMagazineCargoGlobal ["20Rnd_762x51_Mag ",6]; 
+					_ammoBox addMagazineCargoGlobal ["20Rnd_762x51_Mag",6]; 
 				};
 				if(_pagar_random == 6) then {
 					//sting

@@ -50,7 +50,7 @@ if (currentWeapon _ladron == "") exitWith {
 [[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 
 //Añadir robo al ladron
-[[getPlayerUID _ladron,name _ladron,5],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+[[getPlayerUID _ladron,name _ladron,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
 //Quitar opcion del robo
 _vendedor removeAction _action;

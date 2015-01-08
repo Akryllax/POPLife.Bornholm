@@ -1,0 +1,15 @@
+enableDebugConsole = 1;
+
+#include "dialog\defines.h"
+#include "dialog\powerUpgrade.h"
+#include "dialog\map.h"
+
+class CfgFunctions
+{
+	#include "Functions.h"
+};
+
+class RscTitles
+{
+	#include "dialog\powerDialog.h"
+};
