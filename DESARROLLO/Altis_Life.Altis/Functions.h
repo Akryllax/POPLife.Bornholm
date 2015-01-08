@@ -485,6 +485,8 @@ class Quickskill
 		file = "QUICKSKILL\robos";
 		class robosHandler {};
 		class timerRobo {};
+		class robosActivar{};
+		class robosDesactivados{};
 	};
 };
 

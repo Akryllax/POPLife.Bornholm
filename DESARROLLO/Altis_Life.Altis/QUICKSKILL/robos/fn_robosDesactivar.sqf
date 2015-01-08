@@ -19,7 +19,7 @@ if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
    _ladronesEnRobo = robosActivosGLOBAL select _iFindID;
    _ladronesEnRobo  = _ladronesEnRobo  select 1;
-  robosActivosGLOBAL  set [_iFindID,_ladronesEnRobo - 1]
+  robosActivosGLOBAL  set [_iFindID,_ladronesEnRobo - 1];
 };
 
 //siguiente id 

@@ -134,5 +134,10 @@ _dome allowDamage false;
 call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
 [] execVM "\life_server\Functions\WarBlast\fn_spawnNaufragios.sqf";
 call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+
+//activar controlador de robos activos by quick
+robosActivosGLOBAL = [];
+publicVariable robosActivosGLOBAL;
+
 life_server_isReady = true;
 publicVariable "life_server_isReady";

@@ -63,6 +63,9 @@ while {_time > 0} do {
 
 if(_time < 1) then{
 
+// el ladron ha terminado el robo, quitar 1 ladron del robo
+[_nombreRobo]spawn QUICK_fnc_robosDesactivar;
+
 	//si a roabdo pagar al ladron
 
 	if(_pagar_ladron == "si" and alive _ladron) then {

@@ -14,7 +14,8 @@
 	
 //Variables privadas generales
 private["_vendedor","_ladron","_action","_nombreRobo","_tiempoRobo","_dinero","_metros_cancelar_robo","_policias","_robosActivados","_cops","_Pos","_marker","_markerIDrandom","_darArmas","_darVehiculo"];
-
+//maximo de robos activos para el server
+_maximoRobosActivos = 2;
 //to?who?what?
 _vendedor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _ladron = 	[_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
@@ -44,6 +45,13 @@ if(_cops < _policias) exitWith {
 //Si no va armado no puede robar
 if (currentWeapon _ladron == "") exitWith {
 	hint "No me amenaces! Fuera de aquí pordiosero!";
+};
+
+//controlador de robos activos devuelve el numero de robos activos
+_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
+//Si no va armado no puede robar
+if (_robos_activos >= _maximoRobosActivos) exitWith {
+	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
 };
 
 //Avisar a la policia
