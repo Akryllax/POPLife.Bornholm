@@ -37,7 +37,7 @@ robosActivosGLOBAL pushBack [_nombreRobo,1];
 
 };
 
-publicVariable robosActivosGLOBAL;
+publicVariable "robosActivosGLOBAL";
 
 	
 ///for de robos activos

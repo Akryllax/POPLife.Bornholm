@@ -45,8 +45,8 @@ if(isServer) then {
 	publicVariable "EMSChannel";
 
 	//activar controlador de robos activos by quick
-	robosActivosGLOBAL = [];
-	publicVariable robosActivosGLOBAL;
+	if (isNil "robosActivosGLOBAL") then {robosActivosGLOBAL = []};	
+	publicVariable "robosActivosGLOBAL";
 
 
 

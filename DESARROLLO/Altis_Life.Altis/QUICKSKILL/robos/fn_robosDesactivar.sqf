@@ -27,7 +27,7 @@ _iFindID = _iFindID +1;
 
 } forEach robosActivosGLOBAL;
 
-publicVariable robosActivosGLOBAL;
+publicVariable "robosActivosGLOBAL";
 
 
 
