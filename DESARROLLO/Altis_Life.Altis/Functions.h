@@ -420,6 +420,14 @@ class WarBlast
 		class dynamicMapHeliCrash {}; // WarBlast: DynamicMap
 		class dynamicMapNaufragios {}; // WarBlast: DynamicMap
 	};
+	class economy
+	{
+		file = "WarBlast\economy";
+		class virt_updatePrice {};
+		class addsubstract {};
+		class openEconomy {};
+		class virt_updateEconomy {};
+	};
 };
 class Quickskill
 {

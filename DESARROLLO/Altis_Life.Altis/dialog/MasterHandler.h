@@ -27,3 +27,4 @@
 #include "smartphone.hpp"
 #include "slot_machine.hpp"
 #include "blackjack.hpp"
+#include "market.hpp"
