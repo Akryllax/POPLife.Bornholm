@@ -72,7 +72,7 @@ class BlackjackGUI
 		class STAY_BTN: life_RscButtonMenu
 		{
 			idc = 5982;
-			text = "Plantarse"; //--- ToDo: Localize;
+			text = "Plantar"; //--- ToDo: Localize;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] spawn life_fnc_BJstay;";
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
