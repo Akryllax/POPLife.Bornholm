@@ -12,7 +12,7 @@ _roboActivo = "no";
 _iFindID = 0;
 {
 //nombre robo del array global de robos activos
-_nombreRoboCompare = _x select 0;
+_nombreRoboCompare = _x select [0];
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_nombreRobo == _nombreRoboCompare) then {
@@ -34,7 +34,7 @@ robosActivosGLOBAL pushBack [_nombreRobo,1];
 };
 
 publicVariable "robosActivosGLOBAL";
-
+diag_log(format["robosActivosGlobal= %1;",robosActivosGLOBAL]);
 	
 ///for de robos activos
 _robosActivosCount = 0;
