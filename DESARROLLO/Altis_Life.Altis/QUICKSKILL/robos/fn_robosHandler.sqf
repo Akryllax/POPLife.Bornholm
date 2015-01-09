@@ -45,8 +45,10 @@ if (currentWeapon _ladron == "") exitWith {
 
 //controlador de robos activos devuelve el numero de robos activos
 _robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
-//Si no va armado no puede robar
-if (_robos_activos >= _maximoRobosActivos) exitWith {
+waitUntil{scriptDone _robos_activos};
+
+//Si hay muchos robos activos no se peude robar
+if (robosActivosCount >= _maximoRobosActivos) exitWith {
 	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
 };
 

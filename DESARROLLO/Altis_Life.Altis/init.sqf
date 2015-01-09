@@ -47,6 +47,8 @@ if(isServer) then {
 	//activar controlador de robos activos by quick
 	if (isNil "robosActivosGLOBAL") then {robosActivosGLOBAL = []};	
 	publicVariable "robosActivosGLOBAL";
+	if (isNil "robosActivosCount") then {robosActivosCount = 0};	
+	publicVariable "robosActivosCount";
 
 
 

@@ -61,4 +61,5 @@ _iFindID = _iFindID +1;
 } forEach robosActivosGLOBAL;
 
 //devuelve el numero de robos activos
-_robosActivosCount
+robosActivosCount = _robosActivosCount;
+publicVariable "robosActivosCount";
