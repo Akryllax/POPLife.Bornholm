@@ -104,8 +104,6 @@ class CfgFunctions
 			class cleanupRequest {};
 			class setObjVar {};
 			class keyManagement {};
-            class getPrices {};
-            class ajustprices {};
 		};
 		
 		class Housing
@@ -141,6 +139,8 @@ class CfgFunctions
 			  file = "\life_server\Functions\WarBlast";
 			class spawnHeliCrash {};
 			class spawnNaufragios {};
+			class getPrices {};
+            class ajustprices {};
 		}
 	};
 };
