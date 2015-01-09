@@ -11,14 +11,13 @@ _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
 _iFindID = 0;
 {
 //nombre robo del array global de robos activos
-_nombreRoboCompare = robosActivosGLOBAL select _iFindID;
-_nombreRoboCompare = _nombreRoboCompare select 0;
+_nombreRoboCompare = _x select 0;
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
-   _ladronesEnRobo = robosActivosGLOBAL select _iFindID;
-   _ladronesEnRobo  = _ladronesEnRobo  select 1;
+  
+   _ladronesEnRobo  = _x  select 1;
   robosActivosGLOBAL  set [_iFindID,_ladronesEnRobo - 1];
 };
 
