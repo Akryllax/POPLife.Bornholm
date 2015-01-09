@@ -10,7 +10,7 @@ _betamt = [_this,0,1,[0]] call BIS_fnc_param;
 disableSerialization;
 _display = findDisplay 5980;
 
-if(life_cash < _betamt) exitWith {hint format["You don't have enough money to play (%1$)",_betamt];};
+if(life_cash < _betamt) exitWith {hint format["No tienes suficiente dinero para jugar (%1$)",_betamt];};
 life_cash = life_cash - _betamt;
 
 
@@ -210,7 +210,7 @@ else
 		{		
 			_Dcard2 ctrlSetText format["%1",_number];
 			_winnings = _display displayCtrl 6001;
-			_winnings ctrlSetText "You Lose. Dealer got Black Jack.";
+			_winnings ctrlSetText "Has perdido. La banca tiene Black Jack.";
 			_bet1 ctrlEnable true;
 			_bet2 ctrlEnable true;
 			_bet3 ctrlEnable true;
@@ -229,7 +229,7 @@ else
 			{
 				_Dcard2 ctrlSetText format["%1",_number];
 				_winnings = _display displayCtrl 6001;
-				_winnings ctrlSetText "You Lose. Dealer got Black Jack.";
+				_winnings ctrlSetText "Has perdido. La banca tiene Black Jack.";
 				_bet1 ctrlEnable true;
 				_bet2 ctrlEnable true;
 				_bet3 ctrlEnable true;

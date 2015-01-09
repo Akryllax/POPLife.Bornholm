@@ -43,7 +43,7 @@ class SlotMachineGUI
 		class RscText_1003: life_RscText
 		{
 			idc = 5783;
-			text = "Apostar"; //--- ToDo: Localize;
+			text = "Jugar"; //--- ToDo: Localize;
 			x = 6 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
@@ -52,7 +52,7 @@ class SlotMachineGUI
 		class RscText_1004: life_RscText
 		{
 			idc = 5784;
-			text = "Apostar"; //--- ToDo: Localize;
+			text = "Jugar"; //--- ToDo: Localize;
 			x = 15 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
@@ -61,7 +61,7 @@ class SlotMachineGUI
 		class RscText_1005: life_RscText
 		{
 			idc = 5786;
-			text = "Apostar"; //--- ToDo: Localize;
+			text = "Jugar"; //--- ToDo: Localize;
 			x = 23 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
@@ -70,7 +70,7 @@ class SlotMachineGUI
 		class RscText_1006: life_RscText
 		{
 			idc = 5787;
-			text = "Apostar"; //--- ToDo: Localize;
+			text = "Jugar"; //--- ToDo: Localize;
 			x = 32 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;

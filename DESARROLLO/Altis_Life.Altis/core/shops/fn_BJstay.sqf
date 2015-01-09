@@ -271,7 +271,7 @@ if( _win != 0 ) then
 }
 else
 {
-	_winnings ctrlSetText "You lose. Dealer Wins.";
+	_winnings ctrlSetText "Has perdido. Gana la banca.";
 
 	//you lose
 	//set text
@@ -282,7 +282,7 @@ else
 	_bet2 ctrlEnable true;
 	_bet3 ctrlEnable true;
 	_bet4 ctrlEnable true;
-	_bet5KTEXT  ctrlSetText "BET";
-	_bet10KTEXT ctrlSetText "BET";
-	_bet25KTEXT ctrlSetText "BET";
-	_bet50KTEXT ctrlSetText "BET";
+	_bet5KTEXT  ctrlSetText "Jugar";
+	_bet10KTEXT ctrlSetText "Jugar";
+	_bet25KTEXT ctrlSetText "Jugar";
+	_bet50KTEXT ctrlSetText "Jugar";
