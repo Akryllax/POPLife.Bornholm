@@ -19,6 +19,7 @@ _nombreRoboCompare = _nombreRoboCompare select 0;
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
+  _roboActivo = "si";
    _ladronesEnRobo = robosActivosGLOBAL select _iFindID;
    _ladronesEnRobo  = _ladronesEnRobo  select 1;
   robosActivosGLOBAL  set [_iFindID,_ladronesEnRobo + 1];

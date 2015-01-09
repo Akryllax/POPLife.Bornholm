@@ -26,6 +26,3 @@ onMapSingleClick "if(_alt) then {vehicle player setPos _pos};";
 
 [8,true,12] execFSM "core\fsm\timeModule.fsm";
 
-//activar controlador de robos activos by quick
-	robosActivosGLOBAL = [];
-	publicVariable robosActivosGLOBAL;

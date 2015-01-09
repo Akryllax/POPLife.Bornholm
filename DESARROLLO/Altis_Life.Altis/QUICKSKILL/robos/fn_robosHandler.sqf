@@ -1,10 +1,6 @@
 /*
 	File: fn_robosHandler.sqf
 	Author: Quickskill
-	Edited: Akryllax
-	Desc: wacha gona dú güen dei come for yú
-
-	
 	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","marijuana","cocainep","cocainep"],0,"no","no"]];
 	
 	Example:
