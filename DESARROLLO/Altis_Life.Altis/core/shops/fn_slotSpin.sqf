@@ -6,7 +6,7 @@
 */
 private["_slot","_slot1","_slot2","_slot3","_winnings","_slotcash","_betamt","_display"];
 _betamt = [_this,0,1,[0]] call BIS_fnc_param;
-if(life_cash < _betamt) exitWith {hint format["You don't have enough money to play (%1$)",_betamt];};
+if(life_cash < _betamt) exitWith {hint format["No tienes suficiente dinero para jugar (%1$)",_betamt];};
 life_cash = life_cash - _betamt;
 disableSerialization;
 _display = findDisplay 5780;

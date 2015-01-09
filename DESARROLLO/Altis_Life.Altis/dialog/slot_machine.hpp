@@ -33,7 +33,7 @@ class SlotMachineGUI
 		class RscText_1000: life_RscText
 		{
 			idc = 5774;
-			text = "Winnings: $"; //--- ToDo: Localize;
+			text = "Premio: $"; //--- ToDo: Localize;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 5 * GUI_GRID_W;
@@ -43,7 +43,7 @@ class SlotMachineGUI
 		class RscText_1003: life_RscText
 		{
 			idc = 5783;
-			text = "BET"; //--- ToDo: Localize;
+			text = "Apostar"; //--- ToDo: Localize;
 			x = 6 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
@@ -52,7 +52,7 @@ class SlotMachineGUI
 		class RscText_1004: life_RscText
 		{
 			idc = 5784;
-			text = "BET"; //--- ToDo: Localize;
+			text = "Apostar"; //--- ToDo: Localize;
 			x = 15 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
@@ -61,7 +61,7 @@ class SlotMachineGUI
 		class RscText_1005: life_RscText
 		{
 			idc = 5786;
-			text = "BET"; //--- ToDo: Localize;
+			text = "Apostar"; //--- ToDo: Localize;
 			x = 23 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
@@ -70,7 +70,7 @@ class SlotMachineGUI
 		class RscText_1006: life_RscText
 		{
 			idc = 5787;
-			text = "BET"; //--- ToDo: Localize;
+			text = "Apostar"; //--- ToDo: Localize;
 			x = 32 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
@@ -80,7 +80,7 @@ class SlotMachineGUI
 		class RscText_1002: life_RscText
 		{
 			idc = 5776;
-			text = "SLOT MACHINE"; //--- ToDo: Localize;
+			text = "TRAGAPERRAS"; //--- ToDo: Localize;
 			x = 6 * GUI_GRID_W + GUI_GRID_X;
 			y = 0 * GUI_GRID_H + GUI_GRID_Y;
 			w = 28 * GUI_GRID_W;
@@ -134,7 +134,7 @@ class SlotMachineGUI
 		class EXIT_BTN: life_RscButtonMenu
 		{
 			idc = -1;
-			text = "EXIT"; //--- ToDo: Localize;
+			text = "SALIR"; //--- ToDo: Localize;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "closeDialog 0;";
 			x = 35.5 * GUI_GRID_W + GUI_GRID_X;
@@ -145,7 +145,7 @@ class SlotMachineGUI
 		class BET_5K: life_RscButtonMenu
 		{
 			idc = 5778;
-			text = "5K"; //--- ToDo: Localize;
+			text = "5.000$"; //--- ToDo: Localize;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[5000] spawn life_fnc_slotSpin;";
 			x = 5 * GUI_GRID_W + GUI_GRID_X;
@@ -153,32 +153,10 @@ class SlotMachineGUI
 			w = 4 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
 		};
-		class BET_50K: life_RscButtonMenu
-		{
-			idc = 5779;
-			text = "50K"; //--- ToDo: Localize;
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			onButtonClick = "[50000] spawn life_fnc_slotSpin;";
-			x = 31 * GUI_GRID_W + GUI_GRID_X;
-			y = 15 * GUI_GRID_H + GUI_GRID_Y;
-			w = 4 * GUI_GRID_W;
-			h = 2 * GUI_GRID_H;
-		};
-		class BET_25K: life_RscButtonMenu
-		{
-			idc = 5781;
-			text = "25K"; //--- ToDo: Localize;
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			onButtonClick = "[25000] spawn life_fnc_slotSpin;";
-			x = 22 * GUI_GRID_W + GUI_GRID_X;
-			y = 15 * GUI_GRID_H + GUI_GRID_Y;
-			w = 4 * GUI_GRID_W;
-			h = 2 * GUI_GRID_H;
-		};
 		class BET_10K: life_RscButtonMenu
 		{
 			idc = 5782;
-			text = "10K"; //--- ToDo: Localize;
+			text = "10.000$"; //--- ToDo: Localize;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[10000] spawn life_fnc_slotSpin;";
 			x = 14 * GUI_GRID_W + GUI_GRID_X;
@@ -186,6 +164,27 @@ class SlotMachineGUI
 			w = 4 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
 		};
-		
+		class BET_25K: life_RscButtonMenu
+		{
+			idc = 5781;
+			text = "25.000$"; //--- ToDo: Localize;
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			onButtonClick = "[25000] spawn life_fnc_slotSpin;";
+			x = 22 * GUI_GRID_W + GUI_GRID_X;
+			y = 15 * GUI_GRID_H + GUI_GRID_Y;
+			w = 4 * GUI_GRID_W;
+			h = 2 * GUI_GRID_H;
+		};
+		class BET_50K: life_RscButtonMenu
+		{
+			idc = 5779;
+			text = "50.000$"; //--- ToDo: Localize;
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			onButtonClick = "[50000] spawn life_fnc_slotSpin;";
+			x = 31 * GUI_GRID_W + GUI_GRID_X;
+			y = 15 * GUI_GRID_H + GUI_GRID_Y;
+			w = 4 * GUI_GRID_W;
+			h = 2 * GUI_GRID_H;
+		};		
 	};
 };
