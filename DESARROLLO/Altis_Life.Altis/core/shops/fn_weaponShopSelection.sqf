@@ -2,7 +2,7 @@
 /*
 	File: fn_weaponShopSelection.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Checks the weapon & adds the price tag.
 */
@@ -16,7 +16,7 @@ _item = _control lbData _index;
 if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 {
 	_iS = [_item,__GETC__(life_weapon_shop_array)] call TON_fnc_index;
-	if(_iS == -1) then 
+	if(_iS == -1) then
 	{
 		_price = 0;
 	}
@@ -32,7 +32,7 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 	_price = _control lbValue _index;
 	if(_price > life_cash) then
 	{
-		_priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#ff0000'>$%1</t><br/>You lack: <t color='#8cff9b'>$%2</t></t>",[(_price)] call life_fnc_numberText,[(_price - life_cash)] call life_fnc_numberText];
+		_priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#ff0000'>$%1</t><br/>Te falta: <t color='#8cff9b'>$%2</t></t>",[(_price)] call life_fnc_numberText,[(_price - life_cash)] call life_fnc_numberText];
 	}
 		else
 	{
