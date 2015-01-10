@@ -1,0 +1,1 @@
+for /f "usebackq delims=|" %%f in (`dir /b "%~dp0"`) do ImageToPAA.exe %%f %%f.png

@@ -11,7 +11,7 @@ class power_menu {
 	class controlsBackground {
 		class bkgBoxMain: RscText
 		{
-			idc = 1000;
+			idc = -1;
 			x = -28.5 * GUI_GRID_W + GUI_GRID_X;
 			y = -9 * GUI_GRID_H + GUI_GRID_Y;
 			w = 11.5 * GUI_GRID_W;
@@ -20,12 +20,32 @@ class power_menu {
 		};
 		class bkgTimer: RscText
 		{
-			idc = 1001;
+			idc = -1;
 			x = -17 * GUI_GRID_W + GUI_GRID_X;
 			y = -9.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 0.4 * GUI_GRID_W;
 			h = 3.5 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,1};
+		};
+		class bkgPrimary: RscText
+		{
+			idc = -1;
+			text = "";
+			x = -27.5 * GUI_GRID_W + GUI_GRID_X;
+			y = -9.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 4 * GUI_GRID_W;
+			h = 3.5 * GUI_GRID_H;
+			colorBackground[] = {0,0,0,0.3};
+		};
+		class bkgSecondary: RscText
+		{
+			idc = -1;
+			text = "";
+			x = -23 * GUI_GRID_W + GUI_GRID_X;
+			y = -9.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 4 * GUI_GRID_W;
+			h = 3.5 * GUI_GRID_H;
+			colorBackground[] = {0,0,0,0.3};
 		};
 	};
 	
@@ -63,7 +83,7 @@ class power_menu {
 		class imgSmall: RscPicture
 		{
 			idc = 1200;
-			text = "#(argb,8,8,3)color(1,1,1,1)";
+			text = "img\icon_sniper.paa";
 			x = -18.5 * GUI_GRID_W + GUI_GRID_X;
 			y = -8.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 1 * GUI_GRID_W;

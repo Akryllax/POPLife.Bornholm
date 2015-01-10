@@ -10,9 +10,16 @@ disableSerialization;
 
 _d = uiNamespace getVariable ['power_menu', displayNull];
 
-(_d displayCtrl 1201) ctrlSetText "#(argb,8,8,3)color(0.5,0.5,0.5,0.3)";
-(_d displayCtrl 1202) ctrlSetText "#(argb,8,8,3)color(0.5,0.5,0.5,0.3)";
+(_d displayCtrl 1201) ctrlSetText "img\devils_eye_lo.paa";
+(_d displayCtrl 1202) ctrlSetText "img\techno_psyco_lo.paa";
 
+AKR_test = {
+	hint "Launching hability";
+};
+
+_d displayAddEventHandler["KeyDown", "[] call AKR_test"];
+
+/*
 [] spawn {
 	disableSerialization;
 
@@ -26,3 +33,4 @@ _d = uiNamespace getVariable ['power_menu', displayNull];
 			(_d displayCtrl 1202) ctrlSetText (format["#(argb,8,8,3)color(0.%1,0.%2,0.%3,0.5)", cos(time),cos(time),cos(time)]);
 	};
 };
+*/
