@@ -13,24 +13,8 @@ _d = uiNamespace getVariable ['power_menu', displayNull];
 (_d displayCtrl 1201) ctrlSetText "img\devils_eye_lo.paa";
 (_d displayCtrl 1202) ctrlSetText "img\techno_psyco_lo.paa";
 
-AKR_test = {
-	hint "Launching hability";
-};
-
-_d displayAddEventHandler["KeyDown", "[] call AKR_test"];
-
-/*
 [] spawn {
-	disableSerialization;
-
-	_d = uiNamespace getVariable ['power_menu', displayNull];
-
-	_tag1 = ctrlText (_d displayCtrl 1201);
-	_tag2 = ctrlText (_d displayCtrl 1202);
-
-	while {(_tag1 == ctrlText (_d displayCtrl 1201)) && (_tag2 == ctrlText (_d displayCtrl 1202))} do {
-			(_d displayCtrl 1201) ctrlSetText (format["#(argb,8,8,3)color(0.%1,0.%2,0.%3,0.5)", cos(time),cos(time),cos(time)]);
-			(_d displayCtrl 1202) ctrlSetText (format["#(argb,8,8,3)color(0.%1,0.%2,0.%3,0.5)", cos(time),cos(time),cos(time)]);
-	};
+	
+	waitUntil {!(isNull (findDisplay 46))};
+	(findDisplay 46) displayAddEventHandler ["KeyDown", "if(_this select 1 == 15) then { [] call AKR_fnc_useHability;};"];
 };
-*/

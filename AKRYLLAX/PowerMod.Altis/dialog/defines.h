@@ -141,7 +141,8 @@ class RscStructuredText
 	colorBackground[] = {1, 1, 1, 1};
 	colorText[] = {1, 1, 1, 1}; 
 	font = FontM; 
-	sizeEx = 0.04; 
+	sizeEx = 0.04;
+	lineSpacing = 0.01;
 	h = 0.04; 
 	text = ""; 
 };
