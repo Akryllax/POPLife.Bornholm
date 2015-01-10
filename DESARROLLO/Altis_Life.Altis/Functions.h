@@ -399,6 +399,14 @@ class Life_Client_Core
 		class vehicleGarage {};
 		class gangDeposit {};
 	};
+	class economy
+	{
+		file = "core\economy";
+		class virt_updatePrice {};
+		class addsubstract {};
+		class openEconomy {};
+		class virt_updateEconomy {};
+	};
 };
 class WarBlast
 {
@@ -419,14 +427,6 @@ class WarBlast
 		file = "WarBlast\DynamicMap";
 		class dynamicMapHeliCrash {}; // WarBlast: DynamicMap
 		class dynamicMapNaufragios {}; // WarBlast: DynamicMap
-	};
-	class economy
-	{
-		file = "WarBlast\economy";
-		class virt_updatePrice {};
-		class addsubstract {};
-		class openEconomy {};
-		class virt_updateEconomy {};
 	};
 };
 class Quickskill
