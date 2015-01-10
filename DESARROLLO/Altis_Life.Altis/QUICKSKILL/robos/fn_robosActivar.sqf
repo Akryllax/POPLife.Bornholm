@@ -1,7 +1,7 @@
 /*
 	File: fn_robosActivos.sqf
 	Author: Quickskill
-	Desc: Ativar robo "+1 si ya estan robando sino incluir robo en array global de robos"
+	Desc: Activar robo "+1 si ya estan robando sino incluir robo en array global de robos"
 */
 private ["_nombreRobo ", "_roboActivo ", "_ladronesEnRobo"];
 
@@ -9,7 +9,7 @@ _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
 _roboActivo = "no";
 
 ///for de robos activos
-
+_indexArray = 0;
 {
 //nombre robo del array global de robos activos
 _nombreRoboCompare = _x select 0;
@@ -19,10 +19,10 @@ if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
     _roboActivo = "si";
    _ladronesEnRobo  = _x  select 1;
-   _x  set [_nombreRobo,_ladronesEnRobo + 1];
+   _x  set [_indexArray,_ladronesEnRobo + 1];
 };
 
-
+_indexArray = _indexArray + 1;
 
 } forEach robosActivosGLOBAL;
 
