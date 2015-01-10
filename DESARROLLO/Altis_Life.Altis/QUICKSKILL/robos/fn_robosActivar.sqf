@@ -1,7 +1,7 @@
 /*
 	File: fn_robosActivos.sqf
 	Author: Quickskill
-	Desc: Ativar robo "+1 si ya estan robando sino inncluir robo en array global de robos"
+	Desc: Ativar robo "+1 si ya estan robando sino incluir robo en array global de robos"
 */
 private ["_nombreRobo ", "_roboActivo ", "_ladronesEnRobo", "_iFindID"];
 
