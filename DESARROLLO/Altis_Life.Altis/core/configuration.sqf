@@ -56,6 +56,11 @@ __CONST__(life_gangUpgradeMultipler,2.5); //BLAH
 
 __CONST__(life_enableFatigue,FALSE); //Enable / Disable the ARMA 3 Fatigue System
 
+//contador de robos de quick
+__CONST__(robosActivosGLOBAL,[]]); 
+__CONST__(robosActivosCount,[0]); 
+	
+
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
 /*
