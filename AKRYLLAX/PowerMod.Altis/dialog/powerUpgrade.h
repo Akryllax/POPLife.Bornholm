@@ -235,7 +235,8 @@ class power_upgrade {
 	class strucStats: RscStructuredText
 	{
 		idc = 1100;
-		text = "STATS<br/><t color=""#9C0909"">EXP: 51548418</t>"; //--- ToDo: Localize;
+		text = "STATS\nEXP: 51548418"; //--- ToDo: Localize;
+		onLoad = "((findDisplay 6351) displayCtrl 1100) ctrlSetText (parseText ""STARTS<br/>EXP: <t color=#F00>515151</t>"")";
 		x = 35 * GUI_GRID_W + GUI_GRID_X;
 		y = 1 * GUI_GRID_H + GUI_GRID_Y;
 		w = 14.5 * GUI_GRID_W;
@@ -254,33 +255,19 @@ class power_upgrade {
 		w = 8.5 * GUI_GRID_W;
 		h = 6 * GUI_GRID_H;
 	};
-	class habilityBkg: RscText
-	{
-		idc = 1010;
-		x = -23 * GUI_GRID_W + GUI_GRID_X;
-		y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
-		w = 6.5 * GUI_GRID_W;
-		h = 3.5 * GUI_GRID_H;
-		colorBackground[] = {1,1,1,0.4};
-	};
-	class habilityTitle: RscText
-	{
-		idc = 1009;
-		text = "Firebreather"; //--- ToDo: Localize;
-		x = -23 * GUI_GRID_W + GUI_GRID_X;
-		y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
-		w = 6.5 * GUI_GRID_W;
-		h = 1 * GUI_GRID_H;
-		colorBackground[] = {0.612,0.035,0.035,1};
-	};
 	class FrameView {
 		idd = 1785;
+		x = 3.5 * GUI_GRID_W + GUI_GRID_X;
+		y = 1 * GUI_GRID_H + GUI_GRID_Y;
+		w = 31 * GUI_GRID_W;
+		h = 20 * GUI_GRID_H;
+		colorBackground[] = {0,0,0,1};
 		movingEnable = false;
 		enableSimulation = true;
 		
-		controlsBackground[] = {habilityDesc};
+		controlsBackground[] = {habilityDesc,treeViewFrameLeft,treeViewFrameDown,treeViewFrameRight,treeViewFrameUp};
 		
-		controls[] = {treeViewFrameLeft,treeViewFrameDown,treeViewFrameRight,treeViewFrameUp};
+		controls[] = {};
 		
 		class treeViewFrameLeft: RscText
 		{
@@ -327,6 +314,29 @@ class power_upgrade {
 			w = 5.5 * GUI_GRID_W;
 			h = 1.5 * GUI_GRID_H;
 			sizeEx = 0.65 * GUI_GRID_H;
+			
+			controlsBackground[] = {habilityBkg};
+			controls[] = {habilityTitle};
+			
+			class habilityBkg: RscText
+			{
+				idc = 1010;
+				x = -23 * GUI_GRID_W + GUI_GRID_X;
+				y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
+				w = 6.5 * GUI_GRID_W;
+				h = 3.5 * GUI_GRID_H;
+				colorBackground[] = {1,1,1,0.4};
+			};
+			class habilityTitle: RscText
+			{
+				idc = 1009;
+				text = "Firebreather"; //--- ToDo: Localize;
+				x = -23 * GUI_GRID_W + GUI_GRID_X;
+				y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
+				w = 6.5 * GUI_GRID_W;
+				h = 1 * GUI_GRID_H;
+				colorBackground[] = {0.612,0.035,0.035,1};
+			};
 		};
 			
 	};
