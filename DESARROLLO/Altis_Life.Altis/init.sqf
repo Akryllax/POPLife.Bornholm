@@ -44,19 +44,18 @@ if(isServer) then {
 	publicVariable "adminChannel";
 	publicVariable "EMSChannel";
 
-	//contador de robos de quick
-	//activar controlador de robos activos by quick
-	robosActivosGLOBAL = [];
-	robosActivosCount = 0;
-	publicVariable "robosActivosGLOBAL";
-	publicVariable "robosActivosCount";
+//contador de robos de quick
+//activar controlador de robos activos by quick
+robosActivosGLOBAL = [];
+robosActivosCount = 0;
+publicVariable "robosActivosGLOBAL";
+publicVariable "robosActivosCount";
 
-
+diag_log format["El array robosActivosGlobal contiene: ""%1""", robosActivosGlobal];
+diag_log format["El array robosActivosCount contiene: ""%1""", robosActivosCount];
 
 
 } else {
 
 };
 {_x setMarkerAlphaLocal 0} forEach ["helicrash_1","helicrash_2","helicrash_3","helicrash_4","wreck_1","wreck_2","wreck_3","wreck_4"];
-
-

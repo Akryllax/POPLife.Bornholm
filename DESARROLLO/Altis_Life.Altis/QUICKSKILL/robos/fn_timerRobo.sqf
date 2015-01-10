@@ -76,7 +76,7 @@ if(_time < 1) then{
 
 			//dar pasta
 			life_cash = life_cash + _dinero;
-			[0] call SOCK_fnc_updatePartial;
+			
 
 			//Dar item especiales
 			{
