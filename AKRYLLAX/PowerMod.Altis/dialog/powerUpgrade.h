@@ -206,7 +206,8 @@ class power_upgrade {
 	class imgTitle: RscPicture
 	{
 		idc = 1200;
-		text = "#(argb,8,8,3)color(1,1,1,1)";
+		text = "img\crosshair.paa";
+		colorBackground[] = {0,0,0,0};
 		x = -6.5 * GUI_GRID_W + GUI_GRID_X;
 		y = -2 * GUI_GRID_H + GUI_GRID_Y;
 		w = 2.5 * GUI_GRID_W;
@@ -220,7 +221,7 @@ class power_upgrade {
 		y = -2 * GUI_GRID_H + GUI_GRID_Y;
 		w = 11.5 * GUI_GRID_W;
 		h = 2 * GUI_GRID_H;
-		sizeEx = 1.1 * GUI_GRID_H;
+		sizeEx = 0.8 * GUI_GRID_H;
 	};
 	class frameTreeView: RscFrame
 	{
@@ -272,51 +273,62 @@ class power_upgrade {
 		h = 1 * GUI_GRID_H;
 		colorBackground[] = {0.612,0.035,0.035,1};
 	};
-	class habilityDesc: RscText
-	{
-		idc = 1011;
-		text = "LVL: 1/5"; //--- ToDo: Localize;
-		x = -22.5 * GUI_GRID_W + GUI_GRID_X;
-		y = 2 * GUI_GRID_H + GUI_GRID_Y;
-		w = 5.5 * GUI_GRID_W;
-		h = 1.5 * GUI_GRID_H;
-		sizeEx = 0.65 * GUI_GRID_H;
-	};
-	class treeViewFrameLeft: RscText
-	{
-		idc = 1013;
-		x = 3.5 * GUI_GRID_W + GUI_GRID_X;
-		y = 1 * GUI_GRID_H + GUI_GRID_Y;
-		w = 4 * GUI_GRID_W;
-		h = 20 * GUI_GRID_H;
-		colorBackground[] = {0.45,0.45,0.45,1};
-	};
-	class treeViewFrameDown: RscText
-	{
-		idc = 1014;
-		x = 7.5 * GUI_GRID_W + GUI_GRID_X;
-		y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
-		w = 23.5 * GUI_GRID_W;
-		h = 2.5 * GUI_GRID_H;
-		colorBackground[] = {0.45,0.45,0.45,1};
-	};
-	class treeViewFrameRight: RscText
-	{
-		idc = 1015;
-		x = 30.5 * GUI_GRID_W + GUI_GRID_X;
-		y = 1 * GUI_GRID_H + GUI_GRID_Y;
-		w = 4 * GUI_GRID_W;
-		h = 20 * GUI_GRID_H;
-		colorBackground[] = {0.45,0.45,0.45,1};
-	};
-	class treeViewFrameUp: RscText
-	{
-		idc = 1016;
-		x = 7.5 * GUI_GRID_W + GUI_GRID_X;
-		y = 1 * GUI_GRID_H + GUI_GRID_Y;
-		w = 23.5 * GUI_GRID_W;
-		h = 2.5 * GUI_GRID_H;
-		colorBackground[] = {0.45,0.45,0.45,1};
+	class FrameView {
+		idd = 1785;
+		movingEnable = false;
+		enableSimulation = true;
+		
+		controlsBackground[] = {habilityDesc};
+		
+		controls[] = {treeViewFrameLeft,treeViewFrameDown,treeViewFrameRight,treeViewFrameUp};
+		
+		class treeViewFrameLeft: RscText
+		{
+			idc = 1013;
+			x = 3.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 1 * GUI_GRID_H + GUI_GRID_Y;
+			w = 4 * GUI_GRID_W;
+			h = 20 * GUI_GRID_H;
+			colorBackground[] = {0.45,0.45,0.45,1};
+		};
+		class treeViewFrameDown: RscText
+		{
+			idc = 1014;
+			x = 7.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 23.5 * GUI_GRID_W;
+			h = 2.5 * GUI_GRID_H;
+			colorBackground[] = {0.45,0.45,0.45,1};
+		};
+		class treeViewFrameRight: RscText
+		{
+			idc = 1015;
+			x = 30.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 1 * GUI_GRID_H + GUI_GRID_Y;
+			w = 4 * GUI_GRID_W;
+			h = 20 * GUI_GRID_H;
+			colorBackground[] = {0.45,0.45,0.45,1};
+		};
+		class treeViewFrameUp: RscText
+		{
+			idc = 1016;
+			x = 7.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 1 * GUI_GRID_H + GUI_GRID_Y;
+			w = 23.5 * GUI_GRID_W;
+			h = 2.5 * GUI_GRID_H;
+			colorBackground[] = {0.45,0.45,0.45,1};
+		};
+		class habilityDesc: RscText
+		{
+			idc = 1011;
+			text = "LVL: 1/5"; //--- ToDo: Localize;
+			x = -22.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 2 * GUI_GRID_H + GUI_GRID_Y;
+			w = 5.5 * GUI_GRID_W;
+			h = 1.5 * GUI_GRID_H;
+			sizeEx = 0.65 * GUI_GRID_H;
+		};
+			
 	};
 	class buttonClass1: RscButton
 	{
@@ -388,6 +400,7 @@ class power_upgrade {
 	{
 		idc = 1606;
 		text = "CERRAR"; //--- ToDo: Localize;
+		onClick = "closeDialog 0";
 		x = 35.5 * GUI_GRID_W + GUI_GRID_X;
 		y = 21.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 13.5 * GUI_GRID_W;

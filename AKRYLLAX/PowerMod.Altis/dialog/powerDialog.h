@@ -27,26 +27,6 @@ class power_menu {
 			h = 3.5 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,1};
 		};
-		class bkgPrimary: RscText
-		{
-			idc = -1;
-			text = "";
-			x = -27.5 * GUI_GRID_W + GUI_GRID_X;
-			y = -9.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 4 * GUI_GRID_W;
-			h = 3.5 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.3};
-		};
-		class bkgSecondary: RscText
-		{
-			idc = -1;
-			text = "";
-			x = -23 * GUI_GRID_W + GUI_GRID_X;
-			y = -9.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 4 * GUI_GRID_W;
-			h = 3.5 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.3};
-		};
 	};
 	
 	class controls {
