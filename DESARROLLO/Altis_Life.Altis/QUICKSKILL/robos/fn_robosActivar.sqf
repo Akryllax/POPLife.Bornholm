@@ -6,9 +6,8 @@
 private ["_nombreRobo ", "_roboActivo ", "_ladronesEnRobo"];
 
 _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
-diag_log format["Nombre de robo recibido por via parametro al activar.sqf : ""%1""", _nombreRobo ];
 _roboActivo = "no";
-
+diag_log format["Nombre de robo recibido por via parametro al activar.sqf : ""%1""", _nombreRobo ];
 ///for de robos activos
 
 {
@@ -20,7 +19,7 @@ if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
     _roboActivo = "si";
    _ladronesEnRobo  = _x  select 1;
-   _x  set [_nombreRobo,_ladronesEnRobo + 1];
+   _x  set [_forEachIndex,_ladronesEnRobo + 1];
 };
 
 
@@ -45,7 +44,7 @@ _robosActivosCount = 0;
    _ladronesData = _x;
    _ladronesEnRobo  = _ladronesData  select 1;
 //debug
-diag_log format["El array robosActivosGlobal contiene el robo: %1, con ladrones %2 ->", _ladronesData  select 0,_ladronesData  select 1];
+diag_log format["El array robosActivosGlobal contiene el robo: ""%1"" con ladrones ->", _ladronesData  select 0,_ladronesData  select 1];
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_ladronesEnRobo > 0) then {
