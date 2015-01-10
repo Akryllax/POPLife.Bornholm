@@ -44,9 +44,9 @@ sleep 3; //Wait in seconds before the credits start after player is in-game
 _role1 = "Bienvenido a PLATA O PLOMO";
 _role1names = ["Servidor Altis Life"];
 _role2 = "Web/Foro";
-_role2names = ["www.plataoplomo.es"];
+_role2names = ["www.plataoplomo.wtf"];
 _role3 = "Teamspeak3";
-_role3names = ["ts.plataoplomo.es"];
+_role3names = ["ts3.plataoplomo.wtf"];
 
 {
 sleep 2;
