@@ -10,7 +10,6 @@ class Mission
 		"A3_Structures_F_Civ_Garbage",
 		"a3_characters_f_gamma",
 		"A3_Boat_F_Trawler",
-		"A3_Structures_F_Civ_Dead",
 		"A3_Signs_F",
 		"A3_Structures_F_Walls",
 		"A3_Structures_F_Mil_Fortification",
@@ -37,7 +36,6 @@ class Mission
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Structures_F_Ind_Cargo",
 		"A3_Structures_F_Research",
-		"A3_Characters_F_INDEP",
 		"A3_Structures_F_EPC_Civ_Accessories",
 		"A3_Structures_F_Ind_Shed",
 		"A3_Structures_F_Wrecks",
@@ -3525,7 +3523,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=781;
+		items=782;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -3612,7 +3610,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CashDesk_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false;";
+			init="this addAction [""Play Slots ($2500)"", life_fnc_slotmachine];";
 		};
 		class Item9
 		{
@@ -11572,6 +11570,16 @@ class Mission
 			vehicle="Land_CashDesk_F";
 			skill=0.40000001;
 			init="this allowDamage false;  this enableSimulation false;; this setpos [3670.1362, 13114.977, -2.6702881e-005];";
+		};
+		class Item781
+		{
+			position[]={3645.3662,10.173746,13104.819};
+			azimut=-269.17001;
+			id=995;
+			side="EMPTY";
+			vehicle="Land_CashDesk_F";
+			skill=0.60000002;
+			init=" this addAction [""Play BlackJack"", life_fnc_blackjack];";
 		};
 	};
 	class Markers
