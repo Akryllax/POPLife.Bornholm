@@ -34,7 +34,7 @@ robosActivosGLOBAL pushBack [_nombreRobo,1];
 };
 
 publicVariable "robosActivosGLOBAL";
-diag_log(format["robosActivosGlobal= %1;",robosActivosGLOBAL]);
+
 	
 ///for de robos activos
 _robosActivosCount = 0;
