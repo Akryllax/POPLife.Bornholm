@@ -16,15 +16,15 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Red";};
-			case 1: {_color = "Yellow";};
-			case 2: {_color = "White";};
-			case 3: {_color = "Blue";};
-			case 4: {_color = "Dark Red";};
-			case 5: {_color = "Blue / White"};
-			case 6: {_color = "Black"};
-			case 7: {_color = "Black"};
-			case 8: {_color = "Taxi"};
+			case 0: {_color = "Rojo";};
+			case 1: {_color = "Amarillo";};
+			case 2: {_color = "Blanco";};
+			case 3: {_color = "Azul";};
+			case 4: {_color = "Rojo Oscuro";};
+			case 5: {_color = "Azul y Blanco"};
+			case 6: {_color = "Negro"};			
+			case 7: {_color = "Taxi"};
+			case 8: {_color = "Maria"};
 		};
 	};
 	
@@ -33,13 +33,13 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 1: {_color = "Verde";};
+			case 2: {_color = "Azul";};
+			case 3: {_color = "Azul Oscuro";};
+			case 4: {_color = "Amarillo";};
+			case 5: {_color = "Blanco"};
+			case 6: {_color = "Gris"};
+			case 7: {_color = "Negro"};
 		};
 	};
 	
@@ -47,13 +47,17 @@ switch (_vehicle) do
 	{
 		switch(_index) do
 		{
-			case 0: {_color = "Red"};
-			case 1: {_color = "Dark Blue"};
-			case 2: {_color = "Orange"};
-			case 3: {_color = "Black / White"};
-			case 4: {_color = "Tan"};
-			case 5: {_color = "Green"};
-			case 6: {_color = "Cop"};
+			case 0: {_color = "Rojo"};
+			case 1: {_color = "Azul Oscuro"};
+			case 2: {_color = "Naranja"};
+			case 3: {_color = "Blanco y Negro"};
+			case 4: {_color = "Palido"};
+			case 5: {_color = "Verde"};			
+			case 6: {_color = "Pizza"};
+			case 7: {_color = "Monster"};
+			case 8: {_color = "RedBull"};
+			case 9: {_color = "Valkyria"};
+			case 10: {_color = "Policia"};
 		};
 	};
 	
@@ -61,11 +65,18 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Dark Red";};
-			case 1: {_color = "Black";};
-			case 2: {_color = "Silver";};
-			case 3: {_color = "Orange";};
-			case 4: {_color = "Cop";};
+			case 0: {_color = "Rojo Oscuro";};
+			case 1: {_color = "Negro";};
+			case 2: {_color = "Plateado";};
+			case 3: {_color = "Naranja";};
+			case 4: {_color = "Policia";};
+			case 5: {_color = "Blanco y Negro"};
+			case 6: {_color = "Carbono"};
+			case 7: {_color = "Calavera"};
+			case 8: {_color = "Jurassic"};
+			case 9: {_color = "Rojo y Negro"};
+			case 10: {_color = "Kitty"};
+			case 11: {_color = "Taxi"};
 		};
 	};
 	
@@ -73,8 +84,8 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "White"};
-			case 1: {_color = "Red"};
+			case 0: {_color = "Blanco"};
+			case 1: {_color = "Rojo"};
 		};
 	};
 	
@@ -82,8 +93,8 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "White"};
-			case 1: {_color = "Red"};
+			case 0: {_color = "Blanco"};
+			case 1: {_color = "Rojo"};
 		};
 	};
 	
@@ -91,8 +102,8 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "White"};
-			case 1: {_color = "Red"};
+			case 0: {_color = "Blanco"};
+			case 1: {_color = "Rojo"};
 		};
 	};
 	
@@ -100,15 +111,15 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Brown"};
-			case 1: {_color = "Digi Desert"};
-			case 2: {_color = "Black"};
-			case 3: {_color = "Blue"};
-			case 4: {_color = "Red"};
-			case 5: {_color = "White"};
-			case 6: {_color = "Digi Green"};
-			case 7: {_color = "Hunter Camo"};
-			case 8: {_color = "Rebel Camo"};
+			case 0: {_color = "Marron"};
+			case 1: {_color = "Digital Desierto"};
+			case 2: {_color = "Negro"};
+			case 3: {_color = "Azul"};
+			case 4: {_color = "Rojo"};
+			case 5: {_color = "Blanco"};
+			case 6: {_color = "Digital Verde"};
+			case 7: {_color = "Camuflaje Hunter"};
+			case 8: {_color = "Camuflaje Rebelde"};
 		};
 	};
 	
@@ -117,20 +128,21 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "Sheriff"};
-			case 1: {_color = "Black"};
-			case 2: {_color = "Civ Blue"};
-			case 3: {_color = "Civ Red"};
-			case 4: {_color = "Digi Green"};
-			case 5: {_color = "Blueline"};
-			case 6: {_color = "Elliptical"};
-			case 7: {_color = "Furious"};
-			case 8: {_color = "Jeans Blue"};
-			case 9: {_color = "Speedy Redline"};
-			case 10: {_color = "Sunset"};
+			case 1: {_color = "Negro"};
+			case 2: {_color = "Azul"};
+			case 3: {_color = "Rojo"};
+			case 4: {_color = "Digital Verde"};
+			case 5: {_color = "Linea Azul"};
+			case 6: {_color = "Eliptico"};
+			case 7: {_color = "Furioso"};
+			case 8: {_color = "Vaqueros"};
+			case 9: {_color = "Linea Roja"};
+			case 10: {_color = "Amanecer"};
 			case 11: {_color = "Vrana"};
-			case 12: {_color = "Waves Blue"};
-			case 13: {_color = "Rebel Digital"};
-			case 14: {_color = "EMS White"};
+			case 12: {_color = "Olas Azules"};
+			case 13: {_color = "Digital Rebelde"};
+			case 14: {_color = "Emergencias Blanco"};
+			case 15: {_color = "Kitty"};
 		};
 	};
 	
@@ -138,11 +150,11 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Black"};
-			case 1: {_color = "White / Blue"};
-			case 2: {_color = "Digi Green"};
-			case 3: {_color = "Desert Digi"};
-			case 4: {_color = "EMS White"};
+			case 0: {_color = "Negro"};
+			case 1: {_color = "Blanco y Azul"};
+			case 2: {_color = "Digital Verde"};
+			case 3: {_color = "Digital Desierto"};
+			case 4: {_color = "Emergencias Blanco"};
 		};
 	};
 	
@@ -150,8 +162,8 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Regular"};
-			case 1: {_color = "Black"};
+			case 0: {_color = "Normal"};
+			case 1: {_color = "Negro"};
 		};
 	};
 	
@@ -159,8 +171,10 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Orange"};
-			case 1: {_color = "Black"};
+			case 0: {_color = "Naranja"};
+			case 1: {_color = "Negro"};
+			case 2: {_color = "RedBull"};
+			
 		};
 	};
 	
@@ -168,8 +182,8 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Orange"};
-			case 1: {_color = "Black"};
+			case 0: {_color = "Naranja"};
+			case 1: {_color = "Negro"};
 		};
 	};
 	
@@ -177,7 +191,7 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Black"};
+			case 0: {_color = "Negro"};
 		};
 	};
 	
@@ -185,7 +199,7 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Black"};
+			case 0: {_color = "Negro"};
 		};
 	};
 	
@@ -202,7 +216,7 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Black"};
+			case 0: {_color = "Negro"};
 		};
 	};
 };

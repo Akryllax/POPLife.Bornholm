@@ -33,10 +33,10 @@ switch (_vehicle) do
 			[_path + "hatchback_01_ext_sport04_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport05_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
-			["textures\COP\domino_sport.jpg","civ"],
-			["textures\COP\monsterwrcv2.jpg","civ"],
-			["textures\COP\sport_redbull.jpg","civ"],
-			["textures\COP\valkyriacar.jpg","civ"],
+			["textures\CIV\domino_sport.jpg","civ"],
+			["textures\CIV\monsterwrcv2.jpg","civ"],
+			["textures\CIV\sport_redbull.jpg","civ"],
+			["textures\CIV\valkyriacar.jpg","civ"],
 			
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"]
 		];
@@ -54,7 +54,8 @@ switch (_vehicle) do
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa","civ"],
 			["#(ai,64,64,1)Fresnel(0.3,3)","fed"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
-			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"]
+			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
+			["textures\CIV\civ_offroad_weed.jpg","civ"]			
 		];
 	};
 	
@@ -81,7 +82,14 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa","cop"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
-			["#(ai,64,64,1)Fresnel(1.3,7)","cop"]
+			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
+			["textures\CIV\blackwhite.jpg","civ"],
+			["textures\CIV\carbon_suv.jpg","civ"],
+			["textures\CIV\civ_suv_skull.jpg","civ"],
+			["textures\CIV\jurassicpark_suv.jpg","civ"],
+			["textures\CIV\suv_racestripes_redblack.jpg","civ"],
+			["textures\CIV\kitty.jpg","civ"],
+			["textures\CIV\taxi_1.jpg","civ"]			
 		];
 	};
 	
@@ -137,7 +145,9 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","reb"],
-			["#(argb,8,8,3)color(1,1,1,0.8)","med"]
+			["#(argb,8,8,3)color(1,1,1,0.8)","med"],
+			["textures\CIV\kitty_heli.jpg","civ"],
+			
 		];
 	};
 	
@@ -167,7 +177,9 @@ switch (_vehicle) do
 		_ret = 
 		[
 			["\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa","civ","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"],
-			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
+			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"],
+			["textures\CIV\truckcabredbull.jpg","civ","textures\CIV\truckbackredbull.jpg","civ"]
+			
 		];
 	};
 	
