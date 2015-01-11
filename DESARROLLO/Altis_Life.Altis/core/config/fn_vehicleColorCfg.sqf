@@ -33,6 +33,11 @@ switch (_vehicle) do
 			[_path + "hatchback_01_ext_sport04_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport05_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
+			["textures\COP\domino_sport.jpg","civ"],
+			["textures\COP\monsterwrcv2.jpg","civ"],
+			["textures\COP\sport_redbull.jpg","civ"],
+			["textures\COP\valkyriacar.jpg","civ"],
+			
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"]
 		];
 	};
