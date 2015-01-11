@@ -433,7 +433,7 @@ switch(_shop) do
 						["16Rnd_9x21_Mag",nil,25],
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
-						["30Rnd_9x21_Mag",nil,75]
+						["30Rnd_9x21_Mag",nil,75],
 						["arifle_Katiba_F",nil,50000],
 						["30Rnd_65x39_caseless_green",nil,275],
 						["SMG_02_F",nil,30000],
