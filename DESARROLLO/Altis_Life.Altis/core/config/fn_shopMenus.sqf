@@ -28,7 +28,7 @@ switch (_shop) do
 	
 	case "cop":
 	{
-		ctrlSetText[2505,"Altis Cop Shop"];
+		ctrlSetText[2505,"Tienda general de policia"];
 		ctrlShow[2503,false];
 	};
 	
@@ -64,7 +64,7 @@ switch (_shop) do
 	
 	case "sergeant":
 	{
-		ctrlSetText[2505,"Sergeants Shop"];
+		ctrlSetText[2505,"Tienda locales"];
 		ctrlShow[2503,false];
 	};
 	
@@ -76,7 +76,7 @@ switch (_shop) do
 	
 	case "officer":
 	{
-		ctrlSetText[2505,"Patrol Officer Shop"];
+		ctrlSetText[2505,"Tienda nacionales"];
 		ctrlShow[2503,false];
 	};
 	
