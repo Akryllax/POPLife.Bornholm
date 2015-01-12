@@ -71,7 +71,7 @@ switch (playerSide) do
 	case east:
 	{
 		//Initialize Mercenaries and blah
-		_handle = [] spawn life_fnc_initAdac;
+		_handle = [] spawn life_fnc_initMerc;
 		waitUntil {scriptDone _handle};
 	};
 };
