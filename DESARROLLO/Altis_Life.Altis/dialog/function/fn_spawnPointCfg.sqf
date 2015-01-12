@@ -55,9 +55,9 @@ switch (_side) do
 		
 	case east: {
 		_return = [
-			["spawn_adac_kavala","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["spawn_adac_athira","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["spawn_adac_pyrgos","Pygros","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["spawn_merc_kavala","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["spawn_merc_athira","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["spawn_merc_pyrgos","Pygros","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 	};
 };
