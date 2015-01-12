@@ -44,7 +44,7 @@ class SlotMachineGUI
 		{
 			idc = 5783;
 			text = "Jugar"; //--- ToDo: Localize;
-			x = 6 * GUI_GRID_W + GUI_GRID_X;
+			x = 3 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
@@ -53,7 +53,7 @@ class SlotMachineGUI
 		{
 			idc = 5784;
 			text = "Jugar"; //--- ToDo: Localize;
-			x = 15 * GUI_GRID_W + GUI_GRID_X;
+			x = 12 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
@@ -62,7 +62,7 @@ class SlotMachineGUI
 		{
 			idc = 5786;
 			text = "Jugar"; //--- ToDo: Localize;
-			x = 23 * GUI_GRID_W + GUI_GRID_X;
+			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
@@ -71,7 +71,7 @@ class SlotMachineGUI
 		{
 			idc = 5787;
 			text = "Jugar"; //--- ToDo: Localize;
-			x = 32 * GUI_GRID_W + GUI_GRID_X;
+			x = 29 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 2 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
