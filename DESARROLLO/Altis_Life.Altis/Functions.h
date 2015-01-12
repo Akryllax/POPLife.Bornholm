@@ -42,6 +42,7 @@ class Life_Client_Core
 		class initCiv {};
 		class initCop {};
 		class initMedic {};
+		class initMerc {};
 		class welcomeNotification {};
 	};
 	
@@ -312,6 +313,12 @@ class Life_Client_Core
 		class copUniform {};
 		class ticketPaid {};
 		class wantedGrab {};
+	};
+	
+	class Mercenaries 
+	{
+		file = "core\mercenarios";
+		class mercLoadout {};
 	};
 	
 	class Gangs

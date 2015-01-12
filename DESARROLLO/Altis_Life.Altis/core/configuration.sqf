@@ -111,6 +111,12 @@ switch (playerSide) do
 		life_atmcash = 6500;
 		life_paycheck = 450;
 	};
+	
+	case east:
+	{
+		life_atmcash = 5000; //Starting Bank Money
+		life_paycheck = 500; //Paycheck Amount
+	};
 };
 
 /*

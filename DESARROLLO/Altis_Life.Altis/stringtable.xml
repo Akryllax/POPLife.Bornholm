@@ -724,6 +724,10 @@
 			<Portuguese>Chamar SAMU</Portuguese>
 			<Spanish>SMS a Medico</Spanish>
 		</Key>
+		<Key ID="STR_CELL_MercRequest">
+			<Original>Request Mercenarie</Original>
+			<Spanish>Contratar Mercenario</Spanish>
+		</Key>
 	</Package>
 	<Package name="Chop_Shop">
 		<Key ID="STR_ChopShop_Title">

@@ -216,6 +216,20 @@ compileFinal "
 	[] call life_fnc_cellphone;
 	hint format[""Mensaje de administrador: %1"",_msg];
 ";
+//To Mercenaries
+TON_fnc_cell_mercrequest = 
+compileFinal "
+private[""_msg"",""_to""];
+	ctrlShow[3023,false];
+	_msg = ctrlText 3003;
+	_to = ""Mercenarios"";
+	if(_msg == """") exitWith {hint ""Tienes que escribir un mensaje!"";ctrlShow[3023,true];};
+		
+	[[_msg,name player,6],""clientMessage"",merc,false] spawn life_fnc_MP;
+	[] call life_fnc_cellphone;
+	hint format[""Has mandado un mensaje a los mercenarios."",_to,_msg];
+	ctrlShow[3023,true];
+";
 
 publicVariable "TON_fnc_cell_textmsg";
 publicVariable "TON_fnc_cell_textcop";
@@ -223,6 +237,7 @@ publicVariable "TON_fnc_cell_textadmin";
 publicVariable "TON_fnc_cell_adminmsg";
 publicVariable "TON_fnc_cell_adminmsgall";
 publicVariable "TON_fnc_cell_emsrequest";
+publicVariable "TON_fnc_cell_mercrequest"; 
 //Client Message
 /*
 	0 = private message
@@ -304,6 +319,14 @@ compileFinal "
 			
 			[""TextMessage"",[format[""Llamada a emergencias de %1"",_from]]] call bis_fnc_showNotification;
 		};
+		
+		case 6: {
+			private[""_message""];
+			_message = format[""*** Se solicitan mercenarios: %1 ***"",_msg];
+			hint parseText format [""<t color='#FFCC00'><t size='2'><t align='center'>Solicitud de mercenarios<br/><br/><t color='#33CC33'><t align='left'><t size='1'>Para: <t color='#ffffff'>Ti<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
+			
+			[""TextMessage"",[format[""Solicitud de mercenario de %1"",_from]]] call bis_fnc_showNotification;
+		}; 
 	};
 ";
 publicVariable "TON_fnc_clientMessage";

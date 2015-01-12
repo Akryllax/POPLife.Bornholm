@@ -105,7 +105,7 @@ class CfgFunctions
 			class setObjVar {};
 			class keyManagement {};
 			class getPrices {};
-            class ajustprices {};
+            		class ajustprices {};
 		};
 		
 		class Housing
