@@ -477,6 +477,7 @@ class Quickskill
 	{
 		file = "QUICKSKILL\items";
 		class gpsEspia {};
+		class kitTortura{};
 	};
 	
 	class ItemsPolicia

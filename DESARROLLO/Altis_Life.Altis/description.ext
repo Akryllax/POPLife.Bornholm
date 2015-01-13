@@ -69,6 +69,23 @@ class CfgSounds
 		sound[] = {"\sounds\esposas.ogg", 0.25, 1};
 		titles[] = {};
 	};
+
+	
+
+	class punch_break
+	{
+		name = "punch_break";
+		sound[] = {"\sounds\punch_break.ogg", 0.25, 1};
+		titles[] = {};
+	};
+
+	class hurt
+
+	{
+		name = "hurt";
+		sound[] = {"\sounds\hurt.ogg", 0.25, 1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing
