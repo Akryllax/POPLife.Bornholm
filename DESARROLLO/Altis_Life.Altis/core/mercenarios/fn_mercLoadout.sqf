@@ -1,17 +1,17 @@
 #include <macro.h>
 /*
-	File: fn_copLoadout.sqf
+	File: fn_mercLoadout.sqf
 	Author: Bryan "Tonic" Boardwine
 	Edited: Itsyuka
 	
 	Description:
-	Loads the cops out with the default gear.
+	Loads the mercenaries out with the default gear.
 */
 private["_handle"];
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
-if(__GETC__(life_merlevel) < 3) then
+if(__GETC__(life_merclevel) <= 3) then
 	{
 		player addUniform "U_BG_Guerilla1_1";
 		player addVest "V_PlateCarrierIA1_dgtl";
@@ -30,7 +30,7 @@ if(__GETC__(life_merlevel) < 3) then
 		player additem "FirstAidKit";
 	};
 
-if(__GETC__(life_merlevel) == 4) then
+if(__GETC__(life_merclevel) == 4) then
 	{
 		player addUniform "U_I_CombatUniform";
 		player addVest "V_PlateCarrierIA2_dgtl";
