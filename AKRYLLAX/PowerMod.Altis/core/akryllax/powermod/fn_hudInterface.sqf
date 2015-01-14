@@ -16,5 +16,5 @@ _d = uiNamespace getVariable ['power_menu', displayNull];
 [] spawn {
 	
 	waitUntil {!(isNull (findDisplay 46))};
-	(findDisplay 46) displayAddEventHandler ["KeyDown", "if(_this select 1 == 15) then { [] call AKR_fnc_useHability;};"];
+	(findDisplay 46) displayAddEventHandler ["KeyDown", "if(_this select 1 == 15) then { [] call AKR_fnc_useHability;}; false"];
 };

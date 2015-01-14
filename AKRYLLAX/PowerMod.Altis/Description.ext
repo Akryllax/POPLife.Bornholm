@@ -1,4 +1,5 @@
 enableDebugConsole = 1;
+disabledAI = true;
 
 #include "dialog\defines.h"
 #include "dialog\powerUpgrade.h"
