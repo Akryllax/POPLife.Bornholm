@@ -47,7 +47,7 @@ sleep 6;
 _furgo say3D "drugcooking";
 
 _furgo addAction["Recoger la meta",QUICK_recogerMeta];
-_furgo addAction["Cocinar Meta", QUICK_fnc_cocinarMeta,_coche];
+_furgo addAction["Cocinar Meta", QUICK_fnc_cocinarMeta,_furgo];
 
 
 };
