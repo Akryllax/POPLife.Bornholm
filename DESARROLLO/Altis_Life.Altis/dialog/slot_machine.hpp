@@ -46,7 +46,7 @@ class SlotMachineGUI
 			text = "Jugar"; //--- ToDo: Localize;
 			x = 3 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
-			w = 2 * GUI_GRID_W;
+			w = 3 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 		};
 		class RscText_1004: life_RscText
@@ -55,7 +55,7 @@ class SlotMachineGUI
 			text = "Jugar"; //--- ToDo: Localize;
 			x = 12 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
-			w = 2 * GUI_GRID_W;
+			w = 3 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 		};
 		class RscText_1005: life_RscText
@@ -64,7 +64,7 @@ class SlotMachineGUI
 			text = "Jugar"; //--- ToDo: Localize;
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
-			w = 2 * GUI_GRID_W;
+			w = 3 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 		};
 		class RscText_1006: life_RscText
@@ -73,7 +73,7 @@ class SlotMachineGUI
 			text = "Jugar"; //--- ToDo: Localize;
 			x = 29 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
-			w = 2 * GUI_GRID_W;
+			w = 3 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 		};
 		

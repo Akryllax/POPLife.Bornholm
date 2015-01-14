@@ -65,4 +65,10 @@ switch(_type) do
 		[[_msg,name _player,4],"clientMessage",true,false] spawn life_fnc_MP;
 		[[_msg,name _player,4],"TON_fnc_clientMessage",true,false] spawn life_fnc_MP;
 	};
+	//to merecenaries
+	case 6:
+	{	
+		[[_msg,name _player,6],"clientMessage",east,false] spawn life_fnc_MP;
+		[[_msg,name _player,6],"TON_fnc_clientMessage",east,false] spawn life_fnc_MP;
+	};
 };

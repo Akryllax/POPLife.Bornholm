@@ -243,7 +243,7 @@ class BlackjackGUI
 			text = "Jugar"; //--- ToDo: Localize;
 			x = 4 * GUI_GRID_W + GUI_GRID_X;
 			y = 18 * GUI_GRID_H + GUI_GRID_Y;
-			w = 2 * GUI_GRID_W;
+			w = 3 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 		};
 		class RscText_1016: life_RscText
@@ -252,7 +252,7 @@ class BlackjackGUI
 			text = "Jugar"; //--- ToDo: Localize;
 			x = 11 * GUI_GRID_W + GUI_GRID_X;
 			y = 18 * GUI_GRID_H + GUI_GRID_Y;
-			w = 2 * GUI_GRID_W;
+			w = 3 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 		};
 		class RscText_1017: life_RscText
@@ -261,7 +261,7 @@ class BlackjackGUI
 			text = "Jugar"; //--- ToDo: Localize;
 			x = 19 * GUI_GRID_W + GUI_GRID_X;
 			y = 18 * GUI_GRID_H + GUI_GRID_Y;
-			w = 2 * GUI_GRID_W;
+			w = 3 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 		};
 		class RscText_1018: life_RscText
@@ -270,7 +270,7 @@ class BlackjackGUI
 			text = "Jugar"; //--- ToDo: Localize;
 			x = 25 * GUI_GRID_W + GUI_GRID_X;
 			y = 18 * GUI_GRID_H + GUI_GRID_Y;
-			w = 2 * GUI_GRID_W;
+			w = 3 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
 		};
 	};
