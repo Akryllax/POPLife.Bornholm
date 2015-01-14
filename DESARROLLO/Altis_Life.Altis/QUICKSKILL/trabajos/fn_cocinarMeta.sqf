@@ -6,10 +6,10 @@ _gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _caller =[_this,1,Objnull,[Objnull]] call BIS_fnc_param;
  _id = _this select 2; 
 
-_furgo = [_this,3] call BIS_fnc_param;
+_caller =[_this,3,Objnull,[Objnull]] call BIS_fnc_param;
 
  _gen removeAction _id;
- 
+
 //vamos a cocinar
 [] spawn {
 
@@ -17,31 +17,30 @@ _furgo = [_this,3] call BIS_fnc_param;
 hint "Has empezado a cocinar meta,  se cocinara en 10 minutos";
 
 
-// poner humo en furgo
 _humo = "SmokeShellYellow" createVehicle position _furgo;
-_humo attachTo [_furgo, [0, 1, 0] ];
-_humo enableSimulation false;
+_humo attachTo [_furgo, [0, 1, 1] ];
+
 _furgo say3D "drugcooking";
 
-_time = 200;
+_time = 20;
 sleep _time;
 
-//poner otro humo de otro color
+
 _humo = "SmokeShellRed" createVehicle position _furgo;
-_humo attachTo [_furgo, [0, 1, 0] ];
-_humo enableSimulation false;
+_humo attachTo [_furgo, [0, 1, 1] ];
+
 _furgo say3D "drugcooking";
 
-_time = 200;
+_time = 20;
 sleep _time;
 
 _humo = "SmokeShellBlue" createVehicle position _furgo;
-_humo attachTo [_furgo, [0, 1, 0] ];
-_humo enableSimulation false;
+_humo attachTo [_furgo, [0, 1, 1] ];
+
 _furgo say3D "drugcooking";
 
 hint "La meta estara lista en 1 minuto"; 
-sleep 60;
+sleep 6;
 
 _furgo addAction["Recoger la meta",QUICK_recogerMeta];
 
@@ -60,7 +59,7 @@ _caller =[_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 
 //quitar accion de recoger
  _gen removeAction _id;
- _frutos = 5 + round random 4;
+ _frutos = 10;
 
 [true,"meta",_frutos] call life_fnc_handleInv;
 
