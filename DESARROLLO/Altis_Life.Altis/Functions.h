@@ -510,6 +510,14 @@ class Quickskill
 		class robosActivar{};
 		class robosDesactivar{};
 	};
+
+	class Trabajos
+	{
+		file = "QUICKSKILL\trabajos";
+		class comprarFurgoQuimico {};
+		class cocinarMeta {};
+		
+	};
 };
 
 class Akryllax {

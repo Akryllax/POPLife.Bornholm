@@ -86,6 +86,14 @@ class CfgSounds
 		sound[] = {"\sounds\punch.ogg", 0.25, 1};
 		titles[] = {};
 	};
+
+	class drugcooking
+
+	{
+		name = "drugcooking";
+		sound[] = {"\sounds\drugcooking.ogg", 0.25, 1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing
