@@ -46,6 +46,7 @@ sleep 6;
 _furgo say3D "drugcooking";
 
 _furgo addAction["Recoger la meta",QUICK_recogerMeta];
+_furgo addAction["Cocinar Meta", QUICK_fnc_cocinarMeta,_furgo];
 
 
 };
@@ -58,7 +59,7 @@ _caller =[_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 
 
 //tiene que llevar el traje de cientifico
- if(vest _caller != "U_C_Scientist") exitWith {hint "No llevas la proteccion adecuada para manipular la meta, equipate el traje de cientifico"};
+ if(vest player != "U_C_Scientist") exitWith {hint "No llevas la proteccion adecuada para manipular la meta, equipate el traje de cientifico"};
 
 //quitar accion de recoger
  _gen removeAction _id;
