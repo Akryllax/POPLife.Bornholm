@@ -12,8 +12,9 @@ if(isNull _furgo) exitWith {hint "Furgo is null :("}; //if not the thief get ben
  _gen removeAction _id;
 
 //vamos a cocinar
-[] spawn {
+[_furgo] spawn {
 
+_furgo = _this select 0;
 
 hint "Has empezado a cocinar meta,  se cocinara en 10 minutos";
 

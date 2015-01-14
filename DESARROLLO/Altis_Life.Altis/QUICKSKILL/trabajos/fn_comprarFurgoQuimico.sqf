@@ -1,9 +1,9 @@
 ///comprar camion pa hacer drogas!! by quickskill para plata o plomo
 waitUntil {!isNull player};
-
+private["_coche"]
 _precio = 350000;
 _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
-_vendedor = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
+_vendedor = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 
 if(isNull _unit) exitWith {}; //if not the thief get bent
 
@@ -34,18 +34,16 @@ hint "Has comprado un camion laboratorio!!";
 sleep 3;
 hint "";
 
-
-//pa que se lo goze
 sleep 300;
 [[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 [[_coche,0,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
 sleep 300;
-//pa que se lo goze
+
 [[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 [[_coche,0,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
-//eliminar decoraciones pk me sale del nabo
+
 deleteVehicle _carga1;
 deleteVehicle _carga2;
 deleteVehicle _carga3;
