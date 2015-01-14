@@ -17,6 +17,4 @@ player assignItem "ItemCompass";
 player addItem "ItemWatch";
 player assignItem "ItemWatch";
 
-[[player,0,"textures\TRAJES\blackwolf.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
-
 [] call life_fnc_saveGear;
