@@ -6,7 +6,8 @@ _gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _caller =[_this,1,Objnull,[Objnull]] call BIS_fnc_param;
  _id = _this select 2; 
 
-_caller =[_this,3,Objnull,[Objnull]] call BIS_fnc_param;
+_furgo =[_this,3,Objnull,[Objnull]] call BIS_fnc_param;
+if(isNull _furgo) exitWith {hint "Furgo is null :("}; //if not the thief get bent
 
  _gen removeAction _id;
 
@@ -41,6 +42,7 @@ _furgo say3D "drugcooking";
 
 hint "La meta estara lista en 1 minuto"; 
 sleep 6;
+_furgo say3D "drugcooking";
 
 _furgo addAction["Recoger la meta",QUICK_recogerMeta];
 
