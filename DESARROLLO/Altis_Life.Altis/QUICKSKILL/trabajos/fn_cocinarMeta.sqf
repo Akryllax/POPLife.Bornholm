@@ -2,8 +2,14 @@
 //para cocinar meta necesitas 5 de metilamina quicskill para plata o plomo
 /////////////////////////////////////////////////////////////////////////
 private["_furgo"];
-_furgo = _this select 0;
+_gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
+_caller =[_this,1,Objnull,[Objnull]] call BIS_fnc_param;
+ _id = _this select 2; 
 
+_furgo = [_this,3] call BIS_fnc_param;
+
+ _gen removeAction _id;
+ 
 //vamos a cocinar
 [] spawn {
 

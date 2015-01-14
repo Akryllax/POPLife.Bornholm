@@ -13,24 +13,33 @@ if(isNull _unit) exitWith {}; //if not the thief get bent
 life_cash = life_cash-_precio;
 
 //crear coche
-_coche = "O_Truck_02_covered_F" createVehicle position _vendedor;
+_vendedor = player;
+_coche = "O_Truck_02_box_F" createVehicle position _vendedor;
+[[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+[[_coche,0,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+_carga =  "Land_runway_edgelight_blue_F" createVehicle position _vendedor;
+_carga attachTo [_coche, [0, 2, 0.6] ];
+_carga enableSimulation false;
+_carga =  "Land_runway_edgelight_blue_F" createVehicle position _vendedor;
+_carga attachTo [_coche, [0.7, 2, 0.6] ];
+_carga enableSimulation false;
+_carga =  "Land_runway_edgelight_blue_F" createVehicle position _vendedor;
+_carga attachTo [_coche, [-0.7, 2, 0.6] ];
+_carga enableSimulation false;
+
+_coche addAction["Cocinar Meta", QUICK_fnc_cocinarMeta,_coche];
+
 
 //cargar skin globalmente
-[[_coche,0,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+
 //cargar skin globalmente
-[[_coche,1,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+
 
 //deorar furgo
-_carga =  "Land_runway_edgelight_blue_F" createVehicle position _vendedor;
-_carga attachTo [_coche, [0, 1, 0] ];
-_carga enableSimulation false;
 
-_carga =  "Land_spp_Panel_F" createVehicle position _vendedor;
-_carga attachTo [_coche, [0, 1, 0] ];
-_carga enableSimulation false;
- 
+
+
 //añadir action de cocinar 
-_furgo addAction["Coinar Meta", QUICK_fnc_cocinarMeta,_coche];
 
 
 if(true) exitWith{hint "Has comprado un camion laboratorio!!";[] spawn { sleep 5;hint "";} };
