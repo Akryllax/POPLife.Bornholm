@@ -35,7 +35,15 @@ hint "Has comprado un camion laboratorio!!";
 
 sleep 5;
 hint "";
-sleep 600;
+//pa que se lo goze
+sleep 300;
+[[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+[[_coche,0,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+sleep 300;
+//pa que se lo goze
+[[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+[[_coche,0,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+//eliminar decoraciones pk me sale del nabo
 deleteVehicle _carga1;
 deleteVehicle _carga2;
 deleteVehicle _carga3;

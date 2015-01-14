@@ -63,7 +63,7 @@ _caller =[_this,1,Objnull,[Objnull]] call BIS_fnc_param;
  _gen removeAction _id;
  _frutos = 10;
 
-[true,"meta",_frutos] call life_fnc_handleInv;
+[true,"cocainep",_frutos] call life_fnc_handleInv;
 
 hint format["Has recogido %1 de meta",_frutos]; 
 
