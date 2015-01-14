@@ -17,12 +17,21 @@ if(life_blacklisted) exitWith
 };
 
 
-if((__GETC__(life_merclevel) == 0) && (__GETC__(life_adminlevel) == 0)) then {
+if(__GETC__(life_merclevel) < 0) then {
 	["NotWhitelisted",false,true] call BIS_fnc_endMission;
 	sleep 35;
 };
 
+if(life_is_arrested) then
+{
+	life_is_arrested = false;
+	[player,true] spawn life_fnc_jail;
+};
 
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
+
+if(__GETC__(life_adminlevel) > 0) then {
+	adminChannel radioChannelAdd [player];
+};
