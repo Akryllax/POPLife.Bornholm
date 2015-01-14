@@ -13,7 +13,8 @@ if(isNull _unit) exitWith {}; //if not the thief get bent
 life_cash = life_cash-_precio;
 
 //crear coche
-_vendedor = player;
+[] spawn { 
+
 _coche = "O_Truck_02_box_F" createVehicle position _vendedor;
 [[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 [[_coche,0,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
@@ -30,38 +31,23 @@ _carga3 enableSimulation false;
 _coche addAction["Cocinar Meta", QUICK_fnc_cocinarMeta,_coche];
 
 hint "Has comprado un camion laboratorio!!";
-
-[] spawn { 
-
-sleep 5;
+sleep 3;
 hint "";
+
+
 //pa que se lo goze
 sleep 300;
 [[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 [[_coche,0,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+
 sleep 300;
 //pa que se lo goze
 [[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 [[_coche,0,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+
 //eliminar decoraciones pk me sale del nabo
 deleteVehicle _carga1;
 deleteVehicle _carga2;
 deleteVehicle _carga3;
 
-}
-
-
-
-//cargar skin globalmente
-
-//cargar skin globalmente
-
-
-//deorar furgo
-
-
-
-//añadir action de cocinar 
-
-
-if(true) exitWith{};
+};
