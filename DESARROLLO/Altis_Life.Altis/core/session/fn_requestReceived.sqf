@@ -25,7 +25,7 @@ if((getPlayerUID player) != _this select 0) exitWith {[] call SOCK_fnc_dataQuery
 //Lets make sure some vars are not set before hand.. If they are get rid of them, hopefully the engine purges past variables but meh who cares.
 if(!isServer && (!isNil "life_adminlevel" OR !isNil "life_coplevel" OR !isNil "life_donator")) exitWith {
 	[[profileName,getPlayerUID player,"VariablesAlreadySet"],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
-	[[profileName,format["Variables set before client initialization...\nlife_adminlevel: %1\nlife_coplevel: %2\nlife_donatorlvl: %3\nlife_mediclevel: %4\nlife_merclevel: %5",life_adminlevel,life_coplevel,life_donatorlvl,life_mediclevel,life_merclevel]],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
+	[[profileName,format["Variables set before client initialization...\nlife_adminlevel: %1\nlife_coplevel: %2\nlife_donator: %3",life_adminlevel,life_coplevel,life_donator]],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
 	sleep 0.9;
 	["SpyGlass",false,false] execVM "\a3\functions_f\Misc\fn_endMission.sqf";
 };
@@ -87,10 +87,11 @@ switch(playerSide) do {
 	};
 	
 	case east: {
-		__CONST__(life_adacLevel,parseNumber(_this select 7));		
+		__CONST__(life_adacLevel,parseNumber(_this select 7));
+		adac_gear = _this select 8;
+		[] spawn life_fnc_loadGear;
 		__CONST__(life_copLevel,0);
 		__CONST__(life_medicLevel,0);
-		life_blacklisted = _this select 9;
 	};
 };
 
