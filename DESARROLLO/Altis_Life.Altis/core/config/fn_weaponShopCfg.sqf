@@ -25,7 +25,6 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Tu no eres policia!"};
-			case (__GETC__(life_coplevel) == 1) :
 			{
 				["Tienda general de policia",
 					[
@@ -45,7 +44,7 @@ switch(_shop) do
 				];
 			};
 
-          	case (__GETC__(life_coplevel) == 2) :
+          	case (__GETC__(life_coplevel) < 2) :
 		   {
 				["Tienda locales",
 					[
@@ -67,7 +66,7 @@ switch(_shop) do
 				];
 		    };
 
-	        case (__GETC__(life_coplevel) == 3) :
+	        case (__GETC__(life_coplevel) < 3) :
 		   {
 				["Tienda nacionales",
 					[
@@ -94,7 +93,7 @@ switch(_shop) do
 				];
 		    };
 
-		        case (__GETC__(life_coplevel) == 4) :
+		        case (__GETC__(life_coplevel) < 4) :
 		   {
 				["Tienda nacionales",
 					[
@@ -121,7 +120,7 @@ switch(_shop) do
 				];
 		    };
 
-			        case (__GETC__(life_coplevel) == 5) :
+			        case (__GETC__(life_coplevel) < 5) :
 		   {
 				["Tienda nacionales",
 					[
@@ -151,7 +150,7 @@ switch(_shop) do
 				];
 		    };
 
-			        case (__GETC__(life_coplevel) == 6) :
+			        case (__GETC__(life_coplevel) < 6) :
 		   {
 				["Tienda nacionales",
 					[
@@ -186,7 +185,7 @@ switch(_shop) do
 				];
 		    };
 
-			        case (__GETC__(life_coplevel) == 7) :
+			        case (__GETC__(life_coplevel) < 7) :
 		   {
 				["Tienda nacionales",
 					[
@@ -233,7 +232,7 @@ switch(_shop) do
 				];
 		    };
 
-			        case (__GETC__(life_coplevel) == 8) :
+			        case (__GETC__(life_coplevel) < 8) :
 		   {
 				["Tienda nacionales",
 					[
