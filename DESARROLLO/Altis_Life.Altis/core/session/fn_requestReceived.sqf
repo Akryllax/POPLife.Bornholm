@@ -85,9 +85,9 @@ switch(playerSide) do {
 		__CONST__(life_coplevel,0);
 		__CONST__(life_mercLevel,0);
 	};
-	
+
 	case east: {
-		__CONST__(life_merlevel, parseNumber(_this select 7));
+		__CONST__(life_merclevel, parseNumber(_this select 7));
 		__CONST__(life_medicLevel,0);
 		__CONST__(life_coplevel, 0);
 		life_blacklisted = _this select 9;
