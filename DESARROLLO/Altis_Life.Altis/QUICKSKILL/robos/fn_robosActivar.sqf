@@ -12,13 +12,14 @@ diag_log format["Nombre de robo recibido por via parametro al activar.sqf : ""%1
 ///for de robos activos
 {
 //nombre robo del array global de robos activos
-_nombreRoboCompare = _x select 0 select 0;
+_roboFor = _x;
+_nombreRoboCompare = _roboFor select 0;
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
     _roboActivo = "si";
-   _ladronesEnRobo  = _x select 0 select 1;
+   _ladronesEnRobo  = _roboFor  select 1;
    _x  set [_forEachIndex,[_nombreRoboCompare,_ladronesEnRobo + 1]];
 };
 
