@@ -45,7 +45,7 @@ switch(_shop) do
 			};
 
           	case (__GETC__(life_coplevel) < 2) :
-		   {
+		    {
 				["Tienda locales",
 					[
 						["hgun_P07_snds_F","Taser",1000],
@@ -67,7 +67,7 @@ switch(_shop) do
 		    };
 
 	        case (__GETC__(life_coplevel) < 3) :
-		   {
+		    {
 				["Tienda nacionales",
 					[
 						["hgun_P07_snds_F","Taser",1000],
@@ -92,13 +92,10 @@ switch(_shop) do
 					]
 				];
 		    };
+  
 
-
-		        case (__GETC__(life_coplevel) == 4) :
+		    case (__GETC__(life_coplevel) < 4) :
 		    {
-
-		        case (__GETC__(life_coplevel) < 4) :
-		   {
 
 				["Tienda nacionales",
 					[
@@ -125,8 +122,8 @@ switch(_shop) do
 				];
 		    };
 
-			        case (__GETC__(life_coplevel) < 5) :
-		   {
+			case (__GETC__(life_coplevel) < 5) :
+		    {
 				["Tienda nacionales",
 					[
 						["hgun_P07_snds_F","Taser",1000],
@@ -155,8 +152,8 @@ switch(_shop) do
 				];
 		    };
 
-			        case (__GETC__(life_coplevel) < 6) :
-		   {
+			case (__GETC__(life_coplevel) < 6) :
+		    {
 				["Tienda nacionales",
 					[
 						["hgun_P07_snds_F","Taser",1000],
@@ -190,8 +187,8 @@ switch(_shop) do
 				];
 		    };
 
-			        case (__GETC__(life_coplevel) < 7) :
-		   {
+			case (__GETC__(life_coplevel) < 7) :
+		    {
 				["Tienda nacionales",
 					[
 						["hgun_P07_snds_F","Taser",1000],
@@ -237,8 +234,8 @@ switch(_shop) do
 				];
 		    };
 
-			        case (__GETC__(life_coplevel) < 8) :
-		   {
+			case (__GETC__(life_coplevel) < 8) :
+		    {
 				["Tienda nacionales",
 					[
 						["hgun_P07_snds_F","Taser",1000],
