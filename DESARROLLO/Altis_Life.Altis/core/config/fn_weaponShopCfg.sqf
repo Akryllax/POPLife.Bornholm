@@ -92,14 +92,6 @@ switch(_shop) do
 					]
 				];
 		    };
-<<<<<<< HEAD
-=======
-
-
-		        case (__GETC__(life_coplevel) == 4) :
-		    {
-
->>>>>>> origin/master
 		        case (__GETC__(life_coplevel) < 4) :
 		   {
 
