@@ -8,9 +8,7 @@ private ["_maximoRobosActivo", "_nombreRobo ", "_roboActivo ", "_ladronesEnRobo"
 _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
 
 ///for de robos activos
-[_nombreRobo]spawn{
 
-_nombreRobo = _this select 0;
 
 //start for
 {
@@ -30,4 +28,3 @@ if (_nombreRobo == _nombreRoboCompare) then {
 
 publicVariable "robosActivosGLOBAL";
 
-};

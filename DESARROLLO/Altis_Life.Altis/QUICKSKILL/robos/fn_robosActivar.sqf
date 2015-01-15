@@ -9,10 +9,6 @@ _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
 _roboActivo = "no";
 diag_log format["Nombre de robo recibido por via parametro al activar.sqf : ""%1""", _nombreRobo ];
 
-[_nombreRobo]spawn{
-
-_nombreRobo = _this select 0;
-
 ///for de robos activos
 {
 //nombre robo del array global de robos activos
@@ -62,4 +58,3 @@ if (_ladronesEnRobo > 0) then {
 robosActivosCount = _robosActivosCount;
 publicVariable "robosActivosCount";
 diag_log format["La variable robosActivosCount contiene: ""%1""", robosActivosCount];
-};//end spawn
