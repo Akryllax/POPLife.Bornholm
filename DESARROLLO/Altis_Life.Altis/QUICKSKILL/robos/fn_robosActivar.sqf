@@ -8,8 +8,12 @@ private ["_nombreRobo ", "_roboActivo ", "_ladronesEnRobo"];
 _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
 _roboActivo = "no";
 diag_log format["Nombre de robo recibido por via parametro al activar.sqf : ""%1""", _nombreRobo ];
-///for de robos activos
 
+[_nombreRobo]spawn{
+
+_nombreRobo = _this select 0;
+
+///for de robos activos
 {
 //nombre robo del array global de robos activos
 _nombreRoboCompare = _x select 0;
@@ -19,10 +23,8 @@ if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
     _roboActivo = "si";
    _ladronesEnRobo  = _x  select 1;
-   _x  set [_forEachIndex,_ladronesEnRobo + 1];
+   _x  set [_forEachIndex,[_nombreRoboCompare,_ladronesEnRobo + 1]];
 };
-
-
 
 } forEach robosActivosGLOBAL;
 
@@ -37,6 +39,7 @@ publicVariable "robosActivosGLOBAL";
 
 	
 ///for de robos activos
+
 _robosActivosCount = 0;
 
 {
@@ -59,3 +62,4 @@ if (_ladronesEnRobo > 0) then {
 robosActivosCount = _robosActivosCount;
 publicVariable "robosActivosCount";
 diag_log format["La variable robosActivosCount contiene: ""%1""", robosActivosCount];
+};//end spawn

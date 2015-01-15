@@ -8,17 +8,21 @@ private ["_maximoRobosActivo", "_nombreRobo ", "_roboActivo ", "_ladronesEnRobo"
 _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
 
 ///for de robos activos
+[_nombreRobo]spawn{
 
+_nombreRobo = _this select 0;
+
+//start for
 {
 //nombre robo del array global de robos activos
+
 _nombreRoboCompare = _x select 0;
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_nombreRobo == _nombreRoboCompare) then {
-  // ya estan robando actualizar numero de ladrones
-  
+  // ya estan robando actualizar numero de ladrones  
    _ladronesEnRobo  = _x  select 1;
-  _x  set [_forEachIndex,_ladronesEnRobo - 1];
+  _x  set [_forEachIndex,[_nombreRoboCompare,_ladronesEnRobo - 1]];
 };
 
 
@@ -26,5 +30,4 @@ if (_nombreRobo == _nombreRoboCompare) then {
 
 publicVariable "robosActivosGLOBAL";
 
-
-
+};
