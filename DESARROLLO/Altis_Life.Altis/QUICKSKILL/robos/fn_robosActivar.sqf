@@ -12,16 +12,19 @@ diag_log format["Nombre de robo recibido por via parametro al activar.sqf : ""%1
 ///for de robos activos
 {
 //nombre robo del array global de robos activos
-_element  = robosActivosGLOBAL select [_forEachIndex];  
-_nombreRoboCompare = _element select 0;
-_ladronesEnRobo  = _element   select 1;
+
+
+_nombreRoboCompare = _x select [0,1];
+_ladronesEnRobo  = _x   select [1,1];
+
 
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
     _roboActivo = "si";
-   _ladronesEnRobo  = _roboFor  select 1;
+   _ladronesEnRobo  = _x select [1,1];
+
    _x  set [_forEachIndex,[_nombreRoboCompare,_ladronesEnRobo + 1]];
 };
 
@@ -44,9 +47,9 @@ _robosActivosCount = 0;
 {
 	 // mirar cuantos ladrones hay en cada robo
    _ladronesData = _x;
-   _ladronesEnRobo  = _ladronesData  select 1;
+   _ladronesEnRobo  = _ladronesData  select [1,1];
 //debug
-diag_log format["El array robosActivosGlobal contiene el robo: ""%1"" con ladrones ->", _ladronesData  select 0,_ladronesData  select 1];
+diag_log format["El array robosActivosGlobal contiene el robo: ""%1"" con ladrones  %2->", _ladronesData  select [0,1],_ladronesData  select [1,1]];
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_ladronesEnRobo > 0) then {
