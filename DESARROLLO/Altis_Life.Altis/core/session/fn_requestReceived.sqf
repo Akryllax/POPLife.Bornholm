@@ -71,9 +71,7 @@ switch(playerSide) do {
 		//posicion
 		life_civ_position = [_this, 9, [], [[]]] call BIS_fnc_param;
 
-		if(count life_civ_position != 3) then {
-			life_civ_position = [0,0,0];
-		};
+		//if(count life_civ_position != 3) then {life_civ_position = [0,0,0];};
 		if(count life_civ_position != 3) then {civ_position = [0,0,0];};
         life_is_alive = [_this, 10, false, [false]] call BIS_fnc_param;
 
