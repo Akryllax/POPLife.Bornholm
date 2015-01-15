@@ -92,14 +92,9 @@ switch(_shop) do
 					]
 				];
 		    };
-
-<<<<<<< HEAD
-		        case (__GETC__(life_coplevel) == 4) :
-		    {
-=======
 		        case (__GETC__(life_coplevel) < 4) :
 		   {
->>>>>>> origin/master
+
 				["Tienda nacionales",
 					[
 						["hgun_P07_snds_F","Taser",1000],
@@ -230,7 +225,7 @@ switch(_shop) do
                         ["100Rnd_65x39_caseless_mag",nil,300],
                         ["srifle_LRR_F",nil,100000],
                         ["7Rnd_408_Mag",nil,500],
-                        ["optic_LRPS",8000],
+                        ["optic_LRPS",nil,8000],
                         ["launch_NLAW_F",nil,200000],
                         ["NLAW_F",nil,20000]
 					]
@@ -276,7 +271,7 @@ switch(_shop) do
                         ["100Rnd_65x39_caseless_mag",nil,300],
                         ["srifle_LRR_F",nil,100000],
                         ["7Rnd_408_Mag",nil,500],
-                        ["optic_LRPS",8000],
+                        ["optic_LRPS",nil,8000],
                         ["launch_NLAW_F",nil,200000],
                         ["NLAW_F",nil,20000],
                         ["LMG_Zafir_F",nil,100000],
