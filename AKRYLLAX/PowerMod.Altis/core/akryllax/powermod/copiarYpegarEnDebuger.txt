@@ -102,27 +102,30 @@ backToPlayer = {
 	_original = missionNamespace getVariable["originalAvatar", objNull];
 	
 	[_avatar, _original, transitionTime] spawn cameraFromTo;
-	selectPlayer _original;
+	player remoteControl objNull;
+	player switchCamera "Internal";
+	playSound3D ["A3\sounds_f\sfx\hint-4.wss", player, false, getPosASL player, 1, 1, 0];
 
 	[] call transitOut;
 	[] call outEffect;
 	_avatar setDamage 1;
-	missionNamespace setVariable["inAvatar", false];
-};
-
-onAvatarKilled = {
-	_this spawn {
+	[_avatar] spawn {
 		[] call avatarClearGear;
 		sleep 0.1;
 		_i = 1;
 		while{_i > 0} do {
-			(_this select 0) setObjectTextureGlobal [0, format["#(argb,8,8,3)color(%1,%1,%1,1)", _i]];
-			_i = _i - 0.05;
-			sleep 0.5;
-		};
-		sleep 10;
-		deleteVehicle (_this select 0);
+				(_this select 0) setObjectTextureGlobal [0, format["#(argb,8,8,3)color(%1,%1,%1,1)", _i]];
+				_i = _i - 0.05;
+				sleep 0.5;
+			};
+			sleep 10;
+			deleteVehicle (_this select 0);
 	};
+	missionNamespace setVariable["inAvatar", false];
+};
+
+onAvatarKilled = {
+	[] call backToPlayer;
 };
 
 onPlayerKilled = {
@@ -134,7 +137,7 @@ avatarDistance = {
 	_original = missionNamespace getVariable["originalAvatar", objNull];
 	
 	while {alive _avatar} do {
-		if((getPos _avatar) distance (getPos _original)) then {
+		if((getPos _avatar) distance (getPos _original) > avatarEmissionRadious) then {
 			[] call backToPlayer;
 		};
 		
@@ -182,7 +185,10 @@ toEntity = {
 	[] call inEffect;
 	[_original, _avatar, transitionTime] spawn cameraFromTo;
 	_avatar setDir _playerDir;
-	selectPlayer _avatar;
+	playSound3D ["A3\sounds_f\sfx\hint-5.wss", player, false, getPosASL player, 1, 1, 0];
+	player remoteControl _avatar;
+	_avatar switchCamera "Internal";
+	[] spawn avatarDistance;
 	_original stop true;
 	_avatar removeAllEventHandlers "killed";
 	_avatar addEventHandler["Killed", {_this call onAvatarKilled;}];
