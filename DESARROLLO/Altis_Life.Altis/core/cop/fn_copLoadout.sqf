@@ -3,7 +3,7 @@
 	File: fn_copLoadout.sqf
 	Author: Bryan "Tonic" Boardwine
 	Edited: Itsyuka,Quickskill
-	
+
 	Description:
 	Loads the cops out with the default gear.
 */
@@ -20,22 +20,20 @@ _lvl = 1;
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
-	
+
 
 
 //Recluta
 if(_lvl == 1 ) then
 	{
-		
-		player addItem "ItemRadio"; //ADD THIS
-		player assignItem "ItemRadio"; //ADD THIS
+        player forceaddUniform "U_Rangemaster";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
 		player addItem "ItemCompass";
 		player assignItem "ItemCompass";
 		player addItem "ItemGPS";
-		player assignItem "ItemGPS";		
+		player assignItem "ItemGPS";
 		player addMagazine "30Rnd_9x21_Mag";
 		player addMagazine "30Rnd_9x21_Mag";
 		player addMagazine "30Rnd_9x21_Mag";
@@ -54,18 +52,16 @@ if(_lvl == 1 ) then
 //Municipal
 if(_lvl == 2) then
 	{
-		
-		player addItem "ItemRadio"; //ADD THIS
-		player assignItem "ItemRadio"; //ADD THIS
+        player forceaddUniform "U_Rangemaster";
 		player addVest "V_TacVest_blk_POLICE";
-		player addHeadgear "H_Beret_blk_POLICE";		
+		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
 		player addItem "ItemCompass";
 		player assignItem "ItemCompass";
 		player addItem "ItemGPS";
-		player assignItem "ItemGPS";		
+		player assignItem "ItemGPS";
 		player addMagazine "30Rnd_9x21_Mag";
 		player addMagazine "30Rnd_9x21_Mag";
 		player addMagazine "30Rnd_9x21_Mag";
@@ -73,7 +69,7 @@ if(_lvl == 2) then
 		player addWeapon "arifle_Mk20C_ACO_pointer_F";
 		player addMagazine "30Rnd_556x45_Stanag";
 		player addMagazine "30Rnd_556x45_Stanag";
-		player addMagazine "30Rnd_556x45_Stanag";	
+		player addMagazine "30Rnd_556x45_Stanag";
 		player addMagazine "30Rnd_556x45_Stanag";
 		player addMagazine "30Rnd_556x45_Stanag";
 		player addItem "NVGoggles_OPFOR";
@@ -85,11 +81,9 @@ if(_lvl == 2) then
 //Nacional 1
 if(_lvl == 3 ) then
 	{
-		
-		player addItem "ItemRadio"; //ADD THIS
-		player assignItem "ItemRadio"; //ADD THIS
+        player forceaddUniform "U_Rangemaster";
 		player addVest "V_TacVest_blk_POLICE";
-		player addHeadgear "H_Beret_blk_POLICE";		
+		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
@@ -116,11 +110,10 @@ if(_lvl == 3 ) then
 //Nacional 2
 if(_lvl == 4 ) then
 	{
-		
-		player addItem "ItemRadio"; //ADD THIS
-		player assignItem "ItemRadio"; //ADD THIS
+
+        player forceaddUniform "U_Rangemaster";
 		player addVest "V_TacVest_blk_POLICE";
-		player addHeadgear "H_Beret_blk_POLICE";		
+		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
@@ -139,7 +132,7 @@ if(_lvl == 4 ) then
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addMagazine "30Rnd_65x39_caseless_mag";
-		player addMagazine "30Rnd_65x39_caseless_mag";	
+		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addItem "NVGoggles_OPFOR";
 		player assignItem "NVGoggles_OPFOR";
 		player additem "Medikit";
@@ -149,11 +142,9 @@ if(_lvl == 4 ) then
 //Nacional 3
 if(_lvl == 5 ) then
 	{
-		
-		player addItem "ItemRadio"; //ADD THIS
-		player assignItem "ItemRadio"; //ADD THIS
+        player forceaddUniform "U_Rangemaster";
 		player addVest "V_TacVest_blk_POLICE";
-		player addHeadgear "H_Beret_blk_POLICE";		
+		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
@@ -175,21 +166,20 @@ if(_lvl == 5 ) then
 		player addItem "optic_LRPS";
 		player addItem "optic_NVS";
 		player addItem "Rangefinder";
-		player assignItem "Rangefinder";		
+		player assignItem "Rangefinder";
 		player addItem "NVGoggles_OPFOR";
 		player assignItem "NVGoggles_OPFOR";
 		player additem "Medikit";
 		player additem "ToolKit";
 	};
-	
+
 //Guardia Civil
 if(_lvl == 6 ) then
 	{
-		
-		player addItem "ItemRadio"; //ADD THIS
-		player assignItem "ItemRadio"; //ADD THIS
+
+        player forceaddUniform "U_Rangemaster";
 		player addVest "V_PlateCarrier1_blk";
-		player addHeadgear "H_Beret_blk_POLICE";		
+		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
@@ -211,7 +201,7 @@ if(_lvl == 6 ) then
 		player addItem "optic_LRPS";
 		player addItem "optic_NVS";
 		player addItem "Rangefinder";
-		player assignItem "Rangefinder";		
+		player assignItem "Rangefinder";
 		player addItem "NVGoggles_OPFOR";
 		player assignItem "NVGoggles_OPFOR";
 		player additem "Medikit";
@@ -221,9 +211,8 @@ if(_lvl == 6 ) then
 //Guardia Civil
 if(_lvl == 7) then
 	{
-		
-		player addItem "ItemRadio"; //ADD THIS
-		player assignItem "ItemRadio"; //ADD THIS
+
+        player forceaddUniform "U_Rangemaster";
 		removeHeadGear player;
 		player addHeadgear "H_Watchcap_blk";
 		player addVest "V_PlateCarrier1_blk";
@@ -249,9 +238,9 @@ if(_lvl == 7) then
 		player assignItem "NVGoggles_OPFOR";
 		player addItem "optic_LRPS";
 		player addItem "optic_NVS";
-		player addItem "SmokeShell"; 
-		player addItem "SmokeShell"; 
-		player addItem "SmokeShell"; 
+		player addItem "SmokeShell";
+		player addItem "SmokeShell";
+		player addItem "SmokeShell";
 		player addItem "Rangefinder";
 		player assignItem "Rangefinder";
 		player additem "Medikit";
@@ -261,10 +250,8 @@ if(_lvl == 7) then
 //GEO
 if(_lvl == 8) then
 	{
-		
+		player addUniform "U_B_CombatUniform_mcam_worn";
 		player addGoggles "G_Balaclava_Lowprofile";
-		player addItem "ItemRadio"; //ADD THIS
-		player assignItem "ItemRadio"; //ADD THIS
 		removeHeadGear player;
 		player addHeadgear "H_Watchcap_blk";
 		player addVest "V_PlateCarrier1_blk";
@@ -295,17 +282,16 @@ if(_lvl == 8) then
 		player additem "Medikit";
 		player additem "ToolKit";
 	};
-	
+
 //Capitan
 if(_lvl == 9) then
 	{
-		
-		player addItem "ItemRadio"; //ADD THIS
-		player assignItem "ItemRadio"; //ADD THIS
+
+		player addUniform "U_B_CombatUniform_mcam_worn";
 		removeHeadGear player;
 		player addHeadgear "H_Beret_red";
 		player addVest "V_PlateCarrier1_blk";
-		player addBackpack "B_Carryall_Base";		
+		player addBackpack "B_Carryall_Base";
 		player addItem "G_Squares_Tinted";
 		player assignItem "G_Squares_Tinted";
 		player addItem "ItemMap";
@@ -325,9 +311,9 @@ if(_lvl == 9) then
 		player addMagazine "30Rnd_9x21_Mag";
 		player addMagazine "30Rnd_9x21_Mag";
 		player addMagazine "30Rnd_9x21_Mag";
-		player addItem "SmokeShell"; 
-		player addItem "SmokeShell"; 
-		player addItem "SmokeShell"; 			
+		player addItem "SmokeShell";
+		player addItem "SmokeShell";
+		player addItem "SmokeShell";
 		player addItem "NVGoggles_OPFOR";
 		player assignItem "NVGoggles_OPFOR";
 		player addItem "optic_NVS";
@@ -337,6 +323,6 @@ if(_lvl == 9) then
 		player additem "Medikit";
 		player additem "ToolKit";
 	};
-	
+
 [] call life_fnc_copUniform;
 [] call life_fnc_saveGear;
