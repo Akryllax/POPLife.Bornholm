@@ -93,13 +93,13 @@ switch(_shop) do
 				];
 		    };
 
-<<<<<<< HEAD
+
 		        case (__GETC__(life_coplevel) == 4) :
 		    {
-=======
+
 		        case (__GETC__(life_coplevel) < 4) :
 		   {
->>>>>>> origin/master
+
 				["Tienda nacionales",
 					[
 						["hgun_P07_snds_F","Taser",1000],
