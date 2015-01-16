@@ -533,4 +533,19 @@ class Akryllax {
 		file = "core\AKR\util";
 		class say3DGlobal {};
 	};
+	
+	class Enfermedades
+	{
+		file = "core\enfermedades";
+		class proximidadCentro{};
+		class CfgEnfermedades {};
+		class contagiar {};
+		class efectoEnfermedad {};
+		class infectarMe {};
+		class infectarMeAction {};
+		class infectarTo {};
+		class curarEnfermedades {};
+		class curarEnfermedadesAction {};
+		class forceCure {};
+	};
 };

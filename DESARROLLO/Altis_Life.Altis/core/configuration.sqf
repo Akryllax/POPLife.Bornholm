@@ -296,6 +296,11 @@ sell_array =
 ];
 __CONST__(sell_array,sell_array);
 
+_medicDiscount = 1;
+if(side player == independent) then{
+	_medicDiscount = 0.1;
+};
+
 buy_array =
 [
 	["apple",65],
@@ -324,7 +329,15 @@ buy_array =
 	["storagesmall",75000],
 	["storagebig",150000],
 	["esposas",500],
-	["llaveesposas",700]
+	["llaveesposas",700],
+	["jerinHipotermia", 15000],
+	["jerinCostipado", 30000],
+	["jerinEbola", 45000],
+	["jerinCeguera", 10000],
+	["jerinTranquilizante", 5000],
+	["medicCalor", 10000 * _medicDiscount],
+	["medicAntibiotico", 25000 * _medicDiscount],
+	["medicAnticuerpos", 50000 * _medicDiscount]
 ];
 __CONST__(buy_array,buy_array);
 

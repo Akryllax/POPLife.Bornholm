@@ -104,8 +104,11 @@ backToPlayer = {
 	[_avatar, _original, transitionTime] spawn cameraFromTo;
 	player remoteControl objNull;
 	player switchCamera "Internal";
-	playSound3D ["A3\sounds_f\sfx\hint-4.wss", player, false, getPosASL player, 1, 1, 0];
-
+	
+	if(missionNamespace getVariable["inAvatar", false]) then {
+		playSound3D ["A3\sounds_f\sfx\hint-4.wss", player, false, getPosASL player, 1, 1, 0];
+	};
+	
 	[] call transitOut;
 	[] call outEffect;
 	_avatar setDamage 1;
@@ -185,7 +188,10 @@ toEntity = {
 	[] call inEffect;
 	[_original, _avatar, transitionTime] spawn cameraFromTo;
 	_avatar setDir _playerDir;
+	if (missionNamespace getVariable["inAvatar", false]) then {
 	playSound3D ["A3\sounds_f\sfx\hint-5.wss", player, false, getPosASL player, 1, 1, 0];
+	};
+	
 	player remoteControl _avatar;
 	_avatar switchCamera "Internal";
 	[] spawn avatarDistance;

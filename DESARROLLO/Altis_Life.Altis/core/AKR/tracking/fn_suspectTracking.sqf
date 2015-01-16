@@ -40,7 +40,7 @@ while {time < _timestamp + _time} do {
 	
 	_i = _i + 1;
 	_markerID = format["%1%2",_mrkPrefix, _i];
-sleep 1;
+sleep 0.5;
 };
 
 _timestamp = time;
@@ -55,5 +55,5 @@ while {(time < _timestamp + _time) && (!((getMarkerPos _markerID) isEqualTo [0,0
 	
 	_i = _i + 1;
 	_markerID = format["%1%2",_mrkPrefix, _i];
-	sleep 1;
+	sleep 0.5;
 };

@@ -94,6 +94,39 @@ class CfgSounds
 		sound[] = {"\sounds\drugcooking.ogg", 0.25, 1};
 		titles[] = {};
 	};
+	
+	class Cough
+	{
+		name = "Cough";
+		sound[] = {"\sounds\cough.ogg", 1,1};
+		titles[] = {};
+	};
+
+	class Agony
+	{
+		name = "Agony";
+		sound[] = {"\sounds\agony.ogg", 1,1};
+		titles[] = {};
+	};
+
+	class Geiger
+	{
+		name = "Geiger";
+		sound[] = {"\sounds\geiger.ogg", 1,1};
+		titles[] = {};
+	};
+	class HStimpack
+	{
+		name = "HStimpack";
+		sound[] = {"\sounds\health_stimpack.ogg", 1,1};
+		titles[] = {};
+	};
+	class UnderDrugs
+	{
+		name = "UnderDrugs";
+		sound[] = {"\sounds\under_drugs.ogg",1,1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing
