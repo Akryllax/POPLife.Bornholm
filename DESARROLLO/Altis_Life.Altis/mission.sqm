@@ -18108,12 +18108,11 @@ class Mission
 		{
 			position[]={3626.4905,6.7919111,13381.694};
 			azimut=398.47198;
-			offsetY=1;
 			id=1548;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Armeria"",QUICK_fnc_robosHandler,[""Armeria"",350,50000 + round random 130000,50,[],3,""si"",""no""]];  ";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Armeria"",QUICK_fnc_robosHandler,[""Armeria"",350,50000 + round random 130000,50,[],3,""si"",""no""]]; this setObjectTexture[0,""\textures\CARTELES\tablet.jpg""]; ";
 		};
 		class Item1331
 		{
