@@ -48,7 +48,7 @@ this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar"
 /// robo hotel
 this enableSimulation false;
 this allowDamage false;
-this addAction["Robar Hotel",QUICK_fnc_robosHandler,["Hotel",500,50000 + round random 130000,50,["goldbar","goldbar","goldbar",3,"no","no"]];
+this addAction["Robar Hotel",QUICK_fnc_robosHandler,["Hotel",500,50000 + round random 130000,50,["goldbar","goldbar","goldbar"],3,"no","no"]];
 
 //robo joyas
 this enableSimulation false;
@@ -80,7 +80,7 @@ this addAction["Robar Metilamina",QUICK_fnc_robosHandler,["Metilamina",350,50000
 /////////////////////////TRABAJOS INIT /////////////////////////////////////////
 this enableSimulation false;
 this allowDamage false;
-this addAction["Comprar Camion Laboratorio  500000$",QUICK_fnc_comprarFurgoQuimico;  
+this addAction["Comprar Camion Laboratorio  500000$",QUICK_fnc_comprarFurgoQuimico];  
 
 
 	
