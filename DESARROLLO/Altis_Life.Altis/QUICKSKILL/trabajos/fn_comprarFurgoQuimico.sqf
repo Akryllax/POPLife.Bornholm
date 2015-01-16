@@ -15,6 +15,8 @@ life_cash = life_cash-_precio;
 //crear coche
 [_vendedor] spawn { 
 
+_vendedor = _this select 0;
+
 _coche = "O_Truck_02_box_F" createVehicle position _vendedor;
 [[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 [[_coche,0,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
