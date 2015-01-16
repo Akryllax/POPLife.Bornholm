@@ -250,7 +250,7 @@ if(_lvl == 7) then
 //GEO
 if(_lvl == 8) then
 	{
-		player addUniform "U_B_CombatUniform_mcam_worn";
+		player forceaddUniform "U_B_CombatUniform_mcam_worn";
 		player addGoggles "G_Balaclava_Lowprofile";
 		removeHeadGear player;
 		player addHeadgear "H_Watchcap_blk";
@@ -287,7 +287,7 @@ if(_lvl == 8) then
 if(_lvl == 9) then
 	{
 
-		player addUniform "U_B_CombatUniform_mcam_worn";
+		player forceaddUniform "U_B_CombatUniform_mcam_worn";
 		removeHeadGear player;
 		player addHeadgear "H_Beret_red";
 		player addVest "V_PlateCarrier1_blk";
