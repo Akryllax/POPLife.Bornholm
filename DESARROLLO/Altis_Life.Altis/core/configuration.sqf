@@ -344,7 +344,7 @@ buy_array =
 	["jerinTranquilizante", 5000],
 	["medicCalor", 10000 * _medicDiscount],
 	["medicAntibiotico", 25000 * _medicDiscount],
-	["medicAnticuerpos", 50000 * _medicDiscount]
+	["medicAnticuerpos", 50000 * _medicDiscount],
 
 	//trabajos
 	["meta",100000]
