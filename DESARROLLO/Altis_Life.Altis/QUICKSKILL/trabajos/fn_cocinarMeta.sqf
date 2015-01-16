@@ -28,7 +28,7 @@ _humo attachTo [_furgo, [0, 1, 1] ];
 
 _furgo say3D "drugcooking";
 
-_time = 20;
+_time = 220;
 sleep _time;
 
 
@@ -37,7 +37,7 @@ _humo attachTo [_furgo, [0, 1, 1] ];
 
 _furgo say3D "drugcooking";
 
-_time = 20;
+_time = 220;
 sleep _time;
 
 _humo = "SmokeShellBlue" createVehicle position _furgo;
@@ -45,10 +45,12 @@ _humo attachTo [_furgo, [0, 1, 1] ];
 
 _furgo say3D "drugcooking";
 
-hint "La meta estara lista en 1 minuto"; 
-sleep 6;
+hint "La meta estara lista en 3 minutos"; 
+sleep 160;
 _furgo say3D "drugcooking";
-
+hint "La meta esta lista"; 
+sleep 2;
+hint "";
 _furgo addAction["Recoger la meta",QUICK_recogerMeta];
 _furgo addAction["Cocinar Meta", QUICK_fnc_cocinarMeta,_furgo];
 
