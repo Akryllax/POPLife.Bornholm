@@ -13,7 +13,7 @@ if(isNull _unit) exitWith {}; //if not the thief get bent
 life_cash = life_cash-_precio;
 
 //crear coche
-[] spawn { 
+[_vendedor] spawn { 
 
 _coche = "O_Truck_02_box_F" createVehicle position _vendedor;
 [[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
