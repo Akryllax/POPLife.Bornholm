@@ -43,7 +43,7 @@ this addAction["Equipar Clase ESPIA 250000$",QUICK_fnc_comprarClaseEspia];
 //robo bar 
 this enableSimulation false;
 this allowDamage false;
-addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",350,50000 + round random 130000,35,["marijuana","marijuana","cocainep","cocainep"],3,"no","no"]];
+this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",350,50000 + round random 130000,35,["marijuana","marijuana","cocainep","cocainep"],3,"no","no"]];
 
 /// robo hotel
 this enableSimulation false;
