@@ -44,15 +44,7 @@ if(isServer) then {
 	publicVariable "adminChannel";
 	publicVariable "EMSChannel";
 
-//contador de robos de quick
-//activar controlador de robos activos by quick
-robosActivosGLOBAL = [];
-robosActivosCount = 0;
-publicVariable "robosActivosGLOBAL";
-publicVariable "robosActivosCount";
 
-diag_log format["El array robosActivosGlobal contiene: ""%1""", robosActivosGlobal];
-diag_log format["El array robosActivosCount contiene: ""%1""", robosActivosCount];
 
 
 } else {
