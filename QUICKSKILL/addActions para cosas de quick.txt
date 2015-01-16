@@ -48,33 +48,39 @@ addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",350,
 /// robo hotel
 this enableSimulation false;
 this allowDamage false;
-addAction["Robar Hotel",QUICK_fnc_robosHandler,["Hotel",500,50000 + round random 130000,50,["goldbar","goldbar","goldbar",3,"no","no"]];
+this addAction["Robar Hotel",QUICK_fnc_robosHandler,["Hotel",500,50000 + round random 130000,50,["goldbar","goldbar","goldbar",3,"no","no"]];
 
 //robo joyas
 this enableSimulation false;
 this allowDamage false;
-addAction["Robar Joyeria",QUICK_fnc_robosHandler,["Joyeria",350,50000 + round random 130000,50,["goldbar"],3,"no","no"]];
+this addAction["Robar Joyeria",QUICK_fnc_robosHandler,["Joyeria",350,50000 + round random 130000,50,["goldbar"],3,"no","no"]];
 
 // robo armas
 this enableSimulation false;
 this allowDamage false;
-addAction["Robar Armeria",QUICK_fnc_robosHandler,["Armeria",350,50000 + round random 130000,50,[],3,"si","no"]];
+this addAction["Robar Armeria",QUICK_fnc_robosHandler,["Armeria",350,50000 + round random 130000,50,[],3,"si","no"]];
 
 //robo Coches
 this enableSimulation false;
 this allowDamage false;
-addAction["Robar Tienda de Coches",QUICK_fnc_robosHandler,["Tienda de Coches",350,50000 + round random 130000,50,[],3,"no","si"]];
+this addAction["Robar Tienda de Coches",QUICK_fnc_robosHandler,["Tienda de Coches",350,50000 + round random 130000,50,[],3,"no","si"]];
 
 
 //robo laboratorio
 this enableSimulation false;
 this allowDamage false;
-addAction["Robar Laboratorio",QUICK_fnc_robosHandler,["Laboratorio",350,50000 + round random 130000,50,["jerinEbola","jerinCeguera","jerinTranquilizante","jerinCostipado"],3,"no","no"]];
+this addAction["Robar Laboratorio",QUICK_fnc_robosHandler,["Laboratorio",350,50000 + round random 130000,50,["jerinEbola","jerinCeguera","jerinTranquilizante","jerinCostipado"],3,"no","no"]];
 
-//robo Metlamina
+//robo Metalina
 this enableSimulation false;
 this allowDamage false;
-addAction["Robar Metilamina",QUICK_fnc_robosHandler,["Metilamina",350,50000 + round random 130000,35,["metilamina","metilamina","metilamina","metilamina","metilamina"],3,"no","no"]];
+this addAction["Robar Metilamina",QUICK_fnc_robosHandler,["Metilamina",350,50000 + round random 130000,35,["metilamina","metilamina","metilamina","metilamina","metilamina"],3,"no","no"]];
+
+
+/////////////////////////TRABAJOS INIT /////////////////////////////////////////
+this enableSimulation false;
+this allowDamage false;
+this addAction["Comprar Camion Laboratorio  500000$",QUICK_fnc_comprarFurgoQuimico;  
 
 
 	
