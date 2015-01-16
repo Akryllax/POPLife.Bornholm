@@ -195,7 +195,11 @@ life_inv_items =
 	"life_inv_cetro",
 	//Esposas
 	"life_inv_esposas",
-	"life_inv_llaveesposas"
+	"life_inv_llaveesposas",
+	//trabajos
+	"life_inv_metilamina",
+	"life_inv_meta"
+
 ];
 
 //Setup variable inv vars.
@@ -292,7 +296,9 @@ sell_array =
 	["abrecartas",100],
 	["catalejo",100],
 	["collar",100],
-	["cetro",100]
+	["cetro",100],
+	//trabajos
+	["meta",100000]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -330,6 +336,7 @@ buy_array =
 	["storagebig",150000],
 	["esposas",500],
 	["llaveesposas",700],
+<<<<<<< HEAD
 	["jerinHipotermia", 15000],
 	["jerinCostipado", 30000],
 	["jerinEbola", 45000],
@@ -338,6 +345,10 @@ buy_array =
 	["medicCalor", 10000 * _medicDiscount],
 	["medicAntibiotico", 25000 * _medicDiscount],
 	["medicAnticuerpos", 50000 * _medicDiscount]
+=======
+	//trabajos
+	["meta",100000]
+>>>>>>> origin/master
 ];
 __CONST__(buy_array,buy_array);
 
