@@ -11,7 +11,7 @@ private["_handle"];
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
-if(__GETC__(life_merlevel) <= 3) then
+if(__GETC__(life_merlevel) < 3) then
 	{
 		player addUniform "U_BG_Guerilla1_1";
 		player addVest "V_PlateCarrierIA1_dgtl";
