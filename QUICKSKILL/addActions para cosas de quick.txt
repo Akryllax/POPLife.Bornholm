@@ -71,7 +71,7 @@ this enableSimulation false;
 this allowDamage false;
 addAction["Robar Laboratorio",QUICK_fnc_robosHandler,["Laboratorio",350,50000 + round random 130000,50,["jerinEbola","jerinCeguera","jerinTranquilizante","jerinCostipado"],3,"no","no"]];
 
-//robo Metalina
+//robo Metlamina
 this enableSimulation false;
 this allowDamage false;
 addAction["Robar Metilamina",QUICK_fnc_robosHandler,["Metilamina",350,50000 + round random 130000,35,["metilamina","metilamina","metilamina","metilamina","metilamina"],3,"no","no"]];
