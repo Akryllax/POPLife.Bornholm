@@ -336,7 +336,7 @@ buy_array =
 	["storagebig",150000],
 	["esposas",500],
 	["llaveesposas",700],
-<<<<<<< HEAD
+
 	["jerinHipotermia", 15000],
 	["jerinCostipado", 30000],
 	["jerinEbola", 45000],
@@ -345,10 +345,10 @@ buy_array =
 	["medicCalor", 10000 * _medicDiscount],
 	["medicAntibiotico", 25000 * _medicDiscount],
 	["medicAnticuerpos", 50000 * _medicDiscount]
-=======
+
 	//trabajos
 	["meta",100000]
->>>>>>> origin/master
+
 ];
 __CONST__(buy_array,buy_array);
 
