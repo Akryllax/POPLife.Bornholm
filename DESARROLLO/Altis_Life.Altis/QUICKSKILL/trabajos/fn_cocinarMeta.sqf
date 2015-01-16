@@ -13,7 +13,7 @@ if(isNull _furgo) exitWith {hint "Furgo is null :("}; //if not the thief get ben
  _gen removeAction _id;
 
  //sino tenemos 5 de metilamina no podemos cocinar
- if(([false,"metilamina",5] call life_fnc_handleInv)) exitWith { hint "Necesitas 5 de metilamina para cocinar meta";[] spawn { sleep 5;hint "";} };
+ if(!([false,"metilamina",5] call life_fnc_handleInv)) exitWith { hint "Necesitas 5 de metilamina para cocinar meta";[] spawn { sleep 5;hint "";} };
 
 //vamos a cocinar
 [_furgo] spawn {
