@@ -3047,15 +3047,7 @@
 			<Italian>€%1 della rapina alla Riserva Federale sono stati recuperati dal rapinatore ucciso.</Italian>
 			<Portuguese>R$%1 que foi roubado da Reserva Federal foi retornado a ela após a morte do ladrão.</Portuguese>
 			<Spanish>$%1 del robo de la Reserva Federal fue devuelto al matar al ladrón.</Spanish>
-		</Key>
-		<Key ID="STR_Akr_OpenVault">
-			<Original>Open/Close door</Original>
-			<Spanish>Abrir/Cerrar puerta</Spanish>
-		</Key>
-		<Key ID="STR_Akr_RepaiVault">
-			<Original>Repair dome</Original>
-			<Spanish>Reparar puerta</Spanish>
-		</KEY>
+		</Key>		
 		<Key ID="STR_Cop_RepairVault">
 			<Original>Repairing vault...</Original>
 			<English>Repairing vault...</English>
