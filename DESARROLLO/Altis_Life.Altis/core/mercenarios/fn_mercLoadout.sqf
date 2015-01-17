@@ -11,9 +11,9 @@ private["_handle"];
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
-if(__GETC__(life_merclevel) < 3) then
+if(__GETC__(life_merclevel) < 4) then
 	{
-		player addUniform "U_BG_Guerilla1_1";
+		player forceaddUniform "U_BG_Guerilla1_1";
 		player addVest "V_PlateCarrierIA1_dgtl";
 		player addBackpack "B_AssaultPack_dgtl";
 		player addHeadgear "H_MilCap_dgtl";	
@@ -32,7 +32,7 @@ if(__GETC__(life_merclevel) < 3) then
 
 if(__GETC__(life_merclevel) == 4) then
 	{
-		player addUniform "U_I_CombatUniform";
+		player forceaddUniform "U_I_CombatUniform";
 		player addVest "V_PlateCarrierIA2_dgtl";
 		player addBackpack "B_AssaultPack_dgtl";
 		player addHeadgear "H_Beret_grn";	
