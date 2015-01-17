@@ -20,7 +20,7 @@ _ladronesEnRobo  = _element   select [0,1];
 if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones  
 
-   _ladronesEnRobo  = _x  [1,1];
+   _ladronesEnRobo  = _x select [1,1];
 
   _x  set [_forEachIndex,[_nombreRoboCompare,_ladronesEnRobo - 1]];
 };
