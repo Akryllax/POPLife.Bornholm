@@ -37,6 +37,17 @@ switch (_vehicle) do
 			["textures\CIV\monsterwrcv2.jpg","civ"],
 			["textures\CIV\sport_redbull.jpg","civ"],
 			["textures\CIV\valkyriacar.jpg","civ"],
+			["textures\CIV\civ_hatchback_racing.jpg","civ"],
+			["textures\CIV\deportiva_camuflaje.jpg","civ"],
+			["textures\CIV\DEPORTIVA-CIRCUITO.jpg", "civ"],
+			["textures\CIV\hatchback_rockstar.jpg", "civ"],			
+			["textures\CIV\lancia-martini.jpg", "civ"],				
+			["textures\CIV\mercedesgt.jpg", "civ"],					
+			["textures\CIV\monster.jpg", "civ"],					
+			["textures\CIV\peugeot.jpg", "civ"]	
+			["textures\COP\cop_hatchback.jpg","cop"],
+			["textures\COP\hatchback_local.jpg","cop"],
+			["textures\COP\hatch_guardia_civil_v1.jpg", "cop"],
 			
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"]
 		];
@@ -54,8 +65,13 @@ switch (_vehicle) do
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa","civ"],
 			["#(ai,64,64,1)Fresnel(0.3,3)","fed"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
+			["textures\COP\police_offroad_local.jpg","cop"],
+			["textures\COP\police_offroad.jpg","cop"],
+			["textures\COP\offroad_01_ext_base02_co.jpg","cop"],
+			["textures\COP\geo_offroad.jpg","cop"],			
 			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
-			["textures\CIV\civ_offroad_weed.jpg","civ"]			
+			["textures\CIV\GENERALLEEOFFROAD.jpg","civ"],
+			["textures\CIV\taxi_2.jpg","civ"]			
 		];
 	};
 	
@@ -83,6 +99,12 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
+			["textures\COP\cop_suv.jpg","cop"], 
+			["textures\COP\suv_01_ext_co.jpg","cop"],		
+			["textures\MED\medic_suv_FINAL.jpg","med"],						
+			["textures\CIV\CANIMOVIL.jpg","civ"],							
+			["textures\CIV\ferrari.jpg","civ"],								
+			["textures\CIV\suv_Ghostrider.jpg","civ"],
 			["textures\CIV\blackwhite.jpg","civ"],
 			["textures\CIV\carbon_suv.jpg","civ"],
 			["textures\CIV\civ_suv_skull.jpg","civ"],
@@ -124,6 +146,8 @@ switch (_vehicle) do
 			["\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_indp_co.paa","civ"],
 			["\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa","civ"],
 			["\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa","reb"]
+			["textures\COP\quadbike_local.jpg","cop"],
+			["textures\COP\quadbike_01_co.jpg","cop"]
 		];
 	};
 	
@@ -146,6 +170,7 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","reb"],
 			["#(argb,8,8,3)color(1,1,1,0.8)","med"],
+			["textures\COP\mh9_guardia_civil_v1.jpg","cop"],
 			["textures\CIV\kitty_heli.jpg","civ"]			
 		];
 	};
@@ -158,7 +183,8 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa","donate"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"],
-			["#(argb,8,8,3)color(1,1,1,0.8)","med"]
+			["#(argb,8,8,3)color(1,1,1,0.8)","med"],
+			["textures\MED\medic_orca.jpg","med"]
 		];
 	};
 	
@@ -168,6 +194,8 @@ switch (_vehicle) do
 		[
 			["\A3\Soft_F\MRAP_01\Data\mrap_01_base_co.paa","cop"],
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
+			["textures\COP\geo_hunter_1.jpg","cop","textures\COP\geo_hunter_2.jpg"],
+			["textures\COP\mrap_guardia_civil_verde.jpg","cop","textures\COP\mrap_guardia_civil_adds.jpg"]
 		];
 	};
 	
