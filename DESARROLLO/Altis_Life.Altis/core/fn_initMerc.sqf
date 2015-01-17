@@ -17,7 +17,7 @@ if(life_blacklisted) exitWith
 };
 
 
-if(__GETC__(life_merclevel) < 0) then {
+if(__GETC__(life_merclevel) == 0) then {
 	["NotWhitelisted",false,true] call BIS_fnc_endMission;
 	sleep 35;
 };
