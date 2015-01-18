@@ -205,7 +205,7 @@ life_inv_items =
 	"life_inv_semillasTomate",
 	//frutos
 	"life_inv_tomates",
-	"life_inv_maiz"
+	"life_inv_maiz",
 	//trabajos
 	"life_inv_metilamina",
 	"life_inv_meta"
