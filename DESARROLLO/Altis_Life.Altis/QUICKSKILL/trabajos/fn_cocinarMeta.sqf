@@ -10,12 +10,14 @@ _furgo =[_this,3,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _furgo) exitWith {hint "Furgo is null :("}; //if not the thief get bent
 //tiene que llevar el traje de cientifico
  if(uniform _caller!= "U_C_Scientist") exitWith {hint "No llevas la proteccion adecuada para manipular la meta, equipate el traje de cientifico"};
- _gen removeAction _id;
+
 
  //sino tenemos 5 de metilamina no podemos cocinar
  if(!([false,"metilamina",5] call life_fnc_handleInv)) exitWith { hint "Necesitas 5 de metilamina para cocinar meta";[] spawn { sleep 5;hint "";} };
 
+
 //vamos a cocinar
+ _gen removeAction _id;
 [_furgo] spawn {
 
 _furgo = _this select 0;
