@@ -359,8 +359,6 @@ switch(_shop) do
 						["10Rnd_762x51_Mag",nil,500],
 						["srifle_EBR_F",nil,100000],
 						["20Rnd_762x51_Mag",nil,1000],
-						["LMG_Mk200_F",nil,160000],
-						["200Rnd_65x39_cased_Box",nil,10000],
 						["acc_flashlight",nil,1000],
 						["muzzle_snds_L",nil,5000],
 						["optic_Yorris",nil,1500],
