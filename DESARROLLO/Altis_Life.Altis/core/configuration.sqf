@@ -369,7 +369,7 @@ buy_array =
 	["maiz",1500],
 
 	//trabajos
-	["meta",100000]
+	["meta",50000]
 
 ];
 __CONST__(buy_array,buy_array);
