@@ -44,7 +44,7 @@ switch (_vehicle) do
 			["textures\CIV\lancia-martini.jpg", "civ"],				
 			["textures\CIV\mercedesgt.jpg", "civ"],					
 			["textures\CIV\monster.jpg", "civ"],					
-			["textures\CIV\peugeot.jpg", "civ"]	
+			["textures\CIV\peugeot.jpg", "civ"],
 			["textures\COP\cop_hatchback.jpg","cop"],
 			["textures\COP\hatchback_local.jpg","cop"],
 			["textures\COP\hatch_guardia_civil_v1.jpg", "cop"],
