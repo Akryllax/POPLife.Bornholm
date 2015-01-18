@@ -84,6 +84,16 @@ switch (_var) do
      //trabajos
      case "life_inv_metilamina":{"Metilamina"};
      case "life_inv_meta":{"Meta"};
+     //objetos espia
+	case "life_inv_gpsEspia": { ("GPS espia") };
+	//semillas
+	case "life_inv_semillasMaria":{("Semillas Marihuana")};
+	case "life_inv_semillasCoca":{("Semillas Coca")};
+	case "life_inv_semillasTomate":{("Semillas Tomate")};
+	case "life_inv_semillasMaiz":{("Semillas Maiz")};
+	// frutos
+	case "life_inv_tomates": {("Tomates")};
+	case "life_inv_maiz": {("Maiz")};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

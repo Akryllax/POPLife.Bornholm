@@ -89,6 +89,15 @@ switch (_mode) do
             //trabajos
             case "metilamina":{"life_inv_metilamina"};
             case "meta":{"life_inv_meta"};
+            //items quick
+            case "gpsEspia": {"life_inv_gpsEspia"};
+			case "semillasMaria": {"life_inv_semillasMaria"};
+			case "semillasCoca": {"life_inv_semillasCoca"};
+			case "semillasMaiz": {"life_inv_semillasMaiz"};
+			case "semillasTomate": {"life_inv_semillasTomate"};
+			case "tomates": {"life_inv_tomates"};
+			case "maiz": {"life_inv_maiz"};
+			default {"not found"};
 		};
 	};
 
@@ -168,6 +177,15 @@ switch (_mode) do
             //trabajos
             case "life_inv_metilamina":{"metilamina"};
             case "life_inv_meta":{"meta"};
+            //items quick
+            case "life_inv_gpsEspia":{"gpsEspia"};	
+			case "life_inv_semillasMaria":{"semillasMaria"};
+			case "life_inv_semillasCoca": {"semillasCoca"};
+			case "life_inv_semillasMaiz": {"semillasMaiz"};
+			case "life_inv_semillasTomate": {"semillasTomate"};
+			case "life_inv_tomates": {"tomates"};
+			case "life_inv_maiz": {"maiz"};
+			default {"not found"};
 		};
 	};
 };

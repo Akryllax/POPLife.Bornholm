@@ -86,6 +86,124 @@ switch (true) do
 	{
 		[] spawn life_fnc_pickAxeUse;
 	};
+
+	///cositas quick!!
+	 //usar gps
+	case (_item == "gpsEspia"): {
+		///usar gps espia en jugador
+		
+		
+		
+		    //quitar 1 gps
+			[false,"gpsEspia",1] call life_fnc_handleInv;		
+
+			_espia = player;
+			_espiado = cursorTarget;
+
+			_script_handler = [_espia,_espiado] spawn QUICK_fnc_gpsEspia;
+
+		
+
+	};
+	
+	 //usar semillas
+	case (_item == "semillasMaria"): {
+	
+			[false,"semillasMaria",1] call life_fnc_handleInv;		
+
+						_script_handler = [] spawn QUICK_fnc_plantarMaria;
+
+		
+
+	};
+	
+	case (_item == "semillasCoca"): {
+	
+			[false,"semillasCoca",1] call life_fnc_handleInv;		
+
+						_script_handler = [] spawn QUICK_fnc_plantarCoca;
+
+		
+
+	};
+	
+	
+	case (_item == "semillasTomate"): {
+	
+			[false,"semillasTomate",1] call life_fnc_handleInv;		
+
+						_script_handler = [] spawn QUICK_fnc_plantarTomates;
+
+		
+
+	};
+	
+	case (_item == "semillasMaiz"): {
+	
+			[false,"semillasMaiz",1] call life_fnc_handleInv;		
+
+						_script_handler = [] spawn QUICK_fnc_plantarMaiz;
+
+		
+
+	};
+	
+	
+	//usar droga
+	
+	case (_item == "marijuana"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			life_thirst = 80;
+			life_hunger = 80;
+			[] spawn
+			{
+				switch(round(random(5))) do {
+					case 0: { titleText["¡Que white widow mas buena!","PLAIN"]; };
+					case 1: { titleText["¡Bua como rompe el pecho!","PLAIN"]; };
+					case 2: { titleText["¡Este a caraperro!","PLAIN"]; };
+					case 3: { titleText["¡Pasate ese mail y hazte otro!","PLAIN"]; };
+					case 4: { titleText["Este peta es hidroponico","PLAIN"]; };
+					case 5: { titleText["A cogollo regalao no le mires la resina","PLAIN"]; };
+				};
+				["marijuana"] spawn QUICK_fnc_drugsEffects;
+			};
+		};
+	};
+	
+	
+	
+	case (_item == "heroinp"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			["heroinp"] spawn QUICK_fnc_drugsEffects;
+		};
+	};
+	
+	case (_item == "cocainep"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			life_thirst = 80;
+			[] spawn
+			{
+				
+				switch(round(random(4))) do {
+					case 0: { titleText["¡Bua esta es pura!","PLAIN"]; };
+					case 1: { titleText["¡Esto no lleva corte!","PLAIN"]; };
+					case 2: { titleText["¡Un pollito entero!","PLAIN"]; };
+					case 3: { titleText["Una raya detras de otra","PLAIN"]; };
+					case 4: { titleText["Pim Pam toma lacasitos...","PLAIN"]; };
+				};
+				
+				["cocainep"] spawn QUICK_fnc_drugsEffects;
+				
+				
+			};
+		};
+	};
 	
 	default
 	{
