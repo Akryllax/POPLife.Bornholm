@@ -1,3 +1,13 @@
+class System
+{
+	tag = "SYS";
+	class Setup
+	{
+		file = "core\";
+		class globalVars {};
+	};
+};
+
 class Socket_Reciever
 {
 	tag = "SOCK";
