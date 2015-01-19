@@ -52,7 +52,7 @@ switch(true) do {
 
 	hint "Petroleo extraido, espera 30s hasta que se enfrian las maquinas.";
 	sleep 30;
-	_furgo addAction["Extarer Petroleo", QUICK_fnc_extraerPetroleo,_furgo];
+	_furgo addAction["Extraer Petroleo", QUICK_fnc_extraerPetroleo,_furgo];
 
 };
 	
