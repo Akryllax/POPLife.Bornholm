@@ -18,6 +18,9 @@ life_cash = life_cash-_precio;
 _vendedor = _this select 0;
 
 _coche = "O_Truck_02_box_F" createVehicle position _vendedor;
+life_vehicles pushBack _coche;
+[[_coche,"vehicle_info_owners",[[getPlayerUID _unit,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
+
 [[_coche,1,"QUICKSKILL\trabajos\badback.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 [[_coche,0,"QUICKSKILL\trabajos\badfront.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
