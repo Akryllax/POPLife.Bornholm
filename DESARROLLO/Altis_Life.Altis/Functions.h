@@ -516,6 +516,7 @@ class Quickskill
 		file = "QUICKSKILL\trabajos";
 		class comprarFurgoQuimico {};
 		class cocinarMeta {};
+		class seguridadPrivada{};
 		
 	};
 };

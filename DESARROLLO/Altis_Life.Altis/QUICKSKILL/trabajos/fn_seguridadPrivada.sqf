@@ -133,6 +133,8 @@ _scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrab
 
 //////////////////////////////////////////////////////////////
 // EMPIEZA TODO AQUI LO DE ARRIBA SON FUNCIONES!!!!
+
+//cursorTarget addAction["Tranporte de Furgoneta 35000$ - Ganancia: 150000$",QUICK_fnc_seguridadPrivada];
 //////////////////////////////////////////////////////////
 
 private["_coche"];
