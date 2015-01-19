@@ -517,6 +517,8 @@ class Quickskill
 		class comprarFurgoQuimico {};
 		class cocinarMeta {};
 		class seguridadPrivada{};
+		class extraerPetroleo{};
+		class comprarBarcoPetroleo{};
 		
 	};
 };

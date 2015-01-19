@@ -100,7 +100,7 @@ life_vehicles pushBack _coche;
 
 //encontrar atm cercana ma o menos
 
-_destinoRandom = "dp_" +  str (round random 26 );
+_destinoRandom = "dp" +  str (round random 26 );
 _destino =_destinoRandom;
 
  				
