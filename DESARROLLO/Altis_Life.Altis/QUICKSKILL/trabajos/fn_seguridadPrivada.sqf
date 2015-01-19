@@ -15,7 +15,7 @@ _metrosTotal = _furgo distance getMarkerPos _destino;
 while {_time > 0} do {
 
 	//distancia
-	_posDestino = getMarkerPos _destino
+	_posDestino = getMarkerPos _destino;
 	_metros =  _furgo distance _posDestino;
 
 	
