@@ -1,7 +1,7 @@
 ////////////////FUNCIONES NIINJA DE QUICK NO INTENTES ENTENDERLO ///////////////////////////
 QUICK_timerTrabajoSeguridad = {
 
-_time = 1200;
+_time = 60*60;
 _metros_entregar = 5;
 _pagar_jugador= "no";
 _marcador = _this select 0;
@@ -91,38 +91,16 @@ life_vehicles pushBack _coche;
 
 
 //encontrar atm cercana ma o menos
-_destinoRandom = round random 7;
-if(_destinoRandom == 1)then {
-_destino = _unit nearestObject "Land_Atm_01_F"; 
-};
 
-if(_destinoRandom == 2)then {
-_destino  = _unit nearestObject "Land_Atm_02_F"; 
-};
-
-if(_destinoRandom == 3)then {
-_destino = _unit nearestObject "Land_i_Barracks_V1_F"; 
-};
-
-if(_destinoRandom == 4)then {
-_destino  =  _unit nearestObject "Land_i_Barracks_V1_dam_F"; 
-};
-
-if(_destinoRandom == 5)then {
-_destino  = _unit nearestObject "Land_i_Barracks_V2_dam_F"; 
-};
-
-if(_destinoRandom == 6 || _destinoRandom == 7)then {
-_destino  =  _unit nearestObject "Land_u_Barracks_V2_F"; 
-};
-
+_destinoRandom "dp" +  str (round random 26 );
+_destino =_destinoRandom;
 
  				
-_markerDestino = createMarkerLocal ["MarkerTrabajoseguridad", getPos _destino ];
+_markerDestino = createMarkerLocal ["MarkerTrabajoseguridad", getMarkerPos _destino ];
 _markerDestino setMarkerShapeLocal "ICON"; 
 _markerDestino setMarkerTypeLocal "n_motor_inf";
 _markerDestino setMarkerColor "ColorGreen";
-_markerDestino setMarkerText "Entregar Camion aqui";
+_markerDestino setMarkerText "Entregar Camion aqui!!";
 
   	 		
 _scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrabajoSeguridad;
