@@ -28,7 +28,7 @@ while {_time > 0} do {
 	
 		//contar tiempo
 		_time = _time - 1;  
-		hintSilent format["Tiempo para entregar el furgon: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_cancelar_robo];	
+		hintSilent format["Tiempo para entregar el furgon: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_entregar];	
 		sleep 1;
 		
 	};
