@@ -118,7 +118,7 @@ _destino  =  _unit nearestObject "Land_u_Barracks_V2_F";
 
 
  				
-_markerDestino = createMarkerLocal ["MarkerTrabajoseguridad", getPos _destino ]
+_markerDestino = createMarkerLocal ["MarkerTrabajoseguridad", getPos _destino ];
 _markerDestino setMarkerShapeLocal "ICON"; 
 _markerDestino setMarkerTypeLocal "n_motor_inf";
 _markerDestino setMarkerColor "ColorGreen";
