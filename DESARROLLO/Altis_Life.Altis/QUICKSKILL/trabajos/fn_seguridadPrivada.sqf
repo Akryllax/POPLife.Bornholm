@@ -10,12 +10,13 @@ _jugador = _this select 2;
 _destino = _this select 3;
 
 
-	_metrosTotal = _furgo distance getMarkerPos _destino;
+_metrosTotal = _furgo distance getMarkerPos _destino;
 
 while {_time > 0} do {
 
 	//distancia
-	_metros =  _furgo distance getMarkerPos _destino;
+	_posDestino = getMarkerPos _destino
+	_metros =  _furgo distance _posDestino;
 
 	
 	
@@ -103,11 +104,11 @@ _destinoRandom = "dp_" +  str (round random 26 );
 _destino =_destinoRandom;
 
  				
-_markerDestino = createMarkerLocal ["MarkerTrabajoseguridad", getMarkerPos _destino ];
+_markerDestino = createMarkerLocal ["MarkerTrabajoSeguridad", getMarkerPos _destino ];
 _markerDestino setMarkerShapeLocal "ICON"; 
-_markerDestino setMarkerTypeLocal "n_motor_inf";
+_markerDestino setMarkerTypeLocal "DOT";
 _markerDestino setMarkerColor "ColorGreen";
-_markerDestino setMarkerText "Entregar Camion aqui!!";
+
 
 	 		
 _scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrabajoSeguridad;
