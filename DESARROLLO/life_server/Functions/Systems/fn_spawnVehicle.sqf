@@ -69,6 +69,9 @@ waitUntil {!DB_Async_Active};
 [_query,false] spawn DB_fnc_asyncCall;
 if(typeName _sp == "STRING") then {
 	_vehicle = createVehicle[(_vInfo select 2),[0,0,999],[],0,"NONE"];
+	if((_vInfo select 2) == "C_SUV_01_F") then {
+		_vehicle setCenterOfMass [-0.010813,-0.506166,-0.557481];
+	};
 	waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
 	_vehicle allowDamage false;
 	_hs = nearestObjects[getMarkerPos _sp,["Land_Hospital_side2_F"],50] select 0;
@@ -76,6 +79,9 @@ if(typeName _sp == "STRING") then {
 	sleep 0.6;
 } else {
 	_vehicle = createVehicle [(_vInfo select 2),_sp,[],0,"NONE"];
+	if((_vInfo select 2) == "C_SUV_01_F") then {
+		_vehicle setCenterOfMass [-0.010813,-0.506166,-0.557481];
+	};
 	waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
 	_vehicle allowDamage false;
 	_vehicle setPos _sp;
