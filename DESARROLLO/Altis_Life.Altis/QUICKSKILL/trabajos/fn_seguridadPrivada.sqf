@@ -106,7 +106,7 @@ _destino =_destinoRandom;
  				
 _markerDestino = createMarkerLocal ["MarkerTrabajoSeguridad", getMarkerPos _destino ];
 _markerDestino setMarkerShapeLocal "ICON"; 
-_markerDestino setMarkerTypeLocal "DOT";
+_markerDestino setMarkerTypeLocal "Warning";
 _markerDestino setMarkerColor "ColorGreen";
 
 
