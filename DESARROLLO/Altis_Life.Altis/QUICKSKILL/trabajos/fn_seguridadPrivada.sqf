@@ -10,11 +10,13 @@ _jugador = _this select 2;
 _destino = _this select 3;
 
 
+	_metrosTotal = _furgo distance getMarkerPos _destino;
 
 while {_time > 0} do {
 
 	//distancia
 	_metros =  _furgo distance getMarkerPos _destino;
+
 	
 	
     	
@@ -28,7 +30,7 @@ while {_time > 0} do {
 	
 		//contar tiempo
 		_time = _time - 1;  
-		hintSilent format["Destino: %4 - %3m \n Tiempo para entregar el furgon: %1 \n Distancia: %2m ", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_entregar,_destino];	
+		hintSilent format["Destino: %4 ha %3m \n Tiempo : %1 \n Distancia: %2m ", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metrosTotal,_destino];	
 		sleep 1;
 		
 	};
@@ -97,7 +99,7 @@ life_vehicles pushBack _coche;
 
 //encontrar atm cercana ma o menos
 
-_destinoRandom = "dp" +  str (round random 26 );
+_destinoRandom = "dp_" +  str (round random 26 );
 _destino =_destinoRandom;
 
  				
