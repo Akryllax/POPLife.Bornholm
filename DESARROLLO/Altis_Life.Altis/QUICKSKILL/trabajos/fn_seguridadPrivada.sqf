@@ -28,7 +28,7 @@ while {_time > 0} do {
 	
 		//contar tiempo
 		_time = _time - 1;  
-		hintSilent format["Tiempo para entregar el furgon: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_entregar];	
+		hintSilent format["Destino: %4 \n Tiempo para entregar el furgon: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_entregar,_destino];	
 		sleep 1;
 		
 	};
@@ -102,7 +102,7 @@ _markerDestino setMarkerTypeLocal "n_motor_inf";
 _markerDestino setMarkerColor "ColorGreen";
 _markerDestino setMarkerText "Entregar Camion aqui!!";
 
-  	 		
+	 		
 _scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrabajoSeguridad;
 
 
