@@ -33,12 +33,12 @@ while {_time > 0} do {
 		
 	};
 
-	if(_metros<= _metros_entregar  && vehicle _jugador == "C_Van_01_box_F"){
+	if(_metros<= _metros_entregar  && vehicle _jugador == "C_Van_01_box_F")then{
 
 		_pagar_jugador= "si";
 		_time = 0;
 		hint "Has llegado a tu destino,baja  ya puedes cobrar tu recompensa en la furgo";
-	}
+	};
     		
 };//end while
 
