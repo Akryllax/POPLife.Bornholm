@@ -33,7 +33,7 @@ while {_time > 0} do {
 		
 	};
 
-	if(_metros<= _metros_entregar  && vehicle _jugador == "C_Van_01_box_F")then{
+	if(_metros < _metros_entregar  && vehicle _jugador == "C_Van_01_box_F")then{
 
 		_pagar_jugador= "si";
 		_time = 0;
@@ -49,6 +49,11 @@ if(_time < 1) then{
 	    // agregar action de cobrar la pasta y borrar el furgon
 	    _furgo addAction["Entregar furgoneta",QUICK_pagarTrabajoSeguridad,_furgo];	
 	  };
+
+	  //no has terminado el trabajo
+	  hint "No has entregado la furgoneta";
+
+
 };//en time < 1
 
 
