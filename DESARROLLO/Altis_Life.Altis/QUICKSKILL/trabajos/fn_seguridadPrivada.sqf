@@ -14,7 +14,7 @@ _destino = _this select 3;
 while {_time > 0} do {
 
 	//distancia
-	_metros =  _jugador distance _destino;
+	_metros =  _jugador distance getMarkerPos _destino;
 	
 	
     	
@@ -37,7 +37,7 @@ while {_time > 0} do {
 
 		_pagar_jugador= "si";
 		_time = 0;
-		hint "Has llegado a tu destino,baja  ya puedes cobrar tu recompensa en la furgo";
+		hint "Has llegado a tu destino, baja  ya puedes cobrar tu recompensa en la furgo";
 	};
     		
 };//end while
@@ -92,7 +92,7 @@ life_vehicles pushBack _coche;
 
 //encontrar atm cercana ma o menos
 
-_destinoRandom "dp" +  str (round random 26 );
+_destinoRandom = "dp" +  str (round random 26 );
 _destino =_destinoRandom;
 
  				
