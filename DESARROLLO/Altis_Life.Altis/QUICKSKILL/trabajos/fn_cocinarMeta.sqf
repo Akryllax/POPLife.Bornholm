@@ -26,7 +26,7 @@ hint "Has empezado a cocinar meta,  se cocinara en 10 minutos";
 
 
 _humo = "SmokeShellYellow" createVehicle position _furgo;
-_humo attachTo [_furgo, [0, 1, 1] ];
+_humo attachTo [_furgo, [0, 0, 1] ];
 
 _furgo say3D "drugcooking";
 
@@ -35,7 +35,7 @@ sleep _time;
 
 
 _humo = "SmokeShellRed" createVehicle position _furgo;
-_humo attachTo [_furgo, [0, 1, 1] ];
+_humo attachTo [_furgo, [0, 0, 1] ];
 
 _furgo say3D "drugcooking";
 
@@ -43,7 +43,7 @@ _time = 220;
 sleep _time;
 
 _humo = "SmokeShellBlue" createVehicle position _furgo;
-_humo attachTo [_furgo, [0, 1, 1] ];
+_humo attachTo [_furgo, [0, 0, 1] ];
 
 _furgo say3D "drugcooking";
 
