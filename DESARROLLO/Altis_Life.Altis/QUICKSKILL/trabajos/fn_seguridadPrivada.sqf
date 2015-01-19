@@ -14,7 +14,7 @@ _destino = _this select 3;
 while {_time > 0} do {
 
 	//distancia
-	_metros =  _jugador distance getMarkerPos _destino;
+	_metros =  _furgo distance getMarkerPos _destino;
 	
 	
     	
@@ -28,12 +28,12 @@ while {_time > 0} do {
 	
 		//contar tiempo
 		_time = _time - 1;  
-		hintSilent format["Destino: %4 \n Tiempo para entregar el furgon: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_entregar,_destino];	
+		hintSilent format["Destino: %4 - %3m \n Tiempo para entregar el furgon: %1 \n Distancia: %2m ", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_entregar,_destino];	
 		sleep 1;
 		
 	};
 
-	if(_metros < _metros_entregar  && vehicle _jugador == "C_Van_01_box_F")then{
+	if(_metros < _metros_entregar )then{
 
 		_pagar_jugador= "si";
 		_time = 0;
