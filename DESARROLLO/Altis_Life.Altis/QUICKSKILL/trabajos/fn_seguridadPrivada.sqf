@@ -50,11 +50,17 @@ if(_time < 1) then{
 
 	  if (_pagar_jugador=="si" && alive _jugador ) then {
 	    // agregar action de cobrar la pasta y borrar el furgon
+	     hint "Ya puedes entregar la furgoneta";
 	    _furgo addAction["Entregar furgoneta",QUICK_pagarTrabajoSeguridad,_furgo];	
 	  };
 
-	  //no has terminado el trabajo
-	  hint "No has entregado la furgoneta";
+	   if (_pagar_jugador=="no" && alive _jugador ) then {
+	    // agregar action de cobrar la pasta y borrar el furgon
+	    //no has terminado el trabajo
+	     hint "No has entregado la furgoneta";
+	  };
+
+	 
 
 
 };//en time < 1
@@ -106,7 +112,7 @@ _destino =_destinoRandom;
  				
 _markerDestino = createMarkerLocal ["MarkerTrabajoSeguridad", getMarkerPos _destino ];
 _markerDestino setMarkerShapeLocal "ICON"; 
-_markerDestino setMarkerTypeLocal "Warning";
+_markerDestino setMarkerTypeLocal "hd_end";
 _markerDestino setMarkerColor "ColorGreen";
 
 
