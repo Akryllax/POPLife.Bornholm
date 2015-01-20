@@ -1,0 +1,12 @@
+enableDebugConsole = 1;
+disabledAI = true;
+
+class CfgFunctions
+{
+	#include "Functions.h"
+};
+
+class RscTitles
+{
+	
+};
