@@ -17896,7 +17896,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=239;
+		items=243;
 		class Item0
 		{
 			position[]={79.200729,0.043178752,30.899254};
@@ -18039,9 +18039,8 @@ class Mission
 		{
 			position[]={9188.2607,14.383561,21670.799};
 			name="Rebelop";
-			text="Rebel Outpost";
-			type="mil_triangle";
-			colorName="Color1_FD_F";
+			text="Campamento rebelde";
+			type="flag_CSAT";
 		};
 		class Item20
 		{
@@ -18055,7 +18054,7 @@ class Mission
 		{
 			position[]={3763.6846,34.367668,12372.792};
 			name="civ_truck_shop1";
-			text="Truck Shop";
+			text="Tienda de camiones";
 			type="c_car";
 			colorName="ColorBlue";
 		};
@@ -18063,9 +18062,9 @@ class Mission
 		{
 			position[]={6263.5244,43,16265.374};
 			name="OilP";
-			text="Oil Processing";
-			type="mil_box";
-			colorName="ColorBrown";
+			text="Procesar aceite";
+			type="mil_end";
+			colorName="ColorBlue";
 		};
 		class Item23
 		{
@@ -18079,9 +18078,9 @@ class Mission
 		{
 			position[]={8090.8218,77.531647,22620.234};
 			name="sand_1";
-			text="Sand Mine";
-			type="mil_triangle";
-			colorName="ColorBrown";
+			text="Mina de sal";
+			type="mil_circle";
+			colorName="ColorBlue";
 		};
 		class Item25
 		{
@@ -18314,7 +18313,7 @@ class Mission
 		{
 			position[]={4563.9795,262.76147,15414.913};
 			name="7News_1";
-			text="Channel 7 News";
+			text="TVE";
 			type="loc_Transmitter";
 			colorName="ColorWhite";
 		};
@@ -18372,9 +18371,9 @@ class Mission
 		{
 			position[]={3492.7932,19.49818,14145.842};
 			name="Dealer_1";
-			text="Drug Dealer";
-			type="mil_dot";
-			colorName="ColorOrange";
+			text="Camello";
+			type="b_unknown";
+			colorName="ColorBlue";
 		};
 		class Item62
 		{
@@ -18639,9 +18638,9 @@ class Mission
 		{
 			position[]={9757.7891,231.07008,19445.281};
 			name="oil_1";
-			text="Oil Field";
-			type="mil_triangle";
-			colorName="ColorBrown";
+			text="Aceite industrial";
+			type="mil_circle";
+			colorName="ColorBlue";
 		};
 		class Item94
 		{
@@ -18884,9 +18883,9 @@ class Mission
 		{
 			position[]={5188.1885,217.79607,20872.66};
 			name="cocaine_1";
-			text="Cocaine Field";
-			type="mil_dot";
-			colorName="Color1_FD_F";
+			text="Campo de cocaina";
+			type="mil_circle";
+			colorName="ColorBlue";
 		};
 		class Item126
 		{
@@ -18927,26 +18926,26 @@ class Mission
 		{
 			position[]={4928.9746,16.186176,14576.784};
 			name="oil_trader_3";
-			text="Glass Trader";
+			text="Comprador de aceite industrial";
 			type="b_unknown";
-			colorName="ColorOrange";
+			colorName="ColorBlue";
 		};
 		class Item131
 		{
 			position[]={5327.8848,22.266685,14476.616};
 			name="oil_trader_4";
-			text="Iron / Copper Trader";
+			text="Comprador de metales";
 			type="b_unknown";
-			colorName="ColorOrange";
+			colorName="ColorBlue";
 			angle=-0.60203898;
 		};
 		class Item132
 		{
 			position[]={5379.1855,77.380905,17922.482};
 			name="dimond_1_1";
-			text="Sand Processing";
-			type="mil_triangle";
-			colorName="ColorBrown";
+			text="Procesar diamantes";
+			type="mil_end";
+			colorName="ColorBlue";
 			angle=-80.305901;
 		};
 		class Item133
@@ -19566,9 +19565,9 @@ class Mission
 		{
 			position[]={4885.7808,17.059162,14418.125};
 			name="gang_area_2";
-			text="Gang Hideout 2";
+			text="Guardia de banda 2";
 			type="hd_warning";
-			colorName="ColorRed";
+			colorName="ColorEAST";
 			angle=-358.09299;
 		};
 		class Item212
@@ -19584,10 +19583,10 @@ class Mission
 		{
 			position[]={3307.8906,12.716581,14142.727};
 			name="turle_dealer_1";
-			text="Turtle Dealer";
-			type="mil_dot";
-			colorName="ColorRed";
-			angle=77.713181;
+			text="Comprador de conchas de tortuga";
+			type="b_unknown";
+			colorName="ColorBlue";
+			angle=77.713203;
 		};
 		class Item214
 		{
@@ -19687,7 +19686,7 @@ class Mission
 		{
 			position[]={4563.5308,262.76279,15414.373};
 			name="7News";
-			text="Channel 7 News";
+			text="TVE";
 			type="loc_Transmitter";
 			colorName="ColorWhite";
 		};
@@ -19801,6 +19800,35 @@ class Mission
 			position[]={16804.834,23.916464,12661.712};
 			name="spawn_merc_pygros";
 			type="Empty";
+		};
+		class Item239
+		{
+			position[]={2416.4756,-118.22123,13311.729};
+			name="petroleo_1";
+			text="Yacimiento petrolifero";
+			type="mil_objective";
+			colorName="ColorBlack";
+		};
+		class Item240
+		{
+			position[]={18784.162,-95.593262,21088.672};
+			name="petroleo_2";
+			text="Yacimiento petrolifero";
+			type="mil_objective";
+		};
+		class Item241
+		{
+			position[]={15342.394,-55.444817,14275.115};
+			name="petroleo_3";
+			text="Yacimiento petrolifero";
+			type="mil_objective";
+		};
+		class Item242
+		{
+			position[]={24757.666,-165.61501,14218.473};
+			name="petroleo_4";
+			text="Yacimiento petrolifero";
+			type="mil_objective";
 		};
 	};
 };
