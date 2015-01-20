@@ -2,7 +2,7 @@
 QUICK_timerTrabajoSeguridad = {
 
 _time = 60*60;
-_metros_entregar = 5;
+_metros_entregar = 50;
 _pagar_jugador= "no";
 _marcador = _this select 0;
 _furgo = _this select 1;
@@ -31,7 +31,7 @@ while {_time > 0} do {
 	
 		//contar tiempo
 		_time = _time - 1;  
-		hintSilent format["Destino: %4 ha %3m \n Tiempo : %1 \n Distancia: %2m ", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metrosTotal,_destino];	
+		hintSilent format["Destino: %4 \n Tiempo : %1 \n Distancia: %2m ", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metrosTotal,_destino];	
 		sleep 1;
 		
 	};
@@ -40,7 +40,7 @@ while {_time > 0} do {
 
 		_pagar_jugador= "si";
 		_time = 0;
-		hint "Has llegado a tu destino, baja  ya puedes cobrar tu recompensa en la furgo";
+		
 	};
     		
 };//end while
@@ -59,6 +59,8 @@ if(_time < 1) then{
 	    //no has terminado el trabajo
 	     hint "No has entregado la furgoneta";
 	  };
+
+	  deleteMarker _marcador;
 
 	 
 
@@ -126,7 +128,7 @@ _scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrab
 //////////////////////////////////////////////////////////////
 // EMPIEZA TODO AQUI LO DE ARRIBA SON FUNCIONES!!!!
 
-//cursorTarget addAction["Tranporte de Furgoneta 35000$ - Ganancia: 150000$",QUICK_fnc_seguridadPrivada];
+//cursorTarget addAction["Tranporte de Furgoneta 350000$ - Ganancia: 150000$",QUICK_fnc_seguridadPrivada];
 //////////////////////////////////////////////////////////
 
 private["_coche"];
@@ -158,4 +160,3 @@ hint "";
 
 
 };
-

@@ -27,13 +27,13 @@ if(_zone == "") exitWith {
 
 //Get the resource that will be gathered from the zone name...
 switch(true) do {
-	case (_zone in ["extraer_petrolio_1","extraer_petrolio_2","extraer_petrolio_3","extraer_petrolio_4"]): {
+	case (_zone in ["extraer_petroleo_1","extraer_petroleo_2","extraer_petroleo_3","extraer_petroleo_4"]): {
 	hint "Extrayendo petroleo";
     sleep 5;
 
 	_veh_data = life_trunk_vehicle getVariable ["Trunk",[[],0]];
     _inv = _veh_data select 0;
-    _ctrl = "petroleo";
+    _ctrl = "cocainep";
    
 	_index = [_ctrl,_inv] call TON_fnc_index;
 	if(_index == -1) then
@@ -50,20 +50,11 @@ switch(true) do {
 	[life_trunk_vehicle] call life_fnc_vehInventory;
 
 
-	hint "Petroleo extraido, espera 30s hasta que se enfrian las maquinas.";
+	hint "Petroleo extraido, espera 30s hasta que se enfrien las maquinas.";
 	sleep 30;
 	_furgo addAction["Extraer Petroleo", QUICK_fnc_extraerPetroleo,_furgo];
 
 };
 	
 	default {hint "No hay petroleo cerca";};
-};
-
-
-
-
-
-
-
-
 };
