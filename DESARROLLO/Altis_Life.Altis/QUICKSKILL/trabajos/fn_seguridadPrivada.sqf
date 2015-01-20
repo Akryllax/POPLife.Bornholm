@@ -106,18 +106,12 @@ life_vehicles pushBack _coche;
 
 
 
-//encontrar punto ke ste a mas de 6 km
-_metrosTotales = 0;
-while{_metrosTotales < 6000} do {
+//encontrar atm cercana ma o menos
 
 _destinoRandom = "dp" +  str (round random 26 );
 _destino =_destinoRandom;
- _metrosTotales =  _coche distance getMarkerPos _destino;
 
-};
-
-
-
+ 				
 _markerDestino = createMarkerLocal ["MarkerTrabajoSeguridad", getMarkerPos _destino ];
 _markerDestino setMarkerShapeLocal "ICON"; 
 _markerDestino setMarkerTypeLocal "hd_end";
@@ -134,7 +128,7 @@ _scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrab
 //////////////////////////////////////////////////////////////
 // EMPIEZA TODO AQUI LO DE ARRIBA SON FUNCIONES!!!!
 
-//cursorTarget addAction["Tranporte de Furgoneta 350000$ - Ganancia: 150000$",QUICK_fnc_seguridadPrivada];
+//cursorTarget addAction["Tranporte de Furgoneta 35000$ - Ganancia: 150000$",QUICK_fnc_seguridadPrivada];
 //////////////////////////////////////////////////////////
 
 private["_coche"];
