@@ -106,12 +106,18 @@ life_vehicles pushBack _coche;
 
 
 
-//encontrar atm cercana ma o menos
+//encontrar punto ke ste a mas de 6 km
+_metrosTotales = 0;
+while(_metrosTotales < 6000)do {
 
 _destinoRandom = "dp" +  str (round random 26 );
 _destino =_destinoRandom;
+ _metrosTotales =  _coche distance getMarkerPos _destino;
 
- 				
+};
+
+
+
 _markerDestino = createMarkerLocal ["MarkerTrabajoSeguridad", getMarkerPos _destino ];
 _markerDestino setMarkerShapeLocal "ICON"; 
 _markerDestino setMarkerTypeLocal "hd_end";
