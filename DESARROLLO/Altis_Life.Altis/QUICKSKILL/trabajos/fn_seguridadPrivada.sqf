@@ -108,7 +108,7 @@ life_vehicles pushBack _coche;
 
 //encontrar punto ke ste a mas de 6 km
 _metrosTotales = 0;
-while(_metrosTotales < 6000)do {
+while{_metrosTotales < 6000} do {
 
 _destinoRandom = "dp" +  str (round random 26 );
 _destino =_destinoRandom;
