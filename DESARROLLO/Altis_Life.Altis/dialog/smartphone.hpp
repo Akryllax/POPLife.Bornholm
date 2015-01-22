@@ -389,7 +389,7 @@ class Life_smartphone_notruf {
 			idc = 888901;
 			text = "$STR_CELL_CopMSGAll";
 			colorBackground[] = {0.584, 0.086, 0.086,1.0};
-			onButtonClick = "[8,-1,(ctrlText 888894)] call life_fnc_newMsg;";
+			onButtonClick = "[9,-1,(ctrlText 888894)] call life_fnc_newMsg;";
 			
 			x = 0.95;
 			y = 0.30;
