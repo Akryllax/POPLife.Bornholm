@@ -11,7 +11,7 @@ _furgo =[_this,3,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _furgo) exitWith {hint "Barco is null :("}; //if not the thief get bent
 
 
-_resourceZones = ["petroleo_1","petroleo1"];
+_resourceZones = ["petroleo_1","petroleo_2","petroleo_3","petroleo_4"];
 _zone = "";
 
 

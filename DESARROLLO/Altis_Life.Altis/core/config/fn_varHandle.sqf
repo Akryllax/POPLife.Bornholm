@@ -89,6 +89,7 @@ switch (_mode) do
             //trabajos
             case "metilamina":{"life_inv_metilamina"};
             case "meta":{"life_inv_meta"};
+            case  "petroleo":{"life_inv_petroleo"};
             //items quick
             case "gpsEspia": {"life_inv_gpsEspia"};
 			case "semillasMaria": {"life_inv_semillasMaria"};
@@ -177,6 +178,7 @@ switch (_mode) do
             //trabajos
             case "life_inv_metilamina":{"metilamina"};
             case "life_inv_meta":{"meta"};
+            case  "life_inv_petroleo":{"petroleo"};
             //items quick
             case "life_inv_gpsEspia":{"gpsEspia"};	
 			case "life_inv_semillasMaria":{"semillasMaria"};

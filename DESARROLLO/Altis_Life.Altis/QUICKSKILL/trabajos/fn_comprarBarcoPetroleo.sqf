@@ -21,7 +21,7 @@ _coche = "C_Boat_Civil_01_rescue_F" createVehicle position _vendedor;
 life_vehicles pushBack _coche;
 [[_coche,"vehicle_info_owners",[[getPlayerUID _unit,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 
-_coche addAction["Extarer Petroleo", QUICK_fnc_extraerPetroleo,_coche];
+_coche addAction["Extraer Petroleo", QUICK_fnc_extraerPetroleo,_coche];
 
 
 

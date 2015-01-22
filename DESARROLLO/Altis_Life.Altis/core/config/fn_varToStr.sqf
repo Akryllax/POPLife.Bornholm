@@ -84,6 +84,8 @@ switch (_var) do
      //trabajos
      case "life_inv_metilamina":{"Metilamina"};
      case "life_inv_meta":{"Meta"};
+     case "life_inv_petroleo":{"Petroleo"};
+
      //objetos espia
 	case "life_inv_gpsEspia": { ("GPS espia") };
 	//semillas
