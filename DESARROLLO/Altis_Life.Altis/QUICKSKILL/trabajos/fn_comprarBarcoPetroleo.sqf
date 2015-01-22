@@ -1,4 +1,4 @@
-///comprar camion pa hacer drogas!! by quickskill para plata o plomo
+///comprar barco para petroleo!! by quickskill para plata o plomo
 waitUntil {!isNull player};
 private["_coche"];
 _precio = 50000;
