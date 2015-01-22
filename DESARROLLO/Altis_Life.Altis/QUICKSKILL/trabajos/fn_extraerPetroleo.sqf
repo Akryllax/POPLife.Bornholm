@@ -50,8 +50,8 @@ switch(true) do {
 	[life_trunk_vehicle] call life_fnc_vehInventory;
 
 
-	hint "Petroleo extraido, espera 30s hasta que se enfrien las maquinas.";
-	sleep 30;
+	hint "Petroleo extraido, espera 10s hasta que se enfrien las maquinas.";
+	sleep 10;
 	_furgo addAction["Extraer Petroleo", QUICK_fnc_extraerPetroleo,_furgo];
 
 };

@@ -1,5 +1,5 @@
 ////////////////FUNCIONES NIINJA DE QUICK NO INTENTES ENTENDERLO ///////////////////////////
-QUICK_timerTrabajoSeguridad = {
+QUICK_timerTrabajoTransportarDrogaMar = {
 
 _time = 60*60;
 _metros_entregar = 50;
@@ -26,6 +26,24 @@ while {_time > 0} do {
 			_time = 0;
 		};
 
+	//avisar a la poli despues de 2 minutos
+	
+	if(_time == 60*8) then{
+		//havisar al jugador;
+		hint "La policía te ha detectado!! Ten cuidado!!";
+		//enviar mensaje a la poli
+	[[1,format["El radar maritimo a detectado una lancha a gran velocidad con drogas a bordo! Se dirigen a %1.", _destino]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	//crear marcador
+	_pos = position _furgo;
+	_markerID = format["marker_%1",floor(random 1000)];
+_marker = createMarker [ _markerID, _pos];
+_marker setMarkerColor "ColorRed";
+_marker setMarkerText "!Lancha Detectada!";
+_marker setMarkerType "mil_warning";
+	sleep 25;
+	deleteMarker _marker;
+    };
+
 	//mientrar si esta cerca del edificio
 	if(_metros > _metros_entregar) then{		
 	
@@ -50,14 +68,14 @@ if(_time < 1) then{
 
 	  if (_pagar_jugador=="si" && alive _jugador ) then {
 	    // agregar action de cobrar la pasta y borrar el furgon
-	     hint "Ya puedes entregar la furgoneta";
-	    _furgo addAction["Entregar furgoneta",QUICK_pagarTrabajoSeguridad,_furgo];	
+	     hint "Ya puedes entregar la lancha";
+	    _furgo addAction["Entregar lancha",QUICK_pagarTrabajoTransportarDrogaMar,_furgo];	
 	  };
 
 	   if (_pagar_jugador=="no" && alive _jugador ) then {
 	    // agregar action de cobrar la pasta y borrar el furgon
 	    //no has terminado el trabajo
-	     hint "No has entregado la furgoneta";
+	     hint "No has entregado la lancha";
 	  };
 
 	  deleteMarker _marcador;
@@ -71,7 +89,7 @@ if(_time < 1) then{
 
 };//end funcion timer
 
-QUICK_pagarTrabajoSeguridad = {
+QUICK_pagarTrabajoTransportarDrogaMar = {
 
 _gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _caller =[_this,1,Objnull,[Objnull]] call BIS_fnc_param;
@@ -82,9 +100,9 @@ _gen removeAction _id;
 _furgo = _this select 3;
 
 //pagar al jugador
-life_cash = life_cash +500000;
+life_cash = life_cash +500000+350000;
 //hint
-hint "Has cobrado 500000$ por tu trabajo";
+hint "Has cobrado 850000$ por tu trabajo";
 //borrar
 deleteVehicle _furgo;
 
@@ -93,7 +111,7 @@ deleteVehicle _furgo;
 };
 
 
-QUICK_generarTrabajoSeguridad = {
+QUICK_generarTrabajoTransportarDrogaMar = {
 	
 
 _coche = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
@@ -108,18 +126,18 @@ life_vehicles pushBack _coche;
 
 //encontrar atm cercana ma o menos
 
-_destinoRandom = "dp" +  str (round random 26 );
+_destinoRandom = "desembarcoDrogas_" +  str (round random 4 );
 _destino =_destinoRandom;
 
  				
-_markerDestino = createMarkerLocal ["MarkerTrabajoSeguridad", getMarkerPos _destino ];
+_markerDestino = createMarkerLocal ["MarkerTrabajoTransportarDrogaMar", getMarkerPos _destino ];
 _markerDestino setMarkerShapeLocal "ICON"; 
-_markerDestino setMarkerTypeLocal "mil_warning";
+_markerDestino setMarkerTypeLocal "Flag";
 _markerDestino setMarkerColor "ColorGreen";
 
 
 	 		
-_scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrabajoSeguridad;
+_scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrabajoTransportarDrogaMar;
 
 
 };
@@ -128,11 +146,11 @@ _scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrab
 //////////////////////////////////////////////////////////////
 // EMPIEZA TODO AQUI LO DE ARRIBA SON FUNCIONES!!!!
 
-//cursorTarget addAction["Tranporte de Furgoneta 35000$ - Ganancia: 150000$",QUICK_fnc_seguridadPrivada];
+//cursorTarget addAction["Tranportr Droga para el Narco 500000$ - Ganancia: 350000$",QUICK_fnc_TransportarDrogaMar];
 //////////////////////////////////////////////////////////
 
 private["_coche"];
-_precio = 350000;
+_precio = 500000;
 _jugador = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 _gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 
@@ -149,9 +167,11 @@ life_cash = life_cash-_precio;
 _gen = _this select 0;
 _jugador = _this select 1;
 
-_coche = "C_Van_01_box_F" createVehicle position _gen;
+_coche = "C_Boat_Civil_01_rescue_F" createVehicle position _gen;
 
-[_coche,_jugador] spawn QUICK_generarTrabajoSeguridad;
+//poner saquitos de decoracion
+
+[_coche,_jugador] spawn QUICK_generarTrabajoTransportarDrogaMar;
 
 hint "Cuidado si no llegas a tu destino no te pagarameos nada!!";
 sleep 3;
