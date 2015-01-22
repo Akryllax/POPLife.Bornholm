@@ -208,7 +208,8 @@ life_inv_items =
 	"life_inv_maiz",
 	//trabajos
 	"life_inv_metilamina",
-	"life_inv_meta"
+	"life_inv_meta",
+	"life_inv_petroleo"
 
 ];
 
@@ -314,7 +315,8 @@ sell_array =
 	["tomates",500],
 	["maiz",1000],
 	//trabajos
-	["meta",50000]
+	["meta",50000],
+	["petroleo","5000"]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -369,7 +371,8 @@ buy_array =
 	["maiz",1500],
 
 	//trabajos
-	["meta",50000]
+	["meta",50000],
+	["petroleo","5000"]
 
 ];
 __CONST__(buy_array,buy_array);
