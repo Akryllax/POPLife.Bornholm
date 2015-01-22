@@ -5,7 +5,7 @@
 	Created for www.altisliferpg.com
 */
 
-//	#define __GETC__(var) (call var)
+	#define __GETC__(var) (call var)
 
 
 	if(__GETC__(life_coplevel) > 0) then {
