@@ -16,8 +16,8 @@ switch (_shop) do
 	case "wongs": {["Venta de tortugas",["turtlesoup","turtle"]]};
 	case "coffee": {["Tienda nexpresso",["coffee","donuts"]]};
 	case "heroin": {["Camello",["cocainep","heroinp","marijuana","meta","metilamina"]]};
-	case "oil": {["Comprador de aceite",["oilp","pickaxe","fuelF"]]};
-	case "fishmarket": {["Pescaderia de Altis",["salema","ornate","mackerel","mullet","tuna","catshark","petroleo"]]};
+	case "oil": {["Comprador de aceite",["oilp","pickaxe","fuelF","petroleo"]]};
+	case "fishmarket": {["Pescaderia de Altis",["salema","ornate","mackerel","mullet","tuna","catshark"]]};
 	case "glass": {["Tienda de vidrio",["glass"]]};
 	case "iron": {["Tienda de metales",["iron_r","copper_r"]]};
 	case "diamond": {["Tienda de diamantes",["diamond","diamondc"]]};
