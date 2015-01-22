@@ -3369,7 +3369,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="merc_1";
+					text="mercenario_1";
 					description="MERC";
 				};
 				class Item1
@@ -3380,7 +3380,7 @@ class Mission
 					vehicle="O_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="merc_2";
+					text="mercenario_2";
 					description="MERC";
 				};
 				class Item2
@@ -3391,7 +3391,7 @@ class Mission
 					vehicle="O_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="merc_3";
+					text="mercenario_3";
 					description="MERC";
 				};
 				class Item3
@@ -3402,7 +3402,7 @@ class Mission
 					vehicle="O_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="merc_4";
+					text="mercenario_4";
 					description="MERC";
 				};
 			};
@@ -17896,7 +17896,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=243;
+		items=247;
 		class Item0
 		{
 			position[]={79.200729,0.043178752,30.899254};
@@ -19829,6 +19829,38 @@ class Mission
 			name="petroleo_4";
 			text="Yacimiento petrolifero";
 			type="mil_objective";
+		};
+		class Item243
+		{
+			position[]={2799.7815,-0.14998136,11870.801};
+			name="desembarcoDrogas_1";
+			text="Desembargo de Droga";
+			type="mil_objective";
+			colorName="ColorRed";
+		};
+		class Item244
+		{
+			position[]={7291.4902,0.072399013,10804.129};
+			name="desembarcoDrogas_2";
+			text="Desembargo de Droga";
+			type="mil_objective";
+			colorName="ColorRed";
+		};
+		class Item245
+		{
+			position[]={16229.313,0.12877063,9834.0859};
+			name="desembarcoDrogas_3";
+			text="Desembargo de Droga";
+			type="mil_objective";
+			colorName="ColorRed";
+		};
+		class Item246
+		{
+			position[]={20675.176,0.00079044519,19545.502};
+			name="desembarcoDrogas_4";
+			text="Desembargo de Droga";
+			type="mil_objective";
+			colorName="ColorRed";
 		};
 	};
 };
