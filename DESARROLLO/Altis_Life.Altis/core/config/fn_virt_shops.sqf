@@ -10,19 +10,19 @@ _shop = _this select 0;
 
 switch (_shop) do
 {
-	case "market": {["Altis Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","storagesmall","storagebig","semillasMaria","semillasCoca","semillasMaiz","semillasTomate","tomates","maiz"]]};
-	case "rebel": {["Rebel Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","esposas","llaveesposas"]]};
-	case "gang": {["Gang Market", ["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","blastingcharge","boltcutter"]]};
-	case "wongs": {["Wong's Food Cart",["turtlesoup","turtle"]]};
-	case "coffee": {["Stratis Coffee Club",["coffee","donuts"]]};
-	case "heroin": {["Drug Dealer",["cocainep","heroinp","marijuana","meta"]]};
-	case "oil": {["Oil Trader",["oilp","pickaxe","fuelF"]]};
-	case "fishmarket": {["Altis Fish Market",["salema","ornate","mackerel","mullet","tuna","catshark"]]};
-	case "glass": {["Altis Glass Dealer",["glass"]]};
-	case "iron": {["Altis Industrial Trader",["iron_r","copper_r"]]};
-	case "diamond": {["Diamond Dealer",["diamond","diamondc"]]};
-	case "salt": {["Salt Dealer",["salt_r"]]};
-	case "cop": {["Cop Item Shop",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","defusekit"]]};
-	case "cement": {["Cement Dealer",["cement"]]};
-	case "gold": {["Gold Buyer",["goldbar"]]};
+	case "market": {["Mercado de Altis",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","storagesmall","storagebig","semillasMaria","semillasCoca","semillasMaiz","semillasTomate","tomates","maiz"]]};
+	case "rebel": {["Mercado rebelde",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","esposas","llaveesposas"]]};
+	case "gang": {["Mercado de banda", ["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","blastingcharge","boltcutter"]]};
+	case "wongs": {["Venta de tortugas",["turtlesoup","turtle"]]};
+	case "coffee": {["Tienda nexpresso",["coffee","donuts"]]};
+	case "heroin": {["Camello",["cocainep","heroinp","marijuana","meta"]]};
+	case "oil": {["Comprador de aceite",["oilp","pickaxe","fuelF"]]};
+	case "fishmarket": {["Pescaderia de Altis",["salema","ornate","mackerel","mullet","tuna","catshark"]]};
+	case "glass": {["Tienda de vidrio",["glass"]]};
+	case "iron": {["Tienda de metales",["iron_r","copper_r"]]};
+	case "diamond": {["Tienda de diamantes",["diamond","diamondc"]]};
+	case "salt": {["Tienda de sal",["salt_r"]]};
+	case "cop": {["Tienda de policia",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","defusekit"]]};
+	case "cement": {["Tienda de cemento",["cement"]]};
+	case "gold": {["Comprador de oro",["goldbar"]]};
 };

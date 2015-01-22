@@ -20,7 +20,7 @@ switch (_shop) do
 {
 	case "reb":
 	{
-		ctrlSetText[2505,"Altis Rebel Shop"];
+		ctrlSetText[2505,"Tienda de la mafia"];
 		ctrlShow[2503,false];
 		ctrlShow[2513,false];
 		ctrlShow[2514,false];
@@ -34,7 +34,7 @@ switch (_shop) do
 	
 	case "gun":
 	{
-		ctrlSetText[2505,"Altis Gun Store"];
+		ctrlSetText[2505,"Armeria"];
 		ctrlShow[2503,false];
 		ctrlShow[2513,false];
 		ctrlShow[2514,false];
@@ -42,7 +42,7 @@ switch (_shop) do
 	
 	case "gang":
 	{
-		ctrlSetText[2505,"Gang Shop"];
+		ctrlSetText[2505,"Tienda de banda"];
 		ctrlShow[2503,false];
 		ctrlShow[2513,false];
 		ctrlShow[2514,false];
@@ -50,7 +50,7 @@ switch (_shop) do
 	
 	case "dive":
 	{
-		ctrlSetText[2505,"Altis Diving Shop"];
+		ctrlSetText[2505,"Tienda de buceo"];
 		ctrlShow[2503,false];
 		ctrlShow[2510,false];
 		ctrlShow[2511,false];
@@ -59,7 +59,7 @@ switch (_shop) do
 	
 	case "donator":
 	{
-		ctrlSetText[2505,"Donator Shop"];
+		ctrlSetText[2505,"Tienda de donadores"];
 	};
 	
 	case "sergeant":
@@ -70,7 +70,7 @@ switch (_shop) do
 	
 	case "gen":
 	{
-		ctrlSetText[2505,"Altis General Store"];
+		ctrlSetText[2505,"Tienda de Altis"];
 		ctrlShow[2503,false];
 	};
 	
@@ -82,7 +82,7 @@ switch (_shop) do
 	
 	case "admin":
 	{
-		ctrlSetText[2505,"Admin Shop"];
+		ctrlSetText[2505,"Tienda admin"];
 	};
 };
 
