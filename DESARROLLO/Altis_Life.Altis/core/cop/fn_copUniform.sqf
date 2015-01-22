@@ -36,7 +36,8 @@
 				player setObjectTextureGlobal [0, "textures\COP\policia.jpg"]; // Municipal
 			};
 			case 3: {
-				player setObjectTextureGlobal [0, "textures\COP\patrullero.jpg"]; // Nacional
+				player setObjectTextureGlobal [0, "textures\COP\patrullero.jpg"];// Nacional
+			};
 			case 4: {
 				player setObjectTextureGlobal [0, "textures\COP\patrullero.jpg"]; // Nacional 2
 			};
