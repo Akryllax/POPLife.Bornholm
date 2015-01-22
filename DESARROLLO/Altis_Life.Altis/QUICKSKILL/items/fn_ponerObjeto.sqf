@@ -24,14 +24,15 @@ if(([false,_type,1] call life_fnc_handleInv)) then {
 		case "defensaChasisCoche": {" Land_Wreck_Skodovka_F"};
 		case "contenedorBasura": {"Land_GarbageContainer_open_F"};
 	};
-
-	_object = createVehicle [_name, [0,0,0], [], 0, "NONE"];  
+     _name = "Land_BagFence_Long_F";
+	_object = createVehicle [_name, [0,0,0], [], 0, "NONE"]; 
+	_object enableSimulation false;
 	_object attachTo[player,[0,2,1]];
 	_object setVariable["item","objectDeployed",true];
 
 	life_action_objectDeploy = player addAction["Poner Objeto - Durara 10 minutos!",{if(!isNull life_object) then {detach life_object; life_object = ObjNull;}; player removeAction life_action_objectDeploy; life_action_objectDeploy = nil;},"",999,false,false,"",'!isNull life_object'];
 	life_object = _object;
-	waitUntil {isNull life_object};
+	
 	if(!isNil "life_action_objectDeploy") then {player removeAction life_action_objectDeploy;};
 	if(isNull _object) exitWith {life_object = ObjNull;};
 	_object setPos [(getPos _object select 0),(getPos _object select 1),0];

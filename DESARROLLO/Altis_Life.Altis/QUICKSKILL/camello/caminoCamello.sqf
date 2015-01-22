@@ -19,5 +19,3 @@ ruta[_RandomRuta] setWaypointSpeed "FULL";
 waitUntil {(camello distance (_marcador[_RandomRuta])) < 30};
 sleep (60 * 15);
 execVM "QUICKSKILL\camello\caminoCamello.sqf";
-
-	
