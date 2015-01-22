@@ -46,6 +46,29 @@ if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 
 switch (_code) do
 {
+
+
+		//role mode con c
+	case 46:
+	{
+
+		if(!life_action_inUse) then {
+
+			switch (playerSide) do 
+			{
+
+			case west: {if(!visibleMap) then {  [] spawn QUICK_fnc_roleModeCops;};};
+			case independent: {if(!visibleMap) then {                           }};
+			case civilian: {if(!visibleMap) then {[] spawn QUICK_fnc_roleMode;};};
+			};
+            
+            
+		};
+		
+		
+	};
+
+	
 	//Space key for Jumping
 	case 57:
 	{

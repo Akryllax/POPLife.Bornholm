@@ -11,7 +11,7 @@ _furgo =[_this,3,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _furgo) exitWith {hint "Barco is null :("}; //if not the thief get bent
 
 
-_resourceZones = ["extraer_petrolio_1","extraer_petrolio_2","extraer_petrolio_3","extraer_petrolio_4"];
+_resourceZones = ["petroleo_1","petroleo1"];
 _zone = "";
 
 
@@ -27,7 +27,7 @@ if(_zone == "") exitWith {
 
 //Get the resource that will be gathered from the zone name...
 switch(true) do {
-	case (_zone in ["extraer_petroleo_1","extraer_petroleo_2","extraer_petroleo_3","extraer_petroleo_4"]): {
+	case (_zone in ["petroleo_1","petroleo1"]): {
 	hint "Extrayendo petroleo";
     sleep 5;
 
