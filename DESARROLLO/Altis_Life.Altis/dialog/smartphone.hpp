@@ -196,7 +196,7 @@ class Life_smartphone_schreiben
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
-			w = 1;
+			w = 0.6;
 			h = (1 / 25);
 		};
 		
@@ -205,7 +205,7 @@ class Life_smartphone_schreiben
 			idc = -1;
 			x = 0.1;
 			y = 0.2 + (11 / 250);
-			w = 1;
+			w = 0.6;
 			h = 0.1;
 		};
 		
@@ -217,7 +217,7 @@ class Life_smartphone_schreiben
 			text = "$STR_SMARTPHONE_NACHRICHTTITLE";
 			x = 0.1;
 			y = 0.2;
-			w = 1.5;
+			w = 0.95;
 			h = (1 / 25);
 		};
 		
