@@ -31,6 +31,9 @@ if(_zone == "") exitWith {
 switch(true) do {
 	case (_zone in ["petroleo_1","petroleo_2","petroleo_3","petroleo_4"]): {
 
+	//quitar action
+	 _gen removeAction _id;
+
 	[_furgo]spawn {
 	_furgo = _this select 0;
 	hint "Extrayendo petroleo";
@@ -53,7 +56,7 @@ switch(true) do {
 		_inv set[_index,[_ctrl,_val + _num]];
 	};
 	
-	life_trunk_vehicle setVariable["Trunk",[_inv,(_veh_data select 1) + 10],true];
+	life_trunk_vehicle setVariable["Trunk",[_inv,(_veh_data select 1) + 1],true];
 	[life_trunk_vehicle] call life_fnc_vehInventory;
 
 
