@@ -7,6 +7,8 @@ _caller =[_this,1,Objnull,[Objnull]] call BIS_fnc_param;
  _id = _this select 2; 
 
 _furgo =[_this,3,Objnull,[Objnull]] call BIS_fnc_param;
+	//quitar action
+	 _gen removeAction _id;
 
 if(isNull _furgo) exitWith {hint "Barco is null :("}; //if not the thief get bent
 
@@ -24,6 +26,7 @@ if(_zone == "") exitWith {
 	
 	//no estas en una zona con petroleo
 	hint "No estas en una zona con petroleo";
+	_furgo addAction["Extraer Petroleo",QUICK_fnc_extraerPetroleo,_furgo];
 };
 
 //Get the resource that will be gathered from the zone name...
@@ -31,8 +34,7 @@ if(_zone == "") exitWith {
 switch(true) do {
 	case (_zone in ["petroleo_1","petroleo_2","petroleo_3","petroleo_4"]): {
 
-	//quitar action
-	 _gen removeAction _id;
+
 
 	[_furgo]spawn {
 	_furgo = _this select 0;
@@ -68,5 +70,5 @@ switch(true) do {
 
 };
 	
-	default {hint "No hay petroleo cerca";};
+	default {hint "No hay petroleo cerca";_furgo addAction["Extraer Petroleo",QUICK_fnc_extraerPetroleo,_furgo];};
 };
