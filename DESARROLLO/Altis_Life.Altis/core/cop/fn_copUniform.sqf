@@ -1,4 +1,3 @@
-#include <macro.h>
 /*
 	COP UNIFORM SCRIPT
 	Author: coldgas (http://altis.newhopeoutfit.de)
