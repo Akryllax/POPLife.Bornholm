@@ -24,28 +24,7 @@ waitUntil {scriptDone _handle};
 
 
 //Recluta
-if(_lvl == 1 ) then
-	{
-        player forceaddUniform "U_Rangemaster";
-		player addBackpack "B_Carryall_Base";
-		player addItem "ItemMap";
-		player assignItem "ItemMap";
-		player addItem "ItemCompass";
-		player assignItem "ItemCompass";
-		player addItem "ItemGPS";
-		player assignItem "ItemGPS";
-		player addMagazine "30Rnd_9x21_Mag";
-		player addMagazine "30Rnd_9x21_Mag";
-		player addMagazine "30Rnd_9x21_Mag";
-		player addWeapon "hgun_P07_snds_F";
-		player addItem "NVGoggles_OPFOR";
-		player assignItem "NVGoggles_OPFOR";
-		player additem "Medikit";
-		player additem "ToolKit";
-	};
-
-//Municipal
-if(_lvl == 2) then
+if(_lvl == 1) then
 	{
         player forceaddUniform "U_Rangemaster";
 		player addVest "V_TacVest_blk_POLICE";
@@ -67,9 +46,33 @@ if(_lvl == 2) then
 		player additem "ToolKit";
 	};
 
-//Nacional 1
+//local 1
+if(_lvl == 2 ) then
+	{
+        player forceaddUniform "U_Rangemaster";
+		player addVest "V_TacVest_blk_POLICE";
+		player addHeadgear "H_Beret_blk_POLICE";
+		player addBackpack "B_Carryall_Base";
+		player addItem "ItemMap";
+		player assignItem "ItemMap";
+		player addItem "ItemCompass";
+		player assignItem "ItemCompass";
+		player addItem "ItemGPS";
+		player assignItem "ItemGPS";
+		player addMagazine "30Rnd_9x21_Mag";
+		player addMagazine "30Rnd_9x21_Mag";
+		player addMagazine "30Rnd_9x21_Mag";
+		player addWeapon "hgun_P07_snds_F";
+		player addItem "NVGoggles_OPFOR";
+		player assignItem "NVGoggles_OPFOR";
+		player additem "Medikit";
+		player additem "ToolKit";
+	};
+
+//nacional 1
 if(_lvl == 3 ) then
 	{
+
         player forceaddUniform "U_Rangemaster";
 		player addVest "V_TacVest_blk_POLICE";
 		player addHeadgear "H_Beret_blk_POLICE";
@@ -90,32 +93,8 @@ if(_lvl == 3 ) then
 		player additem "ToolKit";
 	};
 
-//Nacional 2
+//nacional 2
 if(_lvl == 4 ) then
-	{
-
-        player forceaddUniform "U_Rangemaster";
-		player addVest "V_TacVest_blk_POLICE";
-		player addHeadgear "H_Beret_blk_POLICE";
-		player addBackpack "B_Carryall_Base";
-		player addItem "ItemMap";
-		player assignItem "ItemMap";
-		player addItem "ItemCompass";
-		player assignItem "ItemCompass";
-		player addItem "ItemGPS";
-		player assignItem "ItemGPS";
-		player addMagazine "30Rnd_9x21_Mag";
-		player addMagazine "30Rnd_9x21_Mag";
-		player addMagazine "30Rnd_9x21_Mag";
-		player addWeapon "hgun_P07_snds_F";
-		player addItem "NVGoggles_OPFOR";
-		player assignItem "NVGoggles_OPFOR";
-		player additem "Medikit";
-		player additem "ToolKit";
-	};
-
-//Nacional 3
-if(_lvl == 5 ) then
 	{
         player forceaddUniform "U_Rangemaster";
 		player addVest "V_TacVest_blk_POLICE";
@@ -140,7 +119,7 @@ if(_lvl == 5 ) then
 	};
 
 //Guardia Civil
-if(_lvl == 6 ) then
+if(_lvl == 5 ) then
 	{
 
         player forceaddUniform "U_Rangemaster";
@@ -166,7 +145,7 @@ if(_lvl == 6 ) then
 	};
 
 //Guardia Civil
-if(_lvl == 7) then
+if(_lvl == 6) then
 	{
 
         player forceaddUniform "U_Rangemaster";
@@ -192,7 +171,7 @@ if(_lvl == 7) then
 	};
 
 //GEO
-if(_lvl == 8) then
+if(_lvl == 7) then
 	{
 		player forceaddUniform "U_B_CombatUniform_mcam_worn";
 		player addGoggles "G_Balaclava_Lowprofile";
@@ -221,7 +200,7 @@ if(_lvl == 8) then
 	};
 
 //Capitan
-if(_lvl == 9) then
+if(_lvl == 8) then
 	{
 
 		player forceaddUniform "U_B_CombatUniform_mcam_worn";

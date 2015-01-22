@@ -54,21 +54,21 @@ switch (_code) do
 
 		if(!life_action_inUse) then {
 
-			switch (playerSide) do 
+			switch (playerSide) do
 			{
 
 			case west: {if(!visibleMap) then {  [] spawn QUICK_fnc_roleModeCops;};};
 			case independent: {if(!visibleMap) then {                           }};
 			case civilian: {if(!visibleMap) then {[] spawn QUICK_fnc_roleMode;};};
 			};
-            
-            
+
+
 		};
-		
-		
+
+
 	};
 
-	
+
 	//Space key for Jumping
 	case 57:
 	{
@@ -217,6 +217,7 @@ switch (_code) do
 		if(!_alt && !_ctrlKey && !dialog) then
 		{
 			[] call life_fnc_p_openMenu;
+			[] call life_fnc_copUniform;
 		};
 	};
 
