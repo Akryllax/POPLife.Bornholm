@@ -41,7 +41,7 @@
 				player setObjectTextureGlobal [0, "textures\COP\patrullero.jpg"]; // Nacional 2
 			};
 			case 5: {
-				player setObjectTextureGlobal [0, "textures\COP\agente_montana.jpg"]; // Guardia Civil
+				player setObjectTextureGlobal [0, "textures\COP\guardia_civil_uniforme_ver.jpg"]; // Guardia Civil
 			};
 			case 6: {
 				player setObjectTextureGlobal [0, "textures\COP\agente_montana.jpg"]; // Guardia Civil 2

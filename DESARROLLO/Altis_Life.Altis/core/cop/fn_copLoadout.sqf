@@ -148,7 +148,7 @@ if(_lvl == 5 ) then
 if(_lvl == 6) then
 	{
 
-        player forceaddUniform "U_Rangemaster";
+        player forceaddUniform "U_B_CombatUniform_mcam_worn";
 		removeHeadGear player;
 		player addHeadgear "H_Watchcap_blk";
 		player addVest "V_PlateCarrier1_blk";
