@@ -29,7 +29,7 @@ if(_zone == "") exitWith {
 //Get the resource that will be gathered from the zone name...
 
 switch(true) do {
-	case (_zone in ["petroleo_1","petroleo_2","petroleo3","petroleo4"]): {
+	case (_zone in ["petroleo_1","petroleo_2","petroleo_3","petroleo_4"]): {
 	hint "Extrayendo petroleo";
 	_num = 5;
 	_ctrl = "petroleo";
