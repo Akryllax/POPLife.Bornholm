@@ -30,6 +30,9 @@ if(_zone == "") exitWith {
 
 switch(true) do {
 	case (_zone in ["petroleo_1","petroleo_2","petroleo_3","petroleo_4"]): {
+
+	[_furgo]spawn {
+	_furgo = _this select 0;
 	hint "Extrayendo petroleo";
 	_num = 5;
 	_ctrl = "petroleo";
@@ -57,6 +60,8 @@ switch(true) do {
 	hint "Petroleo extraido, espera 10s hasta que se enfrien las maquinas";
 	sleep 10;
 	_furgo addAction["Extraer Petroleo",QUICK_fnc_extraerPetroleo,_furgo];
+
+	};
 
 };
 	
