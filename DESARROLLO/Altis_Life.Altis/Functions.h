@@ -473,26 +473,22 @@ class Quickskill
 		class drugsEffects {};
 	};
 
-     class ItemsCiviles
+     class Items
 	{
 		file = "QUICKSKILL\items";
 		class gpsEspia {};
 		class kitTortura{};
+		class bombaVelocidad{};
+		class ponerObjeto{};
+		class quitarObjeto{};
+
 	};
 	
-	class ItemsPolicia
+	class Espias
 	{
-		file = "QUICKSKILL\items\POLICIA";
-		class barrera {};
-		class packUpbarrera {};
-		class barricada {};
-		class packUpbarricada {};
-		class cono {};
-		class packupcono {};
-		class muro {};
-		class packupmuro {};
-		class valla {};
-		class packUpvalla {};
+		file = "QUICKSKILL\espias";
+		class darChivatazo{};
+		
 	};
 	
 	class RoleMode

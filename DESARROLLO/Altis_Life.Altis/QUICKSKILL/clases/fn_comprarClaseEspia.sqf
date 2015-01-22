@@ -24,8 +24,9 @@ removebackpack _unit;
 
 
 
-_unit addGoggles "G_Spectacles_Tinted"; 
-_unit addHeadgear "H_MilCap_mcamo";
+      player addHeadgear "H_Beret_Colonel";
+      player addGoggles "G_Balaclava_Lowprofile"; 
+
 _unit  addVest "V_TacVestCamo_khk";
 _unit  forceAddUniform "U_O_SpecopsUniform_blk";
 
@@ -55,7 +56,7 @@ _unit  assignItem "NVGoggles_OPFOR";
 _unit  addBackPack "B_Carryall_mcamo"; 
 mybackpack = unitBackpack _unit ;
 mybackpack addItemCargoGlobal ["Toolkit", 1]; 
-mybackpack addItemCargoGlobal ["FirstAidKit", 2];
+mybackpack addItemCargoGlobal ["FirstAidKit", 5];
 
 
 //solo para altis
@@ -63,6 +64,13 @@ mybackpack addItemCargoGlobal ["FirstAidKit", 2];
 [true,"tbacon",2] call life_fnc_handleInv;
 [true,"redgull",2] call life_fnc_handleInv;
 [true,"gpsEspia",2] call life_fnc_handleInv;
+[true,"kitTortura",4] call life_fnc_handleInv;
+[true,"esposas",3] call life_fnc_handleInv;
+[true,"llaveesposas",3] call life_fnc_handleInv;
+[true,"lockpick",3] call life_fnc_handleInv;
+
+//cargar skin globalmente
+[[_unit,0,"textures\TRAJES\blackwolf.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
 reload _unit;
-if(true) exitWith{hint "Clase Espia equipada";[] spawn { sleep 5;hint "";} };
+if(true) exitWith{hint "Clase Profesional equipada";[] spawn { sleep 5;hint "";} };
