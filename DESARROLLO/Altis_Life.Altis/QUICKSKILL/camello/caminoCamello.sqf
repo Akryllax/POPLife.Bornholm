@@ -1,5 +1,7 @@
 /*
-camello con rutas random el script de ica las rutas eran fijas... 
+camello con rutas random el script de ica tenia las rutas  fijas... 
+by ica
+edited by quickskill
 */
 sleep 5;
 ruta[0] = (group camello) addWaypoint [(getMarkerPos "camello1"), 0];

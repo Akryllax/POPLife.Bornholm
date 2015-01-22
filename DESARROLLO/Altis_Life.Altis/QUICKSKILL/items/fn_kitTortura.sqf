@@ -30,7 +30,6 @@ switch(_rand) do
 		_unit setDamage _damage;
 		
 
-		player say3D "punch";
 		_unit say3D "punch_break";
 	};
 	case 1:
@@ -46,7 +45,7 @@ switch(_rand) do
 		
 		_unit setDamage _damage;
 		
-				player say3D "punch";
+				
 		_unit say3D "punch_break";
 	};
 	case 2:
@@ -61,8 +60,7 @@ switch(_rand) do
 		if(_damage >= 1) then { _damage = 0.98; };
 		
 		_unit setDamage _damage;
-		player say3D "punch_break";
-		_unit say3D "hurt";
+		_unit say3D "punch_break";
 	};
 	case 3:
 	{
@@ -77,8 +75,7 @@ switch(_rand) do
 		
 		_unit setDamage _damage;
 		
-	  		player say3D "punch";
-		_unit say3D "punch_break";
+	  		_unit say3D "punch_break";
 	};
 	default
 	{
@@ -93,7 +90,6 @@ switch(_rand) do
 		
 		_unit setDamage _damage;
 		
-		player say3D "punch";
 		_unit say3D "punch_break";
 	};
 };

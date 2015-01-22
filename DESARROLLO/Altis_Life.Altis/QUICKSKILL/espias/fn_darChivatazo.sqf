@@ -1,6 +1,6 @@
 /*
 	Description:
-	Selects the player, then tells the bounty hunter where they are.
+	el chivato! script de un aleman editado por quick!!para plata o plomo
 */
 private["_display","_list","_uid"];
 disableSerialization;
@@ -9,7 +9,7 @@ _display = findDisplay 2400;
 _list = _display displayCtrl 2402;
 _data = lbData[2401,(lbCurSel 2401)];
 _data = call compile format["%1", _data];
-if(2500 > ALUK_bankedwonga) exitWith {hint "You do not have enough money in your bank to pay the civilian.";};
+if(25000 > life_cash) exitWith {hint "Si no tienes dinero no tienes informacion!";};
 if(isNil "_data") exitWith {};
 if(typeName _data != "ARRAY") exitWith {};
 if(count _data == 0) exitWith {};
@@ -27,6 +27,6 @@ _town_name = text _closesttown;
 _town_pos = position _closesttown;
 
 
-hint format["A civilian has saw %1 near %2. %2 is %3M away from you. You pay the civilain £2500 for the tip.",_player getVariable["realname",name _player], _town_name, round(player distance _town_pos)];
+hint format["Un civil ha visto a %1 cerca de  %2. %2 esta a %3M de ti.Has pagado  25000$ al chivato.",_player getVariable["realname",name _player], _town_name, round(player distance _town_pos)];
 
-ALUK_bankedwonga = ALUK_bankedwonga - 2500;
+life_cash = life_cash- 25000;
