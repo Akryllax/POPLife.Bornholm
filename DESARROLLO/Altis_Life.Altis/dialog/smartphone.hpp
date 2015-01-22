@@ -384,6 +384,18 @@ class Life_smartphone_notruf {
 			w = 0.2;
 			h = (1 / 25);
 		};
+		class CopMsgAll : life_RscButtonMenu 
+		{
+			idc = 888901;
+			text = "$STR_CELL_CopMSGAll";
+			colorBackground[] = {0.584, 0.086, 0.086,1.0};
+			onButtonClick = "[8,-1,(ctrlText 888894)] call life_fnc_newMsg;";
+			
+			x = 0.95;
+			y = 0.30;
+			w = 0.2;
+			h = (1 / 25);
+		};
 		
 		class CloseButton : Life_RscButtonMenu {
 			idc = -1;

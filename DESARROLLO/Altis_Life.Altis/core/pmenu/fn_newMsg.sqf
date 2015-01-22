@@ -128,7 +128,7 @@ switch(_type) do
 	{
 		if((call life_coplevel) < 1) exitWith {hint "No eres Poli!";};
 		if(_msg == "") exitWith {hint "Debe introducir un mensaje para enviar!";};
-		[[ObjNull,_msg,player,6],"GHB_fnc_handleMessages",false] spawn life_fnc_MP;
+		[[ObjNull,_msg,player,7],"GHB_fnc_handleMessages",false] spawn life_fnc_MP;
 		[[ObjNull,_msg,player,7],"TON_fnc_handleMessages",false] spawn life_fnc_MP;
 		hint format["Policia mensaje a TODOS: %1",_msg];
 		closeDialog 887890;
