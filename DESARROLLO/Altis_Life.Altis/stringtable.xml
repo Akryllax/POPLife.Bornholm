@@ -4457,7 +4457,7 @@
 			<Portuguese>Licença de Motorista</Portuguese>
 			<Spanish>Licencia de conducir</Spanish>
 		</Key>
-		<Key ID="STR_License_Pilot_Heli">
+		<Key ID="STR_License_Pilot">
 			<Original>Helicopter License</Original>
 			<English>Helicopter License</English>
 			<German>Pilotenschein</German>
