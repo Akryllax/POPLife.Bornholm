@@ -111,16 +111,26 @@ switch(_type) do
 		closeDialog 887890;
 	};
 	//to mercenaries
-	case 2:
+	case 8:
 	{
 		if(({side _x == east} count playableUnits) == 0) exitWith {hint format["No hay mercenarios conectados."];};
 		ctrlShow[888895,false];
 		if(_msg == "") exitWith {hint "Tienes que escribir un mensaje!";ctrlShow[888895,true];};
 		[[ObjNull,_msg,player,6],"GHB_fnc_handleMessages",false] spawn life_fnc_MP;
 		[[ObjNull,_msg,player,6],"TON_fnc_handleMessages",false] spawn life_fnc_MP;
-		_to = "la Policia";
+		_to = "Mercenarios";
 		hint format["Has mandado a %1 el mensaje: %2",_to,_msg];
 		ctrlShow[888895,true];
+		closeDialog 887890;
+	};
+	//copMsgAll
+	case 9:
+	{
+		if((call life_coplevel) < 1) exitWith {hint "No eres Poli!";};
+		if(_msg == "") exitWith {hint "Debe introducir un mensaje para enviar!";};
+		[[ObjNull,_msg,player,6],"GHB_fnc_handleMessages",false] spawn life_fnc_MP;
+		[[ObjNull,_msg,player,7],"TON_fnc_handleMessages",false] spawn life_fnc_MP;
+		hint format["Policia mensaje a TODOS: %1",_msg];
 		closeDialog 887890;
 	};
 	

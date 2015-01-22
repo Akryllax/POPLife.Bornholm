@@ -225,10 +225,23 @@ private[""_msg"",""_to""];
 	_to = ""Mercenarios"";
 	if(_msg == """") exitWith {hint ""Tienes que escribir un mensaje!"";ctrlShow[3023,true];};
 		
-	[[_msg,name player,6],""clientMessage"",merc,false] spawn life_fnc_MP;
+	[[_msg,name player,6],""TON_fnc_clientMessage"",east,false] spawn life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""Has mandado un mensaje a los mercenarios."",_to,_msg];
 	ctrlShow[3023,true];
+";
+//Cop To All
+TON_fnc_cell_copmsgall =
+compileFinal "
+	if(isServer) exitWith {};
+	if((call life_coplevel) < 1) exitWith {hint ""No eres policia!"";};
+	private[""_msg"",""_from""];
+	_msg = ctrlText 3003;
+	if(_msg == """") exitWith {hint ""Debes introducir un mensaje!"";};
+	
+	[[_msg,name player,7],""TON_fnc_clientMessage"",true,false] spawn life_fnc_MP;
+	[] call life_fnc_cellphone;
+	hint format[""Mensaje de policias a todos: %1"",_msg];
 ";
 
 publicVariable "TON_fnc_cell_textmsg";
@@ -238,6 +251,7 @@ publicVariable "TON_fnc_cell_adminmsg";
 publicVariable "TON_fnc_cell_adminmsgall";
 publicVariable "TON_fnc_cell_emsrequest";
 publicVariable "TON_fnc_cell_mercrequest"; 
+publicVariable "TON_fnc_cell_copmsgall";
 //Client Message
 /*
 	0 = private message
@@ -326,7 +340,21 @@ compileFinal "
 			hint parseText format [""<t color='#FFCC00'><t size='2'><t align='center'>Solicitud de mercenarios<br/><br/><t color='#33CC33'><t align='left'><t size='1'>Para: <t color='#ffffff'>Ti<br/><t color='#33CC33'>De: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%2"",_from,_msg];
 			
 			[""TextMessage"",[format[""Solicitud de mercenario de %1"",_from]]] call bis_fnc_showNotification;
-		}; 
+		};
+		
+		case 7 : {
+			private[""_message"",""_admin""];
+			_message = format[""*** MENSAJE DE LA POLICIA ***: %1"",_msg];
+			_admin = format[""Enviado por la policia: %1"", _from];
+			hint parseText format [""<t color='#316dff'><t size='2'><t align='center'>Mensaje de la policia<br/><br/><t color='#33CC33'><t align='left'><t size='1'>A: <t color='#ffffff'>Todos<br/><t color='#33CC33'>De: <t color='#ffffff'>La Policia<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%1"",_msg];
+			
+			[""AdminMessage"",[""Has recibido un mensaje de la policia!""]] call bis_fnc_showNotification;
+			systemChat _message;
+			if((call life_adminlevel) > 0) then {systemChat _admin;};
+		};
+	};
+
+			
 	};
 ";
 publicVariable "TON_fnc_clientMessage";
