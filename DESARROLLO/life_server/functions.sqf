@@ -237,8 +237,7 @@ compileFinal "
 	if((call life_coplevel) < 1) exitWith {hint ""No eres policia!"";};
 	private[""_msg"",""_from""];
 	_msg = ctrlText 3003;
-	if(_msg == """") exitWith {hint ""Debes introducir un mensaje!"";};
-	
+	if(_msg == """") exitWith {hint ""Debes introducir un mensaje!"";};	
 	[[_msg,name player,7],""TON_fnc_clientMessage"",true,false] spawn life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""Mensaje de policias a todos: %1"",_msg];
@@ -352,9 +351,6 @@ compileFinal "
 			systemChat _message;
 			if((call life_adminlevel) > 0) then {systemChat _admin;};
 		};
-	};
-
-			
-	};
+	};	
 ";
 publicVariable "TON_fnc_clientMessage";

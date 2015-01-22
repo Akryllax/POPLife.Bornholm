@@ -99,6 +99,10 @@ switch(_type) do
 			ctrlShow[888898,true];
 			ctrlShow[888896,false];
 		};
+		if ((__GETC__(life_coplevel) < 1)) then
+		{
+			ctrlShow[888888,false];
+		};
 	};
 	//adminMsgAll
 	case 7:
