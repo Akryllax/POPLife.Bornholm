@@ -310,7 +310,7 @@ switch(_shop) do
 
 
 
-	case "reb_mafia":
+	case "rebel":
 	{
 		switch(true) do
 		{
@@ -343,7 +343,7 @@ switch(_shop) do
 						["SMG_02_F",nil,30000],
 						["30Rnd_9x21_Mag",nil,200],
 						["SMG_01_F",nil,35000],
-						["SMG_01_Holo_pointer_snds_F","Vermin SMG Silenciada",40000],
+						["SMG_01_Holo_pointer_snds_F",nil,40000],
 						["muzzle_snds_acp",nil,15000],
 						["30Rnd_45ACP_Mag_SMG_01",nil,200],
 						["arifle_TRG20_F",nil,40000],
@@ -377,7 +377,7 @@ switch(_shop) do
 		};
 	};
 
-	case "armas":
+	case "gun":
 	{
 		switch(true) do
 		{
@@ -412,7 +412,7 @@ switch(_shop) do
 		};
 	};
 
-	case "group_band":
+	case "gang":
 	{
 		switch(true) do
 		{
@@ -442,7 +442,7 @@ switch(_shop) do
 		};
 	};
 
-	case "civ_tienda":
+	case "genstore":
 	{
 		["tienda general",
 			[
