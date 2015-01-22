@@ -14,13 +14,21 @@ while {true} do
 	// ARMA | CANTIDAD | CARGADOR | CANTIDAD
 	_dropArmsArray =
 	[
-		["launch_RPG32_F",1,"",0],
+		["launch_RPG32_F",1,"RPG32_HE_F",1],
 		["",0,"RPG32_HE_F",2],
-		["arifle_Katiba_GL_F",2,"",0],
-		["",0,"1Rnd_SmokeOrange_Grenade_shell",3],
-		["",0,"1Rnd_SmokeOrange_Grenade_shell",1],
-		["arifle_TRG21_GL_F",2,"",0],
-		["arifle_TRG21_MRCO_F",2,"30Rnd_556x45_Stanag_Tracer_Red",6]
+		["launch_RPG32_F",1,"",0],
+		["srifle_LRR_CAMO_F",1,"7Rnd_408_Mag",3],
+		["",0,"7Rnd_408_Mag",6],
+		["srifle_LRR_CAMO_F",1,"",0],
+		["srifle_GM6_F",1,"5Rnd_127x108_Mag",3],
+		["",0,"5Rnd_127x108_Mag",6],
+		["srifle_GM6_F",1,"",0],
+		["LMG_Mk200_F",1,"200Rnd_65x39_cased_Box_Tracer",1],
+		["LMG_Mk200_F",2,"",0],
+		["",0,"200Rnd_65x39_cased_Box_Tracer",4],
+		["LMG_Zafir_F",1,"150Rnd_762x51_Box_Tracer",1],
+		["",0,"150Rnd_762x51_Box_Tracer",4],
+		["LMG_Zafir_F",2,"",0]
 	];
 	// VEST | CANTIDAD | HELM | CANTIDAD
 	/*_dropArray =
@@ -54,7 +62,7 @@ while {true} do
 		// WarBlast: Caja militar que cae con aleatoriedad
 		_MilitaryCrate = objNull;
 		_randomCrate = random(100);
-		if (_randomCrate > 80) then {
+		if (_randomCrate > 60) then {
 			_MilitaryCrate = "Box_NATO_Wps_F" createVehicle ([_heliSpawn,10] call SHK_pos);
 			clearWeaponCargoGlobal _MilitaryCrate;
 			clearMagazineCargoGlobal _MilitaryCrate;
