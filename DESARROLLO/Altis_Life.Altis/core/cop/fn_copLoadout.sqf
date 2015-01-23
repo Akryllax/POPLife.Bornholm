@@ -27,7 +27,7 @@ waitUntil {scriptDone _handle};
 if(_lvl == 1) then
 	{
         player forceaddUniform "U_Rangemaster";
-		player addVest "V_TacVest_blk_POLICE";
+		player addVest "V_Rangemaster_belt";
 		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
@@ -50,7 +50,7 @@ if(_lvl == 1) then
 if(_lvl == 2 ) then
 	{
         player forceaddUniform "U_Rangemaster";
-		player addVest "V_TacVest_blk_POLICE";
+		player addVest "V_Rangemaster_belt";
 		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
@@ -74,7 +74,7 @@ if(_lvl == 3 ) then
 	{
 
         player forceaddUniform "U_Rangemaster";
-		player addVest "V_TacVest_blk_POLICE";
+		player addVest "V_BandollierB_blk";
 		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
@@ -97,7 +97,7 @@ if(_lvl == 3 ) then
 if(_lvl == 4 ) then
 	{
         player forceaddUniform "U_Rangemaster";
-		player addVest "V_TacVest_blk_POLICE";
+		player addVest "V_BandollierB_blk";
 		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
@@ -123,7 +123,7 @@ if(_lvl == 5 ) then
 	{
 
         player forceaddUniform "U_Rangemaster";
-		player addVest "V_PlateCarrier1_blk";
+		player addVest "V_TacVest_blk_POLICE";
 		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
@@ -151,7 +151,7 @@ if(_lvl == 6) then
         player forceaddUniform "U_B_CombatUniform_mcam_worn";
 		removeHeadGear player;
 		player addHeadgear "H_Watchcap_blk";
-		player addVest "V_PlateCarrier1_blk";
+		player addVest "V_TacVest_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
@@ -177,7 +177,7 @@ if(_lvl == 7) then
 		player addGoggles "G_Balaclava_Lowprofile";
 		removeHeadGear player;
 		player addHeadgear "H_Watchcap_blk";
-		player addVest "V_PlateCarrier1_blk";
+		player addVest "V_TacVest_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
@@ -206,7 +206,7 @@ if(_lvl == 8) then
 		player forceaddUniform "U_B_CombatUniform_mcam_worn";
 		removeHeadGear player;
 		player addHeadgear "H_Beret_red";
-		player addVest "V_PlateCarrier1_blk";
+		player addVest "V_TacVest_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "G_Squares_Tinted";
 		player assignItem "G_Squares_Tinted";
