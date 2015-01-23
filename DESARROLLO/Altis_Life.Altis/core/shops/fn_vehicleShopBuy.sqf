@@ -43,7 +43,7 @@ hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >
 if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle = createVehicle [_className,[0,0,999],[], 0, "NONE"];
 	if(_className == "C_SUV_01_F") then {
-		_vehicle setCenterOfMass [-0.010813,-0.506166,-0.557481];
+		_vehicle setCenterOfMass [-0.010813,-0.506166,-0.6];
 	};
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false;
@@ -58,7 +58,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 } else {
 	_vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
 	if(_className == "C_SUV_01_F") then {
-		_vehicle setCenterOfMass [-0.010813,-0.506166,-0.557481];
+		_vehicle setCenterOfMass [-0.010813,-0.506166,-0.6];
 	};
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false; //Temp disable damage handling..
