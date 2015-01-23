@@ -42,10 +42,17 @@ class CfgFunctions
 class CfgSounds
 {
 	sounds[] = {};
-	class SirenLong
+	class copsiren
 	{
-		name = "SirenLong";
-		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
+		name = "copsiren";
+		sound[] = {"\sounds\cop_long.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class medicsiren
+	{
+		name = "medicsiren";
+		sound[] = {"\sounds\medic_siren.ogg", 1.0, 1};
 		titles[] = {};
 	};
 
@@ -66,14 +73,14 @@ class CfgSounds
 	class esposas
 	{
 		name = "esposas";
-		sound[] = {"\sounds\esposas.ogg", 0.25, 1};
+		sound[] = {"\sounds\esposas.ogg", 0.5, 1};
 		titles[] = {};
 	};	
 
 	class punch_break
 	{
 		name = "punch_break";
-		sound[] = {"\sounds\punch_break.ogg", 0.25, 1};
+		sound[] = {"\sounds\punch_break.ogg", 0.5, 1};
 		titles[] = {};
 	};
 
@@ -81,7 +88,7 @@ class CfgSounds
 
 	{
 		name = "punch";
-		sound[] = {"\sounds\punch.ogg", 0.25, 1};
+		sound[] = {"\sounds\punch.ogg", 0.5, 1};
 		titles[] = {};
 	};
 
@@ -89,7 +96,7 @@ class CfgSounds
 
 	{
 		name = "drugcooking";
-		sound[] = {"\sounds\drugcooking.ogg", 0.25, 1};
+		sound[] = {"\sounds\drugcooking.ogg", 0.5, 1};
 		titles[] = {};
 	};
 	
