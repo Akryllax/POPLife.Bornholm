@@ -38,20 +38,16 @@ switch(true) do {
 
 	[_furgo]spawn {
 	_furgo = _this select 0;
-	hint "Extrayendo petroleo";
+	hint "Extrayendo petroleo...";
 	_num = 5;
 	_ctrl = "petroleo";
     sleep 5;
-    _itemWeight = 1 * 5;
+    _itemWeight = 1 * 5;_totalWeight = [life_trunk_vehicle] call life_fnc_vehicleWeight;    if(((_totalWeight select 1) + _itemWeight) > (_totalWeight select 0)) exitWith {hint "El barco esta lleno!";_furgo addAction["Extraer Petroleo",QUICK_fnc_extraerPetroleo,_furgo];};
 
 	_veh_data = life_trunk_vehicle getVariable ["Trunk",[[],0]];
     _inv = _veh_data select 0;
-    _totalWeight = [life_trunk_vehicle] call life_fnc_vehicleWeight;
-
-	//if(((_totalWeight select 1) + _itemWeight) > (_totalWeight select 0)) exitWith {hint "The vehicle is either full or cannot hold that much."};
     
 
-   
 	_index = [_ctrl,_inv] call TON_fnc_index;
 
 	if(_index == -1) then
