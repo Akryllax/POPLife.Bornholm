@@ -28,3 +28,4 @@
 #include "slot_machine.hpp"
 #include "blackjack.hpp"
 #include "market.hpp"
+#include "jail_time.hpp"

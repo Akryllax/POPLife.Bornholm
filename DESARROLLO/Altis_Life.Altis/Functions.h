@@ -313,6 +313,8 @@ class Life_Client_Core
 		class copUniform {};
 		class ticketPaid {};
 		class wantedGrab {};
+		class showArrestDialog {};
+		class arrestDialog_Arrest {};
 	};
 	
 	class Mercenaries 
