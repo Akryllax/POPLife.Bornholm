@@ -30,6 +30,6 @@ player playMoveNow "amovppnemstpsraswrfldnon";
 [[_unit,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
 player enableFatigue (__GETC__(life_enableFatigue));
 
-if(player side == west) then {
+if(side player == west) then {
 	player addEventHandler ["Fired", "_this call AKR_tiroAtiro"];
 };
