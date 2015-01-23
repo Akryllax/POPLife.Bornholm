@@ -1,6 +1,6 @@
 waitUntil {!isNull player};
 
-_precio = 350000;
+_precio = 50000;
 _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 
 
@@ -23,13 +23,13 @@ removevest _unit;
 removebackpack _unit;
 
 
-
+_unit = player;
     
-   _unit addHeadgear "H_Beret_Colonel";
+ 
  _unit addGoggles "G_Balaclava_Lowprofile"; 
 
 _unit  addVest "V_TacVest_blk";
-_unit  forceAddUniform "U_B_CombatUniform_mcam_worn";
+_unit  forceAddUniform "U_C_Scientist";
  
 _unit addWeapon 'Binocular';
 
@@ -58,7 +58,7 @@ mybackpack = unitBackpack _unit ;
 [[mybackpack,0,"#(rgb,8,8,3)color(0,0,0,1)"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 mybackpack addItemCargoGlobal ["Toolkit", 1]; 
 mybackpack addItemCargoGlobal ["FirstAidKit", 5];
-
+[[_unit,0,"textures\TRAJES\batman.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
 //solo para altis
 [true,"water",2] call life_fnc_handleInv;
@@ -73,6 +73,4 @@ mybackpack addItemCargoGlobal ["FirstAidKit", 5];
 [[_unit,0,"textures\TRAJES\batman.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
 reload _unit;
-
-//crear batmovil
-if(true) exitWith{hint "Clase Batman equipada";[] spawn { sleep 5;hint "";} };
+if(true) exitWith{hint "Clase Profesional equipada";[] spawn { sleep 5;hint "";} };
