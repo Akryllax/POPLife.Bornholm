@@ -172,7 +172,7 @@ class CfgNotifications
 	class MercMessage
 	{
 		title = "Mensaje de mercenarios";
-		iconPicture = "icons\messagenew.paa";
+		iconPicture = "textures\icons\messagenew.paa";
 		description = "%1";
 		duration = 10;
 		priority = 5;
@@ -217,7 +217,7 @@ class CfgNotifications
 	class TextMessage
 	{
 		title = "Has recibido un mensaje";
-		iconPicture = "icons\messagenew.paa";
+		iconPicture = "textures\icons\messagenew.paa";
 		description = "%1";
 		duration = 10;
 		priority = 6;
@@ -226,7 +226,7 @@ class CfgNotifications
 	class PoliceDispatch
 	{
 		title = "Comisaria de policia";
-		iconPicture = "icons\messagepolice.paa";
+		iconPicture = "textures\icons\messagepolice.paa";
 		description = "%1";
 		duration = 10;
 		priority = 6;
@@ -235,7 +235,7 @@ class CfgNotifications
 	class AdminDispatch
 	{
 		title = "Administradores";
-		iconPicture = "icons\messageadmin.paa";
+		iconPicture = "textures\icons\messageadmin.paa";
 		description = "%1";
 		duration = 10;
 		priority = 6;
@@ -244,7 +244,7 @@ class CfgNotifications
 	class AdminMessage
 	{
 		title = "Mensaje de admin";
-		iconPicture = "icons\messageadmin.paa";
+		iconPicture = "textures\icons\messageadmin.paa";
 		description = "%1";
 		duration = 10;
 		priority = 5;
