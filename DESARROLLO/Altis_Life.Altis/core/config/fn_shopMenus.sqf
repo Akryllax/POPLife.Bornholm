@@ -84,6 +84,10 @@ switch (_shop) do
 	{
 		ctrlSetText[2505,"Tienda admin"];
 	};
+	case "cazarrecompensas":
+	{
+		ctrlSetText[2505,"Cazarrecompensas"];
+	};
 };
 
 ["guns"] call life_fnc_shops_changeMenu;

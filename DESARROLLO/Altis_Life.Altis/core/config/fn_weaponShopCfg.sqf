@@ -573,4 +573,28 @@ switch(_shop) do
 		     };
 	     };
      };
+	 
+	case "cazarrecompensas":
+	{
+		switch(true) do
+		{
+			case (!license_civ_cazarrecompensas): {"No eres cazarrecompensas"};
+			default
+			{
+				["Tienda de armas con licencia",
+					[
+						["Binocular",nil,150],
+						["ItemGPS",nil,100],
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,150],
+						["NVGoggles",nil,2000],
+						["hgun_P07_snds_F", 5500],
+						["16Rnd_9x21_Mag", 100],
+						["SMG_02_ACO_F", 6500],
+						["30Rnd_9x21_Mag", 200]
+					]
+				];
+			};
+		};
+	};
   };
