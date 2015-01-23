@@ -50,7 +50,7 @@ while {true} do
 		}
 		else
 		{
-			hintSilent format["Time Remaining:\n %1\n",_countDown];
+			hintSilent format["Tiempo restante:\n %1\n",_countDown];
 		};
 
 	};
