@@ -13,7 +13,7 @@ if(isNull _unit) exitWith {}; //if not the thief get bent
 
 life_cash = life_cash-_precio;
 
-_unit = player;
+
 removeAllWeapons _unit;
 removeallassigneditems _unit;
 removeallcontainers _unit;
@@ -23,8 +23,8 @@ removebackpack _unit;
 
 
 
-      _unit addHeadgear "H_Beret_Colonel";
-      _unit addGoggles "G_Balaclava_Lowprofile"; 
+_unit addHeadgear "H_Beret_Colonel";
+ _unit addGoggles "G_Balaclava_Lowprofile"; 
 
 _unit  addVest "V_TacVest_blk";
 _unit  forceAddUniform "U_B_CombatUniform_mcam_worn";

@@ -1,6 +1,6 @@
 waitUntil {!isNull player};
 
-_precio = 250000;
+_precio = 350000;
 _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 
 
@@ -25,11 +25,11 @@ removebackpack _unit;
 
 
     
-      player addGoggles "G_Balaclava_Lowprofile"; 
+   _unit addHeadgear "H_Beret_Colonel";
+ _unit addGoggles "G_Balaclava_Lowprofile"; 
 
-_unit  addVest "V_TacVestIR_blk";
-_unit  forceAddUniform "U_C_Scientist";
-
+_unit  addVest "V_TacVest_blk";
+_unit  forceAddUniform "U_B_CombatUniform_mcam_worn";
  
 _unit addWeapon 'Binocular';
 
@@ -41,7 +41,7 @@ _unit addItem "ItemGPS";
 _unit assignItem "ItemGPS";
 _unit addItem "ItemMap";
 _unit assignItem "ItemMap";
-_unit addItem "ItemCompass";
+_unit addItem "ItemCompass"; 
 _unit assignItem "ItemCompass"; 
 
 _unit  addWeapon "arifle_Katiba_C_ACO_pointer_snds_F";
@@ -52,8 +52,10 @@ _unit addMagazines ["30Rnd_65x39_caseless_green", 8];
 _unit  addItem "NVGoggles_OPFOR"; 
 _unit  assignItem "NVGoggles_OPFOR";
 
-_unit  addBackPack "B_AssaultPack_blk"; 
+
+_unit  addBackPack "B_Carryall_mcamo"; 
 mybackpack = unitBackpack _unit ;
+[[mybackpack,0,"#(rgb,8,8,3)color(0,0,0,1)"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 mybackpack addItemCargoGlobal ["Toolkit", 1]; 
 mybackpack addItemCargoGlobal ["FirstAidKit", 5];
 
@@ -71,4 +73,6 @@ mybackpack addItemCargoGlobal ["FirstAidKit", 5];
 [[_unit,0,"textures\TRAJES\batman.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
 reload _unit;
-if(true) exitWith{hint "Clase Profesional equipada";[] spawn { sleep 5;hint "";} };
+
+//crear batmovil
+if(true) exitWith{hint "Clase Batman equipada";[] spawn { sleep 5;hint "";} };
