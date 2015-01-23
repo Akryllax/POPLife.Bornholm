@@ -181,7 +181,7 @@ hint "Cuidado si no llegas a tu destino no te pagarameos nada!!";
 sleep 3;
 hint "";
 
-sleep 60 *5:
+sleep 60 *5;
 _gen addAction["Transportar Droga para el Narco 500000$ - Ganancia: 350000$",QUICK_fnc_TransportarDrogaMar];
 
 };
