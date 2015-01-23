@@ -128,18 +128,18 @@ switch (_shop) do
 			_return pushBack ["B_Heli_Light_01_F",100000];
 		if(__GETC__(life_coplevel) > 4) then
 		{
-			_return pushBack ["B_Heli_Transport_01_F",1000];
-			_return pushBack ["B_Heli_Transport_03_unarmed_F", 1000];
-			_return pushBack ["O_Heli_Transport_04_F", 1000];
-			_return pushBack ["O_Heli_Transport_04_bench_F", 1000];
-			_return pushBack ["O_Heli_Transport_04_box_F", 1000];
-			_return pushBack ["O_Heli_Transport_04_covered_F", 1000];
+			_return pushBack ["B_Heli_Transport_01_F",150000];
+			_return pushBack ["B_Heli_Transport_03_unarmed_F",250000];
+			_return pushBack ["O_Heli_Transport_04_F",350000];
+			_return pushBack ["O_Heli_Transport_04_bench_F",350000];
+			_return pushBack ["O_Heli_Transport_04_box_F", 350000];
+			_return pushBack ["O_Heli_Transport_04_covered_F", 350000];
 		};
 		if(__GETC__(life_coplevel) > 5) then
 		{
 			_return pushBack
-			["I_Heli_light_03_unarmed_F",1000];
-			_return pushBack ["B_Heli_Transport_03_F", 1000];
+			["I_Heli_light_03_unarmed_F",350000];
+			_return pushBack ["B_Heli_Transport_03_F", 350000];
 		};
 	};
 
@@ -148,18 +148,18 @@ switch (_shop) do
 			_return pushBack ["B_Heli_Light_01_F",100000];
 		if(__GETC__(life_coplevel) > 4) then
 		{
-			_return pushBack ["B_Heli_Transport_01_F",1000];
-			_return pushBack ["B_Heli_Transport_03_unarmed_F", 1000];
-			_return pushBack ["O_Heli_Transport_04_F", 1000];
-			_return pushBack ["O_Heli_Transport_04_bench_F", 1000];
-			_return pushBack ["O_Heli_Transport_04_box_F", 1000];
-			_return pushBack ["O_Heli_Transport_04_covered_F", 1000];
+			_return pushBack ["B_Heli_Transport_01_F",150000];
+			_return pushBack ["B_Heli_Transport_03_unarmed_F",250000];
+			_return pushBack ["O_Heli_Transport_04_F",350000];
+			_return pushBack ["O_Heli_Transport_04_bench_F",350000];
+			_return pushBack ["O_Heli_Transport_04_box_F", 350000];
+			_return pushBack ["O_Heli_Transport_04_covered_F", 350000];
 		};
 		if(__GETC__(life_coplevel) > 5) then
 		{
 			_return pushBack
-			["I_Heli_light_03_unarmed_F",1000];
-			_return pushBack ["B_Heli_Transport_03_F", 1000];
+			["I_Heli_light_03_unarmed_F",350000];
+			_return pushBack ["B_Heli_Transport_03_F", 350000];
 		};
 	};
 
@@ -187,7 +187,7 @@ switch (_shop) do
 			["B_SDV_01_F",100000]
 		];
 	};
-	
+
 	case "reb_air":
 	{
 		_return =
