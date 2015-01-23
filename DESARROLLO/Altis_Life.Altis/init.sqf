@@ -30,6 +30,11 @@ StartProgress = true;
 
 };
 
+[] spawn {
+	waitUntil { time > 0 };
+	[] call AKR_fn_initRem;
+};
+
 //Remove grass crap...
 setTerrainGrid 50;
 
