@@ -1,7 +1,7 @@
 /*
 	File: fn_spawnVehicle.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sends the query request to the database, if an array is returned then it creates
 	the vehicle if it's not in use or dead.
@@ -93,7 +93,7 @@ _vehicle allowDamage true;
 [[_vehicle],"life_fnc_addVehicle2Chain",_unit,false] spawn life_fnc_MP;
 [_pid,_side,_vehicle,1] call TON_fnc_keyManagement;
 _vehicle lock 2;
-//Reskin the vehicle 
+//Reskin the vehicle
 [[_vehicle,_vInfo select 8],"life_fnc_colorVehicle",nil,false] spawn life_fnc_MP;
 _vehicle setVariable["vehicle_info_owners",[[_pid,_name]],true];
 _vehicle setVariable["dbInfo",[(_vInfo select 4),_vInfo select 7]];
@@ -104,6 +104,11 @@ _vehicle setVariable["dbInfo",[(_vInfo select 4),_vInfo select 7]];
 if((_vInfo select 1) == "civ" && (_vInfo select 2) == "B_Heli_Light_01_F" && _vInfo select 8 != 13) then
 {
 	[[_vehicle,"civ_littlebird",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
+};
+
+if((_vInfo select 1) == "civ" && (_vInfo select 2) in ["C_SUV_01_F"]) then
+{
+	_vehicle setCenterOfMass [0,0.2,-0.6] spawn life_fnc_MP;
 };
 
 if((_vInfo select 1) == "cop" && (_vInfo select 2) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then
