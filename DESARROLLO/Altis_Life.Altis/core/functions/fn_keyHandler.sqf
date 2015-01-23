@@ -266,6 +266,7 @@ switch (_code) do
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 							 if (typeOf _veh == "C_SUV_01_F") then {
                                 _veh setCenterOfMass [0,0.2,-0.6];
+                             }
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 					} else {
