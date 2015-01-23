@@ -226,7 +226,7 @@ switch (_code) do
 					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
 				} else {
 					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
-					//[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
+					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
 				};
 			};
 		};
@@ -264,6 +264,8 @@ switch (_code) do
 							_veh lock 0;
 						} else {
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
+							 if (typeOf _veh == "C_SUV_01_F") then {
+                                _veh setCenterOfMass [0,0.2,-0.6];
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 					} else {
@@ -278,7 +280,7 @@ switch (_code) do
 			};
 		};
 	};
-	
+
 	case 59:// F1 - TAPONES
 	{
 		if (soundVolume == 0.05) then {

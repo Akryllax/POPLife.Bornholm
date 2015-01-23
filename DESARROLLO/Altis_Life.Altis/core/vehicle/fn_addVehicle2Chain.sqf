@@ -10,6 +10,3 @@ if(!(_vehicle in life_vehicles)) then
 {
 	life_vehicles pushBack _vehicle;
 };
-if _vehicle == "C_SUV_O1_F" then {
-_vehicle setCenterOfMass [-0.010813,0.206166,-0.557481];
-};
