@@ -48,7 +48,7 @@ switch(true) do {
     _inv = _veh_data select 0;
     _totalWeight = [life_trunk_vehicle] call life_fnc_vehicleWeight;
 
-	if(((_totalWeight select 1) + _itemWeight) > (_totalWeight select 0)) exitWith {hint "The vehicle is either full or cannot hold that much."};
+	//if(((_totalWeight select 1) + _itemWeight) > (_totalWeight select 0)) exitWith {hint "The vehicle is either full or cannot hold that much."};
     
 
    
@@ -64,7 +64,7 @@ switch(true) do {
 		_inv set[_index,[_ctrl,_val + _num]];
 	};
 	
-	life_trunk_vehicle setVariable["Trunk",[_inv,(_veh_data select 1) + 1],true];
+	life_trunk_vehicle setVariable["Trunk",[_inv,(_veh_data select 1) + _itemWeight],true];
 	[life_trunk_vehicle] call life_fnc_vehInventory;
 
 
