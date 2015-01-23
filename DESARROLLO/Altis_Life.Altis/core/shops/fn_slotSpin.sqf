@@ -28,42 +28,42 @@ _bet4 ctrlEnable false;
 _number = ceil(random 7);
 _pplayer = _this select 0;
 
-if (_number == 0) then {_slot1 = 0; _slotPic1 ctrlSetText "Pics\slot_zero.jpg";};
-if (_number == 1) then {_slot1 = 100; _slotPic1 ctrlSetText "Pics\slot_one.jpg";};
-if (_number == 2) then {_slot1 = 200; _slotPic1 ctrlSetText "Pics\slot_two.jpg";};
-if (_number == 3) then {_slot1 = 300; _slotPic1 ctrlSetText "Pics\slot_three.jpg";};
-if (_number == 4) then {_slot1 = 400; _slotPic1 ctrlSetText "Pics\slot_four.jpg";};
-if (_number == 5) then {_slot1 = 500; _slotPic1 ctrlSetText "Pics\slot_five.jpg";};
-if (_number == 6) then {_slot1 = 600; _slotPic1 ctrlSetText "Pics\slot_six.jpg";};
-if (_number == 7) then {_slot1 = 700; _slotPic1 ctrlSetText "Pics\slot_seven.jpg";};
+if (_number == 0) then {_slot1 = 0; _slotPic1 ctrlSetText "textures\SLOTS\slot_zero.jpg";};
+if (_number == 1) then {_slot1 = 100; _slotPic1 ctrlSetText "textures\SLOTS\slot_one.jpg";};
+if (_number == 2) then {_slot1 = 200; _slotPic1 ctrlSetText "textures\SLOTS\slot_two.jpg";};
+if (_number == 3) then {_slot1 = 300; _slotPic1 ctrlSetText "textures\SLOTS\slot_three.jpg";};
+if (_number == 4) then {_slot1 = 400; _slotPic1 ctrlSetText "textures\SLOTS\slot_four.jpg";};
+if (_number == 5) then {_slot1 = 500; _slotPic1 ctrlSetText "textures\SLOTS\slot_five.jpg";};
+if (_number == 6) then {_slot1 = 600; _slotPic1 ctrlSetText "textures\SLOTS\slot_six.jpg";};
+if (_number == 7) then {_slot1 = 700; _slotPic1 ctrlSetText "textures\SLOTS\slot_seven.jpg";};
 life_action_inUse = true;	
 
 
 sleep 0.5;
 _number = ceil(random 7);
 _pplayer = _this select 0;
-if (_number == 0) then {_slot2 = 0; _slotPic2 ctrlSetText "Pics\slot_zero.jpg";};
-if (_number == 1) then {_slot2 = 10; _slotPic2 ctrlSetText "Pics\slot_one.jpg";};
-if (_number == 2) then {_slot2 = 20; _slotPic2 ctrlSetText "Pics\slot_two.jpg";};
-if (_number == 3) then {_slot2 = 30; _slotPic2 ctrlSetText "Pics\slot_three.jpg";};
-if (_number == 4) then {_slot2 = 40; _slotPic2 ctrlSetText "Pics\slot_four.jpg";};
-if (_number == 5) then {_slot2 = 50; _slotPic2 ctrlSetText "Pics\slot_five.jpg";};
-if (_number == 6) then {_slot2 = 60; _slotPic2 ctrlSetText "Pics\slot_six.jpg";};
-if (_number == 7) then {_slot2 = 70; _slotPic2 ctrlSetText "Pics\slot_seven.jpg";};	
+if (_number == 0) then {_slot2 = 0; _slotPic2 ctrlSetText "textures\SLOTS\slot_zero.jpg";};
+if (_number == 1) then {_slot2 = 10; _slotPic2 ctrlSetText "textures\SLOTS\slot_one.jpg";};
+if (_number == 2) then {_slot2 = 20; _slotPic2 ctrlSetText "textures\SLOTS\slot_two.jpg";};
+if (_number == 3) then {_slot2 = 30; _slotPic2 ctrlSetText "textures\SLOTS\slot_three.jpg";};
+if (_number == 4) then {_slot2 = 40; _slotPic2 ctrlSetText "textures\SLOTS\slot_four.jpg";};
+if (_number == 5) then {_slot2 = 50; _slotPic2 ctrlSetText "textures\SLOTS\slot_five.jpg";};
+if (_number == 6) then {_slot2 = 60; _slotPic2 ctrlSetText "textures\SLOTS\slot_six.jpg";};
+if (_number == 7) then {_slot2 = 70; _slotPic2 ctrlSetText "textures\SLOTS\slot_seven.jpg";};	
 
 
 sleep 0.5;
 _number = ceil(random 7);
 _pplayer = _this select 0;
 
-if (_number == 0) then {_slot3 = 0; _slotPic3 ctrlSetText "Pics\slot_zero.jpg";};
-if (_number == 1) then {_slot3 = 1; _slotPic3 ctrlSetText "Pics\slot_one.jpg"; };
-if (_number == 2) then {_slot3 = 2; _slotPic3 ctrlSetText "Pics\slot_two.jpg"; };
-if (_number == 3) then {_slot3 = 3; _slotPic3 ctrlSetText "Pics\slot_three.jpg"; };
-if (_number == 4) then {_slot3 = 4; _slotPic3 ctrlSetText "Pics\slot_four.jpg"; ;};
-if (_number == 5) then {_slot3 = 5; _slotPic3 ctrlSetText "Pics\slot_five.jpg"; };
-if (_number == 6) then {_slot3 = 6; _slotPic3 ctrlSetText "Pics\slot_six.jpg"; };
-if (_number == 7) then {_slot3 = 7; _slotPic3 ctrlSetText "Pics\slot_seven.jpg"; };
+if (_number == 0) then {_slot3 = 0; _slotPic3 ctrlSetText "textures\SLOTS\slot_zero.jpg";};
+if (_number == 1) then {_slot3 = 1; _slotPic3 ctrlSetText "textures\SLOTS\slot_one.jpg"; };
+if (_number == 2) then {_slot3 = 2; _slotPic3 ctrlSetText "textures\SLOTS\slot_two.jpg"; };
+if (_number == 3) then {_slot3 = 3; _slotPic3 ctrlSetText "textures\SLOTS\slot_three.jpg"; };
+if (_number == 4) then {_slot3 = 4; _slotPic3 ctrlSetText "textures\SLOTS\slot_four.jpg"; ;};
+if (_number == 5) then {_slot3 = 5; _slotPic3 ctrlSetText "textures\SLOTS\slot_five.jpg"; };
+if (_number == 6) then {_slot3 = 6; _slotPic3 ctrlSetText "textures\SLOTS\slot_six.jpg"; };
+if (_number == 7) then {_slot3 = 7; _slotPic3 ctrlSetText "textures\SLOTS\slot_seven.jpg"; };
 
 sleep 0.5;
 

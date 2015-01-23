@@ -187,6 +187,23 @@ switch (_shop) do
 			["B_SDV_01_F",100000]
 		];
 	};
+	
+	case "reb_air":
+	{
+		_return =
+		[
+			["B_Heli_Light_01_F",400000],
+			["C_Heli_Light_01_civil_F", 550000],
+			["O_Heli_Light_02_unarmed_F",1250000],
+			["I_Heli_Transport_02_F",2450000],
+			["O_Heli_Transport_04_F",2550000],
+			["O_Heli_Transport_04_bench_F", 2600000],
+			["O_Heli_Transport_04_covered_F", 2700000],
+			["B_Heli_Transport_03_F", 2800000],
+			["B_Heli_Attack_01_F", 5250000],
+			["O_Heli_Attack_02_F", 5450000]
+		];
+	};
 };
 
 _return;

@@ -47,37 +47,16 @@ if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 switch (_code) do
 {
 
-
-		//role mode con c
-	case 46:
+	//Roleo con la tecla que esta a la izquierda de la Z.
+	case 86:
 	{
-
 		if(!life_action_inUse) then {
-
 			switch (playerSide) do
 			{
-
-			case west: {if(!visibleMap) then {  [] spawn QUICK_fnc_roleModeCops;};};
-			case independent: {if(!visibleMap) then {                           }};
-			case civilian: {if(!visibleMap) then {[] spawn QUICK_fnc_roleMode;};};
+				case west: {if(!visibleMap) then {  [] spawn QUICK_fnc_roleModeCops;};};
+				case independent: {if(!visibleMap) then {                           }};
+				case civilian: {if(!visibleMap) then {[] spawn QUICK_fnc_roleMode;};};
 			};
-
-
-		};
-
-
-	};
-
-
-	//Space key for Jumping
-	case 57:
-	{
-		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
-		if(_shift && {animationState player != "AovrPercMrunSrasWrflDf"} && {isTouchingGround player} && {stance player == "STAND"} && {speed player > 2} && {!life_is_arrested} && {(velocity player) select 2 < 2.5} && {time - jumpActionTime > 1.5}) then {
-			jumpActionTime = time; //Update the time.
-			[player,true] spawn life_fnc_jumpFnc; //Local execution
-			[[player,false],"life_fnc_jumpFnc",nil,FALSE] call life_fnc_MP; //Global execution
-			_handled = true;
 		};
 	};
 
@@ -297,6 +276,17 @@ switch (_code) do
 					};
 				};
 			};
+		};
+	};
+	
+	case 59:// F1 - TAPONES
+	{
+		if (soundVolume == 0.05) then {
+			0.05 fadeSound 1;
+			hint "Te has quitado los tapones";
+		} else {
+			0.05 fadeSound 0.05;
+			hint "Te has puesto los tapones";
 		};
 	};
 };
