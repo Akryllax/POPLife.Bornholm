@@ -31,11 +31,15 @@ life_respawned = false;
 life_removeWanted = false;
 life_action_gathering = false;
 life_smartphoneTarget = ObjNull;
+life_god = false;
+life_frozen = false; 
+life_markers = false;
 //Variables POP Ordenaditas ;D
 life_is_alive = true;
 life_civ_position = nil;
 life_esposas = ObjNull;
 life_llaveesposas = ObjNull;
+
 
 
 //Persistent Saving
