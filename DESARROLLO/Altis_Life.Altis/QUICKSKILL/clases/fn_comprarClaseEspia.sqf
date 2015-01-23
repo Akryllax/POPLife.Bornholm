@@ -24,12 +24,11 @@ removebackpack _unit;
 
 
 
-      player addHeadgear "H_Beret_Colonel";
-      player addGoggles "G_Balaclava_Lowprofile"; 
+      _unit addHeadgear "H_Beret_Colonel";
+      _unit addGoggles "G_Balaclava_Lowprofile"; 
 
 _unit  addVest "V_TacVestCamo_khk";
-_unit  forceAddUniform "U_O_SpecopsUniform_blk";
-
+_unit  forceAddUniform "U_B_CombatUniform_mcam_worn";
  
 _unit addWeapon 'Binocular';
 
@@ -55,9 +54,10 @@ _unit  assignItem "NVGoggles_OPFOR";
 
 _unit  addBackPack "B_Carryall_mcamo"; 
 mybackpack = unitBackpack _unit ;
+[[mybackpack,0,"textures\TRAJES\blackwolf.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 mybackpack addItemCargoGlobal ["Toolkit", 1]; 
 mybackpack addItemCargoGlobal ["FirstAidKit", 5];
-
+[[_unit,0,"textures\TRAJES\blackwolf.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
 //solo para altis
 [true,"water",2] call life_fnc_handleInv;
