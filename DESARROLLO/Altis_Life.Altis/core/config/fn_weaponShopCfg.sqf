@@ -290,10 +290,10 @@ switch(_shop) do
 		switch (true) do
 		{
 			case (playerSide != independent): {"Tu no eres medico"};
-			default {
+			case (__GETC__(life_mediclevel) == 1):
+		    {
 				["Hospital EMS Shop",
 					[
-						["ItemRadio","Cellphone",500],
 						["ItemGPS",nil,100],
 						["Binocular",nil,150],
 						["ToolKit",nil,250],
@@ -320,7 +320,6 @@ switch(_shop) do
 			{
 				["Mohammed's Jihadi Shop",
 					[
-						["ItemRadio","Telefono",500],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
 						["ToolKit",nil,250],
@@ -446,17 +445,130 @@ switch(_shop) do
 	{
 		["tienda general",
 			[
-				["ItemRadio","Cellphone",500],
 				["Binocular",nil,150],
 				["ItemGPS",nil,100],
 				["ToolKit",nil,250],
 				["FirstAidKit",nil,150],
-				["NVGoggles",nil,2000],
-				["Chemlight_red",nil,300],
-				["Chemlight_yellow",nil,300],
-				["Chemlight_green",nil,300],
-				["Chemlight_blue",nil,300]
+				["NVGoggles",nil,2000]
 			]
 		];
 	};
 };
+
+    case "merc":
+	{
+		switch (true) do
+		{
+			case (playerSide != opfor): {"No eres un mercenario"};
+			case (__GETC__(life_merclevel) <= 1):
+		    {
+				["Tienda Basica Mercenarios",
+					[
+						["Binocular",nil,150],
+						["ItemGPS",nil,100],
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,150],
+						["NVGoggles_INDEP",nil,2000],
+						["hgun_ACPC2_F",nil,6000],
+						["9Rnd_45ACP_Mag",nil,100],
+						["hgun_P07_F",nil,6000],
+						["16Rnd_9x21_Mag",nil,100],
+						["hgun_Rook40_F",nil,6000],
+						["30Rnd_9x21_Mag",nil,250],
+						["hgun_Pistol_heavy_01_F",nil,9000],
+						["11Rnd_45ACP_Mag",nil,350],
+						["hgun_Pistol_heavy_02_F",nil,10000],
+						["6Rnd_45ACP_Cylinder",nil,350],
+						["hgun_PDW2000_F",nil,20000],
+						["30Rnd_9x21_Mag",nil,200],
+						["SMG_02_F",nil,30000],
+						["30Rnd_9x21_Mag",nil,200],
+						["SMG_01_F",nil,35000],
+						["SMG_01_Holo_pointer_snds_F",nil,40000],
+						["muzzle_snds_acp",nil,15000],
+						["30Rnd_45ACP_Mag_SMG_01",nil,200],
+						["arifle_TRG20_F",nil,40000],
+						["arifle_Mk20_F",nil,45000],
+						["30Rnd_556x45_Stanag",nil,300],
+						["arifle_Katiba_F",nil,50000],
+						["arifle_Katiba_GL_F",nil,100000],
+						["30Rnd_65x39_caseless_green",nil,275],
+						["1Rnd_HE_Grenade_shell",nil,100000],
+						["arifle_MX_F",nil,80000],
+						["30Rnd_65x39_caseless_mag",nil,500],
+						["srifle_DMR_01_F",nil,60000],
+						["10Rnd_762x51_Mag",nil,500],
+						["srifle_EBR_F",nil,100000],
+						["20Rnd_762x51_Mag",nil,1000],
+						["acc_flashlight",nil,1000],
+						["muzzle_snds_L",nil,5000],
+						["optic_Yorris",nil,1500],
+						["optic_MRD",nil,1500],
+						["optic_ACO_grn",nil,2500],
+						["optic_Holosight",nil,2500],
+						["optic_Arco",nil,3000],
+						["optic_Hamr",nil,3000],
+						["optic_NVS",nil,5000],
+						["optic_DMS",nil,4500],
+						["optic_SOS",nil,5000],
+						["optic_LRPS",nil,5000]
+					]
+				];
+			};
+
+			case (__GETC__(life_merclevel) >= 2) :
+		    {
+				["Tienda superior mercenarios",
+					[
+                        ["Binocular",nil,150],
+						["ItemGPS",nil,100],
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,150],
+						["NVGoggles_INDEP",nil,2000],
+						["hgun_ACPC2_F",nil,6000],
+						["9Rnd_45ACP_Mag",nil,100],
+						["hgun_P07_F",nil,6000],
+						["16Rnd_9x21_Mag",nil,100],
+						["hgun_Rook40_F",nil,6000],
+						["30Rnd_9x21_Mag",nil,250],
+						["hgun_Pistol_heavy_01_F",nil,9000],
+						["11Rnd_45ACP_Mag",nil,350],
+						["hgun_Pistol_heavy_02_F",nil,10000],
+						["6Rnd_45ACP_Cylinder",nil,350],
+						["hgun_PDW2000_F",nil,20000],
+						["30Rnd_9x21_Mag",nil,200],
+						["SMG_02_F",nil,30000],
+						["30Rnd_9x21_Mag",nil,200],
+						["SMG_01_F",nil,35000],
+						["SMG_01_Holo_pointer_snds_F",nil,40000],
+						["muzzle_snds_acp",nil,15000],
+						["30Rnd_45ACP_Mag_SMG_01",nil,200],
+						["arifle_TRG20_F",nil,40000],
+						["arifle_Mk20_F",nil,45000],
+						["30Rnd_556x45_Stanag",nil,300],
+						["arifle_Katiba_F",nil,50000],
+						["arifle_Katiba_GL_F",nil,100000],
+						["30Rnd_65x39_caseless_green",nil,275],
+						["1Rnd_HE_Grenade_shell",nil,100000],
+						["arifle_MX_F",nil,80000],
+						["30Rnd_65x39_caseless_mag",nil,500],
+						["srifle_DMR_01_F",nil,60000],
+						["10Rnd_762x51_Mag",nil,500],
+						["srifle_EBR_F",nil,100000],
+						["20Rnd_762x51_Mag",nil,1000],
+						["acc_flashlight",nil,1000],
+						["muzzle_snds_L",nil,5000],
+						["optic_Yorris",nil,1500],
+						["optic_MRD",nil,1500],
+						["optic_ACO_grn",nil,2500],
+						["optic_Holosight",nil,2500],
+						["optic_Arco",nil,3000],
+						["optic_Hamr",nil,3000],
+						["optic_NVS",nil,5000],
+						["optic_DMS",nil,4500],
+						["optic_SOS",nil,5000],
+						["optic_LRPS",nil,5000]
+					]
+				];
+		};
+	};
