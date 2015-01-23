@@ -68,9 +68,7 @@ class CfgSounds
 		name = "esposas";
 		sound[] = {"\sounds\esposas.ogg", 0.25, 1};
 		titles[] = {};
-	};
-
-	
+	};	
 
 	class punch_break
 	{
