@@ -32,7 +32,7 @@ StartProgress = true;
 
 [] spawn {
 	waitUntil { time > 0 };
-	[] call AKR_fn_initRem;
+	[] call AKR_fnc_initRem;
 };
 
 //Remove grass crap...
