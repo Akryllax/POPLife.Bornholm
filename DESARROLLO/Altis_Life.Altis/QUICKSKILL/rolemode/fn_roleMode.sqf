@@ -7,7 +7,7 @@ _roleado = cursorTarget;
 life_action_inUse = true;
 if (isNull _roleador) exitWith{hint "No eres un jugador¿?";};
 if (isNull _roleado) exitWith{[]spawn{hint "Apunta a una persona";sleep 3;hint "";};};
-	
+
 _metros =  _roleador distance _roleado;
 if (_metros > 100) exitWith{hint "Maximo 100 metros para poder rolear";};
 //enviar hint al roleado 

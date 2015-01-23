@@ -1,6 +1,6 @@
 waitUntil {!isNull player};
 
-_precio = 50000;
+_precio = 250000;
 _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 
 
@@ -23,12 +23,13 @@ removevest _unit;
 removebackpack _unit;
 
 
- 
- 
- _unit addGoggles "G_Balaclava_Lowprofile"; 
 
-_unit  addVest "V_TacVest_blk";
+    
+      player addGoggles "G_Balaclava_Lowprofile"; 
+
+_unit  addVest "V_TacVestIR_blk";
 _unit  forceAddUniform "U_C_Scientist";
+
  
 _unit addWeapon 'Binocular';
 
@@ -40,7 +41,7 @@ _unit addItem "ItemGPS";
 _unit assignItem "ItemGPS";
 _unit addItem "ItemMap";
 _unit assignItem "ItemMap";
-_unit addItem "ItemCompass"; 
+_unit addItem "ItemCompass";
 _unit assignItem "ItemCompass"; 
 
 _unit  addWeapon "arifle_Katiba_C_ACO_pointer_snds_F";
@@ -51,12 +52,11 @@ _unit addMagazines ["30Rnd_65x39_caseless_green", 8];
 _unit  addItem "NVGoggles_OPFOR"; 
 _unit  assignItem "NVGoggles_OPFOR";
 
-
-_unit  addBackPack "B_Carryall_mcamo"; 
+_unit  addBackPack "B_AssaultPack_blk"; 
 mybackpack = unitBackpack _unit ;
-[[mybackpack,0,"#(rgb,8,8,3)color(0,0,0,1)"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 mybackpack addItemCargoGlobal ["Toolkit", 1]; 
 mybackpack addItemCargoGlobal ["FirstAidKit", 5];
+
 
 //solo para altis
 [true,"water",2] call life_fnc_handleInv;
