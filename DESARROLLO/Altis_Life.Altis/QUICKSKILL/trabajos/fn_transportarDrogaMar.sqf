@@ -28,7 +28,7 @@ while {_time > 0} do {
 
 	//avisar a la poli despues de 2 minutos
 	
-	if(_time == 60*8) then{
+	if(_time == 60*58) then{
 		//havisar al jugador;
 		hint "La policía te ha detectado!! Ten cuidado!!";
 		//enviar mensaje a la poli
