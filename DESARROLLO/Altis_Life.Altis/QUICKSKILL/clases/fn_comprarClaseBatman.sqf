@@ -23,8 +23,7 @@ removevest _unit;
 removebackpack _unit;
 
 
-_unit = player;
-    
+ 
  
  _unit addGoggles "G_Balaclava_Lowprofile"; 
 
@@ -58,7 +57,6 @@ mybackpack = unitBackpack _unit ;
 [[mybackpack,0,"#(rgb,8,8,3)color(0,0,0,1)"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 mybackpack addItemCargoGlobal ["Toolkit", 1]; 
 mybackpack addItemCargoGlobal ["FirstAidKit", 5];
-[[_unit,0,"textures\TRAJES\batman.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
 //solo para altis
 [true,"water",2] call life_fnc_handleInv;
