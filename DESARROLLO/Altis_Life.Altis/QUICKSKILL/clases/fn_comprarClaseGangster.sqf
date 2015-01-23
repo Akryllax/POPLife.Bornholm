@@ -62,7 +62,7 @@ mybackpack addItemCargoGlobal ["FirstAidKit", 2];
 [true,"redgull",2] call life_fnc_handleInv;
 
 //cargar skin globalmente
-[[_unit,0,"textures\TRAJES\mafioso.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+[[_unit,0,"textures\TRAJES\mafioso.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
 reload _unit;
 if(true) exitWith{hint "Clase Gangster equipada";[] spawn { sleep 5;hint "";} };
