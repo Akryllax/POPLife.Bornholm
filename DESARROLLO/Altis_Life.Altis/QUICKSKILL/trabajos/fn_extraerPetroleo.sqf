@@ -43,12 +43,13 @@ switch(true) do {
 	_ctrl = "petroleo";
     sleep 5;
     _itemWeight = 1 * 5;
-
+    _totalWeight = [life_trunk_vehicle] call life_fnc_vehicleWeight;
 	_veh_data = life_trunk_vehicle getVariable ["Trunk",[[],0]];
     _inv = _veh_data select 0;
-    
+
 
 	if(((_totalWeight select 1) + _itemWeight) > (_totalWeight select 0)) exitWith {hint "The vehicle is either full or cannot hold that much."};
+    if(!([false,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint "Couldn't remove the items from your inventory to put in the vehicle.";};
 
    
 	_index = [_ctrl,_inv] call TON_fnc_index;
