@@ -533,6 +533,14 @@ class Akryllax {
 		class say3DGlobal {};
 	};
 	
+	class MP
+	{
+		file = "core\AKR\mp";
+		class initRem {};
+		class rem {};
+		class remExec {};
+	};
+	
 	class Enfermedades
 	{
 		file = "core\enfermedades";

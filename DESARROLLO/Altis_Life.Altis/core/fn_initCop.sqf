@@ -23,20 +23,28 @@ if(!(str(player) in [""])) then {
 	};
 };
 
-
 player setVariable["rank",(__GETC__(life_coplevel)),true];
 [] call life_fnc_spawnMenu;
 
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
-player enableFatigue false; 
+player enableFatigue false;
 
+AKR_tiroAtiro = {
+
+	if((_this select 1) isEqualTo "hgun_P07_snds_F") then {
+		[] spawn {
+			player setAmmo ["hgun_P07_snds_F", 0];
+			sleep taserDelay;
+			
+			player setAmmo ["hgun_P07_snds_F", 1];
+		};
+	};
+};
+player addEventHandler ["Fired", "_this call AKR_tiroAtiro"];
 
 //poner uniforme
 [] call life_fnc_copUniform;
-
-
-
 
 if(__GETC__(life_adminlevel) > 0) then {
 	adminChannel radioChannelAdd [player];

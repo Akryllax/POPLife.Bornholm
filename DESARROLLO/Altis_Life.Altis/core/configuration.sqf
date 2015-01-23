@@ -94,6 +94,10 @@ life_my_gang = ObjNull;
 
 life_vehicles = [];
 bank_robber = [];
+
+//COPS
+taserDelay = 1;
+
 switch (playerSide) do
 {
 	case west:
