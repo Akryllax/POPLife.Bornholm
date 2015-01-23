@@ -324,10 +324,6 @@ sell_array =
 ];
 __CONST__(sell_array,sell_array);
 
-_medicDiscount = 1;
-if(side player == independent) then{
-	_medicDiscount = 0.1;
-};
 
 buy_array =
 [
@@ -367,6 +363,7 @@ buy_array =
 	["medicCalor", 10000 * _medicDiscount],
 	["medicAntibiotico", 25000 * _medicDiscount],
 	["medicAnticuerpos", 50000 * _medicDiscount],
+	
 	["semillasMaria",2500],
 	["semillasCoca",50000],
 	["semillasMaiz",1000],

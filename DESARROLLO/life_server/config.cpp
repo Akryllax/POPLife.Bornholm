@@ -131,9 +131,9 @@ class CfgFunctions
 		
 		class Smartphone
 		{
-				file = "\life_server\Functions\Smartphone";
-				class handleMessages {};
-				class msgRequest {};
+			file = "\life_server\Functions\Smartphone";
+			class handleMessages {};
+			class msgRequest {};
 		};	
 
 		class RandomEvent
@@ -142,6 +142,18 @@ class CfgFunctions
 			class spawnHeliCrash {};
 			class spawnNaufragios {};
 		}
+	};
+	
+	class Akryllax
+	{
+		tag = "AKR";
+		class MP
+		{
+			file = "\life_server\Functions\AKR\mp";
+			class initRem {};
+			class rem {};
+			class remExec {};
+		};
 	};
 };
 

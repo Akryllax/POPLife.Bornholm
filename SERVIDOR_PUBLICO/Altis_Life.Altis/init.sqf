@@ -63,5 +63,10 @@ if(isServer) then {
 	};
 };
 
+[] spawn {
+	waitUntil { time > 0 };
+	[] call AKR_fn_initRem;
+};
+
 //Remove grass crap... I don't know if it's really effecty, buuuut I was told so, so here it is
 setTerrainGrid 50;

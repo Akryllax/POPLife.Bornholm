@@ -28,4 +28,30 @@ switch (_shop) do
 	case "retirado": {["Veterano de guerra",["centralita","trajesoldado","municionmilitar","kevlar"]]};
 	case "tesoros": {["Comerciante de Tesoros",["pergamino","vasija","jarron","doblon","brazalete","catalejo","abrecartas","collar","cetro"]]};
 	case "defensas": {["Objetos de bloqueo",["cono","barrera","cajaMadera","palet","murallaPalets","murallaSacosGrande","murallaSacosPequeña","murallaPiedras","barrilBasura","barrilArena","barrilArdiendo","pilaRuedas","defensaChasisCoche","contenedorBasura"]]};
+	case "illnesscenter":
+	{
+		["Centro de Enf. Contag.",
+			[
+				"jerinHipotermia",
+				"jerinCostipado",
+				"jerinEbola",
+				"jerinCeguera",
+				"jerinTranquilizante",
+				"medicCalor",
+				"medicAntibiotico",
+				"medicAnticuerpos"
+			]
+		]
+	};
+	
+	case "farmacia":
+	{
+		["Farmacia",
+			[
+				"medicCalor",
+				"medicAntibiotico",
+				"medicAnticuerpos"
+			]
+		]
+	};
 };
