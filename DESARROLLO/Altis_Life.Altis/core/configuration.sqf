@@ -365,9 +365,9 @@ buy_array =
 	["jerinEbola", 45000],
 	["jerinCeguera", 10000],
 	["jerinTranquilizante", 5000],
-	["medicCalor", 10000 * _medicDiscount],
-	["medicAntibiotico", 25000 * _medicDiscount],
-	["medicAnticuerpos", 50000 * _medicDiscount],
+	["medicCalor", 10000],
+	["medicAntibiotico", 25000],
+	["medicAnticuerpos", 50000],
 	
 	["semillasMaria",2500],
 	["semillasCoca",50000],
