@@ -518,6 +518,7 @@ class Quickskill
 		class seguridadPrivada{};
 		class extraerPetroleo{};
 		class comprarBarcoPetroleo{};
+		class transportarDrogaMar{};
 		
 	};
 };

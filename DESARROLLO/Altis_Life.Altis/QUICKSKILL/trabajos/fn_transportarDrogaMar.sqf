@@ -153,6 +153,8 @@ private["_coche"];
 _precio = 500000;
 _jugador = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 _gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
+ _id = _this select 2; 
+
 
 if(isNull _jugador) exitWith {}; //if not the thief get bent
 
@@ -160,6 +162,8 @@ if(isNull _jugador) exitWith {}; //if not the thief get bent
  if(life_cash - _precio < 0) exitWith { hint "No tienes suficiente dinero";[] spawn { sleep 5;hint "";} };
 
 life_cash = life_cash-_precio;
+
+ _gen removeAction _id;
 
 //crear coche
 [_gen,_jugador] spawn { 
@@ -177,6 +181,7 @@ hint "Cuidado si no llegas a tu destino no te pagarameos nada!!";
 sleep 3;
 hint "";
 
-
+sleep 60 *5:
+_gen addAction["Transportar Droga para el Narco 500000$ - Ganancia: 350000$",QUICK_fnc_TransportarDrogaMar];
 
 };
