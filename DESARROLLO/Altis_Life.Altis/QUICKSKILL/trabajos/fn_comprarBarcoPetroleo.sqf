@@ -23,7 +23,4 @@ life_vehicles pushBack _coche;
 
 _coche addAction["Extraer Petroleo", QUICK_fnc_extraerPetroleo,_coche];
 
-
-
-
 };

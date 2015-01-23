@@ -11,8 +11,6 @@ if(isNull _unit) exitWith {}; //if not the thief get bent
 
 //equipar clase
 
-
-
 life_cash = life_cash-_precio;
 
 removeAllWeapons _unit;
