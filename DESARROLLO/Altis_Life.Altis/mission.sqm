@@ -2171,7 +2171,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""<t color='#ADFF2F'>Mercadona</t>"",life_fnc_virt_menu,""market""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Mercenarios"",life_fnc_weaponShopMenu,""merc""]; this addAction[""<t color='#ADFF2F'>Mercadona</t>"",life_fnc_virt_menu,""market""];";
 					syncId=0;
 					synchronizations[]={2};
 				};
