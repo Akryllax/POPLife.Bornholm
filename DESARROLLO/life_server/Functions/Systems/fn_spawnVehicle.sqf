@@ -89,9 +89,7 @@ if(typeName _sp == "STRING") then {
 	_vehicle setDir _dir;
 };
 _vehicle allowDamage true;
-if _vehicle == "C_SUV_O1_F" then{
-_vehicle setCenterOfMass [-0.010813,-0.506166,-0.557481];
-};
+
 //Send keys over the network.
 [[_vehicle],"life_fnc_addVehicle2Chain",_unit,false] spawn life_fnc_MP;
 [_pid,_side,_vehicle,1] call TON_fnc_keyManagement;
