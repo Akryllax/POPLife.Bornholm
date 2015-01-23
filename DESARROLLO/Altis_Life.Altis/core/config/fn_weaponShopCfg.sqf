@@ -453,7 +453,7 @@ switch(_shop) do
 			]
 		];
 	};
-};
+
 
     case "merc":
 	{
@@ -570,5 +570,7 @@ switch(_shop) do
 						["optic_LRPS",nil,5000]
 					]
 				];
-		};
-	};
+		     };
+	     };
+     };
+  };
