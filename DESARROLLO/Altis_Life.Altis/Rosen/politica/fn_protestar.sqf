@@ -15,7 +15,7 @@ private ["_sign"];
 	titleText["¡Revolucion!","PLAIN"];
 	_sign = "Land_Poster_04_F" createVehicle [0,0,0];
 	_sign allowDamage false;
-	_sign enableSimulation false;
+	_sign enableSimulationGlobal false;
 	_sign attachTo [player, [0,0,0.6], "righthand"];
 	_sign setVectorUp [0,90,-1];
 	//espera 20 segundos;
