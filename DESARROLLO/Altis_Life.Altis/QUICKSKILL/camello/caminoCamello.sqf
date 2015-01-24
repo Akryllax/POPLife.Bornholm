@@ -3,7 +3,7 @@ camello con rutas random el script de ica tenia las rutas  fijas...
 by ica
 edited by quickskill
 */
-sleep 5;
+sleep 5*60;
 ruta[0] = (group camello) addWaypoint [(getMarkerPos "camello1"), 0];
 _marcador[0] = getMarkerPos "camello1";
 ruta[1] = (group camello) addWaypoint [(getMarkerPos "camello2"), 0];
