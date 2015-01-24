@@ -11,7 +11,7 @@ class Chop_Shop
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			x = 0.1; y = 0.2;
-			w = 0.32; h = (1 / 25);
+			w = 0.48; h = (1 / 25);
 		};
 		
 		class MainBackGround : Life_RscText
@@ -19,7 +19,7 @@ class Chop_Shop
 			colorBackground[] = {0,0,0,0.7};
 			idc = -1;
 			x = 0.1; y = 0.2 + (11 / 250);
-			w = 0.32; h = 0.6 - (22 / 250);
+			w = 0.48; h = 0.6 - (22 / 250);
 		};
 		
 		class Title : Life_RscTitle
@@ -28,7 +28,7 @@ class Chop_Shop
 			idc = -1;
 			text = "$STR_ChopShop_Title";
 			x = 0.1; y = 0.2;
-			w = 0.32; h = (1 / 25);
+			w = 0.48; h = (1 / 25);
 		};
 		
 		class priceInfo : Life_RscStructuredText
@@ -49,7 +49,7 @@ class Chop_Shop
 			onLBSelChanged = "_this call life_fnc_chopShopSelection";
 			sizeEx = 0.04;
 			x = 0.11; y = 0.25;
-			w = 0.3; h = 0.38;
+			w = 0.40; h = 0.38;
 		};
 		
 		class BtnSell : Life_RscButtonMenu

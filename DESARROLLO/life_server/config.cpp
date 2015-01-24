@@ -164,7 +164,7 @@ class CfgFunctions
     	class Funciones
     	{
     		file = "\life_server\Functions\WarBlast";
-    		class muerteVehiculo {};
+    		class muerteVehiculos {};
     	};
     };
 };
