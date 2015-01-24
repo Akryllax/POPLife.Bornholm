@@ -20452,36 +20452,36 @@ class Mission
 			position[]={3977.6843,18.271051,13622.379};
 			name="Camello1";
 			text="Las 3000 ";
-			type="Empty";
+			type="mil_warning";
 			colorName="ColorRed";
-			angle=35.1469;
+			angle=-28.088648;
 		};
 		class Item319
 		{
 			position[]={6623.2563,37.30872,15349.003};
 			name="Camello2";
 			text="Cañada Real";
-			type="Empty";
+			type="mil_warning";
 			colorName="ColorRed";
-			angle=85.849503;
+			angle=358.62021;
 		};
 		class Item320
 		{
 			position[]={8830.3945,102.4867,15782.05};
 			name="Camello3";
 			text="Las Barranquillas";
-			type="Empty";
+			type="mil_warning";
 			colorName="ColorRed";
-			angle=122.23;
+			angle=364.17276;
 		};
 		class Item321
 		{
 			position[]={14032.314,16.550854,16409.357};
 			name="Camello4";
 			text="Los Junquillos";
-			type="Empty";
+			type="mil_warning";
 			colorName="ColorRed";
-			angle=35.1469;
+			angle=3.9269741;
 		};
 	};
 	class Sensors
