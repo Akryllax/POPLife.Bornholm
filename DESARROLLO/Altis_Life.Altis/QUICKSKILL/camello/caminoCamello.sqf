@@ -70,7 +70,7 @@ _ruta4 = (group camello) addWaypoint [(getMarkerPos "camello4"), 0];
 _marcador4 = getMarkerPos "camello4";
 
 //mover al camello
-_ruta4 setWaypointType "MOVE";+
+_ruta4 setWaypointType "MOVE";
 _ruta4 setWaypointBehaviour "CARELESS";
 _ruta4 setWaypointSpeed "FULL";
 waitUntil {(camello distance _marcador4) < 30};
