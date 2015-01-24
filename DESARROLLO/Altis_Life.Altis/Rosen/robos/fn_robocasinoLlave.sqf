@@ -22,7 +22,7 @@ disableSerialization;
 
 if (currentWeapon _ladron == "") exitWith { hint "Consigue un arma para robar.";};
 
-[[1,format["Robo en curso | Se esta produciendo un atraco en el casino.]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; 
+[[1,format["Robo en curso | Se esta produciendo un atraco en el casino."]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; 
 
 [[getPlayerUID _ladron,name _ladron,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
