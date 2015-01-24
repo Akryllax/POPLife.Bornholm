@@ -41,11 +41,6 @@
 	
 	  };//end funcion ponerItem
 
-
-
-
-
-
 /*
 	poner objetos!!! script  by quick !!!! xD
 */
