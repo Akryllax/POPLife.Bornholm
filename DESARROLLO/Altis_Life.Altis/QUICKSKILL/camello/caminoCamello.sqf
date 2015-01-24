@@ -12,7 +12,7 @@ ruta[2] = (group camello) addWaypoint [(getMarkerPos "camello3"), 0];
 _marcador[2] = getMarkerPos "camello3";
 ruta[3] = (group camello) addWaypoint [(getMarkerPos "camello4"), 0];
 _marcador[3] = getMarkerPos "camello4";
-_RandomRuta = round random 3 ;
+_RandomRuta = round random 4 ;
 ruta[_RandomRuta] setWaypointType "MOVE";
 ruta[_RandomRuta] setWaypointBehaviour "CARELESS";
 ruta[_RandomRuta] setWaypointSpeed "FULL";
