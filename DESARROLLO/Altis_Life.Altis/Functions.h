@@ -438,6 +438,7 @@ class WarBlast
     	file = "WarBlast\Civiles";
     	class civMarkers {};
     	class InteractionMenu {};
+    	class robarVehiculo {};
     };
  	class DynamicMap
 	{
