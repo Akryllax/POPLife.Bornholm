@@ -39,6 +39,7 @@ life_is_alive = true;
 life_civ_position = nil;
 life_esposas = ObjNull;
 life_llaveesposas = ObjNull;
+life_protestando = false;
 
 
 

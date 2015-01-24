@@ -522,6 +522,14 @@ class Quickskill
 		
 	};
 };
+class Rosen {
+	tag = "ROS";
+	class politica
+	{
+		file = "Rosen\politica";
+		class protestar{};
+	};
+}
 
 class Akryllax {
 	tag = "AKR";
