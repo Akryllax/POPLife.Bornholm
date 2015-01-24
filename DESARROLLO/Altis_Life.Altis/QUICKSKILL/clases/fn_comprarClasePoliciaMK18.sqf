@@ -11,7 +11,7 @@ if(isNull _unit) exitWith {}; //if not the thief get bent
 
 
  //nivel de poli
- if(__GETC__(life_coplevel) < 6) exitWith { hint "No eres poli";[] spawn { sleep 5;hint "";} };
+ if(__GETC__(life_coplevel) < 6) exitWith { hint "No eres poli";[] spawn { sleep 5;hint "";}; };
 
 
 //equipar clase poli
