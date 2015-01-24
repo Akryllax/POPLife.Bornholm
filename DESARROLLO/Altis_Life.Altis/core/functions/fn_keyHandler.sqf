@@ -67,7 +67,8 @@ switch (_code) do
 		{
 			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
-			case civilian: {if(!visibleMap) then {[] spawn life_fnc_civMarkers;}};
+			case civilian: {if(!visibleMap) then {[] spawn War_fnc_civMarkers;}};
+			case opfor: {ifr(!visibleMap) then {[] spawn War_fnc_mercMarkers;}};
 		};
 	};
 
@@ -101,6 +102,13 @@ switch (_code) do
 		};
 	};
 
+  // O, abrelatas
+        case 24:
+	{
+		if (!_shift && !_alt && !_ctrlKey  && (vehicle player != player)) then {
+			[] call War_fnc_abrelatas;
+		};
+	};
 	//Restraining (Shift + R)
 	case 19:
     {

@@ -425,6 +425,12 @@ class WarBlast
     {
     	file = "WarBlast";
     	class emptyFuel {};
+    	class abrelatas {};
+    };
+    class Mercenarios
+    {
+    	file ="WarBlast\Merc";
+    	class mercMarkers {};
     };
     class Civiles
     {
