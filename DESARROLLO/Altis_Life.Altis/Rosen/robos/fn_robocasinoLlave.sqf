@@ -53,7 +53,7 @@ while {_time > 0} do {
 	};
 
 	if(_rango < _distancia_robo) then {
-		_time = _time - 1;  
+		_tiempo = _tiempo - 1;  
 		hintSilent format["Tiempo restante: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_rango),_distancia_robo];	
 		sleep 1;
 		_exito = true;
@@ -68,7 +68,7 @@ if(_tiempo < 1) then {
 	if(true) exitWith{[]spawn { sleep 1;hint "";} };
 };
 
-deleteMarker "marcocasino";
+deleteMarker "marcadorcasino";
 
 _pos = position _ladron; 
  _marcador = createMarker ["marcadorcasinof", _pos]; 
@@ -78,5 +78,5 @@ _pos = position _ladron;
 sleep 60;
 deleteMarker "marcadorcasinof";
 sleep 60*10;
-_robar = _crupier addAction["Robar llave de la caja fuerte","robos\robo_hotel.sqf"];	
+_robar = _crupier addAction["Robar llave de la caja fuerte","Rosen\robos\robocasinoLlave.sqf"];	
 _crupier switchMove " ";

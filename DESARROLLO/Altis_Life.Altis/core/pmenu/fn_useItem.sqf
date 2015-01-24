@@ -205,6 +205,11 @@ switch (true) do
 		};
 	};
 	
+	case (_item == "llavecasino"):
+	{
+		["llavecasino"] spawn ROS_fnc_llavecasino;
+	};
+	
 	default
 	{
 		hint localize "STR_ISTR_NotUsable";
