@@ -238,7 +238,7 @@ switch (_code) do
 				};
 			};
 		};
-		if(playerSide in [civilian] then {
+		if (playerSide == civilian) then {
 			[] call ROS_fnc_protestar;
 		};
 	};
