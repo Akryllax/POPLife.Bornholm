@@ -1,3 +1,4 @@
+#include <macro.h>
 waitUntil {!isNull player};
 
 _precio = 20000;
