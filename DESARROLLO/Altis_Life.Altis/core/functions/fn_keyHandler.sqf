@@ -239,7 +239,7 @@ switch (_code) do
 			};
 		};
 		if(playerSide in [civilian] then {
-			[] call life_fnc_protestar;
+			[] call ROS_fnc_protestar;
 		};
 	};
 	//U Key
