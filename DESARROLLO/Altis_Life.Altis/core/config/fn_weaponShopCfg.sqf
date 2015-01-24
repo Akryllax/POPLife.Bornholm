@@ -29,8 +29,7 @@ switch(_shop) do
 			{
 				["Tienda general de policia",
 					[
-						["hgun_P07_snds_F","Taser",1000],
-						["16Rnd_9x21_Mag",nil,25],
+						["hgun_P07_snds_F",nil,1000],
 						["SMG_02_F",nil,15000],
 						["30Rnd_9x21_Mag",nil,50],
 						["Binocular",nil,150],
@@ -49,10 +48,11 @@ switch(_shop) do
 		    {
 				["Tienda locales",
 					[
-						["hgun_P07_snds_F","Taser",1000],
-						["16Rnd_9x21_Mag",nil,25],
+						["hgun_P07_snds_F",nil,1000],
 						["SMG_02_F",nil,15000],
 						["30Rnd_9x21_Mag",nil,50],
+						["arifle_Mk20C_F",nil,19000],
+						["30Rnd_556x45_Stanag",nil,75],
 						["Binocular",nil,150],
 						["Rangefinder",nil,500],
 						["ItemGPS",nil,100],
@@ -71,10 +71,11 @@ switch(_shop) do
 		    {
 				["Tienda nacionales",
 					[
-						["hgun_P07_snds_F","Taser",1000],
-						["16Rnd_9x21_Mag",nil,25],
+						["hgun_P07_snds_F",nil,1000],
 						["SMG_02_F",nil,15000],
 						["30Rnd_9x21_Mag",nil,50],
+						["arifle_Mk20C_F",nil,19000],
+						["30Rnd_556x45_Stanag",nil,75],
 						["Binocular",nil,150],
 						["Rangefinder",nil,500],
 						["ItemGPS",nil,100],
@@ -97,7 +98,7 @@ switch(_shop) do
 		   {
 				["Tienda nacionales",
 					[
-						["hgun_P07_snds_F","Taser",1000],
+						["hgun_P07_snds_F",nil,1000],
 						["16Rnd_9x21_Mag",nil,25],
 						["SMG_02_F",nil,15000],
 						["30Rnd_9x21_Mag",nil,50],
@@ -124,7 +125,7 @@ switch(_shop) do
 		    {
 				["Tienda nacionales",
 					[
-						["hgun_P07_snds_F","Taser",1000],
+						["hgun_P07_snds_F",nil,1000],
 						["16Rnd_9x21_Mag",nil,25],
 						["SMG_02_F",nil,15000],
 						["30Rnd_9x21_Mag",nil,50],
@@ -140,6 +141,7 @@ switch(_shop) do
 						["optic_ACO_smg",nil,300],
 						["arifle_MXC_F",nil,25000],
 						["arifle_MX_F",nil,30000],
+						["arifle_MXM_F",nil,40000],
 						["30Rnd_65x39_caseless_mag",nil,100],
 						["optic_Hamr",nil,600],
 						["optic_DMS",nil,1000],
@@ -170,13 +172,14 @@ switch(_shop) do
 						["optic_ACO_smg",nil,300],
 						["arifle_MXC_F",nil,25000],
 						["arifle_MX_F",nil,30000],
+						["arifle_MXM_F",nil,40000],
 						["30Rnd_65x39_caseless_mag",nil,100],
 						["optic_Hamr",nil,600],
 						["optic_DMS",nil,1000],
 						["srifle_DMR_01_F",nil,40000],
 						["10Rnd_762x51_Mag",nil,200],
                         ["optic_SOS",nil,4000],
-                        ["srifle_EBR_DMS_F",nil,50000],
+                        ["srifle_EBR_F",nil,50000],
                         ["20Rnd_762x51_Mag",nil,300],
                         ["SMG_01_F",nil,20000],
                         ["30Rnd_45ACP_Mag_SMG_01",nil,100],
@@ -205,6 +208,7 @@ switch(_shop) do
 						["optic_ACO_smg",nil,300],
 						["arifle_MXC_F",nil,25000],
 						["arifle_MX_F",nil,30000],
+						["arifle_MXM_F",nil,40000],
 						["muzzle_snds_H",nil,1500],
 						["30Rnd_65x39_caseless_mag",nil,100],
 						["optic_Hamr",nil,600],
@@ -213,14 +217,12 @@ switch(_shop) do
 						["muzzle_snds_B",nil,2000],
 						["10Rnd_762x51_Mag",nil,200],
                         ["optic_SOS",nil,4000],
-                        ["srifle_EBR_DMS_F",nil,50000],
+                        ["srifle_EBR_F",nil,50000],
                         ["muzzle_snds_B",nil,2500],
                         ["20Rnd_762x51_Mag",nil,300],
                         ["SMG_01_F",nil,20000],
                         ["30Rnd_45ACP_Mag_SMG_01",nil,100],
                         ["muzzle_snds_acp",nil,300],
-                        ["arifle_MX_SW_Black_F",nil,50000],
-                        ["100Rnd_65x39_caseless_mag",nil,300],
                         ["arifle_MX_SW_Black_F",nil,50000],
                         ["100Rnd_65x39_caseless_mag",nil,300],
                         ["srifle_LRR_F",nil,100000],
@@ -253,6 +255,7 @@ switch(_shop) do
 						["arifle_MXC_F",nil,25000],
 						["arifle_MX_F",nil,30000],
 						["arifle_MX_GL_F",nil,35000],
+						["arifle_MXM_F",nil,40000],
 						["muzzle_snds_H",nil,1500],
 						["30Rnd_65x39_caseless_mag",nil,100],
 						["optic_Hamr",nil,600],
@@ -261,7 +264,7 @@ switch(_shop) do
 						["muzzle_snds_B",nil,2000],
 						["10Rnd_762x51_Mag",nil,200],
                         ["optic_SOS",nil,4000],
-                        ["srifle_EBR_DMS_F",nil,50000],
+                        ["srifle_EBR_F",nil,50000],
                         ["muzzle_snds_B",nil,2500],
                         ["20Rnd_762x51_Mag",nil,300],
                         ["SMG_01_F",nil,20000],
@@ -573,7 +576,7 @@ switch(_shop) do
 		     };
 	     };
      };
-	 
+
 	case "cazarrecompensas":
 	{
 		switch(true) do
