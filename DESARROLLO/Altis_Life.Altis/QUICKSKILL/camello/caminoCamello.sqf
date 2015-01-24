@@ -59,7 +59,7 @@ waitUntil {(camello distance _marcador3) < 30};
 
 };
 
-if(_RandomRuta == 4)then {
+if(_RandomRuta == 4 || _RandomRuta== 5)then {
 
 //mover al camello
 _ruta4 setWaypointType "MOVE";
@@ -69,18 +69,6 @@ waitUntil {(camello distance _marcador4) < 30};
 
 };
 
-if(_RandomRuta == 5)then {
-
-_ruta4 = (group camello) addWaypoint [(getMarkerPos "Camello4"), 0];
-_marcador4 = getMarkerPos "camello4";
-
-//mover al camello
-_ruta4 setWaypointType "MOVE";
-_ruta4 setWaypointBehaviour "CARELESS";
-_ruta4 setWaypointSpeed "FULL";
-waitUntil {(camello distance _marcador4) < 30};
-
-};
 
 _camelloMuevete = execVM "QUICKSKILL\camello\caminoCamello.sqf";
 
