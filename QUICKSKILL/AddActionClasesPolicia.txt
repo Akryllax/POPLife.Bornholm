@@ -1,0 +1,8 @@
+this enableSimulation false;  this allowDamage false;        
+this addAction["Equipar Clase Sting  16000$",QUICK_fnc_comprarClasePoliciaSting];
+this addAction["Equipar Clase MK20  20000$",QUICK_fnc_comprarClasePoliciaMK20];
+this addAction["Equipar Clase MXC  28000$",QUICK_fnc_comprarClasePoliciaMXC];    
+this addAction["Equipar Clase MX  33000$",QUICK_fnc_comprarClasePoliciaMX];  
+this addAction["Equipar Clase MXM  44000$",QUICK_fnc_comprarClasePoliciaMXM];    
+this addAction["Equipar Clase MK18  58000$",QUICK_fnc_comprarClasePoliciaMK18];
+this addAction["Equipar Clase MXSW  58000$",QUICK_fnc_comprarClasePoliciaMXSW];          
