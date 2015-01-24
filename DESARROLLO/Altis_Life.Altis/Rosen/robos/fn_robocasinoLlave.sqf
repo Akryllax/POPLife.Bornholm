@@ -4,10 +4,9 @@
 	Descripción: Robo del casino custom
 */
 
-private ["tiempo","_dinero","_distancia","_policias","_nombre","exito"];
+private ["tiempo","_dinero","_distancia","_nombre","exito"];
 _tiempo = 60 * 10;
 _distancia_robo = 50;
-_policias = 4;
 _nombre = "casino";
 _exito = false;
 
@@ -18,14 +17,14 @@ _ladron = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _robar = [_this,2] call BIS_fnc_param;
 
 _minpolicias= (west countSide playableUnits);
-if(_minpolicias < _policias) exitWith{[["",-1],"disableSerialization;",false,false] spawn life_fnc_MP; hint "No hay suficientes policias conectados (6)";};
+if(_minpolicias < 6) exitWith{[["",-1],"disableSerialization;",false,false] spawn life_fnc_MP; hint "No hay suficientes policias conectados (6)";};
 disableSerialization;
 
 if (currentWeapon _ladron == "") exitWith { hint "Consigue un arma para robar.";};
 
 [[1,format["Robo en curso | Se esta produciendo un atraco en el casino.]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; 
 
-[[getPlayerUID _ladron,name _ladron,"1"],"life_fnc_wantedAddP",false,false] spawn life_fnc_MP;
+[[getPlayerUID _ladron,name _ladron,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
 
 _vendedor removeAction _action;
