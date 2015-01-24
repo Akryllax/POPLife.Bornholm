@@ -143,7 +143,7 @@ class CfgFunctions
 			  file = "\life_server\Functions\WarBlast";
 			class spawnHeliCrash {};
 			class spawnNaufragios {};
-		}
+		};
 	};
 	
 	class Akryllax
