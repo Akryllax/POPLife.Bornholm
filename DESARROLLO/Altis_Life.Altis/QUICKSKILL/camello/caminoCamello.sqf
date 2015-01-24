@@ -22,7 +22,7 @@ _marcador1 = getMarkerPos "camello1";
 _ruta1 setWaypointType "MOVE";
 _ruta1 setWaypointBehaviour "CARELESS";
 _ruta1 setWaypointSpeed "FULL";
-waitUntil {(camello distance _marcador1 < 30};
+waitUntil {(camello distance _marcador1) < 30};
 
 };
 
@@ -35,7 +35,7 @@ _marcador1 = getMarkerPos "camello2";
 _ruta2 setWaypointType "MOVE";
 _ruta2 setWaypointBehaviour "CARELESS";
 _ruta2 setWaypointSpeed "FULL";
-waitUntil {(camello distance _marcador2 < 30};
+waitUntil {(camello distance _marcador2) < 30};
 
 };
 
@@ -47,10 +47,10 @@ _marcador3 = getMarkerPos "camello3";
 _ruta3 setWaypointType "MOVE";
 _ruta3 setWaypointBehaviour "CARELESS";
 _ruta3 setWaypointSpeed "FULL";
-waitUntil {(camello distance _marcador3 < 30};
+waitUntil {(camello distance _marcador3) < 30};
 
 };
-
++
 if(_RandomRuta == 4)then {
 
 _ruta4 = (group camello) addWaypoint [(getMarkerPos "camello4"), 0];
@@ -60,7 +60,7 @@ _marcador4 = getMarkerPos "camello4";
 _ruta4 setWaypointType "MOVE";
 _ruta4 setWaypointBehaviour "CARELESS";
 _ruta4 setWaypointSpeed "FULL";
-waitUntil {(camello distance _marcador4 < 30};
+waitUntil {(camello distance _marcador4) < 30};
 
 };
 
@@ -70,10 +70,10 @@ _ruta4 = (group camello) addWaypoint [(getMarkerPos "camello4"), 0];
 _marcador4 = getMarkerPos "camello4";
 
 //mover al camello
-_ruta4 setWaypointType "MOVE";
+_ruta4 setWaypointType "MOVE";+
 _ruta4 setWaypointBehaviour "CARELESS";
 _ruta4 setWaypointSpeed "FULL";
-waitUntil {(camello distance _marcador4 < 30};
+waitUntil {(camello distance _marcador4) < 30};
 
 };
 
