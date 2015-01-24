@@ -56,7 +56,7 @@ _type = _queryResult select 0;
 		case "27": {_x = "Posesion de armas ilegales"};
 		case "28": {_x = "Robo de Vehiculo"};
 		case "485": {_x = "Intento de soltar esposas"};
-		case "486": {_x = "Escape de esposas"}
+		case "486": {_x = "Escape de esposas"};
 
 	};
 	_crimesArr pushBack _x;
