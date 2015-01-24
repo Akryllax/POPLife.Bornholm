@@ -1,0 +1,1 @@
+[player] execVM "scripts\groupsMenu\initGroups.sqf";
