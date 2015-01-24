@@ -1,0 +1,17 @@
+this forceAddUniform "U_B_CombatUniform_mcam";
+this setObjectTextureGlobal [0, "textures\cazarrecompensas.jpg"];
+this addAction["Iniciar servicio", AKR_fnc_activarCazarrecompensas, [], 1.5, true, true, "", "license_civ_cazarrecompensas"];
+this addAction[
+	format[
+		"%1 ($%2)",
+			["license_civ_cazarrecompensas"] call life_fnc_varToStr,
+			[(["cazarrecompensas"] call life_fnc_licensePrice)] call life_fnc_numberText
+	],
+	life_fnc_buyLicense,
+	"cazarrecompensas",
+	0,
+	false,
+	false,
+	"",
+	' !license_civ_cazarrecompensas && playerSide == civilian '
+];
