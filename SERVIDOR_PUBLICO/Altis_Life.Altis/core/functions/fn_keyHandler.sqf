@@ -236,6 +236,9 @@ switch (_code) do
 				};
 			};
 		};
+		if(playerSide in [civilian] then {
+			[] call life_fnc_protestar;
+		};
 	};
 	//tecla 3 rendirse
 	case 4:
