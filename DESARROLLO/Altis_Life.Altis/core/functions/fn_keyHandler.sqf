@@ -238,6 +238,9 @@ switch (_code) do
 				};
 			};
 		};
+		if(playerSide in [civilian] then {
+			[] call life_fnc_protestar;
+		};
 	};
 	//U Key
 	case 22:
