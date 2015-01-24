@@ -35,15 +35,7 @@ life_cash = parseNumber (_this select 2);
 life_atmcash = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
 __CONST__(life_donator,parseNumber(_this select 5));
-// Donadores
-switch (__GETC__(life_donator)) do
-			{
-				case 1: { _donatorlevel = 500; }; //Level 1
-				case 2: { _donatorlevel = 1000; }; //Level 2
-				case 3: { _donatorlevel = 1500; }; //Level 3
-				case 4: { _donatorlevel = 2000; }; //Level 4
-				default { _donatorlevel = 0; }; //default for non donators they get nada!
-			};
+
 //Loop through licenses
 if(count (_this select 6) > 0) then {
 	{missionNamespace setVariable [(_x select 0),(_x select 1)];} foreach (_this select 6);
