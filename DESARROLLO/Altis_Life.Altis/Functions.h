@@ -529,7 +529,7 @@ class Rosen {
 		file = "Rosen\politica";
 		class protestar{};
 	};
-}
+};
 
 class Akryllax {
 	tag = "AKR";
