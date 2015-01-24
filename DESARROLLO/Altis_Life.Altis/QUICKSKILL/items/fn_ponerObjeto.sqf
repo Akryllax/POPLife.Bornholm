@@ -64,10 +64,10 @@ if(([false,_type,1] call life_fnc_handleInv)) then {
 		case "barrilArena": {"Land_BarrelSand_grey_F"};		
 		case "barrilArdiendo": {"MetalBarrel_burning_F"};
 		case "pilaRuedas ": {"Land_Tyres_F"};
-		case "defensaChasisCoche": {" Land_Wreck_Skodovka_F"};
+		case "defensaChasisCoche": {"Land_Wreck_Skodovka_F"};
 		case "contenedorBasura": {"Land_GarbageContainer_open_F"};
 	};
-     _name = "Land_BagFence_Long_F";
+   
 	_object = createVehicle [_name, [0,0,0], [], 0, "NONE"]; 
 	_object enableSimulation false;
 	_object attachTo[player,[0,2,1]];
