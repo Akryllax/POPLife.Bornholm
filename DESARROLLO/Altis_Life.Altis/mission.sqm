@@ -5115,13 +5115,13 @@ class Mission
 				class Item0
 				{
 					position[]={3982.9365,18.525099,13623.554};
-					azimut=3647.4983;
+					azimut=3647.5;
 					id=265;
 					side="CIV";
 					vehicle="C_Offroad_01_F";
 					leader=1;
 					skill=0.60000002;
-					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Drug Dealer"",life_fnc_virt_menu,""heroin"",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == civilian ']; this addAction[""Question Dealer"",life_fnc_questionDealer,"""",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == west && !life_action_inUse ']; camello = this;  _camelloMuevete = execVM ""QUICKSKILL\camello\caminoCamello.sqf"";";
+					init="removeAllWeapons this; this allowDamage false;  this addAction[""Drug Dealer"",life_fnc_virt_menu,""heroin"",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == civilian ']; this addAction[""Question Dealer"",life_fnc_questionDealer,"""",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == west && !life_action_inUse ']; camello = this;  _camelloMuevete = execVM ""QUICKSKILL\camello\caminoCamello.sqf"";";
 				};
 			};
 		};
