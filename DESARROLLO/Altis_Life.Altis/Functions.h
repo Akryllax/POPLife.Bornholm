@@ -459,6 +459,13 @@ class Quickskill
         class comprarClaseTerroristaSniper {};
         class comprarClaseEspia{};
         class comprarClaseCocheBomba {};
+        class comprarClasePoliciaSting {};
+        class comprarClasePoliciaMK20 {};
+        class comprarClasePoliciaMXC {};
+        class comprarClasePoliciaMX {};
+        class comprarClasePoliciaMXM {};
+        class comprarClasePoliciaMK18 {};
+        class comprarClasePoliciaMXSW {};
 	};
 
      class Plantar
