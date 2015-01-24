@@ -18,10 +18,20 @@ _fnc_muevete = {
         if ((camello distance (getMarkerPos _sitios)) < 30) exitWith {};
         sleep 2;
     };
+
+    camello spawn {
+    _this lock 2;
+    _this setFuel 1;   
+    };
   
     sleep (60 * 15);
 
     call _fnc_muevete;
+};
+
+camello spawn {
+    _this lock 2;
+    _this setFuel 1;   
 };
 
 [] call _fnc_muevete;
