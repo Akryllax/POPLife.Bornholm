@@ -2,6 +2,9 @@
 camello con rutas random el script de ica tenia las rutas  fijas... 
 by ica
 edited by quickskill
+init: 
+camello = this;
+execVM "QUICKSKILL\camello\caminoCamello.sqf";
 */
 sleep 5*60;
 ruta[0] = (group camello) addWaypoint [(getMarkerPos "camello1"), 0];
@@ -18,4 +21,5 @@ ruta[_RandomRuta] setWaypointBehaviour "CARELESS";
 ruta[_RandomRuta] setWaypointSpeed "FULL";
 waitUntil {(camello distance (_marcador[_RandomRuta])) < 30};
 sleep (60 * 15);
+
 execVM "QUICKSKILL\camello\caminoCamello.sqf";
