@@ -18,7 +18,7 @@ _fnc_muevete = {
         if ((camello distance (getMarkerPos _sitios)) < 30) exitWith {};
         sleep 2;
     };
-    hint "Todo OK";
+  
     sleep (60 * 15);
 
     call _fnc_muevete;
