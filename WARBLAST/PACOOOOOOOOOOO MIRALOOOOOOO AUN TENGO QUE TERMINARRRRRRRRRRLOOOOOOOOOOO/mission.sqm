@@ -218,7 +218,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Tank_rust_F";
 			skill=0.60000002;
-			init=";this setpos [5456.49,14902.1,0.0249989];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5456.49,14902.1,0.0249989];";
 		};
 		class Item18
 		{
@@ -229,7 +229,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Tank_rust_F";
 			skill=0.60000002;
-			init=";this setpos [5450.83,14906.7,0.0249989];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5450.83,14906.7,0.0249989];";
 		};
 		class Item19
 		{
@@ -240,7 +240,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_dp_bigTank_F";
 			skill=0.60000002;
-			init=";this setpos [5475.41,14906.1,-0.6];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5475.41,14906.1,-0.6];";
 		};
 		class Item20
 		{
@@ -251,7 +251,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_dp_smallTank_F";
 			skill=0.60000002;
-			init=";this setpos [5475.51,14906.3,5.925];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5475.51,14906.3,5.925];";
 		};
 		class Item21
 		{
@@ -262,7 +262,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Tank_rust_F";
 			skill=0.60000002;
-			init=";this setpos [5466.52,14894.5,0.0249989];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5466.52,14894.5,0.0249989];";
 		};
 		class Item22
 		{
@@ -273,7 +273,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Tank_rust_F";
 			skill=0.60000002;
-			init=";this setpos [5462.02,14897.9,0.0249989];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5462.02,14897.9,0.0249989];";
 		};
 		class Item23
 		{
@@ -284,7 +284,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_IndPipe1_ground_F";
 			skill=0.60000002;
-			init=";this setpos [5483.07,14905.7,6.825];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5483.07,14905.7,6.825];";
 		};
 		class Item24
 		{
@@ -295,7 +295,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sign_WarningMilAreaSmall_F";
 			skill=0.60000002;
-			init=";this setpos [5427.12,14935.7,0.3];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5427.12,14935.7,0.3];";
 		};
 		class Item25
 		{
@@ -306,7 +306,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sign_WarningMilAreaSmall_F";
 			skill=0.60000002;
-			init=";this setpos [5435.39,14928.1,0.3];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5435.39,14928.1,0.3];";
 		};
 		class Item26
 		{
@@ -317,7 +317,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sign_WarningMilAreaSmall_F";
 			skill=0.60000002;
-			init=";this setpos [5454.57,14919.7,0.3];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5454.57,14919.7,0.3];";
 		};
 		class Item27
 		{
@@ -328,7 +328,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_IndPipe1_ground_F";
 			skill=0.60000002;
-			init=";this setpos [5464.7,14913.4,0.525];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5464.7,14913.4,0.525];";
 		};
 		class Item28
 		{
@@ -339,7 +339,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_i_Barracks_V1_F";
 			skill=0.60000002;
-			init=";this setpos [5517.8,14913.7,0.375008];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5517.8,14913.7,0.375008];";
 		};
 		class Item29
 		{
@@ -350,7 +350,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sign_WarningMilAreaSmall_F";
 			skill=0.60000002;
-			init=";this setpos [5418.69,14942.1,0.3];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5418.69,14942.1,0.3];";
 		};
 		class Item30
 		{
@@ -361,7 +361,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HighVoltageEnd_F";
 			skill=0.60000002;
-			init=";this setpos [5454.74,14959.4,0.0249989];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5454.74,14959.4,0.0249989];";
 		};
 		class Item31
 		{
@@ -372,7 +372,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5448.4,14955.4,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5448.4,14955.4,-0.524992];";
 		};
 		class Item32
 		{
@@ -383,7 +383,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5454.94,14952.5,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5454.94,14952.5,-0.524992];";
 		};
 		class Item33
 		{
@@ -394,7 +394,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5442.51,14960.5,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5442.51,14960.5,-0.524992];";
 		};
 		class Item34
 		{
@@ -405,7 +405,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5436.69,14965.6,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5436.69,14965.6,-0.524992];";
 		};
 		class Item35
 		{
@@ -416,7 +416,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_dp_transformer_F";
 			skill=0.60000002;
-			init=";this setpos [5444.94,14962.4,0.324999];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5444.94,14962.4,0.324999];";
 		};
 		class Item36
 		{
@@ -427,7 +427,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_dp_transformer_F";
 			skill=0.60000002;
-			init=";this setpos [5437.09,14969.2,0.324999];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5437.09,14969.2,0.324999];";
 		};
 		class Item37
 		{
@@ -438,7 +438,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_dp_transformer_F";
 			skill=0.60000002;
-			init=";this setpos [5448.98,14966.5,0.324999];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5448.98,14966.5,0.324999];";
 		};
 		class Item38
 		{
@@ -449,7 +449,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_dp_transformer_F";
 			skill=0.60000002;
-			init=";this setpos [5441.02,14965.7,0.324999];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5441.02,14965.7,0.324999];";
 		};
 		class Item39
 		{
@@ -460,7 +460,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_IndPipe2_big_ground1_F";
 			skill=0.60000002;
-			init=";this setpos [5479.06,14964.5,-0.0499996];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5479.06,14964.5,-0.0499996];";
 		};
 		class Item40
 		{
@@ -471,7 +471,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_Gate_F";
 			skill=0.60000002;
-			init=";this setpos [5468.58,14959.5,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5468.58,14959.5,-0.524992];";
 		};
 		class Item41
 		{
@@ -482,7 +482,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5474.4,14966.2,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5474.4,14966.2,-0.524992];";
 		};
 		class Item42
 		{
@@ -493,7 +493,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5461.76,14954,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5461.76,14954,-0.524992];";
 		};
 		class Item43
 		{
@@ -504,7 +504,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Offices_01_V1_F";
 			skill=0.60000002;
-			init=";this setpos [5505.37,14940.6,0.9];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5505.37,14940.6,0.9];";
 		};
 		class Item44
 		{
@@ -515,7 +515,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HBarrier_Big_F";
 			skill=0.60000002;
-			init=";this setpos [5527.75,14954.9,0.0750077];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5527.75,14954.9,0.0750077];";
 		};
 		class Item45
 		{
@@ -526,7 +526,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HBarrier_Big_F";
 			skill=0.60000002;
-			init=";this setpos [5521.63,14952.6,0.0750077];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5521.63,14952.6,0.0750077];";
 		};
 		class Item46
 		{
@@ -537,7 +537,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BagBunker_Small_F";
 			skill=0.60000002;
-			init=";this setpos [5539.22,14958.8,-0.149992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5539.22,14958.8,-0.149992];";
 		};
 		class Item47
 		{
@@ -548,7 +548,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sign_WarningMilitaryArea_F";
 			skill=0.60000002;
-			init=";this setpos [5544.85,14967.4,0.3];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5544.85,14967.4,0.3];";
 		};
 		class Item48
 		{
@@ -559,7 +559,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sign_WarningMilitaryArea_F";
 			skill=0.60000002;
-			init=";this setpos [5531.72,14951.8,0.3];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5531.72,14951.8,0.3];";
 		};
 		class Item49
 		{
@@ -570,7 +570,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_IndPipe2_big_9_F";
 			skill=0.60000002;
-			init=";this setpos [5447.45,14989.9,-0.0749996];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5447.45,14989.9,-0.0749996];";
 		};
 		class Item50
 		{
@@ -581,7 +581,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_IndPipe2_bigL_R_F";
 			skill=0.60000002;
-			init=";this setpos [5454.98,14974.3,-0.0749996];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5454.98,14974.3,-0.0749996];";
 		};
 		class Item51
 		{
@@ -592,7 +592,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_IndPipe2_bigL_R_F";
 			skill=0.60000002;
-			init=";this setpos [5450.48,14978.6,-0.0749996];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5450.48,14978.6,-0.0749996];";
 		};
 		class Item52
 		{
@@ -603,7 +603,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_IndPipe2_bigL_L_F";
 			skill=0.60000002;
-			init=";this setpos [5453.05,14985.8,-0.0749996];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5453.05,14985.8,-0.0749996];";
 		};
 		class Item53
 		{
@@ -614,7 +614,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_IndPipe2_big_ground2_F";
 			skill=0.60000002;
-			init=";this setpos [5442.46,14994.1,-0.0499996];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5442.46,14994.1,-0.0499996];";
 		};
 		class Item54
 		{
@@ -625,7 +625,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_Gate_F";
 			skill=0.60000002;
-			init=";this setpos [5439.48,14986,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5439.48,14986,-0.524992];";
 		};
 		class Item55
 		{
@@ -636,7 +636,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5433.27,14971.7,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5433.27,14971.7,-0.524992];";
 		};
 		class Item56
 		{
@@ -647,7 +647,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5449.06,14999.8,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5449.06,14999.8,-0.524992];";
 		};
 		class Item57
 		{
@@ -658,7 +658,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5444.46,14993.5,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5444.46,14993.5,-0.524992];";
 		};
 		class Item58
 		{
@@ -669,7 +669,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5434.67,14978.5,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5434.67,14978.5,-0.524992];";
 		};
 		class Item59
 		{
@@ -680,7 +680,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_dp_transformer_F";
 			skill=0.60000002;
-			init=";this setpos [5437.41,14977.6,0.324999];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5437.41,14977.6,0.324999];";
 		};
 		class Item60
 		{
@@ -691,7 +691,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_dp_transformer_F";
 			skill=0.60000002;
-			init=";this setpos [5441.15,14973.8,0.324999];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5441.15,14973.8,0.324999];";
 		};
 		class Item61
 		{
@@ -702,7 +702,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_dp_transformer_F";
 			skill=0.60000002;
-			init=";this setpos [5444.94,14970.2,0.324999];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5444.94,14970.2,0.324999];";
 		};
 		class Item62
 		{
@@ -713,7 +713,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Research_HQ_F";
 			skill=0.60000002;
-			init=";this setpos [5468.62,14993.9,0.9];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5468.62,14993.9,0.9];";
 		};
 		class Item63
 		{
@@ -724,7 +724,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_IndPipe2_big_18_F";
 			skill=0.60000002;
-			init=";this setpos [5470.69,14971.5,-0.0499996];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5470.69,14971.5,-0.0499996];";
 		};
 		class Item64
 		{
@@ -735,7 +735,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_IndPipe2_bigL_L_F";
 			skill=0.60000002;
-			init=";this setpos [5459.56,14978.2,-0.0749996];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5459.56,14978.2,-0.0749996];";
 		};
 		class Item65
 		{
@@ -746,7 +746,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5484.49,14978,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5484.49,14978,-0.524992];";
 		};
 		class Item66
 		{
@@ -757,7 +757,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=";this setpos [5479.51,14972,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5479.51,14972,-0.524992];";
 		};
 		class Item67
 		{
@@ -768,7 +768,7 @@ class Mission
 			side="EMPTY";
 			vehicle="ContainmentArea_02_forest_F";
 			skill=0.60000002;
-			init=";this setpos [5479.79,14986.7,0.200008];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5479.79,14986.7,0.200008];";
 		};
 		class Item68
 		{
@@ -779,7 +779,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sign_WarningUnexplodedAmmo_F";
 			skill=0.60000002;
-			init=";this setpos [5500.21,14991.6,0.3];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5500.21,14991.6,0.3];";
 		};
 		class Item69
 		{
@@ -790,7 +790,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Sign_WarningUnexplodedAmmo_F";
 			skill=0.60000002;
-			init=";this setpos [5493.21,14982.9,0.3];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5493.21,14982.9,0.3];";
 		};
 		class Item70
 		{
@@ -801,7 +801,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HBarrier_Big_F";
 			skill=0.60000002;
-			init=";this setpos [5540.52,14970.4,0.0750077];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5540.52,14970.4,0.0750077];";
 		};
 		class Item71
 		{
@@ -812,7 +812,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HBarrier_Big_F";
 			skill=0.60000002;
-			init=";this setpos [5541.1,14976.7,0.0750077];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5541.1,14976.7,0.0750077];";
 		};
 		class Item72
 		{
@@ -823,7 +823,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Coil_F";
 			skill=0.60000002;
-			init=";this setpos [5528.4,14986.6,0.375005];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5528.4,14986.6,0.375005];";
 		};
 		class Item73
 		{
@@ -834,7 +834,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Communication_F";
 			skill=0.60000002;
-			init=";this setpos [5410.63,15029.3,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5410.63,15029.3,-0.524992];";
 		};
 		class Item74
 		{
@@ -845,7 +845,7 @@ class Mission
 			side="EMPTY";
 			vehicle="ContainmentArea_02_forest_F";
 			skill=0.60000002;
-			init=";this setpos [5458.45,15002.7,0.200008];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5458.45,15002.7,0.200008];";
 		};
 		class Item75
 		{
@@ -855,7 +855,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Dome_Big_F";
 			skill=0.60000002;
-			init=";this setpos [5476.65,15003.1,0];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5476.65,15003.1,0];";
 		};
 		class Item76
 		{
@@ -866,7 +866,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Research_house_V1_F";
 			skill=0.60000002;
-			init=";this setpos [5476.88,15017.2,0.9];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5476.88,15017.2,0.9];";
 		};
 		class Item77
 		{
@@ -877,7 +877,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Hospital_side2_F";
 			skill=0.60000002;
-			init=";this setpos [5503.35,15039.5,0.6];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5503.35,15039.5,0.6];";
 		};
 		class Item78
 		{
@@ -888,7 +888,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Research_house_V1_F";
 			skill=0.60000002;
-			init=";this setpos [5491.17,15003.8,0.9];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5491.17,15003.8,0.9];";
 		};
 		class Item79
 		{
@@ -898,7 +898,7 @@ class Mission
 			side="EMPTY";
 			vehicle="SignAd_SponsorS_Quontrol_F";
 			skill=0.60000002;
-			init=";this setpos [5516.09,15030.5,0];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5516.09,15030.5,0];";
 		};
 		class Item80
 		{
@@ -909,7 +909,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Hospital_main_F";
 			skill=0.60000002;
-			init=";this setpos [5503.31,15039.5,0.6];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5503.31,15039.5,0.6];";
 		};
 		class Item81
 		{
@@ -920,7 +920,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Communication_F";
 			skill=0.60000002;
-			init=";this setpos [5436.48,15060.8,-0.524992];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5436.48,15060.8,-0.524992];";
 		};
 		class Item82
 		{
@@ -931,7 +931,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Hospital_side1_F";
 			skill=0.60000002;
-			init=";this setpos [5503.17,15039.5,0.6];";
+			init="this allowDamage false; this enableSimulation false;this setpos [5503.17,15039.5,0.6];";
 		};
 	};
 };
