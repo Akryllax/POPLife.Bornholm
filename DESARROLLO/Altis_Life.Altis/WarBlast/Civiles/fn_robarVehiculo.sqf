@@ -29,7 +29,7 @@ if(typeOf _vehicle in["B_Quadbike_01_F"]) then { _color = floor(random 10); };
 while {typeOf _vehicle in["B_Quadbike_01_F"] && _color in[9,10]} do { _color = floor(random 10); };
 hint format["Se te cobro %1 para hacerte la copia de las llaves",_price];
 ["atm","take",_price] call life_fnc_updateCash;
-[[_vehicle],"War_fnc_muerteVehiculos",false,false] spawn life_fnc_MP;
+[[_vehicle],"TON_fnc_vehicleDead",false,false] spawn life_fnc_MP;
 sleep 0.05;
 [[(getPlayerUID player),playerSide,_vehicle,_color,1],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 [[getPlayerUID player,profileName,"28"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;

@@ -158,15 +158,15 @@ class CfgFunctions
 		};
 	};
 
-    class WarBlast
-    {
-    	tag = "War";
-    	class Funciones
-    	{
-    		file = "\life_server\Functions\WarBlast";
-    		class muerteVehiculos {};
-    	};
-    };
+   // class WarBlast
+    //{
+    //	tag = "War";
+    //	class Funciones
+    //	{
+    //		file = "\life_server\Functions\WarBlast";
+    //		class muerteVehiculos {};
+    //	};
+   // };
 };
 class CfgVehicles
 {
