@@ -17,7 +17,7 @@ life_cash = life_cash-_precio;
 
 _vendedor = _this select 0;
 
-_coche = "C_Boat_Civil_01_rescue_F" createVehicle position _vendedor;
+_coche = "C_Boat_Civil_01_rescue_f" createVehicle position _vendedor;
 life_vehicles pushBack _coche;
 [[_coche,"vehicle_info_owners",[[getPlayerUID _unit,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 
