@@ -3,7 +3,7 @@
 	Author: ColinM
 	Assistance by: Paronity
 	Stress Tests by: Midgetgrimm
-	
+
 	Description:
 	Grabs a list of crimes committed by a person.
 */
@@ -53,8 +53,11 @@ _type = _queryResult select 0;
 		case "24": {_x = "Vuelo sin licencia"};
 		case "25": {_x = "Destrozar vehiculos/propiedades/mobiliario"};
 		case "26": {_x = "Atentar contra la autoridad"};
-		case "27": {_x = "Posesion de armas ilegales"};	
-		
+		case "27": {_x = "Posesion de armas ilegales"};
+		case "28": {_x = "Robo de Vehiculo"};
+		case "485": {_x = "Intento de soltar esposas"};
+		case "486": {_x = "Escape de esposas"}
+
 	};
 	_crimesArr pushBack _x;
 }forEach _type;

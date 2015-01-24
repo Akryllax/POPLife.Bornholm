@@ -48,8 +48,9 @@ switch(_type) do
 	case "25": {_type = ["25",15000]};
 	case "26": {_type = ["26",20000]};
 	case "27": {_type = ["27",60000]};
-	case "485": {_type = ["Intento de soltar esposas",2500]};
-	case "486": {_type = ["Ayuda de por escape de esposas",5000]};
+	case "28": {_type = ["28",100000]};
+	case "485": {_type = ["485",2500]};
+	case "486": {_type = ["485",5000]};
 
 
 	default {_type = [];};
