@@ -588,4 +588,9 @@ class Akryllax {
 		class curarEnfermedadesAction {};
 		class forceCure {};
 	};
+	class Cazarrecompensas
+	{
+		file ="core\AKR\cazarrecompensas";
+		class activarCazarrecompensas {};
+	};
 };
