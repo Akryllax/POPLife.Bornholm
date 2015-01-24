@@ -536,6 +536,12 @@ class Rosen {
 		file = "Rosen\politica";
 		class protestar{};
 	};
+	class robos
+	{
+		file = "Rosen\robos";
+		class robocasinoLlave{};
+		class robocasinoCaja{};
+	};
 };
 
 class Akryllax {
