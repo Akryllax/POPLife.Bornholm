@@ -7,6 +7,7 @@
 
 [] spawn {
 	if (life_bailando) exitWith {};
+	life_bailando = true;
 	closeDialog 0;
 	titleText["¡Eres un fiera!","PLAIN"];
 	player say3D "bailar";
