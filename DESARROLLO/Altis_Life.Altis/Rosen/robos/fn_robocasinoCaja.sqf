@@ -30,7 +30,7 @@ _caja removeAction _robar;
 
 
 hint "Abriendo caja fuerte...";
-player playMove "AmovPercMstpSsurWnonDnon";
+player playMove "AinvPknlMstpSlayWrflDnon_medic";
 
 _pos = position _caja; 
  _marcador = createMarker ["marcadorcasino", _pos]; 
