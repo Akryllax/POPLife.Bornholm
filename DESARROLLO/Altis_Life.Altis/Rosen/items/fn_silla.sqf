@@ -17,7 +17,7 @@ private ["_silla"];
 	_sign allowDamage false;
 	_sign enableSimulationGlobal false;
 	_sign attachTo [player, [0,1,0], "culo"];
-	_sign setVectorUp [0,0,-1];
+	_sign setVectorUp [0,90,-1];
 	//espera 20 segundos;
 	sleep 20;
 	deleteVehicle _silla;
