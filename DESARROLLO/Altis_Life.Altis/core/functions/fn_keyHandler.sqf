@@ -108,7 +108,7 @@ switch (_code) do
 		if (!_shift && !_alt && !_ctrlKey  && (vehicle player != player)) then {
 			[] call War_fnc_abrelatas;
 		};
-		if (playerSide == civilian) then {
+		if (playerSide == civilian && (vehicle player == player)) then {
 			[] call ROS_fnc_fiesta;
 		};
 	};
@@ -294,13 +294,17 @@ switch (_code) do
 
 	case 59:// F1 - TAPONES
 	{
+		
 		if (soundVolume == 0.05) then {
 			0.05 fadeSound 1;
 			hint "Te has quitado los tapones";
 		} else {
 			0.05 fadeSound 0.05;
 			hint "Te has puesto los tapones";
-		};
+		};		
+	};
+	case 60:
+	{
 		if (playerSide == civilian) then {
 			[] call ROS_fnc_silla;
 		};

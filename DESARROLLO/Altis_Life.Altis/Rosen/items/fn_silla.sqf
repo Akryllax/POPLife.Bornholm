@@ -13,11 +13,11 @@ private ["_silla"];
 	player switchMove "Crew";
 	closeDialog 0;
 	titleText["A sentarse","PLAIN"];
-	_sign = "Land_CampingChair_V2_F" createVehicle [0,0,0];
-	_sign allowDamage false;
-	_sign enableSimulationGlobal false;
-	_sign attachTo [player, [0,0,0.2], "culo"];
-	_sign setVectorUp [90,270,-1];
+	_silla = "Land_CampingChair_V2_F" createVehicle [0,0,0];
+	_silla allowDamage false;
+	_silla enableSimulationGlobal false;
+	_silla attachTo [player, [0,0,0.2], "culo"];
+	_silla setVectorUp [0,180,-1];
 	//espera 20 segundos;
 	sleep 20;
 	player switchMove ""
