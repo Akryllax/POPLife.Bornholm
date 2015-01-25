@@ -20,18 +20,4 @@ while {true} do {
 		};
 	};
 	sleep 1;
-};
-
-this enablesimulation false; 
-this addAction ["Archivos secretos",'null = [] execVM "QUICKSKILL\robos\banco\docMenu.sqf";', "", 9,false,true,"",""];
-
-
-this allowdamage false;
-this addAction ["Introducir codigo",'null = [] execVM "QUICKSKILL\robos\banco\introCodigoCaja.sqf";', "", 9,false,true,"",""]; 
-this addAction ["Cojer el dinero",'null = [] execVM "QUICKSKILL\robos\banco\cojerDinero.sqf";', "", 8,false,true,"","robo == 1"];
-this addAction ["Interrumpir robo",'cancelado = 1; publicVariable "cancelado";', "robo == 1", 8,false,true,"","(side player == WEST) AND (porcentaje > 0)"];
-
-this enablesimulation false;
-this addAction ["Acceder al sistema",'null = [] execVM "QUICKSKILL\robos\banco\menuInicial.sqf";', "", 9,false,true,"",""];
-
-   
+};   
