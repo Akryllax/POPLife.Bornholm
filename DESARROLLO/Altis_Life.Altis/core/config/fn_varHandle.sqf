@@ -98,6 +98,9 @@ switch (_mode) do
 			case "semillasTomate": {"life_inv_semillasTomate"};
 			case "tomates": {"life_inv_tomates"};
 			case "maiz": {"life_inv_maiz"};
+			//items Rosen
+			case "llave_casino": {"life_inv_llave_casino"};
+			case "maletin_casino": {"life_inv_maletin_casino"};
 			default {"not found"};
 		};
 	};
@@ -187,6 +190,9 @@ switch (_mode) do
 			case "life_inv_semillasTomate": {"semillasTomate"};
 			case "life_inv_tomates": {"tomates"};
 			case "life_inv_maiz": {"maiz"};
+			//items Rosen
+			case "llave_casino": {"life_inv_llave_casino"};
+			case "maletin_casino": {"life_inv_maletin_casino"};
 			default {"not found"};
 		};
 	};

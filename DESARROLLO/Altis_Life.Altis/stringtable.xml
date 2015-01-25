@@ -6567,5 +6567,11 @@
 		<Key ID="STR_Item_Cetro">
 			<Original>Cetro</Original>
 		</Key>
+		<Key ID="STR_Item_llave_casino">
+			<Original>Llave casino</Original>
+		</Key>
+		<Key ID="STR_Item_maletin_casino">
+			<Original>Maletin de dinero negro</Original>
+		</Key>
 	</Package>
 </Project>

@@ -96,6 +96,9 @@ switch (_var) do
 	// frutos
 	case "life_inv_tomates": {("Tomates")};
 	case "life_inv_maiz": {("Maiz")};
+	//items Rosen
+	case "llave_casino": {(localize "STR_Item_llave_casino")};
+	case "maletin_casino": {(localize "STR_Item_maletin_casino")};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

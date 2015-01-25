@@ -4,15 +4,14 @@
 	Descripción: Robo del casino custom
 */
 
-private ["tiempo","_dinero","_distancia","_nombre","exito"];
-_tiempo = 60 * 10;
+private ["tiempo","_dinero","_distancia","_exito"];
+_tiempo = 20;
 _distancia_robo = 50;
-_nombre = "casino";
 _exito = false;
 
 if(playerSide == west) exitWith{hint "Eres policia, no puedes robar"};
 
-_crupier = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+_caja = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _ladron = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _robar = [_this,2] call BIS_fnc_param;
 
@@ -21,28 +20,28 @@ if(_minpolicias < 6) exitWith{[["",-1],"disableSerialization;",false,false] spaw
 disableSerialization;
 
 if (currentWeapon _ladron == "") exitWith { hint "Consigue un arma para robar.";};
-
+if(!([false,"llave_casino",1] call life_fnc_handleInv)) exitWith {hint "Necesitas la llave de la caja fuerte para robar.";};
 [[1,format["Robo en curso | Se esta produciendo un atraco en el casino."]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; 
 
 [[getPlayerUID _ladron,name _ladron,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
 
-_vendedor removeAction _action;
+_caja removeAction _robar;
 
 
-hint "Robando llave de la caja fuerte...";
-_crupier switchMove "AmovPercMstpSsurWnonDnon";
+hint "Abriendo caja fuerte...";
+player playMove "AmovPercMstpSsurWnonDnon";
 
-_pos = position _crupier; 
+_pos = position _caja; 
  _marcador = createMarker ["marcadorcasino", _pos]; 
 "marcadorcasino" setMarkerColor "ColorRed";
 "marcadorcasino" setMarkerText "|||ROBANDO CASINO|||";
 "marcadorcasino" setMarkerType "mil_warning";	
 
 while {_time > 0} do {	
-	_rango =  _crupier distance _ladron;
+	_rango =  _caja distance _ladron;
 	if(_rango > _distancia_robo) then {	
-		hintSilent format["Has abandonado la zona del robo. Estabas a %1m del crupier.",round (_rango)];
+		hintSilent format["Has abandonado la zona del robo. Estabas a %1m de la caja.",round (_rango)];
 		_tiempo= 0;
 		_exito= false;		sleep 1;
 
@@ -63,7 +62,8 @@ while {_time > 0} do {
 if(_tiempo < 1) then { 
 	if(_exito == true and alive _ladron) then {		
 		[false,"llave_casino",1] call life_fnc_handleInv;
-		[]spawn{sleep 2;hint format["Has robado la llave de la caja fuerte",_this select 0];sleep 3;hint ""};
+		[true,"maletin_casino",1] call life_fnc_handleInv;
+		[]spawn{sleep 2;hint "Has robado el dinero de la caja fuerte. ¡Tiene que blanquearlo el banquero!.";sleep 3;hint ""};
 	};	
 	if(true) exitWith{[]spawn { sleep 1;hint "";} };
 };
@@ -78,5 +78,4 @@ _pos = position _ladron;
 sleep 60;
 deleteMarker "marcadorcasinof";
 sleep 60*10;
-_robar = _crupier addAction["Robar llave de la caja fuerte","Rosen\robos\robocasinoLlave.sqf"];	
-_crupier switchMove " ";
+_robar = _caja addAction["Robar caja fuerte","Rosen\robos\robocasinoCaja.sqf"];	

@@ -4,10 +4,9 @@
 	Descripción: Robo del casino custom
 */
 
-private ["tiempo","_dinero","_distancia","_nombre","exito"];
-_tiempo = 60 * 10;
+private ["tiempo","_dinero","_distancia","_exito"];
+_tiempo = 20;
 _distancia_robo = 50;
-_nombre = "casino";
 _exito = false;
 
 if(playerSide == west) exitWith{hint "Eres policia, no puedes robar"};
@@ -21,13 +20,13 @@ if(_minpolicias < 6) exitWith{[["",-1],"disableSerialization;",false,false] spaw
 disableSerialization;
 
 if (currentWeapon _ladron == "") exitWith { hint "Consigue un arma para robar.";};
-
+if(([false,"llave_casino",1] call life_fnc_handleInv)) exitWith {hint "Solo puedes tener una llave de la caja a la vez.";};
 [[1,format["Robo en curso | Se esta produciendo un atraco en el casino."]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; 
 
 [[getPlayerUID _ladron,name _ladron,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
 
-_vendedor removeAction _action;
+_crupier removeAction _robar;
 
 
 hint "Robando llave de la caja fuerte...";
@@ -63,7 +62,7 @@ while {_time > 0} do {
 if(_tiempo < 1) then { 
 	if(_exito == true and alive _ladron) then {		
 		[true,"llave_casino",1] call life_fnc_handleInv;
-		[]spawn{sleep 2;hint format["Has robado la llave de la caja fuerte",_this select 0];sleep 3;hint ""};
+		[]spawn{sleep 2;hint "Has robado la llave de la caja fuerte";sleep 3;hint ""};
 	};	
 	if(true) exitWith{[]spawn { sleep 1;hint "";} };
 };
