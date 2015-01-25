@@ -5143,7 +5143,7 @@ class Mission
 					skill=0.2;
 					fuel=0;
 					ammo=0;
-					init="this enableSimulation false;  this allowDamage false;  removeVest this;  removeHeadgear this; this addAction[   format[    ""%1 ($%2)"",     [""license_civ_cazarrecompensas""] call life_fnc_varToStr,     [([""cazarrecompensas""] call life_fnc_licensePrice)] call life_fnc_numberText   ],   life_fnc_buyLicense,   ""cazarrecompensas"",   0,   false,   false,   """",   ' !license_civ_cazarrecompensas && playerSide == civilian '  ];  this addAction[""Iniciar servicio"", {[] call AKR_fnc_activarCazarrecompensas}, [], 2, false, false, """", ""license_civ_cazarrecompensas && !CRServicio""];  this addAction[""Abandonar servicio"", {CRServicio = false; player setVariable[""CRServicio"", false,true]}, [], 1, false, false, """", ""license_civ_cazarrecompensas && CRServicio""];  this forceAddUniform ""U_B_CombatUniform_mcam"";  this setObjectTextureGlobal [0, ""textures\cazarrecompensas.jpg""];  ";
+					init="this addAction[   format[    ""%1 ($%2)"",     [""license_civ_cazarrecompensas""] call life_fnc_varToStr,     [([""cazarrecompensas""] call life_fnc_licensePrice)] call life_fnc_numberText   ],   life_fnc_buyLicense,   ""cazarrecompensas"",   0,   false,   false,   """",   "" !license_civ_cazarrecompensas && playerSide == civilian ""  ];  this addAction[""Iniciar servicio"", AKR_fnc_activarCazarrecompensas, [], 2, true, true, """", ""!CRServicio""];  this addAction[""Abandonar servicio"", ""[] call {CRServicio = false; player setVariable[""""CRServicio"""", false,true]}"", [], 1, true, true, """", ""CRServicio""];";
 				};
 			};
 		};
