@@ -130,7 +130,7 @@ class foto: RscPicture
 {
 	type = CT_STATIC;
 	style = ST_PICTURE;
-	text = "ica\banco\portatil.paa";
+	text = "QUICKSKILL\robos\banco\portatil.paa";
 
 	idc = -1;
 	x = 0.295761 * safezoneW + safezoneX;
