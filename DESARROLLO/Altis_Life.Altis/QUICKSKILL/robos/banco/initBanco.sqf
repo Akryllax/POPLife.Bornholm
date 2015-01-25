@@ -3,7 +3,7 @@ Script hecho por Icaruk, si quieres usarlo sólo tienes que pedirme permiso en a
 Script done by Icaruk, if you want to use it, you just have to ask me permission on adri-rk@hotmail.com.
 */
 
-deposito = 0;
+deposito = 120000;
 publicVariable "deposito";
 porcentaje = 0;
 publicVariable "porcentaje";	

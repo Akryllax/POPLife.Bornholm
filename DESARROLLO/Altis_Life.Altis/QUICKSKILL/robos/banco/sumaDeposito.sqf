@@ -6,7 +6,7 @@ Script done by Icaruk, if you want to use it, you just have to ask me permission
 waitUntil {!isNil {deposito}};
 
 while {true} do {
-	deposito = deposito + 500;
+	deposito = deposito + 2000;
 	publicVariable "deposito";
 	sleep (60*5);
 };
