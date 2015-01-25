@@ -5226,7 +5226,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1300;
+		items=1303;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -18933,10 +18933,46 @@ class Mission
 			vehicle="Land_CargoBox_V1_F";
 			skill=0.60000002;
 		};
+		class Item1300
+		{
+			position[]={3605.2959,6.9379487,13432.728};
+			azimut=35.627083;
+			offsetY=1;
+			id=1570;
+			side="EMPTY";
+			vehicle="Land_File1_F";
+			skill=0.60000002;
+			text="Roboalcalde";
+			init="this enablesimulation false;             this addAction [""Archivos secretos"",'null = [] execVM ""ica\banco\docMenu.sqf"";', """", 9,false,true,"""",""""];";
+		};
+		class Item1301
+		{
+			position[]={3607.959,7.0247736,13436.553};
+			azimut=209.9631;
+			offsetY=4.3499999;
+			id=1571;
+			side="EMPTY";
+			vehicle="Land_Laptop_unfolded_F";
+			skill=0.60000002;
+			text="Portatilalcade";
+			init="this enablesimulation false;             this addAction [""Acceder al sistema"",'null = [] execVM ""ica\banco\menuInicial.sqf"";', """", 9,false,true,"""",""""];";
+		};
+		class Item1302
+		{
+			position[]={3606.605,6.9703746,13434.993};
+			azimut=121.77927;
+			offsetY=4;
+			id=1572;
+			side="EMPTY";
+			vehicle="Land_CargoBox_V1_F";
+			skill=0.60000002;
+			text="Cajaalcalde";
+			init="this allowdamage false;             this addAction [""Introducir codigo"",'null = [] execVM ""ica\banco\introCodigoCaja.sqf"";', """", 9,false,true,"""",""""];                                                                  this addAction [""Cojer el dinero"",'null = [] execVM ""ica\banco\cojerDinero.sqf"";', """", 8,false,true,"""",""robo == 1""];                                            this addAction [""Interrumpir robo"",'cancelado = 1; publicVariable ""cancelado"";', ""robo == 1"", 8,false,true,"""",""(side player == WEST) AND (porcentaje > 0)""];  ";
+		};
 	};
 	class Markers
 	{
-		items=325;
+		items=326;
 		class Item0
 		{
 			position[]={20782.402,37.286591,16680.141};
@@ -21518,6 +21554,14 @@ class Mission
 			name="cop_air_2_1_2";
 			type="Empty";
 			angle=463.28015;
+		};
+		class Item325
+		{
+			position[]={3604.9316,6.9246039,13435.49};
+			name="Alcalde";
+			text="Robo al Alcalde";
+			type="mil_dot";
+			colorName="ColorBlue";
 		};
 	};
 	class Sensors
