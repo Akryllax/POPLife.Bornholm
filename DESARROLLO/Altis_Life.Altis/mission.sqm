@@ -5226,7 +5226,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1303;
+		items=1304;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -18936,43 +18936,53 @@ class Mission
 		class Item1300
 		{
 			position[]={3605.2959,6.9379487,13432.728};
-			azimut=35.627083;
+			azimut=35.627102;
 			offsetY=1;
 			id=1570;
 			side="EMPTY";
 			vehicle="Land_File1_F";
 			skill=0.60000002;
 			text="Roboalcalde";
-			init="this enablesimulation false;             this addAction [""Archivos secretos"",'null = [] execVM ""ica\banco\docMenu.sqf"";', """", 9,false,true,"""",""""];";
+			init="this enablesimulation false;   this addAction [""Archivos secretos"",'null = [] execVM ""QUICKSKILL\robos\banco\docMenu.sqf"";', """", 9,false,true,"""",""""];";
 		};
 		class Item1301
 		{
 			position[]={3607.959,7.0247736,13436.553};
-			azimut=209.9631;
-			offsetY=4.3499999;
+			azimut=209.963;
+			offsetY=1;
 			id=1571;
 			side="EMPTY";
 			vehicle="Land_Laptop_unfolded_F";
 			skill=0.60000002;
 			text="Portatilalcade";
-			init="this enablesimulation false;             this addAction [""Acceder al sistema"",'null = [] execVM ""ica\banco\menuInicial.sqf"";', """", 9,false,true,"""",""""];";
+			init="this enablesimulation false;  this addAction [""Acceder al sistema"",'null = [] execVM ""QUICKSKILL\robos\banco\menuInicial.sqf"";', """", 9,false,true,"""",""""];";
 		};
 		class Item1302
 		{
 			position[]={3606.605,6.9703746,13434.993};
-			azimut=121.77927;
-			offsetY=4;
+			azimut=121.779;
+			offsetY=1;
 			id=1572;
 			side="EMPTY";
 			vehicle="Land_CargoBox_V1_F";
 			skill=0.60000002;
 			text="Cajaalcalde";
-			init="this allowdamage false;             this addAction [""Introducir codigo"",'null = [] execVM ""ica\banco\introCodigoCaja.sqf"";', """", 9,false,true,"""",""""];                                                                  this addAction [""Cojer el dinero"",'null = [] execVM ""ica\banco\cojerDinero.sqf"";', """", 8,false,true,"""",""robo == 1""];                                            this addAction [""Interrumpir robo"",'cancelado = 1; publicVariable ""cancelado"";', ""robo == 1"", 8,false,true,"""",""(side player == WEST) AND (porcentaje > 0)""];  ";
+			init="this allowdamage false;  this addAction [""Introducir codigo"",'null = [] execVM ""QUICKSKILL\robos\banco\introCodigoCaja.sqf"";', """", 9,false,true,"""",""""];   this addAction [""Cojer el dinero"",'null = [] execVM ""QUICKSKILL\robos\banco\cojerDinero.sqf"";', """", 8,false,true,"""",""robo == 1""];  this addAction [""Interrumpir robo"",'cancelado = 1; publicVariable ""cancelado"";', ""robo == 1"", 8,false,true,"""",""(side player == WEST) AND (porcentaje > 0)""];";
+		};
+		class Item1303
+		{
+			position[]={9282.8838,16.33,12126.435};
+			azimut=411.86801;
+			id=1573;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this addAction[""Corromper agente de la CIA - Coste: 25000$"",QUICK_fnc_darChivatazo];";
 		};
 	};
 	class Markers
 	{
-		items=326;
+		items=327;
 		class Item0
 		{
 			position[]={20782.402,37.286591,16680.141};
@@ -21557,11 +21567,18 @@ class Mission
 		};
 		class Item325
 		{
-			position[]={3604.9316,6.9246039,13435.49};
+			position[]={3606.8821,6.9964437,13437.684};
 			name="Alcalde";
 			text="Robo al Alcalde";
 			type="mil_dot";
 			colorName="ColorBlue";
+		};
+		class Item326
+		{
+			position[]={3606.553,6.9685946,13434.955};
+			name="cajaFuerteMRK";
+			text="caja";
+			type="mil_dot";
 		};
 	};
 	class Sensors
