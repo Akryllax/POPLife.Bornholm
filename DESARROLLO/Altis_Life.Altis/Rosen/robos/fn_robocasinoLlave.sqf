@@ -16,8 +16,8 @@ _ladron = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _robar = [_this,2] call BIS_fnc_param;
 
 _minpolicias= (west countSide playableUnits);
-if(_minpolicias < 6) exitWith{[["",-1],"disableSerialization;",false,false] spawn life_fnc_MP; hint "No hay suficientes policias conectados (6)";};
-disableSerialization;
+//if(_minpolicias < 6) exitWith{[["",-1],"disableSerialization;",false,false] spawn life_fnc_MP; hint "No hay suficientes policias conectados (6)";};
+//disableSerialization;
 
 if (currentWeapon _ladron == "") exitWith { hint "Consigue un arma para robar.";};
 if(([false,"llave_casino",1] call life_fnc_handleInv)) exitWith {hint "Solo puedes tener una llave de la caja a la vez.";};
