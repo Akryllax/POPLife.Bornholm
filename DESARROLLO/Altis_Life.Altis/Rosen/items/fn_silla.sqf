@@ -10,7 +10,7 @@ private ["_silla"];
 []spawn {
 	if (life_sentarse) exitWith {};
 	life_sentarse = true;
-	player playAction "Crew";
+	player switchMove "Crew";
 	closeDialog 0;
 	titleText["A sentarse","PLAIN"];
 	_sign = "Land_CampingChair_V2_F" createVehicle [0,0,0];
