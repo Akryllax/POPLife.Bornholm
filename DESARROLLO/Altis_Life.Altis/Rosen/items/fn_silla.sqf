@@ -21,6 +21,6 @@ private ["_silla"];
 	//espera 20 segundos;
 	sleep 20;
 	deleteVehicle _silla;
-	player switchMove ""
+	player switchMove "";
 	life_sentarse = false;
 };
