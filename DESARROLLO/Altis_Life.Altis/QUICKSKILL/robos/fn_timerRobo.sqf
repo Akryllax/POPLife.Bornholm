@@ -101,7 +101,7 @@ if(_time < 1) then{
 				if(_pagar_random == 100) then {
 				   _pagar_random = 99;
 				};
-				if(_pagar_random == 0) then {
+				if(_pagar_random >= 0) then {
 					//mx f
 					_ammoBox addWeaponCargoGlobal ["arifle_MX_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
