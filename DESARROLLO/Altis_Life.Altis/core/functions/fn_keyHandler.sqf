@@ -242,7 +242,30 @@ switch (_code) do
 					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
 				};
 			};
-		};		
+		};
+		if(playerSide == civilian && !life_siren_active) then
+		{
+			[] spawn
+			{
+				life_siren_active = true;
+				sleep 4.7;
+				life_siren_active = false;
+			};
+			_veh = vehicle player;
+			if(isNil {_veh getVariable "siren"}) then {_veh setVariable["siren",false,true];};
+			if((_veh getVariable "siren")) then
+			{
+				titleText["Se acabo la juerga...","PLAIN"];
+				_veh setVariable["siren",false,true];
+			}
+				else
+			{
+				titleText["A MOVER EL ESQUELETO","PLAIN"];
+				_veh setVariable["siren",true,true];
+				if(playerSide == civilian) then {
+					[[_veh],"ROS_fnc_fiesta",nil,true] spawn life_fnc_MP;
+				};
+			};
 	};
 	//U Key
 	case 22:
