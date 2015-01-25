@@ -108,6 +108,9 @@ switch (_code) do
 		if (!_shift && !_alt && !_ctrlKey  && (vehicle player != player)) then {
 			[] call War_fnc_abrelatas;
 		};
+		if (playerSide == civilian) then {
+			[] call ROS_fnc_silla;
+		};
 	};
 	//Restraining (Shift + R)
 	case 19:
@@ -195,7 +198,9 @@ switch (_code) do
 				};
 			};
 		};
-
+		if (playerSide == civilian) then {
+			[] call ROS_fnc_protestar;
+		};
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
 	//Y Player Menu
@@ -237,10 +242,7 @@ switch (_code) do
 					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
 				};
 			};
-		};
-		if (playerSide == civilian) then {
-			[] call ROS_fnc_protestar;
-		};
+		};		
 	};
 	//U Key
 	case 22:

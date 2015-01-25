@@ -544,11 +544,10 @@ class Rosen {
 		file = "Rosen\politica";
 		class protestar{};
 	};
-	class robos
+	class items
 	{
-		file = "Rosen\robos";
-		class robocasinoLlave{};
-		class robocasinoCaja{};
+		file = "Rosen\items";
+		class silla{};		
 	};
 };
 
