@@ -1,7 +1,9 @@
 CRServicio = true;
+player setVariable["CRServicio", true,true];
 
 removeVest player;
 removeHeadgear player;
+removeBackpack player;
 player removeWeapon (primaryWeapon player);
 player removeWeapon (handgunWeapon player);
 
@@ -95,15 +97,21 @@ CREH = player addEventHandler ["Fired", "_this call AKR_tiroAtiro"];
 		
 		if(!alive player) then{
 			CRServicio = false;
+			player setVariable["CRServicio", false,true];
 		};
 		
 		if(CRServicio)then {
 			hint parseText _temp;
 		};
+		
+		removeVest player;
+		removeHeadgear player;
+		removeBackpack player;
 	};
-	
+
 	removeVest player;
 	removeHeadgear player;
+	removeBackpack player;
 	player removeWeapon (primaryWeapon player);
 	player removeWeapon (handgunWeapon player);
 	player removeEventHandler ["Fired", CREH];
