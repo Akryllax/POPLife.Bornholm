@@ -5128,7 +5128,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1216;
+		items=1218;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -17921,7 +17921,7 @@ class Mission
 		};
 		class Item1214
 		{
-			position[]={3611.1716,10.152369,13102.692};
+			position[]={3647.4685,10.198845,13110.494};
 			azimut=455.41101;
 			id=1480;
 			side="EMPTY";
@@ -17931,13 +17931,35 @@ class Mission
 		};
 		class Item1215
 		{
-			position[]={3611.498,10.115014,13105.914};
-			azimut=542.97601;
+			position[]={3647.4292,10.204419,13108.352};
+			azimut=453.67694;
 			id=1481;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
 			init="this addAction[""Abrir caja fuerte"", ROS_fnc_robocasinoCaja];";
+		};
+		class Item1216
+		{
+			position[]={3631.9299,10.11499,13112.813};
+			azimut=277.23401;
+			offsetY=1;
+			id=1482;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init=" removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>Veterano de Guerra</t>"",life_fnc_virt_menu,""retirado"",0,false,false,"""""""""""",' vehicle player == player && player distance _target < 5 && playerSide == civilian '];";
+		};
+		class Item1217
+		{
+			position[]={3636.6499,10.125467,13112.313};
+			azimut=277.23401;
+			offsetY=1;
+			id=1483;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>Comerciante de Tesoros</t>"",life_fnc_virt_menu,""tesoros"",0,false,false,"""""""""""",' vehicle player == player && player distance _target < 5 && playerSide == civilian '];";
 		};
 	};
 	class Markers
