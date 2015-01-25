@@ -25,10 +25,10 @@ MTP_fnc_numberToString = {
 };
 
 if (isServer) then {
-	null = [] execVM "ica\banco\initBanco.sqf";
-	null = [] execVM "ica\banco\nuevoCodigoBancario.sqf";
+	null = [] execVM "QUICKSKILL\robos\banco\initBanco.sqf";
+	null = [] execVM "QUICKSKILL\robos\banco\nuevoCodigoBancario.sqf";
 };
-[] execVM "ica\banco\sumaDeposito.sqf";
+[] execVM "QUICKSKILL\robos\banco\sumaDeposito.sqf";
 
 ///markadores
 cajaFuerteMRK
