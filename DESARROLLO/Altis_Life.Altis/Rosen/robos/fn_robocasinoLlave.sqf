@@ -4,7 +4,7 @@
 	Descripción: Robo del casino custom
 */
 
-private ["tiempo","_dinero","_distancia","_exito"];
+private ["tiempo","_distancia_robo","_exito"];
 _tiempo = 20;
 _distancia_robo = 50;
 _exito = false;
