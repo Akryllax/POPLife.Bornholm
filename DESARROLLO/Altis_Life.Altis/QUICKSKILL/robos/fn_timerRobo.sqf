@@ -107,7 +107,7 @@ if(_time < 1) then{
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
 					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",6];
 				};
-				if(_pagar_random >= 12) then {
+				if(_pagar_random >= 12) or (_pagar_random <=23) then {
 					//zafir
 					_ammoBox addWeaponCargoGlobal ["LMG_Zafir_pointer_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
