@@ -28,7 +28,7 @@ while {typeOf _vehicle in["C_SUV_01_F"] && _color in[4,5]} do { _color = floor(r
 if(typeOf _vehicle in["B_Quadbike_01_F"]) then { _color = floor(random 10); };
 while {typeOf _vehicle in["B_Quadbike_01_F"] && _color in[9,10]} do { _color = floor(random 10); };
 hint format["Se te cobro %1 para hacerte la copia de las llaves",_price];
-["atm","take",_price] call life_fnc_updateCash;
+life_atmcash = life_atmcash - _price; [1] call SOCK_fnc_updatePartial;
 [[_vehicle],"TON_fnc_vehicleDead",false,false] spawn life_fnc_MP;
 sleep 0.05;
 [[(getPlayerUID player),playerSide,_vehicle,_color,1],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
