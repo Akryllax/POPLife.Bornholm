@@ -107,10 +107,7 @@ switch (_code) do
 	{
 		if (!_shift && !_alt && !_ctrlKey  && (vehicle player != player)) then {
 			[] call War_fnc_abrelatas;
-		};
-		if (playerSide == civilian && (vehicle player == player)) then {
-			[] call ROS_fnc_fiesta;
-		};
+		};		
 	};
 	//Restraining (Shift + R)
 	case 19:
@@ -307,6 +304,12 @@ switch (_code) do
 	{
 		if (playerSide == civilian) then {
 			[] call ROS_fnc_silla;
+		};
+	};
+	case 61:
+	{	
+		if (playerSide == civilian && (vehicle player == player)) then {
+			[] call ROS_fnc_fiesta;
 		};
 	};
 };
