@@ -21,6 +21,14 @@ StartProgress = true;
 /////////////////////////////////////////////////////
 
 //esta funcion la ulizia el ica pa sacar un codigo!
+ICARUK_fnc_addAction = {  
+    private["_object","_script"];  
+    _object = _this select 0;  
+    _script = _this select 1;  
+
+    _object addAction _script;  
+};
+
 MTP_fnc_numberToString = {
     _number = _this;
     _str = "";
