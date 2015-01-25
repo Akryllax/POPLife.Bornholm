@@ -29,6 +29,15 @@ ICARUK_fnc_addAction = {
     _object addAction _script;  
 };
 
+MAC_fnc_switchMove = {
+    private["_object","_anim"];
+    _object = _this select 0;
+    _anim = _this select 1;
+
+    _object switchMove _anim;
+    
+};
+
 MTP_fnc_numberToString = {
     _number = _this;
     _str = "";
