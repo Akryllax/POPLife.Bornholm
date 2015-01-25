@@ -20,7 +20,7 @@ private ["_silla"];
 	_silla setVectorUp [0,180,-1];
 	//espera 20 segundos;
 	sleep 20;
-	player switchMove ""
 	deleteVehicle _silla;
+	player switchMove ""
 	life_sentarse = false;
 };
