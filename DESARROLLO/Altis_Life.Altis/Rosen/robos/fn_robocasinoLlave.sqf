@@ -63,8 +63,7 @@ if(_tiempo < 1) then {
 	if(_exito == true and alive _ladron) then {		
 		[true,"llave_casino",1] call life_fnc_handleInv;
 		[]spawn{sleep 2;hint "Has robado la llave de la caja fuerte";sleep 3;hint ""};
-	};	
-	if(true) exitWith{[]spawn { sleep 1;hint "";} };
+	};		
 };
 
 deleteMarker "marcadorcasino";

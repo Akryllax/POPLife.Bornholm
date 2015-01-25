@@ -64,8 +64,7 @@ if(_tiempo < 1) then {
 		[false,"llave_casino",1] call life_fnc_handleInv;
 		[true,"maletin_casino",1] call life_fnc_handleInv;
 		[]spawn{sleep 2;hint "Has robado el dinero de la caja fuerte. ¡Tiene que blanquearlo el banquero!.";sleep 3;hint ""};
-	};	
-	if(true) exitWith{[]spawn { sleep 1;hint "";} };
+	};
 };
 
 deleteMarker "marcadorcasino";
