@@ -62,8 +62,20 @@ while {true} do
 		// WarBlast: Caja militar que cae con aleatoriedad
 		_MilitaryCrate = objNull;
 		_randomCrate = random(100);
-		if (_randomCrate > 60) then {
+		if (_randomCrate > 40) then {
 			_MilitaryCrate = "Box_NATO_Wps_F" createVehicle ([_heliSpawn,10] call SHK_pos);
+			clearWeaponCargoGlobal _MilitaryCrate;
+			clearMagazineCargoGlobal _MilitaryCrate;
+			clearItemCargoGlobal _MilitaryCrate;
+			clearBackpackCargoGlobal _MilitaryCrate;
+			_result = _dropArmsArray call BIS_fnc_selectRandom;
+            if ((_result select 0) != "" OR (_result select 1) != 0) then {
+                _MilitaryCrate addWeaponCargoGlobal [(_result select 0), (_result select 1)];
+            };
+            if ((_result select 2) != "" OR (_result select 3) != 0) then {
+                _MilitaryCrate addMagazineCargoGlobal [(_result select 2), (_result select 3)];
+            };
+            _MilitaryCrate = "Box_NATO_Wps_F" createVehicle ([_heliSpawn,10] call SHK_pos);
 			clearWeaponCargoGlobal _MilitaryCrate;
 			clearMagazineCargoGlobal _MilitaryCrate;
 			clearItemCargoGlobal _MilitaryCrate;

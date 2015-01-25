@@ -107,49 +107,49 @@ if(_time < 1) then{
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
 					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",6];
 				};
-				if(_pagar_random == 12) then {
+				if(_pagar_random >= 12) then {
 					//zafir
 					_ammoBox addWeaponCargoGlobal ["LMG_Zafir_pointer_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
 					_ammoBox addMagazineCargoGlobal ["150Rnd_762x51_Box",3];
 				};
-				if(_pagar_random == 24) then {
+				if(_pagar_random >= 24) then {
 					//pdw200 silenciada
 					_ammoBox addWeaponCargoGlobal ["hgun_PDW2000_Holo_snds_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
 					_ammoBox addMagazineCargoGlobal ["30Rnd_9x21_Mag",6];
 				};
-				if(_pagar_random == 36) then {
+				if(_pagar_random >= 36) then {
 					//mx_SW
 					_ammoBox addWeaponCargoGlobal ["arifle_MX_SW_Black_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Hamer",1];
 					_ammoBox addMagazineCargoGlobal ["100Rnd_65x39_caseless_mag_Tracer",4];
 				};
-				if(_pagar_random == 48) then {
+				if(_pagar_random >= 48) then {
 					//mx negra
 					_ammoBox addWeaponCargoGlobal ["arifle_MX_Black_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
 					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",6];
 				};
-				if(_pagar_random == 60) then {
+				if(_pagar_random >= 60) then {
 					//mk18 silenciada
 					_ammoBox addWeaponCargoGlobal ["srifle_EBR_DMS_F",1];
 					_ammoBox addItemCargoGlobal ["muzzle_snds_B",1];
 					_ammoBox addMagazineCargoGlobal ["20Rnd_762x51_Mag",6];
 				};
-				if(_pagar_random == 72) then {
+				if(_pagar_random >= 72) then {
 					//sting
 					_ammoBox addWeaponCargoGlobal ["SMG_02_ARCO_pointg_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
 					_ammoBox addMagazineCargoGlobal ["30Rnd_9x21_Mag",6];
 				};
-				if(_pagar_random == 84) then {
+				if(_pagar_random >= 84) then {
 					//vermin silenciada
 					_ammoBox addWeaponCargoGlobal ["SMG_01_Holo_pointer_snds_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
 					_ammoBox addMagazineCargoGlobal ["30Rnd_45ACP_Mag_SMG_01",6];
 				};
-				if(_pagar_random == 96) then {
+				if(_pagar_random >= 96) then {
 				// 7Rnd_408_Mag
 				    _ammoBox addWeaponCargoGlobal ["srifle_LRR_CAMO_F",1];
 				    _ammoBox addItemCargoGlobal ["optic_SOS",1];
