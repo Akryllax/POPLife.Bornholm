@@ -38,11 +38,11 @@ _pos = position _crupier;
 "marcadorcasino" setMarkerText "|||ROBANDO CASINO|||";
 "marcadorcasino" setMarkerType "mil_warning";	
 
-while {_time > 0} do {	
+while {_tiempo > 0} do {	
 	_rango =  _crupier distance _ladron;
 	if(_rango > _distancia_robo) then {	
 		hintSilent format["Has abandonado la zona del robo. Estabas a %1m del crupier.",round (_rango)];
-		_tiempo= 0;
+		_tiempo = 0;
 		_exito= false;		sleep 1;
 
 	};
@@ -53,7 +53,7 @@ while {_time > 0} do {
 
 	if(_rango < _distancia_robo) then {
 		_tiempo = _tiempo - 1;  
-		hintSilent format["Tiempo restante: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_rango),_distancia_robo];	
+		hintSilent format["Tiempo restante: %1 \n Distancia: %2m (max %3m)", [((_tiempo)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_rango),_distancia_robo];	
 		sleep 1;
 		_exito = true;
 	};		
