@@ -10,21 +10,16 @@ if (!isNil {robo}) then {
 		robo = 2;
 		publicVariable "robo";
 
-		["QUICKSKILL\robos\banco\manrobao.sqf","BIS_fnc_execVM",true,true] call BIS_fnc_MP;
 		
-		sleep 3;
+		
+		
 		
 		life_cash = life_cash + deposito;
 		
-		[] spawn {
-			life_use_atm = false;
-			sleep (60 * 5);
-			life_use_atm = true;
-		};
-		
-		sleep 5;
-		hint format ["Has robado %1E del banco central", deposito];
-		
+	
+		hint format ["Has robado %1$ del banco central", deposito];
+		cajaFuerte setPos (getMarkerPos "");
+		sleep 3;
 		
 		[] execVM "QUICKSKILL\robos\banco\reset.sqf";
 		
