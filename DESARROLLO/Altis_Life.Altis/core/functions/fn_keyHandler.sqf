@@ -266,6 +266,7 @@ switch (_code) do
 					[[_veh],"ROS_fnc_fiesta",nil,true] spawn life_fnc_MP;
 				};
 			};
+		};
 	};
 	//U Key
 	case 22:
