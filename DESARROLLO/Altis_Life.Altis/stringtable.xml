@@ -4421,6 +4421,11 @@
 			<Portuguese>Licença de zumo de BioFrutas</Portuguese>
 			<Spanish>Licencia de zumo de BioFrutas</Spanish>
 		</Key>
+		<Key ID="STR_License_Cazarrecompensas">
+			<Original>V.S.A. Licenses</Original>
+			<Spanish>Licencia C.V.S.</Spanish>
+		</Key>
+		
 		<Key ID="STR_License_Fusion">
 			<Original>Licencia de enriquecer uranio</Original>
 			<English>Licencia de enriquecer uranio</English>
