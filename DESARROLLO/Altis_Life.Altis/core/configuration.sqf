@@ -99,6 +99,7 @@ life_my_gang = ObjNull;
 
 life_vehicles = [];
 bank_robber = [];
+CRServicio = false;
 
 //COPS
 taserDelay = 1;
