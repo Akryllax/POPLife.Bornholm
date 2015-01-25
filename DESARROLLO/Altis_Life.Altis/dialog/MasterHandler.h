@@ -29,3 +29,5 @@
 #include "blackjack.hpp"
 #include "market.hpp"
 #include "jail_time.hpp"
+
+#include "menuBanco.hpp"
