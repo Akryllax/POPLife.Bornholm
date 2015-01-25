@@ -5128,7 +5128,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1214;
+		items=1216;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -16116,7 +16116,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this addAction[""Equipar Clase Profesional 250000$"",QUICK_fnc_comprarClaseEspia];";
+			init="this enableSimulation false;  this allowDamage false; this addAction[""Equipar Clase Profesional 250000$"",QUICK_fnc_comprarClaseEspia];";
 		};
 		class Item1046
 		{
@@ -17918,6 +17918,26 @@ class Mission
 			leader=1;
 			skill=0.40000001;
 			init="this allowDamage false; this enableSimulation false;";
+		};
+		class Item1214
+		{
+			position[]={3611.1716,10.152369,13102.692};
+			azimut=455.41101;
+			id=1480;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this addAction[""Robar llave de la caja fuerte"", ROS_fnc_robocasinoLlave];";
+		};
+		class Item1215
+		{
+			position[]={3611.498,10.115014,13105.914};
+			azimut=542.97601;
+			id=1481;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this addAction[""Abrir caja fuerte"", ROS_fnc_robocasinoCaja];";
 		};
 	};
 	class Markers
