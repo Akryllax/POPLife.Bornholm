@@ -14,7 +14,7 @@ class foto: RscPicture
 {
 	type = CT_STATIC;
 	style = ST_PICTURE;
-	text = "ica\banco\doc.paa";
+	text = "QUICKSKILL\robos\banco\doc.paa";
 
 	idc = -1;
 	x = 0.295762 * safezoneW + safezoneX;
@@ -92,7 +92,7 @@ class escribe: RscEdit
 };
 class ok: RscButton
 {
-	action = "closeDialog 0; [ctrlText 9023] exec ""ica\banco\codigoDSC.sqf"";";
+	action = "closeDialog 0; [ctrlText 9023] exec ""QUICKSKILL\robos\banco\codigoDSC.sqf"";";
 
 	idc = -1;
 	text = "OK"; //--- ToDo: Localize;
