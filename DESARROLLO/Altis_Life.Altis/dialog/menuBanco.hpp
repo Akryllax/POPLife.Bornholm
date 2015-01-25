@@ -253,7 +253,7 @@ class escribe: RscEdit
 };
 class ok: RscButton
 {
-	action = "closeDialog 0; [ctrlText 9024] exec ""ica\banco\codigoCaja.sqf"";";
+	action = "closeDialog 0; [ctrlText 9024] exec ""QUICKSKILL\robos\banco\codigoCaja.sqf"";";
 
 	idc = -1;
 	text = "OK"; //--- ToDo: Localize;
