@@ -103,7 +103,7 @@ switch (_code) do
 	};
 
   // O, abrelatas
-        case 24:
+    case 24:
 	{
 		if (!_shift && !_alt && !_ctrlKey  && (vehicle player != player)) then {
 			[] call War_fnc_abrelatas;

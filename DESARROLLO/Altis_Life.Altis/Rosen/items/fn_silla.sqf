@@ -7,7 +7,7 @@
 */
 
 private ["_silla"];
-[]spawn {
+[] spawn {
 	if (life_sentarse) exitWith {};
 	life_sentarse = true;
 	player switchMove "Crew";
