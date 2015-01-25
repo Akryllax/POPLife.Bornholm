@@ -30,35 +30,35 @@ if!(count _itemsRecompensa > 0) exitWith{ hint "Error, _itemsRecompensa is null"
 _metros = _vendedor distance _ladron;
 
 while {_time > 0} do {
-	
+
 	//mirar la distancia entre ladron i vendedor
 	_metros =  _vendedor distance _ladron;
 
 	//abandono zona de robo
-	if(_metros > _metros_cancelar_robo) then{	
-	
+	if(_metros > _metros_cancelar_robo) then{
+
 		hintSilent format["Has abandonado la zona de robo estabas a %1m del vendedor",round (_metros)];
 		_time = 0;
 		_pagar_ladron = "no";
 		sleep 1;
 
 	};
-    	
+
 	/// si muere paramos el contador
 		if !(alive _ladron) then {
 			_time = 0;
 		};
 
 	//mientras este dentro de rango que cuente el tiempo
-	if(_metros < _metros_cancelar_robo) then{		
-	
+	if(_metros < _metros_cancelar_robo) then{
+
 		//contar tiempo
-		_time = _time - 1;  
-		hintSilent format["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_cancelar_robo];	
+		_time = _time - 1;
+		hintSilent format["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_cancelar_robo];
 		sleep 1;
 		_pagar_ladron = "si";
 	};
-    		
+
 };//end while
 
 if(_time < 1) then{
@@ -76,7 +76,7 @@ if(_time < 1) then{
 
 			//dar pasta
 			life_cash = life_cash + _dinero;
-			
+
 
 			//Dar item especiales
 			{
@@ -87,77 +87,77 @@ if(_time < 1) then{
 			if(_darArmas == "si") then {
 
 
-				//crear caja de armas 
+				//crear caja de armas
 				_ammoBox = "Box_NATO_Wps_F" createVehicle position _vendedor;
  				clearMagazineCargoGlobal _ammoBox;
 				clearItemCargoGlobal _ammoBox;
 				clearWeaponCargoGlobal _ammoBox;
 
 				//crear coche del jugadro que peude abrir y cerrar
-				_pagar_random = random 9;
+				_pagar_random = random 100;
 				_pagar_random = round _pagar_random;
 
 				//ninja code fix
-				if(_pagar_random == 9) then {
-				   _pagar_random = 8;
+				if(_pagar_random == 100) then {
+				   _pagar_random = 99;
 				};
 				if(_pagar_random == 0) then {
 					//mx f
 					_ammoBox addWeaponCargoGlobal ["arifle_MX_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",6]; 
+					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",6];
 				};
-				if(_pagar_random == 1) then {
+				if(_pagar_random == 12) then {
 					//zafir
 					_ammoBox addWeaponCargoGlobal ["LMG_Zafir_pointer_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["150Rnd_762x51_Box",3]; 
+					_ammoBox addMagazineCargoGlobal ["150Rnd_762x51_Box",3];
 				};
-				if(_pagar_random == 2) then {
+				if(_pagar_random == 24) then {
 					//pdw200 silenciada
 					_ammoBox addWeaponCargoGlobal ["hgun_PDW2000_Holo_snds_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_9x21_Mag",6]; 
+					_ammoBox addMagazineCargoGlobal ["30Rnd_9x21_Mag",6];
 				};
-				if(_pagar_random == 3) then {
-					//sniper
-					_ammoBox addWeaponCargoGlobal ["srifle_LRR_SOS_F",1];
-					_ammoBox addItemCargoGlobal ["optic_SOS",1];
-					_ammoBox addMagazineCargoGlobal ["7Rnd_408_Mag",8]; 
+				if(_pagar_random == 36) then {
+					//mx_SW
+					_ammoBox addWeaponCargoGlobal ["arifle_MX_SW_Black_F",1];
+					_ammoBox addItemCargoGlobal ["optic_Hamer",1];
+					_ammoBox addMagazineCargoGlobal ["100Rnd_65x39_caseless_mag_Tracer",4];
 				};
-				if(_pagar_random == 4) then {
+				if(_pagar_random == 48) then {
 					//mx negra
 					_ammoBox addWeaponCargoGlobal ["arifle_MX_Black_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",6]; 
+					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",6];
 				};
-				if(_pagar_random == 5) then {
+				if(_pagar_random == 60) then {
 					//mk18 silenciada
 					_ammoBox addWeaponCargoGlobal ["srifle_EBR_DMS_F",1];
 					_ammoBox addItemCargoGlobal ["muzzle_snds_B",1];
-					_ammoBox addMagazineCargoGlobal ["20Rnd_762x51_Mag",6]; 
+					_ammoBox addMagazineCargoGlobal ["20Rnd_762x51_Mag",6];
 				};
-				if(_pagar_random == 6) then {
+				if(_pagar_random == 72) then {
 					//sting
 					_ammoBox addWeaponCargoGlobal ["SMG_02_ARCO_pointg_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_9x21_Mag",6]; 
+					_ammoBox addMagazineCargoGlobal ["30Rnd_9x21_Mag",6];
 				};
-				if(_pagar_random == 7) then {
+				if(_pagar_random == 84) then {
 					//vermin silenciada
 					_ammoBox addWeaponCargoGlobal ["SMG_01_Holo_pointer_snds_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_45ACP_Mag_SMG_01",6]; 
+					_ammoBox addMagazineCargoGlobal ["30Rnd_45ACP_Mag_SMG_01",6];
 				};
-				if(_pagar_random == 8) then {
-				//mx sw negra
-				_ammoBox addWeaponCargoGlobal ["arifle_MX_SW_Black_F",1];
-				_ammoBox addItemCargoGlobal ["optic_Aco",1];
-				_ammoBox addMagazineCargoGlobal ["100Rnd_65x39_caseless_mag_Tracer",5]; 
+				if(_pagar_random == 96) then {
+				// 7Rnd_408_Mag
+				    _ammoBox addWeaponCargoGlobal ["srifle_LRR_CAMO_F",1];
+				    _ammoBox addItemCargoGlobal ["optic_SOS",1];
+				    _ammoBox addMagazineCargoGlobal ["7Rnd_408_Mag",5];
 				};
 
 				//tiene 30 segundos pa coger el arma
-				_ammoBox spawn { sleep 30; deleteVehicle _this; }
+				_ammoBox spawn { sleep 45; deleteVehicle _this; }
 
 			};//end dar armas
 
@@ -172,7 +172,7 @@ if(_time < 1) then{
 				if(_pagar_random == 6) then {
 				   _pagar_random = 5;
 				};
-				
+
 				if(_pagar_random == 0) then {
 					//turismo rapido
 					_coche = "C_Hatchback_01_sport_F" createVehicle position _vendedor;
@@ -222,8 +222,8 @@ if(_time < 1) then{
 
 
 	};//end pagar ladron
-	
-	//terminar script	
+
+	//terminar script
 	if(true) exitWith{[]spawn { sleep 3;hint "";} };
 
 };
