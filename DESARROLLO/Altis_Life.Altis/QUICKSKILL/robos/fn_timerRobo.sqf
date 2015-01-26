@@ -94,75 +94,75 @@ if(_time < 1) then{
 				clearWeaponCargoGlobal _ammoBox;
 
 				//crear coche del jugadro que peude abrir y cerrar
-				_pagar_random = random 100;
+				_pagar_random = random 97;
 				_pagar_random = round _pagar_random;
 
 				//ninja code fix
-				if(_pagar_random == 100) then {
-				   _pagar_random = 99;
+				if(_pagar_random == 97) then {
+				   _pagar_random = 96;
 				};
-				if(_pagar_random >= 0 || _pagar_random <=9) then {
-					//mx f
-					_ammoBox addWeaponCargoGlobal ["arifle_MX_F",1];
+				if(_pagar_random >= 0 && _pagar_random <=19) then {
+					//TRG 21 %20
+					_ammoBox addWeaponCargoGlobal ["arifle_TRG21_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",6];
+					_ammoBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",6];
 				};
-				 if(_pagar_random >= 10 || _pagar_random <=19) then {
-					//zafir
-					_ammoBox addWeaponCargoGlobal ["LMG_Zafir_pointer_F",1];
+				if(_pagar_random >= 20 && _pagar_random <=39) then {
+					//MK20 Camo %20
+					_ammoBox addWeaponCargoGlobal ["arifle_Mk20_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["150Rnd_762x51_Box",3];
+					_ammoBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",5];
 				};
-				if(_pagar_random >= 20 || _pagar_random <=29) then {
-					//pdw200 silenciada
-					_ammoBox addWeaponCargoGlobal ["hgun_PDW2000_Holo_snds_F",1];
+				 if(_pagar_random >= 40 && _pagar_random <=49) then {
+					//Katiba %10
+					_ammoBox addWeaponCargoGlobal ["arifle_Katiba_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_9x21_Mag",6];
+					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_green",5];
 				};
-				if(_pagar_random >= 30 || _pagar_random <=39) then {
-				    //mx_SW
-					_ammoBox addWeaponCargoGlobal ["arifle_MX_SW_Black_F",1];
-					_ammoBox addItemCargoGlobal ["optic_Hamer",1];
-					_ammoBox addMagazineCargoGlobal ["100Rnd_65x39_caseless_mag_Tracer",4];
+				if(_pagar_random >= 50 && _pagar_random <=59) then {
+				    //mx_SW %10
+					_ammoBox addWeaponCargoGlobal ["arifle_MX_SW_F",1];
+					_ammoBox addItemCargoGlobal ["optic_Arco",1];
+					_ammoBox addMagazineCargoGlobal ["100Rnd_65x39_caseless_mag",2];
 				};
-				if(_pagar_random >= 40 || _pagar_random <=49) then {
-					//mx negra
-					_ammoBox addWeaponCargoGlobal ["arifle_MX_Black_F",1];
+				if(_pagar_random >= 60 && _pagar_random <=69) then {
+					//MK 18 %10
+				    _ammoBox addWeaponCargoGlobal ["srifle_EBR_F",1];
+				    _ammoBox addItemCargoGlobal ["optic_DMS",1];
+				    _ammoBox addMagazineCargoGlobal ["20Rnd_762x51_Mag",5];
+				};
+				if(_pagar_random >= 70 && _pagar_random <=76) then {
+					//mk200 %7
+					_ammoBox addWeaponCargoGlobal ["LMG_Mk200_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",6];
+					_ammoBox addMagazineCargoGlobal ["200Rnd_65x39_cased_Box_Tracer",2];
 				};
-				if(_pagar_random >= 50 || _pagar_random <=59) then {
-					//mk18 silenciada
-					_ammoBox addWeaponCargoGlobal ["srifle_EBR_DMS_F",1];
-					_ammoBox addItemCargoGlobal ["muzzle_snds_B",1];
-					_ammoBox addMagazineCargoGlobal ["20Rnd_762x51_Mag",6];
-				};
-				if(_pagar_random >= 60 || _pagar_random <=69) then {
-					//sting
-					_ammoBox addWeaponCargoGlobal ["SMG_02_ARCO_pointg_F",1];
+				if(_pagar_random >= 77 && _pagar_random <=83) then {
+					//Zafir %7
+					_ammoBox addWeaponCargoGlobal ["LMG_Zafir_F",1];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_9x21_Mag",6];
+					_ammoBox addMagazineCargoGlobal ["150Rnd_762x51_Box_Tracer",3];
 				};
-				if(_pagar_random >= 70 || _pagar_random <=79) then {
-					//vermin silenciada
-					_ammoBox addWeaponCargoGlobal ["SMG_01_Holo_pointer_snds_F",1];
-					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_45ACP_Mag_SMG_01",6];
+				if(_pagar_random >= 84 && _pagar_random <=88) then {
+					//GM6 Lynx %5
+				    _ammoBox addWeaponCargoGlobal ["srifle_GM6_CAMO_F",1];
+				    _ammoBox addItemCargoGlobal ["optic_SOS",1];
+				    _ammoBox addMagazineCargoGlobal ["5Rnd_127x108_Mag",5];
 				};
-				if(_pagar_random >= 80 || _pagar_random <=89) then {
-				// 7Rnd_408_Mag
+				if(_pagar_random >= 89 && _pagar_random <=93) then {
+				// M320 LRR %5
 				    _ammoBox addWeaponCargoGlobal ["srifle_LRR_CAMO_F",1];
 				    _ammoBox addItemCargoGlobal ["optic_SOS",1];
 				    _ammoBox addMagazineCargoGlobal ["7Rnd_408_Mag",5];
 				};
-				if(_pagar_random >= 90 || _pagar_random <=100) then {
-				//
-				    _ammoBox addWeaponCargoGlobal ["srifle_LRR_CAMO_F",1];
-				    _ammoBox addItemCargoGlobal ["optic_SOS",1];
-				    _ammoBox addMagazineCargoGlobal ["7Rnd_408_Mag",5];
+				if(_pagar_random >= 94 && _pagar_random <=96) then {
+				//RPG-42 Alamut %3
+				    _ammoBox addWeaponCargoGlobal ["launch_RPG32_F",1];
+				    _ammoBox addItemCargoGlobal ["optic_NVS",1];
+				    _ammoBox addMagazineCargoGlobal ["RPG32_HE_F",3];
                 };
-				//tiene 30 segundos pa coger el arma
-				_ammoBox spawn { sleep 45; deleteVehicle _this; }
+				//tiene 60 segundos pa coger el arma
+				_ammoBox spawn { sleep 60; deleteVehicle _this; }
 
 			};//end dar armas
 
