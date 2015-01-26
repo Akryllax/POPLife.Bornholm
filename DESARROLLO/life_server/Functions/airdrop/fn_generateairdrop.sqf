@@ -32,7 +32,7 @@ _markerText = createMarker ["Airdropmarkertext", _dest];
 "Airdropmarkertext" setMarkerText "Zona de la carga perdida.";
 "Airdropmarkertext" setMarkerType "mil_warning";+
 
-[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>El helicoptero estadounidense ha sido avistado perdiendo una caja con armamento militar en el lugar indicado en el mapa.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>El helicoptero estadounidense pasara por la zona indicada en el mapa.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 sleep 60;
 
 heli1 = CreateVehicle [airdrop_helicopter_main, [7950, 9667, 0], [], 0, "FLY"];
@@ -60,14 +60,15 @@ _mygroup3 addWaypoint [[2380.47,22267.8,0], 0];
 
 _markerText = createMarker ["airbox_marker", [14028.5,18719.7,0.0014267]];
 "airbox_marker" setMarkerColor "ColorBlue";
-"airbox_marker" setMarkerText "Helicoptero militar";
+"airbox_marker" setMarkerText "Cargamento militar";
 "airbox_marker" setMarkerType "mil_destroy";
 
 _containerdummy = createVehicle ["Land_Cargo20_blue_F", [3450.7363, 16708.432, 90], [], 0, "CAN_COLLIDE"];
 _containerdummy attachTo [heli1,[0,0,-3.5]];
 _containerdummy setDir 90;
 
-
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>El helicoptero estadounidense ha perdido el armamento militar, se ruega no robar el contenido.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+sleep 30;
 while { _dest distance heli1 > 250 } do { "airbox_marker" setMarkerPos getPos heli1; sleep 0.1 };
 [[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>Para prevenir el robo del armamento, la caja se autodestruira en 20 minutos.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
