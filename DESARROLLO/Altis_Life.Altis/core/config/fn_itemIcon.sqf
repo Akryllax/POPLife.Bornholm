@@ -61,4 +61,5 @@ switch (_var) do
 	case "life_inv_storagesmall": {("textures\icons\items\storagesmall.paa")};
 	case "life_inv_storagebig": {("textures\icons\items\storagebig.paa")};
 	default {("textures\icons\items\noicon.paa")};
+	
 };
