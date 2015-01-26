@@ -49,7 +49,8 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 		};
 	} else {
 		if((_price * _amount) > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;};
-		hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
+		_icon = format["<img image='%1'/>",[([_type,0] call life_fnc_varHandle)] call life_fnc_itemIcon];
+		hint parseText format[localize "STR_Shop_Virt_BoughtItem",_amount,_icon,_name,[(_price * _amount)] call life_fnc_numberText];
 		__SUB__(life_cash,(_price * _amount));
 		[[1,player,life_shop_type,_amount,_price,_type],"TON_fnc_Ajustprices",false,false] spawn life_fnc_MP;
 	};
