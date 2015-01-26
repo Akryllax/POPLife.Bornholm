@@ -1,391 +1,308 @@
-class Life_my_smartphone {
-	idd = 88888;
-	name = "life_my_telephone_menu";
+class smartphone {
+
+	idd = 90000;
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "[] spawn life_fnc_smartphone;";
 	
 	class controlsBackground {
-		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+		
+		class MainBackground:Life_RscPictureKeepAspect {
 			idc = -1;
-			x = 0.1;
-			y = 0.2;
-			w = 0.95;
-			h = (1 / 25);
+			text = "images\phone.paa";			
+			colorBackground[] = {0, 0, 0, 0};
+			x = 0;
+			y = 0;
+			w = 1;
+			h = 1;
 		};
 		
-	class MainBackground:Life_RscText {
-			colorBackground[] = {0, 0, 0, 0.7};
-			idc = -1;
-			x = 0.1;
-			y = 0.2 + (11 / 250);
-			w = 0.95;
-			h = 0.7 - (22 / 250);
-		};
-        
-    class PlayerListTitleBackground:Life_RscText {
-			colorBackground[] = {0.588, 0.424, 0.145, 1.0};
-			idc = -1;
-			x = 0.11;
-			y = 0.25;
-			w = 0.2;
-			h = (1 / 25);
-		};
-		
-	class MessageTitleBackground:Life_RscText {
-			colorBackground[] = {0.588, 0.424, 0.145, 1.0};
-			idc = -1;
-			x = 0.325;
-			y = 0.25;
-			w = 0.7;
-			h = (1 / 25);
-		};
-		
-	class RandomTitleBackground:Life_RscText {
-			colorBackground[] = {0.588, 0.424, 0.145, 1.0};
-			idc = -1;
-			x = 0.325;
-			y = 0.25 + 0.3 + (1 / 25);
-			w = 0.7;
-			h = (1 / 25);
-		};
 	};
 	
-	class controls {
-		
-		class MessageTitle : Life_RscTitle {
-			colorBackground[] = {0, 0, 0, 0};
-			idc = 88886;
+	class controls
+	{
+	
+		class TextTime : Life_RscStructuredText
+		{
+			idc = 90035;
 			text = "";
-			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-			x = 0.325;
-			y = 0.25;
-			w = 0.7;
-			h = (1 / 25);
-		};
-		
-		class RandomTitle : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
-			idc = 88890;
-			text = "$STR_SMARTPHONE_RANDOMTITLE";
-			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-			x = 0.325;
-			y = 0.25 + 0.3 + (1 / 25);
-			w = 0.7;
-			h = (1 / 25);
+			colorText[] = {1, 1, 1, 0.75};
+			x = 0; y = 0.165;
+			w = 1; h = 0.05;
 		};
 		
-		class PlayerList : Life_RscListBox
+		class TextStatusLeft : Life_RscStructuredText
 		{
-			idc = 88881;
-			onLBSelChanged = "[2] spawn life_fnc_smartphone;";
-			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			x = 0.11;
-			y = 0.25 + (1 / 25);
-			w = 0.2;
-			h = 0.5;
+			idc = 90036;
+			text = "";
+			colorBackground[] = {0, 0, 0, 0};
+			colorText[] = {1, 1, 1, 0.75};
+			x = 0.5 - (0.08 * 2) - 0.005; y = 0.165;
+			w = 0.3; h = 0.05;
 		};
 		
-		class MessageList : Life_RscListNBox
+		class TextStatusRight : Life_RscStructuredText
 		{
-			idc = 88882;
-			onLBSelChanged = "[(lbCurSel 88882)] call life_fnc_showMsg;";
-			//sizeEx = 0.04;
-			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			colorBackground[] = {0, 0, 0, 0.0};
-			columns[] = {0,0.3};
-			x = 0.325;
-			y = 0.25 + (1 / 25);
-			w = 0.7;
-			h = 0.3;
-		};
-
-		class TextShow : Life_RscControlsGroup {
-			x = 0.325;
-			y =  0.25 + 0.3 + (1 / 25) + (1 / 25);
-			w =  0.7;
-			h =  0.15;
-			class HScrollbar : HScrollbar {
-				height = 0;
-			};
-			class controls {
-				class showText : Life_RscStructuredText {
-					idc = 88887;
-					text = "";
-					colorBackground[] = {0.28,0.28,0.28,0.28};
-					size = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-					shadow = 0;
-					x = 0;
-					y = 0;
-					w = 0.69;//w = 0.7;
-					h = 1;//h = 2.15;
-				};
+			idc = 90037;
+			text = "";
+			colorBackground[] = {0, 0, 0, 0};
+			colorText[] = {1, 1, 1, 0.75};
+			x = 0.34; y = 0.165;
+			w = 1 - (0.34 * 2) - 0.02; h = 0.05;
+			class Attributes {
+				align = "right";
 			};
 		};
 		
-		class Schreiben : Life_RscButtonMenu {
-			idc = 887892;
-			text = "$STR_SMARTPHONE_SCHREIBEN";
-			onButtonClick = "[4] call life_fnc_smartphone;";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1.0};
-			x = 0.11;
-			y = 0.25 + (1 / 25) + 0.51;
-			w = 0.2;
-			h = (1 / 25);
+		class IconSyncData : Life_RscStructuredText {
+			idc = 90010;
+			x = 0.5 - (0.08 * 2);
+			y = 1 - 0.28;
+			w = 0.08;
+			h = 0.11;
 		};
 		
-		class Title : Life_RscTitle {
-			colorBackground[] = {0, 0, 0, 0};
-			idc = -1;
-			text = "$STR_SMARTPHONE_TITLE";
-			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-			x = 0.1;
-			y = 0.2;
-			w = 0.95;
-			h = (1 / 25);
+		class IconMoney : Life_RscStructuredText {
+			idc = 90015;
+			x = 0.5 - (0.08 * 1);
+			y = 1 - 0.28;
+			w = 0.08;
+			h = 0.11;
 		};
 		
-		class PlayerListTitle : Life_RscTitle {
-			colorBackground[] = {0, 0, 0, 0};
-			idc = -1;
-			text = "$STR_SMARTPHONE_PLAYERLISTTITLE";
-			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-			x = 0.11;
-			y = 0.25;
-			w = 0.2;
-			h = (1 / 25);
+		class IconMessage : Life_RscStructuredText {
+			idc = 90020;
+			x = 0.5;
+			y = 1 - 0.28;
+			w = 0.08;
+			h = 0.11;
 		};
 		
-		class CloseLoadMenu : Life_RscButtonMenu {
-			idc = -1;
-			text = "$STR_Global_Close";
-			onButtonClick = "closeDialog 0;";
-			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
+		class IconInventory : Life_RscStructuredText {
+			idc = 90025;
+			x = 0.5 + (0.08 * 1);
+			y = 1 - 0.28;
+			w = 0.08;
+			h = 0.11;
 		};
 		
-		class Notruf : Life_RscButtonMenu {
-			idc = -1;
-			text = "$STR_SMARTPHONE_NOTRUF";
-			onButtonClick = "createDialog ""Life_smartphone_notruf"";";
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
-			x = 0.325 + 0.7 - (6.25 / 40);
-			y = 0.25 + (1 / 25) + 0.51;
-			w = (6.25 / 40);
-			h = (1 / 25);
+		class IconOne : Life_RscStructuredText {
+			idc = 90500;
+			x = 0.5 - (0.08 * 2);
+			y = 0.23;
+			w = 0.08;
+			h = 0.11;
 		};
-	};
+		
+		class IconTwo : Life_RscStructuredText {
+			idc = 90501;
+			x = 0.5 - (0.08 * 1);
+			y = 0.23;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class IconThree : Life_RscStructuredText {
+			idc = 90502;
+			x = 0.5;
+			y = 0.23;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class IconFour : Life_RscStructuredText {
+			idc = 90503;
+			x = 0.5 + (0.08 * 1);
+			y = 0.23;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class IconFive : Life_RscStructuredText {
+			idc = 90504;
+			x = 0.5 - (0.08 * 2);
+			y = 0.36;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class IconSix : Life_RscStructuredText {
+			idc = 90505;
+			x = 0.5 - (0.08 * 1);
+			y = 0.36;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class IconSeven : Life_RscStructuredText {
+			idc = 90506;
+			x = 0.5;
+			y = 0.36;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class IconEight : Life_RscStructuredText {
+			idc = 90507;
+			x = 0.5 + (0.08 * 1);
+			y = 0.36;
+			w = 0.08;
+			h = 0.11;
+		};
 
-};
-
-class Life_smartphone_schreiben
-{
-	idd = 88883;
-	name = "life_my_smartphone_schreiben";
-	movingEnable = false;
-	enableSimulation = true;
-	onLoad = "";
-	
-
-	class controlsBackground {
-		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+		class IconNine : Life_RscStructuredText {
+			idc = 90508;
+			x = 0.5 - (0.08 * 2);
+			y = 0.49;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonClose : Life_RscButtonInvisible {
 			idc = -1;
-			x = 0.1;
-			y = 0.2;
-			w = 0.6;
-			h = (1 / 25);
-		};
-		
-		class MainBackground:Life_RscText {
-			colorBackground[] = {0, 0, 0, 0.7};
-			idc = -1;
-			x = 0.1;
-			y = 0.2 + (11 / 250);
-			w = 0.6;
-			h = 0.1;
-		};
-		
-	};
-	class controls {
-		class Title : Life_RscTitle {
-			colorBackground[] = {0, 0, 0, 0};
-			idc = 88886;
-			text = "$STR_SMARTPHONE_NACHRICHTTITLE";
-			x = 0.1;
-			y = 0.2;
-			w = 0.95;
-			h = (1 / 25);
-		};
-		
-		class Absenden : Life_RscButtonMenu {
-			idc = 88885;
-			text = "$STR_SMARTPHONE_ABSENDEN";
-			onButtonClick = "[1,-1,(ctrlText 88884)] call life_fnc_newMsg;";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1.0};
-			x = 0.6 - (6.25 / 40) + 0.088;
-			y = 0.3 + (1 / 25)  - 0.048;
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		
-		class AdminMsg : life_RscButtonMenu 
-		{
-			idc = 888897;
-			text = "$STR_CELL_AdminMsg";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1.0};
-			onButtonClick = "[5,-1,(ctrlText 88884)] call life_fnc_newMsg;";
-			
-			x = 0.6 - (6.25 / 40) - 0.121;
-			y = 0.3 + (1 / 25)  - 0.048;
-			w = 0.2;
-			h = (1 / 25);
-		};
-		
-		class Close : Life_RscButtonMenu {
-			idc = -1;
-			text = "$STR_Global_Close";
-			onButtonClick = "closeDialog 0;";
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
-			x = 0.11;
-			y = 0.3 + (1 / 25)  - 0.048;
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		
-		class textEdit : Life_RscEdit {
-			idc = 88884;
+			shortcuts[] = {0x00050000 + 2};
 			text = "";
-			sizeEx = 0.030;
-			x = 0.11; y = 0.3 - 0.048;
-			w = 0.58; h = 0.03;
-		};
-	
-	};
-	
-};
-
-class Life_smartphone_notruf {
-	idd = 887890;
-	name= "life_my_smartphone_notruf";
-	movingEnable = false;
-	enableSimulation = true;
-	onLoad = "[6] spawn life_fnc_newMsg;";
-	
-	class controlsBackground {		
-		class EXphone : Life_RscPicture 
-		{
-			idc = 3001;
-			text = "textures\phone.paa";
-			x = 0.384999;
-			y = -0.00433818;
-			w = 0.8125;
-			h = 1.03676;
-		};	
-	};
-	
-	class controls {
-		
-		class textEdit : Life_RscEdit {
-		
-		idc = 888894;
-		
-		text = "";
-		x = 0.607904; y = 0.340086;
-		w = 0.325; h = 0.26;
-		
-		};
-		
-		class TxtCopButton : life_RscButtonMenu 
-		{
-			idc = 888895;
-			text = "$STR_CELL_TextPolice";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[2,-1,(ctrlText 888894)] call life_fnc_newMsg;";
-			
-			x = 0.775;
-			y = 0.64;
-			w = 0.15;
-			h = 0.05;
-		};
-		
-		class TxtAdminButton : life_RscButtonMenu 
-		{
-			idc = 888896;
-			text = "$STR_CELL_TextAdmins";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[3,-1,(ctrlText 888894)] call life_fnc_newMsg;";
-			
-			x = 0.775;
-			y = 0.72;
-			w = 0.15;
-			h = 0.05;
-		};
-		
-		
-		class AdminMsgAll : life_RscButtonMenu 
-		{
-			idc = 888898;
-			text = "$STR_CELL_AdminMSGAll";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[7,-1,(ctrlText 888894)] call life_fnc_newMsg;";
-			
-			x = 0.775;
-			y = 0.8;
-			w = 0.15;
-			h = 0.05;
-		};
-		
-		class EMSReq : life_RscButtonMenu
-		{
-			idc = 888899;
-			text = "$STR_CELL_EMSRequest";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[4,-1,(ctrlText 888894)] call life_fnc_newMsg;";
-			
-			x = 0.6125;
-			y = 0.72;
-			w = 0.15;
-			h = 0.05;
-		};
-		
-		class MercReq : life_RscButtonMenu 
-		{
-			idc = 888900;
-			text = "$STR_CELL_MercRequest";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[8,-1,(ctrlText 888894)] call life_fnc_newMsg;";
-			
-			x = 0.6125;
-			y = 0.64;
-			w = 0.15;
-			h = 0.05;
-		};
-		class CopMsgAll : life_RscButtonMenu 
-		{
-			idc = 888901;
-			text = "$STR_CELL_CopMSGAll";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[9,-1,(ctrlText 888894)] call life_fnc_newMsg;";
-			
-			x = 0.6125;
-			y = 0.8;
-			w = 0.15;
-			h = 0.05;
-		};
-		
-		class CloseButton : Life_RscButtonInvisible {
-			idc = -1;
-			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
-			colorBackground[] = {0,0,0,0};
-			x = 0.74;
-			y = 0.886213;
-			w = 0.3;
-			h = 0.06;
+			tooltip = "Close your smartphone";
+			x = 0.5 - ((6.25 / 40) / 2);
+			y = 1 - 0.15;
+			w = (6.25 / 40);
+			h = (6.25 / 40);
 		};
+		
+		class ButtonCell : Life_RscButtonInvisible {
+			idc = 90040;
+			text = "";
+			onButtonClick = "if (player getVariable[""restrained"",false]) then { hint ""You cannot open your cell phone when you're restrained!""; } else { createDialog ""Life_cell_phone""; };";
+			tooltip = "Send text messages to players or police";
+			x = 0.5;
+			y = 1 - 0.28;
+			w = 0.08;
+			h = 0.11;
+		};
+
+		class ButtonSync : Life_RscButtonInvisible {
+			idc = 90045;
+			text = "";
+			onButtonClick = "[] call life_fnc_syncData;";
+			tooltip = "Update server with your current character data";
+			x = 0.5 - (0.08 * 2);
+			y = 1 - 0.28;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonInventory : Life_RscButtonInvisible {
+			idc = 90050;
+			text = "";
+			onButtonClick = "createDialog ""life_inventory_menu""";
+			tooltip = "View and manage your virtual item inventory";
+			x = 0.5 + (0.08 * 1);
+			y = 1 - 0.28;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonMoney : Life_RscButtonInvisible {
+			idc = 90045;
+			text = "";
+			onButtonClick = "createDialog ""life_money_menu""";
+			tooltip = "Trade your cash on hand";
+			x = 0.5 - (0.08 * 1);
+			y = 1 - 0.28;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonOne : Life_RscButtonInvisible {
+			idc = 90600;
+			text = "";
+			onButtonClick = "call compile (life_phone_actions select 0)";
+			x = 0.5 - (0.08 * 2);
+			y = 0.23;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonTwo : Life_RscButtonInvisible {
+			idc = 90601;
+			text = "";
+			onButtonClick = "call compile (life_phone_actions select 1)";
+			x = 0.5 - (0.08 * 1);
+			y = 0.23;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonThree : Life_RscButtonInvisible {
+			idc = 90602;
+			text = "";
+			onButtonClick = "call compile (life_phone_actions select 2)";
+			x = 0.5;
+			y = 0.23;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonFour : Life_RscButtonInvisible {
+			idc = 90603;
+			text = "";
+			onButtonClick = "call compile (life_phone_actions select 3)";
+			x = 0.5 + (0.08 * 1);
+			y = 0.23;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonFive : Life_RscButtonInvisible {
+			idc = 90604;
+			text = "";
+			onButtonClick = "call compile (life_phone_actions select 4)";
+			x = 0.5 - (0.08 * 2);
+			y = 0.36;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonSix : Life_RscButtonInvisible {
+			idc = 90605;
+			text = "";
+			onButtonClick = "call compile (life_phone_actions select 5)";
+			x = 0.5 - (0.08 * 1);
+			y = 0.36;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonSeven : Life_RscButtonInvisible {
+			idc = 90606;
+			text = "";
+			onButtonClick = "call compile (life_phone_actions select 6)";
+			x = 0.5;
+			y = 0.36;
+			w = 0.08;
+			h = 0.11;
+		};
+		
+		class ButtonEight : Life_RscButtonInvisible {
+			idc = 90607;
+			text = "";
+			onButtonClick = "call compile (life_phone_actions select 7)";
+			x = 0.5 + (0.08 * 1);
+			y = 0.36;
+			w = 0.08;
+			h = 0.11;
+		};
+
+		class ButtonNine : Life_RscButtonInvisible {
+			idc = 90608;
+			text = "";
+			onButtonClick = "call compile (life_phone_actions select 8)";
+			x = 0.5 - (0.08 * 2);
+			y = 0.49;
+			w = 0.08;
+			h = 0.11;
+		};
+		
 	};
 };

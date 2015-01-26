@@ -5,139 +5,181 @@ class Life_cell_phone {
 	enableSimulation = true;
 	onLoad = "[] spawn life_fnc_cellphone";
 	
-	class controlsBackground {		
-		class EXphone : Life_RscPicture 
-		{
-			idc = 3001;
-			text = "textures\phone.paa";
-			x = 0.384999;
-			y = -0.00433818;
-			w = 0.8125;
-			h = 1.03676;
-		};	
-	};
-			
-	class controls {
+	class controlsBackground {
 		
-		class TextToSend : Life_RscTitle 
-		{
-		
+		class MainBackground:Life_RscPictureKeepAspect {
+			idc = -1;
+			text = "images\phone.paa";			
 			colorBackground[] = {0, 0, 0, 0};
-			idc = 3002;
-			text = "$STR_CELL_TextToSend";
-			x = 0.605607;
-			y = 0.210809;
-			w = 0.2725;
-			h = 0.04;
+			x = 0;
+			y = 0;
+			w = 1;
+			h = 1;
 		};
 		
-		   class textEdit : Life_RscEdit 
+	};
+	
+	class controls {
+
+		class TextTime : Life_RscStructuredText
 		{
+			idc = 90035;
+			text = "";
+			colorBackground[] = {0, 0, 0, 0};
+			colorText[] = {1, 1, 1, 0.75};
+			x = 0; y = 0.165;
+			w = 1; h = 0.05;
+		};
 		
-		idc = 3003;
+		class TextStatusLeft : Life_RscStructuredText
+		{
+			idc = 90036;
+			text = "";
+			colorBackground[] = {0, 0, 0, 0};
+			colorText[] = {1, 1, 1, 0.75};
+			x = 0.5 - (0.08 * 2) - 0.005; y = 0.165;
+			w = 0.3; h = 0.05;
+		};
 		
-		text = "";
-		x = 0.607904; y = 0.340086;
-		w = 0.325; h = 0.26;
+		class TextStatusRight : Life_RscStructuredText
+		{
+			idc = 90037;
+			text = "";
+			colorBackground[] = {0, 0, 0, 0};
+			colorText[] = {1, 1, 1, 0.75};
+			x = 0.34; y = 0.165;
+			w = 1 - (0.34 * 2) - 0.02; h = 0.05;
+			class Attributes {
+				align = "right";
+			};
+		};
 		
+		class TextToSend : Life_RscTitle {
+			colorBackground[] = {0, 0, 0, 0};
+			idc = 3002;
+			text = "Message To Send:";
+			x = 0.5 - (0.08 * 2);
+			y = 0.23;
+			w = 1 - ((0.5 - (0.08 * 2)) * 2);
+			h = (1 / 25);
+		};
+		
+		class textEdit : Life_RscEdit {
+			idc = 3003;
+			text = "";
+			sizeEx = 0.030;
+			x = 0.5 - (0.08 * 2); y = 0.28;
+			w = 1 - ((0.5 - (0.08 * 2)) * 2); h = 0.03;
 		};
 		
 		class TextMsgButton : life_RscButtonMenu 
 		{
 			idc = 3015;
-			text = "Text";
-			colorBackground[] = {0,0.6,0.2,0.7};
-			onButtonClick = "[] call TON_fnc_cell_textmsg";
-			colorActive[] = {0,0,0,0};
+			text = "Send";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_cell_textmsg";
 			
-			x = 0.6125;
-			y = 0.64;
-			w = 0.15;
-			h = 0.05;
+			x = 1 - 0.34 - 0.075;
+			y = 0.35;
+			w = 0.075;
+			h = (1 / 25);
 		};
 		
 		class PlayerList : Life_RscCombo 
 		{
 			idc = 3004;
-			
-			x = 0.6125; y = 0.28;
-			w = 0.2375; h = 0.04;
+			x = 0.34; y = 0.35;
+			w = 1 - ((0.5 - (0.08 * 2)) * 2) - 0.08; h = (1 / 25);
 		};
-
+		
 		class TextCopButton : life_RscButtonMenu 
 		{
 			idc = 3016;
-			text = "Text Police";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[] call TON_fnc_cell_textcop";
+			text = "Send to Police";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_cell_textcop";
 			
-			x = 0.775;
-			y = 0.64;
-			w = 0.15;
-			h = 0.05;
+			x = 0.5 - (0.08 * 2);
+			w = 1 - ((0.5 - (0.08 * 2)) * 2);
+			y = 0.4;
+			h = (1 / 25);
+		};
+
+		class TextEMTButton : life_RscButtonMenu 
+		{
+			idc = 3018;
+			text = "Send to EMTs";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_cell_textemt";
+			
+			x = 0.5 - (0.08 * 2);
+			w = 1 - ((0.5 - (0.08 * 2)) * 2);
+			y = 0.45;
+			h = (1 / 25);
 		};
 		
 		class TextAdminButton : life_RscButtonMenu 
 		{
 			idc = 3017;
-			text = "Text Admin";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[] call TON_fnc_cell_textadmin";
+			text = "Send to Online Admins";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_cell_textadmin";
 			
-			x = 0.775;
-			y = 0.72;
-			w = 0.15;
-			h = 0.05;
+			x = 0.5 - (0.08 * 2);
+			w = 1 - ((0.5 - (0.08 * 2)) * 2);
+			y = 0.5;
+			h = (1 / 25);
+		};
+		
+		class TaxiMsgButton : life_RscButtonMenu 
+		{
+			idc = 3020;
+			text = "Call Taxi (Gives Pos)";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_cell_requestTaxi";
+			
+			x = 0.5 - (0.08 * 2);
+			w = 1 - ((0.5 - (0.08 * 2)) * 2);
+			y = 0.55;
+			h = (1 / 25);
 		};
 		
 		class AdminMsgButton : life_RscButtonMenu 
 		{
-			idc = 3020;
-			text = "Admin Msg";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[] call TON_fnc_cell_adminmsg";
+			idc = 3022;
+			text = "Admin Message Send";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_cell_adminmsg";
 			
-			x = 0.6125;
-			y = 0.8;
-			w = 0.15;
-			h = 0.05;
+			x = 0.5 - (0.08 * 2);
+			w = 1 - ((0.5 - (0.08 * 2)) * 2);
+			y = 0.6;
+			h = (1 / 25);
 		};
 		
 		class AdminMsgAllButton : life_RscButtonMenu 
 		{
 			idc = 3021;
-			text = "Text All";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[] call TON_fnc_cell_adminmsgall";
+			text = "Admin Message to All";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_cell_adminmsgall";
 			
-			x = 0.775;
-			y = 0.8;
-			w = 0.15;
-			h = 0.05;
+			x = 0.5 - (0.08 * 2);
+			w = 1 - ((0.5 - (0.08 * 2)) * 2);
+			y = 0.65;
+			h = (1 / 25);
 		};
 		
-		class EMSRequest : life_RscButtonMenu
-		{
-			idc = 3022;
-			text = "EMS";
-			colorBackground[] = {0,0.23,1,0.48};
-			onButtonClick = "[] call TON_fnc_cell_emsrequest";
-			
-			x = 0.6125;
-			y = 0.72;
-			w = 0.15;
-			h = 0.05;
-		};
-		
-		class CloseButtonKey : Life_RscButtonInvisible {
+		class ButtonClose : Life_RscButtonInvisible {
 			idc = -1;
+			shortcuts[] = {0x00050000 + 2};
 			text = "";
 			onButtonClick = "closeDialog 0;";
-			colorBackground[] = {0,0,0,0};
-			x = 0.743107;
-			y = 0.886213;
-			w = 0.05;
-			h = 0.06;
+			tooltip = "Go back to home screen";
+			x = 0.5 - ((6.25 / 40) / 2);
+			y = 1 - 0.15;
+			w = (6.25 / 40);
+			h = (6.25 / 40);
 		};
 	};
 };

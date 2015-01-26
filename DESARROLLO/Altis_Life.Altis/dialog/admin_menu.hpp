@@ -7,7 +7,7 @@ class life_admin_menu {
 	
 	class controlsBackground {
 		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			colorBackground[] = {0.4, 0.05, 0.05, 0.7};
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
@@ -31,7 +31,7 @@ class life_admin_menu {
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 2901;
-			text = "$STR_Admin_Title";
+			text = "Asylum Admin Menu";
 			x = 0.1;
 			y = 0.2;
 			w = 0.6;
@@ -62,7 +62,7 @@ class life_admin_menu {
 
 		class CloseButtonKey : Life_RscButtonMenu {
 			idc = -1;
-			text = "$STR_Global_Close";
+			text = "Close";
 			onButtonClick = "closeDialog 0;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.88 - (1 / 25);
@@ -70,112 +70,22 @@ class life_admin_menu {
 			h = (1 / 25);
 		};
 		
-		class AdminID : Life_RscButtonMenu {
-			idc = -1;
-			text = "$STR_Admin_GetID";
-			onButtonClick = "[] call life_fnc_admingetID;";
-			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+		class AdminCam : Life_RscButtonMenu {
+			idc = 1000;
+			text = "Admin Cam";
+			onButtonClick = "[] call BIS_fnc_camera;";
+			x = 0.10 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.88 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
 		
-		class Compensate : Life_RscButtonMenu {
-			idc = 2904;
-			text = "$STR_Admin_Compensate";
-			onButtonClick = "createDialog ""Life_Admin_Compensate"";";
-			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+		class RestartServer : Life_RscButtonMenu {
+			idc = 2000;
+			text = "Restart Server";
+			onButtonClick = "[[player],""ASY_fnc_rebootMonitor"",false,false] spawn BIS_fnc_MP;";
+			x = 0.584 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.88 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		class Spectate : Life_RscButtonMenu {
-			idc = 2905;
-			text = "$STR_Admin_Spectate";
-			onButtonClick = "[] call life_fnc_adminSpectate;";
-			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.88 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		class Teleport : Life_RscButtonMenu {
-			idc = 2906;
-			text = "$STR_Admin_Teleport";
-			onButtonClick = "[] spawn life_fnc_adminTeleport; hint 'Select where you would like to teleport';";
-			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.88 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		class TeleportHere : Life_RscButtonMenu {
-			idc = 2907;
-			text = "$STR_Admin_TpHere";
-			onButtonClick = "[] spawn life_fnc_adminTpHere;";
-			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.885;
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		class God : Life_RscButtonMenu {
-			idc = 2908;
-			text = "$STR_Admin_God";
-			onButtonClick = "[] call life_fnc_adminGodMode;";
-			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.885;
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		class Freeze : Life_RscButtonMenu {
-			idc = 2909;
-			text = "$STR_Admin_Freeze";
-			onButtonClick = "[] spawn life_fnc_adminFreeze;";
-			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.885;
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		class DeFreeze : Life_RscButtonMenu {
-			idc = 2914;
-			text = "$STR_Admin_DeFreeze";
-			onButtonClick = "[] spawn life_fnc_adminDeFreeze;";
-			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.93;
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		class Markers : Life_RscButtonMenu {
-			idc = 2910;
-			text = "$STR_Admin_Markers";
-			onButtonClick = "[] spawn life_fnc_adminMarkers;";
-			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.885;
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		class Debug : Life_RscButtonMenu {
-			idc = 2911;
-			text = "$STR_Admin_Debug";
-			onButtonClick = "[] call life_fnc_adminDebugCon;";
-			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.885;
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		class TeleportToHim : Life_RscButtonMenu {
-			idc = 2907;
-			text = "$STR_Admin_TpToHim";
-			onButtonClick = "[] spawn life_fnc_adminTpToHim;";
-			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.93;
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		class KillPlayer : Life_RscButtonMenu {
-			idc = 2913;
-			text = "$STR_Admin_KillPlayer";
-			onButtonClick = "[] call life_fnc_adminKillPlayer;";
-			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.975;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};

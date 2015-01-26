@@ -6,7 +6,7 @@ class Life_atm_management {
 	
 	class controlsBackground {
 		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			colorBackground[] = {0.4, 0.05, 0.05, 0.7};
 			idc = -1;
 			x = 0.35;
 			y = 0.2;
@@ -26,33 +26,12 @@ class Life_atm_management {
 	
 	class controls {
 
-		class CashTitle : Life_RscStructuredText
-		{
-			idc = 2701;
-			text = "";
-			
-			x = 0.39;
-			y = 0.26;
-			w = 0.3;
-			h = .14;
-		};
-		
-		class Title : Life_RscTitle {
-			colorBackground[] = {0, 0, 0, 0};
-			idc = -1;
-			text = "$STR_ATM_Title";
-			x = 0.35;
-			y = 0.2;
-			w = 0.6;
-			h = (1 / 25);
-		};
-		
 		class WithdrawButton : life_RscButtonMenu 
 		{
 			idc = -1;
-			text = "$STR_ATM_Withdraw";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			onButtonClick = "[] call life_fnc_bankWithdraw";
+			text = "Withdraw";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_bank_withdraw";
 			
 			x = 0.432;
 			y = 0.46;
@@ -63,9 +42,9 @@ class Life_atm_management {
 		class DepositButton : life_RscButtonMenu 
 		{
 			idc = -1;
-			text = "$STR_ATM_Deposit";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			onButtonClick = "[] call life_fnc_bankDeposit";
+			text = "Deposit";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_bank_deposit";
 			
 			x = 0.432;
 			y = 0.512;
@@ -73,15 +52,13 @@ class Life_atm_management {
 			h = (1 / 25);
 		};
 		
-		class moneyEdit : Life_RscEdit {
-		
-		idc = 2702;
-		
-		text = "1";
-		sizeEx = 0.030;
-		x = 0.4; y = 0.41;
-		w = 0.2; h = 0.03;
-		
+		class moneyEdit : Life_RscEdit
+		{
+			idc = 2702;
+			text = "1";
+			sizeEx = 0.030;
+			x = 0.4; y = 0.41;
+			w = 0.2; h = 0.03;
 		};
 		
 		class PlayerList : Life_RscCombo 
@@ -94,34 +71,58 @@ class Life_atm_management {
 		
 		class TransferButton : life_RscButtonMenu 
 		{
-			idc = -1;
-			text = "$STR_ATM_Transfer";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			onButtonClick = "[] call life_fnc_bankTransfer";
+			idc = 2705;
+			text = "Transfer";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_bank_transfer";
 			
 			x = 0.432;
 			y = 0.63;
 			w = (5.30 / 40);
 			h = (1 / 25);
 		};
-		
-		class GangDeposit : TransferButton
+
+		class CardButton : life_RscButtonMenu 
 		{
-			idc = 2705;
-			text = "$STR_pInAct_DepositToGang";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			onButtonClick = "[] call life_fnc_gangDeposit";
-			y = .7; x = 0.365;
-			w = 0.275;
+			idc = 2710;
+			text = "Debit Card ($5k)";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call life_fnc_bank_debit";
+			
+			x = 0.5 - ((9 / 40) / 2);
+			y = 0.682;
+			w = (9 / 40);
+			h = (1 / 25);
 		};
 		
 		class CloseButtonKey : Life_RscButtonMenu {
 			idc = -1;
-			text = "$STR_Global_Close";
+			text = "Close";
 			onButtonClick = "closeDialog 0;";
 			x = 0.35;
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		
+		class CashTitle : Life_RscStructuredText
+		{
+			idc = 2701;
+			text = "";
+			
+			x = 0.39;
+			y = 0.26;
+			w = 0.3;
+			h = 0.14;
+		};
+		
+		class Title : Life_RscTitle {
+			colorBackground[] = {0, 0, 0, 0};
+			idc = -1;
+			text = "Asylum Credit Union";
+			x = 0.35;
+			y = 0.2;
+			w = 0.6;
 			h = (1 / 25);
 		};
 	};
