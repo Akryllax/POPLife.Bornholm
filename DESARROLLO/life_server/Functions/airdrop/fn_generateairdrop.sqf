@@ -62,7 +62,7 @@ _mygroup3 addWaypoint [[2380.47,22267.8,0], 0];
 
 _markerText = createMarker ["airbox_marker", [14028.5,18719.7,0.0014267]];
 "airbox_marker" setMarkerColor "ColorBlue";
-"airbox_marker" setMarkerText " Caja de armamento";
+"airbox_marker" setMarkerText "Helicoptero militar";
 "airbox_marker" setMarkerType "mil_destroy";
 
 _containerdummy = createVehicle ["Land_Cargo20_blue_F", [3450.7363, 16708.432, 90], [], 0, "CAN_COLLIDE"];
