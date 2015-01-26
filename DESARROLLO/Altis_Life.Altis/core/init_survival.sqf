@@ -105,3 +105,32 @@
 		};
 	};
 };
+/*
+* Este codigo es para zona radiactiva
+[] spawn
+{
+	while {true} do
+	{
+		private["_damage"];
+		sleep 1;
+		while {((player distance (getMarkerPos "Zona_Radioactiva") < 900) && (player getVariable["Revive",TRUE]))} do
+		{
+		
+			player say3D "Geiger";
+			
+			if(uniform player == "U_C_Scientist") then
+			{
+				hint "¡ATENCIÓN! Acabas de entrar en una zona radioactiva! No te quites tu traje antiradiación!";
+				sleep 5;
+			}else
+			{
+				hint "¡ATENCIÓN! Acabas de entrar en una zona radioactiva! Si no te pones inmediatamente un traje antiradiación, moriras entre terribles sufrimientos!";
+				_damage = damage player;
+				_damage = _damage + 0.1;
+				player setDamage (_damage);
+				[] call life_fnc_hudUpdate;
+				sleep 5;
+			};
+		};
+	};
+}; */
