@@ -1,14 +1,16 @@
-class Life_impound_menu {
+class Life_impound_menu
+{
 	idd = 2800;
-	name= "life_impound_menu";
-	movingEnable = false;
-	enableSimulation = true;
-	onLoad = "ctrlShow [2830,false];";
+	name="life_vehicle_shop";
+	movingEnabled = 0;
+	enableSimulation = 1;
+	onLoad = "ctrlShow [2330,false];";
 	
-	class controlsBackground {
+	class controlsBackground
+	{
 		class Life_RscTitleBackground : Life_RscText
 		{
-			colorBackground[] = {0.4, 0, 0, 0.7};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
@@ -28,8 +30,8 @@ class Life_impound_menu {
 		
 		class Title : Life_RscTitle
 		{
-			idc = -1;
-			text = "Garage";
+			idc = 2801;
+			text = "$STR_GUI_Garage";
 			x = 0.1;
 			y = 0.2;
 			w = 0.8;
@@ -39,8 +41,8 @@ class Life_impound_menu {
 		class VehicleTitleBox : Life_RscText
 		{
 			idc = -1;
-			text = "Available";
-			colorBackground[] = {0.4, 0, 0, 0.7};
+			text = "$STR_GUI_YourVeh";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			x = 0.11; y = 0.26;
 			w = 0.3;
 			h = (1 / 25);
@@ -49,24 +51,56 @@ class Life_impound_menu {
 		class VehicleInfoHeader : Life_RscText
 		{
 			idc = 2830;
-			text = "Vehicle Information";
-			colorBackground[] = {0.4, 0, 0, 0.7};
+			text = "$STR_GUI_VehInfo";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			x = 0.42; y = 0.26;
 			w = 0.46;
 			h = (1 / 25);
 		};
 		
+		class CloseBtn : Life_RscButtonMenu
+		{
+			idc = -1;
+			text = "$STR_Global_Close";
+			onButtonClick = "closeDialog 0;";
+			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.9 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		
+		class RentCar : Life_RscButtonMenu
+		{
+			idc = -1;
+			text = "$STR_Global_Retrieve";
+			onButtonClick = "[] call life_fnc_unimpound;";
+			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.9 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		
+		class BuyCar : life_RscButtonMenu 
+		{
+			idc = -1;
+			text = "$STR_Global_Sell";
+			onButtonClick = "[] call life_fnc_sellGarage;";
+			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.9 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
 	};
 	
-	class controls {
-
+	class controls
+	{
 		class VehicleList : Life_RscListBox
 		{
-			idc = 2801;
+			idc = 2802;
 			text = "";
 			sizeEx = 0.04;
 			colorBackground[] = {0.1,0.1,0.1,0.9};
-			onLBSelChanged = "_this call life_fnc_vehicleGarageLBChange";
+			onLBSelChanged = "_this call life_fnc_garageLBChange;";
 			
 			//Position & height
 			x = 0.11; y = 0.302;
@@ -79,50 +113,28 @@ class Life_impound_menu {
 			text = "";
 			sizeEx = 0.035;
 			
-			x = 0.43; y = 0.31;
-			w = 0.5; h = 0.52;
-		};
-				
-		class GetCar : life_RscButtonMenu {
-			idc = -1;
-			text = "Get Vehicle";
-			onButtonClick = "[false] call life_fnc_unimpound";
-			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
+			x = 0.41; y = 0.3;
+			w = 0.5; h = 0.5;
 		};
 		
-		class SellCar : life_RscButtonMenu {
-			idc = -1;
-			text = "Sell Vehicle";
-			onButtonClick = "[] call life_fnc_sellGarage";
-			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
-		
-		class InsuredCar : life_RscButtonMenu {
-			idc = -1;
-			text = "Get Insured";
-			onButtonClick = "[true] call life_fnc_unimpound";
-			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9 - (1 / 25);
-			w = (8.25 / 40);
-			h = (1 / 25);
-		};
-		
-		class CloseBtn : Life_RscButtonMenu
+		class MainBackgroundHider : Life_RscText
 		{
-			idc = -1;
-			text = "Close";
-			onButtonClick = "closeDialog 0;";
-			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
+			colorBackground[] = {0,0,0,1};
+			idc = 2810;
+			x = 0.1;
+			y = 0.2 + (11 / 250);
+			w = 0.8;
+			h = 0.7 - (22 / 250);
 		};
-
+		
+		class MainHideText : Life_RscText
+		{
+			idc = 2811;
+			text = "$STR_ANOTF_QueryGarage";
+			sizeEx = 0.06;
+			x = 0.24; y = 0.5;
+			w = 0.6;
+			h = (1 / 15);
+		};
 	};
 };
