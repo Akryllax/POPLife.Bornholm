@@ -65,7 +65,6 @@ mybackpack addItemCargoGlobal ["FirstAidKit", 5];
 [true,"tbacon",2] call life_fnc_handleInv;
 [true,"redgull",2] call life_fnc_handleInv;
 [true,"gpsEspia",2] call life_fnc_handleInv;
-[true,"kitTortura",4] call life_fnc_handleInv;
 [true,"esposas",3] call life_fnc_handleInv;
 [true,"llaveesposas",3] call life_fnc_handleInv;
 [true,"lockpick",3] call life_fnc_handleInv;
