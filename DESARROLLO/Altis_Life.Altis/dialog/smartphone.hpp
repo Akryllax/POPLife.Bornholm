@@ -308,7 +308,7 @@ class Life_smartphone_notruf {
 			
 			x = 0.775;
 			y = 0.64;
-			w = 0.15;
+			w = 0.3;
 			h = 0.05;
 		};
 		
@@ -321,7 +321,7 @@ class Life_smartphone_notruf {
 			
 			x = 0.775;
 			y = 0.72;
-			w = 0.15;
+			w = 0.3;
 			h = 0.05;
 		};
 		
@@ -335,7 +335,7 @@ class Life_smartphone_notruf {
 			
 			x = 0.775;
 			y = 0.8;
-			w = 0.15;
+			w = 0.3;
 			h = 0.05;
 		};
 		
@@ -348,7 +348,7 @@ class Life_smartphone_notruf {
 			
 			x = 0.6125;
 			y = 0.72;
-			w = 0.15;
+			w = 0.3;
 			h = 0.05;
 		};
 		
@@ -356,25 +356,25 @@ class Life_smartphone_notruf {
 		{
 			idc = 888900;
 			text = "$STR_CELL_MercRequest";
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
+			colorBackground[] = {0,0.23,1,0.48};
 			onButtonClick = "[8,-1,(ctrlText 888894)] call life_fnc_newMsg;";
 			
-			x = 0.74;
-			y = 0.30;
-			w = 0.2;
-			h = (1 / 25);
+			x = 0.6125;
+			y = 0.64;
+			w = 0.3;
+			h = 0.05;
 		};
 		class CopMsgAll : life_RscButtonMenu 
 		{
 			idc = 888901;
 			text = "$STR_CELL_CopMSGAll";
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
+			colorBackground[] = {0,0.23,1,0.48};
 			onButtonClick = "[9,-1,(ctrlText 888894)] call life_fnc_newMsg;";
 			
-			x = 0.95;
-			y = 0.30;
-			w = 0.2;
-			h = (1 / 25);
+			x = 0.6125;
+			y = 0.8;
+			w = 0.3;
+			h = 0.05;
 		};
 		
 		class CloseButton : Life_RscButtonInvisible {
@@ -384,7 +384,7 @@ class Life_smartphone_notruf {
 			colorBackground[] = {0,0,0,0};
 			x = 0.743107;
 			y = 0.886213;
-			w = 0.05;
+			w = 0.3;
 			h = 0.06;
 		};
 	};

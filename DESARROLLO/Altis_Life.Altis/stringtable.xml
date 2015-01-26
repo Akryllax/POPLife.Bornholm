@@ -650,7 +650,7 @@
 			<French>Altis mobile</French>
 			<Italian>Cellulare Altis</Italian>
 			<Portuguese>Altis Mobile</Portuguese>
-			<Spanish>Movil Altis</Spanish>
+			<Spanish>Movil</Spanish>
 		</Key>
 		<Key ID="STR_CELL_TextToSend">
 			<Original>Message To Send:</Original>
@@ -677,7 +677,7 @@
 			<French>Text Police</French>
 			<Italian>Msg Polizia</Italian>		
 			<Portuguese>Polícia</Portuguese>
-			<Spanish>SMS a Policia</Spanish>
+			<Spanish>Policia</Spanish>
 		</Key>
 		<Key ID="STR_CELL_TextAdmins">
 			<Original>Text Admins</Original>
@@ -686,7 +686,7 @@
 			<French>Text Admins</French>
 			<Italian>Msg Admin</Italian>
 			<Portuguese>Text Admin</Portuguese>
-			<Spanish>SMS a Admin</Spanish>
+			<Spanish>Admin</Spanish>
 		</Key>
 		<Key ID="STR_CELL_AdminMsg">
 			<Original>Admin Message</Original>
@@ -695,7 +695,7 @@
 			<French>Admin Message</French>
 			<Italian>Admin Msg</Italian>
 			<Portuguese>Msg do Admin</Portuguese>
-			<Spanish>Admin a uno</Spanish>
+			<Spanish>A.Uno</Spanish>
 		</Key>
 		<Key ID="STR_CELL_AdminMSGAll">
 			<Original>Admin Msg All</Original>
@@ -704,7 +704,7 @@
 			<French>Admin Msg ALL</French>
 			<Italian>Admin Msg</Italian>			
 			<Portuguese>Admin Msg ALL</Portuguese>
-			<Spanish>Admin a todos</Spanish>
+			<Spanish>A.Todos</Spanish>
 		</Key>
 		<Key ID="STR_CELL_CopMSGAll">
 			<Original>Cop Msg All</Original>
@@ -713,7 +713,7 @@
 			<French>Cop Msg ALL</French>
 			<Italian>Cop Msg</Italian>			
 			<Portuguese>Cop Msg ALL</Portuguese>
-			<Spanish>Policia a todos</Spanish>
+			<Spanish>P.Todos</Spanish>
 		</Key>
 		<Key ID="STR_CELL_EMSRequest">
 			<Original>Request EMS</Original>
@@ -722,11 +722,11 @@
 			<French>Requête Medecin</French>
 			<Italian>Msg medici</Italian>
 			<Portuguese>Chamar SAMU</Portuguese>
-			<Spanish>SMS a Medico</Spanish>
+			<Spanish>Medico</Spanish>
 		</Key>
 		<Key ID="STR_CELL_MercRequest">
 			<Original>Request Mercenarie</Original>
-			<Spanish>Contratar Mercenario</Spanish>
+			<Spanish>Merce</Spanish>
 		</Key>
 	</Package>
 	<Package name="Chop_Shop">
@@ -1512,7 +1512,7 @@
 			<French>Téléphone</French>
 			<Italian>Cellulare</Italian>
 			<Portuguese>Celular</Portuguese>
-			<Spanish>Móvil</Spanish>
+			<Spanish>Movil</Spanish>
 		</Key>
 		<Key ID="STR_PM_KeyChain">
 			<Original>Key Chain</Original>
@@ -6478,11 +6478,11 @@
 	<Package name="Smartphone">
 		<Key ID="STR_PM_Smartphone">
 			<Original>Samsung S6</Original>
-			<Spanish>Samsung S6</Spanish>
+			<Spanish>Smartphone</Spanish>
 		</Key>
 		<Key ID="STR_SMARTPHONE_TITLE">
 			<Original>Smartphone Menu</Original>
-			<Spanish>Menu SGS6</Spanish>
+			<Spanish>Menu smartphone</Spanish>
 		</Key>
 		<Key ID="STR_SMARTPHONE_PLAYERLISTTITLE">
 			<Original>Playerlist</Original>
