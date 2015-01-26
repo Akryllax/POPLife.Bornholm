@@ -63,7 +63,7 @@ if(([false,_type,1] call life_fnc_handleInv)) then {
 		case "barrilBasura": {"Land_GarbageBarrel_01_F"};
 		case "barrilArena": {"Land_BarrelSand_grey_F"};		
 		case "barrilArdiendo": {"MetalBarrel_burning_F"};
-		case "pilaRuedas ": {"Land_Tyres_F"};
+		case "pilaRuedas": {"Land_Tyres_F"};
 		case "defensaChasisCoche": {"Land_Wreck_Skodovka_F"};
 		case "contenedorBasura": {"Land_GarbageContainer_open_F"};
 	};
