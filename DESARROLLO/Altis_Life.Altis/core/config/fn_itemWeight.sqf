@@ -77,5 +77,21 @@ switch (_item) do
 	//esposas
 	case "esposas": {2};
 	case "llaveesposas": {1};
+	//defensas
+    case "cono": {1};
+	case "barrera": {5};		
+	case "cajaMadera": {5};
+	case "palet": {10};		
+	case "murallaPalets": {15};
+	case "murallaSacosGrande": {35};
+	case "murallaSacosPequeña": {25};
+	case "murallaPiedras": {45};		
+	case "barrilBasura": {15};
+	case "barrilArena": {15};		
+	case "barrilArdiendo": {15};
+	case "pilaRuedas": {45};
+	case "defensaChasisCoche": {50};
+	case "contenedorBasura": {25};
+
 	default {1};
 };
