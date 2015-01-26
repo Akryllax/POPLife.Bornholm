@@ -6319,22 +6319,22 @@
 			<Spanish>Has comprado %1 %2 por $%3 con los fondos de la banda</Spanish>
 		</Key>
 		<Key ID="STR_Shop_Virt_BoughtItem">
-			<Original>You bought %1 %2 for $%3</Original>
+			<Original>You bought %1 %2 %3 for $%4</Original>
 			<English>You bought %1 %2 for $%3</English>
 			<German>Du kaufst %1 %2 für $%3</German>
 			<French>Vous avez acheté %1 %2 pour $%3</French>
 			<Italian>Hai comprato %1 %2 al costo di €%3</Italian>
 			<Portuguese>Voce comprou %1 %2 por R$%3</Portuguese>
-			<Spanish>Has comprado %1 %2 por $%3</Spanish>
+			<Spanish>Has comprado %1 %2 %3 por $%4</Spanish>
 		</Key>
 		<Key ID="STR_Shop_Virt_SellItem">
-			<Original>You sold %1 %2 for $%3</Original>
+			<Original>You sold %1 %2 %3 for $%4</Original>
 			<English>You sold %1 %2 for $%3</English>
 			<German>Du verkaufst %1 %2 für $%3</German>
 			<French>Vous avez vendu %1 %2 pour $%3</French>
 			<Italian>Hai venduto %1 %2 al prezzo di €%3</Italian>
 			<Portuguese>Você vendeu %1 %2 por R$%3</Portuguese>
-			<Spanish>Has vendido %1 %2 por $%3</Spanish>
+			<Spanish>Has vendido %1 %2 %3 por $%4</Spanish>
 		</Key>
 		<Key ID="STR_Shop_Weapon_NoSelect">
 			<Original>You need to select an item to buy/sell.</Original>

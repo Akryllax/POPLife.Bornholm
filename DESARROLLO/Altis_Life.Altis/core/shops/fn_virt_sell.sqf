@@ -20,9 +20,10 @@ if(_amount > (missionNameSpace getVariable _var)) exitWith {hint localize "STR_S
 
 _price = (_price * _amount);
 _name = [_var] call life_fnc_vartostr;
+_icon = format["<img image='%1'/>",[_var] call life_fnc_itemIcon];
 if(([false,_type,_amount] call life_fnc_handleInv)) then
 {
-	hint format[localize "STR_Shop_Virt_SellItem",_amount,_name,[_price] call life_fnc_numberText];
+	hint parseText format[localize "STR_Shop_Virt_SellItem",_amount,_icon,_name,[_price] call life_fnc_numberText];
 	life_cash = life_cash + _price;
 	[] call life_fnc_virt_update;
 	
