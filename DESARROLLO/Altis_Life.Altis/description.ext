@@ -1,5 +1,5 @@
-author = "Tonic, Equipo de Plata o Plomo";
-onLoadName = "Altis Life RPG POP VERSION ";
+author = "Tonic y PoP: PKE, Rosen, Warblast, Quickskill, Akryllax";
+onLoadName = "Altis Life RPG PoP";
 onLoadMission = "Editado por el equipo de Plata o Plomo";
 
 joinUnassigned = 1;
