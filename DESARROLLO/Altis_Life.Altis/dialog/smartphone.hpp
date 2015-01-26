@@ -275,47 +275,27 @@ class Life_smartphone_notruf {
 	enableSimulation = true;
 	onLoad = "[6] spawn life_fnc_newMsg;";
 	
-	class controlsBackground {
-		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
-			idc = -1;
-			x = 0.1;
-			y = 0.2;
-			w = 0.64;
-			h = (1 / 25);
-		};
-		
-		class MainBackground:Life_RscText {
-			colorBackground[] = {0, 0, 0, 0.7};
-			idc = -1;
-			x = 0.1;
-			y = 0.2 + (11 / 250);
-			w = 0.64;
-			h = 0.15 - (5 / 250);
-		};
+	class controlsBackground {		
+		class EXphone : Life_RscPicture 
+		{
+			idc = 3001;
+			text = "textures\phone.paa";
+			x = 0.384999;
+			y = -0.00433818;
+			w = 0.8125;
+			h = 1.03676;
+		};	
 	};
 	
 	class controls {
-
-		
-		class Title : Life_RscTitle {
-			colorBackground[] = {0, 0, 0, 0};
-			idc = 888892;
-			text = "$STR_SMARTPHONE_Notruftitle";
-			x = 0.1;
-			y = 0.2;
-			w = 0.6;
-			h = (1 / 25);
-		};
 		
 		class textEdit : Life_RscEdit {
 		
 		idc = 888894;
 		
 		text = "";
-		sizeEx = 0.030;
-		x = 0.11; y = 0.25;
-		w = 0.62; h = 0.03;
+		x = 0.607904; y = 0.340086;
+		w = 0.325; h = 0.26;
 		
 		};
 		
@@ -323,26 +303,26 @@ class Life_smartphone_notruf {
 		{
 			idc = 888895;
 			text = "$STR_CELL_TextPolice";
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
+			colorBackground[] = {0,0.23,1,0.48};
 			onButtonClick = "[2,-1,(ctrlText 888894)] call life_fnc_newMsg;";
 			
-			x = 0.32;
-			y = 0.30;
-			w = 0.2;
-			h = (1 / 25);
+			x = 0.775;
+			y = 0.64;
+			w = 0.15;
+			h = 0.05;
 		};
 		
 		class TxtAdminButton : life_RscButtonMenu 
 		{
 			idc = 888896;
 			text = "$STR_CELL_TextAdmins";
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
+			colorBackground[] = {0,0.23,1,0.48};
 			onButtonClick = "[3,-1,(ctrlText 888894)] call life_fnc_newMsg;";
 			
-			x = 0.53;
-			y = 0.30;
-			w = 0.2;
-			h = (1 / 25);
+			x = 0.775;
+			y = 0.72;
+			w = 0.15;
+			h = 0.05;
 		};
 		
 		
@@ -350,26 +330,26 @@ class Life_smartphone_notruf {
 		{
 			idc = 888898;
 			text = "$STR_CELL_AdminMSGAll";
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
+			colorBackground[] = {0,0.23,1,0.48};
 			onButtonClick = "[7,-1,(ctrlText 888894)] call life_fnc_newMsg;";
 			
-			x = 0.53;
-			y = 0.30;
-			w = 0.2;
-			h = (1 / 25);
+			x = 0.775;
+			y = 0.8;
+			w = 0.15;
+			h = 0.05;
 		};
 		
 		class EMSReq : life_RscButtonMenu
 		{
 			idc = 888899;
 			text = "$STR_CELL_EMSRequest";
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
+			colorBackground[] = {0,0.23,1,0.48};
 			onButtonClick = "[4,-1,(ctrlText 888894)] call life_fnc_newMsg;";
 			
-			x = 0.11;
-			y = 0.30;
-			w = 0.2;
-			h = (1 / 25);
+			x = 0.6125;
+			y = 0.72;
+			w = 0.15;
+			h = 0.05;
 		};
 		
 		class MercReq : life_RscButtonMenu 
@@ -397,14 +377,15 @@ class Life_smartphone_notruf {
 			h = (1 / 25);
 		};
 		
-		class CloseButton : Life_RscButtonMenu {
+		class CloseButton : Life_RscButtonInvisible {
 			idc = -1;
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
-			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.36 + (1 / 50);
-			w = (6.25 / 40);
-			h = (1 / 25);
+			colorBackground[] = {0,0,0,0};
+			x = 0.743107;
+			y = 0.886213;
+			w = 0.05;
+			h = 0.06;
 		};
 	};
 };
