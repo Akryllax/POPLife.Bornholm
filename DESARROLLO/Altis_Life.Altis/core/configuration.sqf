@@ -221,7 +221,10 @@ life_inv_items =
 	//trabajos
 	"life_inv_metilamina",
 	"life_inv_meta",
-	"life_inv_petroleo"
+	"life_inv_petroleo",
+	//casino
+	"life_inv_llave_casino",
+	"life_inv_maletin_casino"
 
 ];
 
@@ -382,8 +385,9 @@ buy_array =
 
 	//trabajos
 	["meta",50000],
-	["petroleo","5000"]
-
+	["petroleo","5000"],	
+	//casino
+	["maletin_casino","1500000"]
 ];
 __CONST__(buy_array,buy_array);
 

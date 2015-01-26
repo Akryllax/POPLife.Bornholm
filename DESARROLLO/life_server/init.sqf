@@ -136,5 +136,9 @@ _dome allowDamage false;
 call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
 [] execVM "\life_server\Functions\WarBlast\fn_spawnNaufragios.sqf";
 call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+//airdrop
+[] execVM "\life_server\Functions\airdrop\config.sqf";
+[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
+
 life_server_isReady = true;
 publicVariable "life_server_isReady";

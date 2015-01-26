@@ -107,7 +107,7 @@ class CfgFunctions
 			class setObjVar {};
 			class keyManagement {};
 			class getPrices {};
-            		class ajustprices {};
+            class ajustprices {};
 		};
 		
 		class Housing
@@ -143,6 +143,12 @@ class CfgFunctions
 			  file = "\life_server\Functions\WarBlast";
 			class spawnHeliCrash {};
 			class spawnNaufragios {};
+		};
+		
+		class Airdrop
+		{
+			file = "\life_server\Functions\airdrop";
+			class generateAirdrop {};
 		};
 	};
 	
