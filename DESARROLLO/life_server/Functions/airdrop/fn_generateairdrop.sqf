@@ -30,12 +30,10 @@ _marker = createMarker ["Airdropmarker", _dest];
 _markerText = createMarker ["Airdropmarkertext", _dest];
 "Airdropmarkertext" setMarkerColor "ColorBlack";
 "Airdropmarkertext" setMarkerText "Zona de la carga perdida.";
-"Airdropmarkertext" setMarkerType "mil_warning";
-
-sleep 60;
+"Airdropmarkertext" setMarkerType "mil_warning";+
 
 [[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>El helicoptero estadounidense ha sido avistado perdiendo una caja con armamento militar en el lugar indicado en el mapa.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-sleep 10;
+sleep 60;
 
 heli1 = CreateVehicle [airdrop_helicopter_main, [7950, 9667, 0], [], 0, "FLY"];
 heli2 = CreateVehicle [airdrop_helicopter_scnd, [7950, 9700, 0], [], 0, "FLY"];
