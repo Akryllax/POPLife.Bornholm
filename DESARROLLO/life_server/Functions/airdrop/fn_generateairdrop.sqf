@@ -20,7 +20,7 @@ sleep 1;
 // AIRDROP STARTEN
 [[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>Se espera una entrega especial para la Policia de Altis. Se ruega no entorpecer la ruta del helicoptero militar.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
-sleep 300;
+sleep 20;
 
 _marker = createMarker ["Airdropmarker", _dest];
 "Airdropmarker" setMarkerColor "ColorRed";
