@@ -185,7 +185,7 @@ if(_time < 1) then{
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 					_color =lbValue[2304,(lbCurSel 2304)];
 					[[_coche,_color],"life_fnc_colorVehicle",true,false] spawn life_fnc_MP;
-					[[(getPlayerUID _ladron),playerSide,_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
+					[[(getPlayerUID _ladron),"CIV",_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 
 				};
 				if(_pagar_random == 1) then {
@@ -195,7 +195,7 @@ if(_time < 1) then{
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 					_color =lbValue[2304,(lbCurSel 2304)];
 					[[_coche,_color],"life_fnc_colorVehicle",true,false] spawn life_fnc_MP;
-					[[(getPlayerUID _ladron),playerSide,_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
+					[[(getPlayerUID _ladron),"CIV",_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 
 
 				};
@@ -206,7 +206,7 @@ if(_time < 1) then{
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 					_color =lbValue[2304,(lbCurSel 2304)];
 					[[_coche,_color],"life_fnc_colorVehicle",true,false] spawn life_fnc_MP;
-					[[(getPlayerUID _ladron),playerSide,_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
+					[[(getPlayerUID _ladron),"CIV",_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 
 				};
 				if(_pagar_random == 3) then {
@@ -216,7 +216,7 @@ if(_time < 1) then{
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 					_color =lbValue[2304,(lbCurSel 2304)];
 					[[_coche,_color],"life_fnc_colorVehicle",true,false] spawn life_fnc_MP;
-					[[(getPlayerUID _ladron),playerSide,_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
+					[[(getPlayerUID _ladron),"CIV",_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 
 				};
 
@@ -227,7 +227,7 @@ if(_time < 1) then{
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 					_color =lbValue[2304,(lbCurSel 2304)];
 					[[_coche,_color],"life_fnc_colorVehicle",true,false] spawn life_fnc_MP;
-					[[(getPlayerUID _ladron),playerSide,_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
+					[[(getPlayerUID _ladron),"CIV",_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 
 				};
 				if(_pagar_random == 5) then {
@@ -237,7 +237,7 @@ if(_time < 1) then{
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 					_color =lbValue[2304,(lbCurSel 2304)];
 					[[_coche,_color],"life_fnc_colorVehicle",true,false] spawn life_fnc_MP;
-					[[(getPlayerUID _ladron),playerSide,_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
+					[[(getPlayerUID _ladron),"CIV",_coche,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 				};
 
 
