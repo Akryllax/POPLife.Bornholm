@@ -288,6 +288,25 @@ switch (_code) do
 			};
 		};
 	};
+	//rendirse shift + 3
+	case 4: 
+	{
+		if(_shift) then {_handled = true;};
+
+		if (_shift) then
+		{
+			if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
+			{
+				if (player getVariable ["surrender", false]) then
+				{
+					player setVariable ["surrender", false, true];
+				} else
+				{
+					[] spawn life_fnc_surrender;
+				};
+			};
+		};
+	};
 
 	case 59:// F1 - TAPONES
 	{

@@ -120,6 +120,7 @@ class Life_Client_Core
 		class captureHideout {};
 		class gather {};
 		class restrain {};
+		class surrender {};
 	};
 	
 	class Housing

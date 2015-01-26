@@ -31,7 +31,7 @@ if(isNull _cop) exitWith {};
 };
 
 titleText[format[localize "STR_Cop_Retrained",_cop getVariable["realname",name _cop]],"PLAIN"];
-				
+if((player getVariable["surrender",FALSE])) then { player setVariable["surrender",FALSE,TRUE]; player switchMove ""; };				
 while {player getVariable "restrained"} do
 {
 	if(vehicle player == player) then {
