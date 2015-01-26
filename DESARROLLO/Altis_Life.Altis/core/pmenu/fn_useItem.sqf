@@ -204,6 +204,16 @@ switch (true) do
 			};
 		};
 	};
+   //items defensas
+
+	case (_item in ["cono","barrera","cajaMadera","palet","murallaPalets","murallaSacosGrande","murallaSacosPequeña","murallaPiedras","barrilBasura","barrilArena","barrilArdiendo","pilaRuedas","defensaChasisCoche","contenedorBasura"]):
+	{
+		 //defensas para to dios!
+			 [_item] spawn QUICK_fnc_ponerObjeto;
+			
+	};
+
+	///end cosas QUICK!!!
 	
 	case (_item == "llavecasino"):
 	{

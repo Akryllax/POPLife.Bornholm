@@ -54,7 +54,7 @@ if(([false,_type,1] call life_fnc_handleInv)) then {
 	{
 		case "cono": {"RoadCone_L_F"};
 		case "barrera": {"RoadBarrier_F"};		
-		case "cajaMadera ": {"Land_WoodenBox_F"};
+		case "cajaMadera": {"Land_WoodenBox_F"};
 		case "palet": {"Land_Pallets_F"};		
 		case "murallaPalets": {"Land_Pallets_stack_F"};
 		case "murallaSacosGrande": {"Land_BagFence_Long_F"};
