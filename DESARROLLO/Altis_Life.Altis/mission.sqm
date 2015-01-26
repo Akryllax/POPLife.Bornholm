@@ -18966,7 +18966,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CargoBox_V1_F";
 			skill=0.60000002;
-			text="Cajaalcalde";
+			text="cajaFuerte";
 			init="this allowdamage false;  this addAction [""Introducir codigo"",'null = [] execVM ""QUICKSKILL\robos\banco\introCodigoCaja.sqf"";', """", 9,false,true,"""",""""];   this addAction [""Cojer el dinero"",'null = [] execVM ""QUICKSKILL\robos\banco\cojerDinero.sqf"";', """", 8,false,true,"""",""robo == 1""];  this addAction [""Interrumpir robo"",'cancelado = 1; publicVariable ""cancelado"";', ""robo == 1"", 8,false,true,"""",""(side player == WEST) AND (porcentaje > 0)""];";
 		};
 		class Item1303
