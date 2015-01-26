@@ -4,7 +4,6 @@
 */
 private["_vehicle","_plate","_uid","_query","_sql","_dbInfo","_thread"];
 _vehicle = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-//hint str _vehicle;
 if(isNull _vehicle) exitWith {}; //NULL
 
 _dbInfo = _vehicle getVariable["dbInfo",[]];
@@ -17,7 +16,7 @@ _query = format["UPDATE vehicles SET alive='0' WHERE pid='%1' AND plate='%2'",_u
 waitUntil {!DB_Async_Active};
 _thread = [_query,1] call DB_fnc_asyncCall;
 
-sleep (1.3 * 60);
+sleep 0.6;
 if(!isNil "_vehicle" && {!isNull _vehicle}) then {
 	deleteVehicle _vehicle;
 };

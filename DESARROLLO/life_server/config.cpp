@@ -50,6 +50,7 @@ class CfgFunctions
 			class bool{};
 			class mresString {};
 			class updatePartial {};
+			class insertarVehiculo {};
 		};
 	};
 	
@@ -143,6 +144,8 @@ class CfgFunctions
 			  file = "\life_server\Functions\WarBlast";
 			class spawnHeliCrash {};
 			class spawnNaufragios {};
+			class muerteVehiculos {};
+			class crearVehiculo {};
 		};
 		
 		class Airdrop

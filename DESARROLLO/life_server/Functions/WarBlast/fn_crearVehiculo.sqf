@@ -1,6 +1,6 @@
 /*
-	File: fn_vehicleCreate.sqf
-	Author: Bryan "Tonic" Boardwine
+	File: fn_crearVehiculo.sqf
+	Author: WarBlast
 
 	Description:
 	Answers the query request to create the vehicle in the database.
@@ -33,7 +33,7 @@ _side = switch(_side) do
 };
 
 _plate = round(random(1000000));
-[_uid,_side,_type,_classname,_color,_plate] call DB_fnc_insertVehicle;
+[_uid,_side,_type,_classname,_color,_plate] call DB_fnc_insertarVehiculo;
 
 _vehicle setVariable["dbInfo",[_uid,_plate]];
-_vehicle addEventHandler["Killed","_this spawn TON_fnc_vehicleDead"];
+_vehicle addEventHandler["Killed","_this spawn TON_fnc_muerteVehiculos"];

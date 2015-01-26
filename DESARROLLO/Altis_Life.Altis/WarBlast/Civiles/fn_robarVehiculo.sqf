@@ -92,11 +92,11 @@ hint format["Se te cobro %1 para hacerte la copia de las llaves",_price];
 life_atmcash = life_atmcash - _price; [1] call SOCK_fnc_updatePartial;
 
 //Eliminamos el vehiculo de su antiguo dueño
-[[_vehicle],"TON_fnc_vehicleDead",false,false] spawn life_fnc_MP;
+[[_vehicle],"TON_fnc_muerteVehiculos",false,false] spawn life_fnc_MP;
 sleep 0.05;
 
 //Creamos el vehiculo en la base de datos
-[[(getPlayerUID player),playerSide,_vehicle,_color],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
+[[(getPlayerUID player),playerSide,_vehicle,_color],"TON_fnc_crearVehiculo",false,false] spawn life_fnc_MP;
 
 //Lo añadimos a la WantedList
 [[getPlayerUID player,profileName,"28"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
