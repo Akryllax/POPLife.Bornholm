@@ -2,7 +2,7 @@
 	@file Version: 1.0.0.0
 	@file Author: RYN_Ryan
 	@file edit: 20.01.2015
-	Copyright © 2015 Ryan Torzynski, All rights reserved
+	Copyright © 2015 Ryan Torzynski, All rights reserved//modificado por Rosen
 	All servers are allowed to use this code, modify and publish it. Every modified release of this script must contain "Original by RTT"!
 */
 
@@ -20,7 +20,7 @@ if (airdrop_goingon) exitWith {};
 airdrop_goingon=true;
 
 // AIRDROP STARTEN
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>A helicopter is going to drop a Supplycrate in 15 minutes! The drop-location will be transmitted soon!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>Un helicoptero militar con armamento va a pasar por Altis en 15 minutos. Rogamos no interferir en su entrega.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 _poses = count airdrop_positions;
 _inArr = floor(random _poses);
 _dest = airdrop_positions select _inArr;
@@ -34,29 +34,29 @@ _marker = createMarker ["Airdropmarker", _dest];
 "Airdropmarker" setMarkerSize [500,500];
 _markerText = createMarker ["Airdropmarkertext", _dest];
 "Airdropmarkertext" setMarkerColor "ColorBlack";
-"Airdropmarkertext" setMarkerText "Airdrop-Mission";
+"Airdropmarkertext" setMarkerText "Zona de paso del helicoptero militar";
 "Airdropmarkertext" setMarkerType "mil_warning";
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>10 minutes until the helicopter will drop the supplies! Check your map for the drop-location!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>10 minutos hasta que pase el convoy.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 sleep 300;
 
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>5 minutes until the helicopter will drop the supplies!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>5 minutos hasta que pase el convoy.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 sleep 60;
 
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>4 minutes until the helicopter will drop the supplies!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>4 minutos hasta que pase el convoy.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 sleep 60;
 
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>3 minutes until the helicopter will drop the supplies!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>3 minutos hasta que pase el convoy.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 sleep 60;
 
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>2 minutes until the helicopter will drop the supplies!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>2 minutos hasta que pase el convoy.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 sleep 60;
 
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>1 minute until the helicopter will drop the supplies!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>1 minutos hasta que pase el convoy.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 heli1 = CreateVehicle [airdrop_helicopter_main, [7950, 9667, 0], [], 0, "FLY"];
 heli2 = CreateVehicle [airdrop_helicopter_scnd, [7950, 9700, 0], [], 0, "FLY"];
@@ -83,7 +83,7 @@ _mygroup3 addWaypoint [[2380.47,22267.8,0], 0];
 
 _markerText = createMarker ["airbox_marker", [14028.5,18719.7,0.0014267]];
 "airbox_marker" setMarkerColor "ColorBlue";
-"airbox_marker" setMarkerText " Airdrop-Box";
+"airbox_marker" setMarkerText "Convoy militar";
 "airbox_marker" setMarkerType "mil_destroy";
 
 _containerdummy = createVehicle ["Land_Cargo20_blue_F", [3450.7363, 16708.432, 90], [], 0, "CAN_COLLIDE"];
@@ -92,7 +92,7 @@ _containerdummy setDir 90;
 
 
 while { _dest distance heli1 > 250 } do { "airbox_marker" setMarkerPos getPos heli1; sleep 0.1 };
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>The supplies have been dropped! 20 minutes until self destruction!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>El cargamento ha caido del helicoptero!. El cargamento se encuentra en la zona roja del mapa. Se procede a la autodestruccion para evitar robos en 20 minutos.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 // Drop the container
 
@@ -137,50 +137,23 @@ clearItemCargoGlobal _box;
 
 sleep 0.1;
 _var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["arifle_MX_SW_Black_F", 1];};
+if (_var==1) then {_box addMagazineCargoGlobal ["DemoCharge_Remote_Mag", 3];};
 sleep 0.1;
 _var=floor(random 2);
-if (_var==1) then {_box addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag", 50];};
+if (_var==1) then {_box addMagazineCargoGlobal ["RPG32_HE_F", 3];};
 sleep 0.1;
 _var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["arifle_MX_GL_F", 5];};
+if (_var==1) then {_box addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell", 3];};
 sleep 0.1;
 _var=floor(random 2);
-if (_var==1) then {_box addMagazineCargoGlobal ["30Rnd_556x45_Stanag_Tracer_Yellow", 50];};
+if (_var==1) then {_box addMagazineCargoGlobal ["3Rnd_HE_Grenade_shell", 1];};
 sleep 0.1;
 _var=floor(random 2);
-if (_var==1) then {_box addMagazineCargoGlobal ["3Rnd_UGL_FlareRed_F", 20];};
+if (_var==1) then {_box addMagazineCargoGlobal ["HandGrenade", 2];};
 sleep 0.1;
 _var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["arifle_MX_F", 1];};
-sleep 0.1;
-_var=floor(random 2);
-if (_var==1) then {_box addMagazineCargoGlobal ["30Rnd_556x45_Stanag_Tracer_Yellow", 50];};
-sleep 0.1;
-_var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["srifle_EBR_F", 5];};
-sleep 0.1;
-_var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["srifle_DMR_01_F", 5];};
-sleep 0.1;
-_var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["arifle_Katiba_GL_F", 5];};
-sleep 0.1;
-_var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["hgun_Pistol_heavy_01_F", 5];};
-sleep 0.1;
-_var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["arifle_MXM_F", 1];};
-sleep 0.1;
-_var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["30Rnd_65x39_caseless_mag", 20];};
-sleep 0.1;
-_var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["LMG_Mk200_F", 1];};
-sleep 0.1;
-_var=floor(random 2);
-if (_var==1) then {_box addMagazineCargoGlobal ["200Rnd_65x39_cased_Box", 2];};
-sleep 0.1;
+if (_var==1) then {_box addMagazineCargoGlobal ["MiniGrenade", 3];};
+
 
 // Fill box end
 
@@ -189,13 +162,13 @@ deleteVehicle heli1;
 deleteVehicle heli2;
 deleteVehicle heli3;
 sleep 600;
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>5 minutes until self destruction</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>5 minutos para la autodestruccion.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 sleep 240;
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>1 minute until self destruction</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>1 minuto para la autodestruccion.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 sleep 50;
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>10 seconds until self destruction</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>10 segundos para la autodestruccion.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 sleep 10;
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission beendet!</t></t><br/><br/><t size='1'>The AirDrop-Mission has ended!</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>El cargamento se ha autodestruido con exito.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 deleteVehicle _box; 
 _bmb = "BO_GBU12_LGB" createVehicle [(getPos _box select 0)-21,(getPos _box select 1)+21,0];
 sleep 1;
