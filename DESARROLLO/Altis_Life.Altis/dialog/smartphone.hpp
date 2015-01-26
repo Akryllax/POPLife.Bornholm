@@ -308,7 +308,7 @@ class Life_smartphone_notruf {
 			
 			x = 0.775;
 			y = 0.64;
-			w = 0.3;
+			w = 0.15;
 			h = 0.05;
 		};
 		
@@ -321,7 +321,7 @@ class Life_smartphone_notruf {
 			
 			x = 0.775;
 			y = 0.72;
-			w = 0.3;
+			w = 0.15;
 			h = 0.05;
 		};
 		
@@ -335,7 +335,7 @@ class Life_smartphone_notruf {
 			
 			x = 0.775;
 			y = 0.8;
-			w = 0.3;
+			w = 0.15;
 			h = 0.05;
 		};
 		
@@ -348,7 +348,7 @@ class Life_smartphone_notruf {
 			
 			x = 0.6125;
 			y = 0.72;
-			w = 0.3;
+			w = 0.15;
 			h = 0.05;
 		};
 		
@@ -361,7 +361,7 @@ class Life_smartphone_notruf {
 			
 			x = 0.6125;
 			y = 0.64;
-			w = 0.3;
+			w = 0.15;
 			h = 0.05;
 		};
 		class CopMsgAll : life_RscButtonMenu 
@@ -373,7 +373,7 @@ class Life_smartphone_notruf {
 			
 			x = 0.6125;
 			y = 0.8;
-			w = 0.3;
+			w = 0.15;
 			h = 0.05;
 		};
 		
@@ -382,7 +382,7 @@ class Life_smartphone_notruf {
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
 			colorBackground[] = {0,0,0,0};
-			x = 0.743107;
+			x = 0.74;
 			y = 0.886213;
 			w = 0.3;
 			h = 0.06;
