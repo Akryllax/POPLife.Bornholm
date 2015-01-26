@@ -38,7 +38,7 @@ switch (_vehicle) do
 			["textures\CIV\sport_redbull.jpg","civ"],
 			["textures\CIV\valkyriacar.jpg","civ"],
 			["textures\CIV\civ_hatchback_racing.jpg","civ"],
-			["textures\DONADORES\rsz_asiimov_hatchback_textures","civ"],
+			["textures\DONADORES\rsz_asiimov_hatchback_textures.jpg","civ"],
 			["textures\CIV\DEPORTIVA-CIRCUITO.jpg", "civ"],
 			["textures\CIV\hatchback_rockstar.jpg", "civ"],
 			["textures\CIV\lancia-martini.jpg", "civ"],
