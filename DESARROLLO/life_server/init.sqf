@@ -131,13 +131,7 @@ for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,t
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
-<<<<<<< HEAD
-for "_w" from 1 to 3 do {_cup setVariable[format["bis_disabled_Door_%1",_w],1,true]; _cup animate [format["Door_%1_rot",_w],0];};
-_bio = setVariable["bis_disabled_Door_1",1,true];
-_bio allowDamage false;
-_cup allowDamage false;
-=======
->>>>>>> parent of a374890... Bio lab
+
 //WarBlast: Mapa Dinamico
 [] execVM "\life_server\Functions\WarBlast\fn_spawnHeliCrash.sqf";
 call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
