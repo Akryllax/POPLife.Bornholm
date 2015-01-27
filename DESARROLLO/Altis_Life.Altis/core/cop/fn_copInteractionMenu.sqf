@@ -29,7 +29,7 @@ if(_curTarget isKindOf "House_F") exitWith {
 	if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget
 	 OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget
 	  OR (nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"]) == _curTarget
-	   OR (nearestObject [[5515.49,15006.7,20.625],"Land_Medevac_HQ_V1_F"]) == _curTarget) then {
+	   OR (nearestObject [[5505.09,15058.6,0],"Land_Medevac_HQ_V1_F"]) == _curTarget) then {
 		_display = findDisplay 37400;
 		_Btn1 = _display displayCtrl Btn1;
 		_Btn2 = _display displayCtrl Btn2;
