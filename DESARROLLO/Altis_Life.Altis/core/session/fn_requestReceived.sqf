@@ -69,8 +69,6 @@ switch(playerSide) do {
 		};
 		//posicion
 		life_civ_position = [_this, 9, [], [[]]] call BIS_fnc_param;
-
-		//if(count life_civ_position != 3) then {life_civ_position = [0,0,0];};
 		if(count life_civ_position != 3) then {civ_position = [0,0,0];};
         life_is_alive = [_this, 10, false, [false]] call BIS_fnc_param;
 
@@ -95,4 +93,12 @@ if(count (_this select 13) > 0) then {
 	{life_vehicles pushBack _x;} foreach (_this select 13);
 };
 
+switch(__GETC__(life_donator)) do
+{
+	case 1: {life_paycheck = life_paycheck + 750;};
+	case 2: {life_paycheck = life_paycheck + 1500;};
+	case 3: {life_paycheck = life_paycheck + 2000;};
+    case 4: {life_paycheck = life_paycheck + 2500;};
+    case 5: {life_paycheck = life_paycheck + 3000;};
+};
 life_session_completed = true;
