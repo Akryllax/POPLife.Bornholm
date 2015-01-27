@@ -126,15 +126,17 @@ client_session_list = [];
 private["_dome","_rsb","cup","bio"];
 _dome = nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"];
 _rsb = nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"];
+//WarBlast: Bio lab
 _cup = nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"];
-_bio = nearestObject [[5505.09,15058.6,18.5631],"Land_Medevac_HQ_V1_F"];
+_bio = nearestObject [[5505.09,15058.6,20.5631],"Land_Medevac_HQ_V1_F"];
 
 for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,true]; _dome animate [format["Door_%1_rot",_i],0];};
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
+//WarBlast: Bio Lab
 for "_w" from 1 to 3 do {_cup setVariable[format["bis_disabled_Door_%1",_w],1,true]; _cup animate [format["Door_%1_rot",_w],0];};
-_bio setVariable["bis_disabled_Door_1",1,true];
+for "_w2" from 1 to 2 do {_bio setVariable[format["bis_disabled_Door_1",_w2],1,true]; _bio animate [format["Door_%1_rot",_w2],0];};
 _bio allowDamage false;
 _cup allowDamage false;
 //WarBlast: Mapa Dinamico
