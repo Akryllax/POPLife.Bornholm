@@ -4784,6 +4784,10 @@
 			<Portuguese>%1 foi visto invadindo sua casa.</Portuguese>
 			<Spanish>%1 ha sido visto allanando una casa.</Spanish>
 		</Key>
+		<Key ID="STR_ISTR_Bolt_AlertLab">
+			<Original>!!! ESTAN ROBANDO EL LABORATORIO !!!</Original>
+			<Spanish>!!! ESTAN ROBANDO EL LABORATORIO !!!</Spanish>
+		</Key>
 		<Key ID="STR_ISTR_Bolt_Process">
 			<Original>Cutting lock on door</Original>
 			<English>Cutting lock on door</English>
