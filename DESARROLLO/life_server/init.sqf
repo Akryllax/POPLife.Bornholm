@@ -123,20 +123,21 @@ client_session_list = [];
 [] spawn TON_fnc_initHouses;
 
 //Lockup the dome
-private["_dome","_rsb","cup","bio"];
+private["_dome","_rsb"];
 _dome = nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"];
 _rsb = nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"];
-_cup = nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"];
-_bio = nearestObject [[5505.09,15058.6,18.5631],"Land_Medevac_HQ_V1_F"];
 
 for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,true]; _dome animate [format["Door_%1_rot",_i],0];};
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
+<<<<<<< HEAD
 for "_w" from 1 to 3 do {_cup setVariable[format["bis_disabled_Door_%1",_w],1,true]; _cup animate [format["Door_%1_rot",_w],0];};
 _bio = setVariable["bis_disabled_Door_1",1,true];
 _bio allowDamage false;
 _cup allowDamage false;
+=======
+>>>>>>> parent of a374890... Bio lab
 //WarBlast: Mapa Dinamico
 [] execVM "\life_server\Functions\WarBlast\fn_spawnHeliCrash.sqf";
 call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
