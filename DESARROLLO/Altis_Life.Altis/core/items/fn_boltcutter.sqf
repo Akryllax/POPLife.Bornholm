@@ -10,10 +10,10 @@ if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
-	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[5,"Estan robando la reserva federal."],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 } else {
-	if((nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[5505.09,15058.6,18],"Land_Medevac_HQ_V1_F"]) == _building) then {
-		[[[0],"STR_ISTR_Bolt_AlertLab",true,[]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	if((nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"]) == _building) then {
+		[[5,"Estan robando el laboratorio."],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	} else {
 		[[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	};
