@@ -10,15 +10,15 @@ if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building
- OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
+ OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building
+  OR (nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"]) == _building
+   OR (nearestObject [[5505.09,15058.6,20.5631],"Land_Medevac_HQ_V1_F"]) == _building) then {
 	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[[3,4],"STR_ISTR_Bolt_AlertBio",true,[]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 } else {
 	[[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 };
-if ((nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"]) == _building
-   OR (nearestObject [[5505.09,15058.6,0],"Land_Medevac_HQ_V1_F"]) == _building) then {
-   [[[1,2],"STR_ISTR_Bolt_AlertBio",true,[]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-};
+
 _doors = getNumber(configFile >> "CfgVehicles" >> (typeOf _building) >> "NumberOfDoors");
 
 _door = 0;
@@ -27,16 +27,6 @@ for "_i" from 1 to _doors do {
 	_selPos = _building selectionPosition format["Door_%1_trigger",_i];
 	_worldSpace = _building modelToWorld _selPos;
 		if(player distance _worldSpace < 5) exitWith {_door = _i;};
-};
-for "_w" from 1 to _doors do {
-	_selPos = _building selectionPosition format["Door_%1_trigger",_w];
-	_worldSpace = _building modelToWorld _selPos;
-		if(player distance _worldSpace < 5) exitWith {_door = _w;};
-};
-for "_w2" from 1 to _doors do {
-	_selPos = _building selectionPosition format["Door_%1_trigger",_w2];
-	_worldSpace = _building modelToWorld _selPos;
-		if(player distance _worldSpace < 5) exitWith {_door = _w2;};
 };
 if(_door == 0) exitWith {hint localize "STR_Cop_NotaDoor"}; //Not near a door to be broken into.
 if((_building getVariable[format["bis_disabled_Door_%1",_door],0]) == 0) exitWith {hint localize "STR_House_Raid_DoorUnlocked"};
