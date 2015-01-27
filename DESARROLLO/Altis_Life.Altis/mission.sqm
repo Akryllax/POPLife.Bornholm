@@ -21699,7 +21699,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=14;
+		items=15;
 		class Item0
 		{
 			position[]={3637.3794,10.369663,13214.811};
@@ -21958,6 +21958,23 @@ class Mission
 			class Effects
 			{
 				track="$STOP$";
+			};
+		};
+		class Item14
+		{
+			position[]={5995.834,23.785818,14928.137};
+			a=60;
+			b=60;
+			activationBy="ANY";
+			repeating=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			text="musica";
+			name="musica";
+			expCond="(player distance musica <= 60)";
+			expActiv="musica say ""bar"";";
+			class Effects
+			{
 			};
 		};
 	};
