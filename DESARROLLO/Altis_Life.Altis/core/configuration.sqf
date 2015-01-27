@@ -32,7 +32,7 @@ life_removeWanted = false;
 life_action_gathering = false;
 life_smartphoneTarget = ObjNull;
 life_god = false;
-life_frozen = false; 
+life_frozen = false;
 life_markers = false;
 //Variables POP Ordenaditas ;D
 life_is_alive = true;
@@ -123,7 +123,7 @@ switch (playerSide) do
 		life_atmcash = 50000;
 		life_paycheck = 450;
 	};
-	
+
 	case east:
 	{
 		life_atmcash = 50000; //Starting Bank Money
@@ -226,13 +226,13 @@ life_inv_items =
 	"life_inv_cono",
 	"life_inv_barrera",
 	"life_inv_cajaMadera",
-	"life_inv_palet",	
+	"life_inv_palet",
 	"life_inv_murallaPalets",
 	"life_inv_murallaSacosGrande",
 	"life_inv_murallaSacosPequeña",
-	"life_inv_murallaPiedras",		
+	"life_inv_murallaPiedras",
 	"life_inv_barrilBasura",
-	"life_inv_barrilArena",		
+	"life_inv_barrilArena",
 	"life_inv_barrilArdiendo",
 	"life_inv_pilaRuedas",
 	"life_inv_defensaChasisCoche",
@@ -347,7 +347,7 @@ sell_array =
 	["maiz",1000],
 	//trabajos
 	["meta",50000],
-	["petroleo","5000"]
+	["petroleo",5000]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -390,7 +390,7 @@ buy_array =
 	["medicCalor", 10000],
 	["medicAntibiotico", 25000],
 	["medicAnticuerpos", 50000],
-	
+
 	["semillasMaria",2500],
 	["semillasCoca",50000],
 	["semillasMaiz",1000],
@@ -400,9 +400,9 @@ buy_array =
 
 	//trabajos
 	["meta",50000],
-	["petroleo","5000"],	
+	["petroleo",5000],
 	//casino
-	["maletin_casino","1500000"]
+	["maletin_casino",1500000]
 ];
 __CONST__(buy_array,buy_array);
 
