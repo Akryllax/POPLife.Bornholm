@@ -135,7 +135,13 @@ class CfgSounds
 	class bailar
 	{
 		name = "bailar";
-		sound[] = {"\sounds\bailar.ogg",1.0,1};
+		sound[] = {"\sounds\bailar.ogg",1,1};
+		titles[] = {};
+	};
+	class bar
+	{
+		name = "bar";
+		sound[] = {"\sounds\bailar.ogg",0.5,1};
 		titles[] = {};
 	};
 };
