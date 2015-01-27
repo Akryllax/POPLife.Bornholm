@@ -8,6 +8,6 @@ private["_curTarget"];
 
 _curTarget = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if(isNull _curTarget) exitWith{}; //Fucking arma.
+if(isNull _curTarget) exitWith{ hint "Null target";}; //Fucking arma.
 
-[[player], "life_fnc_removeMoneyDo", _curTarget, false] call BIS_fnc_MP;
+[[player], "life_fnc_removeMoneyDo", _curTarget, false] call life_fnc_MP;

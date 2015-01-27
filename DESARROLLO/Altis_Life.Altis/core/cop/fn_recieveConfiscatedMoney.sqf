@@ -6,7 +6,7 @@
 
 private["_detained", "_money"];
 
-_detained = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_detained = [_this, 0, objNull, [objNull]] call life_fnc_param;
 _money	 = [_this, 1, -1, [-1]] call BIS_fnc_param;
 
 if(isNull _detained) exitWith{};
