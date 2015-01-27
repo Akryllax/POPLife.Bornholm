@@ -69,11 +69,7 @@ if (isServer) then {
 [] execVM "QUICKSKILL\robos\banco\sumaDeposito.sqf";
 
 ////////////end robo banco avanzado/////////////////////////////////
-ROS_fnc_sonidos = {
-	_sound = (_this select 0);
-	_unit = (_this select 1);
-	_unit say3D _sound;
-}; 
+
 //quitar efectos de lluvia ninja code by quik
 [] spawn {
 
