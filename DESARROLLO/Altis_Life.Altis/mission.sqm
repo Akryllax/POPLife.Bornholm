@@ -5200,7 +5200,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_unfolded_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this setVectorUp [0,0,1]; this addAction [""FIESTA"", ""ROS_fnc_sonidos""];";
+			init="this enableSimulation false; this allowDamage false; this setVectorUp [0,0,1]; ";
 		};
 		class Item36
 		{
@@ -16073,7 +16073,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init=" this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>Barricadas & Defensas</t>"",life_fnc_virt_menu,""defensas""];";
+			init="this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>Barricadas</t>"",life_fnc_virt_menu,""defensas""];";
 		};
 		class Item1081
 		{
@@ -16083,7 +16083,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init=" removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>defensas</t>"",life_fnc_virt_menu,""defensas"",0,false,false,"""""""""""",' vehicle player == player && player distance _target < 5 && playerSide == civilian '];";
+			init=" this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>Barricadas</t>"",life_fnc_virt_menu,""defensas""];";
 		};
 		class Item1082
 		{
@@ -16093,7 +16093,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>Barricadas & Defensas</t>"",life_fnc_virt_menu,""defensas""];";
+			init="this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>Barricadas</t>"",life_fnc_virt_menu,""defensas""];";
 		};
 		class Item1083
 		{
@@ -21963,16 +21963,14 @@ class Mission
 		class Item14
 		{
 			position[]={5995.834,23.785818,14928.137};
-			a=60;
-			b=60;
-			activationBy="ANY";
+			a=100;
+			b=100;
 			repeating=1;
-			type="SWITCH";
 			age="UNKNOWN";
-			text="musica";
-			name="musica";
-			expCond="(player distance musica <= 60)";
-			expActiv="musica say ""bar"";";
+			text="vip";
+			name="vip";
+			expCond="(player distance VIP < 100)";
+			expActiv="null = [this] execVM ""WarBlast\bar.sqf"";";
 			class Effects
 			{
 			};
