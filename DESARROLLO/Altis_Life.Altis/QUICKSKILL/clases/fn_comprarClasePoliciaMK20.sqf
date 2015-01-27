@@ -12,7 +12,7 @@ if(isNull _unit) exitWith {}; //if not the thief get bent
 
 
  //nivel de poli
- if(__GETC__(life_coplevel) < 2) exitWith { hint "No eres poli";[] spawn { sleep 5;hint "";} };
+ if(__GETC__(life_coplevel) < 2) exitWith { hint "No eres poli o rango insuficiente";[] spawn { sleep 5;hint "";} };
 
 
 //equipar clase poli
@@ -26,4 +26,4 @@ _unit addMagazines ["30Rnd_556x45_Stanag", 10];
 
 
 reload _unit;
-if(true) exitWith{hint "Clase Policia Sting equipada";[] spawn { sleep 5;hint "";} };
+if(true) exitWith{hint "Clase Policia mk20 equipada";[] spawn { sleep 5;hint "";} };
