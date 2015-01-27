@@ -33,7 +33,7 @@ _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
 _Btn8 = _display displayCtrl Btn8;
-_Btn8 = _display displayCtrl Btn9;
+_Btn9 = _display displayCtrl Btn9;
 _Btn1 ctrlShow false;
 _Btn2 ctrlShow false;
 _Btn3 ctrlShow false;
