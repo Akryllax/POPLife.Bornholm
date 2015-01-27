@@ -275,7 +275,7 @@ class Life_Client_Core
 		class civLoadout {};
 		class giveConfiscatedMoney {};
 		class removeWeapons {};
-		class quitarDineroDo {};
+		class removeMoneyDo {};
 	};
 	
 	class Vehicle
