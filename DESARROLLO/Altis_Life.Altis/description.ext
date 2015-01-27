@@ -48,7 +48,7 @@ class CfgSounds
 		sound[] = {"\sounds\cop_long.ogg", 1.0, 1};
 		titles[] = {};
 	};
-	
+
 	class medicsiren
 	{
 		name = "medicsiren";
@@ -75,7 +75,7 @@ class CfgSounds
 		name = "esposas";
 		sound[] = {"\sounds\esposas.ogg", 0.5, 1};
 		titles[] = {};
-	};	
+	};
 
 	class punch_break
 	{
@@ -99,7 +99,7 @@ class CfgSounds
 		sound[] = {"\sounds\drugcooking.ogg", 0.5, 1};
 		titles[] = {};
 	};
-	
+
 	class Cough
 	{
 		name = "Cough";
@@ -141,7 +141,7 @@ class CfgSounds
 	class bar
 	{
 		name = "bar";
-		sound[] = {"\sounds\bar.ogg",0.5,1};
+		sound[] = {"\sounds\bar.ogg",1,1};
 		titles[] = {};
 	};
 };
@@ -189,7 +189,7 @@ class CfgNotifications
 		duration = 10;
 		priority = 5;
 	};
-	
+
 	class MedicalRequestEmerg
 	{
 		title = "Emergencias solicitadas";
