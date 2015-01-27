@@ -16,13 +16,15 @@ switch (_side) do
 {
 	case west:
 	{
-		_return = [
-			["cop_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+		_return = [			
+			["cop_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
 			["cop_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
 			["cop_spawn_3","Athira","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 			["cop_spawn_4","Aeropuerto","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
 			["cop_spawn_5","Sofia","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-			["cop_spawn_6","Guardacostas","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+			["cop_spawn_6","Guardacostas","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+			["p_lakka","Policia Lakka","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["carcel","Carcel","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 	};
 
@@ -36,12 +38,11 @@ switch (_side) do
 			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 
-		/*if(license_civ_rebel) then {
-			_return = _return + [["reb_spawn_1","Campamento rebelde","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
-			_return = _return + [["reb_spawn_2","Puesto avanzado","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
-			_return = _return + [["reb_spawn_2","Embarcadero rebelde","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]];
-			_return = _return + [["reb_spawn_3","Aeropuerto rebelde", "\a3\ui_f\data\map\MapControl\viewtower_ca.paa"]];
-		};*/
+		if(license_civ_rebel) then {
+			_return = _return + [["reb_1","Puesto rebelde 1","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+			_return = _return + [["reb_2","Puesto rebelde 2","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+			_return = _return + [["reb_3","Puesto rebelde 3","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]];			
+		};
 
 
 		if(count life_houses > 0) then {
@@ -65,9 +66,9 @@ switch (_side) do
 
 	case east: {
 		_return = [
-			["spawn_merc_kavala","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["spawn_merc_athira","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["spawn_merc_pyrgos","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["spawn_merc_1","TVE","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["spawn_merc_2","Campamento rebelde","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["spawn_merc_3","Selakano","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 	};
 };
