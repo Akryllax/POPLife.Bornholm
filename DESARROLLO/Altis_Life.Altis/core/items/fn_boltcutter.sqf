@@ -13,7 +13,7 @@ if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (near
 	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 } else {
 	if((nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[5505.09,15058.6,18],"Land_Medevac_HQ_V1_F"]) == _building) then {
-		[[[1,2],"STR_ISTR_Bolt_AlertLab",true,[]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[[0],"STR_ISTR_Bolt_AlertLab",true,[]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	} else {
 		[[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	};
