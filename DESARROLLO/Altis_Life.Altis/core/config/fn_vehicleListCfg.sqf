@@ -98,10 +98,14 @@ switch (_shop) do
 		_return pushBack ["C_Hatchback_01_sport_F",6000 * Desc];
 		_return pushBack ["C_Offroad_01_F",5000 * Desc];
 		_return pushBack ["C_SUV_01_F",20000 * Desc];
-		if(__GETC__(life_coplevel) >= 7) then{
+
+		if(__GETC__(life_coplevel) >= 7) then
+			{
 		_return pushBack ["B_MRAP_01_F",30000 * Desc];
 		};
-		if(__GETC__(life_coplevel) >= 8) then {
+
+		if(__GETC__(life_coplevel) >= 8) then
+			{
 		_return pushBack ["I_MRAP_03_hmg_F",30000 * Desc];
 		};
 	};
@@ -137,8 +141,7 @@ switch (_shop) do
 		};
 		if(__GETC__(life_coplevel) > 5) then
 		{
-			_return pushBack
-			["I_Heli_light_03_unarmed_F",350000 * Desc];
+			_return pushBack ["I_Heli_light_03_unarmed_F",350000 * Desc];
 			_return pushBack ["B_Heli_Transport_03_F", 350000 * Desc];
 		};
 	};
@@ -157,8 +160,7 @@ switch (_shop) do
 		};
 		if(__GETC__(life_coplevel) > 5) then
 		{
-			_return pushBack
-			["I_Heli_light_03_unarmed_F",350000 * Desc];
+			_return pushBack ["I_Heli_light_03_unarmed_F",350000 * Desc];
 			_return pushBack ["B_Heli_Transport_03_F", 350000 * Desc];
 		};
 	};
@@ -187,7 +189,8 @@ switch (_shop) do
 			["B_SDV_01_F",100000 * Desc]
 		];
 	};
-	case "merc_c"
+
+	case "merc_c":
 	{
         if(__GETC__(life_merclevel) >= 1) then {
 		_return pushBack	["I_Quadbike_01_F",1000 * Desc];
@@ -200,7 +203,8 @@ switch (_shop) do
 		_return pushBack	["I_MRAP_03_hmg_F",2500000 * Desc];
         };
     };
-    case "merc_a"
+
+    case "merc_a":
 	{
         if(__GETC__(life_merclevel) >= 1) then {
 		_return pushBack	["B_Heli_Light_01_F",300000 * Desc];
@@ -211,6 +215,7 @@ switch (_shop) do
         _return pushBack ["B_Heli_Light_01_armed_F", 3500000 * Desc];
         };
     };
+
 	case "reb_air":
 	{
 		_return =
