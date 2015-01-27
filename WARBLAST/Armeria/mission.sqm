@@ -81,16 +81,6 @@ class Mission
 			skill=0.60000002;
 			init="this allowDamage false; this enableSimulation false;this setpos[14650.2,10663.6,0.3];";
 		};
-		class Item1
-		{
-			position[]={14781.1,-1.97979,10675.6};
-			azimut=180.522;
-			offsetY=0.069098502;
-			id=1;
-			side="AMBIENT LIFE";
-			vehicle="Salema_F";
-			skill=0.60000002;
-		};
 		class Item2
 		{
 			position[]={14627.7,0.140471,10701.9};
@@ -826,7 +816,7 @@ class Mission
 			side="EMPTY";
 			vehicle="O_MRAP_02_hmg_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false;this setpos[14835.9,10801.8,2.38419e-007];";
+			init="this allowDamage false;this lock 2;removeAllContainers this; this enableSimulation false;this setpos[14835.9,10801.8,2.38419e-007];";
 		};
 		class Item69
 		{
@@ -837,7 +827,7 @@ class Mission
 			side="EMPTY";
 			vehicle="O_MRAP_02_gmg_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false;this setpos[14831.7,10822.5,0.3];";
+			init="this allowDamage false;this lock 2;removeAllContainers this; this enableSimulation false;this setpos[14831.7,10822.5,0.3];";
 		};
 		class Item70
 		{
@@ -881,7 +871,7 @@ class Mission
 			side="EMPTY";
 			vehicle="O_APC_Wheeled_02_rcws_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false;this setpos[14740.8,10847.1,-0.3];";
+			init="this allowDamage false;this lock 2;removeAllContainers this; this enableSimulation false;this setpos[14740.8,10847.1,-0.3];";
 		};
 		class Item74
 		{
