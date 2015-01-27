@@ -1,7 +1,7 @@
 /*
 	File: fn_clothing_dive.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration file for Altis Diving Shop.
 */
@@ -18,33 +18,33 @@ switch (_filter) do
 	case 0:
 	{
 		[
-			["U_B_Wetsuit",nil,2000]
+			["U_B_Wetsuit",nil,2000 * Desc]
 		];
 	};
-	
+
 	//Hats
 	case 1:
 	{
 		[
 		];
 	};
-	
+
 	//Glasses
 	case 2:
 	{
 		[
-			["G_Diving",nil,500]
+			["G_Diving",nil,500 * Desc]
 		];
 	};
-	
+
 	//Vest
 	case 3:
 	{
 		[
-			["V_RebreatherB",nil,5000]
+			["V_RebreatherB",nil,5000 * Desc]
 		];
 	};
-	
+
 	//Backpacks
 	case 4:
 	{

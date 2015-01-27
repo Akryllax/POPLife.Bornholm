@@ -27,9 +27,9 @@ switch (_filter) do
 	{
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret pushBack ["H_HelmetB_plain_mcamo",nil,75];
-			_ret pushBack ["H_Booniehat_mcamo",nil,120];
-			_ret pushBack ["H_MilCap_mcamo",nil,100];
+			_ret pushBack ["H_HelmetB_plain_mcamo",nil,75 * Desc];
+			_ret pushBack ["H_Booniehat_mcamo",nil,120 * Desc];
+			_ret pushBack ["H_MilCap_mcamo",nil,100 * Desc];
 		};
 	};
 
@@ -38,30 +38,30 @@ switch (_filter) do
 	{
 		_ret =
 		[
-			["G_Shades_Black",nil,25],
-			["G_Shades_Blue",nil,20],
-			["G_Sport_Blackred",nil,20],
-			["G_Sport_Checkered",nil,20],
-			["G_Sport_Blackyellow",nil,20],
-			["G_Sport_BlackWhite",nil,20],
-			["G_Aviator",nil,75],
-			["G_Squares",nil,10],
-			["G_Lowprofile",nil,30],
-			["G_Combat",nil,55]
+			["G_Shades_Black",nil,25 * Desc],
+			["G_Shades_Blue",nil,20 * Desc],
+			["G_Sport_Blackred",nil,20 * Desc],
+			["G_Sport_Checkered",nil,20 * Desc],
+			["G_Sport_Blackyellow",nil,20 * Desc],
+			["G_Sport_BlackWhite",nil,20 * Desc],
+			["G_Aviator",nil,75 * Desc],
+			["G_Squares",nil,10 * Desc],
+			["G_Lowprofile",nil,30 * Desc],
+			["G_Combat",nil,55 * Desc]
 		];
 	};
 
 	//Vest
 	case 3:
 	{
-		_ret pushBack ["V_Rangemaster_belt",nil,800];
+		_ret pushBack ["V_Rangemaster_belt",nil,800 * Desc];
 		if(__GETC__(life_coplevel) > 2) then
 		{
-		   _ret pushBack ["V_BandollierB_blk",nil,1500];
+		   _ret pushBack ["V_BandollierB_blk",nil,1500 * Desc];
 	    };
 		if(__GETC__(life_coplevel) > 4) then
 		{
-			_ret pushBack ["V_TacVest_blk_POLICE",nil,3500];
+			_ret pushBack ["V_TacVest_blk_POLICE",nil,3500 * Desc];
 		};
 	};
 
@@ -70,11 +70,11 @@ switch (_filter) do
 	{
 		_ret =
 		[
-			["B_Kitbag_cbr",nil,800],
-			["B_FieldPack_cbr",nil,500],
-			["B_AssaultPack_cbr",nil,700],
-			["B_Bergen_sgg",nil,2500],
-			["B_Carryall_cbr",nil,3500]
+			["B_Kitbag_cbr",nil,800 * Desc],
+			["B_FieldPack_cbr",nil,500 * Desc],
+			["B_AssaultPack_cbr",nil,700 * Desc],
+			["B_Bergen_sgg",nil,2500 * Desc],
+			["B_Carryall_cbr",nil,3500 * Desc]
 		];
 	};
 };

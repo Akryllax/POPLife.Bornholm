@@ -58,8 +58,8 @@ switch (_var) do
 	case "life_inv_blastingcharge": {("textures\icons\items\blastingcharge.paa")};
 	case "life_inv_boltcutter": {("textures\icons\items\boltcutter.paa")};
 	case "life_inv_defusekit": {("textures\icons\items\defusekit.paa")};
-	case "life_inv_storagesmall": {("textures\icons\items\storagesmall.paa")};
-	case "life_inv_storagebig": {("textures\icons\items\storagebig.paa")};
+	//case "life_inv_storagesmall": {("textures\icons\items\storagesmall.paa")};
+	//case "life_inv_storagebig": {("textures\icons\items\storagebig.paa")};
 	default {("textures\icons\items\noicon.paa")};
-	
+
 };
