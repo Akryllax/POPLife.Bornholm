@@ -166,16 +166,6 @@ class CfgFunctions
 			class remExec {};
 		};
 	};
-
-   // class WarBlast
-    //{
-    //	tag = "War";
-    //	class Funciones
-    //	{
-    //		file = "\life_server\Functions\WarBlast";
-    //		class muerteVehiculos {};
-    //	};
-   // };
 };
 class CfgVehicles
 {
