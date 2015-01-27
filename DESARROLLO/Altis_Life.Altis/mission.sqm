@@ -16073,7 +16073,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init=" removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>barricadas</t>"",life_fnc_virt_menu,""defensas"",0,false,false,"""""""""""",' vehicle player == player && player distance _target < 5 && playerSide == civilian '];";
+			init=" this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>Barricadas & Defensas</t>"",life_fnc_virt_menu,""defensas""];";
 		};
 		class Item1081
 		{
@@ -16093,7 +16093,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init=" removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>Barricadas</t>"",life_fnc_virt_menu,""defensas"",0,false,false,"""""""""""",' vehicle player == player && player distance _target < 5 && playerSide == civilian '];";
+			init="this allowDamage false; this enableSimulation false; this addAction[""<t color='#0000FF'>Barricadas & Defensas</t>"",life_fnc_virt_menu,""defensas""];";
 		};
 		class Item1083
 		{
