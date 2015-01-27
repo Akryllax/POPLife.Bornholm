@@ -67,7 +67,7 @@ switch (playerSide) do
 		_handle = [] spawn life_fnc_initMedic;
 		waitUntil {scriptDone _handle};
 	};
-	
+
 	case east:
 	{
 		//Initialize Mercenaries and blah
@@ -116,6 +116,16 @@ life_fnc_garageRefund = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
+
+switch(__GETC__(life_donator)) do
+{
+	case 0: {Desc = 1};
+	case 1: {Desc = 0.90};
+	case 2: {Desc = 0.85};
+	case 3: {Desc = 0.70};
+	case 4: {Desc = 0.50};
+	case 5: {Desc = 0.10};
+};
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
 player enableFatigue (__GETC__(life_enableFatigue));
