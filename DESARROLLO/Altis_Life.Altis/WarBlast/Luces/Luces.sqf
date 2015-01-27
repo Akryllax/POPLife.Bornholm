@@ -58,6 +58,7 @@ if (!isServer) then
 	    if(_color == 5) then {
 	       _luz1 setLightAmbient[500,0,0];
 	     };
+	     sleep 1.5;
     };
-    	            		   sleep 1.5;
+
 };
