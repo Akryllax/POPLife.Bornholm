@@ -222,6 +222,21 @@ life_inv_items =
 	"life_inv_metilamina",
 	"life_inv_meta",
 	"life_inv_petroleo",
+	//defensas
+	"life_inv_cono",
+	"life_inv_barrera",
+	"life_inv_cajaMadera",
+	"life_inv_palet",	
+	"life_inv_murallaPalets",
+	"life_inv_murallaSacosGrande",
+	"life_inv_murallaSacosPequeña",
+	"life_inv_murallaPiedras",		
+	"life_inv_barrilBasura",
+	"life_inv_barrilArena",		
+	"life_inv_barrilArdiendo",
+	"life_inv_pilaRuedas",
+	"life_inv_defensaChasisCoche",
+	"life_inv_contenedorBasura",
 	//casino
 	"life_inv_llave_casino",
 	"life_inv_maletin_casino"
