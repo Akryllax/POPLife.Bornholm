@@ -22,12 +22,17 @@ _this spawn {
 	_arr = "Sign_Arrow_Direction_F" createVehicleLocal (position _car);
 	_arr attachTo [_car, [0,0,1.2]];
 
-	while {inRace} do {
+	["RaceArrow", "onEachFrame", {
+		_car = _this;
 		_fromTo = ((position _car) vectorFromTo (position currentOrb));	
 		_arr setDir ((_fromTo select 0) atan2 (_fromTo select 1)) - (getDir _car);
-	
-		sleep 0.05;
+	}, _car] call BIS_fnc_addStackedEventHandler;
+	[] spawn {
+		waitUntil {!inRace || !(alive player) || player getVariable["raceFinished",false]};
+		["RaceArrow", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 	};
+	
+	player moveInDriver _car;
 	
 	_car
 };

@@ -6,8 +6,15 @@
 
 [] spawn {
 
-	if(isServer) then {
+	waitUntil {time > 0};
+
+	if(isServer) then {	
+		/*
+			Emulate life_server
+		*/
+		
 		racing_tracks = [];
+		racing_current = [];
 
 		_i = 1;
 		_name = format["race_%1%2_001", if(_i > 9) then [{""}, {"0"}], _i];
@@ -21,6 +28,7 @@
 		};
 		
 		publicVariable "racing_tracks";
+		publicVariable "racing_current";
 	} else {
 		currentTrack = [];
 		currentTrackOrbs = [];

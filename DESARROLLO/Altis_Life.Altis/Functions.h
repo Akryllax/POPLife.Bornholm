@@ -275,6 +275,7 @@ class Life_Client_Core
 		class civLoadout {};
 		class giveConfiscatedMoney {};
 		class removeWeapons {};
+		class quitarDineroDo {};
 	};
 	
 	class Vehicle
@@ -323,6 +324,8 @@ class Life_Client_Core
 		class wantedGrab {};
 		class showArrestDialog {};
 		class arrestDialog_Arrest {};
+		class quitarDinero {};
+		class recieveConfiscatedMoney {};
 	};
 	
 	class Mercenaries 
