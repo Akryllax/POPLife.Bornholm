@@ -20,7 +20,7 @@ StartProgress = true;
 //robo avanzado banco de ica adaptado x quick xD
 /////////////////////////////////////////////////////
 
-//esta funcion la ulizia el ica pa sacar un codigo!
+//esta funcion la utiliza el ica pa sacar un codigo!
 ICARUK_fnc_addAction = {  
     private["_object","_script"];  
     _object = _this select 0;  
@@ -69,7 +69,11 @@ if (isServer) then {
 [] execVM "QUICKSKILL\robos\banco\sumaDeposito.sqf";
 
 ////////////end robo banco avanzado/////////////////////////////////
-
+ROS_fnc_sonidos = {
+	_sound = (_this select 0);
+	_unit = (_this select 1);
+	_unit say3D _sound;
+}; 
 //quitar efectos de lluvia ninja code by quik
 [] spawn {
 
