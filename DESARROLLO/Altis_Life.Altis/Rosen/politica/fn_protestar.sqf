@@ -23,6 +23,6 @@ private ["_sign","_time"];
 	//esperar 10 seg
 	sleep 10;
 	deleteVehicle _sign;
-	disableUserInput false
+	disableUserInput false;
 	life_protestando = false;
 };
