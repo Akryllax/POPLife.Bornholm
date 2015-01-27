@@ -82,24 +82,24 @@ switch (_var) do
 	case "life_inv_esposas": {(localize "STR_Item_esposas")};
     case "life_inv_llaveesposas": {(localize "STR_Item_llaveesposas")};
      //trabajos
-     case "life_inv_metilamina":{"Metilamina"};
-     case "life_inv_meta":{"Meta"};
-     case "life_inv_petroleo":{"Petroleo"};
+     case "life_inv_metilamina":{("Metilamina")};
+     case "life_inv_meta":{("Meta")};
+     case "life_inv_petroleo":{("Petroleo")};
      //defensas
-     case "life_inv_cono": {"Cono"};
-	 case "life_inv_barrera": {"Barrera"};		
-	 case "life_inv_cajaMadera": {"Caja Madera"};
-	 case "life_inv_palet": {"Palet"};		
-	 case "life_inv_murallaPalets": {"Muralla Palets"};
-	 case "life_inv_murallaSacosGrande": {"Muralla Sacos Arena Grande"};
-	 case "life_inv_murallaSacosPequeña": {"Muralla Sacos Arena Peq"};
-	 case "life_inv_murallaPiedras": {"Muralla Piedra"};		
-	 case "life_inv_barrilBasura": {"Barril Basura"};
-	 case "life_inv_barrilArena": {"Barril Arena"};		
-	 case "life_inv_barrilArdiendo": {"Barril Ardiendo"};
-	 case "life_inv_pilaRuedas": {"Pila de Neumaticos"};
-	 case "life_inv_defensaChasisCoche": {"Defensa Coche Viejo"};
-	 case "life_inv_contenedorBasura": {"Contenedor de Basura"};
+     case "life_inv_cono": {("Cono")};
+	 case "life_inv_barrera": {("Barrera")};
+	 case "life_inv_cajaMadera": {("Caja Madera")};
+	 case "life_inv_palet": {("Palet")};
+	 case "life_inv_murallaPalets": {("Muralla Palets")};
+	 case "life_inv_murallaSacosGrande": {("Muralla Sacos Arena Grande")};
+	 case "life_inv_murallaSacosPequeña": {("Muralla Sacos Arena Peq")};
+	 case "life_inv_murallaPiedras": {("Muralla Piedra")};
+	 case "life_inv_barrilBasura": {("Barril Basura")};
+	 case "life_inv_barrilArena": {("Barril Arena")};
+	 case "life_inv_barrilArdiendo": {("Barril Ardiendo")};
+	 case "life_inv_pilaRuedas": {("Pila de Neumaticos")};
+	 case "life_inv_defensaChasisCoche": {("Defensa Coche Viejo")};
+	 case "life_inv_contenedorBasura": {("Contenedor de Basura")};
 
      //objetos espia
 	case "life_inv_gpsEspia": { ("GPS espia") };
