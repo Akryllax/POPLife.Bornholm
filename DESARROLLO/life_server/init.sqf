@@ -133,7 +133,7 @@ for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,t
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
-for "_w" from 1 to 3 do {_cup setVariable[format["bis_disabled_Door_%1",_w],1,true]; _cup animate [format["Dorr_%1_rot",_w],0];};
+for "_w" from 1 to 3 do {_cup setVariable[format["bis_disabled_Door_%1",_w],1,true]; _cup animate [format["Door_%1_rot",_w],0];};
 _bio = setVariable["bis_disabled_Door_1",1,true];
 _bio allowDamage false;
 _cup allowDamage false;
