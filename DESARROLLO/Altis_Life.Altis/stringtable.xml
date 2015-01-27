@@ -4775,14 +4775,6 @@
 			<Portuguese>!!!!! A RESERVA FEDERAL ESTÁ SENDO ROUBADA !!!!!!</Portuguese>
 			<Spanish>¡¡¡ ESTAN ROBANDO LA RESERVA FEDERAL !!!</Spanish>
 		</Key>
-		<Key ID="STR_ISTR_Bolt_AlertBio">
-			<Original>!!!!! ALGUIEN ESTA ROMPIENDO LA PUERTA DEL BIO LAB !!!!!</Original>
-			<English>!!!!! SOMEONE IS BREAKING INTO THE FEDERAL RESERVE !!!!!!</English>
-			<German>!!!!! JEMAND BRICHT IN DIE ZENTRALBANK EIN !!!!!!</German>
-			<French>!!!!! QUELQU'UN TENTE DE S'INTRODUIRe DANS LA RÈSERVE FÈDÈRALE !!!!!!</French>
-			<Italian>!!!!!! QUALCUNO STA CERCANDO DI INTRODURSI NELLA RISERVA FEDERALE !!!!!!</Italian>
-			<Portuguese>!!!!! A RESERVA FEDERAL ESTÁ SENDO ROUBADA !!!!!!</Portuguese>
-			<Spanish>!!!!! ALGUIEN ESTA ROMPIENDO LA PUERTA DEL BIO LAB !!!!!</Spanish>
 		<Key ID="STR_ISTR_Bolt_AlertHouse">
 			<Original>%1 was seen breaking into a house.</Original>
 			<English>%1 was seen breaking into a house.</English>
