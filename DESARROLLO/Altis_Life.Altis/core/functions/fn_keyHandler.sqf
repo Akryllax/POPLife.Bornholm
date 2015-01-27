@@ -194,10 +194,7 @@ switch (_code) do
 					_handled = true;
 				};
 			};
-		};
-		if (playerSide == civilian) then {
-			[] call ROS_fnc_protestar;
-		};
+		};		
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
 	//Y Player Menu
@@ -322,14 +319,20 @@ switch (_code) do
 	};
 	case 60:
 	{
-		if (playerSide == civilian) then {
+		if (vehicle player == player) then {
 			[] call ROS_fnc_silla;
 		};
 	};
 	case 61:
 	{	
-		if (playerSide == civilian && (vehicle player == player)) then {
+		if (vehicle player == player) then {
 			[] call ROS_fnc_fiesta;
+		};
+	};
+	case 62:
+	{	
+		if (playerSide == civilian && (vehicle player == player)) then {
+			[] call ROS_fnc_protestar;
 		};
 	};
 };
