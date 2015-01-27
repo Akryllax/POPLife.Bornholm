@@ -115,6 +115,7 @@ CREH = player addEventHandler ["Fired", "_this call AKR_tiroAtiro"];
 	player removeWeapon (primaryWeapon player);
 	player removeWeapon (handgunWeapon player);
 	player removeEventHandler ["Fired", CREH];
+	player forceAddUniform "U_B_CombatUniform_mcam";
 };
 
 _paraf = parseText "<t size=""1.5"" color=""#FF0000"" align=""center"">Cuerpo Voluntario de Seguridad</t><br/><t size=""1"">Bienvenido al C.V.S. de Alits. Gracias por velar por la seguridad de sus conciudadanos. Aun asi, le recordamos que usted sigue siendo civil, y tendra que seguir la normative vigente como tal, salvo las excepciones debido a este cargo.</t>";
