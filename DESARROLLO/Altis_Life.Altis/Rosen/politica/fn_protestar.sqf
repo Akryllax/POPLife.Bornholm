@@ -20,7 +20,7 @@ private ["_sign","_time"];
 	_sign enableSimulationGlobal false;
 	_sign attachTo [player, [0,0,0.6], "righthand"];
 	_sign setVectorUp [0,90,-1];
-	while(_time > 0) {		
+	while{_time > 0} do {		
 		player setVelocity [0,0,0];
 		sleep 0.1;
 		_time = _time - 1;
