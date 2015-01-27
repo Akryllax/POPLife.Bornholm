@@ -5688,16 +5688,17 @@
 			<Spanish>Depositar para la banda</Spanish>
 		</Key>
 		<Key ID="STR_pInAct_RemoveWeapons">                
-			<Original>Requisar las armas</Original>
-			<English>Requisar las armas</English>
-			<German>Requisar las armas</German>
-			<French>Requisar las armas</French>
-			<Italian>Requisar las armas</Italian>
-			<Portuguese>Requisar las armas</Portuguese> 
-			<Spanish>Requisar armas</Spanish>			
+			<Original>Confiscar armas</Original>
+			<English>Confiscar armas</English>
+			<German>Confiscar armas</German>
+			<French>Confiscar armas</French>
+			<Italian>Confiscar armas</Italian>
+			<Portuguese>Confiscar armas</Portuguese> 
+			<Spanish>Confiscar armas</Spanish>			
 		</Key>
 		<Key ID="STR_pInAct_RemoveMoney">
 			<Original>Remove money</Original>
+			<English>Remove money</English>
 			<Spanish>Quitar dinero</Spanish>
 		</Key>
 	</Package>

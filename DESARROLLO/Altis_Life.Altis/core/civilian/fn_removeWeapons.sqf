@@ -6,7 +6,8 @@
 	File: fn_removeWeapons.sqf
 */
 private["_cop","_legal","_handgun","_magWeapAllow","_magArr","_handgun","_legalitems","_uniformitems","_backpackitems","_vestitems"];
-_cop = [_this,0,Objnull,[objNull]] call BIS_fnc_param;
+
+_cop = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 
 _legalitems = ["Binocular","ItemGPS","ToolKit","FirstAidKit","NVGoggles","Chemlight_red","Chemlight_yellow","Chemlight_green","Chemlight_blue","Medikit"];
 _legal = [
