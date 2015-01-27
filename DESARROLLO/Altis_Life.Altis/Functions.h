@@ -121,8 +121,8 @@ class Life_Client_Core
 		class gather {};
 		class restrain {};
 		class surrender {};
-		class removeMoneyAction {};
 		class removeWeaponAction {};
+		class removeMoneyAction {};
 	};
 	
 	class Housing

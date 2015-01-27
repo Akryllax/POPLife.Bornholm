@@ -7,7 +7,7 @@
 private ["_time"];
 
 if(playerSide != west) exitWith {};
-if(isNil "life_pInact_curTarget") exitWith {hint "Invalid destination."};
+if(isNil "life_pInact_curTarget") exitWith {hint "Destino invalido."};
 
 //Get minutes
 _time = ctrlText 1400;
@@ -15,7 +15,7 @@ _time = ctrlText 1400;
 
 if(! ([_time] call TON_fnc_isnumber)) exitWith
 {
-	hint "You have to enter a number.";
+	hint "Tienes que introducir un numero.";
 };
 
 _time = parseNumber _time; //requested number
