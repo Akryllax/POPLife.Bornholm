@@ -45,7 +45,7 @@
 	poner objetos!!! script  by quick !!!! xD
 */
 private["_position","_object"];
-if(!isNull life_object) exitWith {};
+
 _type = _this select 0;
 
 if(([false,_type,1] call life_fnc_handleInv)) then {
