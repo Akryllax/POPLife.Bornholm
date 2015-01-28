@@ -213,12 +213,7 @@ switch (true) do
 			
 	};
 
-	///end cosas QUICK!!!
-	
-	case (_item == "llavecasino"):
-	{
-		["llavecasino"] spawn ROS_fnc_llavecasino;
-	};
+	///end cosas QUICK!!!	
 	
 	default
 	{
