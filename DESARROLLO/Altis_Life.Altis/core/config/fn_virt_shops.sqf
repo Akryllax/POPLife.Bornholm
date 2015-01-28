@@ -62,7 +62,7 @@ switch (_shop) do
 	            "palet",
 	            "murallaPalets",
 	            "murallaSacosGrande",
-	            "murallaSacosPequeña",
+	            "murallaSacosPequena",
 	            "murallaPiedras",
 	            "barrilBasura",
 	            "barrilArena",

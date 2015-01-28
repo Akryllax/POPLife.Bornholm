@@ -93,7 +93,7 @@ switch (_var) do
 	 case "life_inv_palet": {("Palet")};
 	 case "life_inv_murallaPalets": {("Muralla Palets")};
 	 case "life_inv_murallaSacosGrande": {("Muralla Sacos Grande")};
-	 case "life_inv_murallaSacosPequeña": {("Muralla Sacos Peq")};
+	 case "life_inv_murallaSacosPequena": {("Muralla Sacos Peq")};
 	 case "life_inv_murallaPiedras": {("Muralla Piedra")};
 	 case "life_inv_barrilBasura": {("Barril Basura")};
 	 case "life_inv_barrilArena": {("Barril Arena")};

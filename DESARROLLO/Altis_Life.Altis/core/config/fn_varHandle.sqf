@@ -212,7 +212,7 @@ switch (_mode) do
 	        case "life_inv_palet": {"palet"};
 	        case "life_inv_murallaPalets": {"murallaPalets"};
 	        case "life_inv_murallaSacosGrande": {"murallaSacosGrande"};
-	        case "life_inv_murallaSacosPequeña": {"murallaSacosPequeña"};
+	        case "life_inv_murallaSacosPequena": {"murallaSacosPequena"};
 	        case "life_inv_murallaPiedras": {"murallaPiedras"};
 	        case "life_inv_barrilBasura": {"barrilBasura"};
 	        case "life_inv_barrilArena": {"barrilArena"};

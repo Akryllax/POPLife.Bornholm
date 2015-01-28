@@ -229,7 +229,7 @@ life_inv_items =
 	"life_inv_palet",
 	"life_inv_murallaPalets",
 	"life_inv_murallaSacosGrande",
-	"life_inv_murallaSacosPequeña",
+	"life_inv_murallaSacosPequena",
 	"life_inv_murallaPiedras",
 	"life_inv_barrilBasura",
 	"life_inv_barrilArena",
