@@ -26,7 +26,7 @@ _uid = getPlayerUID _sender;
 
 [[0,_sender,life_shop_type],"TON_fnc_getprices",false,false] spawn life_fnc_MP;
 
-/*{
+{
 	_icon = [([_x,0] call life_fnc_varHandle)] call life_fnc_itemIcon;
 	if(_index != -1) then
 		{
