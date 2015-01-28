@@ -107,7 +107,7 @@ switch (_slot) do
 };
 
 //multiple winnings by bet amount
-_slotcash = _winnings * ( _betamt / 1000 );
+_slotcash = _winnings * ( _betamt / 2500 );
 
 life_cash = life_cash + _slotcash;
 _winningsText ctrlSetText format["%1",_slotcash];
