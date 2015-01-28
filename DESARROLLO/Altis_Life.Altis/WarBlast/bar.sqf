@@ -15,7 +15,7 @@ while {_pl distance _vip < 200} do
 	};
 	  if (_snd == 1) then
 		{
-		   sleep 41;
+		   sleep 40;
 		   _snd = 0
 	};
 };
