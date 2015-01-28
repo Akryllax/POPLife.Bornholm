@@ -19,6 +19,8 @@ if(life_cash < _price) exitWith {
 	hint format["Esta carrera cuesta %1, y tu solo tienes %2", _price, life_cash];
 };
 
+hint "Iniciando la carrera";
+
 life_cash = life_cash - _price;
 
 [[_trackID,_racer], "life_fnc_raceProcessRequest", false] call life_fnc_MP;

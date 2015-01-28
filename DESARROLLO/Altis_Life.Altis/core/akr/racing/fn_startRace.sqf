@@ -96,12 +96,6 @@ _raceID spawn {
 	raceStartTime = time;
 	
 	(vehicle player) setFuel 1;
-	[] spawn {
-		sleep 5 * 60;
-		if(inRace) then {
-			[_this] call life_fnc_racingEnded;
-		};
-	};
 	_this spawn {
 		_raceConfig = [_this] call life_fnc_raceConf;
 		
