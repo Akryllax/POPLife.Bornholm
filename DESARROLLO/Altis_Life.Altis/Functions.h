@@ -600,12 +600,6 @@ class Akryllax {
 		class testing {};
 	};
 	
-	class Racing_server
-	{
-		file = "core\akr\racing\life_server";
-		class raceProcessRequest {};
-	};
-	
 	class Enfermedades
 	{
 		file = "core\enfermedades";
