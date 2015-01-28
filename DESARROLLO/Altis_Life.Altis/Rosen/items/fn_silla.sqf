@@ -10,7 +10,7 @@ private ["_silla","_direc","_tiempo"];
 [] spawn {
 	if (life_sentarse) exitWith {};
 	life_sentarse = true;
-	_tiempo = 50;
+	_tiempo = 300;
 	player switchMove "Crew";
 	closeDialog 0;
 	titleText["A sentarse","PLAIN"];
