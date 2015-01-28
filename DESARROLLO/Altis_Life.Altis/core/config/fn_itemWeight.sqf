@@ -83,15 +83,15 @@ switch (_item) do
 	case "cajaMadera": {5};
 	case "palet": {10};		
 	case "murallaPalets": {15};
-	case "murallaSacosGrande": {35};
-	case "murallaSacosPequeña": {25};
-	case "murallaPiedras": {45};		
+	case "murallaSacosGrande": {15};
+	case "murallaSacosPequeña": {15};
+	case "murallaPiedras": {20};		
 	case "barrilBasura": {15};
 	case "barrilArena": {15};		
 	case "barrilArdiendo": {15};
-	case "pilaRuedas": {45};
-	case "defensaChasisCoche": {50};
-	case "contenedorBasura": {25};
+	case "pilaRuedas": {20};
+	case "defensaChasisCoche": {30};
+	case "contenedorBasura": {15};
 
 	default {1};
 };
