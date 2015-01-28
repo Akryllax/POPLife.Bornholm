@@ -105,7 +105,7 @@ switch (_mode) do
 	        case "palet": {"life_inv_palet"};
 	        case "murallaPalets": {"life_inv_murallaPalets"};
 	        case "murallaSacosGrande": {"life_inv_murallaSacosGrande"};
-	        case "murallaSacosPequeña": {"life_inv_murallaSacosPequeña"};
+	        case "murallaSacosPequena": {"life_inv_murallaSacosPequena"};
 	        case "murallaPiedras": {"life_inv_murallaPiedras"};
 	        case "barrilBasura": {"life_inv_barrilBasura"};
 	        case "barrilArena": {"life_inv_barrilArena"};
