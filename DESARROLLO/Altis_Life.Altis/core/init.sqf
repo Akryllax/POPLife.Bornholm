@@ -126,6 +126,6 @@ switch(__GETC__(life_donator)) do
 	case 4: {Desc = 0.50};
 	case 5: {Desc = 0.10};
 };
-
+[] execVM "WarBlast\Vehiculosfps\vehicleManager.sqf";
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
 player enableFatigue (__GETC__(life_enableFatigue));

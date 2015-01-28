@@ -11,7 +11,7 @@
 ///////////////////////////////
 pvpfw_cleanup_cleanAbandonded = true; // true or false, depending on wether you want abandoned vehicles to be deleted
 pvpfw_cleanup_abandonedFromFaction = ["BLU_F"]; // Vehicles from these factions will be cleaned up
-pvpfw_cleanUp_abandonRadius = 300; // If no unit is closer than the specified distance, the removal countdown will start
+pvpfw_cleanUp_abandonRadius = 600; // If no unit is closer than the specified distance, the removal countdown will start
 pvpfw_cleanup_abandondTimer = 180; // The vehicle will be removed after the specified time
 pvpfw_cleanUp_dontCleanUpAround = ["clean_1","clean_2","clean_3","clean_4","clean_5"]; //do not clean abandoned vehicles around these markers
 pvpfw_cleanUp_dontCleanUpAroundDistance = 500; // Dont clean if the vehicle is in this range of one of the above markers.
@@ -19,7 +19,7 @@ pvpfw_cleanUp_dontCleanUpAroundDistance = 500; // Dont clean if the vehicle is i
 //////////////////////////////
 // Clean destroyed vehicles //
 //////////////////////////////
-pvpfw_cleanUp_vehicleRadius = 250; // Destroyed vehicles cleanup timer will start if no unit is closer than this
+pvpfw_cleanUp_vehicleRadius = 500; // Destroyed vehicles cleanup timer will start if no unit is closer than this
 pvpfw_cleanUp_vehicleTimer = 60;
 
 //////////////////
@@ -32,14 +32,14 @@ pvpfw_cleanUp_bodyTimer = 100; // Bodies will be removed after the specified amo
 // weapons/magazines on ground //
 /////////////////////////////////
 #define __pvpfw_cleanUp_cleanWeaponHolders //comment out this line if you dont want weaponHolders to be cleaned up
-pvpfw_cleanUp_weaponHolderRadius = 5; // The weaponholders cleanup countdown will start if no unit is closer than this
+pvpfw_cleanUp_weaponHolderRadius = 1; // The weaponholders cleanup countdown will start if no unit is closer than this
 pvpfw_cleanUp_weaponHolderTimer = 10; // Weaponholders will be deleted after this time
 
 ///////////////////////////////
 // Clean destroyed buildings //
 ///////////////////////////////
 #define __pvpfw_cleanUp_cleanRuins //comment out this line if you dont want destroyed buildings to be cleaned up
-pvpfw_cleanUp_ruinRadius = 100; // Destroyed Buildings will be deleted if no entity is in the specified range around them
+pvpfw_cleanUp_ruinRadius = 10; // Destroyed Buildings will be deleted if no entity is in the specified range around them
 
 // Advanced
 //#define __pvpfw_cleanUp_cleanExtra //comment out this line if you dont need the objects below to be checked
