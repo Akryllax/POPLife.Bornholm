@@ -91,8 +91,8 @@ _containerdummy attachTo [heli1,[0,0,-3.5]];
 _containerdummy setDir 90;
 
 
-while { _dest distance heli1 > 250 } do { "airbox_marker" setMarkerPos getPos heli1; sleep 0.1 };
-[[5,"<t size='1.2'><t color='#FF0000'>Airdrop-Mission</t></t><br/><br/><t size='1'>El cargamento ha caido del helicoptero!. El cargamento se encuentra en la zona roja del mapa. Se procede a la autodestruccion para evitar robos en 20 minutos.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+while { _dest distance heli1 > 250 } do { "airbox_marker" setMarkerPos getPos heli1; sleep 1 };
+[[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>El cargamento ha caido del helicoptero!. El cargamento se encuentra en la zona roja del mapa. Se procede a la autodestruccion para evitar robos en 20 minutos.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 // Drop the container
 
@@ -206,3 +206,4 @@ deleteMarker "Airdropmarker";
 deleteMarker "Airdropmarkertext";
 
 airdrop_goingon = false;
+[] execVM "fn_generateAirdropAuto.sqf";
