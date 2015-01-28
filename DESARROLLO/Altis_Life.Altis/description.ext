@@ -1,6 +1,6 @@
-author = "Tonic y PoP: PKE, Rosen, Warblast, Quickskill, Akryllax";
+author = "Tonic y Equipo PoP: ";
 onLoadName = "Altis Life RPG PoP";
-onLoadMission = "Editado por el equipo de Plata o Plomo";
+onLoadMission = "PKE,Rosen,Warblast, QuickSkill, Akryllax";
 
 joinUnassigned = 1;
 respawn = BASE;
