@@ -52,7 +52,7 @@ waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be ope
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 player enableFatigue false;
 
-AKR_tiroAtiro = {
+life_tiroAtiro = {
 
 	if((_this select 1) isEqualTo "hgun_P07_snds_F") then {
 		[] spawn {
@@ -63,7 +63,7 @@ AKR_tiroAtiro = {
 		};
 	};
 };
-player addEventHandler ["Fired", "_this call AKR_tiroAtiro"];
+player addEventHandler ["Fired", "_this call life_tiroAtiro"];
 
 //poner uniforme
 [] call life_fnc_copUniform;

@@ -36,7 +36,7 @@ player setObjectTextureGlobal [0, "textures\cazarrecompensas.jpg"];
 taserDelay = 1;
 primaryDelay = 0.3;
 
-AKR_tiroAtiro = {
+life_tiroAtiro = {
 
 	_CRallowedPWeapon = "SMG_02_";
 	_CRallowedHWeapon = "hgun_P07_";
@@ -59,7 +59,7 @@ AKR_tiroAtiro = {
 		};
 	};
 };
-CREH = player addEventHandler ["Fired", "_this call AKR_tiroAtiro"];
+CREH = player addEventHandler ["Fired", "_this call life_tiroAtiro"];
 
 [] spawn {
 

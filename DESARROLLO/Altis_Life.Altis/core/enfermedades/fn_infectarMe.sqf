@@ -10,9 +10,9 @@ _enfermedad = [_this, 0, "", [""]] call BIS_fnc_param;
 _nivel = [_this, 1, -1, [-1]] call BIS_fnc_param;
 
 if(_enfermedad == "") exitWith {[]};
-if!([_enfermedad] call AKR_isIllness) exitWith {hint "Error: Enfermedad no encontrada"};
+if!([_enfermedad] call life_isIllness) exitWith {hint "Error: Enfermedad no encontrada"};
 if(_nivel < 1) then {_nivel = 1};
-if(_nivel > [_enfermedad] call AKR_enf_getLevelCount) then { _nivel = 1};
+if(_nivel > [_enfermedad] call life_enf_getLevelCount) then { _nivel = 1};
 
 if(player getVariable["enfermo", ""] != "") exitWith {};
 
@@ -32,11 +32,11 @@ life_fnc_enfermar = {
 	
 	_debug = 1;
 	
-	[_enf, _lvl] call AKR_enf_spawnEffectosPerma;
+	[_enf, _lvl] call life_enf_spawnEffectosPerma;
 	
 	while {(player getVariable["enfermo", ""] == _enf || player getVariable["enfermoLevel", -1] == _lvl) && alive player} do {
-		if((_timestamp + 60 * (([_enf] call AKR_enf_getEnfermedad) select 1)) < time) exitWith {
-			if(_lvl < [_enf] call AKR_enf_getLevelCount) then {
+		if((_timestamp + 60 * (([_enf] call life_enf_getEnfermedad) select 1)) < time) exitWith {
+			if(_lvl < [_enf] call life_enf_getLevelCount) then {
 				player setVariable["enfermoLevel", _lvl + 1, true];
 				hint format["Tu enfermedad ha empeorado... Ahora estas en el estadio %1.", _lvl + 1];
 			} else {
@@ -45,7 +45,7 @@ life_fnc_enfermar = {
 		};
 		_debug = _debug + 1;
 		
-		[_enf, _lvl] call AKR_enf_spawnEffectos;
+		[_enf, _lvl] call life_enf_spawnEffectos;
 		
 		sleep _updateInterval;
 	};

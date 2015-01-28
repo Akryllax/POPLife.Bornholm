@@ -25,7 +25,7 @@ while {time < _timestamp + _delay} do {
 	hintSilent format["Curando... (%1 s)", (_timestamp + 5) - time];
 };
 
-if(_medicamento == [_enf, _lvl] call AKR_enf_getCura) then {
+if(_medicamento == [_enf, _lvl] call life_enf_getCura) then {
 
 	hintSilent format["Has curado a %1 de %2.", _unit getVariable["realname", "error"], _unit getVariable["enfermo", "error enf"]];
 

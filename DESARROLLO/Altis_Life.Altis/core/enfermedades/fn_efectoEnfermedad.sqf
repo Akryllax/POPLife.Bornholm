@@ -79,7 +79,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 	case "Vista borrosa" : //PERMA
 	{
 		{
-			while {"Vista borrosa" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+			while {"Vista borrosa" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 				"dynamicBlur" ppEffectEnable true;
 				"dynamicBlur" ppEffectAdjust [1]; "dynamicBlur" ppEffectCommit 0;
 				sleep 1;
@@ -93,7 +93,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 			player setFatigue 1;
 			sleep 2;
 		
-			while {"Fatiga" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+			while {"Fatiga" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 				player enableFatigue true;
 				player setFatigue 1;
 				sleep 1;
@@ -116,7 +116,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 			2 fadeSound 0.05;
 			sleep 2;
 		
-			while {"Sordera" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+			while {"Sordera" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 				1 fadeSound 0.05;
 				sleep 1;
 			};
@@ -127,7 +127,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 	};
 	case "Debilidad" : //PERMA
 	{
-		while {"Debilidad" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+		while {"Debilidad" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 			if(vehicle player != player && driver (vehicle player) == player) then {
 				moveOut player;
 			};
@@ -141,7 +141,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 				player unassignItem "NVGoggles_INDEP";
 				player removeItem "NVGoggles_INDEP";
 			
-				[] call AKR_playerWeapons2Ground;
+				[] call life_playerWeapons2Ground;
 			};
 			
 			sleep 3;
@@ -156,7 +156,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 		
 			sleep 5;
 			
-			while {"Daltonismo severo" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+			while {"Daltonismo severo" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 				"colorCorrections" ppEffectEnable true;
 				"colorCorrections" ppEffectAdjust [1, 2, -0.3, [0.75,0.7,0.7,0.98], [0,1,1,-35], [1,-9,-9,-0.7]];
 				"colorCorrections" ppEffectCommit 0;
@@ -181,7 +181,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 		
 			sleep 5;
 			
-			while {"Daltonismo leve" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+			while {"Daltonismo leve" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 				"colorCorrections" ppEffectEnable true;
 				"colorCorrections" ppEffectAdjust [1, 2, -0.3, [0.75,0.7,0.7,0.98], [0,1,1,-35], [1,-9,-9,-0.7]];
 				"colorCorrections" ppEffectCommit 0;
@@ -206,7 +206,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 		
 			sleep 5;
 			
-			while {"Ceguera" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+			while {"Ceguera" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 				"colorCorrections" ppEffectEnable true;
 				"colorCorrections" ppEffectAdjust [1.45, 1.5, -0.75, [-0.5,-0.5,-0.5,0.45], [-0.2,-0.2,-0.2,0.9], [2,2,2,1]];
 				"colorCorrections" ppEffectCommit 0;
@@ -225,7 +225,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 	{
 		{
 			[] spawn {
-				while {"Disociacion" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+				while {"Disociacion" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 					playSound "UnderDrugs";
 					sleep 12.634;
 				};
@@ -235,7 +235,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 			"ChromAberration" ppEffectCommit 3;
 			sleep 3;
 			
-			while {"Disociacion" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+			while {"Disociacion" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 				"ChromAberration" ppEffectEnable true;
 				"ChromAberration" ppEffectAdjust[ 0.4 * cos(time * 11 * PI + 1), 0.3 * sin(time * 17 * PI), false];
 				"ChromAberration" ppEffectCommit 0.5;
@@ -258,7 +258,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 			"ChromAberration" ppEffectCommit 0.5;
 			sleep 0.5;
 			
-			while {"Disociacion_temporal" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+			while {"Disociacion_temporal" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 				"ChromAberration" ppEffectEnable true;
 				"ChromAberration" ppEffectAdjust[ 0.4 * cos(time * 11 * PI + 1), 0.3 * sin(time * 17 * PI), false];
 				"ChromAberration" ppEffectCommit 0.5;
@@ -288,7 +288,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 		{
 			addCamShake [1.2,30,30];
 			sleep 10;
-			while {"Hipotermia" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+			while {"Hipotermia" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 				addCamShake [1.2,30,30];
 				sleep 10;
 			};
@@ -303,7 +303,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 			
 			_nearUnitsTracker = []; // [ [jugador1, count1], [jugador2,count2], ... , [jugador N, count N] ]
 						
-			while {"Contagiosa" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call AKR_enf_getArraySintomas)} do {
+			while {"Contagiosa" in ([player getVariable["enfermo", false], player getVariable["enfermoLevel", false]] call life_enf_getArraySintomas)} do {
 				
 				_tempNear = player nearEntities ["Man", CONTAG_RADIOUS];
 				if(count _tempNear > 0) then {

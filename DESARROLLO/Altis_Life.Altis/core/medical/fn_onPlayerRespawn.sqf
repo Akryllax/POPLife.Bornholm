@@ -31,5 +31,5 @@ player playMoveNow "amovppnemstpsraswrfldnon";
 player enableFatigue (__GETC__(life_enableFatigue));
 
 if(side player == west) then {
-	player addEventHandler ["Fired", "_this call AKR_tiroAtiro"];
+	player addEventHandler ["Fired", "_this call life_tiroAtiro"];
 };

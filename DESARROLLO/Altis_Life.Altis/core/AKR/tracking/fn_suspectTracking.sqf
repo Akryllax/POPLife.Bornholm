@@ -15,7 +15,7 @@ _color = _colorArray select (floor (random(count _colorArray)));
 if(isNull _player) exitWith {};
 if(_time < 0) exitWith {};
 
-_AKR_clearDead = {
+_life_clearDead = {
 	_prefix = [_this, 0, "", [""]] call BIS_fnc_param;
 
 };
