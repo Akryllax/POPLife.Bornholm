@@ -73,7 +73,7 @@ switch (_shop) do
 	        ]
 	    ]
 	};
-	case "illnesscenter":
+	/*case "illnesscenter":
 	{
 		["Centro de Enf. Contag.",
 			[
@@ -99,5 +99,5 @@ switch (_shop) do
 				"medicAnticuerpos"
 			]
 		]
-	};
+	};*/
 };
