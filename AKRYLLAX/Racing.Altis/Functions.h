@@ -8,6 +8,11 @@ class Akryllax
 		class initRacing {};
 		class loadTrack {};
 		class loadVehicle {};
+		class raceAskSession {};
+		class raceCheckStatus {};
+		class raceConf {};
+		class racingEnded {};
+		class racingResponse {};
 		class startRace {};
 		class startTrackAction{};
 		class testing {};

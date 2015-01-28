@@ -12,12 +12,15 @@ inRace = true;
 player setVariable["inRace",inRace, true];
 
 //LOGICA de la carrera
-[] spawn {
+_raceID spawn {
+	
+	_orbRadious = 12;
+
 	_count = count currentTrackOrbs;
 	waypointIndex = 0;
 	player setVariable["waypointIndex", waypointIndex, true];
 	while {inRace} do {
-		waitUntil { ((position player) vectorDistance (position currentOrb) < 7) || !alive Player};
+		waitUntil { ((position player) vectorDistance (position currentOrb) < _orbRadious) || !alive Player};
 		if(!alive player) exitWith {
 			inRace = false; 
 			player setVariable["inRace",inRace, true];
@@ -30,7 +33,7 @@ player setVariable["inRace",inRace, true];
 			currentOrb = currentTrackOrbs select waypointIndex;
 		};
 		if(waypointIndex == _count) then {
-			player setVariable["raceFinished",true,true];
+			[_this] call AKR_fnc_racingEnded;
 		};
 	};
 };
@@ -61,12 +64,13 @@ player setVariable["inRace",inRace, true];
 			
 		} forEach (currentTrackOrbs);
 		
-		sleep 1;
+		waitUntil{_cur != currentOrb};
 	};
 };
 
-[] spawn {
-	player enableSimulation false;
+_raceID spawn {
+	
+	waitUntil{vehicle player != player};
 	for "_i" from 0 to 9 do {
 		[
 			[
@@ -88,5 +92,23 @@ player setVariable["inRace",inRace, true];
 			]
 		]
 	] spawn BIS_fnc_typeText;
-	player enableSimulation true;
+	
+	raceStartTime = time;
+	
+	(vehicle player) setFuel 1;
+	_this spawn {
+		_raceConfig = [_this] call AKR_fnc_raceConf;
+		
+		_mode = _raceConfig select 0;
+		_price = _raceConfig select 1;
+		
+		_oro = (_raceConfig select 2);
+		_plata = (_raceConfig select 3);
+		_bronce = (_raceConfig select 4);
+	
+		while {inRace} do {
+			hint parseText format ["<t size = '1' align='center' font='TahomaB'>Tiempo: </t><br/><t size='1.5'>%1</t><br/><t align='left' color='#E6D525' font='TahomaB'>Oro: %2 (%3)</t><br/><t align='left' color='#C9C9C9' font='TahomaB'>Plata: %4 (%5)</t><br/><t align='left' color='#965D0C' font='TahomaB'>Bronce: %6 (%7)</t>", [time - raceStartTime] call BIS_fnc_timeToString, _oro select 1, _oro select 0, _plata select 1, _plata select 0,_bronce select 1, _bronce select 0];
+			sleep 0.02;
+		};
+	};
 };

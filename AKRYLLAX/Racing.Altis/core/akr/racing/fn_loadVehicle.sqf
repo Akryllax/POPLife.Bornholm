@@ -18,18 +18,23 @@ _this spawn {
 
 	_car = "C_Hatchback_01_sport_F" createVehicle _spawnPos;
 	_car setDir _dir;
+	_car setFuel 0;
+	_car addEventHandler["GetOut", {_this spawn {sleep 1; deleteVehicle (_this select 0)}}];;
 
 	_arr = "Sign_Arrow_Direction_F" createVehicleLocal (position _car);
 	_arr attachTo [_car, [0,0,1.2]];
 
 	["RaceArrow", "onEachFrame", {
-		_car = _this;
+		_car = _this select 0;
+		_arr = _this select 1;
 		_fromTo = ((position _car) vectorFromTo (position currentOrb));	
 		_arr setDir ((_fromTo select 0) atan2 (_fromTo select 1)) - (getDir _car);
-	}, _car] call BIS_fnc_addStackedEventHandler;
-	[] spawn {
+		if(isNull _car) then { deleteVehicle _arr};
+	}, [_car, _arr]] call BIS_fnc_addStackedEventHandler;
+	_arr spawn {
 		waitUntil {!inRace || !(alive player) || player getVariable["raceFinished",false]};
 		["RaceArrow", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+		deleteVehicle _this;
 	};
 	
 	player moveInDriver _car;

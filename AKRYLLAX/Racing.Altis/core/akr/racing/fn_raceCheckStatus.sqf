@@ -4,22 +4,29 @@
 	Desc: Checks array status.
 */
 
-private["_raceID"];
+private["_trackID"];
 
-_raceID = [_this,0,"",[""]] call BIS_fnc_MP;
+_trackID = [_this,0,"",[""]] call BIS_fnc_param;
 
-if(count _raceID == 0) exitWith {};
+if(count _trackID == 0) exitWith { -1};
 
 _size = count racing_current;
-_found = false;
+_found = -1;
 
-for "_i" from 0 to _size do {
+diag_log "###########################################";
+diag_log format["# Checking racing status of '%1' #", _trackID];
+
+
+for "_i" from 0 to (_size - 1) do {
 	
 	_temp = racing_current select _i;
-	
-	if(_raceID in _temp) then {
+	diag_log format["# Checking _temp='%1'", _temp];
+	if(_trackID in _temp) then {
 		_found = _temp select 1;
 	};
 };
+
+diag_log "# End of check							#";
+diag_log "###########################################";
 
 _found
