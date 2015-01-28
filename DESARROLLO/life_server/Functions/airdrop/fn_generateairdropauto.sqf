@@ -2,7 +2,7 @@
 	@file Version: 1.0.0.0
 	@file Author: RYN_Ryan
 	@file edit: 20.01.2015
-	Copyright © 2015 Ryan Torzynski, All rights reserved//modificado por Rosen
+	Copyright ? 2015 Ryan Torzynski, All rights reserved//modificado por Rosen
 	All servers are allowed to use this code, modify and publish it. Every modified release of this script must contain "Original by RTT"!
 */
 
@@ -169,7 +169,7 @@ sleep 50;
 [[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>10 segundos para la autodestruccion.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 sleep 10;
 [[5,"<t size='1.2'><t color='#FF0000'>ATENCION</t></t><br/><br/><t size='1'>El cargamento se ha autodestruido con exito.</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-deleteVehicle _box; 
+deleteVehicle _box;
 _bmb = "BO_GBU12_LGB" createVehicle [(getPos _box select 0)-21,(getPos _box select 1)+21,0];
 sleep 1;
 _bmb = "BO_GBU12_LGB" createVehicle [(getPos _box select 0)-1,(getPos _box select 1)+56,0];
@@ -206,3 +206,5 @@ deleteMarker "Airdropmarker";
 deleteMarker "Airdropmarkertext";
 
 airdrop_goingon = false;
+
+[] execVM "fn_generateAirdropAuto.sqf";
