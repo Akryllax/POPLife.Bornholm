@@ -4836,7 +4836,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15311.143,16.383816,17557.352};
+					position[]={15783.542,14.250061,17444.229};
 					azimut=195;
 					special="NONE";
 					id=251;
@@ -22005,7 +22005,7 @@ class Mission
 		};
 		class Item387
 		{
-			position[]={15311.223,16.38413,17557.303};
+			position[]={15783.622,14.250119,17444.18};
 			name="mrkr_racing_1";
 			text="Carrera Ilegal 1";
 			type="mil_flag";
