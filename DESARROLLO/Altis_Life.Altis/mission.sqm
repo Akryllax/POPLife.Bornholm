@@ -4754,12 +4754,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15787.291,14.279712,17446.977};
+					position[]={15787.136,14.274546,17446.123};
 					azimut=195;
+					special="NONE";
 					id=247;
 					side="EAST";
 					vehicle="O_officer_F";
-					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
 					init="this enableSimulation false; this allowDamage false; this addAction[""Start"", AKR_fnc_raceAskSession, ""race_01""];";
