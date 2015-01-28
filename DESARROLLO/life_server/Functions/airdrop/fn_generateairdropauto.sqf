@@ -113,7 +113,7 @@ _light attachTo [_container,[0,0,0]];
 _flare = "F_40mm_Green" createVehicle getPos _container;
 _flare attachTo [_container,[0,0,0]];
 sleep 0.1;
-while { (getPos _container select 2) > 2 } do { "airbox_marker" setMarkerPos getPos heli1;sleep 1; };
+while { (getPos _container select 2) > 2 } do { "airbox_marker" setMarkerPos getPos _container;sleep 1; };
 detach _container;
 _container setPos [getPos _container select 0, getPos _container select 1, (getPos _container select 2)+0.5];
 playSound3D ["A3\Sounds_F\sfx\alarm_independent.wss", _container];
@@ -206,8 +206,5 @@ deleteMarker "Airdropmarker";
 deleteMarker "Airdropmarkertext";
 
 airdrop_goingon = false;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 [] execVM "fn_generateAirdropAuto.sqf";
