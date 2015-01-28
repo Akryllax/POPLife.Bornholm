@@ -18,7 +18,7 @@ _this spawn {
 	
 	_raceTime = time - _startTime;
 
-	_conf = [_trackID] call AKR_fnc_raceConf;
+	_conf = [_trackID] call life_fnc_raceConf;
 	
 	if(_finished) then {
 		

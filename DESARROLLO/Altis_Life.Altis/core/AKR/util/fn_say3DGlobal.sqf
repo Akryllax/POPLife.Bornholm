@@ -5,9 +5,9 @@
 	
 	FUNCIONAMIENTO:
 	
-		[objNull, (STRING) NOMBRE_SONIDO] call AKR_fnc_say3DGlobal;
+		[objNull, (STRING) NOMBRE_SONIDO] call life_fnc_say3DGlobal;
 		
 		ó:
 		
-		[[0,0,0], (STRING) NOMBRE_SONIDO] call AKR_fnc_say3DGlobal;
+		[[0,0,0], (STRING) NOMBRE_SONIDO] call life_fnc_say3DGlobal;
 */

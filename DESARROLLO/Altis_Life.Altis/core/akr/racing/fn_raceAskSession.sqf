@@ -13,7 +13,7 @@ diag_log "# 'raceAskSession' Action triggered";
 diag_log format["# Passing param _racer '%1'", _racer];
 diag_log format["# Passing param _trackID '%1'", _trackID];
 
-_price = ([_trackID] call AKR_fnc_raceConf) select 1;
+_price = ([_trackID] call life_fnc_raceConf) select 1;
 
 if(life_cash < _price) exitWith {
 	hint format["Esta carrera cuesta %1, y tu solo tienes %2", _price, life_cash];
@@ -21,4 +21,4 @@ if(life_cash < _price) exitWith {
 
 life_cash = life_cash - _price;
 
-[[_trackID,_racer], "AKR_fnc_raceProcessRequest", false] call life_fnc_MP;
+[[_trackID,_racer], "life_fnc_raceProcessRequest", false] call life_fnc_MP;

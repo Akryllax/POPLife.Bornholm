@@ -14,8 +14,8 @@
 //--- Execute MP functions
 if (isMultiplayer) then {
 	["BIS_fnc_initMultiplayer"] call bis_fnc_startLoadingScreen;
-	AKR_fnc_rem_packet = [];
-	"AKR_fnc_rem_packet" addPublicVariableEventHandler {_this call BIS_fnc_MPexec};
+	life_fnc_rem_packet = [];
+	"life_fnc_rem_packet" addPublicVariableEventHandler {_this call BIS_fnc_MPexec};
 
 	//--- Execute persistent functions
 	waituntil {!isnil "bis_functions_mainscope"};
@@ -33,19 +33,19 @@ if (isMultiplayer) then {
 		switch (typename _target) do {
 			case (typename objnull): {
 				if (local _target) then {
-					["AKR_fnc_rem_packet",[_mode,_params,_functionName,_target,false,_isCall]] call BIS_fnc_MPexec; //--- Local execution
+					["life_fnc_rem_packet",[_mode,_params,_functionName,_target,false,_isCall]] call BIS_fnc_MPexec; //--- Local execution
 				};
 			};
 			case (typename true): {
 				if (_target) then {
-					["AKR_fnc_rem_packet",[_mode,_params,_functionName,_target,false,_isCall]] call BIS_fnc_MPexec; //--- Local execution
+					["life_fnc_rem_packet",[_mode,_params,_functionName,_target,false,_isCall]] call BIS_fnc_MPexec; //--- Local execution
 				} else {
 					[_params,_functionName,_target,false,_isCall] call BIS_fnc_MP; //--- Global execution
 				};
 			};
 			case (typename grpnull);
 			case (typename sideUnknown): {
-				["AKR_fnc_rem_packet",[_mode,_params,_functionName,_target,false,_isCall]] call BIS_fnc_MPexec; //--- Local execution
+				["life_fnc_rem_packet",[_mode,_params,_functionName,_target,false,_isCall]] call BIS_fnc_MPexec; //--- Local execution
 			};
 			case (typename 0): {
 				//--- Disabled

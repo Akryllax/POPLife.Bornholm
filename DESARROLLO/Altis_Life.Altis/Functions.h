@@ -562,7 +562,7 @@ class Rosen {
 };
 
 class Akryllax {
-	tag = "AKR";
+	tag = "life";
 	class Tracking
 	{
 		file = "core\AKR\tracking";

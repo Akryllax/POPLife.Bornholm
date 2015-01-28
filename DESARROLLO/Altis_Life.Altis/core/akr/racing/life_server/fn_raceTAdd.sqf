@@ -6,6 +6,6 @@
 
 private["_trackID", "_racer"];
 
-if([_trackID] call AKR_fnc_raceCheckStatus) then {
+if([_trackID] call life_fnc_raceCheckStatus) then {
 	
 };

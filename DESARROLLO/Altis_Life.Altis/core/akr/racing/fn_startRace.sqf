@@ -33,7 +33,7 @@ _raceID spawn {
 			currentOrb = currentTrackOrbs select waypointIndex;
 		};
 		if(waypointIndex == _count) then {
-			[_this] call AKR_fnc_racingEnded;
+			[_this] call life_fnc_racingEnded;
 		};
 	};
 };
@@ -97,7 +97,7 @@ _raceID spawn {
 	
 	(vehicle player) setFuel 1;
 	_this spawn {
-		_raceConfig = [_this] call AKR_fnc_raceConf;
+		_raceConfig = [_this] call life_fnc_raceConf;
 		
 		_mode = _raceConfig select 0;
 		_price = _raceConfig select 1;

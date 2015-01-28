@@ -176,7 +176,7 @@ AKR_enf_spawnEffectos = {
 		
 		{
 			if(([_enfermedad, _nivel, _x] call AKR_enf_getSintomaPeriod) >= 0) then {
-				[_x] call AKR_fnc_efectoEnfermedad;
+				[_x] call life_fnc_efectoEnfermedad;
 			};
 		} forEach _var;
 	};
@@ -197,7 +197,7 @@ AKR_enf_spawnEffectosPerma = {
 		
 		{
 			if(([_enfermedad, _nivel, _x] call AKR_enf_getSintomaPeriod) == PERMA) then {
-				[_x] call AKR_fnc_efectoEnfermedad;
+				[_x] call life_fnc_efectoEnfermedad;
 			};
 		} forEach _var;
 	};

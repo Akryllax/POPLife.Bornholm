@@ -12,13 +12,13 @@ _args = [_this, 2, [], [[]]] call BIS_fnc_param;
 switch (_mode) do{
 
 	case 0: { //Create and join session
-		[_trackID] call AKR_fnc_loadTrack;
-		[_trackID, [_trackID] call AKR_fnc_loadVehicle] call AKR_fnc_startRace;
+		[_trackID] call life_fnc_loadTrack;
+		[_trackID, [_trackID] call life_fnc_loadVehicle] call life_fnc_startRace;
 	};
 
 	case 1: { //Join session
-		[_trackID] call AKR_fnc_loadTrack;
-		[_trackID, [_trackID] call AKR_fnc_loadVehicle] call AKR_fnc_startRace;
+		[_trackID] call life_fnc_loadTrack;
+		[_trackID, [_trackID] call life_fnc_loadVehicle] call life_fnc_startRace;
 	};
 	
 	case 2: { //Can't join, already in race.

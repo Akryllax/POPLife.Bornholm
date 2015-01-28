@@ -1,7 +1,7 @@
 /*
 	File: fn_curarEnfermedadesAction.sqf
 	Author: Akryllax
-	Desc: Action wrapper for AKR_fnc_curarEnfermedades.
+	Desc: Action wrapper for life_fnc_curarEnfermedades.
 */
 private["_enfermedad","_nivel"];
 
@@ -12,4 +12,4 @@ _medicamento = [_args, 1, "",[""]] call BIS_fnc_param;
 
 if(isNull _target || _medicamento == "") exitWith {};
 
-[_target,_medicamento] call AKR_fnc_curarEnfermedades;
+[_target,_medicamento] call life_fnc_curarEnfermedades;

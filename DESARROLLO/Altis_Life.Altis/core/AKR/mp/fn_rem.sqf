@@ -31,13 +31,13 @@ with missionnamespace do {
 	_isCall =	[_this,4,false,[false]] call bis_fnc_param;
 
 	//--- Send to server
-	AKR_fnc_rem_packet = [0,_params,_functionName,_target,_isPersistent,_isCall];
-	publicvariableserver "AKR_fnc_rem_packet";
+	life_fnc_rem_packet = [0,_params,_functionName,_target,_isPersistent,_isCall];
+	publicvariableserver "life_fnc_rem_packet";
 
 	//--- Local execution
 	if !(ismultiplayer) then {
-		["AKR_fnc_rem_packet",AKR_fnc_rem_packet] spawn BIS_fnc_MPexec;
+		["life_fnc_rem_packet",life_fnc_rem_packet] spawn BIS_fnc_MPexec;
 	};
 
-	AKR_fnc_rem_packet
+	life_fnc_rem_packet
 };

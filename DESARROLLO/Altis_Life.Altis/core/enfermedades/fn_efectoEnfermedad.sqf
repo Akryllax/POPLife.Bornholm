@@ -321,7 +321,7 @@ diag_log parseText format["#@ Effect request: %1. @#", _input];
 									(_nearUnitsTracker select _forEachIndex) set [1, (_x select 1) + 1];
 									_found = true;
 									if((_x select 1) >= CONTAG_COUNT) then { //Oh... So you have been too long near him?? Let's fuck you up a little bit...
-										[_unit, player getVariable["enfermo", false]] call AKR_fnc_infectarTo;
+										[_unit, player getVariable["enfermo", false]] call life_fnc_infectarTo;
 									};
 								};
 							} forEach _nearUnitsTracker;

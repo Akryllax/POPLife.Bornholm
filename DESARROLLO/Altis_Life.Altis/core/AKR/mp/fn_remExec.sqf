@@ -5,7 +5,7 @@
 	Execute received remote execution
 
 	Parameter(s):
-	_this select 0: STRING - Packet variable name (always "AKR_fnc_rem_packet")
+	_this select 0: STRING - Packet variable name (always "life_fnc_rem_packet")
 	_this select 1: ARRAY - Packet value (sent by BIS_fnc_MP function; see it's description for more details)
 	
 	Returns:
@@ -56,22 +56,22 @@ if (typename _target == typename []) then {
 				_ownerID = -1;
 			};
 		};
-		AKR_fnc_rem_packet = [1,_params,_functionName,_target,_isPersistent,_isCall];
+		life_fnc_rem_packet = [1,_params,_functionName,_target,_isPersistent,_isCall];
 
 		//--- Send to clients
 		if (_ownerID < 0) then {
 			//--- Everyone
-			publicvariable "AKR_fnc_rem_packet";
+			publicvariable "life_fnc_rem_packet";
 		} else {
 			if (_ownerID != _serverID) then {
 				//--- Client
-				_ownerID publicvariableclient "AKR_fnc_rem_packet";
+				_ownerID publicvariableclient "life_fnc_rem_packet";
 			};
 		};
 
 		//--- Server execution (for all or server only)
 		if (_ownerID == -1 || _ownerID == _serverID) then {
-			["AKR_fnc_rem_packet",AKR_fnc_rem_packet] spawn BIS_fnc_MPexec;
+			["life_fnc_rem_packet",life_fnc_rem_packet] spawn BIS_fnc_MPexec;
 		};
 
 		//--- Persistent call (for all or clients)
@@ -82,7 +82,7 @@ if (typename _target == typename []) then {
 				_queue = _logic getvariable ["BIS_fnc_MP_queue",[]];
 				_queue set [
 					count _queue,
-					+AKR_fnc_rem_packet
+					+life_fnc_rem_packet
 				];
 				_logic setvariable ["BIS_fnc_MP_queue",_queue,true];
 			} else {

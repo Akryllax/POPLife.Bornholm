@@ -22,7 +22,7 @@ _this spawn {
 	_finishTime = time - raceStartTime;
 	raceStartTime = 0;
 	
-	_raceConfig = [_trackID] call AKR_fnc_raceConf;
+	_raceConfig = [_trackID] call life_fnc_raceConf;
 	
 	_mode = _raceConfig select 0;
 	_price = _raceConfig select 1;

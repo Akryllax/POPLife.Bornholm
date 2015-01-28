@@ -14,5 +14,5 @@ if(_raceID in racing_current) exitWith {
 	hint "Esta carrera ya esta en curso! Espera a que termine.";
 };
 
-[_raceID] call AKR_fnc_loadTrack;
-[_raceID, [_raceID] call AKR_fnc_loadVehicle] call AKR_fnc_startRace;
+[_raceID] call life_fnc_loadTrack;
+[_raceID, [_raceID] call life_fnc_loadVehicle] call life_fnc_startRace;

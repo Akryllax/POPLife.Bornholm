@@ -19,7 +19,7 @@ if(player getVariable["enfermo", ""] != "") exitWith {};
 player setVariable["enfermo", _enfermedad, true];
 player setVariable["enfermoLevel", _nivel, true];
 
-AKR_fnc_enfermar = {
+life_fnc_enfermar = {
 
 	_updateInterval = 15;
 
@@ -55,10 +55,10 @@ AKR_fnc_enfermar = {
 		player setVariable["enfermoLevel", -1, true];
 	} else {
 		if(player getVariable["enfermoLevel", -1] > 0 && player getVariable["enfermo", ""] != "") then {
-			[] spawn AKR_fnc_enfermar;
+			[] spawn life_fnc_enfermar;
 		};
 	};
 };
 
-[] spawn AKR_fnc_enfermar;
+[] spawn life_fnc_enfermar;
 hint format["Te has contagiado de %1", player getVariable["enfermo", "Error"]];

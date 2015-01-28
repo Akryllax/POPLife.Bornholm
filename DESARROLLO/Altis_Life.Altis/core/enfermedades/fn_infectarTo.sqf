@@ -30,5 +30,5 @@ if(_badDistance) exitWith {};
 
 hintSilent "";
 player say3D "HStimpack";
-[[_enfermedad], "AKR_fnc_infectarMe", _target, false] call BIS_fnc_MP;
+[[_enfermedad], "life_fnc_infectarMe", _target, false] call BIS_fnc_MP;
 true
