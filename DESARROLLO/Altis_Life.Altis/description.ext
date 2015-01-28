@@ -1,6 +1,6 @@
-author = "Tonic y PoP: PKE - Rosen - Warblast - Quickskill - Akryllax";
+author = "PKE - Rosen - Warblast - Quickskill - Akryllax";
 onLoadName = "Altis Life RPG PoP";
-onLoadMission = "Editado por el equipo de Plata o Plomo";
+onLoadMission = "Creado por Tonic y editado por PoP";
 loadscreen = "textures\billboards\server_info.jpg";
 
 joinUnassigned = 1;
