@@ -18847,7 +18847,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=356;
+		items=388;
 		class Item0
 		{
 			position[]={20782.402,37.286591,16680.141};
@@ -21695,6 +21695,200 @@ class Mission
 			text="Trabajos Legales";
 			type="b_unknown";
 			colorName="ColorCIV";
+		};
+		class Item356
+		{
+			position[]={15788.883,14.292871,17448.25};
+			name="mrkr_racing_1";
+			text="Carrera Ilegal 1";
+			type="mil_flag";
+			colorName="ColorEAST";
+		};
+		class Item357
+		{
+			position[]={15777.807,14.237555,17445.637};
+			name="race_01_spawn";
+			type="Empty";
+		};
+		class Item358
+		{
+			position[]={15752.691,14.232141,17449.82};
+			name="race_01_001";
+			type="Empty";
+		};
+		class Item359
+		{
+			position[]={15670.913,14.743632,17470.568};
+			name="race_01_002";
+			type="Empty";
+		};
+		class Item360
+		{
+			position[]={15544.658,14.407266,17487.957};
+			name="race_01_003";
+			type="Empty";
+		};
+		class Item361
+		{
+			position[]={15383.515,15.462893,17536.813};
+			name="race_01_004";
+			type="Empty";
+		};
+		class Item362
+		{
+			position[]={15235.401,16.03857,17548.602};
+			name="race_01_005";
+			type="Empty";
+		};
+		class Item363
+		{
+			position[]={15132.024,15.654175,17553.652};
+			name="race_01_006";
+			type="Empty";
+		};
+		class Item364
+		{
+			position[]={15057.01,16.461557,17597.893};
+			name="race_01_007";
+			type="Empty";
+		};
+		class Item365
+		{
+			position[]={14964.042,18.534512,17624.822};
+			name="race_01_008";
+			type="Empty";
+		};
+		class Item366
+		{
+			position[]={14844.786,20.050032,17670.984};
+			name="race_01_009";
+			type="Empty";
+		};
+		class Item367
+		{
+			position[]={14777.465,21.415161,17715.227};
+			name="race_01_010";
+			type="Empty";
+		};
+		class Item368
+		{
+			position[]={14733.986,22.739342,17748.051};
+			name="race_01_011";
+			type="Empty";
+		};
+		class Item369
+		{
+			position[]={14704.911,22.862598,17769.074};
+			name="race_01_012";
+			type="Empty";
+		};
+		class Item370
+		{
+			position[]={14661.521,24.439264,17749.393};
+			name="race_01_013";
+			type="Empty";
+		};
+		class Item371
+		{
+			position[]={14619.473,25.74114,17725.217};
+			name="race_01_014";
+			type="Empty";
+		};
+		class Item372
+		{
+			position[]={14577.573,23.735245,17691.313};
+			name="race_01_015";
+			type="Empty";
+		};
+		class Item373
+		{
+			position[]={14532.885,22.681608,17662.811};
+			name="race_01_016";
+			type="Empty";
+		};
+		class Item374
+		{
+			position[]={14498.05,21.116932,17675.83};
+			name="race_01_017";
+			type="Empty";
+		};
+		class Item375
+		{
+			position[]={14464.973,20.099094,17651.551};
+			name="race_01_018";
+			type="Empty";
+		};
+		class Item376
+		{
+			position[]={14453.713,19.758255,17623.402};
+			name="race_01_019";
+			type="Empty";
+		};
+		class Item377
+		{
+			position[]={14450.897,20.405725,17589.625};
+			name="race_01_020";
+			type="Empty";
+		};
+		class Item378
+		{
+			position[]={14450.896,20.873781,17560.066};
+			name="race_01_021";
+			type="Empty";
+		};
+		class Item379
+		{
+			position[]={14475.881,22.32782,17544.939};
+			name="race_01_022";
+			type="Empty";
+		};
+		class Item380
+		{
+			position[]={14514.939,24.802628,17520.66};
+			name="race_01_023";
+			type="Empty";
+		};
+		class Item381
+		{
+			position[]={14491.714,23.176954,17452.75};
+			name="race_01_024";
+			type="Empty";
+		};
+		class Item382
+		{
+			position[]={14477,22.248737,17400.309};
+			name="race_01_025";
+			type="Empty";
+		};
+		class Item383
+		{
+			position[]={14480.205,19.447336,17311.188};
+			name="race_01_026";
+			type="Empty";
+		};
+		class Item384
+		{
+			position[]={14528.933,14.706658,17186.803};
+			name="race_01_027";
+			type="Empty";
+		};
+		class Item385
+		{
+			position[]={14598.178,16.145744,17000.227};
+			name="race_01_028";
+			type="Empty";
+		};
+		class Item386
+		{
+			position[]={14560.349,17.049429,16957.27};
+			name="race_01_029";
+			type="Empty";
+		};
+		class Item387
+		{
+			position[]={14587.277,17.799292,16893.793};
+			name="race_01_030";
+			type="Empty";
 		};
 	};
 	class Sensors
