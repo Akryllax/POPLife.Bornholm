@@ -21969,7 +21969,7 @@ class Mission
 			age="UNKNOWN";
 			text="vip";
 			name="vip";
-			expCond="(player distance VIP < 100)";
+			expCond="(player distance VIP < 50)";
 			expActiv="null = [this] execVM ""WarBlast\bar.sqf"";";
 			class Effects
 			{
