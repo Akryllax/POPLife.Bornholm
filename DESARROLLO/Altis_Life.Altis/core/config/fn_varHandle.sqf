@@ -85,7 +85,7 @@ switch (_mode) do
 			case "cetro": {"life_inv_cetro"};
 			//esposas
 			case "esposas": {"life_inv_esposas"};
-                        case "llaveesposas": {"life_inv_llaveesposas"};
+            case "llaveesposas": {"life_inv_llaveesposas"};
             //trabajos
             case "metilamina":{"life_inv_metilamina"};
             case "meta":{"life_inv_meta"};
