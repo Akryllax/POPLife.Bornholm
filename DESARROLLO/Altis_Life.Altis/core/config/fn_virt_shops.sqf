@@ -25,7 +25,7 @@ switch (_shop) do
 	case "cop": {["Tienda de policia",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","defusekit"]]};
 	case "cement": {["Tienda de cemento",["cement"]]};
 	case "gold": {["Comprador de oro",["goldbar"]]};
-	case "retirado": {["Veterano de guerra",["centralita","trajesoldado","municionmilitar","kevlar"]]};
+	case "retirado": {["Veterano de guerra",["centralita","trajesoldado","municionmilitar","kevlar","chatarra","piezasmotor","medallas"]]};
 	case "tesoros": {["Comerciante de Tesoros",["pergamino","vasija","jarron","doblon","brazalete","catalejo","abrecartas","collar","cetro"]]};
 	case "defensas": {["Objetos de bloqueo",["cono","barrera","cajaMadera","palet","murallaPalets","murallaSacosGrande","murallaSacosPequena","murallaPiedras","barrilBasura","barrilArena","barrilArdiendo","pilaRuedas","defensaChasisCoche","contenedorBasura"]]};
 	/*case "illnesscenter":
