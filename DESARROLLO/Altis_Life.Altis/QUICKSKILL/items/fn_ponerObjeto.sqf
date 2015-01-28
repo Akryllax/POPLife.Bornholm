@@ -69,7 +69,7 @@ if(([false,_type,1] call life_fnc_handleInv)) then {
 	};
    
 	_object = createVehicle [_name, [0,0,0], [], 0, "NONE"]; 
-	_object enableSimulation false;
+	//_object enableSimulation false;
 	_object attachTo[player,[0,2,1]];
 	_object setVariable["item","objectDeployed",true];
 
