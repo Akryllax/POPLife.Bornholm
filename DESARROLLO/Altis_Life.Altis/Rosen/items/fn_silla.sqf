@@ -6,10 +6,11 @@
 	
 */
 
-private ["_silla"];
+private ["_silla","_direc","_tiempo"];
 [] spawn {
 	if (life_sentarse) exitWith {};
 	life_sentarse = true;
+	_tiempo = 50;
 	player switchMove "Crew";
 	closeDialog 0;
 	titleText["A sentarse","PLAIN"];
@@ -18,8 +19,12 @@ private ["_silla"];
 	_silla enableSimulationGlobal false;
 	_silla attachTo [player, [0,0,0.5], "culo"];
 	_silla setVectorUp [0,180,0];
-	//espera 20 segundos;
-	sleep 10;
+	while {_tiempo > 0} do {		
+		_direc = getDir player;
+		_silla setDir _direc;
+		_tiempo = _tiempo - 1;
+	};		
+	sleep 1;
 	deleteVehicle _silla;
 	player switchMove "";
 	life_sentarse = false;
