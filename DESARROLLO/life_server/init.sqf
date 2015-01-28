@@ -123,7 +123,7 @@ client_session_list = [];
 [] spawn TON_fnc_initHouses;
 
 //Lockup the dome
-private["_dome","_rsb","_cupula"];
+private["_dome","_rsb"];
 _dome = nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"];
 _rsb = nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"];
 //_cupula = nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"];
