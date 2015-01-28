@@ -157,7 +157,7 @@ class CfgFunctions
 	
 	class Akryllax
 	{
-		tag = "AKR";
+		tag = "life";
 		class MP
 		{
 			file = "\life_server\Functions\AKR\mp";
