@@ -2,11 +2,11 @@
 	Author: Karel Moricky
 
 	Description:
-	Send function for remote execution (and executes locally if conditions are met)
+	Send function or scripting command for remote execution (and executes locally if conditions are met)
 
 	Parameter(s):
 		0: ANY - function params
-		1: STRING - function name
+		1: STRING - function or scripting command name
 		2 (Optional):
 			BOOL - true to execute on each machine (including the one where the function was called from), false to execute it on server only [default: true]
 			STRING - the function will be executed only where unit defined by the variable is local

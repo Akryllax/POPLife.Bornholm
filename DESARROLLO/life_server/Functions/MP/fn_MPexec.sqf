@@ -11,8 +11,7 @@
 	Returns:
 	BOOL - true if function was executed successfuly
 */
-private ["_params","_functionName","_target","_isPersistent","_isCall","_varName","_varValue","_function","_validFunctions","_exitScript","_param2"];
-_exitScript = false;
+private ["_params","_functionName","_target","_isPersistent","_isCall","_varName","_varValue","_function"];
 
 _varName = _this select 0;
 _varValue = _this select 1;
@@ -23,16 +22,6 @@ _functionName =	[_varValue,2,"",[""]] call bis_fnc_param;
 _target =	[_varValue,3,true,[objnull,true,0,[],sideUnknown,grpnull,""]] call bis_fnc_param;
 _isPersistent =	[_varValue,4,false,[false]] call bis_fnc_param;
 _isCall =	[_varValue,5,false,[false]] call bis_fnc_param;
-
-_validFunctions = ["bis_fnc_execvm","BIS_fnc_effectKilledAirDestruction","BIS_fnc_effectKilledAirDestructionStage2","BIS_fnc_spawn"]; //Only these functions can be passed via BIS_fnc_MP
-if(!(_functionName in _validFunctions)) exitWith {false}; //NO.
-if(_functionName == "bis_fnc_execvm") then {
-	_param2 = _params select 1;
-	if(isNil "_param2") exitWith {_exitScript = true;};
-	if(_param2 != "initPlayerServer.sqf") exitWith {_exitScript = true;};
-};
-
-if(_exitScript) exitWith {false};
 
 if (typename _target == typename []) then {
 	//--- Multi execution
@@ -51,6 +40,9 @@ if (typename _target == typename []) then {
 				_ownerID = owner (missionnamespace getvariable [_target,objnull]);
 			};
 			case (typename objnull): {
+				private ["_targetCuratorUnit"];
+				_targetCuratorUnit = getassignedcuratorunit _target;
+				if !(isnull _targetCuratorUnit) then {_target = _targetCuratorUnit;};
 				_ownerID = owner _target;
 			};
 			case (typename true): {
@@ -110,6 +102,8 @@ if (typename _target == typename []) then {
 		if (_canExecute) then {
 			_function = missionnamespace getvariable _functionName;
 			if (!isnil "_function") then {
+
+				//--- Function
 				if (_isCall) then {
 					_params call _function;
 				} else {
@@ -117,8 +111,33 @@ if (typename _target == typename []) then {
 				};
 				true
 			} else {
-				["Function '%1' does not exist",_functionName] call bis_fnc_error;
-				false
+				_supportInfo = supportInfo format ["*:%1*",_functionName];
+				if (count _supportInfo > 0) then {
+
+					//--- Scripting command
+					_cfgRemoteExecCommands = [["CfgRemoteExecCommands"],configfile] call bis_fnc_loadClass;
+					if (isclass (_cfgRemoteExecCommands >> _functionName)) then {
+						_paramCount = if (typename _params == typename []) then {count _params} else {1};
+						switch (_paramCount) do {
+							case 0: {_params call compile format ["%1",_functionName]; true};
+							case 1: {_params call compile format ["%1 (_this)",_functionName]; true};
+							case 2: {_params call compile format ["(_this select 0) %1 (_this select 1)",_functionName]; true};
+							default {
+								//--- Error
+								["Error when remotely executing '%1' - wrong number of arguments (%2) passed, must be 0, 1 or 2",_functionName,count _params] call bis_fnc_error;
+								false
+							};
+						};
+					} else {
+						//--- Banned commands
+						["Scripting command '%1' is not allowed to be remotely executed",_functionName] call bis_fnc_error;
+						false
+					};
+				} else {
+					//--- Error
+					["Function or scripting command '%1' does not exist",_functionName] call bis_fnc_error;
+					false
+				};
 			};
 		};
 	};
