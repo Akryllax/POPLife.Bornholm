@@ -560,4 +560,47 @@ player createDiarySubject ["controls","Controls"];
 				Left Shift + H: Holster's your pistol<br/>
 				"
 		]
+	];waitUntil {!isNull player && player == player};
+if(player diarySubjectExists "rules")exitwith{};
+
+player createDiarySubject ["changelog","Normas del Servidor"];
+player createDiarySubject ["controls","Controles"];
+
+/*  Example
+	player createDiaryRecord ["", //Container
+		[
+			"", //Subsection
+				"
+				TEXT HERE<br/><br/>
+				"
+		]
+	];
+*/
+	player createDiaryRecord["Changelog",
+		[
+			"Normas",
+				"
+				Normas del servidor aqui: http://plataoplomo.wtf/foro/misc.php?page=normas-altis-life
+				"
+		]
+	];
+
+	player createDiaryRecord ["controls",
+		[
+			"",
+				"
+				Y: Abrir menu del jugador<br/>
+				U: Abrir y cerrar vehiculos<br/>
+				F: Sirena policias y medicos (if cop)<br/>
+				T: Inventario del vehiculo<br/>
+				Shift + R: Detener (Solo policias)<br/>
+				Shift + G: Noquear<br/>
+				Windows: Tecla de interaccion de vehiculos, casas, etc.<br/>
+				Shift + L: Activacion de luces de policia y medico<br/>
+				Shift + H: Guardar pistola<br/>
+				O: Abrir y cerrar puertas/barreras (en vehiculo tambien)<br/>
+				F2,F3,F4: Acciones custom<br/>
+				Shift + 3: Rendirse<br/>
+				"
+		]
 	];
