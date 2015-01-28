@@ -1,7 +1,7 @@
 ///comprar camion pa hacer drogas!! by quickskill para plata o plomo
 waitUntil {!isNull player};
 private["_coche"];
-_precio = 500000;
+_precio = 50000;
 _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 _vendedor = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 
