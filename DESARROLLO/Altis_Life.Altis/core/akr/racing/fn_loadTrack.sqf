@@ -27,7 +27,7 @@ while { !(getMarkerPos _mrkrName isEqualTo [0,0,0]) } do {
 		
 		if(count _oldName == 0) exitWith {};
 		
-		_separation = 2;
+		_separation = 5;
 		
 		_vect = (getMarkerPos _oldName) vectorFromTo (getMarkerPos _mrkrName);
 		_vect = _vect vectorMultiply _separation;
