@@ -84,6 +84,7 @@ switch (_shop) do
 				"jerinTranquilizante",
 				"medicCalor",
 				"medicAntibiotico",
+				"cono",
 				"medicAnticuerpos"
 			]
 		]
