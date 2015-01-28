@@ -36,7 +36,7 @@ if ((_x select 2) > 1 ) then {
 		_achatliste lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
 		_achatliste lbSetData [(lbSize _achatliste)-1,_x select 0];
 		_achatliste lbSetValue [(lbSize _achatliste)-1,_price];
-		_icon = [_var] call life_fnc_itemIcon;
+		_icon = [_name] call life_fnc_itemIcon;
 
 	};
 } foreach _array;
