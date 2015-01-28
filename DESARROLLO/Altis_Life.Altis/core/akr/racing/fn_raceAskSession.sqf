@@ -21,4 +21,4 @@ if(life_cash < _price) exitWith {
 
 life_cash = life_cash - _price;
 
-[[_trackID,_racer], "AKR_fnc_raceProcessRequest", false] call BIS_fnc_MP;
+[[_trackID,_racer], "AKR_fnc_raceProcessRequest", false] call life_fnc_MP;

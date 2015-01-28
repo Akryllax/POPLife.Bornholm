@@ -19,7 +19,7 @@ diag_log format["# Checking status of %1: %2", _trackID, _status];
 if(_status < 0) exitWith { hint "Error in raceTAdd" };
 
 if(_status < 2 && !(player getVariable["inRace", false])) then {
-	[[_status, _trackID], "AKR_fnc_racingResponse", _racer] call BIS_fnc_MP;
+	[[_status, _trackID], "AKR_fnc_racingResponse", _racer] call life_fnc_MP;
 } else {
 	hint "Carrera no disponible";
 };
