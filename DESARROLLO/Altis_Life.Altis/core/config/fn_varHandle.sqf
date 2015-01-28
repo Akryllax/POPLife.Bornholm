@@ -85,7 +85,7 @@ switch (_mode) do
 			case "cetro": {"life_inv_cetro"};
 			//esposas
 			case "esposas": {"life_inv_esposas"};
-            case "llaveesposas": {"life_inv_llaveesposas"};
+                        case "llaveesposas": {"life_inv_llaveesposas"};
             //trabajos
             case "metilamina":{"life_inv_metilamina"};
             case "meta":{"life_inv_meta"};
@@ -99,20 +99,20 @@ switch (_mode) do
 			case "tomates": {"life_inv_tomates"};
 			case "maiz": {"life_inv_maiz"};
 			//defensas
-    		 case "cono": {"life_inv_cono"};
-			 case "barrera": {"life_inv_barrera"};		
-			 case "cajaMadera": {"life_inv_cajaMadera"};
-			 case "palet": {"life_inv_palet"};		
-			 case "murallaPalets": {"life_inv_murallaPalets"};
-			 case "murallaSacosGrande": {"life_inv_murallaSacosGrande"};
-			 case "murallaSacosPequeña": {"life_inv_murallaSacosPequeña"};
-			 case "murallaPiedras": {"life_inv_murallaPiedras"};		
-			 case "barrilBasura": {"life_inv_barrilBasura"};
-			 case "barrilArena": {"life_inv_barrilArena"};		
-			 case "barrilArdiendo": {"life_inv_barrilArdiendo"};
-			 case "pilaRuedas": {"life_inv_pilaRuedas"};
-			 case "defensaChasisCoche": {"life_inv_defensaChasisCoche"};
-			 case "contenedorBasura": {"life_inv_contenedorBasura"};
+            case "cono": {"life_inv_cono"};
+	        case "barrera": {"life_inv_barrera"};
+	        case "cajaMadera": {"life_inv_cajaMadera"};
+	        case "palet": {"life_inv_palet"};
+	        case "murallaPalets": {"life_inv_murallaPalets"};
+	        case "murallaSacosGrande": {"life_inv_murallaSacosGrande"};
+	        case "murallaSacosPequeña": {"life_inv_murallaSacosPequeña"};
+	        case "murallaPiedras": {"life_inv_murallaPiedras"};
+	        case "barrilBasura": {"life_inv_barrilBasura"};
+	        case "barrilArena": {"life_inv_barrilArena"};
+	        case "barrilArdiendo": {"life_inv_barrilArdiendo"};
+	        case "pilaRuedas": {"life_inv_pilaRuedas"};
+	        case "defensaChasisCoche": {"life_inv_defensaChasisCoche"};
+	        case "contenedorBasura": {"life_inv_contenedorBasura"};
 			//items Rosen
 			case "llave_casino": {"life_inv_llave_casino"};
 			case "maletin_casino": {"life_inv_maletin_casino"};
@@ -198,7 +198,7 @@ switch (_mode) do
             case "life_inv_meta":{"meta"};
             case  "life_inv_petroleo":{"petroleo"};
             //items quick
-            case "life_inv_gpsEspia":{"gpsEspia"};	
+            case "life_inv_gpsEspia":{"gpsEspia"};
 			case "life_inv_semillasMaria":{"semillasMaria"};
 			case "life_inv_semillasCoca": {"semillasCoca"};
 			case "life_inv_semillasMaiz": {"semillasMaiz"};
@@ -206,20 +206,20 @@ switch (_mode) do
 			case "life_inv_tomates": {"tomates"};
 			case "life_inv_maiz": {"maiz"};
 			//defensas
-    		 case "life_inv_cono": {"cono"};
-			 case "life_inv_barrera": {"barrera"};		
-			 case "life_inv_cajaMadera": {"cajaMadera"};
-			 case "life_inv_palet": {"palet"};		
-			 case "life_inv_murallaPalets": {"murallaPalets"};
-			 case "life_inv_murallaSacosGrande": {"murallaSacosGrande"};
-			 case "life_inv_murallaSacosPequeña": {"murallaSacosPequeña"};
-			 case "life_inv_murallaPiedras": {"murallaPiedras"};		
-			 case "life_inv_barrilBasura": {"barrilBasura"};
-			 case "life_inv_barrilArena": {"barrilArena"};		
-			 case "life_inv_barrilArdiendo": {"barrilArdiendo"};
-			 case "life_inv_pilaRuedas": {"pilaRuedas"};
-			 case "life_inv_defensaChasisCoche": {"defensaChasisCoche"};
-			 case "life_inv_contenedorBasura": {"contenedorBasura"};
+            case "life_inv_cono": {"cono"};
+	        case "life_inv_barrera": {"barrera"};
+	        case "life_inv_cajaMadera": {"cajaMadera"};
+	        case "life_inv_palet": {"palet"};
+	        case "life_inv_murallaPalets": {"murallaPalets"};
+	        case "life_inv_murallaSacosGrande": {"murallaSacosGrande"};
+	        case "life_inv_murallaSacosPequeña": {"murallaSacosPequeña"};
+	        case "life_inv_murallaPiedras": {"murallaPiedras"};
+	        case "life_inv_barrilBasura": {"barrilBasura"};
+	        case "life_inv_barrilArena": {"barrilArena"};
+	        case "life_inv_barrilArdiendo": {"barrilArdiendo"};
+	        case "life_inv_pilaRuedas": {"pilaRuedas"};
+	        case "life_inv_defensaChasisCoche": {"defensaChasisCoche"};
+	        case "life_inv_contenedorBasura": {"contenedorBasura"};
 			//items Rosen
 			case "llave_casino": {"life_inv_llave_casino"};
 			case "maletin_casino": {"life_inv_maletin_casino"};
