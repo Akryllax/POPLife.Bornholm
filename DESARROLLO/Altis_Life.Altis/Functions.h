@@ -326,6 +326,7 @@ class Life_Client_Core
 		class arrestDialog_Arrest {};
 		class quitarDinero {};
 		class recieveConfiscatedMoney {};
+		class copEnter {};
 	};
 	
 	class Mercenaries 
