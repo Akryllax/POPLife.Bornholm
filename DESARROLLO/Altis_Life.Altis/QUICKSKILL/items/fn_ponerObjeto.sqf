@@ -10,7 +10,7 @@
      	 _object =[_this,3,Objnull,[Objnull]] call BIS_fnc_param;
 
       	detach _object;
-		_object setPos [(getPos _object select 0),(getPos _object select 1),0];
+		_object setPos [(getPos _object select 0),(getPos _object select 1),0.5];
 		_object enableSimulation false;
 
 		//opcion de eliminar manualmente
