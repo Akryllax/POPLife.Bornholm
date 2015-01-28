@@ -42,6 +42,7 @@ life_llaveesposas = ObjNull;
 life_protestando = false;
 life_sentarse = false;
 life_bailando = false;
+life_sonido = false;
 
 
 

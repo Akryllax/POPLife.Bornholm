@@ -3,17 +3,16 @@
         Autor:WarBlat
 */
 _vip = vip;
-_snd = 0;
 _pl = getPos player;
 
 while {_pl distance _vip < 200} do
 	{
-	  if (_snd == 0) then
+	  if (!life_sonido) then
 		{
 		   _vip say "bar";
-		   _snd = 1;
+		   life_sonido = true;
 	};
-	  if (_snd == 1) then
+	  if (life_sonido) then
 		{
 		   sleep 40;
 		   _snd = 0
