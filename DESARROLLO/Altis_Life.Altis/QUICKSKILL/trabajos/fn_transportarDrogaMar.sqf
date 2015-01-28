@@ -129,11 +129,12 @@ life_vehicles pushBack _coche;
 _destinoRandom = "desembarcoDrogas_" +  str (round random 5 );
 _destino =_destinoRandom;
 
- 				
-_markerDestino = createMarkerLocal ["MarkerTrabajoTransportarDrogaMar", getMarkerPos _destino ];
-_markerDestino setMarkerShapeLocal "ICON"; 
-_markerDestino setMarkerTypeLocal "Flag";
-_markerDestino setMarkerColor "ColorGreen";
+
+	_markerID = format["marker_%1",floor(random 1000)];
+_marker = createMarkerLocal [ _markerID, _pos];
+_marker setMarkerColorLocal "ColorGreen";
+_marker setMarkerTextLocal "!Zona Desembarco!";
+_marker setMarkerTypeLocal "mil_warning";
 
 
 	 		
