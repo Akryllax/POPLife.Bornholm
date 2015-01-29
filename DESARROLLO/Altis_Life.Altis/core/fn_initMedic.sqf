@@ -6,7 +6,7 @@
 	Description:
 	Initializes the medic..
 */
-private["_end"];
+private["_end","_donatorlevel"];
 player addRating 99999999;
 waitUntil {!(isNull (findDisplay 46))};
 
@@ -32,6 +32,7 @@ switch (__GETC__(life_mediclevel)) do
 				case 2: { life_paycheck = ((3000) + (_donatorlevel)); }; //local 2
 				case 3: { life_paycheck = ((4000) + (_donatorlevel)); }; //nacional
 				case 4: { life_paycheck = ((5000) + (_donatorlevel)); }; //nacional 2
+				case 5: { life_paycheck = ((3500) + (_donatorlevel)); }; //Medicos lo demas no sirve para nada
 				default { life_paycheck = ((2000) + (_donatorlevel)); }; //default in-case anything goes tits up
 			};
 [] call life_fnc_spawnMenu;

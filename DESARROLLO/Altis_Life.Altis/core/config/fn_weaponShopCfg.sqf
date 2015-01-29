@@ -293,7 +293,7 @@ switch(_shop) do
 		switch (true) do
 		{
 			case (playerSide != independent): {"Tu no eres medico"};
-			case (__GETC__(life_mediclevel) == 5):
+			case (__GETC__(life_mediclevel) > 1):
 		    {
 				["Hospital EMS Shop",
 					[

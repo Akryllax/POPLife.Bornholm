@@ -95,9 +95,9 @@ switch (_shop) do
 	case "cop_car":
 	{
 		_return pushBack ["B_Quadbike_01_F",1000 * Desc];
-		_return pushBack ["C_Hatchback_01_sport_F",6000 * Desc];
-		_return pushBack ["C_Offroad_01_F",5000 * Desc];
-		_return pushBack ["C_SUV_01_F",20000 * Desc];
+		_return pushBack ["C_Hatchback_01_sport_F",85000 * Desc];
+		_return pushBack ["C_Offroad_01_F",25000 * Desc];
+		_return pushBack ["C_SUV_01_F",35000 * Desc];
 
 		if(__GETC__(life_coplevel) >= 7) then
 			{
