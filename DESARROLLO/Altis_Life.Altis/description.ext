@@ -46,7 +46,7 @@ class CfgSounds
 	class copsiren
 	{
 		name = "copsiren";
-		sound[] = {"\sounds\cop_long.ogg", 1.0, 1};
+		sound[] = {"\sounds\cop_long.ogg", 2.0, 1};
 		titles[] = {};
 	};
 

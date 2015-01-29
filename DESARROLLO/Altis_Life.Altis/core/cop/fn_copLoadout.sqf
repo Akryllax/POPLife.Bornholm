@@ -181,6 +181,10 @@ if(_lvl == 6) then
 		player addItem "SmokeShell";
 		player addItem "SmokeShell";
 		player addItem "SmokeShell";
+		player addMagazine "30Rnd_9x21_Mag";
+		player addMagazine "30Rnd_9x21_Mag";
+		player addMagazine "30Rnd_9x21_Mag";
+		player addWeapon "hgun_P07_snds_F";
 		player addItem "Rangefinder";
 		player assignItem "Rangefinder";
 		player additem "Medikit";
