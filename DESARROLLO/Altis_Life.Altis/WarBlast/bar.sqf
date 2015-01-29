@@ -20,4 +20,4 @@ while {_pl distance _vip < 200} do
 		   life_sonido = false;
 	};
   };
-}:
+};
