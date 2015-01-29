@@ -165,12 +165,6 @@ class CfgFunctions
 			class rem {};
 			class remExec {};
 		};
-		
-		class Racing
-		{
-			file = "\life_server\Functions\AKR\Racing";
-			class raceProcessRequest {};
-		};
 	};
 };
 class CfgVehicles

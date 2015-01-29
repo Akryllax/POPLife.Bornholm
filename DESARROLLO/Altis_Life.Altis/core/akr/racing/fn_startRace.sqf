@@ -107,7 +107,7 @@ _raceID spawn {
 		_bronce = (_raceConfig select 4);
 	
 		while {inRace} do {
-			hint parseText format ["<t size = '1' align='center' font='TahomaB'>Tiempo: </t><br/><t size='1.5'>%1</t><br/><t align='left' color='#E6D525' font='TahomaB'>Oro: %2 (%3)</t><br/><t align='left' color='#C9C9C9' font='TahomaB'>Plata: %4 (%5)</t><br/><t align='left' color='#965D0C' font='TahomaB'>Bronce: %6 (%7)</t>", [time - raceStartTime] call BIS_fnc_timeToString, _oro select 1, _oro select 0, _plata select 1, _plata select 0,_bronce select 1, _bronce select 0];
+			hintSilent parseText format ["<t size = '1' align='center' font='TahomaB'>Tiempo: </t><br/><t size='1.5'>%1</t><br/><t align='left' color='#E6D525' font='TahomaB'>Oro: %2 (%3)</t><br/><t align='left' color='#C9C9C9' font='TahomaB'>Plata: %4 (%5)</t><br/><t align='left' color='#965D0C' font='TahomaB'>Bronce: %6 (%7)</t>", [time - raceStartTime] call BIS_fnc_timeToString, _oro select 1, _oro select 0, _plata select 1, _plata select 0,_bronce select 1, _bronce select 0];
 			sleep 0.02;
 		};
 	};

@@ -44,9 +44,6 @@ while { !(getMarkerPos _mrkrName isEqualTo [0,0,0]) } do {
 	
 	_locName = _mrkrName + "_cur";
 	currentTrack pushBack _locName;
-	_locName = createMarkerLocal [_locName, getMarkerPos _mrkrName];
-	_locName setMarkerType "hd_dot";
-	_locName setMarkerText (format["Waiypoint %1", _i]);
 	
 	diag_log format["Added waypoint ""%1"" (%2): %3", _locName, _i, getMarkerPos _locName];
 	
