@@ -84,7 +84,7 @@ _removeFromCleanup = {
 
 while{true} do {
 
-	sleep 10;
+	sleep 25;
     	
 	{	
 	    _unit = _x;

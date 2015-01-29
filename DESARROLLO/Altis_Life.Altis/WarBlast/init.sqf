@@ -19,7 +19,7 @@ if(isServer) then {
 		3*60 // seconds to delete dropped smokes/chemlights (0 means don't delete)
 ] execVM "WarBlast\repetitive_cleanup.sqf";
 
-//[] execVM "WarBlast\Cleanup1\init.sqf";
+[] execVM "WarBlast\Cleanup1\init.sqf";
 
 };
 
