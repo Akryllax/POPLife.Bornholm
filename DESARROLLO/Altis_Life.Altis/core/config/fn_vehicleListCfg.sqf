@@ -47,7 +47,7 @@ switch (_shop) do
 			["C_Offroad_01_F",12500 * Desc],
 			["C_SUV_01_F",35000 * Desc],
 			["C_Van_01_transport_F",40000 * Desc],
-			["C_Hatchback_01_sport_F",50000 * Desc]
+			["C_Hatchback_01_sport_F",60000 * Desc]
 		];
 	};
 
@@ -57,11 +57,11 @@ switch (_shop) do
 		[
 			["C_Van_01_box_F",60000 * Desc],
 			["I_Truck_02_transport_F",75000 * Desc],
-			["I_Truck_02_covered_F",100000 * Desc],
-			["B_Truck_01_transport_F",275000 * Desc],
+			["I_Truck_02_covered_F",200000 * Desc],
+			["B_Truck_01_transport_F",900000 * Desc],
 			["O_Truck_03_transport_F",200000 * Desc],
 			["O_Truck_03_covered_F",250000 * Desc],
-			["B_Truck_01_box_F",350000 * Desc],
+			["B_Truck_01_box_F",1200000 * Desc],
 			["O_Truck_03_device_F",450000 * Desc]
 		];
 		if(license_civ_rebel) then {
@@ -80,14 +80,14 @@ switch (_shop) do
 		_return =
 		[
 			["B_Quadbike_01_F",2500 * Desc],
-			["B_G_Offroad_01_F",15000 * Desc],
-			["O_MRAP_02_F",150000 * Desc],
-			["B_Heli_Light_01_F",325000 * Desc]
+			["B_G_Offroad_01_F",25000 * Desc],
+			["O_MRAP_02_F",2900000 * Desc],
+			["B_Heli_Light_01_F",450000 * Desc]
 		];
 
 		if(license_civ_rebel) then
 		{
-			_return pushBack ["O_MRAP_02_F",2900000 * Desc];
+			_return pushBack ["O_MRAP_02_hmg_F",6900000 * Desc];
 			_return pushBack ["B_G_Offroad_01_armed_F",1200000 * Desc];
 		};
 	};
@@ -95,7 +95,7 @@ switch (_shop) do
 	case "cop_car":
 	{
 		_return pushBack ["B_Quadbike_01_F",1000 * Desc];
-		_return pushBack ["C_Hatchback_01_sport_F",85000 * Desc];
+		_return pushBack ["C_Hatchback_01_sport_F",50000 * Desc];
 		_return pushBack ["C_Offroad_01_F",25000 * Desc];
 		_return pushBack ["C_SUV_01_F",35000 * Desc];
 
