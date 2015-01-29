@@ -107,7 +107,7 @@ switch (_code) do
 	{
 		if (!_shift && !_alt && !_ctrlKey  && (vehicle player != player)) then {
 			[] call War_fnc_abrelatas;
-		};		
+		};
 	};
 	//Restraining (Shift + R)
 	case 19:
@@ -194,7 +194,7 @@ switch (_code) do
 					_handled = true;
 				};
 			};
-		};		
+		};
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
 	//Y Player Menu
@@ -236,7 +236,7 @@ switch (_code) do
 					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
 				};
 			};
-		};		
+		};
 	};
 	//U Key
 	case 22:
@@ -286,7 +286,7 @@ switch (_code) do
 		};
 	};
 	//rendirse shift + 3
-	case 4: 
+	case 4:
 	{
 		if(_shift) then {_handled = true;};
 
@@ -308,14 +308,14 @@ switch (_code) do
 
 	case 59:// F1 - TAPONES
 	{
-		
+
 		if (soundVolume == 0.05) then {
 			0.05 fadeSound 1;
 			hint "Te has quitado los tapones";
 		} else {
 			0.05 fadeSound 0.05;
 			hint "Te has puesto los tapones";
-		};		
+		};
 	};
 	case 60:
 	{
@@ -324,13 +324,13 @@ switch (_code) do
 		};
 	};
 	case 61:
-	{	
+	{
 		if (vehicle player == player) then {
 			[] call ROS_fnc_fiesta;
 		};
 	};
 	case 62:
-	{	
+	{
 		if (playerSide == civilian && (vehicle player == player)) then {
 			[] call ROS_fnc_protestar;
 		};

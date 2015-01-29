@@ -12,7 +12,8 @@ if(isNull _unit) exitWith {}; //if not the thief get bent
 
 
  //nivel de poli
- if(__GETC__(life_coplevel) < 2) exitWith { hint "No eres poli o rango insuficiente";[] spawn { sleep 5;hint "";} };
+  if(playerSide != west) exitWith { hint "No eres poli!"; []spawn { sleep 5;hint "";} };
+ if(__GETC__(life_coplevel) < 2) exitWith { hint "No tienes rango suficiente";[] spawn { sleep 5;hint "";} };
 
 
 //equipar clase poli
