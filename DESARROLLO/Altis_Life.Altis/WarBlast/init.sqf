@@ -4,7 +4,7 @@
 [] execVM "WarBlast\IgiLoad\IgiLoadInit.sqf";
 
 
-[] execVM "WarBlast\Cleanup1\init.sqf";
+
 
 if(isServer) then {
 

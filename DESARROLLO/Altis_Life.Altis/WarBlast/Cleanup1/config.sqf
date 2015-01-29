@@ -19,7 +19,7 @@ pvpfw_cleanUp_dontCleanUpAroundDistance = 500; // Dont clean if the vehicle is i
 //////////////////////////////
 // Clean destroyed vehicles //
 //////////////////////////////
-pvpfw_cleanUp_vehicleRadius = 250; // Destroyed vehicles cleanup timer will start if no unit is closer than this
+pvpfw_cleanUp_vehicleRadius = 50; // Destroyed vehicles cleanup timer will start if no unit is closer than this
 pvpfw_cleanUp_vehicleTimer = 20;
 
 //////////////////
@@ -43,8 +43,8 @@ pvpfw_cleanUp_ruinRadius = 10; // Destroyed Buildings will be deleted if no enti
 
 // Advanced
 //#define __pvpfw_cleanUp_cleanExtra //comment out this line if you dont need the objects below to be checked
-pvpfw_cleanUp_chemLightTimer = 300; //effectively overrides the max "timeToLive" for the chemlight ammo object which is 900 seconds by default
-pvpfw_cleanUp_pipeBombTimer = 1800; //effectively sets a "timeToLive" limit on all explosives, that can be triggered remotely
+pvpfw_cleanUp_chemLightTimer = 60; //effectively overrides the max "timeToLive" for the chemlight ammo object which is 900 seconds by default
+pvpfw_cleanUp_pipeBombTimer = 60; //effectively sets a "timeToLive" limit on all explosives, that can be triggered remotely
 
 //////////////////////
 // Custom condition //
