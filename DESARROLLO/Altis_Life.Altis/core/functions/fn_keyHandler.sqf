@@ -47,18 +47,7 @@ if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 switch (_code) do
 {
 
-	//Roleo con la tecla que esta a la izquierda de la Z.
-	case 86:
-	{
-		if(!life_action_inUse) then {
-			switch (playerSide) do
-			{
-				case west: {if(!visibleMap) then {  [] spawn QUICK_fnc_roleModeCops;};};
-				case independent: {if(!visibleMap) then {                           }};
-				case civilian: {if(!visibleMap) then {[] spawn QUICK_fnc_roleMode;};};
-			};
-		};
-	};
+
 
 	//Map Key
 	case _mapKey:
