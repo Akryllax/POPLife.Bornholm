@@ -10,7 +10,10 @@ disabledAI = true;
 disableChannels[]={0,1,2};
 enableDebugConsole = 1;
 respawnDialog = 0;
-
+//Cuando se tiren al agua las armas 0 desactivado
+enableItemsDropping = 0;
+//Control avanzado de los helicopteros para joder un poco
+forceRotorLibSimulation = 1;
 
 class Header
 {
@@ -19,10 +22,10 @@ class Header
 	maxPlayers = 144;
 };
 
-wreckLimit = 3;
+wreckLimit = 1;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 61;
-corpseLimit = 20;
+corpseLimit = 5;
 corpseRemovalMinTime = 300;
 corpseRemovalMaxTime = 350;
 
