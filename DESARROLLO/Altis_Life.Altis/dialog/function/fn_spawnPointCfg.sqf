@@ -16,7 +16,7 @@ switch (_side) do
 {
 	case west:
 	{
-		_return = [			
+		_return = [
 			["cop_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
 			["cop_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
 			["cop_spawn_3","Athira","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
@@ -34,14 +34,13 @@ switch (_side) do
 		_return = [
 			["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 
 		if(license_civ_rebel) then {
 			_return = _return + [["reb_1","Puesto rebelde 1","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
 			_return = _return + [["reb_2","Puesto rebelde 2","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
-			_return = _return + [["reb_3","Puesto rebelde 3","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]];			
+			_return = _return + [["reb_3","Puesto rebelde 3","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]];
 		};
 
 
