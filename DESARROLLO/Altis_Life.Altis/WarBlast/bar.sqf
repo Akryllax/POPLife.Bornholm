@@ -19,8 +19,4 @@ while {_pl distance _vip < 200} do
 		   sleep 40;
 		   life_sonido = false;
 	};
-<<<<<<< HEAD
   };
-=======
->>>>>>> parent of e4112c9... go
-};

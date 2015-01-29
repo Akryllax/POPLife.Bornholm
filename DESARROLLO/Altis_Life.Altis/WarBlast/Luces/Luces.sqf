@@ -4,7 +4,6 @@
    Descripcion: Luces dinamicas
 */
 
-if (isServer) then {
 _luz1 = "#lightpoint" createVehicle getpos Luz1;
 _luz1 setLightBrightness 0.2;
 _luz1 setLightColor[0, 0, 0];
@@ -38,13 +37,10 @@ _luz6 setLightAmbient[0.7, 0.7, 0.7];
 _luz6 setLightColor[229,22,22];
 _luz6 lightAttachObject [Luz6, [0,0,1]];
 */
-<<<<<<< HEAD
 
-
-=======
 if (!isServer) then
 {
->>>>>>> parent of e4112c9... go
+
 	while {true} do
 	{
 	       _color = floor (Random 6);
