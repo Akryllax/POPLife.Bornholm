@@ -11,21 +11,21 @@
 ///////////////////////////////
 pvpfw_cleanup_cleanAbandonded = true; // true or false, depending on wether you want abandoned vehicles to be deleted
 pvpfw_cleanup_abandonedFromFaction = ["BLU_F"]; // Vehicles from these factions will be cleaned up
-pvpfw_cleanUp_abandonRadius = 600; // If no unit is closer than the specified distance, the removal countdown will start
-pvpfw_cleanup_abandondTimer = 180; // The vehicle will be removed after the specified time
+pvpfw_cleanUp_abandonRadius = 800; // If no unit is closer than the specified distance, the removal countdown will start
+pvpfw_cleanup_abandondTimer = 300; // The vehicle will be removed after the specified time
 pvpfw_cleanUp_dontCleanUpAround = ["clean_1","clean_2","clean_3","clean_4","clean_5"]; //do not clean abandoned vehicles around these markers
 pvpfw_cleanUp_dontCleanUpAroundDistance = 500; // Dont clean if the vehicle is in this range of one of the above markers.
 
 //////////////////////////////
 // Clean destroyed vehicles //
 //////////////////////////////
-pvpfw_cleanUp_vehicleRadius = 500; // Destroyed vehicles cleanup timer will start if no unit is closer than this
-pvpfw_cleanUp_vehicleTimer = 60;
+pvpfw_cleanUp_vehicleRadius = 250; // Destroyed vehicles cleanup timer will start if no unit is closer than this
+pvpfw_cleanUp_vehicleTimer = 20;
 
 //////////////////
 // Clean bodies //
 //////////////////
-pvpfw_cleanUp_bodyTimer = 100; // Bodies will be removed after the specified amount of seconds
+pvpfw_cleanUp_bodyTimer = 35; // Bodies will be removed after the specified amount of seconds
 
 /////////////////////////////////
 //     Clean weaponholders     //
