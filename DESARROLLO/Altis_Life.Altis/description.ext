@@ -12,8 +12,8 @@ enableDebugConsole = 1;
 respawnDialog = 0;
 //Cuando se tiren al agua las armas 0 desactivado
 enableItemsDropping = 0;
-//Control avanzado de los helicopteros para joder un poco
-forceRotorLibSimulation = 1;
+//Control avanzado de los helicopteros para joder un poco No gracias
+//forceRotorLibSimulation = 1;
 
 class Header
 {
