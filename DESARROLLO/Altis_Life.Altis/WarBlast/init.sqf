@@ -6,7 +6,7 @@
 
 [] execVM "WarBlast\Cleanup1\init.sqf";
 
-if(isServer) then { 
+if(isServer) then {
 
 //activar cleanup en el servidor
 
@@ -21,7 +21,7 @@ if(isServer) then {
 <<<<<<< HEAD
 */
 [] execVM "WarBlast\Cleanup1\init.sqf";
-=======
+
 };
->>>>>>> origin/master
+
 
