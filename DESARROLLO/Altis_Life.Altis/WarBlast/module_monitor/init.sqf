@@ -16,10 +16,10 @@ if (!isServer) exitWith{};
 
 private["_nextSecond","_logInterval","_fps","_fpsMin","_playersNumber","_dumpEachX","_i"];
 
-_handle_config = [] execVM "module_performance\module_monitor\config.sqf";
+_handle_config = [] execVM "WarBlast\module_monitor\config.sqf";
 waitUntil{scriptDone _handle_config};
 
-pvpfw_perf_monitorResultsToRPT = compile preProcessFileLineNumbers "module_performance\module_monitor\dumpPerformanceArrays.sqf";
+pvpfw_perf_monitorResultsToRPT = compile preProcessFileLineNumbers "WarBlast\module_monitor\dumpPerformanceArrays.sqf";
 
 _logInterval = 10; //in seconds
 _dumpEachX = 60 / _logInterval; //dump results to the array once a minute
@@ -55,16 +55,16 @@ while{true}do{
 	_currentfps = diag_fps;
 	_currentObjectCount = count allMissionObjects "All";
 	_currentPlayers = playersNumber west + playersNumber east + playersNumber resistance + playersNumber civilian;
-	
+
 	if (pvpfw_monitor_infoOnMap) then{
 		_infoMarker setMarkerText format["Server: fps %1 | players %2 | objects %3",([_currentfps,1] call BIS_fnc_cutDecimals),_currentPlayers,_currentObjectCount];
 	};
-	
+
 	_fps = _fps + _currentfps;
 	_fpsMin = _fpsMin + diag_fpsmin;
 	_playersNumber = _playersNumber + _currentPlayers;
 	_missionObjects = _missionObjects + _currentObjectCount;
-	 
+
 	if (_i >= _dumpEachX) then{
 		pvpfw_monitor_fpsArray set[count pvpfw_monitor_fpsArray,round (_fps / _dumpEachX)];
 		pvpfw_monitor_fpsMinArray set[count pvpfw_monitor_fpsMinArray,round (_fpsMin / _dumpEachX)];
