@@ -6,7 +6,7 @@
 _pl = getPos player;
 _vip = Luz1,Luz2,Luz3;
 
-if (!isServer) then {
+
 _luz1 = "#lightpoint" createVehicle getpos Luz1;
 _luz1 setLightBrightness 0.2;
 _luz1 setLightColor[0, 0, 0];
@@ -79,5 +79,3 @@ _luz6 lightAttachObject [Luz6, [0,0,1]];
 	     };
 	     sleep 0.3;
     };
-    sleep 1;
-};
