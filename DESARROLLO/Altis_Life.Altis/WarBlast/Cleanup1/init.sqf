@@ -136,7 +136,7 @@ while {true} do{
 				//case(_type call _ruinsCheck):{
 				case(_x isKindOf "Ruins_F"):{
 					_delay = 0.05;
-					_nearEntities = (getPosATL _x) nearEntities [["CAManBase","Air","LandVehicle"],pvpfw_cleanUp_ruinRadius];
+					_nearEntities = (getPosATL _x) nearEntities [["CAManBase","LandVehicle"],pvpfw_cleanUp_ruinRadius];
 					if (count _nearEntities == 0) then{
 						deleteVehicle _x;
 						diag_log format["#PVPFW module_cleanup: deleting destroyed building. type = %1",_type];
