@@ -3,8 +3,10 @@
    Autor: WarBlast
    Descripcion: Luces dinamicas
 */
+_pl = getPos player;
+_vip = Luz1,Luz2,Luz3;
 
-if (isServer) then {
+if (!isServer) then {
 _luz1 = "#lightpoint" createVehicle getpos Luz1;
 _luz1 setLightBrightness 0.2;
 _luz1 setLightColor[0, 0, 0];
@@ -40,7 +42,7 @@ _luz6 lightAttachObject [Luz6, [0,0,1]];
 */
 
 
-	while {true} do
+	while {_pl distance _vip < 200} do
 	{
 	       _color = floor (Random 6);
 	       _color = round _color;
@@ -77,4 +79,5 @@ _luz6 lightAttachObject [Luz6, [0,0,1]];
 	     };
 	     sleep 0.3;
     };
+    sleep 1;
 };
