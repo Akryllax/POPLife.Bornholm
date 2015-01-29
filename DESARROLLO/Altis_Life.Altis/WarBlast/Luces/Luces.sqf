@@ -38,8 +38,13 @@ _luz6 setLightAmbient[0.7, 0.7, 0.7];
 _luz6 setLightColor[229,22,22];
 _luz6 lightAttachObject [Luz6, [0,0,1]];
 */
+<<<<<<< HEAD
 
 
+=======
+if (!isServer) then
+{
+>>>>>>> parent of e4112c9... go
 	while {true} do
 	{
 	       _color = floor (Random 6);
