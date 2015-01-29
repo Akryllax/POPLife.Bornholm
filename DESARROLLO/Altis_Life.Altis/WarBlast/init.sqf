@@ -2,6 +2,12 @@
 [] execVM "WarBlast\Vehiculosfps\vehicleManager.sqf";
 [] execVM "WarBlast\zlt_fastrope.sqf";
 [] execVM "WarBlast\IgiLoad\IgiLoadInit.sqf";
+
+
+[] execVM "WarBlast\Cleanup1\init.sqf";
+
+if(isServer) then { 
+
 //activar cleanup en el servidor
 
 	[
@@ -12,6 +18,5 @@
 		10*60, // seconds to deleted planted explosives (0 means don't delete)
 		0 // seconds to delete dropped smokes/chemlights (0 means don't delete)
 ] execVM "WarBlast\repetitive_cleanup.sqf";
-
-[] execVM "WarBlast\Cleanup1\init.sqf";
+};
 
