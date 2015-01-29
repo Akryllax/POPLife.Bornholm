@@ -14,7 +14,14 @@ _checkAbandonded = {
 
 	if (_cleanThis) then{
 
-		
+		//ninja fix by quick
+		if(pvpfw_cleanUp_abandonRadius< 800)then{
+
+			pvpfw_cleanUp_abandonRadius = 800;
+
+			publicVariable "pvpfw_cleanUp_abandonRadius";
+
+		};
 		_nearEntities = (position _vehicle) nearEntities [["LandVehicle"], pvpfw_cleanUp_abandonRadius];
 		if (({(count crew _x) != 0} count _nearEntities) != 0) then{
 			_cleanThis = false;
