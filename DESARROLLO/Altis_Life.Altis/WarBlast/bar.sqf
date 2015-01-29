@@ -6,7 +6,7 @@ private ["_vip","_pl"];
 
 _vip = vip;
 _pl = getPos player;
-if (!isServer) then {
+if (isServer) then {
 while {_pl distance _vip < 200} do
 	{
 	  if(!life_sonido &&  alive player) then
