@@ -35,23 +35,7 @@ if (pvpfw_cleanup_cleanAbandonded) then{
 
 _nearEntities = [];
 
-// Function below is obsolete... all ruins are kindOf "Ruins_F"
-/*
-_ruinsCheck = {
-	private["_array","_length","_newArray"];
-	_array = toarray _this;
-	_length = count _array;
 
-	if (_length < 7) exitWith{false};
-
-	_newArray = [];
-	for "_i" from 7 to 1 step -1 do{
-		_newArray set[count _newArray, _array select (_length - _i)];
-	};
-
-	"ruins_F" == toString _newArray
-};
-*/
 
 #ifdef __pvpfw_cleanUp_cleanExtra
 _checkTypes = "";
@@ -101,7 +85,7 @@ while {true} do{
 						};
 					}else{
 						//get an array of all entities surrounding the wreck
-						_nearEntities = (getPosATL _x) nearEntities [["CAManBase","Air","LandVehicle"],pvpfw_cleanUp_vehicleRadius];
+						_nearEntities = (getPosATL _x) nearEntities [["CAManBase","LandVehicle"],pvpfw_cleanUp_vehicleRadius];
 						//remove vehicles without crew from the list of valid vehicles, that would prevent the cleanup
 						{
 							if (count crew _x == 0) then{
