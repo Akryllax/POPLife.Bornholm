@@ -514,7 +514,15 @@ switch(_shop) do
 						["optic_NVS",nil,5000 * Desc],
 						["optic_DMS",nil,4500 * Desc],
 						["optic_SOS",nil,5000 * Desc],
-						["optic_LRPS",nil,5000 * Desc]
+						["optic_LRPS",nil,5000 * Desc],
+						["7Rnd_408_Mag",nil,500 * Desc],
+                        ["optic_LRPS",nil,8000 * Desc],
+                        ["launch_NLAW_F",nil,200000 * Desc],
+                        ["NLAW_F",nil,20000 * Desc],
+                        ["LMG_Zafir_F",nil,100000 * Desc],
+                        ["150Rnd_762x51_Box_Tracer",nil,10000 * Desc],
+                        ["srifle_GM6_F",nil,150000 * Desc],
+                        ["5Rnd_127x108_APDS_Mag",nil,5000 * Desc]
 					]
 				];
 			};
