@@ -2,12 +2,6 @@
 [] execVM "WarBlast\Vehiculosfps\vehicleManager.sqf";
 [] execVM "WarBlast\zlt_fastrope.sqf";
 [] execVM "WarBlast\IgiLoad\IgiLoadInit.sqf";
-
-
-
-
-if(isServer) then {
-
 //activar cleanup en el servidor
 
 	[
@@ -19,7 +13,9 @@ if(isServer) then {
 		0 // seconds to delete dropped smokes/chemlights (0 means don't delete)
 ] execVM "WarBlast\repetitive_cleanup.sqf";
 
-[] execVM "WarBlast\Cleanup1\init.sqf";
+if(isServer) then {
+[] execVM "WarBlast\module_cleanup\init.sqf";
+[] execVM "WarBlast\module_monitor\init.sqf";
 
 };
 
