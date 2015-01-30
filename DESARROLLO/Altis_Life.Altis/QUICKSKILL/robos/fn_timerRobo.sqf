@@ -183,33 +183,24 @@ if(_time < 1) then{
 					_coche = "C_Hatchback_01_sport_F" createVehicle position _vendedor;
 					life_vehicles pushBack _coche;
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
-					
-
 				};
 				if(_pagar_random == 1) then {
 					//sport tunning
 					_coche = "C_Offroad_01_F" createVehicle position _vendedor;
 					life_vehicles pushBack _coche;
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
-					
-
-
 				};
 				if(_pagar_random == 2) then {
 					//pickup rebelde
 					_coche = "B_G_Offroad_01_F" createVehicle position _vendedor;
 					life_vehicles pushBack _coche;
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
-					
-
 				};
 				if(_pagar_random == 3) then {
 					//artillada
 					_coche = "B_G_Offroad_01_armed_F" createVehicle position _vendedor;
 					life_vehicles pushBack _coche;
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
-					
-
 				};
 
 				if(_pagar_random == 4) then {
@@ -217,16 +208,12 @@ if(_time < 1) then{
 					_coche = "C_Van_01_box_F" createVehicle position _vendedor;
 					life_vehicles pushBack _coche;
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
-					
-
 				};
 				if(_pagar_random == 5) then {
 					//quad
-					_coche = "B_Quadbike_01_F" createVehicle position _vendedor;					
+					_coche = "B_Quadbike_01_F" createVehicle position _vendedor;
 					life_vehicles pushBack _coche;
 					[[_coche,"vehicle_info_owners",[[getPlayerUID _ladron,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
-					
-					
 				};
 
 
