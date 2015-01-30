@@ -165,7 +165,8 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","reb"],
 			["textures\COP\police_heli.jpg","cop"],
 			["textures\COP\mh9_guardia_civil_v1.jpg","cop"],
-			["textures\CIV\kitty_heli.jpg","civ"]
+			["textures\CIV\kitty_heli.jpg","civ"],
+			["textures\MED\medic_heli.jpg","med"]
 		];
 	};
 

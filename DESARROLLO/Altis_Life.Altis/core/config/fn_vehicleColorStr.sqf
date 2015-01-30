@@ -164,6 +164,7 @@ switch (_vehicle) do
 			case 14: {_color = "Nacional"};
 			case 15: {_color = "GC"};
 			case 16: {_color = "Kitty"};
+			case 17: {_color = "Medico"};
 		};
 	};
 
