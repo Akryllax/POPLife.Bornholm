@@ -43,7 +43,7 @@ switch (__GETC__(life_coplevel)) do
 				case 5: { life_paycheck = ((11000) + (_donatorlevel)); }; //GC
 				case 6: { life_paycheck = ((12000) + (_donatorlevel)); }; //GC 2
 				case 7: { life_paycheck = ((13000) + (_donatorlevel)); }; //GEO
-				case 8: { life_paycheck = ((140000) + (_donatorlevel)); }; //Capitan
+				case 8: { life_paycheck = ((14000) + (_donatorlevel)); }; //Capitan
 				default { life_paycheck = ((2000) + (_donatorlevel)); }; //default in-case anything goes tits up
 			};
 player setVariable["rank",(__GETC__(life_coplevel)),true];
