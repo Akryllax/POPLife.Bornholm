@@ -59,7 +59,10 @@ life_tiroAtiro = {
 		};
 	};
 };
-CREH = player addEventHandler ["Fired", "_this call life_tiroAtiro"];
+
+CREHFired = player addEventHandler ["Fired", "_this call life_tiroAtiro"];
+CREHOpenI = player addEventHandler["InventoryOpened", "closeDialog 0; true"];
+CREHDropI = player addEventHandler ["InventoryClosed", { deleteVehicle (_this select 1); }];
 
 [] spawn {
 
@@ -114,7 +117,11 @@ CREH = player addEventHandler ["Fired", "_this call life_tiroAtiro"];
 	removeBackpack player;
 	player removeWeapon (primaryWeapon player);
 	player removeWeapon (handgunWeapon player);
-	player removeEventHandler ["Fired", CREH];
+	
+	player removeEventHandler ["Fired", CREHFired];
+	player removeEventHandler ["InventoryOpened", CREHOpenI];
+	player removeEventHandler ["InventoryClosed", CREHDropI];
+
 	player forceAddUniform "U_B_CombatUniform_mcam";
 };
 
