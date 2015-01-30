@@ -4,7 +4,7 @@ Script done by Icaruk, if you want to use it, you just have to ask me permission
 */
 
 
-if (isNil {robo}) exitWith {hint "Que raro, la caja fuerte que guarda los ahorros de todos los ciudadanos de Altis esta cerrada...";};
+if (isNil {robo}) exitWith {hint "Que raro, la caja fuerte que guarda los ahorros del casino esta cerrada...";};
 if (!isNil {robo}) then {
 	if (robo == 1) then {
 		robo = 2;
@@ -17,7 +17,7 @@ if (!isNil {robo}) then {
 		life_cash = life_cash + deposito;
 		
 	
-		hint format ["Has robado %1$ del banco central", deposito];
+		hint format ["Has robado %1$ del casino", deposito];
 		cajaFuerte setPos (getMarkerPos "");
 		sleep 3;
 		

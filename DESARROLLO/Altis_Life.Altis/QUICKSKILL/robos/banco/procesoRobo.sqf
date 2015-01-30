@@ -15,7 +15,7 @@ while {true} do {
 			publicVariable "robo";
 		};
 		if (!isNil {cancelado}) then {
-			if (cancelado == 1) exitWith {hint "El robo al banco central ha sido interrumpido."};
+			if (cancelado == 1) exitWith {hint "El robo al casino ha sido interrumpido."};
 			[] execVM "QUICKSKILL\robos\banco\reset.sqf";
 		};
 	};

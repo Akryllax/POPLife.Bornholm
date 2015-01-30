@@ -11,5 +11,5 @@ if (porcentaje == 0) then {
 
 if (porcentaje > 0) then {
 	null = [player] execVM "QUICKSKILL\robos\banco\desencriptandoMenu.sqf";
-	[[[1,2],"¡¡¡ ESTAN INTENTANDO ACCEDER AL SISTEMA DEL BANCO CENTRAL !!!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[[1,2],"¡¡¡ ESTAN INTENTANDO ACCEDER AL SISTEMA DEL CASINO !!!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 };
