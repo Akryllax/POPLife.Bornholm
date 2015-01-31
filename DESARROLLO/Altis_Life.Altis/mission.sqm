@@ -3945,7 +3945,7 @@ class Mission
 			vehicle="Land_Laptop_unfolded_F";
 			skill=0.60000002;
 			text="bar";
-			init="bar=[bar, ""bar"", 42 , 10000] execvm ""War_loop.sqf"";";
+			init="bar=[bar, ""bar"", 42 , 10000] execvm ""WarBlast\Musica\War_loop.sqf"";";
 		};
 		class Item36
 		{
