@@ -1,4 +1,4 @@
-Warversion=12;
+version=12;
 class Mission
 {
 	addOns[]=
