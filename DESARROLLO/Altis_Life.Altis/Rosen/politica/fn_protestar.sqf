@@ -1,3 +1,4 @@
+
 /*
 	Archivo: fn_protestar.sqf
 	Autor Rosen
@@ -5,7 +6,7 @@
 	Descripción: Saca un cartel de protesta
 	
 */
-
+/*
 private ["_sign","_time"];
 
 [] spawn {
@@ -26,3 +27,4 @@ private ["_sign","_time"];
 	disableUserInput false;
 	life_protestando = false;
 };
+*/

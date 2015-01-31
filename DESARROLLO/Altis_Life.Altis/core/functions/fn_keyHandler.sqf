@@ -306,24 +306,24 @@ switch (_code) do
 			hint "Te has puesto los tapones";
 		};
 	};
-	case 60:
+	/*case 60:
 	{
 		if (vehicle player == player) then {
 			[] call ROS_fnc_silla;
 		};
-	};
+	};*/
 	case 61:
 	{
 		if (vehicle player == player) then {
 			[] call ROS_fnc_fiesta;
 		};
 	};
-	case 62:
+	/*case 62:
 	{
 		if (playerSide == civilian && (vehicle player == player)) then {
 			[] call ROS_fnc_protestar;
 		};
-	};
+	};*/
 };
 
 _handled;

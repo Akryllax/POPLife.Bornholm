@@ -5,7 +5,7 @@
 	Descripción: Saca una silla para sentarse
 	
 */
-
+/*
 private ["_silla","_direc","_tiempo"];
 [] spawn {
 	if (life_sentarse) exitWith {};
@@ -28,4 +28,4 @@ private ["_silla","_direc","_tiempo"];
 	deleteVehicle _silla;
 	player switchMove "";
 	life_sentarse = false;
-};
+};*/
