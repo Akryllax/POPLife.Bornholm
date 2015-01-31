@@ -141,7 +141,7 @@ if(_destino=="desembarcoDrogas_5")then{
 };
 
 
-
+_pos = getMarkerPos _destino;
 _markerID = format["marker_%1",floor(random 1000)];
 _marker = createMarkerLocal [ _markerID, _pos];
 _marker setMarkerColorLocal "ColorGreen";
