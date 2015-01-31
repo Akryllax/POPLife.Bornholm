@@ -1,0 +1,2 @@
+[player] execVM "scripts\groupsMenu\initGroups.sqf";
+GRPMNU_joinGroup = _caller addAction["<t color='#EB7FAF'>Join Group</t>", "scripts\groupsMenu\joinGroup.sqf", nil, -998, false, false, "", "(cursorTarget distance _this) < 4 && (count units group _this) == 1 && side cursorTarget == side _this"];

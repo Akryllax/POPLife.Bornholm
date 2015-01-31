@@ -1,0 +1,1 @@
+VAR_DEFAULT(CTF_disableCommandMode,true) ;
