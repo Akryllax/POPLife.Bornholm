@@ -552,6 +552,15 @@ class Quickskill
 		class transportarDrogaMar{};
 		
 	};
+
+	class Barrios
+	{
+		file = "QUICKSKILL\barrios";
+		class capturarBarrio {};
+		class barrioCapturado{};
+		
+	};
+
 };
 class Rosen {
 	tag = "ROS";
