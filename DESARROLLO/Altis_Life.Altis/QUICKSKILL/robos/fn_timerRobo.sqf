@@ -25,7 +25,7 @@ if(isNull _vendedor) exitWith{ hint "Error, _vendedor is null"};
 if(isNull _ladron) exitWith{ hint "Error, _ladron is null"};
 if(_dinero < 0) exitWith{ hint "Error, _dinero is null"};
 if(_metros_cancelar_robo < 0) exitWith{ hint "Error, _metros_cancelar_robo is null"};
-if!(count _itemsRecompensa > 0) exitWith{ hint "Error, _itemsRecompensa is null"};
+
 
 _metros = _vendedor distance _ladron;
 
