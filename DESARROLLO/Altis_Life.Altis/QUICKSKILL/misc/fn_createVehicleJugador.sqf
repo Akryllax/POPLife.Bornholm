@@ -5,7 +5,7 @@
 	Description:
 	crear veiculo para jugador como si lo hubiera comprado
 */
-private["_className","_colorIndex","_spawnAt","_vehicle"];
+private["_vehicleClass","_colorIndex","_spawnAt","_vehicle"];
 
 //params
 _vehicleClass = _this select 0;
