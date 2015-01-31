@@ -129,6 +129,18 @@ life_vehicles pushBack _coche;
 _destinoRandom = "desembarcoDrogas_" +  str (round random 5 );
 _destino =_destinoRandom;
 
+//este es un fix penoso, k os den!
+if(_destino=="desembarcoDrogas_0")then{
+
+	_destino="desembarcoDrogas_1";
+};
+
+if(_destino=="desembarcoDrogas_5")then{
+
+	_destino="desembarcoDrogas_4";
+};
+
+
 
 	_markerID = format["marker_%1",floor(random 1000)];
 _marker = createMarkerLocal [ _markerID, _pos];
