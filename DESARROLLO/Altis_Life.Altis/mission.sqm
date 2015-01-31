@@ -3493,7 +3493,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1317;
+		items=1316;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -3945,7 +3945,7 @@ class Mission
 			vehicle="Land_Laptop_unfolded_F";
 			skill=0.60000002;
 			text="bar";
-			init="bar=[bar, ""bar"", 42 , 10000] execvm ""War_loop.sqf"";";
+			init="this enableSimulation false; this allowDamage false; bar=[bar, ""bar"", 42 , 10000] execvm ""WarBlast\Musica\War_loop.sqf"";";
 		};
 		class Item36
 		{
@@ -17051,73 +17051,71 @@ class Mission
 		};
 		class Item1291
 		{
-			position[]={5835.7446,26.252991,15269.754};
-			azimut=668.026;
-			offsetY=21.200001;
-			id=1449;
-			side="EMPTY";
-			vehicle="Land_InfoStand_V1_F";
-			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Joyeria"",QUICK_fnc_robosHandler,[""Joyeria"",350,50000 + round random 130000,50,[""goldbar""],3,""no"",""no""]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
-		};
-		class Item1292
-		{
 			position[]={5469.396,27.299999,15003.298};
 			azimut=-51.386734;
 			special="NONE";
-			id=1450;
+			id=1449;
 			side="EMPTY";
 			vehicle="Land_GH_MainBuilding_middle_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false;";
 		};
-		class Item1293
+		class Item1292
 		{
 			position[]={5469.4614,27.299999,15003.331};
 			azimut=-51.571716;
 			special="NONE";
-			id=1451;
+			id=1450;
 			side="EMPTY";
 			vehicle="Land_GH_MainBuilding_right_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false;";
 		};
-		class Item1294
+		class Item1293
 		{
 			position[]={5469.3257,27.299999,15003.361};
 			azimut=-51.386734;
 			special="NONE";
-			id=1452;
+			id=1451;
 			side="EMPTY";
 			vehicle="Land_GH_MainBuilding_left_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false;";
 		};
-		class Item1295
+		class Item1294
 		{
 			position[]={5469.3848,27.299999,15003.377};
 			azimut=-51.188934;
 			special="NONE";
-			id=1453;
+			id=1452;
 			side="EMPTY";
 			vehicle="Land_GH_MainBuilding_entry_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false;";
 		};
-		class Item1296
+		class Item1295
 		{
 			position[]={5464.894,27.299999,15005.916};
 			azimut=39.550751;
-			id=1454;
+			id=1453;
 			side="EMPTY";
 			vehicle="Land_HBarrier_1_F";
 			skill=0.60000002;
 			text="luz_casino_5";
 		};
-		class Item1297
+		class Item1296
 		{
 			position[]={5465.8652,27.299999,15007.102};
 			azimut=39.550797;
+			id=1454;
+			side="EMPTY";
+			vehicle="Land_HBarrier_1_F";
+			skill=0.60000002;
+		};
+		class Item1297
+		{
+			position[]={5471.9434,27.299999,14978.153};
+			azimut=54.284237;
 			id=1455;
 			side="EMPTY";
 			vehicle="Land_HBarrier_1_F";
@@ -17125,7 +17123,7 @@ class Mission
 		};
 		class Item1298
 		{
-			position[]={5471.9434,27.299999,14978.153};
+			position[]={5473.3052,27.299999,14979.046};
 			azimut=54.284237;
 			id=1456;
 			side="EMPTY";
@@ -17134,7 +17132,7 @@ class Mission
 		};
 		class Item1299
 		{
-			position[]={5473.3052,27.299999,14979.046};
+			position[]={5474.6821,27.299999,14980.039};
 			azimut=54.284237;
 			id=1457;
 			side="EMPTY";
@@ -17143,7 +17141,7 @@ class Mission
 		};
 		class Item1300
 		{
-			position[]={5474.6821,27.299999,14980.039};
+			position[]={5476.0557,27.299999,14980.945};
 			azimut=54.284237;
 			id=1458;
 			side="EMPTY";
@@ -17152,7 +17150,7 @@ class Mission
 		};
 		class Item1301
 		{
-			position[]={5476.0557,27.299999,14980.945};
+			position[]={5477.3184,27.299999,14981.934};
 			azimut=54.284237;
 			id=1459;
 			side="EMPTY";
@@ -17161,7 +17159,7 @@ class Mission
 		};
 		class Item1302
 		{
-			position[]={5477.3184,27.299999,14981.934};
+			position[]={5478.7197,27.299999,14982.954};
 			azimut=54.284237;
 			id=1460;
 			side="EMPTY";
@@ -17170,7 +17168,7 @@ class Mission
 		};
 		class Item1303
 		{
-			position[]={5478.7197,27.299999,14982.954};
+			position[]={5480.1587,27.299999,14983.909};
 			azimut=54.284237;
 			id=1461;
 			side="EMPTY";
@@ -17179,7 +17177,7 @@ class Mission
 		};
 		class Item1304
 		{
-			position[]={5480.1587,27.299999,14983.909};
+			position[]={5481.5034,27.299999,14984.864};
 			azimut=54.284237;
 			id=1462;
 			side="EMPTY";
@@ -17188,8 +17186,8 @@ class Mission
 		};
 		class Item1305
 		{
-			position[]={5481.5034,27.299999,14984.864};
-			azimut=54.284237;
+			position[]={5489.3853,27.299999,14994.883};
+			azimut=26.531683;
 			id=1463;
 			side="EMPTY";
 			vehicle="Land_HBarrier_1_F";
@@ -17197,7 +17195,7 @@ class Mission
 		};
 		class Item1306
 		{
-			position[]={5489.3853,27.299999,14994.883};
+			position[]={5490.1768,27.299999,14996.253};
 			azimut=26.531683;
 			id=1464;
 			side="EMPTY";
@@ -17206,7 +17204,7 @@ class Mission
 		};
 		class Item1307
 		{
-			position[]={5490.1768,27.299999,14996.253};
+			position[]={5490.9282,27.299999,14997.807};
 			azimut=26.531683;
 			id=1465;
 			side="EMPTY";
@@ -17215,7 +17213,7 @@ class Mission
 		};
 		class Item1308
 		{
-			position[]={5490.9282,27.299999,14997.807};
+			position[]={5491.7402,27.299999,14999.197};
 			azimut=26.531683;
 			id=1466;
 			side="EMPTY";
@@ -17224,7 +17222,7 @@ class Mission
 		};
 		class Item1309
 		{
-			position[]={5491.7402,27.299999,14999.197};
+			position[]={5491.6104,27.299999,15001.125};
 			azimut=26.531683;
 			id=1467;
 			side="EMPTY";
@@ -17233,75 +17231,66 @@ class Mission
 		};
 		class Item1310
 		{
-			position[]={5491.6104,27.299999,15001.125};
-			azimut=26.531683;
-			id=1468;
-			side="EMPTY";
-			vehicle="Land_HBarrier_1_F";
-			skill=0.60000002;
-		};
-		class Item1311
-		{
 			position[]={5487.1445,27.299999,15005.074};
 			azimut=-145.59674;
 			offsetY=6;
-			id=1469;
+			id=1468;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
 			text="hotel";
 			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Joyeria"",QUICK_fnc_robosHandler,[""Hotel"",350,50000 + round random 130000,50,[""goldbar"",""goldbar"",""goldbar""],3,""no"",""no""]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
 		};
-		class Item1312
+		class Item1311
 		{
 			position[]={5473.5967,27.299999,14980.438};
+			azimut=-145.59674;
+			offsetY=6;
+			id=1469;
+			side="EMPTY";
+			vehicle="Land_Camping_Light_F";
+			skill=0.60000002;
+			text="luz_casino_1";
+		};
+		class Item1312
+		{
+			position[]={5492.3804,27.299999,15003.505};
 			azimut=-145.59674;
 			offsetY=6;
 			id=1470;
 			side="EMPTY";
 			vehicle="Land_Camping_Light_F";
 			skill=0.60000002;
-			text="luz_casino_1";
+			text="luz_casino_2";
 		};
 		class Item1313
 		{
-			position[]={5492.3804,27.299999,15003.505};
+			position[]={5449.8345,27.299999,14998.442};
 			azimut=-145.59674;
 			offsetY=6;
 			id=1471;
 			side="EMPTY";
 			vehicle="Land_Camping_Light_F";
 			skill=0.60000002;
-			text="luz_casino_2";
+			text="luz_casino_4";
 		};
 		class Item1314
 		{
-			position[]={5449.8345,27.299999,14998.442};
+			position[]={5468.8936,27.299999,15022.685};
 			azimut=-145.59674;
 			offsetY=6;
 			id=1472;
 			side="EMPTY";
 			vehicle="Land_Camping_Light_F";
 			skill=0.60000002;
-			text="luz_casino_4";
-		};
-		class Item1315
-		{
-			position[]={5468.8936,27.299999,15022.685};
-			azimut=-145.59674;
-			offsetY=6;
-			id=1473;
-			side="EMPTY";
-			vehicle="Land_Camping_Light_F";
-			skill=0.60000002;
 			text="luz_casino_3";
 		};
-		class Item1316
+		class Item1315
 		{
 			position[]={6156.3462,43,16209.994};
 			azimut=360.10001;
 			offsetY=0.2;
-			id=1474;
+			id=1473;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
@@ -17310,7 +17299,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=392;
+		items=391;
 		class Item0
 		{
 			position[]={20782.402,37.286591,16680.141};
@@ -20366,21 +20355,12 @@ class Mission
 		};
 		class Item389
 		{
-			position[]={5836.3667,26.257631,15270.027};
-			name="Robo_joyas_1";
-			text="Robo Joyeria";
-			type="mil_circle";
-			colorName="ColorUNKNOWN";
-			angle=7.4655843;
-		};
-		class Item390
-		{
 			position[]={3658.0959,7.1720672,13393.746};
 			name="air_g_1_1";
 			type="Empty";
 			angle=238.96944;
 		};
-		class Item391
+		class Item390
 		{
 			position[]={5486.9126,27.299999,15004.693};
 			name="Robo";
