@@ -150,7 +150,7 @@ _marker setMarkerTypeLocal "mil_warning";
 
 
 	 		
-_scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrabajoTransportarDrogaMar;
+_scriptHandler = [_marker,_coche,_jugador,_destino] spawn QUICK_timerTrabajoTransportarDrogaMar;
 
 
 };
@@ -159,7 +159,7 @@ _scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrab
 //////////////////////////////////////////////////////////////
 // EMPIEZA TODO AQUI LO DE ARRIBA SON FUNCIONES!!!!
 
-//this addAction["Transportar Droga para el Narco 500000$ - Ganancia: 350000$",QUICK_fnc_TransportarDrogaMar];
+//this addAction["Transportar Droga para el Narco 500000$ - Ganancia: 150000$",QUICK_fnc_TransportarDrogaMar];
 //////////////////////////////////////////////////////////
 
 private["_coche"];
