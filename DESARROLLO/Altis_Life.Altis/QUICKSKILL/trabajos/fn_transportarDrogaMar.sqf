@@ -18,16 +18,16 @@ while {_time > 0} do {
 	_posDestino = getMarkerPos _destino;
 	_metros =  _furgo distance _posDestino;
 
-	
-	
-    	
+
+
+
 	/// si muere paramos el contador
 		if !(alive _jugador) then {
 			_time = 0;
 		};
 
 	//avisar a la poli despues de 2 minutos
-	
+
 	if(_time == 60*58) then{
 		//havisar al jugador;
 		hint "La policía te ha detectado!! Ten cuidado!!";
@@ -45,22 +45,22 @@ _marker setMarkerType "mil_warning";
     };
 
 	//mientrar si esta cerca del edificio
-	if(_metros > _metros_entregar) then{		
-	
+	if(_metros > _metros_entregar) then{
+
 		//contar tiempo
-		_time = _time - 1;  
-		hintSilent format["Destino: %4 \n Tiempo : %1 \n Distancia: %2m ", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metrosTotal,_destino];	
+		_time = _time - 1;
+		hintSilent format["Destino: %4 \n Tiempo : %1 \n Distancia: %2m ", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metrosTotal,_destino];
 		sleep 1;
-		
+
 	};
 
 	if(_metros < _metros_entregar )then{
 
 		_pagar_jugador= "si";
 		_time = 0;
-		
+
 	};
-    		
+
 };//end while
 
 if(_time < 1) then{
@@ -69,7 +69,7 @@ if(_time < 1) then{
 	  if (_pagar_jugador=="si" && alive _jugador ) then {
 	    // agregar action de cobrar la pasta y borrar el furgon
 	     hint "Ya puedes entregar la lancha";
-	    _furgo addAction["Entregar lancha",QUICK_pagarTrabajoTransportarDrogaMar,_furgo];	
+	    _furgo addAction["Entregar lancha",QUICK_pagarTrabajoTransportarDrogaMar,_furgo];
 	  };
 
 	   if (_pagar_jugador=="no" && alive _jugador ) then {
@@ -80,7 +80,7 @@ if(_time < 1) then{
 
 	  deleteMarker _marcador;
 
-	 
+
 
 
 };//en time < 1
@@ -93,8 +93,8 @@ QUICK_pagarTrabajoTransportarDrogaMar = {
 
 _gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _caller =[_this,1,Objnull,[Objnull]] call BIS_fnc_param;
- _id = _this select 2; 
- 
+ _id = _this select 2;
+
 _gen removeAction _id;
 
 _furgo = _this select 3;
@@ -107,12 +107,12 @@ hint "Has cobrado 850000$ por tu trabajo";
 deleteVehicle _furgo;
 
 
-	
+
 };
 
 
 QUICK_generarTrabajoTransportarDrogaMar = {
-	
+
 
 _coche = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 
@@ -141,20 +141,16 @@ if(_destino=="desembarcoDrogas_5")then{
 };
 
 
-<<<<<<< HEAD
+
 _pos = getMarkerPos _destino;
 _markerID = format["marker_%1",floor(random 1000)];
-=======
-
-	_markerID = format["marker_%1",floor(random 1000)];
->>>>>>> parent of 57e9fff... cazarecompensas con esposas gratis y llaves gratis x5
 _marker = createMarkerLocal [ _markerID, _pos];
 _marker setMarkerColorLocal "ColorGreen";
 _marker setMarkerTextLocal "!Zona Desembarco!";
 _marker setMarkerTypeLocal "mil_warning";
 
 
-	 		
+
 _scriptHandler = [_marker,_coche,_jugador,_destino] spawn QUICK_timerTrabajoTransportarDrogaMar;
 
 
@@ -171,7 +167,7 @@ private["_coche"];
 _precio = 500000;
 _jugador = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 _gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
- _id = _this select 2; 
+ _id = _this select 2;
 
 
 if(isNull _jugador) exitWith {}; //if not the thief get bent
@@ -184,7 +180,7 @@ life_cash = life_cash-_precio;
  _gen removeAction _id;
 
 //crear coche
-[_gen,_jugador] spawn { 
+[_gen,_jugador] spawn {
 
 _gen = _this select 0;
 _jugador = _this select 1;
