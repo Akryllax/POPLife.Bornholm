@@ -100,7 +100,7 @@ _gen removeAction _id;
 _furgo = _this select 3;
 
 //pagar al jugador
-life_cash = life_cash +500000+350000;
+life_cash = life_cash +500000+150000;
 //hint
 hint "Has cobrado 850000$ por tu trabajo";
 //borrar
