@@ -21,12 +21,12 @@ StartProgress = true;
 /////////////////////////////////////////////////////
 
 //esta funcion la utiliza el ica pa sacar un codigo!
-ICARUK_fnc_addAction = {  
-    private["_object","_script"];  
-    _object = _this select 0;  
-    _script = _this select 1;  
+ICARUK_fnc_addAction = {
+    private["_object","_script"];
+    _object = _this select 0;
+    _script = _this select 1;
 
-    _object addAction _script;  
+    _object addAction _script;
 };
 
 MAC_fnc_switchMove = {
@@ -35,7 +35,7 @@ MAC_fnc_switchMove = {
     _anim = _this select 1;
 
     _object switchMove _anim;
-    
+
 };
 
 MTP_fnc_numberToString = {
@@ -58,7 +58,7 @@ MTP_fnc_numberToString = {
         _str = _number call MTP_fnc_numberToString;
         _str = _str + "." + str _decimals;
     };
-    
+
     _str;
 };
 

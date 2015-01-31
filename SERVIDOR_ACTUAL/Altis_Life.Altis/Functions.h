@@ -457,6 +457,11 @@ class WarBlast
 		class dynamicMapHeliCrash {}; // WarBlast: DynamicMap
 		class dynamicMapNaufragios {}; // WarBlast: DynamicMap
 	};
+	class Luces
+	{
+		file= "WarBlast\Luces";
+		class luces {};
+	}; 
 };
 class Quickskill
 {
