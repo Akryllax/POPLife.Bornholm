@@ -1,8 +1,6 @@
 /*
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Blah blah.
+	Author: quickskill
+
 */
 private["_group","_hideout","_action","_cpRate","_cP","_progressBar","_title","_titleText","_ui","_flagTexture"];
 _params= _this select 3;
