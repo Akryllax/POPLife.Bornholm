@@ -77,9 +77,7 @@ if (isServer) then {
 		0 setRain 0;
 		0 setFog 0;
 
-		_timeCTiempo = nextWeatherChange;
-
-		sleep _timeCTiempo;
+			sleep 300;
 
 
 };
