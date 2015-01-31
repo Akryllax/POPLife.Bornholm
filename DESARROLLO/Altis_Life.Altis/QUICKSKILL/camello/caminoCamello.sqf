@@ -34,4 +34,7 @@ camello spawn {
     _this setFuel 1;   
 };
 
+//poner el camello persona inmortal, puta gente k haze bugs se merezen una patada en los huevos, hijosd e puta
+ { _x allowDamage false;}forEach crew camello;
+
 [] call _fnc_muevete;
