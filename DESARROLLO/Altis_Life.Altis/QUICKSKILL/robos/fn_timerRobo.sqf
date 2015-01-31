@@ -79,10 +79,13 @@ if(_time < 1) then{
 
 
 			//Dar item especiales
-			/*{
-				[true,_x,2] call life_fnc_handleInv;
-			} forEach _itemsRecompensa;
-*/
+			if(_itemsRecompensa!=isNull)then {
+				{
+					[true,_x,2] call life_fnc_handleInv;
+				} forEach _itemsRecompensa;
+
+			};
+
 			//dar Armas
 			if(_darArmas == "si") then {
 
