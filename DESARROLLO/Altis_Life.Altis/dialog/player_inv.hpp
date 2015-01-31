@@ -319,5 +319,14 @@ class playerSettings {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		class ButtonWantedCiv : Life_RscButtonMenu {
+			idc = 2026;
+			text = "$STR_PM_WantedList";
+			onButtonClick = "[] call life_fnc_wantedMenu";
+			x = 0.40 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.805;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
 	};
 };
