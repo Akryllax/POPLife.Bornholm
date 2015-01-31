@@ -47,7 +47,7 @@ switch (_vehicle) do
 			["textures\CIV\peugeot.jpg", "civ"],
 			["textures\COP\cop_hatchback.jpg","cop"],
 			["textures\COP\hatchback_local.jpg","cop"],
-			["textures\COP\hatch_guardia_civil_v1.jpg", "cop"]
+			["textures\COP\hatch_guardia_civil_v1.jpg","cop"]
 		];
 	};
 
@@ -66,7 +66,8 @@ switch (_vehicle) do
 			["textures\COP\offroad_01_ext_base02_co.jpg","cop"],
 			["textures\COP\geo_offroad.jpg","cop"],
 			["textures\CIV\GENERALLEEOFFROAD.jpg","civ"],
-			["textures\CIV\taxi_2.jpg","civ"]
+			["textures\CIV\taxi_2.jpg","civ"],
+			["textures\MED\offroad_notarzt.jpg","med"]			
 		];
 	};
 
@@ -105,7 +106,8 @@ switch (_vehicle) do
 			["textures\CIV\jurassicpark_suv.jpg","civ"],
 			["textures\CIV\suv_racestripes_redblack.jpg","civ"],
 			["textures\CIV\kitty.jpg","civ"],
-			["textures\CIV\taxi_1.jpg","civ"]
+			["textures\CIV\taxi_1.jpg","civ"],
+			["textures\MED\medic_suv_final.jpg","med"]
 		];
 	};
 
@@ -177,8 +179,7 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa","fed"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa","donate"],
-			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"],
-			["textures\MED\medic_orca.jpg","med"]
+			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"]			
 		];
 	};
 
