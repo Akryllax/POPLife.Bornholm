@@ -93,6 +93,9 @@ if(_tiempoCaptura<1)then{
 		//iniciar recompensas
 		[_barrioBandera,_jugador,_barrioMetros,_marker] spawn QUICK_fnc_barrioCapturado;
 
+		//avisar
+		[[[0,1],"%1 y su banda: %2 - han tomado el control del barrio de %3!",true,[name player,(group player) getVariable "gang_name"],_bandaNombre],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+
 
 	};
 
