@@ -109,5 +109,6 @@ if(isServer) then {
 };
 //poner opacity 0 a markadores de helicrash!!
 {_x setMarkerAlphaLocal 0} forEach ["helicrash_1","helicrash_2","helicrash_3","helicrash_4","wreck_1","wreck_2","wreck_3","wreck_4"];
+War_loop = compile (preprocessFileLineNumbers "WarBlast\Musica\War_loop.sqf");
 
 [] call life_fnc_initRacing;
