@@ -28,6 +28,7 @@ switch (_vehicle) do
 			case 9: {_color = "GEO"};
 			case 10: {_color = "General Lee"};
 			case 11: {_color = "Taxi"};
+			case 12: {_color = "Medico"};
 		};
 	};
 
@@ -95,6 +96,7 @@ switch (_vehicle) do
 			case 14: {_color = "Rojo y Negro"};
 			case 15: {_color = "Kitty"};
 			case 16: {_color = "Taxi"};
+			case 17: {_color = "Medico"};
 		};
 	};
 
@@ -175,8 +177,7 @@ switch (_vehicle) do
 			case 0: {_color = "Negro"};
 			case 1: {_color = "Blanco y Azul"};
 			case 2: {_color = "Digital Verde"};
-			case 3: {_color = "Digital Desierto"};
-			case 4: {_color = "Emergencias"};
+			case 3: {_color = "Digital Desierto"};			
 		};
 	};
 
