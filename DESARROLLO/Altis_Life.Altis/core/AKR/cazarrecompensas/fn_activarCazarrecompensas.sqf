@@ -16,8 +16,12 @@ player addWeapon "hgun_P07_snds_F";
 	player addMagazine "30Rnd_9x21_Mag";
 	player addMagazine "30Rnd_9x21_Mag";
 
+
 	reload player;
 };
+//Inventario virtual
+[true,"esposas",5] call life_fnc_handleInv;
+[true,"llaveesposas",5] call life_fnc_handleInv;
 
 player forceAddUniform "U_B_CombatUniform_mcam";
 player setObjectTextureGlobal [0, "textures\cazarrecompensas.jpg"];
@@ -29,7 +33,7 @@ player setObjectTextureGlobal [0, "textures\cazarrecompensas.jpg"];
 			player forceAddUniform "U_B_CombatUniform_mcam";
 		};
 		player setObjectTextureGlobal [0, "textures\cazarrecompensas.jpg"];
-		
+
 		sleep 10;
 	};
 };
@@ -49,7 +53,7 @@ life_tiroAtiro = {
 			player setAmmo ["hgun_P07_snds_F", 1];
 		};
 	};
-	
+
 	if((_this select 1) find _CRallowedPWeapon != -1) then {
 		_this spawn {
 			player setAmmo [(_this select 1), 0];
@@ -76,37 +80,37 @@ CREHDropI = player addEventHandler ["InventoryClosed", { deleteVehicle (_this se
 	_handgunCondition = {
 		(handgunWeapon player != "" && ((handgunWeapon player) find _CRallowedHWeapon == -1))
 	};
-	
+
 	while {CRServicio && alive player} do {
 		sleep 1;
 		waitUntil { !CRServicio || !(alive player) || (count (vest player) > 0) || [] call _primaryCondition || [] call _handgunCondition};
-		
+
 		_temp = "<t size =""1.2"" color=""#FF0000""> Estas de servicio</t><br/>No puedes ";
-		
+
 		if((count (vest player) > 0)) then {
 			_temp = _temp + "usar chaleco.";
 			removeVest player;
 		};
-		
+
 		if([] call _primaryCondition) then {
 			_temp = _temp + "usar otro arma que no sea un Sting.";
 			player removeWeapon (primaryWeapon player);
 		};
-		
+
 		if([] call _handgunCondition) then {
 			_temp = _temp + "usar otra arma secundaria que no sea un taser.";
 			player removeWeapon (primaryWeapon player);
 		};
-		
+
 		if(!alive player) then{
 			CRServicio = false;
 			player setVariable["CRServicio", false,true];
 		};
-		
+
 		if(CRServicio)then {
 			hint parseText _temp;
 		};
-		
+
 		removeVest player;
 		removeHeadgear player;
 		removeBackpack player;
@@ -117,7 +121,7 @@ CREHDropI = player addEventHandler ["InventoryClosed", { deleteVehicle (_this se
 	removeBackpack player;
 	player removeWeapon (primaryWeapon player);
 	player removeWeapon (handgunWeapon player);
-	
+
 	player removeEventHandler ["Fired", CREHFired];
 	player removeEventHandler ["InventoryOpened", CREHOpenI];
 	player removeEventHandler ["InventoryClosed", CREHDropI];
