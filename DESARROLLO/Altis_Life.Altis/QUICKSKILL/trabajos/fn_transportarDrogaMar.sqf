@@ -141,13 +141,8 @@ if(_destino=="desembarcoDrogas_5")then{
 };
 
 
-<<<<<<< HEAD
 _pos = getMarkerPos _destino;
 _markerID = format["marker_%1",floor(random 1000)];
-=======
-
-	_markerID = format["marker_%1",floor(random 1000)];
->>>>>>> parent of 57e9fff... cazarecompensas con esposas gratis y llaves gratis x5
 _marker = createMarkerLocal [ _markerID, _pos];
 _marker setMarkerColorLocal "ColorGreen";
 _marker setMarkerTextLocal "!Zona Desembarco!";
