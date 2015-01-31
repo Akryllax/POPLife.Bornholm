@@ -38,11 +38,13 @@ _luz6 setLightColor[229,22,22];
 _luz6 lightAttachObject [Luz6, [0,0,1]];
 */
 
-if (!isServer) then
+if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
 {
 
 	while {true} do
 	{
+	if !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {};
+
 	       _color = floor (Random 6);
 	       _color = round _color;
 
@@ -78,4 +80,5 @@ if (!isServer) then
 	     };
 	     sleep 0.3;
     };
+    sleep 1*60;
 };
