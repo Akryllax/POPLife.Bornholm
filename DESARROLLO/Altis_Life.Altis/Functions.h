@@ -535,6 +535,14 @@ class Quickskill
 		class robosDesactivar{};
 	};
 
+	class Barrios
+	{
+		file = "QUICKSKILL\barrios";
+		class capturarBarrio {};
+		class barrioCapturado{};
+		
+	};
+
 	class Trabajos
 	{
 		file = "QUICKSKILL\trabajos";
