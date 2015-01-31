@@ -22,6 +22,10 @@ player addWeapon "hgun_P07_snds_F";
 player forceAddUniform "U_B_CombatUniform_mcam";
 player setObjectTextureGlobal [0, "textures\cazarrecompensas.jpg"];
 
+//les damos esposas y llaves edited by quick...
+[true,"esposas",5] call life_fnc_handleInv;
+[true,"llaveesposas",5] call life_fnc_handleInv
+
 [] spawn {
 	sleep 5;
 	while {CRServicio && alive player} do {
