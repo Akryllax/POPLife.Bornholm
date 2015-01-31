@@ -15,7 +15,6 @@ _spawnAt = position _this select 2;
 
 //Spawn the vehicle and prep it.
 
-
 	_vehicle = createVehicle [_className, (_spawnAt), [], 0, "NONE"];
 	
 	waitUntil {!isNil "_vehicle"}; //Wait?
