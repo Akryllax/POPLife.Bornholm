@@ -276,6 +276,7 @@ class Life_Client_Core
 		class giveConfiscatedMoney {};
 		class removeWeapons {};
 		class removeMoneyDo {};
+		class wantedGrab {};
 	};
 	
 	class Vehicle
