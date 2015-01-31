@@ -11,7 +11,7 @@ while { (alive _obj) and ((_i < _loops) or (_loops == -1)) } do
 {
 	if ((_obj distance player) < _distancia) then
 	{
-		_obj say3D _sound;
+		_obj say3D _sonido;
 	};
 	sleep _duracion;
 	_i = _i + 1;
