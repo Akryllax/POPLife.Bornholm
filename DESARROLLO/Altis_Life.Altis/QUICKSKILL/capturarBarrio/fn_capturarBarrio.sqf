@@ -1,14 +1,9 @@
 #include <macro.h>
 /*
-	Author: quick
+	Author: Bryan "Tonic" Boardwine
 	
 	Description:
-	mis cojones gordos
-
-	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,[_barrioBandera,_jugador,_barrioName]];
-
-	Ejemplo -> poner en una bandera de esas 
-	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,[this,_this select 2,"Las 3000"]];
+	Blah blah.
 */
 private["_group","_hideout","_action","_cpRate","_cP","_progressBar","_title","_titleText","_ui","_flagTexture"];
 _params= _this select 3;
@@ -16,38 +11,22 @@ _params= _this select 3;
 _barrioBandera= _params select 0;
 _jugador=_params select 1;
 _barrioName = _params select 2;
-_bandaNombre = (group _jugador) getVariable "gang_name";
+_bandaNombre = (group player) getVariable "gang_name";
 _capturado = 0;
 _tiempoCaptura = 300;
 _barrioMetros = 250;
-_barrioBandera setVariable["capturadoPor","",true];
-
+_capturadoPor = "";
 
 
 //sino tiene una banda que la creee
 if(isNil {grpPlayer getVariable "gang_name"}) exitWith {titleText[localize "STR_GNOTF_CreateGang","PLAIN"];};
 //ya la estan caapturando
-if((_barrioBandera getVariable ["capturando",false])) exitWith {hint "Ya estan capturando el barrio";};
-
-//ya es de tu banda
-if((_barrioBandera getVariable ["capturadoPor",""]==_bandaNombre)) exitWith {hint "Este barrio ya es de tu banda";};
+if((_barrio getVariable ["inCapture",FALSE])) exitWith {hint "Ya estan capturando el barrio";};
 
 
-_barrioBandera setVariable["capturando",true,true];
-
-life_action_inUse = true;
-hint format["Capturando el barrio %1",_bandaNombre];
-//timer
 while {_tiempoCaptura > 1} do
 {    
-
-	//si muere matamos al timer
-  if(!alive _jugador)then{
-  	_tiempoCaptura =0;
-
-  };
-
-	
+	life_action_inUse = true;
 	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
 		[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
 		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
@@ -59,11 +38,10 @@ while {_tiempoCaptura > 1} do
 	
 };
 
-//ha terminado el timer
 if(_tiempoCaptura<1)then{
 
 
-	if( alive _jugador )then{
+	if(_capturado ==0)then{
 		//han capturado el barrio
 
 		titleText["El barrio ha sido capturado.","PLAIN"];
@@ -79,19 +57,10 @@ if(_tiempoCaptura<1)then{
 		] call BIS_fnc_selectRandom;
 		_barrioBandera setFlagTexture _flagTexture;
 
-		
-		_barrioBandera setVariable["capturadoPor",_bandaNombre,true];
+		_barrio setVariable["capturadoYa",true,true];
+		_barrio setVariable["capturadoPor",true,true];
 
-		//crear markador de capturado
-		_pos = position _barrioBandera;
-		_markerID = format["marker_%1",floor(random 1000)];
-		_marker = createMarker [ _markerID, _pos];
-		_marker setMarkerColor "ColorRed";
-		_marker setMarkerText format["!Barrio capturado por %1!!",_bandaNombre];
-		_marker setMarkerType "mil_warning";
-
-		//iniciar recompensas
-		[_barrioBandera,_jugador,_barrioMetros,_marker] spawn QUICK_fnc_barrioCapturado;
+		//iniciar timer recompensas
 
 		//avisar
 		[[[0,1],"%1 y su banda: %2 - han tomado el control del barrio de %3!",true,[name player,(group player) getVariable "gang_name"],_bandaNombre],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
@@ -99,7 +68,7 @@ if(_tiempoCaptura<1)then{
 
 	};
 
-	if(!alive _jugador)then{
+	if(_capturado ==1)then{
 		//han capturado el barrio
 
 		titleText["Has fallado al capturar el barrio.","PLAIN"];
@@ -107,7 +76,6 @@ if(_tiempoCaptura<1)then{
 	};
 
 	life_action_inUse = false;
-	_barrioBandera setVariable["capturando",false,true];
 
 
 };
