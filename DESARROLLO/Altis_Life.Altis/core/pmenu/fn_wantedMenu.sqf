@@ -2,7 +2,7 @@
 /*
 	File: fn_wantedMenu.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Opens the Wanted menu and connects to the APD.
 */
@@ -44,10 +44,10 @@ _crimes = [["Atropello","25000","1"],["Asesinato","50000","2"],["Fuga","50000","
 } foreach _crimes;
 
 ctrlSetText[2404,"Estableciendo conexion..."];
-
+/*
 if(__GETC__(life_coplevel) < 3 && __GETC__(life_adminlevel) == 0) then
 {
 	ctrlShow[2405,false];
 };
-
-[[player],"life_fnc_wantedFetch",false,false] spawn life_fnc_MP; 
+*/
+[[player],"life_fnc_wantedFetch",false,false] spawn life_fnc_MP;

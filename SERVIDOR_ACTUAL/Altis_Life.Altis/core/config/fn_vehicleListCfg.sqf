@@ -25,16 +25,13 @@ switch (_shop) do
 	{
 		_return = [
 			["C_Offroad_01_F",10000 * Desc],
-			["I_Truck_02_medical_F",25000 * Desc],
-			["O_Truck_03_medical_F",45000 * Desc],
-			["B_Truck_01_medical_F",60000 * Desc]
+			["C_SUV_01_F",15000 * Desc]			
 		];
 	};
 
 	case "med_air_hs": {
 		_return = [
-			["B_Heli_Light_01_F",50000 * Desc],
-			["O_Heli_Light_02_unarmed_F",75000 * Desc]
+			["B_Heli_Light_01_F",50000 * Desc]			
 		];
 	};
 

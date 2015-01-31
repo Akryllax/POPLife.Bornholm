@@ -42,7 +42,7 @@ life_llaveesposas = ObjNull;
 life_protestando = false;
 life_sentarse = false;
 life_bailando = false;
-life_sonido = false;
+
 
 
 
@@ -102,9 +102,9 @@ life_thirst = 100;
 life_hunger = 100;
 __CONST__(life_paycheck_period,5); //Five minutes
 life_cash = 0;
-__CONST__(life_impound_car,350);
-__CONST__(life_impound_boat,250);
-__CONST__(life_impound_air,850);
+__CONST__(life_impound_car,9500);
+__CONST__(life_impound_boat,15000);
+__CONST__(life_impound_air,17500);
 life_istazed = false;
 life_my_gang = ObjNull;
 
