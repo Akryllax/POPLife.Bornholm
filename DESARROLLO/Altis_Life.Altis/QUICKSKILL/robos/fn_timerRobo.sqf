@@ -79,7 +79,7 @@ if(_time < 1) then{
 
 
 			//Dar item especiales
-			if(_itemsRecompensa!=[])then {
+			if((str _itemsRecompensa) != "[]")then{
 				{
 					[true,_x,2] call life_fnc_handleInv;
 				} forEach _itemsRecompensa;
