@@ -3608,8 +3608,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={17549.68,2.2686424,18942.143};
-					azimut=285.48361;
+					position[]={4804.0933,41.457649,13744.299};
+					azimut=387.90201;
 					id=162;
 					side="CIV";
 					vehicle="C_man_1";
@@ -3622,7 +3622,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1406;
+		items=1412;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -3687,8 +3687,8 @@ class Mission
 		};
 		class Item6
 		{
-			position[]={25236.988,16.585083,20985.621};
-			azimut=53.285168;
+			position[]={16501.838,11.2121,15838.783};
+			azimut=130.04994;
 			id=169;
 			side="EMPTY";
 			vehicle="Land_Runway_PAPI_4";
@@ -12663,9 +12663,9 @@ class Mission
 		};
 		class Item867
 		{
-			position[]={16586.666,10.996645,12835.016};
+			position[]={16596.125,11,12831.033};
 			azimut=660.56097;
-			offsetY=17.299999;
+			offsetY=0.2;
 			id=1030;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
@@ -12674,8 +12674,8 @@ class Mission
 		};
 		class Item868
 		{
-			position[]={14774.365,4.6050148,10778.223};
-			azimut=97.272697;
+			position[]={14774.67,4.5834866,10778.582};
+			azimut=105.99968;
 			id=1031;
 			side="EMPTY";
 			vehicle="Land_Pallet_MilBoxes_F";
@@ -17721,7 +17721,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this addAction[""Helicopter Shop"",life_fnc_vehicleShopMenu,[""civ_air"",civilian,[""civ_air_1_1"",""civ_air_1_2_1""],""civ"",""Carl's Airial Auto's""]];  this setObjectTexture[0,""textures\CARTELES\garaje.jpg""]";
+			init="this enableSimulation false; this allowDamage false; this addAction[""Helicopter Shop"",life_fnc_vehicleShopMenu,[""civ_air"",civilian,[""civ_air_1_1"",""civ_air_1_2_1""],""civ"",""Carl's Airial Auto's""]];this enableSimulation false; this allowDamage false; this addAction[""Garaje"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;  life_garage_type = ""Air""; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""air_g_1_1"";  }]; this addAction[""Guardar en Garaje"",  {   private[""_nearVehicle""];   _nearVehicle = nearestObjects[(getPos (_this select 0)),[""Car"",""Ship"",""Air""],35] select 0;   if(isNil ""_nearVehicle"") exitWith {hint ""There isn't a vehicle near this NPC."";};   [[_nearVehicle,false,(_this select 1)],""TON_fnc_vehicleStore"",false,false] spawn life_fnc_MP;   hint ""Espera...."";   life_garage_store = true;  },"""",0,false,false,"""",'!life_garage_store'];  this setObjectTexture[0,""textures\CARTELES\garaje.jpg""]";
 		};
 		class Item1336
 		{
@@ -18334,7 +18334,7 @@ class Mission
 		};
 		class Item1395
 		{
-			position[]={17869.313,2.4205663,18201.496};
+			position[]={20700.137,4.6165285,19474.563};
 			azimut=395.78799;
 			offsetY=0.30000001;
 			id=1558;
@@ -18396,8 +18396,8 @@ class Mission
 		};
 		class Item1401
 		{
-			position[]={20695.479,4.608562,19470.029};
-			azimut=305.71799;
+			position[]={18079.797,18.366545,19178.793};
+			azimut=92.007111;
 			id=1564;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
@@ -18444,10 +18444,71 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this addAction[""Helicopteros"",life_fnc_vehicleShopMenu,[""civ_air"",civilian,[""civ_air_2"",""civ_air_2_1""],""civ"",""Carl's Airial Auto's""]];this setObjectTexture[0,""textures\CARTELES\garaje.jpg""]";
 		};
+		class Item1406
+		{
+			position[]={25740.793,16.525688,21219.869};
+			azimut=314.20837;
+			id=1569;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this enableSimulation false;  this allowDamage false;        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];          this addAction[""Equipar Clase Katiba silenciada 100000$"",QUICK_fnc_comprarClaseTerroristaSilenciado];          this addAction[""Equipar Clase Rifle mk18  150000$"",QUICK_fnc_comprarClaseTerroristaRifle2];        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];";
+		};
+		class Item1407
+		{
+			position[]={12521.354,5.2108045,14200.965};
+			azimut=341.81616;
+			id=1570;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this enableSimulation false;  this allowDamage false;        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];          this addAction[""Equipar Clase Katiba silenciada 100000$"",QUICK_fnc_comprarClaseTerroristaSilenciado];          this addAction[""Equipar Clase Rifle mk18  150000$"",QUICK_fnc_comprarClaseTerroristaRifle2];        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];";
+		};
+		class Item1408
+		{
+			position[]={10550.508,14.849396,12254.64};
+			azimut=313.01434;
+			id=1571;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this enableSimulation false;  this allowDamage false;        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];          this addAction[""Equipar Clase Katiba silenciada 100000$"",QUICK_fnc_comprarClaseTerroristaSilenciado];          this addAction[""Equipar Clase Rifle mk18  150000$"",QUICK_fnc_comprarClaseTerroristaRifle2];        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];";
+		};
+		class Item1409
+		{
+			position[]={18073.9,38.117741,15405.778};
+			azimut=285.13797;
+			id=1572;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this enableSimulation false;  this allowDamage false;        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];          this addAction[""Equipar Clase Katiba silenciada 100000$"",QUICK_fnc_comprarClaseTerroristaSilenciado];          this addAction[""Equipar Clase Rifle mk18  150000$"",QUICK_fnc_comprarClaseTerroristaRifle2];        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];";
+		};
+		class Item1410
+		{
+			position[]={8582.2715,187.60179,18110.287};
+			azimut=272.34079;
+			id=1573;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this enableSimulation false;  this allowDamage false;        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];          this addAction[""Equipar Clase Katiba silenciada 100000$"",QUICK_fnc_comprarClaseTerroristaSilenciado];          this addAction[""Equipar Clase Rifle mk18  150000$"",QUICK_fnc_comprarClaseTerroristaRifle2];        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];";
+		};
+		class Item1411
+		{
+			position[]={5515.1855,27.299999,15003.328};
+			azimut=668.026;
+			offsetY=21.200001;
+			id=1574;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Joyeria"",QUICK_fnc_robosHandler,[""Joyeria"",350,50000 + round random 130000,50,[""goldbar""],3,""no"",""no""]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
+		};
 	};
 	class Markers
 	{
-		items=388;
+		items=391;
 		class Item0
 		{
 			position[]={20782.402,37.286591,16680.141};
@@ -18501,12 +18562,12 @@ class Mission
 		};
 		class Item6
 		{
-			position[]={25238.031,16.589561,20985.859};
+			position[]={16502.326,11.205194,15837.817};
 			name="radarm4_1";
 			text="Radar";
 			type="group_4";
 			colorName="ColorEAST";
-			angle=23.733427;
+			angle=100.49831;
 		};
 		class Item7
 		{
@@ -19716,15 +19777,16 @@ class Mission
 		};
 		class Item159
 		{
-			position[]={20695.104,4.5465231,19467.057};
+			position[]={18082.719,18.406084,19179.465};
 			name="oil_trader_1";
 			text="Comerciante de Sal";
 			type="b_unknown";
 			colorName="ColorCIV";
+			angle=-0.033026513;
 		};
 		class Item160
 		{
-			position[]={17869.166,2.40886,18199.828};
+			position[]={20699.99,4.711062,19472.895};
 			name="oil_trader_2";
 			text="Comerciante de Diamantes";
 			type="b_unknown";
@@ -20617,7 +20679,7 @@ class Mission
 		};
 		class Item268
 		{
-			position[]={16586.531,10.996422,12835.183};
+			position[]={16596.703,11,12831.378};
 			name="Robo_joyas";
 			text="Robo Joyeria";
 			type="mil_circle";
@@ -21491,6 +21553,30 @@ class Mission
 			type="o_service";
 			angle=73.109001;
 		};
+		class Item388
+		{
+			position[]={14774.567,4.576582,10778.65};
+			name="Robos_1";
+			text="Robo de Armas";
+			type="mil_circle";
+			colorName="ColorUNKNOWN";
+		};
+		class Item389
+		{
+			position[]={5515.8076,27.299999,15003.602};
+			name="Robo_joyas_1";
+			text="Robo Joyeria";
+			type="mil_circle";
+			colorName="ColorUNKNOWN";
+			angle=7.4655843;
+		};
+		class Item390
+		{
+			position[]={3658.0959,7.1720672,13393.746};
+			name="air_g_1_1";
+			type="Empty";
+			angle=238.96944;
+		};
 	};
 	class Sensors
 	{
@@ -21533,10 +21619,10 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={25242.521,16.580994,20981.072};
+			position[]={16498.664,11.160366,15832.354};
 			a=10;
 			b=10;
-			angle=139.52547;
+			angle=216.29022;
 			rectangular=1;
 			activationBy="ANY";
 			repeating=1;
