@@ -34,7 +34,7 @@ camello2 spawn {
     _this setFuel 1;   
 };
 
-_fnc_dondeEstas{
+_fnc_dondeEstas ={
     
         //crear markador de capturado
         _pos = position camello2;
@@ -46,7 +46,7 @@ _fnc_dondeEstas{
 
         sleep 30;
 
-         _pos = position camello2;
+         deleteMarker _marker;
 
         call _fnc_dondeEstas;
 
