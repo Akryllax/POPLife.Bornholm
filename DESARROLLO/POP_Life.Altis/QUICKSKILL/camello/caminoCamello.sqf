@@ -13,10 +13,19 @@ _fnc_muevete = {
     ruta setWaypointType "MOVE";
     ruta setWaypointBehaviour "CARELESS";
     ruta setWaypointSpeed "FULL";
+
+        _pos = position camello;
+        _markerID = format["marker_%1",floor(random 1000)];
+        _marker = createMarker [ _markerID, _pos];
+        _marker setMarkerColor "ColorGreen";
+        _marker setMarkerText "CAMELLO";
+        _marker setMarkerType "mil_warning";
     
     while {true} do {
         if ((camello distance (getMarkerPos _sitios)) < 30) exitWith {};
         sleep 2;
+           _pos = position camello;
+        _marker setMarkerPos _pos;
     };
 
     camello spawn {
@@ -35,29 +44,8 @@ camello spawn {
 };
 
 
-
-_fnc_dondeEstas={
-    
-        //crear markador de capturado
-        _pos = position camello2;
-        _markerID = format["marker_%1",floor(random 1000)];
-        _marker = createMarker [ _markerID, _pos];
-        _marker setMarkerColor "ColorRed";
-        _marker setMarkerText "El camello paso x aqui";
-        _marker setMarkerType "mil_warning";
-
-        sleep 30;
-        deleteMarker _marker;
-
-     
-
-        call _fnc_dondeEstas;
-
-
-};
 //poner el camello persona inmortal, puta gente k haze bugs se merezen una patada en los huevos, hijosd e puta
  { _x allowDamage false;}forEach crew camello;
 
 [] call _fnc_muevete;
 
-[] call _fnc_dondeEstas;

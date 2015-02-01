@@ -9,6 +9,13 @@ _camelloMuevete = execVM "QUICKSKILL\camello\caminoCamello2.sqf";
 _fnc_muevete = {
     _sitios = ["Camello1","Camello4"] call BIS_fnc_selectRandom;
 
+        _pos = position camello2;
+        _markerID = format["marker_%1",floor(random 1000)];
+        _marker = createMarker [ _markerID, _pos];
+        _marker setMarkerColor "ColorGreen";
+        _marker setMarkerText "CAMELLO";
+        _marker setMarkerType "mil_warning";
+
     ruta2 = (group camello) addWaypoint [(getMarkerPos _sitios), 0];
     ruta2 setWaypointType "MOVE";
     ruta2 setWaypointBehaviour "CARELESS";
@@ -17,6 +24,8 @@ _fnc_muevete = {
     while {true} do {
         if ((camello2 distance (getMarkerPos _sitios)) < 30) exitWith {};
         sleep 2;
+        _pos = position camello2;
+        _marker setMarkerPos _pos;
     };
 
     camello2 spawn {
@@ -34,27 +43,9 @@ camello2 spawn {
     _this setFuel 1;   
 };
 
-_fnc_dondeEstas ={
-    
-        //crear markador de capturado
-        _pos = position camello2;
-        _markerID = format["marker_%1",floor(random 1000)];
-        _marker = createMarker [ _markerID, _pos];
-        _marker setMarkerColor "ColorRed";
-        _marker setMarkerText "El camello paso x aqui";
-        _marker setMarkerType "mil_warning";
 
-        sleep 30;
-
-         deleteMarker _marker;
-
-        call _fnc_dondeEstas;
-
-
-};
 //poner el camello persona inmortal, puta gente k haze bugs se merezen una patada en los huevos, hijosd e puta
  { _x allowDamage false;}forEach crew camello2;
 
 [] call _fnc_muevete;
 
-[] call _fnc_dondeEstas;
