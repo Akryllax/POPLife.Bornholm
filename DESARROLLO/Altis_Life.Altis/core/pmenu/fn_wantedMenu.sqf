@@ -45,6 +45,7 @@ _crimes = [["Atropello","25000","1"],["Asesinato","50000","2"],["Fuga","50000","
 
 ctrlSetText[2404,"Estableciendo conexion..."];
 
+
 if(__GETC__(life_coplevel) < 3 && __GETC__(life_adminlevel) == 0) then
 {
 	ctrlShow[2405,false];
