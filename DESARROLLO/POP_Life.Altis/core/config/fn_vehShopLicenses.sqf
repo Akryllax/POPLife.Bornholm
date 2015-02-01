@@ -1,10 +1,10 @@
 /*
 	File: fn_vehShopLicenses.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Checks what shop it is and sometimes the vehicle to determine whether or not they have the license.
-	
+
 	Returns:
 	TRUE if they have the license or are allowed to get that specific vehicle without having that license.
 	FALSE if they don't have the license or are not allowed to obtain that vehicle.
@@ -29,7 +29,9 @@ switch (life_veh_shop select 0) do
 	case "reb_car": {_ret = license_civ_rebel;};
 	case "reb_air": {_ret = license_civ_rebel;};
 	case "cop_car": {_ret = true;};
-	case "cop_ship": 
+	case "merc_a": {_ret = true;};
+	case "merc_c": {_ret = true;};
+	case "cop_ship":
 	{
 		if(_veh == "B_Boat_Armed_01_minigun_F") then
 		{
