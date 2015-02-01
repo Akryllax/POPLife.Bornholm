@@ -12542,7 +12542,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Joyeria"",QUICK_fnc_robosHandler,[""Joyeria"",360,50000 + round random 130000,50,[""goldbar""],1,""no"",""no""]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Joyeria"",QUICK_fnc_robosHandler,[""Joyeria"",20,50000 + round random 130000,50,[""goldbar""],1,""no"",""no""]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
 		};
 		class Item868
 		{
