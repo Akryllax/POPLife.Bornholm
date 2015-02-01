@@ -451,12 +451,6 @@ class WarBlast
     	class InteractionMenu {};
     	class robarVehiculo {};
     };
-    class Policias
-    {
-    	file = "WarBlast\Policias";
-    	class lacrimogeno {};
-    	
-    };
  	class DynamicMap
 	{
 		file = "WarBlast\DynamicMap";

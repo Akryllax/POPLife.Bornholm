@@ -16,3 +16,4 @@ __CONST__(BIS_fnc_endMission,BIS_fnc_endMission);
 if((_this select 1)) then {
 	[] execVM "core\jip.sqf";
 };
+[] execVM "WarBlast\Policias\lacrimogeno.sqf";

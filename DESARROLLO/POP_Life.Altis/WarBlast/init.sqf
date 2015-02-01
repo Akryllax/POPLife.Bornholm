@@ -2,7 +2,6 @@
 [] execVM "WarBlast\Vehiculosfps\vehicleManager.sqf";
 [] execVM "WarBlast\zlt_fastrope.sqf";
 [] execVM "WarBlast\Luces\fn_luces.sqf";
-[] execVM "WarBlast\Policias\lacrimogeno.sqf";
 //activar cleanup en el servidor
 if(isServer) then  {
 	[
