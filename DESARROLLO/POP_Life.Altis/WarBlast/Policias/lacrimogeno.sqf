@@ -10,7 +10,7 @@ While{true} do
 
 
     waituntil{
-    ((nearestObject [getpos player, "SmokeShellBlue"]) distance player < 5)
+    ((nearestObject [getpos player, "SmokeShellBlue"]) distance player < 6)
     and
     (getpos (nearestObject [getpos player, "SmokeShellBlue"]) select 2 < 0.5)
     };
