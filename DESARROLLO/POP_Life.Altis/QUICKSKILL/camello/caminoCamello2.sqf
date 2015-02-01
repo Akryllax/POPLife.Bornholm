@@ -7,18 +7,18 @@ camello2 = this;
 _camelloMuevete = execVM "QUICKSKILL\camello\caminoCamello2.sqf";
 */
 _fnc_muevete = {
-    _sitios = ["Camello1","Camello4"] call BIS_fnc_selectRandom;
+    _sitios2 = ["Camello1","Camello4"] call BIS_fnc_selectRandom;
 
         _pos = position camello2;
        
 
-    ruta2 = (group camello2) addWaypoint [(getMarkerPos _sitios), 0];
+    ruta2 = (group camello2) addWaypoint [(getMarkerPos _sitios2), 0];
     ruta2 setWaypointType "MOVE";
     ruta2 setWaypointBehaviour "CARELESS";
     ruta2 setWaypointSpeed "FULL";
     
     while {true} do {
-        if ((camello2 distance (getMarkerPos _sitios)) < 30) exitWith {};
+        if ((camello2 distance (getMarkerPos _sitios2)) < 30) exitWith {};
         sleep 1;
         _pos = position camello2;
          markerCamello2 setMarkerPos _pos;
