@@ -10,11 +10,7 @@ _fnc_muevete = {
     _sitios = ["Camello1","Camello4"] call BIS_fnc_selectRandom;
 
         _pos = position camello2;
-        _markerID = format["marker_%1",floor(random 1000)];
-        _marker = createMarker [ _markerID, _pos];
-        _marker setMarkerColor "ColorGreen";
-        _marker setMarkerText "CAMELLO";
-        _marker setMarkerType "mil_warning";
+       
 
     ruta2 = (group camello) addWaypoint [(getMarkerPos _sitios), 0];
     ruta2 setWaypointType "MOVE";
@@ -25,7 +21,7 @@ _fnc_muevete = {
         if ((camello2 distance (getMarkerPos _sitios)) < 30) exitWith {};
         sleep 2;
         _pos = position camello2;
-        _marker setMarkerPos _pos;
+         markerCamello2 setMarkerPos _pos;
     };
 
     camello2 spawn {
@@ -46,6 +42,13 @@ camello2 spawn {
 
 //poner el camello persona inmortal, puta gente k haze bugs se merezen una patada en los huevos, hijosd e puta
  { _x allowDamage false;}forEach crew camello2;
+
+ //marcador
+  _markerID = format["marker_%1",floor(random 1000)];
+ markerCamello2 = createMarker [ _markerID, _pos];
+markerCamello2 setMarkerColor "ColorGreen";
+markerCamello2 setMarkerText "CAMELLO";
+markerCamello2 setMarkerType "mil_warning";
 
 [] call _fnc_muevete;
 

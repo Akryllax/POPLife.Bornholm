@@ -25,7 +25,7 @@ _fnc_muevete = {
         if ((camello distance (getMarkerPos _sitios)) < 30) exitWith {};
         sleep 2;
            _pos = position camello;
-        _marker setMarkerPos _pos;
+         markerCamello1 setMarkerPos _pos;
     };
 
     camello spawn {
@@ -46,6 +46,13 @@ camello spawn {
 
 //poner el camello persona inmortal, puta gente k haze bugs se merezen una patada en los huevos, hijosd e puta
  { _x allowDamage false;}forEach crew camello;
+
+  //marcador
+  _markerID = format["marker_%1",floor(random 1000)];
+ markerCamello1 = createMarker [ _markerID, _pos];
+markerCamello1 setMarkerColor "ColorGreen";
+markerCamello1 setMarkerText "CAMELLO";
+markerCamello1 setMarkerType "mil_warning";
 
 [] call _fnc_muevete;
 
