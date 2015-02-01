@@ -18,9 +18,9 @@ _fnc_muevete = {
     
     while {true} do {
         if ((camello distance (getMarkerPos _sitios)) < 30) exitWith {};
-        sleep 2;
+        sleep 1;
            _pos = position camello;
-         markerCamello1 setMarkerPos _pos;
+         markerCamello1 setMarkerPosLocal _pos;
     };
 
     camello spawn {
