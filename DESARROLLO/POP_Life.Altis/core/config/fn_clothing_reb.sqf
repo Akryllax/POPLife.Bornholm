@@ -60,7 +60,7 @@ switch (_filter) do
 			["H_MilCap_mcamo",nil,1500 * Desc],
 			["H_MilCap_ocamo",nil,1500 * Desc],
 			["H_MilCap_rucamo",nil,1500 * Desc],
-			["H_CrewHelmetHeli_B",Mascara de Gas,10000 * Desc],
+			["H_CrewHelmetHeli_B","Mascara de Gas",10000 * Desc],
 			["H_CrewHelmetHeli_O",nil,2000 * Desc],
 			["H_HelmetO_ocamo",nil,3500 * Desc],
 			["H_HelmetB_light",nil,5000 * Desc],

@@ -30,7 +30,7 @@ switch (_filter) do
 			_ret pushBack ["H_HelmetB_plain_mcamo",nil,75 * Desc];
 			_ret pushBack ["H_Booniehat_mcamo",nil,120 * Desc];
 			_ret pushBack ["H_MilCap_mcamo",nil,100 * Desc];
-			_ret pushBack ["H_CrewHelmetHeli_B",Mascara de Gas,500 * Desc];
+			_ret pushBack ["H_CrewHelmetHeli_B","Mascara de Gas",500 * Desc];
 		};
 	};
 
