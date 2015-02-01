@@ -99,7 +99,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14596.4,16769.7,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14596.4,16769.7,5.10001];";
 		};
 		class Item4
 		{
@@ -110,7 +110,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeCabinet_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14595.4,16766.5,5.1];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14595.4,16766.5,5.1];";
 		};
 		class Item5
 		{
@@ -242,7 +242,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Pallets_stack_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14593.8,16775.5,5.2];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14593.8,16775.5,5.2];";
 		};
 		class Item17
 		{
@@ -253,7 +253,7 @@ class Mission
 			side="EMPTY";
 			vehicle="OfficeTable_01_old_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14598.5,16775.2,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14598.5,16775.2,5.10001];";
 		};
 		class Item18
 		{
@@ -264,7 +264,7 @@ class Mission
 			side="EMPTY";
 			vehicle="OfficeTable_01_old_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14595.1,16774.8,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14595.1,16774.8,5.10001];";
 		};
 		class Item19
 		{
@@ -275,7 +275,7 @@ class Mission
 			side="EMPTY";
 			vehicle="OfficeTable_01_old_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14594.5,16771.4,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14594.5,16771.4,5.10001];";
 		};
 		class Item20
 		{
@@ -286,7 +286,7 @@ class Mission
 			side="EMPTY";
 			vehicle="OfficeTable_01_old_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14596.9,16776.6,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14596.9,16776.6,5.10001];";
 		};
 		class Item21
 		{
@@ -297,7 +297,7 @@ class Mission
 			side="EMPTY";
 			vehicle="OfficeTable_01_old_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14596.6,16773.4,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14596.6,16773.4,5.10001];";
 		};
 		class Item22
 		{
@@ -308,7 +308,7 @@ class Mission
 			side="EMPTY";
 			vehicle="OfficeTable_01_old_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14595.9,16770.1,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14595.9,16770.1,5.10001];";
 		};
 		class Item23
 		{
@@ -319,7 +319,7 @@ class Mission
 			side="EMPTY";
 			vehicle="OfficeTable_01_old_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14598.3,16772,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14598.3,16772,5.10001];";
 		};
 		class Item24
 		{
@@ -330,7 +330,7 @@ class Mission
 			side="EMPTY";
 			vehicle="OfficeTable_01_old_F";
 			skill=0.60000002;
-			init" [this ,0, 90] call bis_fnc_setpitchbank;this allowDamage false; this enableSimulation false;this setpos[14600.5,16773.7,5.10001];";
+			init=" [this ,0, 90] call bis_fnc_setpitchbank;this allowDamage false; this enableSimulation false;this setpos[14600.5,16773.7,5.10001];";
 		};
 		class Item25
 		{
@@ -341,7 +341,7 @@ class Mission
 			side="EMPTY";
 			vehicle="OfficeTable_01_old_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14593.1,16772.8,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14593.1,16772.8,5.10001];";
 		};
 		class Item26
 		{
@@ -352,7 +352,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14595.6,16774.1,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14595.6,16774.1,5.10001];";
 		};
 		class Item27
 		{
@@ -363,7 +363,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init" [this ,0, 90] call bis_fnc_setpitchbank;this allowDamage false; this enableSimulation false;this setpos[14594.7,16770.3,5.10001];";
+			init=" [this ,0, 90] call bis_fnc_setpitchbank;this allowDamage false; this enableSimulation false;this setpos[14594.7,16770.3,5.10001];";
 		};
 		class Item28
 		{
@@ -374,7 +374,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14599.6,16775.2,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14599.6,16775.2,5.10001];";
 		};
 		class Item29
 		{
@@ -385,7 +385,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14600.2,16773.8,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14600.2,16773.8,5.10001];";
 		};
 		class Item30
 		{
@@ -396,7 +396,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14597.6,16771.5,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14597.6,16771.5,5.10001];";
 		};
 		class Item31
 		{
@@ -407,7 +407,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14597.1,16776,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14597.1,16776,5.10001];";
 		};
 		class Item32
 		{
@@ -418,7 +418,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14596.9,16772.7,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14596.9,16772.7,5.10001];";
 		};
 		class Item33
 		{
@@ -429,7 +429,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeChair_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14593.5,16772.1,5.10001];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14593.5,16772.1,5.10001];";
 		};
 		class Item34
 		{
@@ -451,7 +451,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeCabinet_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14599.3,16777.1,5.1];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14599.3,16777.1,5.1];";
 		};
 		class Item36
 		{
@@ -462,7 +462,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_OfficeCabinet_01_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14591,16770.7,5.1];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14591,16770.7,5.1];";
 		};
 		class Item37
 		{
@@ -473,7 +473,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14598.2,16772,5.925];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14598.2,16772,5.925];";
 		};
 		class Item38
 		{
@@ -484,7 +484,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14596.5,16773.2,5.925];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14596.5,16773.2,5.925];";
 		};
 		class Item39
 		{
@@ -495,7 +495,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14595,16774.6,5.925];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14595,16774.6,5.925];";
 		};
 		class Item40
 		{
@@ -506,7 +506,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14596.9,16776.5,5.925];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14596.9,16776.5,5.925];";
 		};
 		class Item41
 		{
@@ -517,7 +517,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14600.4,16773.9,5.925];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14600.4,16773.9,5.925];";
 		};
 		class Item42
 		{
@@ -528,7 +528,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14598.3,16775.1,5.925];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14598.3,16775.1,5.925];";
 		};
 		class Item43
 		{
@@ -539,7 +539,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14593.1,16772.6,5.925];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14593.1,16772.6,5.925];";
 		};
 		class Item44
 		{
@@ -550,7 +550,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Laptop_device_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14594.4,16771.2,5.925];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14594.4,16771.2,5.925];";
 		};
 		class Item45
 		{
@@ -671,7 +671,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Coil_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14627.3,16800.6,5.1];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14627.3,16800.6,5.1];";
 		};
 		class Item56
 		{
@@ -726,7 +726,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Pallets_stack_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14620.5,16802.2,5.2];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14620.5,16802.2,5.2];";
 		};
 		class Item61
 		{
@@ -737,7 +737,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Bricks_V1_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14620.1,16806.1,5.15];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14620.1,16806.1,5.15];";
 		};
 		class Item62
 		{
@@ -748,7 +748,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Bricks_V4_F";
 			skill=0.60000002;
-			init"this allowDamage false; this enableSimulation false;this setpos[14618.6,16806,5.15];";
+			init="this allowDamage false; this enableSimulation false;this setpos[14618.6,16806,5.15];";
 		};
 		class Item63
 		{
