@@ -77,7 +77,7 @@ if (isServer) then {
 		0 setRain 0;
 		0 setFog 0;
 
-			sleep 300;
+			sleep 1*90;
 
 
 };
