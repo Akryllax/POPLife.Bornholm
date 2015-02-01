@@ -7,7 +7,7 @@
 	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,[_barrioBandera,_jugador,_barrioName]];
 
 	Ejemplo -> poner en una bandera de esas 
-	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,[this,_this select 2,"Las 3000"]];
+	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,[_this select 0,_this select 1,"Las 3000"]];
 */
 private["_group","_hideout","_action","_cpRate","_cP","_progressBar","_title","_titleText","_ui","_flagTexture"];
 _params= _this select 3;
