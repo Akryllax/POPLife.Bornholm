@@ -12,7 +12,7 @@ _fnc_muevete = {
         _pos = position camello2;
        
 
-    ruta2 = (group camello) addWaypoint [(getMarkerPos _sitios), 0];
+    ruta2 = (group camello2) addWaypoint [(getMarkerPos _sitios), 0];
     ruta2 setWaypointType "MOVE";
     ruta2 setWaypointBehaviour "CARELESS";
     ruta2 setWaypointSpeed "FULL";
@@ -45,6 +45,7 @@ camello2 spawn {
 
  //marcador
   _markerID = format["marker_%1",floor(random 1000)];
+  _pos = position camello2;
  markerCamello2 = createMarker [ _markerID, _pos];
 markerCamello2 setMarkerColor "ColorGreen";
 markerCamello2 setMarkerText "CAMELLO";

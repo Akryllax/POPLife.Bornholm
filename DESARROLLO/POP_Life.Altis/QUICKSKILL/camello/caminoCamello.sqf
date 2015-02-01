@@ -49,6 +49,7 @@ camello spawn {
 
   //marcador
   _markerID = format["marker_%1",floor(random 1000)];
+  _pos = position camello;
  markerCamello1 = createMarker [ _markerID, _pos];
 markerCamello1 setMarkerColor "ColorGreen";
 markerCamello1 setMarkerText "CAMELLO";
