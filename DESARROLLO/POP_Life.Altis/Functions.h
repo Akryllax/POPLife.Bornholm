@@ -453,7 +453,7 @@ class WarBlast
     };
     class Policias
     {
-    	file = "WarBlast\Policia";
+    	file = "WarBlast\Policias";
     	class lacrimogeno {};
     	
     };
