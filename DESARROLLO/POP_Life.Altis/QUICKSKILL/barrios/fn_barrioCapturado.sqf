@@ -91,8 +91,6 @@ if(_time < 1) then{
 
 			};
 
-
-
 				
 	       if(_randomRecompensa == 3) then{
 				//damos dinero
@@ -105,9 +103,7 @@ if(_time < 1) then{
 			if(_randomRecompensa == 4 || _randomRecompensa == 5) then{
 				//damos coche
 			    _darVehiculo == "si"
-			};
-
-			
+			};			
 
 
 		
@@ -131,9 +127,9 @@ if(_time < 1) then{
 				};
 				if(_pagar_random >= 0 && _pagar_random <=19) then {
 					//TRG 21 %20
-					_ammoBox addWeaponCargoGlobal ["arifle_TRG21_F",1];
+					_ammoBox addWeaponCargoGlobal ["arifle_TRG21_F",2];
 					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",6];
+					_ammoBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",12];
 				};
 				if(_pagar_random >= 20 && _pagar_random <=39) then {
 					//MK20 Camo %20
@@ -190,7 +186,7 @@ if(_time < 1) then{
 				    _ammoBox addMagazineCargoGlobal ["RPG32_HE_F",3];
                 };
 				//tiene 60 segundos pa coger el arma
-				_ammoBox spawn { sleep 60; deleteVehicle _this; }
+				_ammoBox spawn { sleep 120; deleteVehicle _this; }
 
 			};//end dar armas
 
