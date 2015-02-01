@@ -105,7 +105,7 @@ client_session_list = [];
 		sleep (30 * 60);
 		{
 			_x setVariable["sellers",[],true];
-		} foreach [Dealer_1];
+		} foreach [Dealer_1,Dealer_2];
 	};
 };
 
