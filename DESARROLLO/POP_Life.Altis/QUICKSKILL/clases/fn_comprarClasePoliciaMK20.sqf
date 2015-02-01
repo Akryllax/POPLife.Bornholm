@@ -1,7 +1,7 @@
 #include <macro.h>
 waitUntil {!isNull player};
 
-_precio = 20000;
+_precio = 10000;
 _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 
 
