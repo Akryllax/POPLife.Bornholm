@@ -258,7 +258,7 @@ class playerSettings {
 				};
 			};
 		};
-
+		/*
 		class ButtonGangList : Life_RscButtonMenu {
 			idc = 2012;
 			text = "$STR_PM_WantedList";
@@ -267,7 +267,7 @@ class playerSettings {
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
-		};
+		};*/
 
 		class ButtonKeys : Life_RscButtonMenu {
 			idc = 2013;
