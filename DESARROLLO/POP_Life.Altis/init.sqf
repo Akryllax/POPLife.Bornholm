@@ -70,6 +70,32 @@ if (isServer) then {
 
 ////////////end robo banco avanzado/////////////////////////////////
 
+///camellitos!!
+ //marcador
+  _markerID = format["marker_%1",floor(random 1000)];
+  _pos = position camello2;
+ markerCamello2 = createMarker [ _markerID, _pos];
+markerCamello2 setMarkerColor "ColorGreen";
+markerCamello2 setMarkerText "CAMELLO";
+markerCamello2 setMarkerType "mil_warning";
+
+
+
+  //marcador camello 1
+  _markerID = format["marker_%1",floor(random 1000)];
+  _pos = position camello;
+ markerCamello1 = createMarker [ _markerID, _pos];
+markerCamello1 setMarkerColor "ColorGreen";
+markerCamello1 setMarkerText "CAMELLO";
+markerCamello1 setMarkerType "mil_warning";
+
+
+
+
+
+
+
+
 //quitar efectos de lluvia ninja code by quik
 [] spawn {
 

@@ -43,13 +43,7 @@ camello2 spawn {
 //poner el camello persona inmortal, puta gente k haze bugs se merezen una patada en los huevos, hijosd e puta
  { _x allowDamage false;}forEach crew camello2;
 
- //marcador
-  _markerID = format["marker_%1",floor(random 1000)];
-  _pos = position camello2;
- markerCamello2 = createMarker [ _markerID, _pos];
-markerCamello2 setMarkerColor "ColorGreen";
-markerCamello2 setMarkerText "CAMELLO";
-markerCamello2 setMarkerType "mil_warning";
+
 
 [] call _fnc_muevete;
 

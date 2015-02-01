@@ -14,12 +14,7 @@ _fnc_muevete = {
     ruta setWaypointBehaviour "CARELESS";
     ruta setWaypointSpeed "FULL";
 
-        _pos = position camello;
-        _markerID = format["marker_%1",floor(random 1000)];
-        _marker = createMarker [ _markerID, _pos];
-        _marker setMarkerColor "ColorGreen";
-        _marker setMarkerText "CAMELLO";
-        _marker setMarkerType "mil_warning";
+
     
     while {true} do {
         if ((camello distance (getMarkerPos _sitios)) < 30) exitWith {};
@@ -47,13 +42,7 @@ camello spawn {
 //poner el camello persona inmortal, puta gente k haze bugs se merezen una patada en los huevos, hijosd e puta
  { _x allowDamage false;}forEach crew camello;
 
-  //marcador
-  _markerID = format["marker_%1",floor(random 1000)];
-  _pos = position camello;
- markerCamello1 = createMarker [ _markerID, _pos];
-markerCamello1 setMarkerColor "ColorGreen";
-markerCamello1 setMarkerText "CAMELLO";
-markerCamello1 setMarkerType "mil_warning";
+
 
 [] call _fnc_muevete;
 
