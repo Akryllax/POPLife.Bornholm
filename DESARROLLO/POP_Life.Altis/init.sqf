@@ -72,22 +72,22 @@ if (isServer) then {
 
 ///camellitos!!
  //marcador
-  _markerID = format["marker_%1",floor(random 1000)];
+  _markerID = "Camello2_mrk";
   _pos = position camello2;
- markerCamello2 = createMarkerLocal [ _markerID, _pos];
-markerCamello2 setMarkerColorLocal "ColorGreen";
-markerCamello2 setMarkerTextLocal "CAMELLO";
-markerCamello2 setMarkerTypeLocal "mil_warning";
+ markerCamello2 = createMarker [ _markerID, _pos];
+markerCamello2 setMarkerColor "ColorGreen";
+markerCamello2 setMarkerText "CAMELLO";
+markerCamello2 setMarkerType "mil_warning";
 
 
 
   //marcador camello 1
-  _markerID = format["marker_%1",floor(random 1000)];
+    _markerID = "Camello1_mrk";
   _pos = position camello;
- markerCamello1 = createMarkerLocal [ _markerID, _pos];
-markerCamello1 setMarkerColorLocal "ColorGreen";
-markerCamello1 setMarkerTextLocal "CAMELLO";
-markerCamello1 setMarkerTypeLocal "mil_warning";
+ markerCamello1 = createMarker [ _markerID, _pos];
+markerCamello1 setMarkerColor "ColorGreen";
+markerCamello1 setMarkerText "CAMELLO";
+markerCamello1 setMarkerType "mil_warning";
 
 
 
