@@ -23,6 +23,7 @@ _tiempoCaptura = 30;
 _barrioMetros = 250;
 
 _barrioBandera setVariable["nombreBarrio",_barrioName,true];
+
 debugCaptura = _barrioBandera getVariable ["capturadoPor",false];
 debugNombreBarrio = _barrioBandera getVariable ["nombreBarrio",false];
 
@@ -33,7 +34,7 @@ if(count _bandaNombre == 0) exitWith {titleText["Crea una banda para poder captu
 if((_barrioBandera getVariable ["capturando",false])) exitWith {titleText["Ya estan capturando el barrio","Plain"];};
 
 //ya es de tu banda
-if((_barrioBandera getVariable ["capturadoPor",false]==_bandaNombre)) exitWith {titleText["Este barrio ya es de tu banda","Plain"];};
+if((_barrioBandera getVariable ["capturadoPor",""]==_bandaNombre)) exitWith {titleText["Este barrio ya es de tu banda","Plain"];};
 
 
 _barrioBandera setVariable["capturando",true,true];
