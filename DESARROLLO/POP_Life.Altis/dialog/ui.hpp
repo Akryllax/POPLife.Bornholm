@@ -17,7 +17,7 @@ class playerHUD
 		{
 	
 			idc = -1;
-			text = "icons\food.paa";
+			text = "textures\icons\food.paa";
 			x = safeZoneX+safeZoneW-0.15; y = safeZoneY+safeZoneH-0.400;
 			w = 0.032; h = 0.042;
 			colorBackground[] = COLOR_HALF_BLACK;
@@ -27,7 +27,7 @@ class playerHUD
 		{
 	
 			idc = -1;
-			text = "icons\water.paa";
+			text = "textures\icons\water.paa";
 			x = safeZoneX+safeZoneW-0.15; y = safeZoneY+safeZoneH-0.353;
 			w = 0.032; h = 0.042;
 			colorBackground[] = COLOR_HALF_BLACK;
@@ -37,7 +37,7 @@ class playerHUD
 		{
 		
 			idc = -1;
-			text = "icons\salud.paa";
+			text = "textures\icons\salud.paa";
 			x = safeZoneX+safeZoneW-0.15; y = safeZoneY+safeZoneH-0.306;
 			w = 0.032; h = 0.042;
 			colorBackground[] = COLOR_HALF_BLACK;
