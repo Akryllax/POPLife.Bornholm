@@ -1,0 +1,1 @@
+[] execvm "WarBlast\Camello.sqf"
