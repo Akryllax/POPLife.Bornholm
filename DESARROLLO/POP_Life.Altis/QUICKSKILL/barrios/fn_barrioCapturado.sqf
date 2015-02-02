@@ -50,7 +50,7 @@ while {_time > 0} do {
 		};
 
 	//mientras este dentro de rango que cuente el tiempo
-	if(_metros < _metros_cancelar_robo) then{
+	if(_metros < _barrioMetros) then{
 
 		//contar tiempo
 		_time = _time - 1;
@@ -78,9 +78,7 @@ if(_time < 1) then{
 
 		if(_pagar_ladron == "si" and alive _jugador) then {
 
-		    //informar al jugador
-			_nombreRoboHINT = "Recompensa obtenida!!Ves a la bandera a recogerlo";
-			hint _nombreRoboHINT;
+
 
 			//random para dar alguna cosita a la banda! :)
 
@@ -89,13 +87,20 @@ if(_time < 1) then{
 			if(_randomRecompensa == 0 || _randomRecompensa == 1) then{
 				//damos armas
 				_darArmas = "si";
+						    //informar al jugador
+			_nombreRoboHINT = "Recompensa obtenida!!Ves a la bandera a recogerlo";
+			hint _nombreRoboHINT;
 
 			};
 
 				
 	       if(_randomRecompensa == 3) then{
 				//damos dinero
+				_dinero = 100000 + round random 200000;
 			life_cash = life_cash + _dinero;
+					    //informar al jugador
+			_nombreRoboHINT = format ["Has obtenido %1 de la venta de drogas en el barrio",_dinero];
+			hint _nombreRoboHINT;
 			};
 
 
@@ -103,7 +108,10 @@ if(_time < 1) then{
 
 			if(_randomRecompensa == 4 || _randomRecompensa == 5) then{
 				//damos coche
-			    _darVehiculo == "si"
+			    _darVehiculo == "si";
+			      //informar al jugador
+			_nombreRoboHINT = "Recompensa obtenida!!Ves a la bandera a recogerlo";
+			hint _nombreRoboHINT;
 			};			
 
 
