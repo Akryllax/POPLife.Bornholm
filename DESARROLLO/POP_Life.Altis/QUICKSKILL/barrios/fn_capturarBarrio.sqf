@@ -12,8 +12,8 @@
 private["_barrioBandera","_jugador","_barrioName","_capturado","_tiempoCaptura","_barrioMetros"];
 
 
-_barrioBandera= [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
-_jugador= [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
+_barrioBandera= _this select 0;
+_jugador= player;
  _id = _this select 2; 
 
 _barrioName = _this select 3;
@@ -28,7 +28,7 @@ _barrioBandera setVariable["nombreBarrio",_barrioName,true];
 
 
 //sino tiene una banda que la creee
-if(_bandaNombre == ""}) exitWith {titleText[localize "STR_GNOTF_CreateGang","PLAIN"];};
+if(_bandaNombre == ""}) exitWith {titleText[localize "Crea una banda para poder capturar el barrio","PLAIN"];};
 //ya la estan caapturando
 if((_barrioBandera getVariable ["capturando",false])) exitWith {hint "Ya estan capturando el barrio";};
 
