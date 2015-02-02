@@ -107,7 +107,7 @@ if(_tiempoCaptura<1)then{
 		[_barrioBandera,_jugador,_barrioMetros,_marker] spawn QUICK_fnc_barrioCapturado;
 
 		//quitar action
-		_barrioBandera removeAction _id;
+		//_barrioBandera removeAction _id;
 
 
 	};
