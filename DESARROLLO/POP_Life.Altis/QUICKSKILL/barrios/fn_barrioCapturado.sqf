@@ -15,7 +15,7 @@ _dinero = 				0;
 _darArmas =             "no";
 _darVehiculo =          "no";
 _pagar_ladron = 		false;
-_time = 				600;
+_time = 				60;
 _metros = 				_barrioBandera distance _jugador;
 
 //Error checking 'n shit, fucking Arma 3
@@ -34,7 +34,7 @@ while {_time > 0} do {
 	_metros =  _barrioBandera distance _jugador;
 
 	//abandono zona de robo
-	if(_metros > _barrioBandera) then{
+	if(_metros > _barrioMetros) then{
 
 		hint "Has abandonado el barrio, y has perdido su control";
 		_barrioBandera setVariable["capturadoPor","",true];
