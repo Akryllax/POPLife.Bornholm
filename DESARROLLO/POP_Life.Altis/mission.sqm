@@ -95,7 +95,7 @@ class Mission
 		"A3_Structures_F_EPA_Civ_Constructions",
 		"A3_Structures_F_EPB_Civ_Graffiti",
 		"A3_Structures_F_EPC_Items_Electronics",
-		"A3_Soft_F_MRAP_02"
+		"A3_Soft_F_TruckHeavy"
 	};
 	addOnsAuto[]=
 	{
@@ -107,7 +107,7 @@ class Mission
 		"A3_Modules_F_Curator_Curator",
 		"A3_Characters_F_BLUFOR",
 		"A3_Characters_F_INDEP",
-		"A3_Soft_F_MRAP_02",
+		"A3_Soft_F_TruckHeavy",
 		"A3_Structures_F_EPC_Civ_Accessories",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Structures_F_System",
@@ -3477,17 +3477,17 @@ class Mission
 		};
 		class Item136
 		{
-			side="EAST";
+			side="GUER";
 			class Vehicles
 			{
 				items=1;
 				class Item0
 				{
-					position[]={3988.9341,18.64563,13628.597};
-					azimut=42.8783;
+					position[]={3998.7158,18.725809,13638.501};
+					azimut=43.0611;
 					id=157;
-					side="EAST";
-					vehicle="O_MRAP_02_F";
+					side="GUER";
+					vehicle="I_Truck_02_covered_F";
 					leader=1;
 					skill=0.60000002;
 					text="Dealer_1";
@@ -3497,17 +3497,17 @@ class Mission
 		};
 		class Item137
 		{
-			side="EAST";
+			side="GUER";
 			class Vehicles
 			{
 				items=1;
 				class Item0
 				{
-					position[]={17009.154,16.138796,12865.856};
-					azimut=50.340401;
+					position[]={17018.533,16.014612,12873.859};
+					azimut=49.098812;
 					id=158;
-					side="EAST";
-					vehicle="O_MRAP_02_F";
+					side="GUER";
+					vehicle="I_Truck_02_covered_F";
 					leader=1;
 					skill=0.60000002;
 					text="Dealer_2";
@@ -3518,7 +3518,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1412;
+		items=1416;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -18354,6 +18354,50 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
 			skill=0.60000002;
+		};
+		class Item1412
+		{
+			position[]={3981.3962,18.3981,13628.405};
+			azimut=-266.569;
+			offsetY=-0.0107651;
+			id=1571;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.60000002;
+			init="this addAction[""Capturar Barrio"",QUICK_fnc_capturarBarrio,""Las 3000""];";
+		};
+		class Item1413
+		{
+			position[]={14017.303,16.457485,16422.459};
+			azimut=-266.569;
+			offsetY=-0.0107651;
+			id=1572;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.60000002;
+			init="this addAction[""Capturar Barrio"",QUICK_fnc_capturarBarrio,""Los Junquillos""];";
+		};
+		class Item1414
+		{
+			position[]={15274.896,16.359671,17560.053};
+			azimut=-266.569;
+			offsetY=-0.0107651;
+			id=1573;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.60000002;
+			init="this addAction[""Capturar Barrio"",QUICK_fnc_capturarBarrio,""Las Barranquillas""];";
+		};
+		class Item1415
+		{
+			position[]={17005.943,16.177498,12865.553};
+			azimut=-266.569;
+			offsetY=-0.0107651;
+			id=1574;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.60000002;
+			init="this addAction[""Capturar Barrio"",QUICK_fnc_capturarBarrio,""Cañada Real""];";
 		};
 	};
 	class Markers
