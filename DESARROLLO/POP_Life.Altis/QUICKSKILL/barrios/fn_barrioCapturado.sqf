@@ -36,7 +36,7 @@ while {_time > 0} do {
 	//abandono zona de robo
 	if(_metros > _barrioBandera) then{
 
-		hintSilent format["Has abandonado el barrio estabas a %1m del barrio",round (_metros)];
+		hint "Has abandonado el barrio, y has perdido su control";
 		_barrioBandera setVariable["capturadoPor","",true];
 		_time = 0;
 		_pagar_ladron = "no";
@@ -62,8 +62,6 @@ while {_time > 0} do {
 };//end while
 
 
-//esperar a que
-waitUntil { _time >1;};
 
 if(_time < 1) then{
 
@@ -81,7 +79,7 @@ if(_time < 1) then{
 	if(_pagar_ladron == "si" and alive _ladron) then {
 
 		    //informar al jugador
-			_nombreRoboHINT = "Recompensa obtenida!!Vez a la bandera a recogerlo";
+			_nombreRoboHINT = "Recompensa obtenida!!Ves a la bandera a recogerlo";
 			hint _nombreRoboHINT;
 
 			//random para dar alguna cosita a la banda! :)
@@ -136,9 +134,9 @@ if(_time < 1) then{
 				};
 				if(_pagar_random >= 20 && _pagar_random <=39) then {
 					//MK20 Camo %20
-					_ammoBox addWeaponCargoGlobal ["arifle_Mk20_F",1];
-					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",5];
+					_ammoBox addWeaponCargoGlobal ["arifle_Mk20_F",3];
+					_ammoBox addItemCargoGlobal ["optic_Aco",2];
+					_ammoBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",8];
 				};
 				 if(_pagar_random >= 40 && _pagar_random <=49) then {
 					//Katiba %10
@@ -154,9 +152,9 @@ if(_time < 1) then{
 				};
 				if(_pagar_random >= 60 && _pagar_random <=69) then {
 					//MK 18 %10
-				    _ammoBox addWeaponCargoGlobal ["srifle_EBR_F",1];
+				    _ammoBox addWeaponCargoGlobal ["srifle_EBR_F",3];
 				    _ammoBox addItemCargoGlobal ["optic_DMS",1];
-				    _ammoBox addMagazineCargoGlobal ["20Rnd_762x51_Mag",5];
+				    _ammoBox addMagazineCargoGlobal ["20Rnd_762x51_Mag",15];
 				};
 				if(_pagar_random >= 70 && _pagar_random <=76) then {
 					//mk200 %7
@@ -247,8 +245,12 @@ if(_time < 1) then{
 			};//end dar vehiculo
 
 			//reiniciar counter recompensas
+			if(_pagar_ladron == "si";)then{
+				
+				[_barrioBandera,_jugador,_barrioMetros,_marcador] spawn QUICK_fnc_barrioCapturado;
+			};
 					
-		[_barrioBandera,_jugador,_barrioMetros,_marcador] spawn QUICK_fnc_barrioCapturado;
+		
 
 
 	};//end pagar ladron
