@@ -82,7 +82,7 @@ if(_time < 1) then{
 
 			//random para dar alguna cosita a la banda! :)
 
-			_randomRecompensa = round random 5;
+			_randomRecompensa = round random 6;
 
 			if(_randomRecompensa == 0 || _randomRecompensa == 1) then{
 				//damos armas
@@ -108,7 +108,7 @@ if(_time < 1) then{
 
 			if(_randomRecompensa == 4 || _randomRecompensa == 5) then{
 				//damos coche
-			    _darVehiculo == "si";
+			    _darVehiculo ="si";
 			      //informar al jugador
 			_nombreRoboHINT = "Recompensa obtenida!!Ves a la bandera a recogerlo";
 			hint _nombreRoboHINT;
@@ -148,15 +148,15 @@ if(_time < 1) then{
 				};
 				 if(_pagar_random >= 40 && _pagar_random <=49) then {
 					//Katiba %10
-					_ammoBox addWeaponCargoGlobal ["arifle_Katiba_F",1];
-					_ammoBox addItemCargoGlobal ["optic_Aco",1];
-					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_green",5];
+					_ammoBox addWeaponCargoGlobal ["arifle_Katiba_F",2];
+					_ammoBox addItemCargoGlobal ["optic_Aco",2];
+					_ammoBox addMagazineCargoGlobal ["30Rnd_65x39_caseless_green",8];
 				};
 				if(_pagar_random >= 50 && _pagar_random <=59) then {
 				    //mx_SW %10
 					_ammoBox addWeaponCargoGlobal ["arifle_MX_SW_F",1];
-					_ammoBox addItemCargoGlobal ["optic_Arco",1];
-					_ammoBox addMagazineCargoGlobal ["100Rnd_65x39_caseless_mag",2];
+					_ammoBox addItemCargoGlobal ["optic_Arco",3];
+					_ammoBox addMagazineCargoGlobal ["100Rnd_65x39_caseless_mag",4];
 				};
 				if(_pagar_random >= 60 && _pagar_random <=69) then {
 					//MK 18 %10
