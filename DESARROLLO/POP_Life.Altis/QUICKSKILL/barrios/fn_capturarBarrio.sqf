@@ -39,7 +39,7 @@ if((_barrioBandera getVariable ["capturadoPor",""]==_bandaNombre)) exitWith {hin
 _barrioBandera setVariable["capturando",true,true];
 
 life_action_inUse = true;
-hint format["Capturando el barrio %1",_bandaNombre];
+hint format["Capturando el barrio de %1",_barrioName];
 //timer
 while {_tiempoCaptura > 1} do
 {    
@@ -59,6 +59,8 @@ while {_tiempoCaptura > 1} do
 	sleep 1;
 	
 	_tiempoCaptura = _tiempoCaptura - 1;	
+
+		hintSilent format["Tiempo para capturar barrio: %1 ", [((_tiempoCaptura)/60)+.01,"HH:MM"] call BIS_fnc_timetostring];
 	
 };
 
