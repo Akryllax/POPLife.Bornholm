@@ -939,6 +939,8 @@ class Mission
 					id=38;
 					side="GUER";
 					vehicle="I_Story_Colonel_F";
+					player="PLAY CDG";
+					forceHeadlessClient=1;
 					leader=1;
 					skill=0.60000002;
 					text="hc_1";
