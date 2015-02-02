@@ -43,7 +43,7 @@ hint format["Capturando el barrio de %1",_barrioName];
 //timer
 while {_tiempoCaptura > 0} do
 {    
-	globalOLAkse = _tiempoCaptura;
+
 
 	//si muere matamos al timer
   if(!alive _jugador)then{
@@ -67,7 +67,6 @@ while {_tiempoCaptura > 0} do
 	
 };
 
-globalOLAkse = _tiempoCaptura;
 
 //ha terminado el timer
 if(_tiempoCaptura<1)then{
