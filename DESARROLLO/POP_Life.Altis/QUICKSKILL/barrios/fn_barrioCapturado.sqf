@@ -74,9 +74,9 @@ if(_time < 1) then{
 	};
 
 
-	//si a roabdo pagar al ladron
+		//si a roabdo pagar al ladron
 
-	if(_pagar_ladron == "si" and alive _ladron) then {
+		if(_pagar_ladron == "si" and alive _jugador) then {
 
 		    //informar al jugador
 			_nombreRoboHINT = "Recompensa obtenida!!Ves a la bandera a recogerlo";
@@ -244,11 +244,10 @@ if(_time < 1) then{
 
 			};//end dar vehiculo
 
-			//reiniciar counter recompensas
-			if(_pagar_ladron == "si";)then{
+			
 				
 				[_barrioBandera,_jugador,_barrioMetros,_marcador] spawn QUICK_fnc_barrioCapturado;
-			};
+			
 					
 		
 
