@@ -1,7 +1,7 @@
 /*
 	File: fn_chopShopSell.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sells the selected vehicle off.
 */
@@ -11,7 +11,7 @@ _control = ((findDisplay 39400) displayCtrl 39402);
 _price = _control lbValue (lbCurSel _control);
 _vehicle = _control lbData (lbCurSel _control);
 _vehicle = call compile format["%1", _vehicle];
-_nearVehicles = nearestObjects [getMarkerPos life_chopShop,["Car","Truck"],25];
+_nearVehicles = nearestObjects [getMarkerPos life_chopShop,["Car","Truck","Air"],25];
 _vehicle = _nearVehicles select _vehicle;
 if(isNull _vehicle) exitWith {};
 
