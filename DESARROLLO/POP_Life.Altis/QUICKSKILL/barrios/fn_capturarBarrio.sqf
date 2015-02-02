@@ -64,9 +64,8 @@ while {_tiempoCaptura > 1} do
 
 		hintSilent format["Tiempo para capturar: %1 ", [((_tiempoCaptura)/60)+.01,"HH:MM"] call BIS_fnc_timetostring];
 	
-};
 
-waitUntil { _tiempoCaptura >1};
+
 
 //ha terminado el timer
 if(_tiempoCaptura<1)then{
@@ -122,3 +121,5 @@ if(_tiempoCaptura<1)then{
 
 
 };
+
+};//end while

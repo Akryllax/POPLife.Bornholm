@@ -62,8 +62,6 @@ while {_time > 0} do {
 };//end while
 
 
-//esperar a que termine el timer
-waitUntil { _time >1 };
 
 if(_time < 1) then{
 
