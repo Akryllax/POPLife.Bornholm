@@ -91,7 +91,7 @@ class CfgFunctions
 			file = "\life_server\Functions\Systems";
 			class managesc {};
 			class cleanup {};
-			class huntingZone {};
+//			class huntingZone {};
 			class getID {};
 			class vehicleCreate {};
 			class vehicleDead {};
