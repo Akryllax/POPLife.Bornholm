@@ -21,7 +21,7 @@ _bandaNombre = (group _jugador) getVariable "gang_name";
 _capturado = 0;
 _tiempoCaptura = 30;
 _barrioMetros = 250;
-_barrioBandera setVariable["capturadoPor","",true];
+
 _barrioBandera setVariable["nombreBarrio",_barrioName,true];
 
 
