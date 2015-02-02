@@ -69,6 +69,8 @@ while {_tiempoCaptura > 1} do
 //ha terminado el timer
 if(_tiempoCaptura<1)then{
 
+	hint "";
+
 
 	if( alive _jugador )then{
 		//han capturado el barrio
