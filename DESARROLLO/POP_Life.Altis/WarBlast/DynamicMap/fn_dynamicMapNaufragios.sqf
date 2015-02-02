@@ -14,7 +14,7 @@ life_action_gathering = true; // WarBlast: Preveemos el exploit
 if(vehicle player != player) exitWith {/*hint localize "STR_NOTF_GatherVeh";*/};
 
 {
-	if(round((getPosATL player) distance (getMarkerPos _x)) < 10) exitWith {_zone = _x;};
+	if(round((getPosATL player) distance (getMarkerPos _x)) < 20) exitWith {_zone = _x;};
 } foreach _resourceZones;
 
 if(_zone == "") exitWith {

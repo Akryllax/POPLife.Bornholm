@@ -11,7 +11,7 @@ _zone = "";
 if(vehicle player != player) exitWith {/*hint localize "STR_NOTF_GatherVeh";*/};
 
 {
-	if(player distance (getMarkerPos _x) < 10) exitWith {_zone = _x;};
+	if(player distance (getMarkerPos _x) < 20) exitWith {_zone = _x;};
 } foreach _resourceZones;
 
 if(_zone == "") exitWith {
