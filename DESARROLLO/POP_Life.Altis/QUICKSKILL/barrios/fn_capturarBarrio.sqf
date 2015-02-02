@@ -28,7 +28,7 @@ _barrioBandera setVariable["nombreBarrio",_barrioName,true];
 
 
 //sino tiene una banda que la creee
-if(isNil {grpPlayer getVariable "gang_name"}) exitWith {titleText[localize "STR_GNOTF_CreateGang","PLAIN"];};
+if(_bandaNombre == ""}) exitWith {titleText[localize "STR_GNOTF_CreateGang","PLAIN"];};
 //ya la estan caapturando
 if((_barrioBandera getVariable ["capturando",false])) exitWith {hint "Ya estan capturando el barrio";};
 
