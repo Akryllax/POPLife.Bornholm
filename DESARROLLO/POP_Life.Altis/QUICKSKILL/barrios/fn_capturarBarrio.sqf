@@ -13,7 +13,7 @@ private["_barrioBandera","_jugador","_barrioName","_capturado","_tiempoCaptura",
 
 
 _barrioBandera= _this select 0;
-_jugador= player;
+_jugador= _this select 1;
  _id = _this select 2; 
 
 _barrioName = _this select 3;
