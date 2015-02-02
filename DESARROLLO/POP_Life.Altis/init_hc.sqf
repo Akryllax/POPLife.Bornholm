@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 //WoP?
 _drg = getPos Drg;
 _dst = ["Camello2", "Camello3"] call BIS_fnc_selectRandom;
@@ -32,3 +33,6 @@ _mov = {
 [] call _mov;
 =======
 >>>>>>> parent of fd7fafc... Prueba 1
+=======
+[] execvm "WarBlast\Camello.sqf"
+>>>>>>> parent of 8e5454b... 2
