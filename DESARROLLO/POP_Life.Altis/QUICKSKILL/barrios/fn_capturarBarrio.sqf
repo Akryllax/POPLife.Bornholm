@@ -30,10 +30,10 @@ _barrioBandera setVariable["nombreBarrio",_barrioName,true];
 //sino tiene una banda que la creee
 if(_bandaNombre == "") exitWith {titleText["Crea una banda para poder capturar el barrio","Plain"];};
 //ya la estan caapturando
-if((_barrioBandera getVariable ["capturando",false])) exitWith {hint "Ya estan capturando el barrio";};
+if((_barrioBandera getVariable ["capturando",false])) exitWith {titleText["Ya estan capturando el barrio","Plain"];};
 
 //ya es de tu banda
-if((_barrioBandera getVariable ["capturadoPor",""]==_bandaNombre)) exitWith {hint "Este barrio ya es de tu banda";};
+if((_barrioBandera getVariable ["capturadoPor",""]==_bandaNombre)) exitWith {titleText["Este barrio ya es de tu banda","Plain"];};
 
 
 _barrioBandera setVariable["capturando",true,true];
@@ -49,6 +49,8 @@ while {_tiempoCaptura > 1} do
   	_tiempoCaptura =0;
 
   };
+
+  _jugador enableSimulation false;
 
 	
 	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
@@ -109,7 +111,8 @@ if(_tiempoCaptura<1)then{
 		titleText["Has fallado al capturar el barrio.","PLAIN"];
 
 	};
-
+	
+	_jugador enableSimulation true;
 	life_action_inUse = false;
 	_barrioBandera setVariable["capturando",false,true];
 
