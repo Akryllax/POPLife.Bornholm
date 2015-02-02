@@ -9,7 +9,7 @@
 	Ejemplo -> poner en una bandera de esas 
 	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,"Las 3000"];
 */
-private["_params","_barrioBandera","_jugador","_barrioName","_capturado","_tiempoCaptura","_barrioMetros"];
+private["_barrioBandera","_jugador","_barrioName","_capturado","_tiempoCaptura","_barrioMetros"];
 
 
 _barrioBandera= [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
