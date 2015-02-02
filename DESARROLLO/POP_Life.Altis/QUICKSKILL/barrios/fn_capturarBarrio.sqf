@@ -41,7 +41,7 @@ _barrioBandera setVariable["capturando",true,true];
 life_action_inUse = true;
 hint format["Capturando el barrio de %1",_barrioName];
 //timer
-while {_tiempoCaptura > 1} do
+while {_tiempoCaptura > 0} do
 {    
 	globalOLAkse = _tiempoCaptura;
 
@@ -72,9 +72,7 @@ globalOLAkse = _tiempoCaptura;
 //ha terminado el timer
 if(_tiempoCaptura<1)then{
 
-	globalOLAkse = _tiempoCaptura;
 
-	globalifTroll = "si";
 
 	hint "";
 
