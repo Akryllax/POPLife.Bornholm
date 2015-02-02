@@ -939,11 +939,9 @@ class Mission
 					id=38;
 					side="GUER";
 					vehicle="I_Story_Colonel_F";
-					player="PLAY CDG";
-					forceHeadlessClient=1;
 					leader=1;
 					skill=0.60000002;
-					text="headlessclient";
+					text="hc_1";
 					description="Headless Client";
 				};
 			};
@@ -3505,7 +3503,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={17018.533,16.014612,12873.859};
+					position[]={17018.416,16.016998,12873.665};
 					azimut=49.098812;
 					id=158;
 					side="GUER";
@@ -3520,7 +3518,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1416;
+		items=1415;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -18359,25 +18357,23 @@ class Mission
 		};
 		class Item1412
 		{
-			position[]={3981.3962,18.3981,13628.405};
+			position[]={3981.3574,18.353647,13636.938};
 			azimut=-266.569;
 			offsetY=-0.0107651;
 			id=1571;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			skill=0.60000002;
-			init="this addAction[""Capturar Barrio"",QUICK_fnc_capturarBarrio,""Las 3000""];";
 		};
 		class Item1413
 		{
-			position[]={14017.303,16.457485,16422.459};
+			position[]={14017.153,15.649209,16431.1};
 			azimut=-266.569;
 			offsetY=-0.0107651;
 			id=1572;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			skill=0.60000002;
-			init="this addAction[""Capturar Barrio"",QUICK_fnc_capturarBarrio,""Los Junquillos""];";
 		};
 		class Item1414
 		{
@@ -18388,18 +18384,6 @@ class Mission
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			skill=0.60000002;
-			init="this addAction[""Capturar Barrio"",QUICK_fnc_capturarBarrio,""Las Barranquillas""];";
-		};
-		class Item1415
-		{
-			position[]={17005.943,16.177498,12865.553};
-			azimut=-266.569;
-			offsetY=-0.0107651;
-			id=1574;
-			side="EMPTY";
-			vehicle="FlagPole_F";
-			skill=0.60000002;
-			init="this addAction[""Capturar Barrio"",QUICK_fnc_capturarBarrio,""Cañada Real""];";
 		};
 	};
 	class Markers
