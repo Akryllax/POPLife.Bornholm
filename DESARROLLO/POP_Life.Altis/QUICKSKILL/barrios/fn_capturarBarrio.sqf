@@ -23,8 +23,8 @@ _tiempoCaptura = 30;
 _barrioMetros = 250;
 
 _barrioBandera setVariable["nombreBarrio",_barrioName,true];
-
-
+debugCaptura = _barrioBandera getVariable ["capturadoPor",false];
+debugNombreBarrio = _barrioBandera getVariable ["nombreBarrio",false];
 
 
 //sino tiene una banda que la creee
@@ -71,7 +71,7 @@ while {_tiempoCaptura > 0} do
 //ha terminado el timer
 if(_tiempoCaptura<1)then{
 
-debugBarrio = _barrioBandera getVariable ["capturadoPor",false];
+debugCapturadoPor = _barrioBandera getVariable ["capturadoPor",false];
 
 	hint "";
 
@@ -80,17 +80,6 @@ debugBarrio = _barrioBandera getVariable ["capturadoPor",false];
 		//han capturado el barrio
 
 		titleText["El barrio ha sido capturado.","PLAIN"];
-		_flagTexture = [
-		"\A3\Data_F\Flags\Flag_red_CO.paa",
-		"\A3\Data_F\Flags\Flag_green_CO.paa",
-		"\A3\Data_F\Flags\Flag_blue_CO.paa",
-		"\A3\Data_F\Flags\Flag_white_CO.paa",
-		"\A3\Data_F\Flags\flag_fd_red_CO.paa",
-		"\A3\Data_F\Flags\flag_fd_green_CO.paa",
-		"\A3\Data_F\Flags\flag_fd_blue_CO.paa",
-		"\A3\Data_F\Flags\flag_fd_orange_CO.paa"
-		] call BIS_fnc_selectRandom;
-		_barrioBandera setFlagTexture _flagTexture;
 
 		
 		_barrioBandera setVariable["capturadoPor",_bandaNombre,true];
