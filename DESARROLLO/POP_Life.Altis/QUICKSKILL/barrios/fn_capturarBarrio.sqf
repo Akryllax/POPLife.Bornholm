@@ -7,19 +7,23 @@
 	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,[_barrioBandera,_jugador,_barrioName]];
 
 	Ejemplo -> poner en una bandera de esas 
-	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,[_this select 0,_this select 1,"Las 3000"]];
+	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,"Las 3000"];
 */
-private["_group","_hideout","_action","_cpRate","_cP","_progressBar","_title","_titleText","_ui","_flagTexture"];
-_params= _this select 3;
+private["_params","_barrioBandera","_jugador","_barrioName","_capturado","_tiempoCaptura","_barrioMetros"];
 
-_barrioBandera= _params select 0;
-_jugador=_params select 1;
-_barrioName = _params select 2;
+
+_barrioBandera= [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
+_jugador= [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
+ _id = _this select 2; 
+
+_barrioName = _this select 3;
 _bandaNombre = (group _jugador) getVariable "gang_name";
 _capturado = 0;
 _tiempoCaptura = 300;
 _barrioMetros = 250;
 _barrioBandera setVariable["capturadoPor","",true];
+_barrioBandera setVariable["nombreBarrio",_barrioName,true];
+
 
 
 
@@ -92,12 +96,14 @@ if(_tiempoCaptura<1)then{
 		//iniciar recompensas
 		[_barrioBandera,_jugador,_barrioMetros,_marker] spawn QUICK_fnc_barrioCapturado;
 
+		//quitar action
+		_barrioBandera removeAction _id;
+
 
 	};
 
 	if(!alive _jugador)then{
 		//han capturado el barrio
-
 		titleText["Has fallado al capturar el barrio.","PLAIN"];
 
 	};

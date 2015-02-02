@@ -5,7 +5,7 @@
 
 */
 
-private ["_nombreRobo", "_time", "_metros", "_metros_cancelar_robo", "_dinero", "_pagar_ladron",  "_jugador", "_darArmas","_darVehiculo"];
+private ["_barrioBandera", "_jugador", "_barrioMetros", "_marcador", "_dinero", "_darArmas",  "_darVehiculo", "_pagar_ladron","_time","_metros"];
 
 _barrioBandera =  		_this select 0;
 _jugador = 				_this select 1;
@@ -19,12 +19,11 @@ _time = 				600;
 _metros = 				_barrioBandera distance _jugador;
 
 //Error checking 'n shit, fucking Arma 3
-if(_nombreRobo == "") exitWith{hint "Error, _nombreRobo is null";};
 if(_time < 0) exitWith{ hint "Error, _time is null";};
-if(isNull _barrioBandera) exitWith{ hint "Error, _vendedor is null"};
-if(isNull _jugador) exitWith{ hint "Error, _ladron is null"};
+if(isNull _barrioBandera) exitWith{ hint "Error, _barrioBandera is null"};
+if(isNull _jugador) exitWith{ hint "Error, _jugador is null"};
 if(_dinero != 0) exitWith{ hint "Error, _dinero debe empezar a 0"};
-if(_barrioMetros < 0) exitWith{ hint "Error, _metros_cancelar_robo is null"};
+if(_barrioMetros < 0) exitWith{ hint "Error, _barrioMetros < 0"};
 
 
 
@@ -37,7 +36,7 @@ while {_time > 0} do {
 	//abandono zona de robo
 	if(_metros > _barrioBandera) then{
 
-		hintSilent format["Has abandonado el barrio estabas a %1m del vendedor",round (_metros)];
+		hintSilent format["Has abandonado el barrio estabas a %1m del barrio",round (_metros)];
 		_barrioBandera setVariable["capturadoPor","",true];
 		_time = 0;
 		_pagar_ladron = "no";
@@ -243,8 +242,14 @@ if(_time < 1) then{
 
 			};//end dar vehiculo
 
+			//reiniciar counter recompensas
+					
+		[_barrioBandera,_jugador,_barrioMetros,_marcador] spawn QUICK_fnc_barrioCapturado;
+
 
 	};//end pagar ladron
+
+	
 
 	//terminar script
 	if(true) exitWith{[]spawn { sleep 3;hint "";} };
