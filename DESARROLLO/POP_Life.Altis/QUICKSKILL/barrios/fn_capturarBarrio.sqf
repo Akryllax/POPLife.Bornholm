@@ -62,7 +62,7 @@ while {_tiempoCaptura > 1} do
 	
 	_tiempoCaptura = _tiempoCaptura - 1;	
 
-		hintSilent format["Tiempo para capturar barrio: %1 ", [((_tiempoCaptura)/60)+.01,"HH:MM"] call BIS_fnc_timetostring];
+		hintSilent format["Tiempo para capturar: %1 ", [((_tiempoCaptura)/60)+.01,"HH:MM"] call BIS_fnc_timetostring];
 	
 };
 
@@ -111,7 +111,7 @@ if(_tiempoCaptura<1)then{
 		titleText["Has fallado al capturar el barrio.","PLAIN"];
 
 	};
-	
+
 	_jugador enableSimulation true;
 	life_action_inUse = false;
 	_barrioBandera setVariable["capturando",false,true];
