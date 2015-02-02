@@ -557,7 +557,9 @@ class Quickskill
 	{
 		file = "QUICKSKILL\barrios";
 		class capturarBarrio {};
+		class timerCapturarBarrio{};
 		class barrioCapturado{};
+		class timerbarrioCapturado{};
 		
 	};
 
