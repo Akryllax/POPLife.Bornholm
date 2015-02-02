@@ -50,7 +50,7 @@ while {_tiempoCaptura > 1} do
 
   };
 
-  _jugador enableSimulation false;
+  disableUserInput true;
 
 	
 	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
@@ -64,6 +64,12 @@ while {_tiempoCaptura > 1} do
 
 		hintSilent format["Tiempo para capturar: %1 ", [((_tiempoCaptura)/60)+.01,"HH:MM"] call BIS_fnc_timetostring];
 	
+};
+
+waitUntil {
+  // code...
+
+  _tiempoCaptura >1;
 };
 
 //ha terminado el timer
@@ -114,7 +120,7 @@ if(_tiempoCaptura<1)then{
 
 	};
 
-	_jugador enableSimulation true;
+	disableUserInput false;
 	life_action_inUse = false;
 	_barrioBandera setVariable["capturando",false,true];
 
