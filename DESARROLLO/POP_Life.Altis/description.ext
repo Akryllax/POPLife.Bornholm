@@ -3,7 +3,7 @@ onLoadName = "Altis Life RPG PoP";
 onLoadMission = "Creado por Tonic y editado por PoP";
 loadscreen = "textures\billboards\server_info.jpg";
 
-joinUnassigned = 1;
+joinUnassigned = 0;
 respawn = BASE;
 respawndelay = 1;
 disabledAI = true;
@@ -53,7 +53,7 @@ class CfgSounds
 		sound[] = {"\sounds\camera_shot.ogg",1,1};
 		titles[] = {};
 	};
-	
+
 	class copsiren
 	{
 		name = "copsiren";
