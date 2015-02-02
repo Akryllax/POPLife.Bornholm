@@ -70,7 +70,7 @@ if(_time < 1) then{
 		hint "Has perdido el control del barrio";
 		_barrioBandera setVariable["capturadoPor","",true];
 
-		deleteMarker _marcador ;
+		deleteMarker _marcador;
 	};
 
 
