@@ -33,7 +33,7 @@ if(count _bandaNombre == 0) exitWith {titleText["Crea una banda para poder captu
 if((_barrioBandera getVariable ["capturando",false])) exitWith {titleText["Ya estan capturando el barrio","Plain"];};
 
 //ya es de tu banda
-if((_barrioBandera getVariable ["capturadoPor",""]==_bandaNombre)) exitWith {titleText["Este barrio ya es de tu banda","Plain"];};
+if((_barrioBandera getVariable ["capturadoPor",false]==_bandaNombre)) exitWith {titleText["Este barrio ya es de tu banda","Plain"];};
 
 
 _barrioBandera setVariable["capturando",true,true];
@@ -71,7 +71,7 @@ while {_tiempoCaptura > 0} do
 //ha terminado el timer
 if(_tiempoCaptura<1)then{
 
-
+debugBarrio = _barrioBandera getVariable ["capturadoPor",false];
 
 	hint "";
 
@@ -104,7 +104,7 @@ if(_tiempoCaptura<1)then{
 		_marker setMarkerType "mil_warning";
 
 		//iniciar recompensas
-		[_barrioBandera,_jugador,_barrioMetros,_marker] spawn QUICK_fnc_barrioCapturado;
+		[_barrioBandera,_jugador,_barrioMetros,_marker,_bandaNombre] spawn QUICK_fnc_barrioCapturado;
 
 		//quitar action
 		//_barrioBandera removeAction _id;

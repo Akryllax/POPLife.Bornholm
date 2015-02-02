@@ -11,6 +11,7 @@ _barrioBandera =  		_this select 0;
 _jugador = 				_this select 1;
 _barrioMetros = 		_this select 2;
 _marcador =             _this select 3;
+_bandaNombre =          _this select 4;
 _dinero = 				0;
 _darArmas =             "no";
 _darVehiculo =          "no";
@@ -29,6 +30,19 @@ if(_barrioMetros < 0) exitWith{ hint "Error, _barrioMetros < 0"};
 
 
 while {_time > 0} do {
+
+	//si el barrio ha cambiado de manos
+	_capturadoLife = _barrioBandera getVariable ["capturadoPor",""];
+	_capturadoPor = _bandaNombre;
+
+	if(_capturadoLife != _capturadoPor) then {
+
+		hint "te han robado el control del barrio";
+		_time = 0;
+		_pagar_ladron = "no";
+		sleep 1;
+
+	};
 
 	//mirar la distancia entre ladron i vendedor
 	_metros =  _barrioBandera distance _jugador;
@@ -252,7 +266,7 @@ if(_time < 1) then{
 
 			};//end dar vehiculo
 
-			
+			 sleep 3;
 				
 				[_barrioBandera,_jugador,_barrioMetros,_marcador] spawn QUICK_fnc_barrioCapturado;
 			
