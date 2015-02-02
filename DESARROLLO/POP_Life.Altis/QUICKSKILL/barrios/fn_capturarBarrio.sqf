@@ -66,11 +66,7 @@ while {_tiempoCaptura > 1} do
 	
 };
 
-waitUntil {
-  // code...
-
-  _tiempoCaptura >1;
-};
+waitUntil { _tiempoCaptura >1};
 
 //ha terminado el timer
 if(_tiempoCaptura<1)then{
