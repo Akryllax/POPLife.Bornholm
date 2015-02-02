@@ -28,7 +28,7 @@ _barrioBandera setVariable["nombreBarrio",_barrioName,true];
 
 
 //sino tiene una banda que la creee
-if(_bandaNombre == ""}) exitWith {titleText["Crea una banda para poder capturar el barrio"];};
+if(_bandaNombre == "") exitWith {titleText["Crea una banda para poder capturar el barrio","Plain"];};
 //ya la estan caapturando
 if((_barrioBandera getVariable ["capturando",false])) exitWith {hint "Ya estan capturando el barrio";};
 
