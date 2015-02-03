@@ -69,7 +69,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Factory_Main_ruins_F";
 			skill=0.60000002;
-			init=";this setpos [8840.11,15306.9,-2.025];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8840.11,15306.9,-2.025];";
 		};
 		class Item1
 		{
@@ -80,7 +80,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_d_Stone_HouseBig_V1_F";
 			skill=0.60000002;
-			init=";this setpos [8945.62,15479.5,0.174999];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8945.62,15479.5,0.174999];";
 		};
 		class Item2
 		{
@@ -91,7 +91,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Castle_01_tower_ruins_F";
 			skill=0.60000002;
-			init=";this setpos [8692.05,15494.3,0.974999];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8692.05,15494.3,0.974999];";
 		};
 		class Item3
 		{
@@ -101,7 +101,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_WIP_F";
 			skill=0.60000002;
-			init=";this setpos [9000.03,15486.2,0];";
+			init="this allowDamage false;this enableSimulation false;this setpos[9000.03,15486.2,0];";
 		};
 		class Item4
 		{
@@ -112,7 +112,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Coil_F";
 			skill=0.60000002;
-			init=" this enableSimulation false;;this setpos [9029.67,15506.2,2.225];";
+			init=";this allowDamage false;this enableSimulation false;this setpos[9029.67,15506.2,2.225];";
 		};
 		class Item5
 		{
@@ -123,7 +123,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Coil_F";
 			skill=0.60000002;
-			init=" this enableSimulation false;;this setpos [9027.45,15505.6,0.075];";
+			init=";this allowDamage false;this enableSimulation false;this setpos[9027.45,15505.6,0.075];";
 		};
 		class Item6
 		{
@@ -134,7 +134,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Timbers_F";
 			skill=0.60000002;
-			init=";this setpos [9033.19,15494.1,0];";
+			init="this allowDamage false;this enableSimulation false;this setpos[9033.19,15494.1,0];";
 		};
 		class Item7
 		{
@@ -145,7 +145,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Timbers_F";
 			skill=0.60000002;
-			init=";this setpos [9031.4,15494.9,0];";
+			init="this allowDamage false;this enableSimulation false;this setpos[9031.4,15494.9,0];";
 		};
 		class Item8
 		{
@@ -156,7 +156,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Timbers_F";
 			skill=0.60000002;
-			init=";this setpos [9032.25,15493.9,0.9];";
+			init="this allowDamage false;this enableSimulation false;this setpos[9032.25,15493.9,0.9];";
 		};
 		class Item9
 		{
@@ -167,7 +167,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Coil_F";
 			skill=0.60000002;
-			init=" this enableSimulation false;;this setpos [9031.2,15504.2,0.075];";
+			init=";this allowDamage false;this enableSimulation false;this setpos[9031.2,15504.2,0.075];";
 		};
 		class Item10
 		{
@@ -178,7 +178,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Coil_F";
 			skill=0.60000002;
-			init=" this enableSimulation false;;this setpos [9030.61,15508.3,0.075];";
+			init=";this allowDamage false;this enableSimulation false;this setpos[9030.61,15508.3,0.075];";
 		};
 		class Item11
 		{
@@ -189,7 +189,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Wreck_Offroad_F";
 			skill=0.60000002;
-			init=";this setpos [8948.29,15525.6,0.924999];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8948.29,15525.6,0.924999];";
 		};
 		class Item12
 		{
@@ -200,7 +200,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Wreck_Van_F";
 			skill=0.60000002;
-			init=";this setpos [8949.19,15527.8,0.0249989];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8949.19,15527.8,0.0249989];";
 		};
 		class Item13
 		{
@@ -211,7 +211,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Wreck_Skodovka_F";
 			skill=0.60000002;
-			init=";this setpos [8954.07,15535.1,0.0249989];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8954.07,15535.1,0.0249989];";
 		};
 		class Item14
 		{
@@ -222,7 +222,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Wreck_Skodovka_F";
 			skill=0.60000002;
-			init=";this setpos [8948.85,15525.8,0.0249989];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8948.85,15525.8,0.0249989];";
 		};
 		class Item15
 		{
@@ -233,7 +233,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_u_Addon_01_V1_dam_F";
 			skill=0.60000002;
-			init=";this setpos [8982.96,15538.3,0.199999];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8982.96,15538.3,0.199999];";
 		};
 		class Item16
 		{
@@ -244,7 +244,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_Gate_F";
 			skill=0.60000002;
-			init=" this enableSimulation false;;this setpos [8980.29,15528.5,0.0249989];";
+			init=";this allowDamage false;this enableSimulation false;this setpos[8980.29,15528.5,0.0249989];";
 		};
 		class Item17
 		{
@@ -255,7 +255,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=" this enableSimulation false;;this setpos [8976,15536.3,0.0249989];";
+			init=";this allowDamage false;this enableSimulation false;this setpos[8976,15536.3,0.0249989];";
 		};
 		class Item18
 		{
@@ -266,7 +266,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=" this enableSimulation false;;this setpos [8985.57,15513.7,0.0249989];";
+			init=";this allowDamage false;this enableSimulation false;this setpos[8985.57,15513.7,0.0249989];";
 		};
 		class Item19
 		{
@@ -277,7 +277,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=" this enableSimulation false;;this setpos [8984.43,15519.9,0.0249989];";
+			init=";this allowDamage false;this enableSimulation false;this setpos[8984.43,15519.9,0.0249989];";
 		};
 		class Item20
 		{
@@ -288,7 +288,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Wreck_HMMWV_F";
 			skill=0.60000002;
-			init=";this setpos [8982.92,15520.3,-0.0750011];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8982.92,15520.3,-0.0750011];";
 		};
 		class Item21
 		{
@@ -299,7 +299,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Wreck_Car3_F";
 			skill=0.60000002;
-			init=";this setpos [8975.44,15534.4,-0.0750011];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8975.44,15534.4,-0.0750011];";
 		};
 		class Item22
 		{
@@ -310,7 +310,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_d_House_Small_01_V1_F";
 			skill=0.60000002;
-			init=";this setpos [9022.42,15522.2,1.1];";
+			init="this allowDamage false;this enableSimulation false;this setpos[9022.42,15522.2,1.1];";
 		};
 		class Item23
 		{
@@ -321,7 +321,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Wreck_Slammer_hull_F";
 			skill=0.60000002;
-			init=";this setpos [8934.57,15542.8,-0.0750011];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8934.57,15542.8,-0.0750011];";
 		};
 		class Item24
 		{
@@ -332,7 +332,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_d_Addon_02_V1_F";
 			skill=0.60000002;
-			init=";this setpos [8989.46,15543,0.199999];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8989.46,15543,0.199999];";
 		};
 		class Item25
 		{
@@ -343,7 +343,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
-			init=" this enableSimulation false;;this setpos [8971.69,15542.8,0.0249989];";
+			init=";this allowDamage false;this enableSimulation false;this setpos[8971.69,15542.8,0.0249989];";
 		};
 		class Item26
 		{
@@ -354,7 +354,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_u_House_Big_01_V1_dam_F";
 			skill=0.60000002;
-			init=";this setpos [9094.87,15558.5,0.0499989];";
+			init="this allowDamage false;this enableSimulation false;this setpos[9094.87,15558.5,0.0499989];";
 		};
 		class Item27
 		{
@@ -365,7 +365,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Unfinished_Building_01_F";
 			skill=0.60000002;
-			init=";this setpos [9134.37,15569.3,0.199999];";
+			init="this allowDamage false;this enableSimulation false;this setpos[9134.37,15569.3,0.199999];";
 		};
 		class Item28
 		{
@@ -376,7 +376,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Unfinished_Building_02_F";
 			skill=0.60000002;
-			init=";this setpos [9136.99,15582.1,0.199999];";
+			init="this allowDamage false;this enableSimulation false;this setpos[9136.99,15582.1,0.199999];";
 		};
 		class Item29
 		{
@@ -387,7 +387,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_WIP_ruins_F";
 			skill=0.60000002;
-			init=";this setpos [8952.5,15693,-0.225001];";
+			init="this allowDamage false;this enableSimulation false;this setpos[8952.5,15693,-0.225001];";
 		};
 	};
 };
