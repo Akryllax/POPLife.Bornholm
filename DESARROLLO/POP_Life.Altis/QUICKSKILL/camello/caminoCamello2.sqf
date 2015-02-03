@@ -45,13 +45,5 @@ camello2 spawn {
 
 camello2 setBehaviour "SAFE";
 
-_handlerHitCamello2 = camello2 addMPEventHandler ["MPHit",{
-
-// hint format ["%1 was hit by %2",name (_this select 0),name (_this select 1)];
- _troller = _this select 1;
- _troller setDamage +=0.6;
-
-}];
-
 [] call _fnc_muevete;
 
