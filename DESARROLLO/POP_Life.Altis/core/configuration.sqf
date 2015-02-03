@@ -31,10 +31,10 @@ life_respawned = false;
 life_removeWanted = false;
 life_action_gathering = false;
 life_smartphoneTarget = ObjNull;
+//Variables POP Ordenaditas ;D
 life_god = false;
 life_frozen = false;
 life_markers = false;
-//Variables POP Ordenaditas ;D
 life_is_alive = true;
 life_civ_position = nil;
 life_esposas = ObjNull;
@@ -42,9 +42,6 @@ life_llaveesposas = ObjNull;
 life_protestando = false;
 life_sentarse = false;
 life_bailando = false;
-
-
-
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
@@ -64,17 +61,8 @@ __CONST__(life_gangUpgradeMultipler,2.5); //BLAH
 
 __CONST__(life_enableFatigue,FALSE); //Enable / Disable the ARMA 3 Fatigue System
 
-
-
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
-
-
-
-
-
-
-
 
 /*
 *****************************

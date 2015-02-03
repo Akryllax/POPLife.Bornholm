@@ -324,6 +324,84 @@ switch (_code) do
 			[] call ROS_fnc_protestar;
 		};
 	};*/
+	case 59: // F1
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		hintc "Diese Taste wurde vom System blockiert";
+		_handled = false;
+	};
+
+	case 60: // F2
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		hintc "Diese Taste wurde vom System blockiert";
+		_handled = false;
+	};
+	/*
+	case 61: // F3
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		_handled = false;
+	};
+    */
+	case 62: // F4
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		_handled = false;
+	};
+
+	case 63: // F5
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		_handled = false;
+	};
+
+	case 64: //F6 key
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		_handled = false;
+	};
+
+	case 65: // F7 Key
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		_handled = false;
+	};
+
+	case 66: //F8 key
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		_handled = false;
+	};
+
+	case 67: //F9 key
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		_handled = false;
+	};
+
+	case 68: //10 key
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		_handled = false;
+	};
+
+	case 211: //DELETE key
+	{
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		closeDialog 0;
+		_handled = false;
+	};
 };
 
 _handled;

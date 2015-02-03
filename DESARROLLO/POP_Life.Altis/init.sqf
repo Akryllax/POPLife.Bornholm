@@ -11,11 +11,11 @@ enableSaving[false,false];
 life_versionInfo = "Altis Life RPG v5";
 [] execVM "briefing.sqf"; //Load Briefing
 [] execVM "KRON_Strings.sqf";
-//mejorar fps
+//cosas de War
 [] execVM "WarBlast\init.sqf";
+"BIS_fnc_MP_packet" addPublicVariableEventHandler {_this call life_fnc_MPexec};
 
 StartProgress = true;
-
 /////////////////////////////////////////////////////
 //robo avanzado banco de ica adaptado x quick xD
 /////////////////////////////////////////////////////
@@ -89,35 +89,22 @@ markerCamello1 setMarkerColor "ColorGreen";
 markerCamello1 setMarkerText "CAMELLO";
 markerCamello1 setMarkerType "mil_warning";
 
-
-
-
-
-
-
-
-//quitar efectos de lluvia ninja code by quik
+//quitar efectos de lluvia ninja code by quik +nija code arreglando lo de quick....si esque....
 [] spawn {
-
-	    0 setOvercast 0;
-		0 setRain 0;
-		0 setFog 0;
-
-			sleep 1*90;
-
-
+    while{true} do{
+        0 setRain 0;
+        0 setOvercast 0;
+        0 setFog 0;
+        sleep 30;
+    };
 };
-
-[] spawn {
+//cuando este terminado activamos
+/*[] spawn {
 	waitUntil { time > 0 };
 	[] call life_fnc_initRem;
 };
-
-//Remove grass crap...
-setTerrainGrid 50;
-
+*/
 //quitar fatiga Y RADIO
-player enableFatigue false;
 enableRadio false;
 
 //crear canal de emergencia y administracion
@@ -126,10 +113,6 @@ if(isServer) then {
 	EMSChannel	 = radioChannelCreate [[1,0.4,0,1], "Emergencias", "%UNIT_NAME", []];
 	publicVariable "adminChannel";
 	publicVariable "EMSChannel";
-
-
-
-
 } else {
 
 };
@@ -138,9 +121,6 @@ if(isServer) then {
 if !(hasInterface or isServer) then {
   execVM "init_hc.sqf";
 };
-
-
-
 //poner opacity 0 a markadores de helicrash!!
 {_x setMarkerAlphaLocal 0} forEach ["helicrash_1","helicrash_2","helicrash_3","helicrash_4","wreck_1","wreck_2","wreck_3","wreck_4"];
 War_loop = compile (preprocessFileLineNumbers "WarBlast\Musica\War_loop.sqf");
