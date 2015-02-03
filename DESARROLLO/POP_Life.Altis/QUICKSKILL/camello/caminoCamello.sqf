@@ -11,7 +11,7 @@ _fnc_muevete = {
 
     ruta = (group camello) addWaypoint [(getMarkerPos _sitios), 0];
     ruta setWaypointType "MOVE";
-    ruta setWaypointBehaviour "CARELESS";
+    ruta setWaypointBehaviour "SAFE";
     ruta setWaypointSpeed "FULL";
 
 
@@ -40,7 +40,9 @@ camello spawn {
 
 
 //poner el camello persona inmortal, puta gente k haze bugs se merezen una patada en los huevos, hijosd e puta
- { _x allowDamage false;}forEach crew camello;
+ { _x allowDamage false;_x setBehaviour "SAFE";}forEach crew camello;
+
+camello setBehaviour "SAFE";
 
  _handlerHitCamello = camello addMPEventHandler ["MPHit",{
 
