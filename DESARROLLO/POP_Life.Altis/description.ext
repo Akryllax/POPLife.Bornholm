@@ -46,7 +46,7 @@ class CfgFunctions
 class CfgSounds
 {
 	sounds[] = {};
-
+	
 	class PhotoSound
 	{
 		name = "PhotoSound";
