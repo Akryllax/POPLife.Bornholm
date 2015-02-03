@@ -1,7 +1,7 @@
 /*
 	File: fn_copSiren.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Starts the cop siren sound for other players
 */
@@ -18,6 +18,6 @@ while {true} do
 	if(!alive _vehicle) exitWith {};
 	if(isNull _vehicle) exitWith {};
 	_vehicle say3D "copsiren";
-	sleep 48.412;
+	sleep 11;
 	if(!(_vehicle getVariable "siren")) exitWith {};
 };

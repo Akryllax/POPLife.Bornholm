@@ -46,7 +46,7 @@ class CfgFunctions
 class CfgSounds
 {
 	sounds[] = {};
-	
+
 	class PhotoSound
 	{
 		name = "PhotoSound";
@@ -57,7 +57,7 @@ class CfgSounds
 	class copsiren
 	{
 		name = "copsiren";
-		sound[] = {"\sounds\cop_long.ogg", 2.0, 1};
+		sound[] = {"\sounds\police.ogg", 2.0, 1};
 		titles[] = {};
 	};
 
