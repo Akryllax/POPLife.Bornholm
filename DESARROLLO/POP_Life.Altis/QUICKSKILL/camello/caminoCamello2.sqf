@@ -43,7 +43,13 @@ camello2 spawn {
 //poner el camello persona inmortal, puta gente k haze bugs se merezen una patada en los huevos, hijosd e puta
  { _x allowDamage false;}forEach crew camello2;
 
+_handlerHitCamello2 = camello2 addMPEventHandler ["MPHit",{
 
+// hint format ["%1 was hit by %2",name (_this select 0),name (_this select 1)];
+ _troller = _this select 1;
+ _troller setDamage +=0.6;
+
+}];
 
 [] call _fnc_muevete;
 
