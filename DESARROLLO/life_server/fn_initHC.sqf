@@ -1,7 +1,7 @@
 /*
 	File: fn_initHC.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Server checks for the headless client and initializes?
 */
@@ -13,11 +13,11 @@ HC_DC = ["HC_Disconnected","onPlayerDisconnected",{if(!isNil "HC_UID" && {_uid =
 
 //Setup the PVEH so the server can update the HC_UID if the headless client was swapped.
 "life_HC_isActive" addPublicVariableEventHandler {
-	HC_UID = getPlayerUID hc_1;
+	HC_UID = getPlayerUID headlessclient;
 };
 
 //Let's see if he is here on mission start..
-if(isNil "HC_UID" && {!isNil "hc_1"} && {!isNull hc_1}) then {
-	HC_UID = getPlayerUID hc_1;
+if(isNil "HC_UID" && {!isNil "headlessclient"} && {!isNull headlessclient}) then {
+	HC_UID = getPlayerUID headlessclient;
 	life_HC_isActive = true;
 };
