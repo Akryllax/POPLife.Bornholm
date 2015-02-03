@@ -943,9 +943,12 @@ class Mission
 					id=38;
 					side="GUER";
 					vehicle="I_Story_Colonel_F";
+					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="hc_1";
+					text="headlessclient";
+					forceHeadlessClient=1;
+					init="if (profileName == 'headlessclient') then {selectPlayer this};";
 					description="Headless Client";
 				};
 			};
@@ -3493,7 +3496,7 @@ class Mission
 					side="GUER";
 					vehicle="I_Truck_02_covered_F";
 					leader=1;
-					skill=0.60000002;
+					skill=0.99;
 					text="Dealer_1";
 					init="removeAllWeapons this; this allowDamage false;  this addAction[""Camello"",life_fnc_virt_menu,""heroin"",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == civilian ']; this addAction[""Question Dealer"",life_fnc_questionDealer,"""",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == west && !life_action_inUse ']; camello = this;  _camelloMuevete = execVM ""QUICKSKILL\camello\caminoCamello.sqf"";";
 				};
@@ -3513,7 +3516,7 @@ class Mission
 					side="GUER";
 					vehicle="I_Truck_02_covered_F";
 					leader=1;
-					skill=0.60000002;
+					skill=0.99;
 					text="Dealer_2";
 					init="removeAllWeapons this; this allowDamage false;  this addAction[""Camello"",life_fnc_virt_menu,""heroin"",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == civilian ']; this addAction[""Question Dealer"",life_fnc_questionDealer,"""",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == west && !life_action_inUse ']; camello2 = this;  _camelloMuevete = execVM ""QUICKSKILL\camello\caminoCamello2.sqf"";";
 				};
