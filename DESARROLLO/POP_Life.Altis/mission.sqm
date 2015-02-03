@@ -943,10 +943,11 @@ class Mission
 					id=38;
 					side="GUER";
 					vehicle="I_Story_Colonel_F";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="headlessclient";
+					init="this allowDamage false;if (profileName==""headlessclient"") then {selectPlayer this;};";
 					description="Headless Client";
 					syncId=11;
 					synchronizations[]={12};
