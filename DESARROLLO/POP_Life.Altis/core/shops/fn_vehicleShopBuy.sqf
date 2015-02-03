@@ -1,7 +1,7 @@
 /*
 	File: fn_vehicleShopBuy.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Does something with vehicle purchasing.
 */
@@ -42,9 +42,6 @@ hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >
 //Spawn the vehicle and prep it.
 if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle = createVehicle [_className,[0,0,999],[], 0, "NONE"];
-	if(_className == "C_SUV_01_F") then {
-		_vehicle setCenterOfMass [-0.010813,-0.506166,-0.6];
-	};
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false;
 	_hs = nearestObjects[getMarkerPos _spawnPoint,["Land_Hospital_side2_F"],50] select 0;
@@ -57,9 +54,6 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 } else {
 	_vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
-	if(_className == "C_SUV_01_F") then {
-		_vehicle setCenterOfMass [-0.010813,-0.506166,-0.6];
-	};
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false; //Temp disable damage handling..
 	_vehicle lock 2;
@@ -78,13 +72,13 @@ switch(playerSide) do {
 	case west: {
 		[_vehicle,"cop_offroad",true] spawn life_fnc_vehicleAnimate;
 	};
-	
+
 	case civilian: {
 		if((life_veh_shop select 2) == "civ" && {_className == "B_Heli_Light_01_F"}) then {
 			[_vehicle,"civ_littlebird",true] spawn life_fnc_vehicleAnimate;
 		};
 	};
-	
+
 	case independent: {
 		[_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate;
 	};
@@ -97,7 +91,7 @@ life_vehicles pushBack _vehicle;
 [[getPlayerUID player,playerSide,_vehicle,1],"TON_fnc_keyManagement",false,false] spawn life_fnc_MP;
 
 if(_mode) then {
-	if(!(_className in ["B_G_Offroad_01_armed_F","B_MRAP_01_hmg_F"])) then {
+	if(!(_className in [])) then {
 		[[(getPlayerUID player),playerSide,_vehicle,_colorIndex],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 	};
 };
