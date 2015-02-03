@@ -187,24 +187,24 @@ class Mission
 		overviewText="Altis Life RPG v5 ";
 		resistanceEast=1;
 		startWeather=0.29999998;
-		startWind=0.29999998;
+		startWind=0;
 		startWindDir=20;
 		startWaves=0.12;
 		startGust=0.099999994;
-		forecastWeather=0.29999998;
+		forecastWeather=0.1;
 		forecastWind=0.29999998;
 		forecastWaves=0.12;
 		forecastGust=0.099999994;
 		forecastWindDir=360;
 		wavesForced=1;
 		windForced=1;
-		year=2035;
+		year=2014;
 		month=7;
 		day=6;
 		hour=22;
 		minute=0;
-		startFogDecay=0.0049333;
-		forecastFogDecay=0.0049333;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 	class Groups
 	{
@@ -22077,8 +22077,8 @@ class OutroWin
 		day=6;
 		hour=14;
 		minute=15;
-		startFogDecay=0.0049333;
-		forecastFogDecay=0.0049333;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 };
 class OutroLoose
