@@ -946,11 +946,9 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="headlessclient";
-					init="this allowDamage false;if (profileName==""headlessclient"") then {selectPlayer this;};";
+					init="if (profileName == 'hc_1') then {selectPlayer this};";
 					description="Headless Client";
-					syncId=11;
-					synchronizations[]={12};
+					forceHeadlessClient=1;
 				};
 			};
 		};
