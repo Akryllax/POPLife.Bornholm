@@ -348,6 +348,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_70";
 					description="Civ 70";
+					syncId=0;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -371,6 +373,8 @@ class Mission
 					text="master_group";
 					init="this enableSimulation false; this allowDamage false; this hideObject true;";
 					description="Master Group for NPC's";
+					syncId=1;
+					synchronizations[]={94,97,93,95,98,96,99,100,0,101,102,87,86,85,84,83,88,89,90,91,92,73,74,75,76,77,82,81,80,79,78,63,64,65,66,67,68,69,70,71,72,53,54,55,56,57,58,59,60,61,62,43,44,45,46,47,48,49,50,51,52,33,34,35,36,37,38,39,40,41,42,23,24,25,26,27,28,29,30,31,32,22,21,20,19,18,17,16,15,14,13};
 				};
 			};
 		};
@@ -411,8 +415,8 @@ class Mission
 					skill=0.60000002;
 					text="mer_1";
 					description="MERCENARIO 1";
-					syncId=0;
-					synchronizations[]={3,4,1,2,5,7,6,8};
+					syncId=2;
+					synchronizations[]={5,6,3,4,7,9,8,10};
 				};
 			};
 		};
@@ -435,8 +439,8 @@ class Mission
 					skill=0.60000002;
 					text="mer_2";
 					description="MERCENARIO 2";
-					syncId=1;
-					synchronizations[]={0};
+					syncId=3;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -458,8 +462,8 @@ class Mission
 					skill=0.60000002;
 					text="mer_3";
 					description="MERCENARIO 3";
-					syncId=2;
-					synchronizations[]={0};
+					syncId=4;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -482,8 +486,8 @@ class Mission
 					skill=0.60000002;
 					text="mer_4";
 					description="MERCENARIO 4";
-					syncId=3;
-					synchronizations[]={0};
+					syncId=5;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -506,8 +510,8 @@ class Mission
 					skill=0.60000002;
 					text="mer_5";
 					description="MERCENARIO 5";
-					syncId=4;
-					synchronizations[]={0};
+					syncId=6;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -530,8 +534,8 @@ class Mission
 					skill=0.60000002;
 					text="mer_6";
 					description="MERCENARIO 6";
-					syncId=5;
-					synchronizations[]={0};
+					syncId=7;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -554,8 +558,8 @@ class Mission
 					skill=0.60000002;
 					text="mer_7";
 					description="MERCENARIO 7";
-					syncId=6;
-					synchronizations[]={0};
+					syncId=8;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -578,8 +582,8 @@ class Mission
 					skill=0.60000002;
 					text="mer_8";
 					description="MERCENARIO 8";
-					syncId=7;
-					synchronizations[]={0};
+					syncId=9;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -602,8 +606,8 @@ class Mission
 					skill=0.60000002;
 					text="mer_9";
 					description="MERCENARIO 9";
-					syncId=8;
-					synchronizations[]={0};
+					syncId=10;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -939,10 +943,13 @@ class Mission
 					id=38;
 					side="GUER";
 					vehicle="I_Story_Colonel_F";
+					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
-					text="hc_1";
+					text="headlessclient";
 					description="Headless Client";
+					syncId=11;
+					synchronizations[]={12};
 				};
 			};
 		};
@@ -978,6 +985,8 @@ class Mission
 					skill=0.60000002;
 					text="medic_3";
 					description="MEDICOS 3";
+					syncId=12;
+					synchronizations[]={11};
 				};
 				class Item2
 				{
@@ -1026,6 +1035,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_1";
 					description="Civ 1";
+					syncId=13;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1048,6 +1059,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_2";
 					description="Civ 2";
+					syncId=14;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1070,6 +1083,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_3";
 					description="Civ 3";
+					syncId=15;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1092,6 +1107,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_4";
 					description="Civ 4";
+					syncId=16;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1114,6 +1131,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_5";
 					description="Civ 5";
+					syncId=17;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1136,6 +1155,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_6";
 					description="Civ 6";
+					syncId=18;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1158,6 +1179,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_7";
 					description="Civ 7";
+					syncId=19;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1180,6 +1203,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_8";
 					description="Civ 8";
+					syncId=20;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1202,6 +1227,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_9";
 					description="Civ 9";
+					syncId=21;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1224,6 +1251,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_10";
 					description="Civ 10";
+					syncId=22;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1246,6 +1275,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_11";
 					description="Civ 11";
+					syncId=23;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1268,6 +1299,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_12";
 					description="Civ 12";
+					syncId=24;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1290,6 +1323,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_13";
 					description="Civ 13";
+					syncId=25;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1312,6 +1347,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_14";
 					description="Civ 14";
+					syncId=26;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1334,6 +1371,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_15";
 					description="Civ 15";
+					syncId=27;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1356,6 +1395,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_16";
 					description="Civ 16";
+					syncId=28;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1379,6 +1420,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_17";
 					description="Civ 17";
+					syncId=29;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1401,6 +1444,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_18";
 					description="Civ 18";
+					syncId=30;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1423,6 +1468,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_19";
 					description="Civ 19";
+					syncId=31;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1445,6 +1492,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_20";
 					description="Civ 20";
+					syncId=32;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1467,6 +1516,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_21";
 					description="Civ 21";
+					syncId=33;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1489,6 +1540,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_22";
 					description="Civ 22";
+					syncId=34;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1511,6 +1564,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_23";
 					description="Civ 23";
+					syncId=35;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1533,6 +1588,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_24";
 					description="Civ 24";
+					syncId=36;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1555,6 +1612,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_25";
 					description="Civ 25";
+					syncId=37;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1577,6 +1636,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_26";
 					description="Civ 26";
+					syncId=38;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1600,6 +1661,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_27";
 					description="Civ 27";
+					syncId=39;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1622,6 +1685,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_28";
 					description="Civ 28";
+					syncId=40;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1644,6 +1709,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_29";
 					description="Civ 29";
+					syncId=41;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1666,6 +1733,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_30";
 					description="Civ 30";
+					syncId=42;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1688,6 +1757,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_31";
 					description="Civ 31";
+					syncId=43;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1710,6 +1781,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_32";
 					description="Civ 32";
+					syncId=44;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1732,6 +1805,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_33";
 					description="Civ 33";
+					syncId=45;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1754,6 +1829,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_34";
 					description="Civ 34";
+					syncId=46;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1776,6 +1853,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_35";
 					description="Civ 35";
+					syncId=47;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1798,6 +1877,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_36";
 					description="Civ 36";
+					syncId=48;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1821,6 +1902,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_37";
 					description="Civ 37";
+					syncId=49;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1843,6 +1926,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_38";
 					description="Civ 38";
+					syncId=50;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1865,6 +1950,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_39";
 					description="Civ 39";
+					syncId=51;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1887,6 +1974,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_40";
 					description="Civ 40";
+					syncId=52;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1909,6 +1998,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_41";
 					description="Civ 41";
+					syncId=53;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1931,6 +2022,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_42";
 					description="Civ 42";
+					syncId=54;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1953,6 +2046,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_43";
 					description="Civ 43";
+					syncId=55;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1975,6 +2070,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_44";
 					description="Civ 44";
+					syncId=56;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -1997,6 +2094,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_45";
 					description="Civ 45";
+					syncId=57;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2019,6 +2118,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_46";
 					description="Civ 46";
+					syncId=58;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2042,6 +2143,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_47";
 					description="Civ 47";
+					syncId=59;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2064,6 +2167,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_48";
 					description="Civ 48";
+					syncId=60;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2086,6 +2191,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_49";
 					description="Civ 49";
+					syncId=61;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2108,6 +2215,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_50";
 					description="Civ 50";
+					syncId=62;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2130,6 +2239,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_51";
 					description="Civ 51";
+					syncId=63;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2152,6 +2263,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_52";
 					description="Civ 52";
+					syncId=64;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2174,6 +2287,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_53";
 					description="Civ 53";
+					syncId=65;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2196,6 +2311,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_54";
 					description="Civ 54";
+					syncId=66;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2218,6 +2335,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_55";
 					description="Civ 55";
+					syncId=67;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2240,6 +2359,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_56";
 					description="Civ 56";
+					syncId=68;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2263,6 +2384,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_57";
 					description="Civ 57";
+					syncId=69;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2285,6 +2408,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_58";
 					description="Civ 58";
+					syncId=70;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2307,6 +2432,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_59";
 					description="Civ 59";
+					syncId=71;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2329,6 +2456,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_60";
 					description="Civ 60";
+					syncId=72;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2351,6 +2480,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_61";
 					description="Civ 61";
+					syncId=73;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2373,6 +2504,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_62";
 					description="Civ 62";
+					syncId=74;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2395,6 +2528,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_63";
 					description="Civ 63";
+					syncId=75;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2417,6 +2552,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_64";
 					description="Civ 64";
+					syncId=76;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2439,6 +2576,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_65";
 					description="Civ 65";
+					syncId=77;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2461,6 +2600,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_70_1";
 					description="Civ 70";
+					syncId=78;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2483,6 +2624,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_69";
 					description="Civ 69";
+					syncId=79;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2505,6 +2648,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_68";
 					description="Civ 68";
+					syncId=80;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2528,6 +2673,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_67";
 					description="Civ 67";
+					syncId=81;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2550,6 +2697,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_66";
 					description="Civ 66";
+					syncId=82;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2572,6 +2721,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_75";
 					description="Civ 75";
+					syncId=83;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2594,6 +2745,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_74";
 					description="Civ 74";
+					syncId=84;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2616,6 +2769,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_73";
 					description="Civ 73";
+					syncId=85;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2638,6 +2793,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_72";
 					description="Civ 72";
+					syncId=86;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2660,6 +2817,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_71";
 					description="Civ 71";
+					syncId=87;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2682,6 +2841,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_76";
 					description="Civ 76";
+					syncId=88;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2705,6 +2866,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_77";
 					description="Civ 77";
+					syncId=89;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2727,6 +2890,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_78";
 					description="Civ 78";
+					syncId=90;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2749,6 +2914,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_79";
 					description="Civ 79";
+					syncId=91;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2771,6 +2938,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_80";
 					description="Civ 80";
+					syncId=92;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2793,6 +2962,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_81";
 					description="Civ 81";
+					syncId=93;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2804,7 +2975,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8452.4307,105.0773,25121.172};
+					position[]={8452.5078,105.06683,25121.172};
 					azimut=29.242399;
 					special="NONE";
 					id=124;
@@ -2815,6 +2986,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_82";
 					description="Civ 82";
+					syncId=94;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2837,6 +3010,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_83";
 					description="Civ 83";
+					syncId=95;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2859,6 +3034,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_84";
 					description="Civ 84";
+					syncId=96;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2881,6 +3058,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_85";
 					description="Civ 85";
+					syncId=97;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2903,6 +3082,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_86";
 					description="Civ 86";
+					syncId=98;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2926,6 +3107,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_87";
 					description="Civ 87";
+					syncId=99;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -2948,6 +3131,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_88";
 					description="Civ 88";
+					syncId=100;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -3050,6 +3235,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_89";
 					description="Civ 70";
+					syncId=101;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -3072,6 +3259,8 @@ class Mission
 					skill=0.60000002;
 					text="civ_90";
 					description="Civ 70";
+					syncId=102;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -3489,7 +3678,9 @@ class Mission
 					side="GUER";
 					vehicle="I_Truck_02_covered_F";
 					leader=1;
-					skill=0.60000002;
+					lock="LOCKED";
+					rank="COLONEL";
+					skill=1;
 					text="Dealer_1";
 					init="removeAllWeapons this; this allowDamage false;  this addAction[""Camello"",life_fnc_virt_menu,""heroin"",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == civilian ']; this addAction[""Question Dealer"",life_fnc_questionDealer,"""",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == west && !life_action_inUse ']; camello = this;  _camelloMuevete = execVM ""QUICKSKILL\camello\caminoCamello.sqf"";";
 				};
@@ -4817,8 +5008,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
-			syncId=9;
-			synchronizations[]={9};
+			syncId=103;
+			synchronizations[]={103};
 		};
 		class Item112
 		{
@@ -12994,8 +13185,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
-			syncId=10;
-			synchronizations[]={10};
+			syncId=104;
+			synchronizations[]={104};
 		};
 		class Item907
 		{
@@ -13647,8 +13838,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
-			syncId=11;
-			synchronizations[]={11};
+			syncId=105;
+			synchronizations[]={105};
 		};
 		class Item968
 		{
@@ -13702,8 +13893,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
-			syncId=12;
-			synchronizations[]={12};
+			syncId=106;
+			synchronizations[]={106};
 		};
 		class Item973
 		{
