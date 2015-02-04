@@ -18,7 +18,7 @@ _fnc_muevete = {
     ruta2 setWaypointSpeed "NORMAL";
     
     while {true} do {
-        if ((camello2 distance (getMarkerPos _sitios2)) < 30) exitWith {};
+        if ((camello2 distance (getMarkerPos _sitios2)) < 50) exitWith {};
         sleep 1;
         _pos = position camello2;
          markerCamello2 setMarkerPos _pos;
@@ -32,7 +32,7 @@ _fnc_muevete = {
                     if(_dist<20)then{
 
                          camello setfuel 0;
-                         
+
 
                          if(true)exitWith{};
 
