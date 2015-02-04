@@ -48,12 +48,37 @@ _unit  assignItem "NVGoggles_OPFOR";
 
 
 _unit  addBackPack "B_Carryall_mcamo"; 
-mybackpack = unitBackpack _unit ;
-[[mybackpack,0,"#(rgb,8,8,3)color(0,0,0,1)"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+_mybackpack = unitBackpack _unit ;
+
+_mybackpack setObjectTextureGlobal [0, "#(rgb,8,8,3)color(0,0,0,1)"];
+
+_unit spawn {
+    while { alive player && uniform player isEqualTo "U_B_CombatUniform_mcam"} do {
+    
+        player setObjectTextureGlobal [0, "textures\TRAJES\merc.jpg"];
+    
+        sleep 60;
+    };
+};
+
+
+_unit  addBackPack "B_Carryall_mcamo"; 
+_mybackpack = unitBackpack _unit ;
+
+_mybackpack setObjectTextureGlobal [0, "#(rgb,8,8,3)color(0,0,0,1)"];
+
+_unit spawn {
+    while { alive player && uniform player isEqualTo "U_B_CombatUniform_mcam"} do {
+    
+        player setObjectTextureGlobal [0, "textures\TRAJES\admin.jpg"];
+    
+        sleep 60;
+    };
+};
 
 
 
-[[_unit,0,"textures\TRAJES\merc.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+
 
 reload _unit;
 if(true) exitWith{hint "Clase Mercenario equipada";[] spawn { sleep 5;hint "";} };
