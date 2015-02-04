@@ -1,0 +1,20 @@
+BIS_fnc_crows
+//para k te apunte una flecha a algo
+BIS_fnc_dirIndicator
+BIS_fnc_flamesEffect
+BIS_fnc_help
+fn_incapacitatedEffect.sqf
+BIS_fnc_jukebox
+BIS_fnc_markerPath
+//transportes publico para altis?
+BIS_fnc_transportService
+
+BIS_fnc_taskCreate
+BIS_fnc_taskCurrent
+
+//crea tormentas de arena wtf
+BIS_fnc_sandstorm
+
+BIS_fnc_countdown
+BIS_fnc_cinemaBorder
+BIS_fnc_camera
