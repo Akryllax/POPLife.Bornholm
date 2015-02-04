@@ -946,9 +946,8 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="headlessclient";
 					forceHeadlessClient=1;
-					init="if (profileName == 'headlessclient') then {selectPlayer this};";
+                    init="this allowDamage false;if (profileName==""headlessclient"") then {selectPlayer this;};"
 					description="Headless Client";
 				};
 			};
