@@ -58,7 +58,7 @@ class CfgSounds
 	class copsiren
 	{
 		name = "copsiren";
-		sound[] = {"\sounds\police.ogg", 2.0, 1};
+		sound[] = {"\sounds\police.ogg", 0.9, 1};
 		titles[] = {};
 	};
 
@@ -154,7 +154,7 @@ class CfgSounds
 	class bar
 	{
 		name = "bar";
-		sound[] = {"\sounds\bar.ogg",0.7,1.1};
+		sound[] = {"\sounds\bar.ogg",1,1};
 		titles[] = {};
 	};
 };
