@@ -1,3 +1,4 @@
+// this addAction["Equipar Clase ADMIN",QUICK_fnc_comprarClaseADMIN]; this setObjectTexture[0,"textures\CARTELES\equipos.jpg"]
 waitUntil {!isNull player};
 
 _precio = 0;

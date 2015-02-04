@@ -1,3 +1,4 @@
+//this addAction["Equipar Clase OTAN",QUICK_fnc_comprarClaseOTAN]; this setObjectTexture[0,"textures\CARTELES\equipos.jpg"]
 waitUntil {!isNull player};
 
 _precio = 0;

@@ -1,3 +1,4 @@
+//this addAction["Equipar Clase MERCENARIO",QUICK_fnc_comprarClaseMERCENARIO]; this setObjectTexture[0,"textures\CARTELES\equipos.jpg"]
 waitUntil {!isNull player};
 
 _precio = 0;
