@@ -30,7 +30,7 @@ _fnc_muevete = {
 
             if (isPlayer _x) then {
                 _dist = _x distance camello;
-                    if(_dist<20)then{
+                    if(_dist<40)then{
 
                          camello setfuel 0;
                          
