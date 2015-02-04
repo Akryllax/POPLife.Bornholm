@@ -17,12 +17,14 @@ _fnc_muevete = {
 
     
     while {true} do {
-        if ((camello distance (getMarkerPos _sitios)) < 30) exitWith {};
+        if ((camello distance (getMarkerPos _sitios)) < 50) exitWith {};
         sleep 1;
            _pos = position camello;
          markerCamello1 setMarkerPos _pos;
 
          //si tiene gente cerca parate macho, keres un asesino
+
+  
          
          { //start for de cada jugador
 
@@ -32,9 +34,7 @@ _fnc_muevete = {
 
                          camello setfuel 0;
                          
-                         sleep 60;
-
-                         if(true)exitWith{};
+                          if(true)exitWith{};
 
                      }else{
 
@@ -43,7 +43,8 @@ _fnc_muevete = {
                      };
             };  
 
-      } forEach playableUnits;
+      } forEach playableUnits; 
+   
     };//end while
 
     camello spawn {

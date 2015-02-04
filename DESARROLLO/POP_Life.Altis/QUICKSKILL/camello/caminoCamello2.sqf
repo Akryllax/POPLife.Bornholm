@@ -32,7 +32,7 @@ _fnc_muevete = {
                     if(_dist<20)then{
 
                          camello setfuel 0;
-                         sleep 60;
+                         
 
                          if(true)exitWith{};
 
