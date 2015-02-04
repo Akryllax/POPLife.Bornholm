@@ -52,7 +52,7 @@ mybackpack = unitBackpack _unit ;
 
 
 
-[[_unit,0,"textures\TRAJES\adminjpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+[[_unit,0,"textures\TRAJES\merc.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 
 reload _unit;
-if(true) exitWith{hint "Clase Admin equipada";[] spawn { sleep 5;hint "";} };
+if(true) exitWith{hint "Clase Mercenario equipada";[] spawn { sleep 5;hint "";} };

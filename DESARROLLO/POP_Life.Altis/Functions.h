@@ -490,6 +490,9 @@ class Quickskill
         class comprarClasePoliciaMXM {};
         class comprarClasePoliciaMK18 {};
         class comprarClasePoliciaMXSW {};
+        class comprarClaseOTAN {};
+        class comprarClaseADMIN {};
+        class comprarClaseMERCENARIO {};
 	};
 
      class Plantar
