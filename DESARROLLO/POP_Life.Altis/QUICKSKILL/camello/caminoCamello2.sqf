@@ -15,13 +15,34 @@ _fnc_muevete = {
     ruta2 = (group camello2) addWaypoint [(getMarkerPos _sitios2), 0];
     ruta2 setWaypointType "MOVE";
     ruta2 setWaypointBehaviour "SAFE";
-    ruta2 setWaypointSpeed "FULL";
+    ruta2 setWaypointSpeed "NORMAL";
     
     while {true} do {
         if ((camello2 distance (getMarkerPos _sitios2)) < 30) exitWith {};
         sleep 1;
         _pos = position camello2;
          markerCamello2 setMarkerPos _pos;
+
+                  //si tiene gente cerca parate macho, keres un asesino
+         
+         { //start for de cada jugador
+
+            if (isPlayer _x) then {
+                _dist = _x distance camello;
+                    if(_dist<20)then{
+
+                         camello setfuel 0;
+
+                         if(true)exitWith{};
+
+                     }else{
+
+                        camello setfuel 1;
+
+                     };
+            };  
+
+      } forEach playableUnits;
     };
 
     camello2 spawn {
