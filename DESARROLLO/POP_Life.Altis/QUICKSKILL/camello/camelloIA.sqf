@@ -1,5 +1,5 @@
-//hc client
-if !(hasInterface or isServer) then {
+//en server
+if (isServer) then {
  
 
     
