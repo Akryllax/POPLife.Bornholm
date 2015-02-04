@@ -28,17 +28,17 @@ _fnc_muevete = {
          { //start for de cada jugador
 
             if (isPlayer _x) then {
-                _dist = _x distance camello;
+                _dist = _x distance camello2;
                     if(_dist<40)then{
 
-                         camello setfuel 0;
+                         camello2 setfuel 0;
 
 
                          if(true)exitWith{};
 
                      }else{
 
-                        camello setfuel 1;
+                        camello2 setfuel 1;
 
                      };
             };  
