@@ -5,25 +5,27 @@
 	Description:
 	Marcadores
 */
-private["_markers","_cops"];
+private["_markers","_units"];
 _markers = [];
-_gunits = [];
-
-if(isNull (group player)) exitWith {};
+_units = [];
 
 sleep 0.5;
 if(visibleMap) then {
-	{if(side _x == civilian) then {_gunits pushBack _x;}} foreach (units group player); // Solo los de su grupo
+	{
+		if((side _x == civilian) && (player != _x)) then {
+			_units set[count _units,_x];
+		}
+	} forEach (units(group player));
 
-	//Create markers
+
 	{
 		_marker = createMarkerLocal [format["%1_marker",_x],visiblePosition _x];
-		_marker setMarkerColorLocal "ColorYellow";
+		_marker setMarkerColorLocal "ColorGreen";
 		_marker setMarkerTypeLocal "Mil_dot";
-		_marker setMarkerTextLocal format["%1", _x getVariable["realname",name _x]];
+		_marker setMarkerTextLocal format["%1", name _x];
 
-		_markers pushBack [_marker,_x];
-	} foreach _gunits;
+		_markers set[count _markers,[_marker,_x]];
+	} foreach _units;
 
 	while {visibleMap} do
 	{
@@ -45,5 +47,5 @@ if(visibleMap) then {
 
 	{deleteMarkerLocal (_x select 0);} foreach _markers;
 	_markers = [];
-	_gunits = [];
+	_units = [];
 };
