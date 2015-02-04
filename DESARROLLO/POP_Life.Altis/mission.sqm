@@ -947,7 +947,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					forceHeadlessClient=1;
-                    init="this allowDamage false;if (profileName==""headlessclient"") then {selectPlayer this;};"
+                    init="if (profileName == 'headlessclient') then {selectPlayer this};"; 
 					description="Headless Client";
 				};
 			};
