@@ -52,8 +52,8 @@ if !(hasInterface or isServer) then {
 
       } forEach playableUnits;
 
-       };
+       };//end while
 
 
 
-};
+};//end hc client
