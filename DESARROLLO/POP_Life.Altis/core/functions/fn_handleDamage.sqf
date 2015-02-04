@@ -1,7 +1,7 @@
 /*
 	File: fn_handleDamage.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Handles damage, specifically for handling the 'tazer' pistol and nothing else.
 */
@@ -24,11 +24,11 @@ if(!isNull _source) then {
 		if(_projectile in ["B_9x21_Ball","B_556x45_dual"] && _curWep in ["hgun_P07_snds_F","arifle_SDAR_F"]) then {
 			if(side _source == west && playerSide != west || (_source getVariable["CRServicio", false])) then {
 				private["_distance","_isVehicle","_isQuad"];
-				_distance = if(_projectile == "B_556x45_dual") then {100} else {35};
+				_distance = if(_projectile == "B_556x45_dual") then {100} else {50};
 				_isVehicle = if(vehicle player != player) then {true} else {false};
 				_isQuad = if(_isVehicle) then {if(typeOf (vehicle player) == "B_Quadbike_01_F") then {true} else {false}} else {false};
-				
-				_damage = false;
+
+				_damage = 0;
 				if(_unit distance _source < _distance) then {
 					if(!life_istazed && !(_unit getVariable["restrained",false])) then {
 						if(_isVehicle && _isQuad) then {
@@ -39,11 +39,6 @@ if(!isNull _source) then {
 						};
 					};
 				};
-			};
-			
-			//Temp fix for super tasers on cops.
-			if(playerSide == west && side _source == west) then {
-				_damage = false;
 			};
 		};
 	};
