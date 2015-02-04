@@ -72,22 +72,22 @@ if (isServer) then {
 
 ///camellitos!!
  //marcador
-  _markerID = "Camello2_mrk";
-  _pos = position camello2;
- markerCamello2 = createMarker [ _markerID, _pos];
-markerCamello2 setMarkerColor "ColorGreen";
-markerCamello2 setMarkerText "CAMELLO";
-markerCamello2 setMarkerType "mil_warning";
+ // _markerID = "Camello2_mrk";
+ // _pos = position camello2;
+ //markerCamello2 = createMarker [ _markerID, _pos];
+//markerCamello2 setMarkerColor "ColorGreen";
+//markerCamello2 setMarkerText "CAMELLO";
+//markerCamello2 setMarkerType "mil_warning";
 
 
 
   //marcador camello 1
-    _markerID = "Camello1_mrk";
-  _pos = position camello;
- markerCamello1 = createMarker [ _markerID, _pos];
-markerCamello1 setMarkerColor "ColorGreen";
-markerCamello1 setMarkerText "CAMELLO";
-markerCamello1 setMarkerType "mil_warning";
+    //_markerID = "Camello1_mrk";
+//  _pos = position camello;
+ //markerCamello1 = createMarker [ _markerID, _pos];
+//markerCamello1 setMarkerColor "ColorGreen";
+//markerCamello1 setMarkerText "CAMELLO";
+//markerCamello1 setMarkerType "mil_warning";
 
 //quitar efectos de lluvia ninja code by quik +nija code arreglando lo de quick....si esque....
 [] spawn {
