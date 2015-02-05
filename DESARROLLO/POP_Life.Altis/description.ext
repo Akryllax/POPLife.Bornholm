@@ -26,8 +26,8 @@ wreckLimit = 1;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 61;
 corpseLimit = 5;
-corpseRemovalMinTime = 300;
-corpseRemovalMaxTime = 350;
+corpseRemovalMinTime = 10;
+corpseRemovalMaxTime = 35;
 
 #include "dialog\MasterHandler.h"
 

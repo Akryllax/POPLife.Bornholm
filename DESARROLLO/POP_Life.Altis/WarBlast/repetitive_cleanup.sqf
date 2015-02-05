@@ -84,7 +84,7 @@ _removeFromCleanup = {
 
 while{true} do {
 
-	sleep 25;
+	sleep 12;
     	
 	{	
 	    _unit = _x;
@@ -93,7 +93,7 @@ while{true} do {
 			{
 				{ 	 
 					[_x, _ttdWeapons] call _addToCleanup;			
-				} forEach (getpos _unit nearObjects [_x, 100]);
+				} forEach (getpos _unit nearObjects [_x, 50]);
 			} forEach ["WeaponHolder","GroundWeaponHolder","WeaponHolderSimulated"];
 		};
 		
@@ -101,7 +101,7 @@ while{true} do {
 			{
 				{ 
 					[_x, _ttdPlanted] call _addToCleanup;  
-				} forEach (getpos _unit nearObjects [_x, 100]);
+				} forEach (getpos _unit nearObjects [_x, 50]);
 			} forEach ["TimeBombCore"];
 		};
 		
@@ -109,7 +109,7 @@ while{true} do {
 			{
 				{ 	 
 					[_x, _ttdSmokes] call _addToCleanup; 
-				} forEach (getpos _unit nearObjects [_x, 100]);
+				} forEach (getpos _unit nearObjects [_x, 50]);
 			} forEach ["SmokeShell"];
 		};
 	
