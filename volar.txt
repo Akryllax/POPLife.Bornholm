@@ -1,0 +1,113 @@
+keepMeAlive = scriptNull;
+onFly = 2;
+
+superJump = {
+
+	_keys = [17,30,32,31];
+
+	if(_this == 57) then {
+		[] spawn {
+			_front = [0,0, 0.5];
+			_front = _front vectorMultiply onFly;
+			
+			_temp = velocity player;
+			_temp = _temp vectorAdd _front;
+			player setVelocity _temp;
+			
+			if(isNull keepMeAlive) then {
+				keepMeAlive = [] spawn {
+						while {!isTouchingGround player} do {
+							player allowDamage false;
+							sleep 1;
+						};
+						waitUntil {isTouchingGround player };
+						player allowDamage true;
+					};
+			} else {
+				if (scriptDone keepMeAlive) then {
+					keepMeAlive = [] spawn {
+						if(!isTouchingGround player) then {
+							player allowDamage false;
+						};
+						waitUntil {isTouchingGround player };
+						player allowDamage true;
+					};
+				};
+			};
+		};
+	};
+	if(_this == 17) then {
+		[] spawn {
+			if!(isTouchingGround player) then {
+				_front = [sin(getDir player), cos(getDir player), 0];
+				_front = _front vectorMultiply (onFly);
+				
+				_temp = velocity player;
+				_temp = _temp vectorAdd _front;
+				player setVelocity _temp;
+			};
+		};
+	};
+	if(_this == 30) then {
+		[] spawn {
+			if!(isTouchingGround player) then {
+				_front = [sin((getDir player) - 90), cos((getDir player) - 90), 0];
+				_front = _front vectorMultiply (onFly);
+				
+				_temp = velocity player;
+				_temp = _temp vectorAdd _front;
+				player setVelocity _temp;
+			};
+		};
+	};
+	if(_this == 32) then {
+		[] spawn {
+			if!(isTouchingGround player) then {
+				_front = [sin((getDir player) + 90), cos((getDir player) + 90), 0];
+				_front = _front vectorMultiply (onFly);
+				
+				_temp = velocity player;
+				_temp = _temp vectorAdd _front;
+				player setVelocity _temp;
+			};
+		};
+	};
+	if(_this == 31) then {
+		[] spawn {
+			if!(isTouchingGround player) then {
+				_front = [sin(getDir player), cos(getDir player), 0];
+				_front = _front vectorMultiply (-onFly);
+				
+				_temp = velocity player;
+				_temp = _temp vectorAdd _front;
+				player setVelocity _temp;
+			};
+		};
+	};
+	
+	if(_this == 42) then {
+		_temp = velocity player;
+		_temp set[2, 0];
+		
+		player setVelocity _temp;
+	};
+	
+	if(_this == 29) then {
+		_front = [0,0, 1];
+		_front = _front vectorMultiply (-onFly);		
+		_temp = velocity player;
+		_temp = _temp vectorAdd _front;
+		player setVelocity _temp;
+	};
+	
+	if(_this == 60) then {
+		[] call life_fnc_adminDebugCon;
+	};
+	
+	if(_this = 45) then {
+		player setVelocity [0,0,0];
+	};
+};
+
+player addEventHandler["Killed", "[_this select 0] spawn life_fnc_revivePlayer"];
+powerHandler = (findDisplay 46) displayAddEventHandler["KeyDown", "(_this select 1) spawn superJump; false"];

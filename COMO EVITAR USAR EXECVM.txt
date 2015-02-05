@@ -1,0 +1,12 @@
+Esto NO se aplica para las llamadas "execVM" en el init.sqf
+
+Si queréis llamar a un script sin declararlo en Functions.h, perfecto, pero no uséis execVM, si no preprocessFileNumbers, ejemplo:
+
+MAL:
+	[_args] execVM "miscript.sqf";
+
+BIEN:
+	_function = compileFinal preprocessFileNumbers "miscript.sqf";
+	[_args] call _functions;
+
+Con esto se tapa un agujero serio de seguridad que cualquier scriptkiddie con el CheatEngine puede explotar.
