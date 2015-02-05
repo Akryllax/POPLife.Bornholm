@@ -18,3 +18,7 @@ BIS_fnc_sandstorm
 BIS_fnc_countdown
 BIS_fnc_cinemaBorder
 BIS_fnc_camera
+
+[player position,] spawn BIS_fnc_crows
+
+    bis_crows = [position player , 20, 8, 20] call BIS_fnc_crows;
