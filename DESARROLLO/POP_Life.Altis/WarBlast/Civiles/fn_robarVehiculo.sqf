@@ -10,7 +10,7 @@ _price = _price*0.65;
 if(life_atmcash < _price) exitWith {hint format["Necesitas %1 para quedartelo",_price]; };
 _vehicle = _control lbData (lbCurSel _control);
 _vehicle = call compile format["%1", _vehicle];
-_nearVehicles = nearestObjects [getMarkerPos life_chopShop,["Car","Truck"],25];
+_nearVehicles = nearestObjects [getMarkerPos life_chopShop,["Car","Truck","Air"],25];
 _vehicle = _nearVehicles select _vehicle;
 if(isNull _vehicle) exitWith {};
 _check = false;
