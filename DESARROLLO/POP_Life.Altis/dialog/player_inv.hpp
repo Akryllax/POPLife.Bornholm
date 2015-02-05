@@ -7,6 +7,15 @@ class playerSettings {
 	enableSimulation = true;
 
 	class controlsBackground {
+		class fondtablet: Life_RscPicture
+		{
+			idc = 9090909;
+			text = "textures\icons\tab.paa";
+			x = -0.05;
+			y = 0.14;
+			w = 1.1;
+			h = 0.76;
+		};
 
 	class life_RscTitleBackground:life_RscText {
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
