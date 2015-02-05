@@ -11,10 +11,10 @@ class playerSettings {
 		{
 			idc = 9090909;
 			text = "textures\icons\tab.paa";
-			x = -0.05;
-			y = 0.14;
-			w = 1.1;
-			h = 0.76;
+			x = 0.309219 * safezoneW + safezoneX;
+			y = 0.269 * safezoneH + safezoneY;
+			w = 0.381563 * safezoneW;
+			h = 0.517 * safezoneH;
 		};
 
 	class life_RscTitleBackground:life_RscText {
