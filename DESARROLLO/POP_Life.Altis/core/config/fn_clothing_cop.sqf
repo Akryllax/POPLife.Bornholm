@@ -19,7 +19,10 @@ switch (_filter) do
 	//Uniforms
 	case 0:
 	{
-
+	    _ret =
+        [
+            ["U_B_Wetsuit",nil,2000 *  Desc]
+];
 	};
 
 	//Hats
@@ -39,6 +42,7 @@ switch (_filter) do
 	{
 		_ret =
 		[
+			["G_Diving",nil,500 * Desc]
 			["G_Shades_Black",nil,25 * Desc],
 			["G_Shades_Blue",nil,20 * Desc],
 			["G_Sport_Blackred",nil,20 * Desc],
@@ -55,6 +59,7 @@ switch (_filter) do
 	//Vest
 	case 3:
 	{
+		_ret pushBack ["V_RebreatherB",nil,800 * Desc];
 		_ret pushBack ["V_Rangemaster_belt",nil,800 * Desc];
 		if(__GETC__(life_coplevel) > 2) then
 		{
