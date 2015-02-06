@@ -18876,7 +18876,7 @@ class Mission
 			position[]={14276.118,4.1247582,13044.42};
 			name="CG";
 			text="Guarda Costas";
-			type="Empty";
+			type="mil_box";
 			colorName="ColorYellow";
 		};
 		class Item67
