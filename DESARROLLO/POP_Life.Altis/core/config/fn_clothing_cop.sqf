@@ -42,7 +42,7 @@ switch (_filter) do
 	{
 		_ret =
 		[
-			["G_Diving",nil,500 * Desc]
+			["G_Diving",nil,500 * Desc],
 			["G_Shades_Black",nil,25 * Desc],
 			["G_Shades_Blue",nil,20 * Desc],
 			["G_Sport_Blackred",nil,20 * Desc],

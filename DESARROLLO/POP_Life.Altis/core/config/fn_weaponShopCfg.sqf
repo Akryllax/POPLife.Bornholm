@@ -40,7 +40,7 @@ switch(_shop) do
 						["Medikit",nil,1000 * Desc],
 						["NVGoggles",nil,2000 * Desc],
 						["SmokeShell",nil,200 * Desc]
-						
+
 					]
 				];
 			};
@@ -50,7 +50,7 @@ switch(_shop) do
 				["Tienda locales",
 					[
 						["arifle_SDAR_F",nil,25000 * Desc],
-						["30Rnd_556x45_Stanag",nil,100 * Desc]
+						["30Rnd_556x45_Stanag",nil,100 * Desc],
 						["hgun_P07_snds_F",nil,1000 * Desc],
 						["SMG_02_F",nil,7500 * Desc],
 						["30Rnd_9x21_Mag",nil,50 * Desc],
@@ -74,6 +74,8 @@ switch(_shop) do
 		    {
 				["Tienda nacionales",
 					[
+						["arifle_SDAR_F",nil,25000 * Desc],
+						["30Rnd_556x45_Stanag",nil,100 * Desc],
 						["hgun_P07_snds_F",nil,1000 * Desc],
 						["SMG_02_F",nil,7500 * Desc],
 						["30Rnd_9x21_Mag",nil,50 * Desc],
@@ -101,6 +103,8 @@ switch(_shop) do
 		   {
 				["Tienda nacionales",
 					[
+					    ["arifle_SDAR_F",nil,25000 * Desc],
+						["30Rnd_556x45_Stanag",nil,100 * Desc],
 						["hgun_P07_snds_F",nil,1000 * Desc],
 						["16Rnd_9x21_Mag",nil,25 * Desc],
 						["SMG_02_F",nil,7500 * Desc],
@@ -130,6 +134,8 @@ switch(_shop) do
 		    {
 				["Tienda nacionales",
 					[
+					    ["arifle_SDAR_F",nil,25000 * Desc],
+						["30Rnd_556x45_Stanag",nil,100 * Desc],
 						["hgun_P07_snds_F",nil,1000 * Desc],
 						["16Rnd_9x21_Mag",nil,25 * Desc],
 						["SMG_02_F",nil,7500 * Desc],
@@ -163,6 +169,8 @@ switch(_shop) do
 		    {
 				["Tienda nacionales",
 					[
+					    ["arifle_SDAR_F",nil,25000 * Desc],
+						["30Rnd_556x45_Stanag",nil,100 * Desc],
 						["hgun_P07_snds_F","Taser",1000 * Desc],
 						["16Rnd_9x21_Mag",nil,25 * Desc],
 						["SMG_02_F",nil,7500 * Desc],
@@ -202,6 +210,8 @@ switch(_shop) do
 		    {
 				["Tienda nacionales",
 					[
+					    ["arifle_SDAR_F",nil,25000 * Desc],
+						["30Rnd_556x45_Stanag",nil,100 * Desc],
 						["hgun_P07_snds_F","Taser",1000 * Desc],
 						["16Rnd_9x21_Mag",nil,25 * Desc],
 						["SMG_02_F",nil,7500 * Desc],
@@ -251,6 +261,8 @@ switch(_shop) do
 		    {
 				["Tienda nacionales",
 					[
+					    ["arifle_SDAR_F",nil,25000 * Desc],
+						["30Rnd_556x45_Stanag",nil,100 * Desc],
 						["hgun_P07_snds_F","Taser",1000 * Desc],
 						["16Rnd_9x21_Mag",nil,25 * Desc],
 						["SMG_02_F",nil,7500 * Desc],
