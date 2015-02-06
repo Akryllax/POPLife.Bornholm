@@ -29,7 +29,7 @@ _unit addHeadgear "H_Beret_02";
 
 _unit  addVest "V_TacVest_blk";
 _unit  forceAddUniform "U_B_CombatUniform_mcam_worn";
-_unit setObjectTextureGlobal [0, "textures\TRAJES\admin.jpg"]
+_unit setObjectTextureGlobal [0, "textures\TRAJES\admin.jpg"];
 
 _unit addWeapon 'Binocular';
 
