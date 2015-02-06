@@ -29,7 +29,7 @@ _unit addHeadgear "H_Beret_02";
 
 _unit  addVest "V_TacVest_blk";
 _unit  forceAddUniform "U_B_CombatUniform_mcam_worn";
- 
+ _unit setObjectTextureGlobal [0, "textures\TRAJES\merc.jpg"];
 _unit addWeapon 'Binocular';
 
 _unit additem 'ItemWatch';
@@ -53,7 +53,7 @@ _mybackpack = unitBackpack _unit ;
 _mybackpack setObjectTextureGlobal [0, "#(rgb,8,8,3)color(0,0,0,1)"];
 
 _unit spawn {
-    while { alive player && uniform player isEqualTo "U_B_CombatUniform_mcam"} do {
+    while { alive player && uniform player isEqualTo "U_B_CombatUniform_mcam_worn"} do {
     
         player setObjectTextureGlobal [0, "textures\TRAJES\merc.jpg"];
     
@@ -61,20 +61,6 @@ _unit spawn {
     };
 };
 
-
-_unit  addBackPack "B_Carryall_mcamo"; 
-_mybackpack = unitBackpack _unit ;
-
-_mybackpack setObjectTextureGlobal [0, "#(rgb,8,8,3)color(0,0,0,1)"];
-
-_unit spawn {
-    while { alive player && uniform player isEqualTo "U_B_CombatUniform_mcam"} do {
-    
-        player setObjectTextureGlobal [0, "textures\TRAJES\admin.jpg"];
-    
-        sleep 60;
-    };
-};
 
 
 
