@@ -8652,7 +8652,7 @@ class Mission
 		};
 		class Item494
 		{
-			position[]={3256.6599,2.121567,12979.7};
+			position[]={3256.6123,2.1210592,12979.76};
 			azimut=179.229;
 			offsetY=0.174959;
 			id=651;
@@ -18366,7 +18366,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=395;
+		items=401;
 		class Item0
 		{
 			position[]={20782.402,37.286591,16680.141};
@@ -18815,7 +18815,7 @@ class Mission
 			name="cop_spawn_3";
 			text="Policia Athira";
 			type="mil_box";
-			colorName="ColorWEST";
+			colorName="ColorYellow";
 		};
 		class Item59
 		{
@@ -18823,7 +18823,7 @@ class Mission
 			name="cop_spawn_4";
 			text="Policia";
 			type="mil_box";
-			colorName="ColorWEST";
+			colorName="ColorYellow";
 		};
 		class Item60
 		{
@@ -18861,6 +18861,7 @@ class Mission
 			position[]={3269.6804,2.179574,12967.907};
 			name="police_hq_1";
 			type="mil_box";
+			colorName="ColorYellow";
 		};
 		class Item65
 		{
@@ -18868,7 +18869,7 @@ class Mission
 			name="police_hq_2";
 			text="Policia Pyrgos";
 			type="mil_box";
-			colorName="ColorWEST";
+			colorName="ColorYellow";
 		};
 		class Item66
 		{
@@ -18876,7 +18877,7 @@ class Mission
 			name="CG";
 			text="Guarda Costas";
 			type="Empty";
-			colorName="ColorWEST";
+			colorName="ColorYellow";
 		};
 		class Item67
 		{
@@ -19125,7 +19126,7 @@ class Mission
 			name="Police HQ_1";
 			text="Policia";
 			type="mil_box";
-			colorName="ColorWEST";
+			colorName="ColorYellow";
 		};
 		class Item98
 		{
@@ -19857,8 +19858,8 @@ class Mission
 			position[]={20966.127,16.85,19197.164};
 			name="cop_spawn_5";
 			text="Policia Sofia";
-			type="mil_dot";
-			colorName="ColorWEST";
+			type="mil_box";
+			colorName="ColorYellow";
 		};
 		class Item186
 		{
@@ -20770,8 +20771,8 @@ class Mission
 			name="Policia_1";
 			text="Policia";
 			type="mil_box";
-			colorName="ColorWEST";
-			angle=95.127045;
+			colorName="ColorYellow";
+			angle=95.126999;
 		};
 		class Item298
 		{
@@ -21471,10 +21472,88 @@ class Mission
 			type="mil_box";
 			colorName="ColorRed";
 		};
+		class Item395
+		{
+			position[]={3249.0054,2,12934.435};
+			name="Policia kavala";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="SolidBorder";
+			a=40;
+			b=120;
+			angle=73.556396;
+			drawBorder=1;
+		};
+		class Item396
+		{
+			position[]={14273.009,4.6977468,13029.669};
+			name="Policia GC";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="SolidBorder";
+			a=40;
+			b=120;
+			angle=61.888;
+			drawBorder=1;
+		};
+		class Item397
+		{
+			position[]={15186.741,17.889565,17333.584};
+			name="Policia aeropuerto";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="SolidBorder";
+			a=50;
+			b=50;
+			angle=-225.265;
+			drawBorder=1;
+		};
+		class Item398
+		{
+			position[]={20934.744,12.852744,19239.502};
+			name="Policia athira_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="SolidBorder";
+			a=80;
+			b=80;
+			angle=-423.52176;
+			drawBorder=1;
+		};
+		class Item399
+		{
+			position[]={17429.445,14.392031,13162.247};
+			name="Policia pyrgos";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="SolidBorder";
+			a=110;
+			b=80;
+			angle=-133.668;
+			drawBorder=1;
+		};
+		class Item400
+		{
+			position[]={7836.436,113.23264,16129.196};
+			name="Policia athira_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="SolidBorder";
+			a=50;
+			b=50;
+			angle=-313.57901;
+			drawBorder=1;
+		};
 	};
 	class Sensors
 	{
-		items=19;
+		items=25;
 		class Item0
 		{
 			position[]={3637.3794,10.369663,13214.811};
@@ -21821,6 +21900,108 @@ class Mission
 			expCond="this && (local player) && (vehicle player in thisList)";
 			expActiv="hint ""¡Atención! Acabas de entrar en una zona de RDM. Dentro de esta zona puedes ser atacado sin previo aviso""";
 			expDesactiv="hint ""¡Atención! Estas abandonando la zona de RDM. Recuerda que fuera de estas zonas hay que ROLEAR!!!""";
+			class Effects
+			{
+			};
+		};
+		class Item19
+		{
+			position[]={3248.9438,2,12934.337};
+			a=40;
+			b=120;
+			angle=73.493103;
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expCond="this && (local player) && (vehicle player in thisList)";
+			expActiv="hint ""¡Atención! ¡Atención! Estás entrando en una zona restringida. Salga de la zona o seran encarcelados y multados!""";
+			class Effects
+			{
+			};
+		};
+		class Item20
+		{
+			position[]={14272.958,4.7046218,13029.577};
+			a=40;
+			b=120;
+			angle=61.824657;
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expCond="this && (local player) && (vehicle player in thisList)";
+			expActiv="hint ""¡Atención! ¡Atención! Estás entrando en una zona restringida. Salga de la zona o seran encarcelados y multados!""";
+			class Effects
+			{
+			};
+		};
+		class Item21
+		{
+			position[]={15187.042,17.888781,17332.479};
+			angle=-44.916828;
+			rectangular=1;
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expCond="this && (local player) && (vehicle player in thisList)";
+			expActiv="hint ""¡Atención! ¡Atención! Estás entrando en una zona restringida. Salga de la zona o seran encarcelados y multados!""";
+			class Effects
+			{
+			};
+		};
+		class Item22
+		{
+			position[]={20934.053,12.738519,19240.506};
+			a=80;
+			b=80;
+			angle=-243.17407;
+			rectangular=1;
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expCond="this && (local player) && (vehicle player in thisList)";
+			expActiv="hint ""¡Atención! ¡Atención! Estás entrando en una zona restringida. Salga de la zona o seran encarcelados y multados!""";
+			class Effects
+			{
+			};
+		};
+		class Item23
+		{
+			position[]={17429.613,14.352466,13162.834};
+			a=110;
+			b=80;
+			angle=46.680099;
+			rectangular=1;
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expCond="this && (local player) && (vehicle player in thisList)";
+			expActiv="hint ""¡Atención! ¡Atención! Estás entrando en una zona restringida. Salga de la zona o seran encarcelados y multados!""";
+			class Effects
+			{
+			};
+		};
+		class Item24
+		{
+			position[]={7837.5532,113.29298,16129.46};
+			angle=-133.23103;
+			rectangular=1;
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expCond="this && (local player) && (vehicle player in thisList)";
+			expActiv="hint ""¡Atención! ¡Atención! Estás entrando en una zona restringida. Salga de la zona o seran encarcelados y multados!""";
 			class Effects
 			{
 			};
