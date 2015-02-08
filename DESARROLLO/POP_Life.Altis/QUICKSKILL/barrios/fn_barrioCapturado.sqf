@@ -32,12 +32,12 @@ if(_barrioMetros < 0) exitWith{ hint "Error, _barrioMetros < 0"};
 while {_time > 0} do {
 
 	//si el barrio ha cambiado de manos
-	_capturadoLife = _barrioBandera getVariable ["capturadoPor",""];
+	_capturadoLife = _barrioBandera getVariable "capturadoPor";
 	_capturadoPor = _bandaNombre;
 
 	if(_capturadoLife != _capturadoPor) then {
 
-		hint "te han robado el control del barrio";
+		hint "Has perdido control del barrio";
 		_time = 0;
 		_pagar_ladron = "no";
 		sleep 1;

@@ -4,7 +4,6 @@
 	Description:
 	mis cojones gordos
 
-	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,[_barrioBandera,_jugador,_barrioName]];
 
 	Ejemplo -> poner en una bandera de esas 
 	this addAction["Capturar Barrio",QUICK_fnc_capturarBarrio,"Las 3000"];
