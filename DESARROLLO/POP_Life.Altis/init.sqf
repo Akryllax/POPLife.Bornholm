@@ -65,6 +65,8 @@ MTP_fnc_numberToString = {
 if (isServer) then {
 	null = [] execVM "QUICKSKILL\robos\banco\initBanco.sqf";
 	null = [] execVM "QUICKSKILL\robos\banco\nuevoCodigoBancario.sqf";
+    //ponemos las zonas seguras sin triggers ni mierda, quickninjacode
+    [] execVM "QUICKSKILL\zonaSegura\fn_zonaSegura.sqf";
 };
 [] execVM "QUICKSKILL\robos\banco\sumaDeposito.sqf";
 
@@ -117,10 +119,7 @@ if(isServer) then {
 
 };
 
-//hc client
-if !(hasInterface or isServer) then {
-  execVM "init_hc.sqf";
-};
+
 //poner opacity 0 a markadores de helicrash!!
 {_x setMarkerAlphaLocal 0} forEach ["helicrash_1","helicrash_2","helicrash_3","helicrash_4","wreck_1","wreck_2","wreck_3","wreck_4"];
 War_loop = compile (preprocessFileLineNumbers "WarBlast\Musica\War_loop.sqf");
