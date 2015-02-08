@@ -48,7 +48,7 @@ _zone = "";
 	
 		case (_zone in ["zonaSegura_1","zonaSegura_2","zonaSegura_3","zonaSegura_4"]): {
 
-			_player allowDamage ;
+			_player allowDamage false;
 
 
 		};//end case
