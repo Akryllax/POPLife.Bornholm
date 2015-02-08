@@ -8,12 +8,7 @@ if(!isServer)exitWith{};
 _zonasSeguras = ["zonaSegura_1","zonaSegura_2","zonaSegura_3","zonaSegura_4"];
 _zone = "";
 
-
-
-
 //loop all playable untis
-
-
 { 
 
 
@@ -59,10 +54,6 @@ _zone = "";
 		};//end case
 
 	};//end switch
-
-
-
-
 
 
 
