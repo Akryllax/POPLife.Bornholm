@@ -30,7 +30,7 @@ _zone = "";
 
 
 
-	}; //end if es un player
+
 
 
 
@@ -54,6 +54,9 @@ _zone = "";
 		};//end case
 
 	};//end switch
+
+
+	}; //end if es un player
 
 
 
