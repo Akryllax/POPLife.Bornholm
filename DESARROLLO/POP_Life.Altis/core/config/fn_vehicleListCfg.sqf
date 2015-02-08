@@ -59,7 +59,7 @@ switch (_shop) do
 			["O_Truck_03_transport_F",200000 * Desc],
 			["O_Truck_03_covered_F",250000 * Desc],
 			["B_Truck_01_box_F",1200000 * Desc],
-			["O_Truck_03_device_F",450000 * Desc]
+			["O_Truck_03_device_F",1500000 * Desc]
 		];
 		if(license_civ_rebel) then {
 			_return pushBack ["O_Truck_02_transport_F",150000 * Desc];
