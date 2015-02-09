@@ -30,10 +30,6 @@ _zone = "";
 
 
 
-
-
-
-
 	//no esta en zona segura
 
 	if(_zone == "") exitWith {
