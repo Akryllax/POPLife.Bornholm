@@ -19,11 +19,8 @@ if(isNull _curTarget) exitWith {
 		if(!isNil "_fish") then {
 			[_fish] call life_fnc_catchFish;
 			} else {
-			if(playerSide == civilian && !life_action_gathering) then {
-				// WarBlast: Dynamic Map: Naufragios
-				_handle = [] spawn life_fnc_dynamicMapNaufragios;
-				waitUntil {scriptDone _handle};
-				life_action_gathering = false;
+			// WarBlast: Dynamic Map
+			[] spawn life_fnc_dynamicMapNaufragios;
 		};
 	} else {
 		if(playerSide == civilian && !life_action_gathering) then {
@@ -70,8 +67,8 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 
 	    	[_curTarget] call War_fnc_InteractionMenu;
 	    };
-
-
+		
+		
 	};
 
 } else {
