@@ -62,7 +62,7 @@ life_merclevel = 0;
 //Null out harmful things for the server.
 __CONST__(JxMxE_PublishVehicle,"No");
 
-[] execVM "\life_server\fn_initHC.sqf";
+//[] execVM "\life_server\fn_initHC.sqf";
 
 life_radio_west = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
 life_radio_civ = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
@@ -125,15 +125,12 @@ client_session_list = [];
 private["_dome","_rsb"];
 _dome = nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"];
 _rsb = nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"];
-//_cupula = nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"];
 
 for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,true]; _dome animate [format["Door_%1_rot",_i],0];};
-//for "_i" from 1 to 3 do {_cupula setVariable[format["bis_disabled_Door_%1",_i],1,true]; _cupula animate [format["Door_%1_rot",_i],0];};
 
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
-//_cupula allowDamage false;
 
 //WarBlast: Mapa Dinamico
 [] execVM "\life_server\Functions\WarBlast\fn_spawnHeliCrash.sqf";
