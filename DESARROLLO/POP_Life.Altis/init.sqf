@@ -68,7 +68,7 @@ if (isServer) then {
 	null = [] execVM "QUICKSKILL\robos\banco\initBanco.sqf";
 	null = [] execVM "QUICKSKILL\robos\banco\nuevoCodigoBancario.sqf";
     //ponemos las zonas seguras sin triggers ni mierda, quickninjacode
-    [] execVM "QUICKSKILL\zonaSegura\fn_zonaSegura.sqf";
+    //[] execVM "QUICKSKILL\zonaSegura\fn_zonaSegura.sqf";
 };
 [] execVM "QUICKSKILL\robos\banco\sumaDeposito.sqf";
 
