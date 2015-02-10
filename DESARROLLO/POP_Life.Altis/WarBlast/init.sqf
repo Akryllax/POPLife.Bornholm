@@ -4,6 +4,8 @@
 //[] execVM "WarBlast\Luces\fn_luces.sqf";
 [] execVM "WarBlast\Policias\lacrimogeno.sqf";
 [] execVM "WarBlast\fn_statusBar.sqf";
+// [] execVM "WarBlast\real_weather.sqf";
+[] execVM "WarBlast\randomWeather2.sqf";
 //activar cleanup en el servidor
 if(isServer) then  {
 	[

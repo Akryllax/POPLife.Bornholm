@@ -1,0 +1,9 @@
+Author = "Code34";
+class Header {
+	maxPlayers = 1;
+	minPlayers = 1;
+	gameType = COOP;
+};
+onLoadName = "Real Weather";
+overviewText = "Real Weather";
+overviewTextLocked = "Dynamic Real Weather sample mission";

@@ -18,8 +18,10 @@ if(isNull _curTarget) exitWith {
 		private["_fish"];
 		_fish = (nearestObjects[getPos player,["Fish_Base_F"],3]) select 0;
 		if(!isNil "_fish") then {
+			[_fish] call life_fnc_catchFish;
+		} else {
 			if(playerSide == civilian && !life_action_gathering) then {
-				// WarBlast: Dynamic Map: Naufragios
+				// Telo: Dynamic Map: Naufragios
 				_handle = [] spawn life_fnc_dynamicMapNaufragios;
 				waitUntil {scriptDone _handle};
 				life_action_gathering = false;
