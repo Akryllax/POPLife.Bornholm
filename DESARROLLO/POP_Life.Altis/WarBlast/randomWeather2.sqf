@@ -45,10 +45,10 @@ class Params
 // ============
 
 // Debug Messages.  This is set to 1 for the demo mission, but you should set this to 0 for regular missions. | 0 = Debug Messages Off, 1 = Debug Messages On
-rw2Debug = 1;
+rw2Debug = 0;
 
 // If you are using settings in your description.ext to allow parameter settings for initial weather, you must update the # below to match which parameter you are using.  Remember, the ordering starts with 0 and goes up from there.
-rw2Param = 4;
+rw2Param = 0;
 
 // Setup Weather Types Array [Weather Name, Possible Weather Forecasts, Weather Settings] - Suggested that they are left as is.
 

@@ -275,3 +275,13 @@ class CfgNotifications
 		priority = 5;
 	};
 };
+class Params
+{
+        // paramsArray[0]
+       class initialWeatherParam {
+          title = "Starting Weather";
+          values[] = {0,1,2,3,4};
+          texts[] = {"Clear","Overcast","Rain","Fog","Random"};
+          default = 4;
+       };
+};
