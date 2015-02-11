@@ -14,6 +14,9 @@ _this spawn {
 	private["_raceID"];
 
 	_trackID = [_this, 0, "",[""]] call BIS_fnc_param;
+	_exited = [_this, 1, false, [false]] call BIS_fnc_param;
+	
+	if (_exited) exitWith {};
 	
 	inRace = false;
 	player setVariable["raceFinished", true, true];
