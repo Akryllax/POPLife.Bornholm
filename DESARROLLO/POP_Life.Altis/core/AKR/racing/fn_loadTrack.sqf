@@ -42,7 +42,7 @@ while { !(getMarkerPos _mrkrName isEqualTo [0,0,0]) } do {
 		};
 	};
 	
-	_locName = _mrkrName + "_cur";
+	_locName = _mrkrName;
 	currentTrack pushBack _locName;
 	
 	diag_log format["Added waypoint ""%1"" (%2): %3", _locName, _i, getMarkerPos _locName];
