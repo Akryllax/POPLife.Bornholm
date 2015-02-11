@@ -75,14 +75,14 @@ if (isServer) then {
 ////////////end robo banco avanzado/////////////////////////////////
 
 //quitar efectos de lluvia
-/*[] spawn {
+[] spawn {
     while{true} do {
         sleep 10;
-        200 setFog 0;
+        0 setFog 0;
         sleep 590;
     };
 };
-*/
+
 //cuando este terminado activamos
 /*[] spawn {
 	waitUntil { time > 0 };

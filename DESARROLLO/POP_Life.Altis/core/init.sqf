@@ -78,7 +78,7 @@ switch (playerSide) do
 
 //Para la vision y carga de los jugadores
 setViewDistance 2000;
-setTerrainGrid 3.125;
+setTerrainGrid 25;
 
 player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
