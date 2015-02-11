@@ -20,6 +20,7 @@ racing_tracks = [];
 	
  */
 racing_current = [];
+racing_lastCP = 0;
 
 if(isServer) then {
 	racing_statuses = ["none", "waiting", "racing", "finished"];

@@ -1,6 +1,7 @@
 /*
+	File: fn_startRace.sqf
 	Author: Akryllax
-	Blablabla...
+	Desc: Aqui está toda la lógica de la carrera, además del manejo de texturas de las orbs.
 */
 
 private["_raceID", "_car"];
@@ -10,6 +11,7 @@ _car = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 
 inRace = true;
 player setVariable["inRace",inRace, true];
+racing_lastCP = time;
 
 //LOGICA de la carrera
 _raceID spawn {
@@ -20,11 +22,18 @@ _raceID spawn {
 	waypointIndex = 0;
 	player setVariable["waypointIndex", waypointIndex, true];
 	while {inRace} do {
-		waitUntil { ((position player) vectorDistance (position currentOrb) < _orbRadious) || !alive Player};
+		waitUntil { ((position player) vectorDistance (position currentOrb) < _orbRadious) || !alive Player || (racing_lastCP + 60 < time)};
+		
 		if(!alive player) exitWith {
 			inRace = false; 
 			player setVariable["inRace",inRace, true];
 		};
+		
+		if(racing_lastCP + 60 > time) exitWith {
+			
+		};
+		
+		racing_lastCP = time;
 		
 		waypointIndex = waypointIndex + 1;
 		player setVariable["waypointIndex", waypointIndex, true];
@@ -107,7 +116,7 @@ _raceID spawn {
 		_bronce = (_raceConfig select 4);
 	
 		while {inRace} do {
-			hintSilent parseText format ["<t size = '1' align='center' font='TahomaB'>Tiempo: </t><br/><t size='1.5'>%1</t><br/><t align='left' color='#E6D525' font='TahomaB'>Oro: %2 (%3)</t><br/><t align='left' color='#C9C9C9' font='TahomaB'>Plata: %4 (%5)</t><br/><t align='left' color='#965D0C' font='TahomaB'>Bronce: %6 (%7)</t>", [time - raceStartTime] call BIS_fnc_timeToString, _oro select 1, _oro select 0, _plata select 1, _plata select 0,_bronce select 1, _bronce select 0];
+			hintSilent parseText format ["<t size = '1' align='center' font='TahomaB'>Tiempo: </t><br/><t size='0.7'>Hasta el sig. Check: %8</t><br/><t size='1.5'>%1</t><br/><t align='left' color='#E6D525' font='TahomaB'>Oro: %2 (%3)</t><br/><t align='left' color='#C9C9C9' font='TahomaB'>Plata: %4 (%5)</t><br/><t align='left' color='#965D0C' font='TahomaB'>Bronce: %6 (%7)</t>", [time - raceStartTime] call BIS_fnc_timeToString, _oro select 1, _oro select 0, _plata select 1, _plata select 0,_bronce select 1, _bronce select 0, racing_lastCP];
 			sleep 0.02;
 		};
 	};
