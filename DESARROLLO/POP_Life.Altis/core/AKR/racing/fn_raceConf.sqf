@@ -14,9 +14,9 @@ _ret = switch (_trackID) do {
 		[
 				   0,	//modo
 			   80000,	//precio
-		 [150000,15],   //1er premio / tiempo
-  		  [85000,18],   //2o  premio / tiempo
-		  [50000,23]    //3er premio / tiempo
+		 [150000,45],   //1er premio / tiempo
+  		  [85000,80],   //2o  premio / tiempo
+		  [50000,120]    //3er premio / tiempo
 		]
 	};
 	default {
