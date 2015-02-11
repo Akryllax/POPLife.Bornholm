@@ -12,6 +12,7 @@ _car = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 inRace = true;
 player setVariable["inRace",inRace, true];
 racing_lastCP = time;
+racing_timeOut = 30; //Tiempo maximo entre punto y punto.
 
 //LOGICA de la carrera
 _raceID spawn {
@@ -22,16 +23,17 @@ _raceID spawn {
 	waypointIndex = 0;
 	player setVariable["waypointIndex", waypointIndex, true];
 	while {inRace} do {
-		waitUntil { ((position player) vectorDistance (position currentOrb) < _orbRadious) || !alive Player || (racing_lastCP + 60 < time)};
+		waitUntil { ((position player) vectorDistance (position currentOrb) < _orbRadious) || !alive Player || (racing_lastCP + racing_timeOut < time)};
 		
 		if(!alive player) exitWith {
 			inRace = false; 
 			player setVariable["inRace",inRace, true];
 		};
 		
-		if(racing_lastCP + 60 < time) exitWith {
+		if(racing_lastCP + racing_timeOut < time) exitWith {
 			hint "Has tardado mucho entro punto y punto.";
 			inRace = false;
+			[_this] call life_fnc_racingEnded;
 		};
 		
 		racing_lastCP = time;
