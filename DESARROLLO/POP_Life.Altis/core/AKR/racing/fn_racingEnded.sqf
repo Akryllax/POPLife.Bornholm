@@ -7,7 +7,7 @@
 	sleep 1;
 	{ deleteVehicle _x; } forEach currentTrackOrbs;
 	{ deleteVehicle _x } forEach currentTrackHelperOrbs;
-	{ deleteMarker _x; } forEach currentTrack;
+	currentTrack = [];
 };
 
 _this spawn {
