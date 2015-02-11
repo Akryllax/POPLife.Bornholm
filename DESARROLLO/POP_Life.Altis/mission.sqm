@@ -2889,7 +2889,7 @@ class Mission
 					vehicle="O_officer_F";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Start race"", ""life_fnc_startTrackAction"", [""race_01""]];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Start race"", life_fnc_startTrackAction, [""race_01""]];";
 				};
 			};
 		};
