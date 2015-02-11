@@ -95,19 +95,19 @@ while {true} do
 		_marker setMarkerColor "ColorOrange";
 		_marker setMarkerType "Empty";
 		_marker setMarkerShape "ELLIPSE";
-		_marker setMarkerSize [300,300];
-		_text = _x select 2;
+		_marker setMarkerSize [500,500];
+		/*_text = _x select 2;
 		createMarker [_text, _Pos];
 		_text setMarkerColor "ColorIndependent";
 		_text setMarkerText "Accidente de helicoptero";
 		_text setMarkerType "mil_warning";
-
-		_helicrashArray pushBack [_heliSpawn,_smokeSpawn,_MilitaryCrate,_marker,_text];
+        */
+		_helicrashArray pushBack [_heliSpawn,_smokeSpawn,_MilitaryCrate,_marker];
 	} foreach _spawnArray;
 
 	[[3,"<t color='#1EFF00' size='2'>¡ATENCIÓN!</t><br/>Se han registrado nuevos accidentes de helicopteros en Altis. Comprueba tu mapa para saber donde estan."],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
-	sleep 5400; // 1 hora y media
+	sleep ([3600,5400] call BIS_fnc_randomInt); // 1 hora / 1 hora  media
 	// WarBlast: Eliminamos los helicrash para meter nuevos.
 	{
 		private["_heli","_smoke","_crate"];
@@ -116,6 +116,6 @@ while {true} do
 		if(!isNil "_crate" OR !isNull _crate) then { detach _crate; deleteVehicle _crate; };
 		if(!isNil "_smoke" OR !isNull _smoke) then { _smoke setPos (getMarkerPos "helicrash_dropeffects");	};
 		deleteMarker (_x select 3);
-		deleteMarker (_x select 4);
+		//deleteMarker (_x select 4);
 	} foreach _helicrashArray;
 };
