@@ -28,6 +28,7 @@ _raceID spawn {
 		if(!alive player) exitWith {
 			inRace = false; 
 			player setVariable["inRace",inRace, true];
+			[_this] call life_fnc_racingEnded;
 		};
 		
 		if(racing_lastCP + racing_timeOut < time) exitWith {
