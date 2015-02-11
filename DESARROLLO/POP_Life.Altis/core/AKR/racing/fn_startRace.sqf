@@ -32,7 +32,7 @@ _raceID spawn {
 		};
 		
 		if(racing_lastCP + racing_timeOut < time) exitWith {
-			hint "Has tardado mucho entro punto y punto.";
+			hint "Has tardado mucho entre punto y punto.";
 			inRace = false;
 			[_this] call life_fnc_racingEnded;
 		};
