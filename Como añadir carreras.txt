@@ -1,0 +1,57 @@
+-- COMO AÑADIR CARRERAS --
+
+Cada carrera debe tener un nombre único siguiendo el siguiente formato:
+
+	race_XX
+
+p.e.: race_01, race_02.
+
+
+------------																------------
+Para definir donde sale el coche, añadir un marcador llamado de la siguiente manera:
+
+	race_XX_spawn
+	
+El coche saldrá en este punto y se orientará en dirección al primer marcador.
+
+------------																------------
+Para definir la ruta, crear marcadores con el siguiente nombre:
+
+	race_XX_YYY
+	
+	Donde XX es la ID de la carrera, y YYY que punto es en orden numerico.
+	
+	Por ejemplo, una ruta válida sería:
+	
+		race_02_001
+		race_02_002
+		race_02_003
+		race_02_004
+		race_02_005
+		race_02_006
+		race_02_007
+	
+	Un ruta invalida sería:
+	
+		race_02_001
+		race_02_002
+		race_02_003
+		race_02_005
+		race_02_006
+		race_02_7
+		
+
+------------																------------
+Para ajustar los premios:
+
+	En el archivo "fn_raceConf.sqf", dentro del "switch (_trackID) do {" puedes añadir la configuración de la carrera siguiento el siguiente formato:
+	
+		case "race_XX": {
+			[
+					   0,	//Modo (WIP, todavia no hace nada)
+				   80000,	//Precio para entrar
+			 [150000,15],   //Primer  premio / tiempo maximo para obtener el premio.
+			  [85000,18],   //Segundo premio / tiempo maximo para obtener el premio.
+			  [50000,23]    //Tercer  premio / tiempo maximo para obtener el premio.
+			]
+		};
