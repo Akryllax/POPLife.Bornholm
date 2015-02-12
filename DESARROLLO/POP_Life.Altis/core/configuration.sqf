@@ -103,6 +103,9 @@ CRServicio = false;
 //COPS
 taserDelay = 1;
 
+//Racing
+inRace = false;
+
 switch (playerSide) do
 {
 	case west:
