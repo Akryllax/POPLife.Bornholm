@@ -19,30 +19,30 @@ _luz3 setLightBrightness 0.1;
 _luz3 setLightColor[0,0,0];
 _luz3 lightAttachObject [Luz3, [0,0,7]];
 
-_luz4 = "#lightpoint" createVehicle getpos luz_casino_1;
+_luz4 = "#lightpoint" createVehicle getpos Luz4;
 _luz4 setLightBrightness 0.1;
 _luz4 setLightColor[0,0,0];
-_luz4 lightAttachObject [luz_casino_1, [0,0,7]];
+_luz4 lightAttachObject [Luz4, [0,0,7]];
 
-_luz5 = "#lightpoint" createVehicle getpos luz_casino_2;
+_luz5 = "#lightpoint" createVehicle getpos Luz5;
 _luz5 setLightBrightness 0.1;
 _luz5 setLightColor[0,0,0];
-_luz5 lightAttachObject [luz_casino_2, [0,0,7]];
+_luz5 lightAttachObject [Luz5, [0,0,7]];
 
-_luz6 = "#lightpoint" createVehicle getpos luz_casino_3;
+_luz6 = "#lightpoint" createVehicle getpos Luz6;
 _luz6 setLightBrightness 0.1;
 _luz6 setLightColor[0,0,0];
-_luz6 lightAttachObject [luz_casino_3, [0,0,7]];
+_luz6 lightAttachObject [Luz6, [0,0,7]];
 
-_luz7 = "#lightpoint" createVehicle getpos luz_casino_4;
+_luz7 = "#lightpoint" createVehicle getpos Luz7;
 _luz7 setLightBrightness 0.1;
 _luz7 setLightColor[0,0,0];
-_luz7 lightAttachObject [luz_casino_4, [0,0,7]];
+_luz7 lightAttachObject [Luz7, [0,0,7]];
 
-_luz8 = "#lightpoint" createVehicle getpos luz_casino_5;
+_luz8 = "#lightpoint" createVehicle getpos Luz8;
 _luz8 setLightBrightness 0.3;
 _luz8 setLightColor[0,0,255];
-_luz8 lightAttachObject [luz_casino_5, [0,0,-5]];
+_luz8 lightAttachObject [Luz8, [0,0,-5]];
 /*
 _luz9 = "#lightpoint" createVehicle getpos Luz6;
 _luz9 setLightBrightness 0.1;

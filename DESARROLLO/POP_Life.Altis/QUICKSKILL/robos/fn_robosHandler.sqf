@@ -2,12 +2,12 @@
 	File: fn_robosHandler.sqf
 	Author: Quickskill
 	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","marijuana","cocainep","cocainep"],0,"no","no"]];
-	
+
 	Example:
-	
+
 		this addAction["Robar X", QUICK_fnc_robosHandler, ["Camellito camello", TIMEPO, DINERO, METROS DE ROBO, ITEMS RECOMPENSA, POLICIA, DAR ARMAs , DAR VEHICULOS]];
 */
-	
+
 //Variables privadas generales
 private["_vendedor","_ladron","_action","_nombreRobo","_tiempoRobo","_dinero","_metros_cancelar_robo","_policias","_robosActivados","_cops","_Pos","_marker","_markerIDrandom","_darArmas","_darVehiculo"];
 //maximo de robos activos para el server
@@ -43,6 +43,39 @@ if (currentWeapon _ladron == "") exitWith {
 	hint "No me amenaces! Fuera de aquí pordiosero!";
 };
 
+/* Version 1 para todos los robos
+if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
+	{
+	while {true} do
+		{
+		if !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {};
+
+			_vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,_params];
+			sleep 1*60;
+		};
+		sleep 1*60;
+	};
+*/
+
+/* Version 2 mejor
+
+_hora =  _params select 8;
+
+if (_hora = 1) then
+	{
+       if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
+	   {
+	   while {true} do
+		   {
+		    if !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {};
+
+			  _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,_params];
+			  sleep 1*60;
+		};
+		sleep 1*60;
+	};
+};
+*/
 //controlador de robos activos devuelve el numero de robos activos
 //_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
 //waitUntil{scriptDone _robos_activos};
@@ -88,7 +121,7 @@ waitUntil { scriptDone _script_handler };
 deleteMarker _marker;
 
 //crear marcador ultima posicion del ladron
-_pos = position _ladron; 
+_pos = position _ladron;
  _markerID = format["marker_%1",floor(random 1000)];
 _marker = createMarker [ _markerID, _pos];
 _marker setMarkerColor "ColorRed";
@@ -97,11 +130,11 @@ _marker setMarkerType "mil_warning";
 
 sleep 15;
 
-deleteMarker _marker; 
+deleteMarker _marker;
 
 //Regeneramos la accion de poder robar
 sleep _tiempoRegenerarRobo; //Wait
 
 //Añadimos otra vez la opcion de robar
-_vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,_params];	
+_vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,_params];
 
