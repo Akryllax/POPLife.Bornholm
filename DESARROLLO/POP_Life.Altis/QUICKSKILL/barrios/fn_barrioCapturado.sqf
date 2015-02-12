@@ -28,7 +28,7 @@ _metros = _barrioBandera distance _jugador;
 
 if(_barrioMetros < 0) exitWith { hint "Error, _barrioMetros < 0"};
 
-_oldOwner = getVariable["capturadoPor", "sinDueño"];
+_oldOwner = _barrioBandera getVariable["capturadoPor", "sinDueño"];
 
 if !(_oldOwner isEqualTo _banda getVariable ["gang_name"]) exitWith {}; //Los dueños no son iguales a la banda del jugador... LOL?
 
