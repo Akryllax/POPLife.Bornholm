@@ -1,0 +1,157 @@
+
+
+keepMeAlive = scriptNull;
+onFly = 2;
+jumpFuel = 10;
+fuelCons = 0.5;
+particleEmissor = objNull;
+
+jetpackParticleEffect = {
+	[] spawn {
+		for "_i" from 0 to 4 do {
+			drop [
+				["A3\data_f\ParticleEffects\Universal\Universal.p3d", 16, 8, 1, 1], "",    "Billboard",    10,    3,    [     -0.1*(sin(direction player)),    -0.1*(cos(direction player)),    1.2   ],    [ random 0.01,    random 0.01,  -5  ],    300,    0.02,    0.0045,   1,    [     0.3, 5,   7   ],   [    [       0.8,     0.8,     0.8,     0.5   ],    [     0.7,     0.7,     0.7,     0.5    ],    [     0.239,0.239,0.239,0.239    ]   ],   [    0,    1,    0,    1,      0,    1   ],   0.2,    0.2,    "",    "",    player, 0, false, 0.1
+			];
+			sleep 0.1;
+		}
+	}
+};
+ 
+superJump = {
+ 
+		_keys = [17,30,36,31];
+	   
+		if(isNull keepMeAlive) then {
+			keepMeAlive = [] spawn {
+				while {!isTouchingGround player} do {
+					player allowDamage false;
+					sleep 1;
+				};
+				waitUntil {isTouchingGround player };
+				jumpFuel = 10;
+				player allowDamage true;
+			};
+		} else {
+			if (scriptDone keepMeAlive) then {
+				keepMeAlive = [] spawn {
+				if(!isTouchingGround player) then {
+					player allowDamage false;
+				};
+				waitUntil {isTouchingGround player };
+				jumpFuel = 10;
+				player allowDamage true;
+				};
+			};
+		};
+ 
+		if(_this == 57) then {
+			[] spawn {
+				_front = [0,0, 0.5];
+				_velM = vectorMagnitude (velocity player);
+				if(isTouchingGround player) then {
+						_front = _front vectorAdd [0,0,onFly * 3];
+				} else {
+						_front = _front vectorMultiply ( (15 / (_velM + 0.5)) * onFly);
+				};
+			   
+				if(jumpFuel > 0) then {
+						
+					[] call jetpackParticleEffect;
+					_temp = velocity player;
+					_temp = _temp vectorAdd _front;
+					player setVelocity _temp;
+					jumpFuel = jumpFuel - fuelCons;
+					hintSilent str jumpFuel;
+				};
+			};
+		};
+		if(_this == 17) then {
+			[] spawn {
+				if!(isTouchingGround player) then {
+					_front = [sin(getDir player), cos(getDir player), 0];
+					_velM = vectorMagnitude (velocity player);
+					_front = _front vectorMultiply ( (5 / (_velM + 1)) * onFly);
+				   
+					if(jumpFuel > 0) then {
+					
+						[] call jetpackParticleEffect;
+						_temp = velocity player;
+						_temp = _temp vectorAdd _front;
+						player setVelocity _temp;
+						jumpFuel = jumpFuel - fuelCons;
+						hintSilent str jumpFuel;
+					};
+				};
+			};
+		};
+		if(_this == 30) then {
+				[] spawn {
+						if!(isTouchingGround player) then {
+								_front = [sin((getDir player) - 90), cos((getDir player) - 90), 0];
+								_velM = vectorMagnitude (velocity player);
+								_front = _front vectorMultiply ( (5 / (_velM + 1)) * onFly);
+							   
+								if(jumpFuel > 0) then {
+										[] call jetpackParticleEffect;
+										_temp = velocity player;
+										_temp = _temp vectorAdd _front;
+										player setVelocity _temp;
+										jumpFuel = jumpFuel - fuelCons;
+										hintSilent str jumpFuel;
+								};
+						};
+				};
+		};
+		if(_this == 36) then {
+				[] spawn {
+						if!(isTouchingGround player) then {
+								_front = [sin((getDir player) + 90), cos((getDir player) + 90), 0];
+								_velM = vectorMagnitude (velocity player);
+								_front = _front vectorMultiply ( (5 / (_velM + 1)) * onFly);
+							   
+								if(jumpFuel > 0) then {
+										[] call jetpackParticleEffect;
+										_temp = velocity player;
+										_temp = _temp vectorAdd _front;
+										player setVelocity _temp;
+										jumpFuel = jumpFuel - fuelCons;
+										hintSilent str jumpFuel;
+								};
+						};
+				};
+		};
+		if(_this == 31) then {
+				[] spawn {
+						if!(isTouchingGround player) then {
+								_front = [sin(getDir player), cos(getDir player), 0];
+								_velM = vectorMagnitude (velocity player);
+								_front = _front vectorMultiply ( (5 / (_velM + 1)) * -onFly);
+							   
+								if(jumpFuel > 0) then {
+										[] call jetpackParticleEffect;
+										_temp = velocity player;
+										_temp = _temp vectorAdd _front;
+										player setVelocity _temp;
+										jumpFuel = jumpFuel - fuelCons;
+										hintSilent str jumpFuel;
+								};
+						};
+				};
+		};
+	   
+		if(_this == 69) then {
+				_front = [0,0, 1];
+				_front = _front vectorMultiply (-onFly);               
+				_temp = velocity player;
+				_temp = _temp vectorAdd _front;
+				player setVelocity _temp;
+		};
+	   
+		if(_this == 45) then {
+				player setVelocity [0,0,0];
+		};
+};
+ 
+player addEventHandler["Killed", "[_this select 0] spawn life_fnc_revivePlayer"];
+powerHandler = (findDisplay 46) displayAddEventHandler["KeyDown", "(_this select 1) spawn superJump; false"];
+
