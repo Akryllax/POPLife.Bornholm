@@ -89,15 +89,15 @@ if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
 	       _color = floor (Random 6);
 	       _color = round _color;
 
-           _luz7 setLightAmbient[1,1,1];
-           _luz8 setLightAmbient[1,1,1];
-           _luz9 setLightAmbient[1,1,1];
-           _luz10 setLightAmbient[1,1,1];
-           _luz11 setLightAmbient[1,1,1];
-           _luz12 setLightAmbient[1,1,1];
-           _luz13 setLightAmbient[1,1,1];
-           _luz14 setLightAmbient[1,1,1];
-           _luz15 setLightAmbient[1,1,1];
+           _luz7 setLightAmbient[10,10,10];
+           _luz8 setLightAmbient[10,10,10];
+           _luz9 setLightAmbient[10,10,10];
+           _luz10 setLightAmbient[10,10,10];
+           _luz11 setLightAmbient[10,10,10];
+           _luz12 setLightAmbient[10,10,10];
+           _luz13 setLightAmbient[10,10,10];
+           _luz14 setLightAmbient[10,10,10];
+           _luz15 setLightAmbient[10,10,10];
 
 	     if(_color == 0) then {
 	        _luz1 setLightAmbient[0,0,500];
