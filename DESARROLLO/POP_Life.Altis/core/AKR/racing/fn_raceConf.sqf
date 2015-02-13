@@ -13,10 +13,10 @@ _ret = switch (_trackID) do {
 	case "race_01": {
 		[
 				   0,	//modo
-			   80000,	//precio
-		 [150000,45],   //1er premio / tiempo
-  		  [85000,80],   //2o  premio / tiempo
-		  [50000,120]    //3er premio / tiempo
+			   50000,	//precio
+		 [200000,180],   //1er premio / tiempo
+  		 [150000,220],   //2o  premio / tiempo
+		  [65000,250]    //3er premio / tiempo
 		]
 	};
 	

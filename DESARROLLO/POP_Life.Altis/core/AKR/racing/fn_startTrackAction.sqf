@@ -14,7 +14,7 @@ if(_raceID in racing_current) exitWith {
 	hint "Esta carrera ya esta en curso! Espera a que termine.";
 };
 
-if(inRace) exitWith {
+if(inRace || (count currentTrackOrbs) > 0) exitWith {
 	hint "Ya estas compitiendo";
 };
 
