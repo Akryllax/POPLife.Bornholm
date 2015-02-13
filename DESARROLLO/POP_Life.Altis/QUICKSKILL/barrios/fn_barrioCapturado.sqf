@@ -70,7 +70,7 @@ while (_timestamp + _time > time) do {
 		_pagar_ladron = true;
 	};
 
-	_oldOwner = getVariable["capturadoPor", ""];
+	_oldOwner = _barrioBandera getVariable["capturadoPor", ""];
 };
 
 if(!_pagar_ladron || !alive player || _darPremio)then{

@@ -1,4 +1,5 @@
 #include <macro.h>
+#include <Keycodes.h>
 /*
 	File: fn_keyHandler.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -63,7 +64,7 @@ switch (_code) do
 	};
 
 	//Holster / recall weapon.
-	case 35:
+	case DIK_H:
 	{
 		if(_shift && !_ctrlKey && currentWeapon player != "") then {
 			life_curWep_h = currentWeapon player;
@@ -93,14 +94,14 @@ switch (_code) do
 	};
 
   // O, abrelatas
-    case 24:
+    case DIK_O:
 	{
 		if (!_shift && !_alt && !_ctrlKey  && (vehicle player != player)) then {
 			[] call War_fnc_abrelatas;
 		};
 	};
 	//Restraining (Shift + R)
-	case 19:
+	case DIK_R:
     {
         if(_shift) then {_handled = true;};
         switch (playerSide) do
@@ -147,7 +148,7 @@ switch (_code) do
 
 
 	//Knock out, this is experimental and yeah...
-    case 34:
+    case DIK_G:
 	{
 		if(_shift) then {_handled = true;};
 	    switch (playerSide) do
@@ -186,7 +187,7 @@ switch (_code) do
  };
 
 	//T Key (Trunk)
-	case 20:
+	case DIK_T:
 	{
 		if(!_alt && !_ctrlKey) then
 		{
@@ -210,7 +211,7 @@ switch (_code) do
 		};
 	};
 	//L Key?
-	case 38:
+	case DIK_L:
 	{
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent]) then {
@@ -228,7 +229,7 @@ switch (_code) do
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
 	//Y Player Menu
-	case 21:
+	case DIK_Y:
 	{
 		if(!_alt && !_ctrlKey && !dialog) then
 		{
@@ -238,7 +239,7 @@ switch (_code) do
 	};
 
 	//F Key
-	case 33:
+	case DIK_F:
 	{
 		if(playerSide in [west,independent] && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
 		{
@@ -269,7 +270,7 @@ switch (_code) do
 		};
 	};
 	//U Key
-	case 22:
+	case DIK_U:
 	{
 		if(!_alt && !_ctrlKey) then {
 			if(vehicle player == player) then {
@@ -316,7 +317,7 @@ switch (_code) do
 		};
 	};
 	//rendirse shift + 3
-	case 4:
+	case DIK_3:
 	{
 		if(_shift) then {_handled = true;};
 
@@ -336,7 +337,7 @@ switch (_code) do
 	};
 
 
-	case 59:// F1 - TAPONES
+	case DIK_F1:// F1 - TAPONES
 	{
 
 		if (soundVolume == 0.05) then {
@@ -353,7 +354,27 @@ switch (_code) do
 			[] call ROS_fnc_silla;
 		};
 	};*/
-	case 61:
+	case DIK_F1: // F1
+	{
+		if(__GETC__(life_adminlevel) < 1) exitWith {
+			hint "Desactivado";
+			closeDialog 0;
+		};
+		_handled = false;
+	};
+
+	case DIK_F2: // F2
+	{
+		if(__GETC__(life_adminlevel) < 1) exitWith {
+			hint "Desactivado";
+			closeDialog 0;
+		};
+		if(__GETC__(life_adminlevel) >= 4) then {
+			[] call life_fnc_adminDebugCon;
+		};
+		_handled = false;
+	};
+	case DIK_F3:
 	{
 		if (vehicle player == player) then {
 			[] call ROS_fnc_fiesta;
@@ -365,82 +386,83 @@ switch (_code) do
 			[] call ROS_fnc_protestar;
 		};
 	};*/
-	case 59: // F1
-	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
-		closeDialog 0;
-		hintc "Diese Taste wurde vom System blockiert";
-		_handled = false;
-	};
-
-	case 60: // F2
-	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
-		closeDialog 0;
-		hintc "Diese Taste wurde vom System blockiert";
-		_handled = false;
-	};
 	/*
 	case 61: // F3
 	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
+		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado"};
 		closeDialog 0;
 		_handled = false;
 	};
     */
-	case 62: // F4
+	case DIK_F4: // F4
 	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
-		closeDialog 0;
+		if(__GETC__(life_adminlevel) < 1) exitWith {
+			hint "Desactivado";
+			closeDialog 0;
+		};
 		_handled = false;
 	};
 
-	case 63: // F5
+	case DIK_F5: // F5
 	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
-		closeDialog 0;
+		if(__GETC__(life_adminlevel) < 1) exitWith {
+			hint "Desactivado";
+			closeDialog 0;
+		};
 		_handled = false;
 	};
 
-	case 64: //F6 key
+	case DIK_F6: //F6 key
 	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
-		closeDialog 0;
+		if(__GETC__(life_adminlevel) < 1) exitWith {
+			hint "Desactivado";
+			closeDialog 0;
+		};
 		_handled = false;
 	};
 
-	case 65: // F7 Key
+	case DIK_F7: // F7 Key
 	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
-		closeDialog 0;
+		if(__GETC__(life_adminlevel) < 1) exitWith {
+			hint "Desactivado";
+			closeDialog 0;
+		};
 		_handled = false;
 	};
 
-	case 66: //F8 key
+	case DIK_F8: //F8 key
 	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
-		closeDialog 0;
+		if(__GETC__(life_adminlevel) < 1) exitWith {
+			hint "Desactivado";
+			closeDialog 0;
+		};
 		_handled = false;
 	};
 
-	case 67: //F9 key
+	case DIK_F9: //F9 key
 	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
-		closeDialog 0;
+		if(__GETC__(life_adminlevel) < 1) exitWith {
+			hint "Desactivado";
+			closeDialog 0;
+		};
 		_handled = false;
 	};
 
-	case 68: //10 key
+	case DIK_F10: //10 key
 	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
-		closeDialog 0;
+		if(__GETC__(life_adminlevel) < 1) exitWith {
+			hint "Desactivado";
+			closeDialog 0;
+		};
 		_handled = false;
 	};
 
-	case 211: //DELETE key
+	case DIK_F11: //DELETE key
 	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado por un admin"};
-		closeDialog 0;
+		if(__GETC__(life_adminlevel) < 1) exitWith {
+			hint "Desactivado";
+			closeDialog 0;
+		};
 		_handled = false;
 	};
 };
