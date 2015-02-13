@@ -1,7 +1,7 @@
 /*
 	File: fn_clothingFilter.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Functionality for filtering clothing types in the menu.
 */
@@ -38,6 +38,7 @@ _clothes = switch (life_clothing_store) do
 	case "dive": {[_selection] call life_fnc_clothing_dive;};
 	case "kart": {[_selection] call life_fnc_clothing_kart;};
 	case "cazarrecompensas": {[_selection] call life_fnc_clothing_cazarrecompensas;};
+	case "merc": {[_selection]  call life_fnc_clothing_merc;};
 };
 
 if(count _clothes == 0) exitWith {};

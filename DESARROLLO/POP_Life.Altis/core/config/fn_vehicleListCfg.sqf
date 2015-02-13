@@ -199,6 +199,10 @@ switch (_shop) do
         if(__GETC__(life_merclevel) == 2) then {
 		_return pushBack	["I_MRAP_03_F",1200000 * Desc];
 		_return pushBack	["I_MRAP_03_hmg_F",2500000 * Desc];
+		_return pushBack	["I_Quadbike_01_F",1000 * Desc];
+		_return pushBack	["I_G_Offroad_01_F",9000 * Desc];
+		_return pushBack	["I_G_Offroad_01_armed_F",450000 * Desc];
+		_return pushBack	["C_Hatchback_01_sport_F",9000 * Desc];
         };
     };
 
@@ -210,7 +214,10 @@ switch (_shop) do
 		_return pushBack	["I_Heli_light_03_unarmed_F",550000 * Desc];
         };
         if(__GETC__(life_merclevel) >= 3) then {
-        _return pushBack ["B_Heli_Light_01_armed_F", 3500000 * Desc];
+        _return pushBack    ["B_Heli_Light_01_armed_F", 3500000 * Desc];
+        _return pushBack	["B_Heli_Light_01_F",300000 * Desc];
+		_return pushBack	["O_Heli_Light_02_unarmed_F",450000 * Desc];
+		_return pushBack	["I_Heli_light_03_unarmed_F",550000 * Desc];
         };
     };
 
