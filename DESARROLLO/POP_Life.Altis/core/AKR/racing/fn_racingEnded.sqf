@@ -16,11 +16,13 @@ _this spawn {
 	_trackID = [_this, 0, "",[""]] call BIS_fnc_param;
 	_exited = [_this, 1, false, [false]] call BIS_fnc_param;
 	
-	if (_exited) exitWith {};
 	
 	inRace = false;
-	player setVariable["raceFinished", true, true];
 	player setVariable["inRace",inRace, true];
+	
+	if (_exited) exitWith {};
+
+	player setVariable["raceFinished", true, true];
 	
 	_finishTime = time - raceStartTime;
 	raceStartTime = 0;

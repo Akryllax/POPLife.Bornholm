@@ -19,7 +19,14 @@ _this spawn {
 	_car = "C_Hatchback_01_sport_F" createVehicle _spawnPos;
 	_car setDir _dir;
 	_car setFuel 0;
-	_car addEventHandler["GetOut", {_this spawn {sleep 1; deleteVehicle (_this select 0)}}];;
+	_car addEventHandler["GetOut", {
+			_this spawn {
+				sleep 1;
+				deleteVehicle (_this select 0);
+				["", true] call life_fnc_racingEnded;
+			}
+		}
+	];
 
 	_arr = "Sign_Arrow_Direction_F" createVehicleLocal (position _car);
 	_arr attachTo [_car, [0,0,1.2]];
