@@ -491,7 +491,7 @@ switch(_shop) do
 		switch (true) do
 		{
 			case (playerSide != opfor): {"No eres un mercenario"};
-			case (__GETC__(life_merclevel) >= 1):
+			case (__GETC__(life_merclevel) = 1):
 		    {
 				["Tienda Basica Mercenarios",
 					[
@@ -515,7 +515,6 @@ switch(_shop) do
 						["SMG_02_F",nil,30000 * Desc],
 						["30Rnd_9x21_Mag",nil,200 * Desc],
 						["SMG_01_F",nil,35000 * Desc],
-						["SMG_01_Holo_pointer_snds_F",nil,40000 * Desc],
 						["muzzle_snds_acp",nil,15000 * Desc],
 						["30Rnd_45ACP_Mag_SMG_01",nil,200 * Desc],
 						["arifle_TRG20_F",nil,40000 * Desc],
@@ -533,6 +532,9 @@ switch(_shop) do
 						["20Rnd_762x51_Mag",nil,1000 * Desc],
 						["acc_flashlight",nil,1000 * Desc],
 						["muzzle_snds_L",nil,5000 * Desc],
+						["muzzle_snds_M",nil,6000 * Desc],
+						["muzzle_snds_B",nil,7000 * Desc],
+						["muzzle_snds_H",nil,8000 * Desc],
 						["optic_Yorris",nil,1500 * Desc],
 						["optic_MRD",nil,1500 * Desc],
 						["optic_ACO_grn",nil,2500 * Desc],
@@ -543,8 +545,6 @@ switch(_shop) do
 						["optic_DMS",nil,4500 * Desc],
 						["optic_SOS",nil,5000 * Desc],
 						["optic_LRPS",nil,5000 * Desc],
-						["7Rnd_408_Mag",nil,500 * Desc],
-                        ["optic_LRPS",nil,8000 * Desc],
                         ["launch_NLAW_F",nil,200000 * Desc],
                         ["NLAW_F",nil,20000 * Desc],
                         ["LMG_Zafir_F",nil,100000 * Desc],
@@ -555,7 +555,7 @@ switch(_shop) do
 				];
 			};
 
-			case (__GETC__(life_merclevel) >= 3) :
+			case (__GETC__(life_merclevel) = 2) :
 		    {
 				["Tienda superior mercenarios",
 					[
@@ -579,7 +579,6 @@ switch(_shop) do
 						["SMG_02_F",nil,30000 * Desc],
 						["30Rnd_9x21_Mag",nil,200 * Desc],
 						["SMG_01_F",nil,35000 * Desc],
-						["SMG_01_Holo_pointer_snds_F",nil,40000 * Desc],
 						["muzzle_snds_acp",nil,15000 * Desc],
 						["30Rnd_45ACP_Mag_SMG_01",nil,200 * Desc],
 						["arifle_TRG20_F",nil,40000 * Desc],
@@ -597,6 +596,9 @@ switch(_shop) do
 						["20Rnd_762x51_Mag",nil,1000 * Desc],
 						["acc_flashlight",nil,1000 * Desc],
 						["muzzle_snds_L",nil,5000 * Desc],
+						["muzzle_snds_M",nil,6000 * Desc],
+						["muzzle_snds_B",nil,7000 * Desc],
+						["muzzle_snds_H",nil,8000 * Desc],
 						["optic_Yorris",nil,1500 * Desc],
 						["optic_MRD",nil,1500 * Desc],
 						["optic_ACO_grn",nil,2500 * Desc],
@@ -606,7 +608,20 @@ switch(_shop) do
 						["optic_NVS",nil,5000 * Desc],
 						["optic_DMS",nil,4500 * Desc],
 						["optic_SOS",nil,5000 * Desc],
-						["optic_LRPS",nil,5000 * Desc]
+						["optic_LRPS",nil,5000 * Desc],
+                        ["LMG_Mk200_F",nil,150000 * Desc],
+                        ["200Rnd_65x39_cased_Box",nil,25000 * Desc],
+                        ["srifle_LRR_F",nil,200000 * Desc],
+                        ["7Rnd_408_mag",nil,25000 * Desc],
+                        ["launch_NLAW_F",nil,200000 * Desc],
+                        ["NLAW_F",nil,20000 * Desc],
+                        ["LMG_Zafir_F",nil,100000 * Desc],
+                        ["150Rnd_762x51_Box_Tracer",nil,10000 * Desc],
+                        ["srifle_GM6_F",nil,150000 * Desc],
+                        ["5Rnd_127x108_APDS_Mag",nil,5000 * Desc],
+                        ["O_UavTerminal",nil,250000 * Desc],
+                        ["O_UAV_01_F",nil,250000 * Desc],
+  						["optic_tsw",nil,1000000]
 					]
 				];
 		     };

@@ -171,6 +171,7 @@ class Life_Client_Core
 		class clothing_dive {};
 		class clothing_kart {};
 		class clothing_cazarrecompensas {};
+		class clothing_merc {};
 	};
 
 	class Player_Menu

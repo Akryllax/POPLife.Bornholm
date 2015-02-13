@@ -1,7 +1,7 @@
 /*
 	File: fn_getVehicles.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sends a request to query the database information and returns vehicles.
 */
@@ -26,6 +26,7 @@ _side = switch(_side) do
 	case west:{"cop"};
 	case civilian: {"civ"};
 	case independent: {"med"};
+	case opfor: {"merc"}
 	default {"Error"};
 };
 

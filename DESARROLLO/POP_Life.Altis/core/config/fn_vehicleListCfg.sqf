@@ -25,13 +25,13 @@ switch (_shop) do
 	{
 		_return = [
 			["C_Offroad_01_F",10000 * Desc],
-			["C_SUV_01_F",15000 * Desc]			
+			["C_SUV_01_F",15000 * Desc]
 		];
 	};
 
 	case "med_air_hs": {
 		_return = [
-			["B_Heli_Light_01_F",50000 * Desc]			
+			["B_Heli_Light_01_F",50000 * Desc]
 		];
 	};
 
@@ -103,6 +103,7 @@ switch (_shop) do
 
 		if(__GETC__(life_coplevel) >= 8) then
 			{
+		_return pushBack ["B_MRAP_01_hmg_F",30000 * Desc];
 		_return pushBack ["I_MRAP_03_hmg_F",30000 * Desc];
 		};
 	};
@@ -189,13 +190,13 @@ switch (_shop) do
 
 	case "merc_c":
 	{
-        if(__GETC__(life_merclevel) >= 1) then {
+        if(__GETC__(life_merclevel) = 1) then {
 		_return pushBack	["I_Quadbike_01_F",1000 * Desc];
 		_return pushBack	["I_G_Offroad_01_F",9000 * Desc];
 		_return pushBack	["I_G_Offroad_01_armed_F",450000 * Desc];
 		_return pushBack	["C_Hatchback_01_sport_F",9000 * Desc];
         };
-        if(__GETC__(life_merclevel) >= 3) then {
+        if(__GETC__(life_merclevel) = 2) then {
 		_return pushBack	["I_MRAP_03_F",1200000 * Desc];
 		_return pushBack	["I_MRAP_03_hmg_F",2500000 * Desc];
         };

@@ -62,7 +62,7 @@ switch (_vehicle) do
 			case 8: {_color = "RedBull"};
 			case 9: {_color = "Valkyria"};
 			case 10: {_color = "Competicion"};
-			case 11: {_color = "Competicion 2"};
+			case 11: {_color = "BadMovil"};
 			case 12: {_color = "Competicion 3"};
 			case 13: {_color = "Rockstar"};
 			case 14: {_color = "Lancia"};
@@ -177,7 +177,7 @@ switch (_vehicle) do
 			case 0: {_color = "Negro"};
 			case 1: {_color = "Blanco y Azul"};
 			case 2: {_color = "Digital Verde"};
-			case 3: {_color = "Digital Desierto"};			
+			case 3: {_color = "Digital Desierto"};
 		};
 	};
 
@@ -240,6 +240,38 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "Negro"};
+		};
+	};
+
+	case "I_MRAP_03_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Negro"};
+		};
+	};
+
+	case "I_MRAP_03_hmg_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Geo"};
+		};
+	};
+
+	case "B_MRAP_01_hmg_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Geo"};
+		};
+	};
+
+	case "I_Heli_light_03_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Geo"};
 		};
 	};
 };

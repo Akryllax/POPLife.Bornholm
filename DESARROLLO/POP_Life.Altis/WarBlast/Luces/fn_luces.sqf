@@ -74,6 +74,11 @@ _luz14 setLightBrightness 1;
 _luz14 setLightColor[0,0,0];
 _luz14 lightAttachObject [Luz14, [0,0,20]];
 
+_luz14 = "#lightpoint" createVehicle getpos Luz15;
+_luz14 setLightBrightness 1;
+_luz14 setLightColor[0,0,0];
+_luz14 lightAttachObject [Luz15, [0,0,20]];
+
 if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
 {
 
@@ -92,6 +97,7 @@ if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
            _luz12 setLightAmbient[1,1,1];
            _luz13 setLightAmbient[1,1,1];
            _luz14 setLightAmbient[1,1,1];
+           _luz15 setLightAmbient[1,1,1];
 
 	     if(_color == 0) then {
 	        _luz1 setLightAmbient[0,0,500];

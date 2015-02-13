@@ -38,7 +38,7 @@ switch (_vehicle) do
 			["textures\CIV\sport_redbull.jpg","civ"],
 			["textures\CIV\valkyriacar.jpg","civ"],
 			["textures\CIV\civ_hatchback_racing.jpg","civ"],
-			["textures\DONADORES\rsz_asiimov_hatchback_textures.jpg","civ"],
+			["textures\CIV\rsz_hatchback_badmobil.jpg","civ"],
 			["textures\CIV\DEPORTIVA-CIRCUITO.jpg", "civ"],
 			["textures\CIV\hatchback_rockstar.jpg", "civ"],
 			["textures\CIV\lancia-martini.jpg", "civ"],
@@ -67,7 +67,7 @@ switch (_vehicle) do
 			["textures\COP\geo_offroad.jpg","cop"],
 			["textures\CIV\GENERALLEEOFFROAD.jpg","civ"],
 			["textures\CIV\taxi_2.jpg","civ"],
-			["textures\MED\offroad_notarzt.jpg","med"]			
+			["textures\MED\offroad_notarzt.jpg","med"]
 		];
 	};
 
@@ -179,7 +179,7 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa","fed"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa","donate"],
-			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"]			
+			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"]
 		];
 	};
 
@@ -227,6 +227,38 @@ switch (_vehicle) do
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
 		];
 	};
+
+	case "I_MRAP_03_F";
+	{
+	   _ret =
+	   [
+          ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","merc"]
+	   ];
+    };
+
+    case "I_MRAP_03_hmg_F";
+    {
+	   _ret =
+	   [
+          ["textures\COP\strider.jpg","cop"]
+	   ];
+    };
+
+    case "B_MRAP_01_hmg_F":
+	{
+		_ret =
+		[
+			["textures\COP\geo_hunter_1.jpg","cop","textures\COP\geo_hunter_2.jpg"]
+		];
+	};
+
+	case "I_Heli_light_03_F":
+	{
+	    _ret =
+	    [
+            ["textures\COP\police_hellcat.jpg","cop"]
+	    ];
+    };
 };
 
 _ret;
