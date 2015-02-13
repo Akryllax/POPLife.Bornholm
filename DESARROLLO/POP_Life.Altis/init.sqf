@@ -78,6 +78,8 @@ if (isServer) then {
 [] spawn {
     while{true} do {
         sleep 10;
+        0 setRain 0;
+        0 setOvercast 0;
         0 setFog 0;
         sleep 590;
     };
