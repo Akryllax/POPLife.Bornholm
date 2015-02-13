@@ -4,6 +4,7 @@ _precio = 550000;
 _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 _vendedor = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 
+if(side player == west) exitWith { hint "Eres policia" };
 
 if(isNull _unit) exitWith {}; //if not the thief get bent
 

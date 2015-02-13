@@ -1,7 +1,7 @@
 cursorTarget addAction["Vestirse de piloto de kart GRATIS!!",QUICK_equiparRopa];
 
 
-
+if(side player == west) exitWith { hint "Eres policia" };
 
 
 QUICK_equiparRopa = {

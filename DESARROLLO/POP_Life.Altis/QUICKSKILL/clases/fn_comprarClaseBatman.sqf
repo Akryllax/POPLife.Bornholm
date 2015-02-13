@@ -6,6 +6,8 @@ _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 
 if(isNull _unit) exitWith {}; //if not the thief get bent
 	
+if(side player == west) exitWith { hint "Eres policia" };
+	
 //puede pagar?¿
  if(life_cash - _precio < 0) exitWith { hint "No tienes suficiente dinero";[] spawn { sleep 5;hint "";} };
 

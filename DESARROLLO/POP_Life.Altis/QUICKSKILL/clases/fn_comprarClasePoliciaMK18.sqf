@@ -1,6 +1,8 @@
 #include <macro.h>
 waitUntil {!isNull player};
 
+if(side player != west) exitWith { hint "Eres policia" };
+
 _precio = 29000;
 _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 
