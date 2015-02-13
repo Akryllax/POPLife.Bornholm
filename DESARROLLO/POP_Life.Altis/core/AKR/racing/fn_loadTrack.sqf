@@ -19,8 +19,12 @@ currentTrackHelperOrbs = [];
 
 _oldName = "";
 
+startLoadingScreen ["Cargando carrera..."];
+
 while { !(getMarkerPos _mrkrName isEqualTo [0,0,0]) } do {
 
+	progressLoadingScreen (_i / 128);
+	
 	[_oldName, _mrkrName] spawn {
 		_oldName = _this select 0;
 		_mrkrName = _this select 1;

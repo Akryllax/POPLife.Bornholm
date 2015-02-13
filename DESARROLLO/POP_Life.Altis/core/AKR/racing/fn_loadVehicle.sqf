@@ -46,5 +46,7 @@ _this spawn {
 	
 	player moveInDriver _car;
 	
+	endLoadingScreen;
+	
 	_car
 };
