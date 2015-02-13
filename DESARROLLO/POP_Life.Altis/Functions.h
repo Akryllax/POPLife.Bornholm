@@ -560,9 +560,9 @@ class Quickskill
 	class Barrios
 	{
 		file = "QUICKSKILL\barrios";
-		class capturarBarrio {};
+		//class capturarBarrio {};
 	
-		class barrioCapturado{};
+		//class barrioCapturado{};
 		
 		
 	};
