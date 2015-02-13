@@ -7866,7 +7866,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false;  this addAction[      ""Robar Joyeria"",      QUICK_fnc_robosHandler,      [          ""Joyeria"",          350,          50000 + round random 130000,          50,          [              ""goldbar""          ],          3,          ""no"",          ""no""      ],      1.5,      false,      true,      """",      {          (              (                  (date select 3) >= 20              )              ||               (                  (date select 3) <= 7              )          )      }  ];        this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Joyeria"",QUICK_fnc_robosHandler,[""Joyeria"",350,50000 + round random 130000,50,[""goldbar""],3,""no"",""no""]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
 		};
 		class Item479
 		{
