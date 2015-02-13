@@ -38,7 +38,7 @@ _timestamp = time;
 _darPremio = true;
 
 while (_timestamp + _time > time) do {
-	_actualOwner = getVariable["capturadoPor", ""];
+	_actualOwner = _barrioBandera getVariable ["capturadoPor", ""];
 	_metros =  _barrioBandera distance _jugador;
 
 	if(_oldOwner != _actualOwner) exitWith {
