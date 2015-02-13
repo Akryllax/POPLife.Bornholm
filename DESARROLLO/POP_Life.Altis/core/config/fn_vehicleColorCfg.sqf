@@ -252,7 +252,7 @@ switch (_vehicle) do
 		];
 	};
 
-	case "I_Heli_light_03_F":
+	case "I_Heli_light_03_unarmed_F":
 	{
 	    _ret =
 	    [
