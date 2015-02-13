@@ -1,6 +1,6 @@
 /*
    luz.sqf
-   Autor: WarBlast
+   Autor: WarBlast e Icaruk
    Descripcion: Luces dinamicas
 */
 
@@ -79,15 +79,8 @@ _luz15 setLightBrightness 1;
 _luz15 setLightColor[0,0,0];
 _luz15 lightAttachObject [Luz15, [0,0,20]];
 
-if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
-{
-
-	while {true} do
-	{
-	if !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {};
-
-	       _color = floor (Random 6);
-	       _color = round _color;
+while {true} do { // compruebas si es de día o de noche
+        if (((date select 3) >= 20) OR ((date select 3) <= 7)) then { // 8pm - 7am
 
            _luz7 setLightAmbient[10,10,10];
            _luz8 setLightAmbient[10,10,10];
@@ -98,6 +91,24 @@ if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
            _luz13 setLightAmbient[10,10,10];
            _luz14 setLightAmbient[10,10,10];
            _luz15 setLightAmbient[10,10,10];
+
+                while {true} do { // compruebo cada minuto si deja de ser de noche
+                        if !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {}; // deja de ser de noche y voy al else
+                        sleep 60;
+                };
+        } else {
+                while {true} do { // compruebo cada minuto si deja de ser de día
+                        if (((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {}; // deja de ser de día y doy la vuelta
+                        sleep 60;
+                };
+        };
+};
+
+while {true} do {
+	       if (((date select 3) >= 20) OR ((date select 3) <= 7)) then {
+
+	       _color = floor (Random 6);
+	       _color = round _color;
 
 	     if(_color == 0) then {
 	        _luz1 setLightAmbient[0,0,500];
@@ -123,7 +134,7 @@ if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
 	        _luz5 setLightAmbient[0,500,0];
 	        _luz6 setLightAmbient[0,0,500];
 	     };
-	    if(_color == 3) then {
+	     if(_color == 3) then {
 	        _luz1 setLightAmbient[0,122,60];
 	        _luz2 setLightAmbient[500,0,0];
 	        _luz3 setLightAmbient[60,0,122];
@@ -131,7 +142,7 @@ if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
 	        _luz5 setLightAmbient[500,0,0];
 	        _luz6 setLightAmbient[60,0,122];
 	     };
-	    if(_color == 4) then {
+	     if(_color == 4) then {
 	        _luz1 setLightAmbient[0,500,0];
 	        _luz2 setLightAmbient[60,0,122];
 	        _luz3 setLightAmbient[500,0,0];
@@ -139,7 +150,7 @@ if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
 	        _luz5 setLightAmbient[60,0,122];
 	        _luz6 setLightAmbient[500,0,0];
 	     };
-	    if(_color == 5) then {
+	     if(_color == 5) then {
 	        _luz1 setLightAmbient[500,0,0];
 	        _luz2 setLightAmbient[122,0,60];
 	        _luz3 setLightAmbient[0,122,60];
@@ -147,7 +158,14 @@ if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
 	        _luz5 setLightAmbient[122,0,60];
 	        _luz6 setLightAmbient[0,122,60];
 	     };
-	     sleep 0.3;
-    };
-    sleep 1*60;
+	     while {true} do { // compruebo cada minuto si deja de ser de noche
+                        if !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {}; // deja de ser de noche y voy al else
+                        sleep 60;
+                };
+        } else {
+                while {true} do { // compruebo cada minuto si deja de ser de día
+                        if (((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {}; // deja de ser de día y doy la vuelta
+                        sleep 60;
+                };
+        };
 };
