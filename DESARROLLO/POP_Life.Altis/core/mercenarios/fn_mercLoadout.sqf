@@ -19,8 +19,8 @@ if(__GETC__(life_merclevel) == 1) then
 		player addHeadgear "H_HelmetIA";
 		player addItem "NVGoggles_INDEP";
 		player assignItem "NVGoggles_INDEP";
-		player addItem "Rangefinder"
-		player assignItem "Rangefinder"
+		player addItem "Rangefinder";
+		player assignItem "Rangefinder";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
 		player addItem "ItemCompass";
@@ -36,8 +36,8 @@ if(__GETC__(life_merclevel) == 2) then
 		player addHeadgear "H_HelmetIA";
 		player addItem "NVGoggles_INDEP";
 		player assignItem "NVGoggles_INDEP";
-		player addItem "Rangefinder"
-		player assignItem "Rangefinder"
+		player addItem "Rangefinder";
+		player assignItem "Rangefinder";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
 		player addItem "ItemCompass";
