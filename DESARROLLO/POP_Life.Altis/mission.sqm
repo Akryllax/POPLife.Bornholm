@@ -14953,7 +14953,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			text="Luz4";
+			text="Luz_4";
 			init="this enableSimulation false; this allowDamage false;";
 		};
 		class Item1143
@@ -16149,7 +16149,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.40000001;
-			text="Luz_4";
+			text="Luz4";
 		};
 		class Item1254
 		{
