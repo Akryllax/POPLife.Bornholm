@@ -76,13 +76,6 @@ class CfgSounds
 		titles[] = {};
 	};
 
-	class flashbang
-	{
-		name = "flashbang";
-		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
-		titles[] = {};
-	};
-
 	class esposas
 	{
 		name = "esposas";
