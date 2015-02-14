@@ -1,0 +1,74 @@
+player removeAllEventHandlers "HandleDamage";
+
+AKR_handleDamage = {
+
+	dmgFactor = 0.1;
+
+	_unit = _this select 0;
+	_sele = _this select 1;
+	_damg = _this select 2;
+	_srce = _this select 3;
+	_proj = _this select 4;
+	
+	_final = 0;
+	
+	_reason = "Unknown";
+
+	switch (true) do {
+	
+		case (_srce == player) : {
+			_reason = "Prob. se ha caido";
+			_final = _damg * dmgFactor;
+		};
+		
+		case (_srce isKindOf "Man") : {
+			_reason = "Daño por otro jugador";
+			_final = _damg;
+		};
+		
+		case (_srce isKindOf "Car") : {
+			if(_proj == "") then {
+				_reason = "Atropello con veh. terrestre";
+			} else {
+				_reason = "Daño por arma en vehiculo aereo";
+			};
+			
+			_final = _damg;
+		};
+		
+		case (_srce isKindOf "Air") : {
+			if(_proj == "") then {
+				_reason = "Atropello con veh. aereo (LOL?)";
+			} else {
+				_reason = "Daño por arma en vehiculo aereo";
+			};
+			
+			_final = _damg;
+		};
+	};
+	
+	hint str _damg;
+	diag_log "#---------------------------#";
+	diag_log format["Source   : %1", _srce];
+	diag_log format["Selection: %1", _sele];
+	diag_log format["Original : %1", _damg];
+	diag_log format["Percent  : %1", dmgFactor];
+	diag_log format["Final    : %1", _final];
+	diag_log format["Dead     : %1", if(_final >= 1) then [{"Yes"}, {"No"}]];
+	diag_log format["Porjectil: %1", if(_proj == "") then [{""""" "},{_proj}]];
+	diag_log format["Razon    : %1", _reason];
+	diag_log "#@@@@@@@@@@@@@@@@@@@@@@@@@@@#";
+	
+	if(_damg + (getDammage player) > 0.99) then {
+		player setDamage 0;
+	};
+	
+	
+	0
+};
+
+hint str (player addEventHandler["HandleDamage", AKR_handleDamage]);
+
+testing_pos = getPosASL player;
+removeAllActions player;
+player addAction["TP", {player setPosASL testing_pos}];
