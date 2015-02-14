@@ -104,7 +104,6 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) >= 8) then
 			{
 		_return pushBack ["B_MRAP_01_hmg_F",30000 * Desc];
-		_return pushBack ["I_MRAP_03_hmg_F",30000 * Desc];
 		};
 	};
 
