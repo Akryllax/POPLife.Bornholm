@@ -18,8 +18,8 @@ if(isServer) then  {
 ] execVM "WarBlast\repetitive_cleanup.sqf";
 
 
-[] execVM "WarBlast\module_cleanup\init.sqf";
-[] execVM "WarBlast\module_monitor\init.sqf";
+//[] execVM "WarBlast\module_cleanup\init.sqf";
+//[] execVM "WarBlast\module_monitor\init.sqf";
 
 };
 

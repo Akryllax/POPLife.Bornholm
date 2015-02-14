@@ -54,7 +54,7 @@ if(playerSide == west) then {
 	} else {
 		if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F","C_Heli_Light_01_civil_F","B_Heli_Transport_03_F","B_Heli_Transport_03_unarmed_F","O_Heli_Transport_04_F","O_Heli_Transport_04_ammo_F","O_Heli_Transport_04_bench_F","O_Heli_Transport_04_box_F","O_Heli_Transport_04_covered_F","O_Heli_Transport_04_fuel_F","O_Heli_Transport_04_medevac_F","O_Heli_Transport_04_repair_F"]) then {
 			_Btn5 ctrlSetText localize "STR_vInAct_GetInKart";
-			_Btn5 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
+			_Btn5 buttonSetAction "if (isNull (driver cursorTarget)) then { player moveInDriver life_vInact_curTarget; } else { player moveInCargo life_vInact_curTarget; }; closeDialog 0;";
 			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn5 ctrlEnable true;} else {_Btn5 ctrlEnable false};
 		} else {
 			_Btn5 ctrlSetText localize "STR_vInAct_Unflip";
@@ -72,7 +72,7 @@ if(playerSide == west) then {
 	} else {
 		if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F","C_Heli_Light_01_civil_F","B_Heli_Transport_03_F","B_Heli_Transport_03_unarmed_F","O_Heli_Transport_04_F","O_Heli_Transport_04_ammo_F","O_Heli_Transport_04_bench_F","O_Heli_Transport_04_box_F","O_Heli_Transport_04_covered_F","O_Heli_Transport_04_fuel_F","O_Heli_Transport_04_medevac_F","O_Heli_Transport_04_repair_F"]) then {
 			_Btn2 ctrlSetText localize "STR_vInAct_GetInKart";
-			_Btn2 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
+			_Btn2 buttonSetAction "if (isNull (driver cursorTarget)) then { player moveInDriver life_vInact_curTarget; } else { player moveInCargo life_vInact_curTarget; }; closeDialog 0;";
 			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
 		} else {
 			_Btn2 ctrlSetText localize "STR_vInAct_Unflip";
