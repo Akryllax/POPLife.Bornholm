@@ -620,8 +620,7 @@ switch(_shop) do
                         ["srifle_GM6_F",nil,150000 * Desc],
                         ["5Rnd_127x108_APDS_Mag",nil,5000 * Desc],
                         ["O_UavTerminal",nil,250000 * Desc],
-                        ["O_UAV_01_F",nil,250000 * Desc],
-  						["optic_tsw",nil,1000000 * Desc]
+                        ["O_UAV_01_F",nil,250000 * Desc]
 					]
 				];
 		     };
