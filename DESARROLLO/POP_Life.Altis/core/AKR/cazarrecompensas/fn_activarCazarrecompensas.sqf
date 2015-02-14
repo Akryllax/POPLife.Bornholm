@@ -38,7 +38,7 @@ player setObjectTextureGlobal [0, "textures\cazarrecompensas.jpg"];
 	};
 };
 taserDelay = 1;
-primaryDelay = 0.3;
+primaryDelay = 0.15;
 
 life_tiroAtiro = {
 
