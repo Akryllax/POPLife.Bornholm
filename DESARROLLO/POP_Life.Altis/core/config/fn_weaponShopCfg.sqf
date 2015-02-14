@@ -621,7 +621,7 @@ switch(_shop) do
                         ["5Rnd_127x108_APDS_Mag",nil,5000 * Desc],
                         ["O_UavTerminal",nil,250000 * Desc],
                         ["O_UAV_01_F",nil,250000 * Desc],
-  						["optic_tsw",nil,1000000]
+  						["optic_tsw",nil,1000000 * Desc]
 					]
 				];
 		     };
