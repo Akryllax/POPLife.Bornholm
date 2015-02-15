@@ -4,7 +4,7 @@ waitUntil {!isNull player};
 _precio = 0;
 _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 
-if (side player != opfor) exitWith { hint "Eres policia" };
+if (side player != east) exitWith { hint "No eres mercenario." };
 
 if(isNull _unit) exitWith {}; //if not the thief get bent
 
