@@ -490,7 +490,7 @@ switch(_shop) do
 	{
 		switch (true) do
 		{
-			case (playerSide != opfor): {"No eres un mercenario"};
+			case (playerSide != east): {"No eres un mercenario"};
 			case (__GETC__(life_merclevel) == 1):
 		    {
 				["Tienda Basica Mercenarios",

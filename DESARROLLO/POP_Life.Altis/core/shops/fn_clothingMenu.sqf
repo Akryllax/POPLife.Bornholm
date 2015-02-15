@@ -15,7 +15,7 @@ if((_this select 3) in ["bruce","dive","reb","kart"] && playerSide != civilian) 
 if((_this select 3) == "reb" && !license_civ_rebel) exitWith {hint localize "STR_Shop_NotaReb"; closeDialog 0;};
 if((_this select 3) in ["cop"] && playerSide != west) exitWith {hint localize "STR_Shop_NotaCop"; closeDialog 0;};
 if((_this select 3) in ["dive"] && !license_civ_dive) exitWith { hint localize "STR_Shop_NotaDive"; closeDialog 0;};
-if((_this select 3) in ["merc"] && playerSide != opfor) exitWith { hint "No eres mercenario"; closeDialog 0;};
+if((_this select 3) in ["merc"] && playerSide != east) exitWith { hint "No eres mercenario"; closeDialog 0;};
 //if((_this select 3) in ["cazarrecompensas"] && CRServicio = false;) exitWith { hint "No tienes tienes activo el servicio!"; closeDialog 0;};
 
 life_clothing_store = _this select 3;
