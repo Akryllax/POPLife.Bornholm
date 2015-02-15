@@ -48,7 +48,7 @@ QUICK_batAutodestrucion = {
         _this spawn{
 
                 _unit = [_this, 1, objNull, [objNull]] call BIS_fnc_param; 
-                _coche =   [_this, 3, objNull, [objNull]] call BIS_fnc_param; 
+                _coche =   [_this, 2, objNull, [objNull]] call BIS_fnc_param; 
 
                 //elimina objetos extra
 
@@ -57,9 +57,7 @@ QUICK_batAutodestrucion = {
                 _c4 = "DemoCharge_Remote_Ammo_Scripted" createVehicle position _coche;
                 _c4 setDamage 1;  
                
-                removeAllActions _unit ; 
-               
-                _unit setVariable["kamicaze_coche", false];
+                
         };
 };
 
