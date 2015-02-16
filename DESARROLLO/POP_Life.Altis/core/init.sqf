@@ -80,6 +80,12 @@ switch (playerSide) do
 setViewDistance 1500;
 setTerrainGrid 50;
 
+player setVariable ["BIS_noCoreConversations", true];
+enableSentences false;
+enableRadio false;
+0 fadeRadio 0;
+enableEnvironment false;
+
 player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
 player setVariable["transporting",false,true];
@@ -116,7 +122,29 @@ life_fnc_garageRefund = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
+// Funciones nuevas de WAR movidas
+// [] execVM "WarBlast\Vehiculosfps\vehicleManager.sqf";
+[] execVM "WarBlast\zlt_fastrope.sqf";
+[] execVM "WarBlast\Luces\fn_luces.sqf";
+[] execVM "WarBlast\Policias\lacrimogeno.sqf";
+[] execVM "WarBlast\fn_statusBar.sqf";
+// [] execVM "WarBlast\real_weather.sqf";
+// [] execVM "WarBlast\randomWeather2.sqf";
+if(isServer) then  {
+	[
+		3*60, // seconds to delete dead bodies (0 means don't delete)
+		2*45, // seconds to delete dead vehicles (0 means don't delete)
+		0, // seconds to delete immobile vehicles (0 means don't delete)
+		1*45, // seconds to delete dropped weapons (0 means don't delete)
+		10*60, // seconds to deleted planted explosives (0 means don't delete)
+		0 // seconds to delete dropped smokes/chemlights (0 means don't delete)
+] execVM "WarBlast\repetitive_cleanup.sqf";
 
+
+//[] execVM "WarBlast\module_cleanup\init.sqf";
+//[] execVM "WarBlast\module_monitor\init.sqf";
+
+};
 switch(__GETC__(life_donator)) do
 {
 	case 0: {Desc = 1};
@@ -126,6 +154,6 @@ switch(__GETC__(life_donator)) do
 	case 4: {Desc = 0.50};
 	case 5: {Desc = 0.10};
 };
-[] execVM "WarBlast\Vehiculosfps\vehicleManager.sqf";
+
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
 player enableFatigue (__GETC__(life_enableFatigue));

@@ -1,7 +1,7 @@
 /*
 	File: fn_settingsMenu
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Setup the settings menu.
 */
@@ -34,7 +34,7 @@ _objs = _display displayCtrl 2972;
 if(isNil "life_tagson") then {
 	life_sidechat = true;
 	life_tagson = true;
-	life_revealObjects = true;
+	life_revealObjects = false;
 };
 
 if(life_revealObjects) then {

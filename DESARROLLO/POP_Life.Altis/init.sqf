@@ -11,7 +11,7 @@ enableSaving[false,false];
 life_versionInfo = "Altis Life RPG v5";
 [] execVM "briefing.sqf"; //Load Briefing
 [] execVM "KRON_Strings.sqf";
-[] execVM "WarBlast\init.sqf";
+//[] execVM "WarBlast\init.sqf";
 
 StartProgress = true;
 /////////////////////////////////////////////////////
@@ -91,13 +91,11 @@ if (isServer) then {
 	[] call life_fnc_initRem;
 };
 */
-//quitar fatiga Y RADIO
-enableRadio false;
-enableEnvironment false;
+
 //poner opacity 0 a markadores de helicrash!!
 {_x setMarkerAlphaLocal 0} forEach ["helicrash_1","helicrash_2","helicrash_3","helicrash_4","wreck_1","wreck_2","wreck_3","wreck_4"];
-War_loop = compile (preprocessFileLineNumbers "WarBlast\Musica\War_loop.sqf");
+//War_loop = compile (preprocessFileLineNumbers "WarBlast\Musica\War_loop.sqf");
 
-_igiload = execVM  "WarBlast\IgiLoad\IgiLoadInit.sqf";
+//_igiload = execVM  "WarBlast\IgiLoad\IgiLoadInit.sqf";
 
 [] call life_fnc_initRacing;
