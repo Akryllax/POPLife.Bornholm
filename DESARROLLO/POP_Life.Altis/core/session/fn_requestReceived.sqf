@@ -12,6 +12,25 @@ life_session_tries = life_session_tries + 1;
 if(life_session_completed) exitWith {}; //Why did this get executed when the client already initialized? Fucking arma...
 if(life_session_tries > 3) exitWith {cutText[localize "STR_Session_Error","BLACK FADED"]; 0 cutFadeOut 999999999;};
 
+_onLoad = getText(configFile >> "RscDisplayInventory" >> "onLoad");
+_onUnload = getText(configFile >> "RscDisplayInventory" >> "onUnload");
+
+if(_onLoad != "[""onLoad"",_this,""RscDisplayInventory"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""") exitWith {
+	disableUserInput true;
+	cutText['CAZADO'];
+	[[0,format[format ["Hacker %1 hacker detectado."], _unit getVariable["realname",name _unit], profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	// Log: HACKER
+	[format ["ATENCION HACKER! %1 Inventario modificado: %2", name player, _onLoad],"zo_log"] call BIS_fnc_MP;
+
+};
+if(_onUnload != "[""onUnload"",_this,""RscDisplayInventory"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""") exitWith {
+	disableUserInput true;
+	cutText['CAZADO'];
+	[[0,format[format ["Hacker %1 hacker detectado."], _unit getVariable["realname",name _unit], profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	// Log: HACKER
+	[format ["ATENCION HACKER! %1 Inventario modificado: %2", name player, _onUnload],"zo_log"] call BIS_fnc_MP;
+};
+
 0 cutText [localize "STR_Session_Received","BLACK FADED"];
 0 cutFadeOut 9999999;
 
@@ -23,13 +42,13 @@ if((_this select 0) == "Error") exitWith {[] call SOCK_fnc_insertPlayerInfo;};
 if((getPlayerUID player) != _this select 0) exitWith {[] call SOCK_fnc_dataQuery;};
 
 //Lets make sure some vars are not set before hand.. If they are get rid of them, hopefully the engine purges past variables but meh who cares.
-if(!isServer && (!isNil "life_adminlevel" OR !isNil "life_coplevel" OR !isNil "life_donator")) exitWith {
+/*if(!isServer && (!isNil "life_adminlevel" OR !isNil "life_coplevel" OR !isNil "life_donator")) exitWith {
 	[[profileName,getPlayerUID player,"VariablesAlreadySet"],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
 	[[profileName,format["Variables set before client initialization...\nlife_adminlevel: %1\nlife_coplevel: %2\nlife_donator: %3",life_adminlevel,life_coplevel,life_donator]],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
 	sleep 0.9;
 	["SpyGlass",false,false] execVM "\a3\functions_f\Misc\fn_endMission.sqf";
 };
-
+*/
 //Parse basic player information.
 life_cash = parseNumber (_this select 2);
 life_atmcash = parseNumber (_this select 3);
