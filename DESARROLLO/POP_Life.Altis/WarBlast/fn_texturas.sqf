@@ -3,7 +3,7 @@
 	@author
 */
 private["_type"];
-_type = uniform;
+_type = uniform player;
 _side = side player;
 
 if(_side == west) then {
