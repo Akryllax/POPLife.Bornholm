@@ -439,7 +439,6 @@ class WarBlast
     	class emptyFuel {};
     	class abrelatas {};
     	class texturas {};
-    	class texturados {};
     };
     class Mercenarios
     {
