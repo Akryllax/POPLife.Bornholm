@@ -378,8 +378,8 @@ switch (_code) do
         {
         if(_alt) then {
         	diag_log format ["SERVIDOR POPLIFE: %1 usando ALT+TABULADOR SOSPECHOSO....",(_tiempo),player getVariable["realname",name player]];
-        }
-    }
+        };
+    };
 
 	case DIK_F1:// F1 - TAPONES
 	{
