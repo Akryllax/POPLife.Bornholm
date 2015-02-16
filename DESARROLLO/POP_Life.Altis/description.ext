@@ -5,7 +5,7 @@ loadscreen = "textures\billboards\server_info.jpg";
 
 joinUnassigned = 0;
 respawn = BASE;
-respawndelay = 1;
+respawndelay = 5;
 disabledAI = true;
 disableChannels[]={0,1,2};
 enableDebugConsole = 1;
@@ -13,7 +13,7 @@ respawnDialog = 0;
 //Cuando se tiren al agua las armas 0 desactivado
 enableItemsDropping = 0;
 //Control avanzado de los helicopteros para joder un poco No gracias
-//forceRotorLibSimulation = 1;
+forceRotorLibSimulation = 0;
 
 class Header
 {
