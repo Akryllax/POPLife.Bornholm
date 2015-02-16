@@ -2,10 +2,9 @@
 /*
 	@author
 */
-private["_path","_unit","_type"];
-_unit = [_this,0] call BIS_fnc_param;
-_type = [_this,1,"",[""]] call BIS_fnc_param;
-_side = side _unit;
+private["_type"];
+_type = uniform;
+_side = side player;
 
 if(_side == west) then {
 	switch(_type) do {
