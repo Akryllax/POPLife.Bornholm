@@ -97,4 +97,4 @@ if (isServer) then {
 
 //_igiload = execVM  "WarBlast\IgiLoad\IgiLoadInit.sqf";
 
-[] call life_fnc_initRacing;
+//
