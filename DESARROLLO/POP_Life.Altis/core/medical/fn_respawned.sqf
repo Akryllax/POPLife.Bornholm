@@ -54,7 +54,7 @@ if(!isNull life_corpse) then {
 		deleteVehicle _x;
 	} forEach nearestObjects [life_corpse, ["GroundWeaponHolder"], 5];
 };
-};
+
 
 //Destroy our camera...
 life_deathCamera cameraEffect ["TERMINATE","BACK"];
