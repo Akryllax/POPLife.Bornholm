@@ -10,16 +10,16 @@ _side = side _unit;
 if(_side == west) then {
 	switch(_type) do {
 		    case "U_Competitor" : {
-			player setObjectTextureGlobal [0, "textures\COP\policia.jpg"] call Bis_fnc_MP;
+			player setObjectTextureGlobal [0, "textures\COP\policia.jpg"];
 		    };
             case "U_Rangemaster" : {
-		    player setObjectTextureGlobal [0, "textures\COP\patrullero.jpg"] call Bis_fnc_MP;
+		    player setObjectTextureGlobal [0, "textures\COP\patrullero.jpg"];
 	        };
 		    case "U_B_CombatUniform_mcam_worn" : {
-            player setObjectTextureGlobal [0, "textures\COP\agente_montana.jpg"] call Bis_fnc_MP;
+            player setObjectTextureGlobal [0, "textures\COP\agente_montana.jpg"];
 		    };
 		    case "U_B_CombatUniform_mcam" : {
-            player setObjectTextureGlobal [0, "textures\COP\geo.jpg"] call Bis_fnc_MP;
+            player setObjectTextureGlobal [0, "textures\COP\geo.jpg"];
 	        };
 	    };
 	};
@@ -29,7 +29,7 @@ if(_side == independent) then {
 
 			case "U_Rangemaster" : {
 			if (__GETC__(life_medicLevel) > 0)  then {
-			player setObjectTextureGlobal [0, "textures\MED\medic_uniform.jpg"] call Bis_fnc_MP;
+			player setObjectTextureGlobal [0, "textures\MED\medic_uniform.jpg"];
 			};
 		 };
 
