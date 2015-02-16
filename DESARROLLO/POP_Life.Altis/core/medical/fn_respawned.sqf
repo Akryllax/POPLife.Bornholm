@@ -13,6 +13,7 @@ life_thirst = 100;
 life_carryWeight = 0;
 life_cash = 0; //Make sure we don't get our cash back.
 life_respawned = false;
+life_is_alive = true;
 player playMove "amovpercmstpsnonwnondnon";
 
 life_corpse setVariable["Revive",nil,TRUE];
@@ -46,7 +47,13 @@ if(!isNull life_corpse) then {
 	life_corpse setVariable["Revive",TRUE,TRUE];
 	_containers = nearestObjects[life_corpse,["WeaponHolderSimulated"],5];
 	{deleteVehicle _x;} foreach _containers; //Delete the containers.
+	hideBody life_corpse;
 	deleteVehicle life_corpse;
+
+	{
+		deleteVehicle _x;
+	} forEach nearestObjects [life_corpse, ["GroundWeaponHolder"], 5];
+};
 };
 
 //Destroy our camera...

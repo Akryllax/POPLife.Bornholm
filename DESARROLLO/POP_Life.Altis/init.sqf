@@ -11,7 +11,7 @@ enableSaving[false,false];
 life_versionInfo = "Altis Life RPG v5";
 [] execVM "briefing.sqf"; //Load Briefing
 [] execVM "KRON_Strings.sqf";
-//[] execVM "WarBlast\init.sqf";
+
 
 StartProgress = true;
 /////////////////////////////////////////////////////
