@@ -66,9 +66,6 @@ life_tiroAtiro = {
 };
 player addEventHandler ["Fired", "_this call life_tiroAtiro"];
 
-//poner uniforme
-[] call life_fnc_copUniform;
-
 if(__GETC__(life_adminlevel) > 0) then {
 	adminChannel radioChannelAdd [player];
 };

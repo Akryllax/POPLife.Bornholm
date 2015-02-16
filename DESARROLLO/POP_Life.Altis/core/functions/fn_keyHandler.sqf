@@ -234,7 +234,7 @@ switch (_code) do
 		if(!_alt && !_ctrlKey && !dialog) then
 		{
 			[] call life_fnc_p_openMenu;
-			[] call life_fnc_copUniform;
+			[] call War_fnc_texturas;
 		};
 	};
 

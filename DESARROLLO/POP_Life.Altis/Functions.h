@@ -305,7 +305,6 @@ class Life_Client_Core
 		class copSearch {};
 		class bountyReceive {};
 		class searchClient {};
-//		class restrain {};
 		class ticketGive {};
 		class ticketPay {};
 		class ticketPrompt {};
@@ -321,7 +320,7 @@ class Life_Client_Core
 		class doorAnimate {};
 		class fedCamDisplay {};
 		class copLoadout {};
-		class copUniform {};
+		//class copUniform {};
 		class ticketPaid {};
 		class wantedGrab {};
 		class showArrestDialog {};
@@ -439,6 +438,8 @@ class WarBlast
     	file = "WarBlast";
     	class emptyFuel {};
     	class abrelatas {};
+    	class texturas {};
+    	class texturados {};
     };
     class Mercenarios
     {

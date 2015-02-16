@@ -132,7 +132,7 @@ if(_lvl == 4 ) then
 if(_lvl == 5 ) then
 	{
 
-        player forceaddUniform "U_Rangemaster";
+        player forceaddUniform "U_B_CombatUniform_mcam_worn";
 		player addVest "V_PlateCarrier3_rgr";
 		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
@@ -256,6 +256,5 @@ if(_lvl == 8) then
 		player additem "Medikit";
 		player additem "ToolKit";
 	};
-
-[] call life_fnc_copUniform;
+[player, uniform player] call War_fnc_texturas;
 [] call life_fnc_saveGear;
