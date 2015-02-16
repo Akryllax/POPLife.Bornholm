@@ -1,13 +1,13 @@
 #include "macro.h"
 /*
-	@author
+	@author:WarBlast
 */
-private["_type"];
-_type = uniform player;
-_side = side player;
+_uni = uniform player;
+_bando = side player;
+_back = backpack player;
 
-if(_side == west) then {
-	switch(_type) do {
+if(_bando == west) then {
+	switch(_uni) do {
 		    case "U_Competitor" : {
 			player setObjectTextureGlobal [0, "textures\COP\policia.jpg"];
 		    };
@@ -21,16 +21,37 @@ if(_side == west) then {
             player setObjectTextureGlobal [0, "textures\COP\geo.jpg"];
 	        };
 	    };
+	switch(_back) do {
+	 	    case "B_AssaultPack_blk": {
+			(unitBackpack player) setObjectTextureGlobal [0,""];
+			};
+			case "B_FieldPack_blk": {
+			(unitBackpack player) setObjectTextureGlobal [0,""];
+			};
+			case "B_Carryall_Base": {
+			(unitBackpack player) setObjectTextureGlobal [0,""];
+			};
+	    };
 	};
 
-if(_side == independent) then {
-	switch(_type) do {
-
+if(_bando == independent) then {
+	switch(_uni) do {
 			case "U_Rangemaster" : {
 			if (__GETC__(life_medicLevel) > 0)  then {
 			player setObjectTextureGlobal [0, "textures\MED\medic_uniform.jpg"];
 			};
 		 };
-
+	};
+	switch(_back) do {
+	 	    case "B_AssaultPack_blk": {
+			(unitBackpack player) setObjectTextureGlobal [0,""];
+			};
+			case "B_FieldPack_blk": {
+			(unitBackpack player) setObjectTextureGlobal [0,""];
+			};
+			case "B_Carryall_Base": {
+			(unitBackpack player) setObjectTextureGlobal [0,""];
+			};
+	    };
 	};
 };

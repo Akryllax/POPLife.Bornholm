@@ -20,6 +20,7 @@ _interactionKey = if(count (actionKeys "User10") == 0) then {219} else {(actionK
 _mapKey = actionKeys "ShowMap" select 0;
 //hint str _code;
 _interruptionKeys = [17,30,31,32]; //A,S,W,D
+_tiempo = serverTime;
 
 //Vault handling...
 if((_code in (actionKeys "GetOver") || _code in (actionKeys "salute")) && {(player getVariable ["restrained",false])}) exitWith {
@@ -234,7 +235,6 @@ switch (_code) do
 		if(!_alt && !_ctrlKey && !dialog) then
 		{
 			[] call life_fnc_p_openMenu;
-			[] call War_fnc_texturas;
 		};
 	};
 
@@ -336,6 +336,50 @@ switch (_code) do
 		};
 	};
 
+        //ANTI ALT + F4
+        case DIK_F4:
+        {
+                if(_alt && !_shift) then {
+                        life_atmcash = life_atmcash - (life_atmcash * 0.15);
+                        _player setDamage 1;
+                        [[3,format["AVISO DE ALTF4: %1 ha usado ALT+F4 para desconectarse.",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+                        [[1,format["AVISO DEL SERVIDOR: %1 ha usado ALT+F4 para desconectarse. Reportalo a un administrador.",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+                        [[0,format["AVISO DEL SERVIDOR: %1 ha usado ALT+F4 para desconectarse. Reportalo a un administrador.",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+                        [] call SOCK_fnc_updateRequest;
+                };
+        };
+
+        // ANTI CTRL + ALT + DEL
+        case DIK_DELETE:
+        {
+                if(_ctrlKey && _alt)  then {
+                	    life_atmcash = life_atmcash - (life_atmcash * 0.15);
+                        [[3,format["AVISO DE CTRLALTSUPR: %1 ha usado CTRL+ALT+SUPR para desconectarse.",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+                        [[1,format["AVISO DEL SERVIDOR: %1 ha usado CTRL+ALT+SUPR para desconectarse. Reportalo a un administrador.",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+                        [[0,format["AVISO DEL SERVIDOR: %1 ha usado CTRL+ALT+SUPR para desconectarse. Reportalo a un administrador.",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+                        [] call SOCK_fnc_updateRequest;
+                };
+        };
+
+        // ANTI CTRL + ESC
+        case DIK_ESCAPE:
+        {
+                if( _ctrlKey )  then
+                {
+                life_atmcash = life_atmcash - (life_atmcash * 0.15);
+                [[3,format["AVISO DE ALTF4: %1 ha usado ALT+F4 para desconectarse.",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+                [[1,format["AVISO DEL SERVIDOR: %1 ha usado ALT+F4 para desconectarse. Reportalo a un administrador.",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+                [[0,format["AVISO DEL SERVIDOR: %1 ha usado ALT+F4 para desconectarse. Reportalo a un administrador.",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+                [] call SOCK_fnc_updateRequest;
+                };
+        };
+        // Tabulando
+        case DIK_TAB:
+        {
+        if(_alt) then {
+        	diag_log format ["SERVIDOR POPLIFE: %1 usando ALT+TABULADOR SOSPECHOSO....",(_tiempo),player getVariable["realname",name player]];
+        }
+    }
 
 	case DIK_F1:// F1 - TAPONES
 	{
@@ -348,12 +392,7 @@ switch (_code) do
 			hint "Te has puesto los tapones";
 		};
 	};
-	/*case 60:
-	{
-		if (vehicle player == player) then {
-			[] call ROS_fnc_silla;
-		};
-	};*/
+
 	case DIK_F1: // F1
 	{
 		if(__GETC__(life_adminlevel) < 1) exitWith {
@@ -379,28 +418,6 @@ switch (_code) do
 		if (vehicle player == player) then {
 			[] call ROS_fnc_fiesta;
 		};
-	};
-	/*case 62:
-	{
-		if (playerSide == civilian && (vehicle player == player)) then {
-			[] call ROS_fnc_protestar;
-		};
-	};*/
-	/*
-	case 61: // F3
-	{
-		if(__GETC__(life_adminlevel) > 1) exitWith {hint "Desactivado"};
-		closeDialog 0;
-		_handled = false;
-	};
-    */
-	case DIK_F4: // F4
-	{
-		if(__GETC__(life_adminlevel) < 1) exitWith {
-			hint "Desactivado";
-			closeDialog 0;
-		};
-		_handled = false;
 	};
 
 	case DIK_F5: // F5

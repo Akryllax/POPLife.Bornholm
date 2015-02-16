@@ -1,7 +1,7 @@
 /*
 	File: fn_buyClothes.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Buys the current set of clothes and closes out of the shop interface.
 */
@@ -21,3 +21,4 @@ life_cash = life_cash - _price;
 
 life_clothesPurchased = true;
 closeDialog 0;
+[] call War_fnc_texturas;

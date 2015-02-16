@@ -1,7 +1,7 @@
 /*
 	File: fn_hudUpdate.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Updates the HUD when it needs to.
 */
@@ -42,3 +42,4 @@ if(damage player > 0.5) then {
 	_health ctrlSetBackgroundColor [255, 0, 0, 0.5];
 };
 _health ctrlCommit 0;
+[] call War_fnc_texturas;
