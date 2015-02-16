@@ -20,6 +20,14 @@ _ret = switch (_trackID) do {
 		]
 	};
 	
+	case "race_02": { //Autoescuela
+		[
+				   1,	//modo
+			   25000,	//precio
+		 [-1,180],   // Ignorar primer valor / Tiempo minimo para obtener el titulo.
+		]
+	};
+	
 	default {
 		[]
 	};

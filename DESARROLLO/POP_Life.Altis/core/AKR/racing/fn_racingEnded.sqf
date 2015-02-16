@@ -70,4 +70,15 @@ _this spawn {
 			life_cash = life_cash + _premio;
 		};
 	};
+	
+	if(mode == 1) then { //MODO Autoescuela
+		_firstCond = _raceConfig select 2;
+		
+		if(_finishTime < (_firstCond select 1)) then {
+			hint "Has finalizado correctamente la prueba";
+			missionNamespace setVariable[("license_civ_driver"),true];
+		} else {
+			hint parseText "<t color='#F00'>No has pasado la prueba</t>";
+		};
+	};
 };
