@@ -9,26 +9,24 @@ _side = side _unit;
 
 if(_side == west) then {
 	switch(_type) do {
-		case "U_Rangemaster" : {
-		if(__GETC__(life_coplevel) == 1) OR (__GETC__(life_coplevel) == 2) then {
+		    case "U_Competitor" : {
 			_path = "textures\COP\policia.jpg";
-			[[player,0,_path],"WAR_fnc_setTexture",true,false] spawn life_fnc_MP;
-		} else {
+			[[player,0,_path],"WAR_fnc_texturados",true,false] spawn life_fnc_MP;
+		    };
+            case "U_Rangemaster" : {
 		    _path = "textures\COP\patrullero.jpg";
-		    [[player,0,_path],"WAR_fnc_setTexture",true,false] spawn life_fnc_MP;
+		    [[player,0,_path],"WAR_fnc_texturados",true,false] spawn life_fnc_MP;
 	        };
-        };
-		case "U_B_CombatUniform_mcam_worn" : {
-		if(__GETC__(life_coplevel) == 5) OR (__GETC__(life_coplevel) == 6) then {
+		    case "U_B_CombatUniform_mcam_worn" : {
 			_path = "textures\textures\COP\agente_montana.jpg";
-			[[player,0,_path],"War_fnc_setTexture",true,false] spawn life_fnc_MP;
-		} else {
+			[[player,0,_path],"War_fnc_texturados",true,false] spawn life_fnc_MP;
+		    };
+		    case "U_B_CombatUniform_mcam" : {
 		    _path = "textures\COP\geo.jpg";
-		    [[player,0,_path],"WAR_fnc_setTexture",true,false] spawn life_fnc_MP;
+		    [[player,0,_path],"WAR_fnc_texturados",true,false] spawn life_fnc_MP;
 	        };
 	    };
 	};
-};
 
 if(_side == independent) then {
 	switch(_type) do {
@@ -37,7 +35,7 @@ if(_side == independent) then {
 
 			if (__GETC__(life_medicLevel) > 0)  then {
 			_path = "textures\MED\medic_uniform.jpg";
-			[[player,0,_path],"War_fnc_setTexture",true,false] spawn life_fnc_MP;
+			[[player,0,_path],"War_fnc_texturados",true,false] spawn life_fnc_MP;
 			};
 		 };
 

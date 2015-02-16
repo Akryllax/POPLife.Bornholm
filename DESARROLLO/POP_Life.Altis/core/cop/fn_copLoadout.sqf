@@ -26,7 +26,7 @@ waitUntil {scriptDone _handle};
 //Recluta
 if(_lvl == 1) then
 	{
-        player forceaddUniform "U_Rangemaster";
+        player forceaddUniform "U_Competitor";
 		player addVest "V_TacVest_blk_POLICE";
 		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
@@ -49,7 +49,7 @@ if(_lvl == 1) then
 //local 1
 if(_lvl == 2 ) then
 	{
-        player forceaddUniform "U_Rangemaster";
+        player forceaddUniform "U_Competitor";
 		player addVest "V_TacVest_blk_POLICE";
 		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
@@ -194,7 +194,7 @@ if(_lvl == 6) then
 //GEO
 if(_lvl == 7) then
 	{
-		player forceaddUniform "U_B_CombatUniform_mcam_worn";
+		player forceaddUniform "U_B_CombatUniform_mcam";
 		player addGoggles "G_Balaclava_Lowprofile";
 		removeHeadGear player;
 		player addHeadgear "H_Watchcap_blk";
@@ -227,7 +227,7 @@ if(_lvl == 7) then
 if(_lvl == 8) then
 	{
 
-		player forceaddUniform "U_B_CombatUniform_mcam_worn";
+		player forceaddUniform "U_B_CombatUniform_mcam";
 		removeHeadGear player;
 		player addHeadgear "H_Beret_red";
 		player addVest "V_PlateCarrier3_rgr";
