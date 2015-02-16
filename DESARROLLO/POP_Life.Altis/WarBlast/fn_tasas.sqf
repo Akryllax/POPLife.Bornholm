@@ -1,4 +1,8 @@
-//Tasas para casas
+/*
+   tasas.sqf
+   Autor: WarBlast e Icaruk
+   Descripcion: Paga cabron!
+*/
 
 while {true} do {
     _casas = life_houses;
