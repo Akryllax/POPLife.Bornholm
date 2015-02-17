@@ -43,15 +43,8 @@ if (currentWeapon _ladron == "") exitWith {
 	hint "No me amenaces! Fuera de aquí pordiosero!";
 };
 
-if (_hora == 1) then {
-    if (((date select 3) >= 20) OR ((date select 3) <= 7)) then {
-	    while {true} do {
-		    if !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {};
-            _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,_params];
-		    sleep 1*60;
-		};
-	sleep 1*60;
-	};
+if (_hora == 1) && (((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {
+	hint "Es de dia! Este establecimiento esta cerrado!"
 };
 
 /* Version 1 para todos los robos
