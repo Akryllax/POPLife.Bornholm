@@ -1,6 +1,6 @@
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Breaks the lock on a single door (Closet door to the player).
 */
@@ -9,12 +9,10 @@ _building = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "No estas enfrente de una puerta."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
+if({side _x == west} count playableUnits < 8) exitWith {hint localize "STR_Civ_NotEnoughCops"};
 if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
-	[[5,"Estan robando la reserva federal."],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 } else {
-	if((nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"]) == _building) then {
-		[[5,"Estan robando el laboratorio."],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-	} else {
 		[[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 	};
 };
