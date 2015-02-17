@@ -47,7 +47,7 @@ if (_hora == 1 and date select 3 >= 20 OR date select 3 <= 7) exitWith {
 	hint "Es de noche! Este establecimiento esta cerrado!";
 };
 
-if (_hora == 2and date select 3 <= 20 OR date select 3 <= 7) exitWith {
+if (_hora == 2 and date select 3 <= 20 OR date select 3 <= 7) exitWith {
     hint "Es de dia! Este establecimiento esta cerrado!";
 };
 
