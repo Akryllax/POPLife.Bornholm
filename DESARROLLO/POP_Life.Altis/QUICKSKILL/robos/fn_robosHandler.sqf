@@ -31,7 +31,7 @@ _itemsRecompensa =      _params select 4;
 _policias =             _params select 5;
 _darArmas =             _params select 6;
 _darVehiculo =          _params select 7;
-_hora =                 _params select 8;
+robo_hora =             _params select 8;
 
 //Si no hay x policias no se puede robar
 if(_cops < _policias) exitWith {
@@ -43,13 +43,11 @@ if (currentWeapon _ladron == "") exitWith {
 	hint "No me amenaces! Fuera de aquí pordiosero!";
 };
 
-_horaActual = date select 3;
-if (_hora == 1 and _horaActual >= 20 and  _horaActual <= 7) exitWith {
+if ((robo_hora == 1) and (((date select 3) >= 20) OR ((date select 3) <= 7))) exitWith {
 	hint "Es de noche! Este establecimiento esta cerrado!";
-};
+ };
 
-
-if (_hora == 2 and _horaActual  <= 20 and _horaActual >= 7) exitWith {
+if ((robo_hora == 2) and !(((date select 3) >= 20) OR ((date select 3) <= 7))) exitWith {
 
     hint "Es de dia! Este establecimiento esta cerrado!";
 };
