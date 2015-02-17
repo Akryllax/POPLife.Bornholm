@@ -1,3 +1,4 @@
+life_adminlevel = nil; life_coplevel = nil; life_donator = nil;
 /*
 	File: initPlayerLocal.sqf
 
