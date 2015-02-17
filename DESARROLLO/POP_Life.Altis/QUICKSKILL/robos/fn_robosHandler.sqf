@@ -1,7 +1,7 @@
 /*
 	File: fn_robosHandler.sqf
 	Author: Quickskill
-	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","marijuana","cocainep","cocainep"],0,"no","no","0"]];
+	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","marijuana","cocainep","cocainep"],0,"no","no",0]];
 
 	Example:
 
@@ -31,7 +31,7 @@ _itemsRecompensa =      _params select 4;
 _policias =             _params select 5;
 _darArmas =             _params select 6;
 _darVehiculo =          _params select 7;
-robo_hora =             _params select 8;
+_robo_hora =             _params select 8;
 
 //Si no hay x policias no se puede robar
 if(_cops < _policias) exitWith {
@@ -43,11 +43,11 @@ if (currentWeapon _ladron == "") exitWith {
 	hint "No me amenaces! Fuera de aquí pordiosero!";
 };
 
-if ((robo_hora == 1) and (((date select 3) >= 20) OR ((date select 3) <= 7))) exitWith {
+if ((_robo_hora == 1) and (((date select 3) >= 20) OR ((date select 3) <= 7))) exitWith {
 	hint "Es de noche! Este establecimiento esta cerrado!";
  };
 
-if ((robo_hora == 2) and !(((date select 3) >= 20) OR ((date select 3) <= 7))) exitWith {
+if ((_robo_hora == 2) and !(((date select 3) >= 20) OR ((date select 3) <= 7))) exitWith {
 
     hint "Es de dia! Este establecimiento esta cerrado!";
 };
