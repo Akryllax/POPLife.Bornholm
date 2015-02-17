@@ -12,25 +12,6 @@ life_session_tries = life_session_tries + 1;
 if(life_session_completed) exitWith {}; //Why did this get executed when the client already initialized? Fucking arma...
 if(life_session_tries > 3) exitWith {cutText[localize "STR_Session_Error","BLACK FADED"]; 0 cutFadeOut 999999999;};
 
-_onLoad = getText(configFile >> "RscDisplayInventory" >> "onLoad");
-_onUnload = getText(configFile >> "RscDisplayInventory" >> "onUnload");
-
-if(_onLoad != "[""onLoad"",_this,""RscDisplayInventory"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""") exitWith {
-	disableUserInput true;
-	cutText['CAZADO'];
-	[[0,format[format ["Hacker %1 hacker detectado."], _unit getVariable["realname",name _unit], profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-	// Log: HACKER
-	[format ["ATENCION HACKER! %1 Inventario modificado: %2", name player, _onLoad],"zo_log"] call BIS_fnc_MP;
-
-};
-if(_onUnload != "[""onUnload"",_this,""RscDisplayInventory"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""") exitWith {
-	disableUserInput true;
-	cutText['CAZADO'];
-	[[0,format[format ["Hacker %1 hacker detectado."], _unit getVariable["realname",name _unit], profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-	// Log: HACKER
-	[format ["ATENCION HACKER! %1 Inventario modificado: %2", name player, _onUnload],"zo_log"] call BIS_fnc_MP;
-};
-
 0 cutText [localize "STR_Session_Received","BLACK FADED"];
 0 cutFadeOut 9999999;
 
