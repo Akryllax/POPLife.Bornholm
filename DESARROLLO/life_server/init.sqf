@@ -81,6 +81,8 @@ life_gang_list = [];
 publicVariable "life_gang_list";
 life_group_list = [];
 publicVariable "life_group_list";
+robosActivosGLOBAL = [];
+publicVariable "robosActivosGLOBAL";
 life_wanted_list = [];
 client_session_list = [];
 

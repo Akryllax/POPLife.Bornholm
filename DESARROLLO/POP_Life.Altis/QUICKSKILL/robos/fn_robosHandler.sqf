@@ -53,13 +53,13 @@ if (_hora == 2) && !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith
 
 
 //controlador de robos activos devuelve el numero de robos activos
-//_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
-//waitUntil{scriptDone _robos_activos};
+_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
+waitUntil{scriptDone _robos_activos};
 
 //Si hay muchos robos activos no se peude robar
-//if (robosActivosCount >= _maximoRobosActivos) exitWith {
-//	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
-//};
+if (robosActivosCount >= _maximoRobosActivos) exitWith {
+	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
+};
 
 //Avisar a la policia
 [[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
