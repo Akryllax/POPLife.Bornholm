@@ -1,11 +1,11 @@
 /*
 	File: fn_robosHandler.sqf
 	Author: Quickskill
-	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","marijuana","cocainep","cocainep"],0,"no","no"]];
+	Example: this addAction["Robar Camello del bar",QUICK_fnc_robosHandler,["Camello del bar",15,50000 + round random 130000,50,["marijuana","marijuana","cocainep","cocainep"],0,"no","no","0"]];
 
 	Example:
 
-		this addAction["Robar X", QUICK_fnc_robosHandler, ["Camellito camello", TIMEPO, DINERO, METROS DE ROBO, ITEMS RECOMPENSA, POLICIA, DAR ARMAs , DAR VEHICULOS]];
+		this addAction["Robar X", QUICK_fnc_robosHandler, ["Camellito camello", TIMEPO, DINERO, METROS DE ROBO, ITEMS RECOMPENSA, POLICIA, DAR ARMAs , DAR VEHICULOS, HORA ]];
 */
 
 //Variables privadas generales
@@ -31,7 +31,7 @@ _itemsRecompensa =      _params select 4;
 _policias =             _params select 5;
 _darArmas =             _params select 6;
 _darVehiculo =          _params select 7;
-
+_hora =                 _params select 8;
 
 //Si no hay x policias no se puede robar
 if(_cops < _policias) exitWith {
@@ -41,6 +41,17 @@ if(_cops < _policias) exitWith {
 //Si no va armado no puede robar
 if (currentWeapon _ladron == "") exitWith {
 	hint "No me amenaces! Fuera de aquí pordiosero!";
+};
+
+if (_hora == 1) then {
+    if (((date select 3) >= 20) OR ((date select 3) <= 7)) then {
+	    while {true} do {
+		    if !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {};
+            _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,_params];
+		    sleep 1*60;
+		};
+	sleep 1*60;
+	};
 };
 
 /* Version 1 para todos los robos
