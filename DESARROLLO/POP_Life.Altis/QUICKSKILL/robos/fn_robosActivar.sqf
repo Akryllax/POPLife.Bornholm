@@ -39,7 +39,7 @@ robosActivosGLOBAL pushBack [_nombreRobo,1];
 
 publicVariable "robosActivosGLOBAL";
 
-	
+
 ///for de robos activos
 
 _robosActivosCount = 0;
@@ -53,7 +53,7 @@ diag_log format["El array robosActivosGlobal contiene el robo: ""%1"" con ladron
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_ladronesEnRobo > 0) then {
- 
+
   _robosActivosCount = _robosActivosCount +1;
 };
 
@@ -61,6 +61,6 @@ if (_ladronesEnRobo > 0) then {
 } forEach robosActivosGLOBAL;
 
 //devuelve el numero de robos activos
-robosActivosCount = _robosActivosCount;
-publicVariable "robosActivosCount";
-diag_log format["La variable robosActivosCount contiene: ""%1""", robosActivosCount];
+//robosActivosGLOBAL = _robosActivosCount;
+//publicVariable "robosActivosCount";
+//diag_log format["La variable robosActivosCount contiene: ""%1""", robosActivosCount];

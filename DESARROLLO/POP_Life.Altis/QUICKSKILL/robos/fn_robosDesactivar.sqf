@@ -18,7 +18,7 @@ _ladronesEnRobo  = _element   select [0,1];
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_nombreRobo == _nombreRoboCompare) then {
-  // ya estan robando actualizar numero de ladrones  
+  // ya estan robando actualizar numero de ladrones
 
    _ladronesEnRobo  = _x select [1,1];
 
@@ -28,5 +28,5 @@ if (_nombreRobo == _nombreRoboCompare) then {
 
 } forEach robosActivosGLOBAL;
 
-publicVariable "robosActivosGLOBAL";
+//publicVariable "robosActivosGLOBAL";
 

@@ -57,7 +57,7 @@ _robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
 waitUntil{scriptDone _robos_activos};
 
 //Si hay muchos robos activos no se peude robar
-if (robosActivosCount >= _maximoRobosActivos) exitWith {
+if (robosActivosGlobal >= _maximoRobosActivos) exitWith {
 	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
 };
 
