@@ -62,18 +62,21 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	if((_curTarget getVariable["restrained",false]) &&  {!(player getVariable["restrained",false])} && !dialog && playerSide in [west,civilian,independent]) then {
 	    //menu para policia
-	    if(playerSide == west) then{
+	    if(playerSide == west) then {
 
 	    	[_curTarget] call life_fnc_copInteractionMenu;
 	    };
 
 	    //menu para civil
-	     if(playerSide == civilian) then{
+	     if(playerSide == civilian) then {
 
 	    	[_curTarget] call War_fnc_InteractionMenu;
 	    };
+	    //menu para mercenarios
+	    if(playerSide == east) then {
 
-
+	    	[_curTarget] call War_fnc_interactionMenu;
+        };
 	};
 
 } else {

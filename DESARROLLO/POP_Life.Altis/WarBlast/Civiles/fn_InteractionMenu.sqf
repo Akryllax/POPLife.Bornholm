@@ -22,12 +22,15 @@ if(!isPlayer _curTarget && (_curTarget getVariable["restrained",false])) exitWit
 _display = findDisplay 37400;
 _Btn1 = _display displayCtrl Btn1;
 _Btn2 = _display displayCtrl Btn2;
+_Btn3 = _display displayCtrl Btn3;
 life_pInact_curTarget = _curTarget;
 
 //Set Escort Button
 if((_curTarget getVariable["Escorting",false])) then {
 	_Btn1 ctrlSetText localize "STR_pInAct_StopEscort";
 	_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_InteractionMenu;";
+	_Btn3 ctrlSetText localize "STR_pInAct_PutInCar";
+    _Btn3 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 } else {
 	_Btn1 ctrlSetText localize "STR_pInAct_Escort";
 	_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
