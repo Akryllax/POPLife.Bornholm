@@ -54,3 +54,12 @@ if(_bando == independent) then {
 			};
 	    };
 	};
+if(_bando == civilian) then {
+	switch(_uni) do {
+	       case "": {
+	       if (life_arrested) then {
+		   player setObjectTextureGlobal [0,"textures\TRAJES\prisiones.jpg"];
+	       };
+        };
+    };
+};
