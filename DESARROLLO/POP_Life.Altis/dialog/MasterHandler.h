@@ -32,3 +32,4 @@
 #include "defines.hpp"
 #include "menuBanco.hpp"
 #include "statusBar.hpp"
+#include "group.hpp"

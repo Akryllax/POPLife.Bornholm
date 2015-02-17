@@ -429,6 +429,22 @@ class Life_Client_Core
 		class openEconomy {};
 		class virt_updateEconomy {};
 	};
+	class Groups
+	{
+		file = "WarBlast\Grupos";
+		class createGroup {};
+		class groupBrowser {};
+		class groupManagement {};
+		class groupMenu {};
+		class joinGroup {};
+		class kickGroup {};
+		class leaveGroup {};
+		class setGroupLeader {};
+		class lockGroup {};
+		class unlockGroup {};
+		class clientGroupLeader {};
+		class clientGroupKick {};
+	};
 };
 class WarBlast
 {
