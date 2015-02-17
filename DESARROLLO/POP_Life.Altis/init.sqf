@@ -13,65 +13,16 @@ life_versionInfo = "Altis Life RPG v5";
 [] execVM "KRON_Strings.sqf";
 
 StartProgress = true;
-/////////////////////////////////////////////////////
-//robo avanzado banco de ica adaptado x quick xD
-/////////////////////////////////////////////////////
 
-//esta funcion la utiliza el ica pa sacar un codigo!
-ICARUK_fnc_addAction = {
-    private["_object","_script"];
-    _object = _this select 0;
-    _script = _this select 1;
-
-    _object addAction _script;
-};
-
-MAC_fnc_switchMove = {
-    private["_object","_anim"];
-    _object = _this select 0;
-    _anim = _this select 1;
-
-    _object switchMove _anim;
-
-};
-
-MTP_fnc_numberToString = {
-    _number = _this;
-    _str = "";
-    if (_number % 1 == 0) then
-    {
-        while { _number > 0 } do
-        {
-            _digit = floor (_number % 10);
-            _str = (str _digit) + _str;
-            _number = floor (_number / 10);
-        };
-    }
-    else
-    {
-        _decimals = _number % 1;
-        _decimals = _decimals * 1000000;
-        _number = floor _number;
-        _str = _number call MTP_fnc_numberToString;
-        _str = _str + "." + str _decimals;
-    };
-
-    _str;
-};
 
 if (isServer) then {
     adminChannel = radioChannelCreate [[1, 0, 0, 1], "Administracion", "%UNIT_NAME", []];
     EMSChannel   = radioChannelCreate [[1,0.4,0,1], "Emergencias", "%UNIT_NAME", []];
     publicVariable "adminChannel";
     publicVariable "EMSChannel";
-	null = [] execVM "QUICKSKILL\robos\banco\initBanco.sqf";
-	null = [] execVM "QUICKSKILL\robos\banco\nuevoCodigoBancario.sqf";
-    //ponemos las zonas seguras sin triggers ni mierda, quickninjacode
-    //[] execVM "QUICKSKILL\zonaSegura\fn_zonaSegura.sqf";
-};
-[] execVM "QUICKSKILL\robos\banco\sumaDeposito.sqf";
 
-////////////end robo banco avanzado/////////////////////////////////
+};
+
 
 //quitar efectos de lluvia
 [] spawn {
@@ -97,4 +48,3 @@ if (isServer) then {
 
 //_igiload = execVM  "WarBlast\IgiLoad\IgiLoadInit.sqf";
 
-//
