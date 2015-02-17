@@ -43,7 +43,7 @@ if (currentWeapon _ladron == "") exitWith {
 	hint "No me amenaces! Fuera de aquí pordiosero!";
 };
 
-if ((_hora == 1) and ((date select 3) >= 20) OR ((date select 3) <= 7))) exitWith {
+if ((_hora == 1) and (((date select 3) >= 20) OR ((date select 3) <= 7))) exitWith {
 	hint "Es de noche! Este establecimiento esta cerrado!";
 };
 
