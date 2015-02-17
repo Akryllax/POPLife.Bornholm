@@ -58,7 +58,7 @@ if(_bando == civilian) then {
 	switch(_uni) do {
 	       case "U_B_CombatUniform_mcam_worn": {
 	       if (life_is_arrested) then {
-		   player setObjectTextureGlobal [0,"textures\TRAJES\prisiones.jpg"];
+		   player setObjectTextureGlobal [0,"textures\TRAJES\prisoner.jpg"];
 	       };
         };
     };
