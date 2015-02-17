@@ -44,42 +44,14 @@ if (currentWeapon _ladron == "") exitWith {
 };
 
 if (_hora == 1) && (((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {
-	hint "Es de noche! Este establecimiento esta cerrado!"
+	hint "Es de noche! Este establecimiento esta cerrado!";
 };
 
-/* Version 1 para todos los robos
-if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
-	{
-	while {true} do
-		{
-		if !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {};
-
-			_vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,_params];
-			sleep 1*60;
-		};
-		sleep 1*60;
-	};
-*/
-
-/* Version 2 mejor
-
-_hora =  _params select 8;
-
-if (_hora = 1) then
-	{
-       if (((date select 3) >= 20) OR ((date select 3) <= 7)) then
-	   {
-	   while {true} do
-		   {
-		    if !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {};
-
-			  _vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,_params];
-			  sleep 1*60;
-		};
-		sleep 1*60;
-	};
+if (_hora == 2) && !(((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {
+    hint "Es de dia! Este establecimiento esta cerrado!";
 };
-*/
+
+
 //controlador de robos activos devuelve el numero de robos activos
 //_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
 //waitUntil{scriptDone _robos_activos};
