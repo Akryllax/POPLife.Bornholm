@@ -43,14 +43,16 @@ if (currentWeapon _ladron == "") exitWith {
 	hint "No me amenaces! Fuera de aquí pordiosero!";
 };
 
-if (_hora == 1 and date select 3 >= 20 OR date select 3 <= 7) exitWith {
+_horaActual = date select 3;
+if (_hora == 1 and _horaActual >= 20 and  _horaActual <= 7) exitWith {
 	hint "Es de noche! Este establecimiento esta cerrado!";
 };
 
-if (_hora == 2 and date select 3 <= 20 OR date select 3 <= 7) exitWith {
+
+if (_hora == 2 and _horaActual  <= 20 and _horaActual >= 7) exitWith {
+
     hint "Es de dia! Este establecimiento esta cerrado!";
 };
-
 
 //controlador de robos activos devuelve el numero de robos activos
 _robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
