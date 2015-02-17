@@ -330,8 +330,8 @@ class playerSettings {
 			idc = 2097;
 			text = "Grupos";
 			onButtonClick = "[] call life_fnc_groupMenu";
-			x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.85;
+			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.805;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
