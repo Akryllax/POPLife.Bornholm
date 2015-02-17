@@ -126,6 +126,7 @@ life_fnc_garageRefund = compileFinal
 // [] execVM "WarBlast\Vehiculosfps\vehicleManager.sqf";
 [] execVM "WarBlast\zlt_fastrope.sqf";
 [] execVM "WarBlast\Luces\fn_luces.sqf";
+[] execVM "WarBlast\Luces\fn_luces2.sqf";
 [] execVM "WarBlast\Policias\lacrimogeno.sqf";
 [] execVM "WarBlast\fn_statusBar.sqf";
 // [] execVM "WarBlast\real_weather.sqf";
