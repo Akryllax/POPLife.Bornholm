@@ -44,7 +44,7 @@ if (currentWeapon _ladron == "") exitWith {
 };
 
 if (_hora == 1) && (((date select 3) >= 20) OR ((date select 3) <= 7)) exitWith {
-	hint "Es de dia! Este establecimiento esta cerrado!"
+	hint "Es de noche! Este establecimiento esta cerrado!"
 };
 
 /* Version 1 para todos los robos
