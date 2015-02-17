@@ -79,6 +79,8 @@ addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect;
 [] spawn TON_fnc_cleanup;
 life_gang_list = [];
 publicVariable "life_gang_list";
+life_group_list = [];
+publicVariable "life_group_list";
 life_wanted_list = [];
 client_session_list = [];
 

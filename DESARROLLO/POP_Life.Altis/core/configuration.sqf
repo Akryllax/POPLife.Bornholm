@@ -42,6 +42,7 @@ life_llaveesposas = ObjNull;
 life_protestando = false;
 life_sentarse = false;
 life_bailando = false;
+life_my_group = ObjNull;
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
