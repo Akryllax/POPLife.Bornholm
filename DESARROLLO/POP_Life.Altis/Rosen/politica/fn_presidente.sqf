@@ -5,7 +5,3 @@
 *
 **/
 
-if(__GETC__(life_presidente) == 0) then {
-	["NotWhitelisted",false,true] call BIS_fnc_endMission;
-	sleep 35;
-};
