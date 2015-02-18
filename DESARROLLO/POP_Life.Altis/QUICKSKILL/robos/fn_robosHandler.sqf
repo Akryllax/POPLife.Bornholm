@@ -57,9 +57,9 @@ _robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
 waitUntil{scriptDone _robos_activos};
 
 //Si hay muchos robos activos no se peude robar
-//if (robosActivosGlobal >= _maximoRobosActivos) exitWith {
-//	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
-//};
+if ((count robosActivosGlobal) >= _maximoRobosActivos) exitWith {
+	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
+};
 
 //Avisar a la policia
 [[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;

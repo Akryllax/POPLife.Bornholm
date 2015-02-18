@@ -6,10 +6,10 @@
 private ["_nombreRobo ","_roboActivo ","_ladronesEnRobo"];
 
 _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
-_roboActivo = "no";
+//_roboActivo = "no";
 
 ///for de robos activos
-{
+/*{
 //nombre robo del array global de robos activos
 
 _nombreRoboCompare = _x select [0,1];
@@ -21,15 +21,24 @@ if (_nombreRobo == _nombreRoboCompare) then {
     _roboActivo = "si";
    _ladronesEnRobo  = _x select [1,1];
 
-   _x  set [_forEachIndex,[_nombreRoboCompare,_ladronesEnRobo + 1]];
+  _x  set [_forEachIndex,[_nombreRoboCompare,_ladronesEnRobo + 1]];
 };
 
 } forEach robosActivosGLOBAL;
+*/
+{
+
+_nombreRoboCompare = _x select [0,1];
+
+if !(_nombreRobo == _nombreRoboCompare) then {
+    robosActivosGLOBAL pushBack [_nombreRobo];
+};
+} foreach robosActivosGLOBAL;
 
 //sino esta en la lista de robosActivos agregamso el robo con 1 ladron inicial
-if(_roboActivo == "no") then {
+/*if(_roboActivo == "no") then {
 
-robosActivosGLOBAL pushBack [_nombreRobo,1];
+robosActivosGLOBAL pushBack [_nombreRobo];
 
 };
 
@@ -37,7 +46,7 @@ robosActivosGLOBAL pushBack [_nombreRobo,1];
 
 
 ///for de robos activos
-_robosActivosCount = 0;
+/*_robosActivosCount = 0;
 
 {
 	 // mirar cuantos ladrones hay en cada robo
@@ -54,7 +63,7 @@ if (_ladronesEnRobo > 0) then {
 
 
 } forEach robosActivosGLOBAL;
-
+*/
 //devuelve el numero de robos activos
 //robosActivosGLOBAL = _robosActivosCount;
 //publicVariable "robosActivosCount";
