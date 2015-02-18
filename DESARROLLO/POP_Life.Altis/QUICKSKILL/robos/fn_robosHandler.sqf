@@ -47,7 +47,7 @@ if ((_robo_hora == 2)and !(((date select 3) >= 20)OR ((date select 3) <= 7))) ex
 		hint "Es de dia! Este establecimiento esta cerrado!";
 	};
 
-if !((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) or ((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) then {
+if !((_nombreRobo) in (robosActivosGLOBAL select [0, 2]))or ((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) then {
 
 	if (!((_nombreRobo) in (robosActivosGLOBAL select [0, 2]))and (count robosActivosGLOBAL) <= _maximoRobosActivos) then {
 			robosActivosGLOBAL pushBack [_nombreRobo];
@@ -157,9 +157,8 @@ if !((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) or ((_nombreRobo) in (
 
 					// Añadimos otra vez la opcion de robar
 					_vendedor addAction [format ["Robar %1", _nombreRobo], QUICK_fnc_robosHandler, _params];
-						}else {
-		hint "Hay muchos robos activos, espera a que terminen para poder robar!";
-
-	};
-   };
+				} else {
+					hint "Hay muchos robos activos, espera a que terminen para poder robar!";
+				};
+		};
 };
