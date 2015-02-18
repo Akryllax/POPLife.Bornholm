@@ -40,6 +40,7 @@ while {_time > 0} do {
 		hintSilent format["Has abandonado la zona de robo estabas a %1m del vendedor",round (_metros)];
 		_time = 0;
 		_pagar_ladron = "no";
+		[_nombreRobo]spawn QUICK_fnc_robosDesactivar;
 		sleep 1;
 
 	};
@@ -47,6 +48,7 @@ while {_time > 0} do {
 	/// si muere paramos el contador
 		if !(alive _ladron) then {
 			_time = 0;
+			[_nombreRobo]spawn QUICK_fnc_robosDesactivar;
 		};
 
 	//mientras este dentro de rango que cuente el tiempo
