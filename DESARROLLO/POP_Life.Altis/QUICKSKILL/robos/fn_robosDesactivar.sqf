@@ -7,6 +7,8 @@ private ["_maximoRobosActivo", "_nombreRobo ", "_roboActivo ", "_ladronesEnRobo"
 //params
 _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
 
+
+
 ///for de robos activos
 /*
 {
@@ -28,7 +30,7 @@ if (_nombreRobo == _nombreRoboCompare) then {
 
 } forEach robosActivosGLOBAL;
 
-*/
+
 {
 	_nombreRoboCompare = _x select [0,1];
 

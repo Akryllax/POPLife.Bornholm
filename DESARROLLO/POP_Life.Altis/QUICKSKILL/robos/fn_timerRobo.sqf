@@ -40,15 +40,17 @@ while {_time > 0} do {
 		hintSilent format["Has abandonado la zona de robo estabas a %1m del vendedor",round (_metros)];
 		_time = 0;
 		_pagar_ladron = "no";
-		[_nombreRobo]spawn QUICK_fnc_robosDesactivar;
-		sleep 1;
+		robosActivosGLOBALES = robosActivosGLOBALES - [_nombreRobo];
+		publicVariable "robosActivosGLOBAL";
+		//sleep 1;
 
 	};
 
 	/// si muere paramos el contador
 		if !(alive _ladron) then {
 			_time = 0;
-			[_nombreRobo]spawn QUICK_fnc_robosDesactivar;
+			robosActivosGLOBALES = robosActivosGLOBALES - [_nombreRobo];
+			publicVariable "robosActivosGLOBAL";
 		};
 
 	//mientras este dentro de rango que cuente el tiempo
@@ -57,7 +59,7 @@ while {_time > 0} do {
 		//contar tiempo
 		_time = _time - 1;
 		hintSilent format["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_cancelar_robo];
-		sleep 1;
+		//sleep 1;
 		_pagar_ladron = "si";
 	};
 
@@ -66,7 +68,8 @@ while {_time > 0} do {
 if(_time < 1) then{
 
 // el ladron ha terminado el robo, quitar 1 ladron del robo
-[_nombreRobo]spawn QUICK_fnc_robosDesactivar;
+    robosActivosGLOBALES = robosActivosGLOBALES - [_nombreRobo];
+    publicVariable "robosActivosGLOBAL";
 
 	//si a roabdo pagar al ladron
 
