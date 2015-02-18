@@ -61,9 +61,12 @@ if ((count robosActivosGlobal) >= _maximoRobosActivos) exitWith {
 /*_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
 waitUntil{scriptDone _robos_activos};
 */
+
 if !(_nombreRobo in robosActivosGlobal) then {
 	robosActivosGLOBAL pushBack [_nombreRobo];
 	publicVariable "robosActivosGLOBAL";
+} else {
+
 };
 
 
