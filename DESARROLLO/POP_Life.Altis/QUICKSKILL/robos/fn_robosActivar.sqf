@@ -6,7 +6,7 @@
 private ["_nombreRobo ","_roboActivo ","_ladronesEnRobo"];
 
 _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
-//_roboActivo = "no";
+_roboActivo = "no";
 
 ///for de robos activos
 {
