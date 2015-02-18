@@ -15,14 +15,14 @@ _nombreRoboCompare = _x select [0,1];
 //_ladronesEnRobo  = _x   select [1,1];
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
-if (_nombreRobo == _nombreRoboCompare) then {
+if !(_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
  //   _roboActivo = "si";
   // _ladronesEnRobo  = _x select [1,1];
-
+  robosActivosGLOBAL pushBack [_nombreRobo];
   //_x  set [_forEachIndex,[_nombreRoboCompare,_ladronesEnRobo + 1]];
 } else {
-  robosActivosGLOBAL pushBack [_nombreRobo];
+
 };
 
 } forEach robosActivosGLOBAL;

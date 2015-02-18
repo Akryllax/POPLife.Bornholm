@@ -58,9 +58,12 @@ if ((count robosActivosGlobal) >= _maximoRobosActivos) exitWith {
 };
 
 //controlador de robos activos devuelve el numero de robos activos
-_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
+/*_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
 waitUntil{scriptDone _robos_activos};
-
+*/
+if !(_nombreRobo in robosActivosGlobal) then {
+	robosActivosGLOBAL pushBack [_nombreRobo];
+};
 
 
 //Avisar a la policia
