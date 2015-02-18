@@ -104,11 +104,7 @@ if !((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) or ((_nombreRobo) in (
 			// Añadimos otra vez la opcion de robar
 			_vendedor addAction [format ["Robar %1", _nombreRobo], QUICK_fnc_robosHandler, _params];
 		} else {
-
-		exitWith {hint "Hay muchos robos activos, espera a que terminen para poder robar!";};
-
-	    }
-		if ((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) then {
+			if ((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) then {
 					// Avisar a la policia
 					[ [1, format ["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]], "life_fnc_broadcast", west, false] spawn life_fnc_MP;
 
@@ -162,4 +158,6 @@ if !((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) or ((_nombreRobo) in (
 					// Añadimos otra vez la opcion de robar
 					_vendedor addAction [format ["Robar %1", _nombreRobo], QUICK_fnc_robosHandler, _params];
 				};
-		};
+		}else {
+		hint "Hay muchos robos activos, espera a que terminen para poder robar!";
+	};
