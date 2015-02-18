@@ -52,24 +52,78 @@ if ((_robo_hora == 2) and !(((date select 3) >= 20) OR ((date select 3) <= 7))) 
     hint "Es de dia! Este establecimiento esta cerrado!";
 };
 
-//Si hay muchos robos activos no se peude robar
+/*//Si hay muchos robos activos no se peude robar
 if ((count robosActivosGlobal) >= _maximoRobosActivos) exitWith {
 	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
 };
-
+*/
 //controlador de robos activos devuelve el numero de robos activos
 /*_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
 waitUntil{scriptDone _robos_activos};
 */
-
-if !(_nombreRobo in robosActivosGlobal) then {
+if !(_nombreRobo in robosActivosGLOBAL) and ((count robosActivosGLOBAL) >= _maximoRobosActivos) then {
+//if !(_nombreRobo in robosActivosGlobal) then {
 	robosActivosGLOBAL pushBack [_nombreRobo];
 	publicVariable "robosActivosGLOBAL";
-} else {
+//Avisar a la policia
+[[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+
+//Añadir robo al ladron
+[[getPlayerUID _ladron,name _ladron,"5"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+
+//Quitar opcion del robo
+_vendedor removeAction _action;
+
+//Poner marcador de robo
+_pos = position _vendedor;
+_markerID = format["marker_%1",floor(random 1000)];
+_marker = createMarker [ _markerID, _pos];
+_marker setMarkerColor "ColorRed";
+_marker setMarkerText "!ATENCION! Estan robando aqui!";
+_marker setMarkerType "mil_warning";
+
+_parametrosTimer = [];
+_parametrosTimer pushBack _nombreRobo;
+_parametrosTimer pushBack _tiempoRobo;
+_parametrosTimer pushBack _dinero;
+_parametrosTimer pushBack _metros_cancelar_robo;
+_parametrosTimer pushBack _itemsRecompensa;
+_parametrosTimer pushBack _vendedor;
+_parametrosTimer pushBack _ladron;
+_parametrosTimer pushBack _darArmas;
+_parametrosTimer pushBack _darVehiculo;
+
+//Añadimos la variable global
+
+
+//Iniciar timer robo
+_script_handler = _parametrosTimer spawn QUICK_fnc_timerRobo;
+waitUntil { scriptDone _script_handler };
+
+//Borrar marcador robo
+deleteMarker _marker;
+
+//crear marcador ultima posicion del ladron
+_pos = position _ladron;
+ _markerID = format["marker_%1",floor(random 1000)];
+_marker = createMarker [ _markerID, _pos];
+_marker setMarkerColor "ColorRed";
+_marker setMarkerText "Ladrón visto aqui por última vez";
+_marker setMarkerType "mil_warning";
+
+sleep 15;
+
+deleteMarker _marker;
+
+//Regeneramos la accion de poder robar
+sleep _tiempoRegenerarRobo; //Wait
+
+//Añadimos otra vez la opcion de robar
+_vendedor addAction[format["Robar %1",_nombreRobo],QUICK_fnc_robosHandler,_params];
 
 };
 
-
+/*
 //Avisar a la policia
 [[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 
