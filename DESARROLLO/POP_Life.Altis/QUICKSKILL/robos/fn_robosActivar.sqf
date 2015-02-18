@@ -9,34 +9,26 @@ _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
 //_roboActivo = "no";
 
 ///for de robos activos
-/*{
+{
 //nombre robo del array global de robos activos
 
 _nombreRoboCompare = _x select [0,1];
-_ladronesEnRobo  = _x   select [1,1];
+//_ladronesEnRobo  = _x   select [1,1];
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_nombreRobo == _nombreRoboCompare) then {
   // ya estan robando actualizar numero de ladrones
     _roboActivo = "si";
-   _ladronesEnRobo  = _x select [1,1];
+  // _ladronesEnRobo  = _x select [1,1];
 
-  _x  set [_forEachIndex,[_nombreRoboCompare,_ladronesEnRobo + 1]];
+  //_x  set [_forEachIndex,[_nombreRoboCompare,_ladronesEnRobo + 1]];
 };
 
 } forEach robosActivosGLOBAL;
-*/
-{
 
-_nombreRoboCompare = _x select [0,1];
-
-if !(_nombreRobo == _nombreRoboCompare) then {
-    robosActivosGLOBAL pushBack [_nombreRobo];
-};
-} foreach robosActivosGLOBAL;
 
 //sino esta en la lista de robosActivos agregamso el robo con 1 ladron inicial
-/*if(_roboActivo == "no") then {
+if(_roboActivo == "no") then {
 
 robosActivosGLOBAL pushBack [_nombreRobo];
 

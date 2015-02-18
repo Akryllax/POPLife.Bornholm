@@ -52,14 +52,16 @@ if ((_robo_hora == 2) and !(((date select 3) >= 20) OR ((date select 3) <= 7))) 
     hint "Es de dia! Este establecimiento esta cerrado!";
 };
 
-//controlador de robos activos devuelve el numero de robos activos
-_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
-waitUntil{scriptDone _robos_activos};
-
 //Si hay muchos robos activos no se peude robar
 if ((count robosActivosGlobal) >= _maximoRobosActivos) exitWith {
 	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
 };
+
+//controlador de robos activos devuelve el numero de robos activos
+_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
+waitUntil{scriptDone _robos_activos};
+
+
 
 //Avisar a la policia
 [[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
