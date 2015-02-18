@@ -63,6 +63,7 @@ waitUntil{scriptDone _robos_activos};
 */
 if !(_nombreRobo in robosActivosGlobal) then {
 	robosActivosGLOBAL pushBack [_nombreRobo];
+	publicVariable "robosActivosGLOBAL";
 };
 
 
