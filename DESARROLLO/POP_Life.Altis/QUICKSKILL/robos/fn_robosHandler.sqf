@@ -47,8 +47,8 @@ if ((_robo_hora == 2)and !(((date select 3) >= 20)OR ((date select 3) <= 7))) ex
 		hint "Es de dia! Este establecimiento esta cerrado!";
 	};
 
-if (!((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) or (_nombreRobo) in (robosActivosGLOBAL select [0, 2]) and (count robosActivosGLOBAL) >= _maximoRobosActivos) then {
-		if !((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) then {
+if ((count robosActivosGLOBAL) >= _maximoRobosActivos) then {
+		if !((_nombreRobo) in (robosActivosGLOBAL select [0, count robosActivosGLOBAL])) then {
 				robosActivosGLOBAL pushBack [_nombreRobo];
 				publicVariable "robosActivosGLOBAL";
 				[ [1, format ["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]], "life_fnc_broadcast", west, false] spawn life_fnc_MP;
