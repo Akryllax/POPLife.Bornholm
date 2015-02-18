@@ -47,116 +47,117 @@ if ((_robo_hora == 2)and !(((date select 3) >= 20)OR ((date select 3) <= 7))) ex
 		hint "Es de dia! Este establecimiento esta cerrado!";
 	};
 
-if (!((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) or (_nombreRobo) in (robosActivosGLOBAL select [0, 2]))  then {
+if !((_nombreRobo) in (robosActivosGLOBAL select [0, 2]))then {
 
-		if (!((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) and (count robosActivosGLOBAL) <= _maximoRobosActivos) then {
-				robosActivosGLOBAL pushBack [_nombreRobo];
-				publicVariable "robosActivosGLOBAL";
-				[ [1, format ["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]], "life_fnc_broadcast", west, false] spawn life_fnc_MP;
+	if (!((_nombreRobo) in (robosActivosGLOBAL select [0, 2]))and (count robosActivosGLOBAL) <= _maximoRobosActivos) then {
+			robosActivosGLOBAL pushBack [_nombreRobo];
+			publicVariable "robosActivosGLOBAL";
+			[ [1, format ["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]], "life_fnc_broadcast", west, false] spawn life_fnc_MP;
 
-				// Añadir robo al ladron
-				[ [getPlayerUID _ladron, name _ladron, "5"], "life_fnc_wantedAdd", false, false] spawn life_fnc_MP;
+			// Añadir robo al ladron
+			[ [getPlayerUID _ladron, name _ladron, "5"], "life_fnc_wantedAdd", false, false] spawn life_fnc_MP;
 
-				// Quitar opcion del robo
-				_vendedor removeAction _action;
+			// Quitar opcion del robo
+			_vendedor removeAction _action;
 
-				// Poner marcador de robo
-				_pos	  = position _vendedor;
-				_markerID = format ["marker_%1", floor(random 1000)];
-				_marker	  = createMarker [_markerID, _pos];
-				_marker setMarkerColor "ColorRed";
-				_marker setMarkerText "!ATENCION! Estan robando aqui!";
-				_marker setMarkerType "mil_warning";
+			// Poner marcador de robo
+			_pos	  = position _vendedor;
+			_markerID = format ["marker_%1", floor(random 1000)];
+			_marker	  = createMarker [_markerID, _pos];
+			_marker setMarkerColor "ColorRed";
+			_marker setMarkerText "!ATENCION! Estan robando aqui!";
+			_marker setMarkerType "mil_warning";
 
-				_parametrosTimer = [];
-				_parametrosTimer pushBack _nombreRobo;
-				_parametrosTimer pushBack _tiempoRobo;
-				_parametrosTimer pushBack _dinero;
-				_parametrosTimer pushBack _metros_cancelar_robo;
-				_parametrosTimer pushBack _itemsRecompensa;
-				_parametrosTimer pushBack _vendedor;
-				_parametrosTimer pushBack _ladron;
-				_parametrosTimer pushBack _darArmas;
-				_parametrosTimer pushBack _darVehiculo;
+			_parametrosTimer = [];
+			_parametrosTimer pushBack _nombreRobo;
+			_parametrosTimer pushBack _tiempoRobo;
+			_parametrosTimer pushBack _dinero;
+			_parametrosTimer pushBack _metros_cancelar_robo;
+			_parametrosTimer pushBack _itemsRecompensa;
+			_parametrosTimer pushBack _vendedor;
+			_parametrosTimer pushBack _ladron;
+			_parametrosTimer pushBack _darArmas;
+			_parametrosTimer pushBack _darVehiculo;
 
-				// Iniciar timer robo
-				_script_handler = _parametrosTimer spawn QUICK_fnc_timerRobo;
-				waitUntil { scriptDone _script_handler };
+			// Iniciar timer robo
+			_script_handler = _parametrosTimer spawn QUICK_fnc_timerRobo;
+			waitUntil { scriptDone _script_handler };
 
-				// Borrar marcador robo
-				deleteMarker _marker;
+			// Borrar marcador robo
+			deleteMarker _marker;
 
-				// crear marcador ultima posicion del ladron
-				_pos	  = position _ladron;
-				_markerID = format ["marker_%1", floor(random 1000)];
-				_marker	  = createMarker [_markerID, _pos];
-				_marker setMarkerColor "ColorRed";
-				_marker setMarkerText "Ladrón visto aqui por última vez";
-				_marker setMarkerType "mil_warning";
+			// crear marcador ultima posicion del ladron
+			_pos	  = position _ladron;
+			_markerID = format ["marker_%1", floor(random 1000)];
+			_marker	  = createMarker [_markerID, _pos];
+			_marker setMarkerColor "ColorRed";
+			_marker setMarkerText "Ladrón visto aqui por última vez";
+			_marker setMarkerType "mil_warning";
 
-				sleep 15;
+			sleep 15;
 
-				deleteMarker _marker;
+			deleteMarker _marker;
 
-				// Regeneramos la accion de poder robar
-				sleep _tiempoRegenerarRobo;	// Wait
+			// Regeneramos la accion de poder robar
+			sleep _tiempoRegenerarRobo;	// Wait
 
-				// Añadimos otra vez la opcion de robar
-				_vendedor addAction [format ["Robar %1", _nombreRobo], QUICK_fnc_robosHandler, _params];
-			} else {
-				// Avisar a la policia
-				[ [1, format ["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]], "life_fnc_broadcast", west, false] spawn life_fnc_MP;
+			// Añadimos otra vez la opcion de robar
+			_vendedor addAction [format ["Robar %1", _nombreRobo], QUICK_fnc_robosHandler, _params];
+		} else {
+			if ((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) then {
+					// Avisar a la policia
+					[ [1, format ["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]], "life_fnc_broadcast", west, false] spawn life_fnc_MP;
 
-				// Añadir robo al ladron
-				[ [getPlayerUID _ladron, name _ladron, "5"], "life_fnc_wantedAdd", false, false] spawn life_fnc_MP;
+					// Añadir robo al ladron
+					[ [getPlayerUID _ladron, name _ladron, "5"], "life_fnc_wantedAdd", false, false] spawn life_fnc_MP;
 
-				// Quitar opcion del robo
-				_vendedor removeAction _action;
+					// Quitar opcion del robo
+					_vendedor removeAction _action;
 
-				// Poner marcador de robo
-				_pos	  = position _vendedor;
-				_markerID = format ["marker_%1", floor(random 1000)];
-				_marker	  = createMarker [_markerID, _pos];
-				_marker setMarkerColor "ColorRed";
-				_marker setMarkerText "!ATENCION! Estan robando aqui!";
-				_marker setMarkerType "mil_warning";
+					// Poner marcador de robo
+					_pos	  = position _vendedor;
+					_markerID = format ["marker_%1", floor(random 1000)];
+					_marker	  = createMarker [_markerID, _pos];
+					_marker setMarkerColor "ColorRed";
+					_marker setMarkerText "!ATENCION! Estan robando aqui!";
+					_marker setMarkerType "mil_warning";
 
-				_parametrosTimer = [];
-				_parametrosTimer pushBack _nombreRobo;
-				_parametrosTimer pushBack _tiempoRobo;
-				_parametrosTimer pushBack _dinero;
-				_parametrosTimer pushBack _metros_cancelar_robo;
-				_parametrosTimer pushBack _itemsRecompensa;
-				_parametrosTimer pushBack _vendedor;
-				_parametrosTimer pushBack _ladron;
-				_parametrosTimer pushBack _darArmas;
-				_parametrosTimer pushBack _darVehiculo;
+					_parametrosTimer = [];
+					_parametrosTimer pushBack _nombreRobo;
+					_parametrosTimer pushBack _tiempoRobo;
+					_parametrosTimer pushBack _dinero;
+					_parametrosTimer pushBack _metros_cancelar_robo;
+					_parametrosTimer pushBack _itemsRecompensa;
+					_parametrosTimer pushBack _vendedor;
+					_parametrosTimer pushBack _ladron;
+					_parametrosTimer pushBack _darArmas;
+					_parametrosTimer pushBack _darVehiculo;
 
-				// Iniciar timer robo
-				_script_handler = _parametrosTimer spawn QUICK_fnc_timerRobo;
-				waitUntil { scriptDone _script_handler };
+					// Iniciar timer robo
+					_script_handler = _parametrosTimer spawn QUICK_fnc_timerRobo;
+					waitUntil { scriptDone _script_handler };
 
-				// Borrar marcador robo
-				deleteMarker _marker;
+					// Borrar marcador robo
+					deleteMarker _marker;
 
-				// crear marcador ultima posicion del ladron
-				_pos	  = position _ladron;
-				_markerID = format ["marker_%1", floor(random 1000)];
-				_marker	  = createMarker [_markerID, _pos];
-				_marker setMarkerColor "ColorRed";
-				_marker setMarkerText "Ladrón visto aqui por última vez";
-				_marker setMarkerType "mil_warning";
+					// crear marcador ultima posicion del ladron
+					_pos	  = position _ladron;
+					_markerID = format ["marker_%1", floor(random 1000)];
+					_marker	  = createMarker [_markerID, _pos];
+					_marker setMarkerColor "ColorRed";
+					_marker setMarkerText "Ladrón visto aqui por última vez";
+					_marker setMarkerType "mil_warning";
 
-				sleep 15;
+					sleep 15;
 
-				deleteMarker _marker;
+					deleteMarker _marker;
 
-				// Regeneramos la accion de poder robar
-				sleep _tiempoRegenerarRobo;	// Wait
+					// Regeneramos la accion de poder robar
+					sleep _tiempoRegenerarRobo;	// Wait
 
-				// Añadimos otra vez la opcion de robar
-				_vendedor addAction [format ["Robar %1", _nombreRobo], QUICK_fnc_robosHandler, _params];
-			};
-	} else {
+					// Añadimos otra vez la opcion de robar
+					_vendedor addAction [format ["Robar %1", _nombreRobo], QUICK_fnc_robosHandler, _params];
+				};
+		}else {
 		hint "Hay muchos robos activos, espera a que terminen para poder robar!";
 	};
