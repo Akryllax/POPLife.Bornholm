@@ -61,9 +61,10 @@ if ((count robosActivosGlobal) >= _maximoRobosActivos) exitWith {
 /*_robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
 waitUntil{scriptDone _robos_activos};
 */
-if ((_nombreRobo) in (robosActivosGLOBAL select [0,2])) and ((count robosActivosGLOBAL) >= _maximoRobosActivos)) then {
+if (!(_nombreRobo) in (robosActivosGLOBAL select [0,2])) and ((count robosActivosGLOBAL) >= _maximoRobosActivos)) then {
 	robosActivosGLOBAL pushBack [_nombreRobo];
 	publicVariable "robosActivosGLOBAL";
+} else {
 //Avisar a la policia
 [[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 
