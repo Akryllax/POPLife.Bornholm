@@ -3,21 +3,17 @@
 	Author: Quickskill
 	Desc: Activar robo "+1 si ya estan robando sino incluir robo en array global de robos"
 */
-private ["_nombreRobo ", "_roboActivo ", "_ladronesEnRobo"];
+private ["_nombreRobo ","_roboActivo ","_ladronesEnRobo"];
 
 _nombreRobo =  [_this, 0, "",[""]] call BIS_fnc_param;
 _roboActivo = "no";
-diag_log format["Nombre de robo recibido por via parametro al activar.sqf : ""%1""", _nombreRobo ];
 
 ///for de robos activos
 {
 //nombre robo del array global de robos activos
 
-
 _nombreRoboCompare = _x select [0,1];
 _ladronesEnRobo  = _x   select [1,1];
-
-
 
 //buscar si no hay ningun robo con ese nombre en el array de robos activos
 if (_nombreRobo == _nombreRoboCompare) then {
@@ -37,11 +33,10 @@ robosActivosGLOBAL pushBack [_nombreRobo,1];
 
 };
 
-publicVariable "robosActivosGLOBAL";
+//publicVariable "robosActivosGLOBAL";
 
 
 ///for de robos activos
-
 _robosActivosCount = 0;
 
 {

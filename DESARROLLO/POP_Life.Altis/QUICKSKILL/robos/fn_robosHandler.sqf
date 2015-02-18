@@ -42,11 +42,11 @@ if(_cops < _policias) exitWith {
 if (currentWeapon _ladron == "") exitWith {
 	hint "No me amenaces! Fuera de aquí pordiosero!";
 };
-
+//Noche OFF
 if ((_robo_hora == 1) and (((date select 3) >= 20) OR ((date select 3) <= 7))) exitWith {
 	hint "Es de noche! Este establecimiento esta cerrado!";
  };
-
+//DIA OFF
 if ((_robo_hora == 2) and !(((date select 3) >= 20) OR ((date select 3) <= 7))) exitWith {
 
     hint "Es de dia! Este establecimiento esta cerrado!";
@@ -57,9 +57,9 @@ _robos_activos = [_nombreRobo]spawn QUICK_fnc_robosActivar;
 waitUntil{scriptDone _robos_activos};
 
 //Si hay muchos robos activos no se peude robar
-if (robosActivosGlobal >= _maximoRobosActivos) exitWith {
-	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
-};
+//if (robosActivosGlobal >= _maximoRobosActivos) exitWith {
+//	hint "Hay muchos robos activos, espera a que terminen para poder robar!";
+//};
 
 //Avisar a la policia
 [[1,format["Alarma activada! - Se esta produciendo un atraco en %1 !", _nombreRobo]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
@@ -88,6 +88,9 @@ _parametrosTimer pushBack _vendedor;
 _parametrosTimer pushBack _ladron;
 _parametrosTimer pushBack _darArmas;
 _parametrosTimer pushBack _darVehiculo;
+
+//Añadimos la variable global
+
 
 //Iniciar timer robo
 _script_handler = _parametrosTimer spawn QUICK_fnc_timerRobo;
