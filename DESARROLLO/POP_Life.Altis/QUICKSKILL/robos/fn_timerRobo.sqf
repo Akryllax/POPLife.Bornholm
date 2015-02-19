@@ -45,6 +45,7 @@ while {_time > 0} do {
 			case 0: {robosActivosGLOBALES deleteAT 0};
 			case 1: {robosActivosGLOBALES deleteAT 1};
 			case 2: {robosActivosGLOBALES deleteAT 2};
+			default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
 		    publicVariable "robosActivosGLOBAL";
 	   	    //sleep 1;
 	    };
@@ -58,6 +59,7 @@ while {_time > 0} do {
 			    case 0: {robosActivosGLOBALES deleteAT 0};
 			    case 1: {robosActivosGLOBALES deleteAT 1};
 			    case 2: {robosActivosGLOBALES deleteAT 2};
+			    default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
                 publicVariable "robosActivosGLOBAL";
         };
 	};
@@ -82,6 +84,7 @@ if(_time < 1) then{
 			    case 0: {robosActivosGLOBALES deleteAT 0};
 			    case 1: {robosActivosGLOBALES deleteAT 1};
 			    case 2: {robosActivosGLOBALES deleteAT 2};
+				default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
                 publicVariable "robosActivosGLOBAL";
         };
 
