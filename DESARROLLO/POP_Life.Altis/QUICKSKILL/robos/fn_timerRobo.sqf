@@ -31,7 +31,7 @@ if (_metros_cancelar_robo < 0) exitWith { hint "Error, _metros_cancelar_robo is 
 
 _metros = _vendedor distance _ladron;
 
-     while {_time > 0} do {
+for "_x" from _time to 0 step - 1 do {
 
 
 	// mirar la distancia entre ladron i vendedor
@@ -246,3 +246,4 @@ if (_time < 1) then {
 								hint "";
 						     } };
 			};
+		// while {_time > 0} do {
