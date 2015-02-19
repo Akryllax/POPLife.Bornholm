@@ -40,18 +40,27 @@ while {_time > 0} do {
 		hintSilent format["Has abandonado la zona de robo estabas a %1m del vendedor",round (_metros)];
 		_time = 0;
 		_pagar_ladron = "no";
-		robosActivosGLOBALES = robosActivosGLOBALES - [_nombreRobo];
-		publicVariable "robosActivosGLOBAL";
-		//sleep 1;
-
+		_pos = robosActivosGLOBALES find [_nombreRobo];
+		switch (_pos) do {
+			case 0: {robosActivosGLOBALES deleteAT 0};
+			case 1: {robosActivosGLOBALES deleteAT 1};
+			case 2: {robosActivosGLOBALES deleteAT 2};
+		    publicVariable "robosActivosGLOBAL";
+	   	    //sleep 1;
+	    };
 	};
 
 	/// si muere paramos el contador
 		if !(alive _ladron) then {
 			_time = 0;
-			robosActivosGLOBALES = robosActivosGLOBALES - [_nombreRobo];
-			publicVariable "robosActivosGLOBAL";
-		};
+		    _pos = robosActivosGLOBALES find [_nombreRobo];
+		    switch (_pos) do {
+			    case 0: {robosActivosGLOBALES deleteAT 0};
+			    case 1: {robosActivosGLOBALES deleteAT 1};
+			    case 2: {robosActivosGLOBALES deleteAT 2};
+                publicVariable "robosActivosGLOBAL";
+        };
+	};
 
 	//mientras este dentro de rango que cuente el tiempo
 	if(_metros < _metros_cancelar_robo) then{
@@ -68,8 +77,13 @@ while {_time > 0} do {
 if(_time < 1) then{
 
 // el ladron ha terminado el robo, quitar 1 ladron del robo
-    robosActivosGLOBALES = robosActivosGLOBALES - [_nombreRobo];
-    publicVariable "robosActivosGLOBAL";
+            _pos = robosActivosGLOBALES find [_nombreRobo];
+		    switch (_pos) do {
+			    case 0: {robosActivosGLOBALES deleteAT 0};
+			    case 1: {robosActivosGLOBALES deleteAT 1};
+			    case 2: {robosActivosGLOBALES deleteAT 2};
+                publicVariable "robosActivosGLOBAL";
+        };
 
 	//si a roabdo pagar al ladron
 
