@@ -8,14 +8,14 @@
 private ["_nombreRobo", "_time", "_metros", "_metros_cancelar_robo", "_dinero", "_pagar_ladron", "_itemsRecompensa", "_vendedor", "_ladron", "_darArmas", "_darVehiculo"];
 
 _nombreRobo	      =                   [_this, 0, "", [""]] call BIS_fnc_param;
-_time		      =                   [_this, 1, -1, [-1]] call BIS_fnc_param;
-_dinero		      =                   [_this, 2, -1, [-1]] call BIS_fnc_param;
-_metros_cancelar_robo =               [_this, 3, -1, [-1]] call BIS_fnc_param;
-_itemsRecompensa      =               [_this, 4, [], [ []]] call BIS_fnc_param;
-_vendedor	      =                   [_this, 5, objNull, [objNull]] call BIS_fnc_param;
-_ladron		      =                   [_this, 6, objNull, [objNull]] call BIS_fnc_param;
-_darArmas	      =                   [_this, 7] call BIS_fnc_param;
-_darVehiculo	      =               [_this, 8] call BIS_fnc_param;
+_time		      =                                 [_this, 1, -1, [-1]] call BIS_fnc_param;
+_dinero		      =                               [_this, 2, -1, [-1]] call BIS_fnc_param;
+_metros_cancelar_robo = [_this, 3, -1, [-1]] call BIS_fnc_param;
+_itemsRecompensa      =              [_this, 4, [], [ []]] call BIS_fnc_param;
+_vendedor	      =                     [_this, 5, objNull, [objNull]] call BIS_fnc_param;
+_ladron		      =                               [_this, 6, objNull, [objNull]] call BIS_fnc_param;
+_darArmas	      =             [_this, 7] call BIS_fnc_param;
+_darVehiculo	      =          [_this, 8] call BIS_fnc_param;
 _pagar_ladron	      =                 false;
 
 
