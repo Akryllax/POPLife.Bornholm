@@ -40,27 +40,28 @@ while {_time > 0} do {
 		hintSilent format["Has abandonado la zona de robo estabas a %1m del vendedor",round (_metros)];
 		_time = 0;
 		_pagar_ladron = "no";
-		_pos = robosActivosGLOBALES find [_nombreRobo];
+		_pos = robosActivosGLOBAL find [_nombreRobo];
 		switch (_pos) do {
-			case 0: {robosActivosGLOBALES deleteAT 0};
-			case 1: {robosActivosGLOBALES deleteAT 1};
-			case 2: {robosActivosGLOBALES deleteAT 2};
+			case 0: {robosActivosGLOBAL deleteAT 0};
+			case 1: {robosActivosGLOBAL deleteAT 1};
+			case 2: {robosActivosGLOBAL deleteAT 2};
 			default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
 		    publicVariable "robosActivosGLOBAL";
-	   	    //sleep 1;
+	   	    sleep 0.25;
 	    };
 	};
 
 	/// si muere paramos el contador
 		if !(alive _ladron) then {
 			_time = 0;
-		    _pos = robosActivosGLOBALES find [_nombreRobo];
+		    _pos = robosActivosGLOBAL find [_nombreRobo];
 		    switch (_pos) do {
-			    case 0: {robosActivosGLOBALES deleteAT 0};
-			    case 1: {robosActivosGLOBALES deleteAT 1};
-			    case 2: {robosActivosGLOBALES deleteAT 2};
+			    case 0: {robosActivosGLOBAL deleteAT 0};
+			    case 1: {robosActivosGLOBAL deleteAT 1};
+			    case 2: {robosActivosGLOBAL deleteAT 2};
 			    default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
                 publicVariable "robosActivosGLOBAL";
+                sleep 0.25;
         };
 	};
 
@@ -70,7 +71,7 @@ while {_time > 0} do {
 		//contar tiempo
 		_time = _time - 1;
 		hintSilent format["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metros_cancelar_robo];
-		//sleep 1;
+		sleep 1;
 		_pagar_ladron = "si";
 	};
 
@@ -79,11 +80,11 @@ while {_time > 0} do {
 if(_time < 1) then{
 
 // el ladron ha terminado el robo, quitar 1 ladron del robo
-            _pos = robosActivosGLOBALES find [_nombreRobo];
+            _pos = robosActivosGLOBAL find [_nombreRobo];
 		    switch (_pos) do {
-			    case 0: {robosActivosGLOBALES deleteAT 0};
-			    case 1: {robosActivosGLOBALES deleteAT 1};
-			    case 2: {robosActivosGLOBALES deleteAT 2};
+			    case 0: {robosActivosGLOBAL deleteAT 0};
+			    case 1: {robosActivosGLOBAL deleteAT 1};
+			    case 2: {robosActivosGLOBAL deleteAT 2};
 				default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
                 publicVariable "robosActivosGLOBAL";
         };
