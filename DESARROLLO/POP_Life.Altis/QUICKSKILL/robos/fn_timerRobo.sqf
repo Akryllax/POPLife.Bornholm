@@ -40,6 +40,8 @@ while {_time > 0} do {
 		hintSilent format["Has abandonado la zona de robo estabas a %1m del vendedor",round (_metros)];
 		_time = 0;
 		_pagar_ladron = "no";
+		sleep 1;
+		/*
 		_pos = robosActivosGLOBAL find [_nombreRobo];
 		switch (_pos) do {
 			case 0: {robosActivosGLOBAL deleteAT 0};
@@ -47,22 +49,27 @@ while {_time > 0} do {
 			case 2: {robosActivosGLOBAL deleteAT 2};
 			default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
 		    publicVariable "robosActivosGLOBAL";
-	   	    sleep 0.25;
+	   	    
 	    };
+		*/
 	};
 
 	/// si muere paramos el contador
 		if !(alive _ladron) then {
 			_time = 0;
-		    _pos = robosActivosGLOBAL find [_nombreRobo];
+			sleep 1;
+		    /*
+			_pos = robosActivosGLOBAL find [_nombreRobo];
 		    switch (_pos) do {
 			    case 0: {robosActivosGLOBAL deleteAT 0};
 			    case 1: {robosActivosGLOBAL deleteAT 1};
 			    case 2: {robosActivosGLOBAL deleteAT 2};
 			    default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
                 publicVariable "robosActivosGLOBAL";
-                sleep 0.25;
+                
         };
+		
+		*/
 	};
 
 	//mientras este dentro de rango que cuente el tiempo
@@ -80,7 +87,8 @@ while {_time > 0} do {
 if(_time < 1) then{
 
 // el ladron ha terminado el robo, quitar 1 ladron del robo
-            _pos = robosActivosGLOBAL find [_nombreRobo];
+            /*
+			_pos = robosActivosGLOBAL find [_nombreRobo];
 		    switch (_pos) do {
 			    case 0: {robosActivosGLOBAL deleteAT 0};
 			    case 1: {robosActivosGLOBAL deleteAT 1};
@@ -88,6 +96,7 @@ if(_time < 1) then{
 				default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
                 publicVariable "robosActivosGLOBAL";
         };
+		*/
 
 	//si a roabdo pagar al ladron
 
