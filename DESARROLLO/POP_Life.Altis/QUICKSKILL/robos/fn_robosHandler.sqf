@@ -11,7 +11,7 @@
 // Variables privadas generales
 private ["_vendedor", "_ladron", "_action", "_nombreRobo", "_tiempoRobo", "_dinero", "_metros_cancelar_robo", "_policias", "_robosActivados", "_cops", "_Pos", "_marker", "_markerIDrandom", "_darArmas", "_darVehiculo"];
 // maximo de robos activos para el server
-_maximoRobosActivos  = 2;
+//_maximoRobosActivos  = 2;
 _vendedor	     =       [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _ladron		     =       [_this, 1, ObjNull, [ObjNull]] call BIS_fnc_param;
 _action		     =       [_this, 2] call BIS_fnc_param;	// Action name
