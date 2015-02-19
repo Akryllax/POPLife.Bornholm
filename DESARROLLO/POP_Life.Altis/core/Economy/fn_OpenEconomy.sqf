@@ -18,17 +18,22 @@ _achatliste = _display displayCtrl 39003;
 lbClear _venteliste;
 lbClear _achatliste;
 
-
-if (!isNil {tiempo_mercado}) exitWith {hint "Deja de spamear a la base de datos"; };
-
-if (tiempo_mercado) exitWith
+[[0,player,"economy"],"TON_fnc_getprices",false,false] spawn life_fnc_MP;
+/*
 {
-	[[0,player,"economy"],"TON_fnc_getprices",false,false] spawn life_fnc_MP;
-};
+	if(alive _x && _x != player) then
+	{
+		switch (side _x) do
+		{
+			case west: {_type = "Cop"};
+			case civilian: {_type = "Civ"};
+			case independent: {_type = "Med"};
+			case east: {_type = "Merc"};
+		};
+		_units lbAdd format["%1 (%2)",_x getVariable["realname",name _x],_type];
+		_units lbSetData [(lbSize _units)-1,str(_x)];
+	};
+} foreach playableUnits;
 
-[] spawn
-{
-	tiempo_mercado = true;
-	sleep (5 * 60);
-	tiempo_mercado = nil;
-};
+lbSetCurSel [3004,0];*/
+
