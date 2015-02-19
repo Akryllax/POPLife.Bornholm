@@ -41,11 +41,11 @@ if (currentWeapon _ladron == "") exitWith {
 // Noche OFF
 //if ((_robo_hora == 1)and (((date select 3) >= 20)OR ((date select 3) <= 7))) exitWith {
 		//hint "Es de noche! Este establecimiento esta cerrado!";
-	};
+	//};
 // DIA OFF
 //if ((_robo_hora == 2)and !(((date select 3) >= 20)OR ((date select 3) <= 7))) exitWith {
 		//hint "Es de dia! Este establecimiento esta cerrado!";
-	};
+	//};
 
 /*if (!((_nombreRobo) in (robosActivosGLOBAL select [0, 2])) or ((_nombreRobo) in (robosActivosGLOBAL select [0, 2]))) then {
 
