@@ -7815,7 +7815,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Tienda de Coches"",QUICK_fnc_robosHandler,[""Tienda de Coches"",400,50000 + round random 130000,50,[],4,""no"",""si"",1]];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Tienda de Coches"",QUICK_fnc_robosHandler,[""Tienda de Coches"",400,50000 + round random 130000,50,[],4,""no"",""si"",0]];";
 		};
 		class Item474
 		{
@@ -7865,7 +7865,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Joyeria"",QUICK_fnc_robosHandler,[""Joyeria"",400,50000 + round random 130000,50,[""goldbar""],3,""no"",""no"",1]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Joyeria"",QUICK_fnc_robosHandler,[""Joyeria"",400,50000 + round random 130000,50,[""goldbar""],3,""no"",""no"",0]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
 		};
 		class Item479
 		{
@@ -10904,7 +10904,7 @@ class Mission
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
 			text="hotel";
-			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Night Club"",QUICK_fnc_robosHandler,[""Night Club"",400,50000 + round random 130000,50,[""goldbar"",""goldbar"",""goldbar""],6,""no"",""no"",2]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Night Club"",QUICK_fnc_robosHandler,[""Night Club"",400,50000 + round random 130000,50,[""goldbar"",""goldbar"",""goldbar""],6,""no"",""no"",0]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
 		};
 		class Item770
 		{
@@ -10915,7 +10915,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init=" this allowDamage false; this enableSimulation false; this addAction[""Robar Metilamina"",QUICK_fnc_robosHandler,[""Metilamina"",300,50000 + round random 130000,35,[""metilamina"",""metilamina"",""metilamina"",""metilamina"",""metilamina""],3,""no"",""no"",1]]; this setObjectTexture[0,""textures\CARTELES\drogas.jpg""]; ";
+			init=" this allowDamage false; this enableSimulation false; this addAction[""Robar Metilamina"",QUICK_fnc_robosHandler,[""Metilamina"",300,50000 + round random 130000,35,[""metilamina"",""metilamina"",""metilamina"",""metilamina"",""metilamina""],3,""no"",""no"",0]]; this setObjectTexture[0,""textures\CARTELES\drogas.jpg""]; ";
 		};
 		class Item771
 		{
@@ -12287,7 +12287,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Pallet_MilBoxes_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Armeria"",QUICK_fnc_robosHandler,[""Armeria"",350,50000 + round random 130000,50,[],3,""si"",""no"",1]];  this setObjectTexture[0,""textures\CARTELES\armas.jpg""];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Armeria"",QUICK_fnc_robosHandler,[""Armeria"",350,50000 + round random 130000,50,[],3,""si"",""no"",0]];  this setObjectTexture[0,""textures\CARTELES\armas.jpg""];";
 		};
 		class Item897
 		{
@@ -17180,7 +17180,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Casino"",QUICK_fnc_robosHandler,[""Casino"",560,150000 + round random 350000,30,[],5,""no"",""no"",1]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Casino"",QUICK_fnc_robosHandler,[""Casino"",560,150000 + round random 350000,30,[],5,""no"",""no"",0]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
 		};
 	};
 	class Markers
