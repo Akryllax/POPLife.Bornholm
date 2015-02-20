@@ -96,12 +96,12 @@ switch (_shop) do
 		_return pushBack ["C_Offroad_01_F",25000 * Desc];
 		_return pushBack ["C_SUV_01_F",35000 * Desc];
 
-		if(__GETC__(life_coplevel) >= 7) then
+		if(__GETC__(life_coplevel) >= 6) then
 			{
 		_return pushBack ["B_MRAP_01_F",30000 * Desc];
 		};
 
-		if(__GETC__(life_coplevel) >= 8) then
+		if(__GETC__(life_coplevel) >= 7) then
 			{
 		_return pushBack ["B_MRAP_01_hmg_F",30000 * Desc];
 		};
