@@ -141,7 +141,7 @@ if(isServer) then  {
 		0 // seconds to delete dropped smokes/chemlights (0 means don't delete)
 ] execVM "WarBlast\repetitive_cleanup.sqf";
 
-[] execVM "WarBlast\fn_tasas.sqf";
+//[] execVM "WarBlast\fn_tasas.sqf";
 [] call life_fnc_initRacing;
 //[] execVM "WarBlast\module_cleanup\init.sqf";
 //[] execVM "WarBlast\module_monitor\init.sqf";
