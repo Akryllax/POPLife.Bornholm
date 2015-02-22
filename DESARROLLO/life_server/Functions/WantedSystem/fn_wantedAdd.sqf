@@ -15,16 +15,14 @@ _type = [_this,2,"",[""]] call BIS_fnc_param;
 _customBounty = [_this,3,-1,[0]] call BIS_fnc_param;
 if(_uid == "" OR _type == "" OR _name == "") exitWith {}; //Bad data passed.
 
-//What is the crime?
-switch(_type) do
-{
+
 	//What is the crime?
 switch(_type) do
 {
-	case "1": {_type = ["1",25000]};
-    case "2": {_type = ["2",50000]};
+	case "1": {_type = ["1",50000]};
+    case "2": {_type = ["2",75000]};
     case "3": {_type = ["3",50000]};
-    case "4": {_type = ["4",15000]};
+    case "4": {_type = ["4",25000]};
     case "5": {_type = ["5",20000]};
     case "6": {_type = ["6",60000]};
 	case "7": {_type = ["7",10000]};
@@ -55,7 +53,7 @@ switch(_type) do
 
 	default {_type = [];};
 };
-};
+
 
 if(count _type == 0) exitWith {}; //Not our information being passed...
 //Is there a custom bounty being sent? Set that as the pricing.
