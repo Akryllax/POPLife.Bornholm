@@ -85,10 +85,6 @@ robosActivosGLOBAL = [];
 publicVariable "robosActivosGLOBAL";
 life_wanted_list = [];
 client_session_list = [];
-life_sitting_chair = nil;
-publicVariable "life_sitting_chair";
-life_action_standup = nil;
-publicVariable "life_action_standup";
 
 [] spawn
 {
