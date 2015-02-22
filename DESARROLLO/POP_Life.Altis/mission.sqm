@@ -10904,7 +10904,7 @@ class Mission
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
 			text="hotel";
-			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Night Club"",QUICK_fnc_robosHandler,[""Night Club"",400,50000 + round random 130000,50,[""goldbar"",""goldbar"",""goldbar""],6,""no"",""no"",0]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Night Club"",QUICK_fnc_robosHandler,[""Night Club"",400,50000 + round random 130000,50,[""goldbar"",""goldbar"",""goldbar""],5,""no"",""no"",0]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
 		};
 		class Item770
 		{
@@ -17185,7 +17185,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=500;
+		items=502;
 		class Item0
 		{
 			position[]={20782.402,37.286591,16680.141};
@@ -17641,7 +17641,7 @@ class Mission
 		};
 		class Item59
 		{
-			position[]={13824.713,19.356466,18609.854};
+			position[]={13853.114,19.780001,18617.088};
 			name="Correctional Facility";
 			text="Alcala Meco";
 			type="loc_Bunker";
@@ -20962,6 +20962,29 @@ class Mission
 			name="custombase_mft2_air";
 			type="Empty";
 			angle=32.866501;
+		};
+		class Item500
+		{
+			position[]={13851.863,19.780001,18599.664};
+			name="Marca_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=38;
+			b=25;
+			angle=104.581;
+			drawBorder=1;
+		};
+		class Item501
+		{
+			position[]={13846.798,19.780001,18595};
+			name="zona_1";
+			text="Zona Aerea Restringida";
+			type="mil_warning";
+			colorName="ColorBlack";
+			a=0.80000001;
+			b=0.80000001;
 		};
 	};
 	class Sensors
