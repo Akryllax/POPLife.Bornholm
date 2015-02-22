@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_civLoadout.sqf
 	Author: Tobias 'Xetoxyc' Sittenauer
