@@ -594,7 +594,8 @@ class Rosen {
 	class items
 	{
 		file = "Rosen\items";
-		class silla{};	
+		class sitdown{};
+		class standup{};	
 		class fiesta{};	
 	};
 };
