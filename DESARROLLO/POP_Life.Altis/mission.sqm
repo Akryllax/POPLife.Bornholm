@@ -241,7 +241,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3655.5815,10.260803,13197.028};
+					position[]={3656.3235,10.18154,13201.675};
 					id=2;
 					side="LOGIC";
 					vehicle="Logic";
@@ -9790,8 +9790,8 @@ class Mission
 		};
 		class Item660
 		{
-			position[]={3641.5979,10.249072,13197.082};
-			azimut=276.41318;
+			position[]={3651.1226,10.425364,13227.682};
+			azimut=290.13232;
 			id=788;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
@@ -17761,11 +17761,12 @@ class Mission
 		};
 		class Item74
 		{
-			position[]={3641.3884,10.24592,13194.72};
+			position[]={3649.8147,10.397759,13224.624};
 			name="Coches";
 			text="Tienda de Coches";
 			type="c_car";
 			colorName="ColorWhite";
+			angle=13.719003;
 		};
 		class Item75
 		{
@@ -17803,17 +17804,17 @@ class Mission
 		};
 		class Item79
 		{
-			position[]={3653.2549,10.238054,13195.568};
+			position[]={3664.2588,10.731328,13230.374};
 			name="civ_car_1";
 			type="Empty";
-			angle=182.21346;
+			angle=293.23953;
 		};
 		class Item80
 		{
-			position[]={3653.2834,10.355987,13182.785};
+			position[]={3661.5847,10.610049,13225.331};
 			name="civ_car_1_1";
 			type="Empty";
-			angle=190.55833;
+			angle=292.11829;
 		};
 		class Item81
 		{
@@ -18558,18 +18559,18 @@ class Mission
 		};
 		class Item170
 		{
-			position[]={3653.2146,10.281144,13189.272};
+			position[]={3660.2358,10.582174,13228.873};
 			name="car_g_1";
 			type="Empty";
-			angle=178.76987;
+			angle=279.70364;
 		};
 		class Item171
 		{
-			position[]={3642.259,10.247309,13198.924};
+			position[]={3651.6582,10.434398,13228.501};
 			name="civ_gar_1";
 			text="Garage";
 			type="o_service";
-			angle=134.93823;
+			angle=148.6573;
 		};
 		class Item172
 		{
