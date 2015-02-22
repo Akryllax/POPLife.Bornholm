@@ -14898,7 +14898,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_RattanChair_01_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this addAction [""<t color='#0099FF'>Sentarse</t>"",""ROS_fnc_sitdown.sqf"","""",0,false,false,"""",'player distance _target < 2 && !(_target getVariable[""occupied"",false]) && isNil ""life_sitting_chair"" && isNil ""life_action_standup""'];";
+			init="this enableSimulation false; this allowDamage false; this addAction [""<t color='#0099FF'>Sentarse</t>"",""sitdown.sqf"","""",0,false,false,"""",'player distance _target < 2 && !(_target getVariable[""occupied"",false]) && isNil ""life_sitting_chair"" && isNil ""life_action_standup""'];";
 		};
 		class Item1138
 		{
@@ -14931,7 +14931,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_RattanChair_01_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this addAction [""<t color='#0099FF'>Sentarse</t>"",""ROS_fnc_sitdown.sqf"","""",0,false,false,"""",'player distance _target < 2 && !(_target getVariable[""occupied"",false]) && isNil ""life_sitting_chair"" && isNil ""life_action_standup""'];";
+			init="this enableSimulation false; this allowDamage false; this addAction [""<t color='#0099FF'>Sentarse</t>"",""sitdown.sqf"","""",0,false,false,"""",'player distance _target < 2 && !(_target getVariable[""occupied"",false]) && isNil ""life_sitting_chair"" && isNil ""life_action_standup""'];";
 		};
 		class Item1141
 		{
