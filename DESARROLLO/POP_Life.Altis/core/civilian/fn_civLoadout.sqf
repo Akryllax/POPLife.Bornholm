@@ -11,8 +11,8 @@ _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 if(__GETC__(life_presidente) == 1) then {
-	player forceaddUniform "U_NikosAgedBody";
-	player removeBackpack;
+	player forceAddUniform "U_NikosAgedBody";
+	removeBackpack player;
 }
 else {
 	_clothings = ["U_C_Poloshirt_blue","U_C_Poloshirt_burgundy","U_C_Poloshirt_stripped","U_C_Poloshirt_tricolour","U_C_Poloshirt_salmon","U_C_Poloshirt_redwhite","U_C_Commoner1_1"];
