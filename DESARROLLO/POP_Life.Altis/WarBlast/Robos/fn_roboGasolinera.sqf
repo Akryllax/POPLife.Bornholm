@@ -12,6 +12,7 @@ _accion	  =     [_this, 2] call BIS_fnc_param;	// Action name
 _polis	  =     (west countSide playableUnits);
 _random	  =     random(100);
 _caja	  =     random(1000);
+_robando  =     false;
 
 // Anti bugs etc....
 if (_robando) exitWith { hint "ya lo estas robando!"};

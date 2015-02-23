@@ -47,4 +47,4 @@ if(_container isKindOf "Man" && !alive _container) exitWith {
 		closeDialog 0;
 	};
 };
-[] call War_fnc_texturas;
+//[] call War_fnc_texturas;
