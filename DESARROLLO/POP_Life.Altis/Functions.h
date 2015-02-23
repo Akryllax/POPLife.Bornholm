@@ -590,6 +590,7 @@ class Rosen {
 	{
 		file = "Rosen\politica";
 		class protestar{};
+		class abrirMenuPresidente{};
 	};
 	class items
 	{
@@ -656,5 +657,14 @@ class Akryllax {
 	{
 		file ="core\AKR\cazarrecompensas";
 		class activarCazarrecompensas {};
+	};
+	
+	class IllegalItems 
+	{
+			file = "core\AKR\illegalItems";
+			class makeIlegal {};
+			class makeLegal {};
+			class querryMakeIlegal {};
+			class querryMakeLegal {};
 	};
 };

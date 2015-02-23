@@ -395,11 +395,7 @@ switch (_code) do
 
 	case DIK_F1: // F1
 	{
-		if(__GETC__(life_adminlevel) < 1) exitWith {
-			hint "Desactivado";
-			closeDialog 0;
-		};
-		_handled = false;
+		[] call ROS_fnc_abrirMenuPresidente;
 	};
 
 	case DIK_F2: // F2
