@@ -479,6 +479,11 @@ class WarBlast
 		file= "WarBlast\Luces";
 		class luces {};
 	}; 
+	class Robos
+	{
+		file= "WarBlast\Robos";
+		class roboGasolinera.sqf;
+	};
 };
 class Quickskill
 {
