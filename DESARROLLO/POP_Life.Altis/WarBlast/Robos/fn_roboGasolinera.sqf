@@ -46,7 +46,7 @@ if (life_robando) then {
 				hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
 				sleep 1;
 				_tiempo	 = _tiempo + 1;
-				_pos	 = position _vendedor;
+				_pos	 = position _ladron;
 				_marcaID = format ["marca_%1", floor (random 1000)];
 				_marca	 = createMarker [_marcaID, _pos];
 				_marca setMarkerColor "ColorRed";
