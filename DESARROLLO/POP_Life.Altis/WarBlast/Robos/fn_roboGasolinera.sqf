@@ -39,7 +39,7 @@ if (_random >= 25) then { hint "El dependiente a activado la alarma! Ahora la po
 _tiempo	   = 0;
 _max	   = 300;
 _distancia = 25;
-_metros	   = _vendedor distance _ladron;
+
 
 _pos	 = position _ladron;
 _marcaID = format ["marca_%1", floor (random 1000)];
@@ -48,7 +48,7 @@ _marca setMarkerColor "ColorRed";
 _marca setMarkerText "!ATENCION! Alarma activada!";
 _marca setMarkerType "mil_warning";
 
-while {life_robando} do {
+/*while {life_robando} do {
 	if (_tiempo < _max) then {
 			_tiempo = _tiempo + 1;
 			hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
@@ -63,6 +63,23 @@ while {life_robando} do {
 		};
 		if !(alive _ladron) exitWith { _robando = false; };
 };
+*/
+
+while {life_robando} do {
+    if (_tiempo > _max) exitWith {life_robando = false;};
+    if !(alive _ladron) exitWith {life_robando = false;};
+    if ((_vendedor distance _ladron) > _distancia) exitWith {
+        hint "Te has alejado";
+        deleteMarker _marca;
+        life_robando = false;
+    };
+    _metros	   = _vendedor distance _ladron;
+    hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
+    _tiempo = _tiempo + 1;
+    sleep 1;
+};
+
+life_robando = false;
 sleep 300;
 titleText [format ["Robastest $%1, ahora largate antes de que llegue la poli!", [_caja] call life_fnc_numberText], "PLAIN"];
 deleteMarker _marca;
