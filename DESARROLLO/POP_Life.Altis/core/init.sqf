@@ -137,15 +137,6 @@ if(isServer) then  {
 //[] execVM "WarBlast\module_monitor\init.sqf";
 
 };
-[] spawn {
-    while{true} do {
-        sleep 10;
-        0 setRain 0;
-        0 setOvercast 0;
-        0 setFog 0;
-        sleep 590;
-    };
-};
 switch(__GETC__(life_donator)) do
 {
 	case 0: {Desc = 1};
