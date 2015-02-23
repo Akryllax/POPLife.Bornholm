@@ -21,7 +21,8 @@ if (vehicle player != _ladron) exitWith { hint "Sal del Vehiculo!"};
 if !(alive _ladron) exitWith {};
 if (currentWeapon _ladron == "") exitWith { hint "Sal de aqui pordiosero!"};
 if (_caja == 0) exitWith { hint "La caja esta vacia vuelve mas tarde"};
-if ((count nearestObjects [player, ["civilian"], 20]) <= 1) exitWith { hint "No me das miedo tu solo..."};
+//if ((count nearestObjects [player, ["civilian"], 20]) <= 1) exitWith { hint "No me das miedo tu solo..."};
+if (_polis < _policias) exitWith { hint "Poca policia"};
 
 // Empezamos el robo!
 life_robando = true;
@@ -41,7 +42,7 @@ _distancia = 25;
 _metros	   = _vendedor distance _ladron;
 
 if (life_robando) then {
-		while (true) do {
+		while {true} do {
 				hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
 				sleep 1;
 				_tiempo	 = _tiempo + 1;
