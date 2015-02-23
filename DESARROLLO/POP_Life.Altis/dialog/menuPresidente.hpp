@@ -5,7 +5,7 @@
 *
 **/
 
-class life_presidente_menu
+class presidente
 {
         idd = 1900;
         name= "life_presidente_menu";
