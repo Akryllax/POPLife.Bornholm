@@ -214,7 +214,7 @@ switch (_code) do
 	//L Key?
 	case DIK_L:
 	{
-		[] call ROS_fnc_abrirMenuPresidente;
+		//[] call ROS_fnc_abrirMenuPresidente;
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent]) then {
 			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F","C_Hatchback_01_sport_F","C_Hatchback_01_F","B_Heli_Light_01_F","B_Heli_Transport_01_F","I_Heli_light_03_unarmed_F","I_MRAP_03_hmg_F","I_MRAP_03_F","B_MRAP_01_hmg_F","B_MRAP_01_F"]) then {
@@ -400,7 +400,7 @@ switch (_code) do
 			hint "Desactivado";
 			closeDialog 0;
 		};
-		_handled = false;		
+		_handled = false;
 	};
 
 	case DIK_F2: // F2
