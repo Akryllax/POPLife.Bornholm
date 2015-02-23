@@ -22,7 +22,7 @@ if !(alive _ladron) exitWith {};
 if (currentWeapon _ladron == "") exitWith { hint "Sal de aqui pordiosero!"};
 if (_caja == 0) exitWith { hint "La caja esta vacia vuelve mas tarde"};
 //if ((count nearestObjects [player, ["civilian"], 20]) <= 1) exitWith { hint "No me das miedo tu solo..."};
-if (_polis < _policias) exitWith { hint "Poca policia"};
+//if (_polis < _policias) exitWith { hint "Poca policia"};
 
 // Empezamos el robo!
 life_robando = true;
