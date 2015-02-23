@@ -2876,7 +2876,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1358;
+		items=1357;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -17181,16 +17181,6 @@ class Mission
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
 			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Casino"",QUICK_fnc_robosHandler,[""Casino"",560,150000 + round random 350000,30,[],5,""no"",""no"",0]]; this setObjectTexture[0,""textures\CARTELES\joyas.jpg""];";
-		};
-		class Item1357
-		{
-			position[]={3639.8557,10.139423,13112.718};
-			azimut=365.48007;
-			id=1485;
-			side="EMPTY";
-			vehicle="Land_InfoStand_V1_F";
-			skill=0.60000002;
-			init="this addAction [""RobarGasolinera"", War_fnc_roboGasolinera];";
 		};
 	};
 	class Markers
