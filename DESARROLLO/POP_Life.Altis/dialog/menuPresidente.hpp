@@ -50,7 +50,7 @@ class life_presidente_menu
 			idc = -1;
 			text = "Legalizar Marihuana";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			onButtonClick = "["marijuana"] spawn AKR_fnc_makeLegal;";
+			onButtonClick = "[marijuana] spawn AKR_fnc_makeLegal;";
 			x = 22;
 			y = 15;
 			w = 15;
