@@ -49,7 +49,7 @@ _marca setMarkerText "!ATENCION! Alarma activada!";
 _marca setMarkerType "mil_warning";
 
 while {life_robando} do {
-	if (alive _ladron) then {
+	if (_tiempo < _max) then {
 			_tiempo = _tiempo + 1;
 			hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
 			if (_tiempo >= _max) exitWith { life_robando = false; };
