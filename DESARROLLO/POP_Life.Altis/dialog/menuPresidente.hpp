@@ -49,11 +49,11 @@ class life_presidente_menu
 		{
 			idc = -1;
 			text = "Legalizar Marihuana";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			colorBackground[] = {0.4, 0, 0, 0.7};
 			onButtonClick = "[marijuana] spawn AKR_fnc_makeLegal;";
-			x = 22;
-			y = 15;
-			w = 15;
+			x = 15;
+			y = 13;
+			w = 10;
 			h = 2;
 		};
 		
@@ -61,11 +61,11 @@ class life_presidente_menu
 		{
 			idc = -1;
 			text = "Ilegalizar Marihuana";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			colorBackground[] = {0.4, 0, 0, 0.7};
 			onButtonClick = "[marijuana] spawn AKR_fnc_makeIlegal;";
-			x = 40;
-			y = 15;
-			w = 15;
+			x = 25;
+			y = 13;
+			w = 10;
 			h = 2;
 		};
 
