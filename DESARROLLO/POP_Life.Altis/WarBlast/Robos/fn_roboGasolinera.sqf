@@ -51,7 +51,7 @@ if (life_robando) then {
 				_marca	 = createMarker [_marcaID, _pos];
 				_marca setMarkerColor "ColorRed";
 				_marca setMarkerText "!ATENCION! Alarma activada!";
-				_marker setMarkerType "mil_warning";
+				_marca setMarkerType "mil_warning";
 
 				// Miramos
 				if (_tiempo >= _max) exitWith {};
