@@ -1,6 +1,6 @@
 /*
-	File: fn_roboGasolinera.sqf
-	Author: WarBlast
+fn_roboGasolinera.sqf
+WarBlast
 */
 
 private ["_vendedor", "_ladron", "_accion", "_polis", "_random", "_caja", "_robando", "_tiempo", "_max", "_robando"];
@@ -36,7 +36,7 @@ if (_random >= 25) then { hint "El dependiente a activado la alarma! Ahora la po
 // Añadimos delito!
 [ [getPlayerUID _ladron, name _ladron, "5"], "life_fnc_wantedAdd", false, false] spawn life_fnc_MP;
 
-_timeStamp = time;
+_tiempo	   = 0;
 _max	   = 300;
 _distancia = 25;
 _metros	   = _vendedor distance _ladron;
@@ -48,19 +48,21 @@ _marca setMarkerColor "ColorRed";
 _marca setMarkerText "!ATENCION! Alarma activada!";
 _marca setMarkerType "mil_warning";
 
-while {life_robando && (_timeStamp + _max < time)} do {
-		hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [(_timeStamp - time, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
-		if !(alive _ladron) exitWith { life_robando = false; };
-		if (_metros > _distancia) exitWith {
-				deleteMarker _marca;
-				hint "Te alejastes demasiado!";
-				life_robando = false;
-			};
-		sleep 0.2;
+while {life_robando} do {
+	if (alive _ladron) then {
+			_tiempo = _tiempo + 1;
+			hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
+			if (_tiempo >= _max) exitWith { life_robando = false; };
+			if !(alive _ladron) exitWith { life_robando = false; };
+			if (_metros > _distancia) exitWith {
+					deleteMarker _marca;
+					hint "Te alejastes demasiado!";
+					life_robando = false;
+				};
+			sleep 1;
+		};
 		if !(alive _ladron) exitWith { _robando = false; };
 };
-
-life_robando = false; 
 sleep 300;
 titleText [format ["Robastest $%1, ahora largate antes de que llegue la poli!", [_caja] call life_fnc_numberText], "PLAIN"];
 deleteMarker _marca;
