@@ -1,6 +1,6 @@
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	For the mean time it blocks the player from opening another persons backpack
 */
@@ -47,3 +47,4 @@ if(_container isKindOf "Man" && !alive _container) exitWith {
 		closeDialog 0;
 	};
 };
+[] call War_fnc_texturas;

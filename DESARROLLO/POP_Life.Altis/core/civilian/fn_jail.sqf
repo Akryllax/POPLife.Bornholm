@@ -46,7 +46,9 @@ life_is_arrested = true;
 
 removeAllWeapons player;
 {player removeMagazine _x} foreach (magazines player);
-player forceadduniform "U_B_CombatUniform_mcam_worn";
+removeUniform player;
+removeVest player;
+player adduniform "U_B_CombatUniform_mcam_worn";
 [] call War_fnc_texturas;
 
 [[player,_bad,_time],"life_fnc_jailSys",false,false] spawn life_fnc_MP;

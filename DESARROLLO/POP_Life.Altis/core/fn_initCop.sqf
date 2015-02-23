@@ -64,3 +64,4 @@ life_tiroAtiro = {
 	};
 };
 player addEventHandler ["Fired", "_this call life_tiroAtiro"];
+[] call War_fnc_texturas;

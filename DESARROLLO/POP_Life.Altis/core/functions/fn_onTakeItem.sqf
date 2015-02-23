@@ -1,7 +1,7 @@
 /*
 	File: fn_onTakeItem.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Blocks the unit from taking something they should not have.
 */
@@ -14,12 +14,13 @@ if(isNull _unit OR _item == "") exitWith {}; //Bad thingies?
 
 switch(playerSide) do
 {
-	case west: {}; //Blah
+	case west: {[] call War_fnc_texturas;}; //Blah
 	case civilian: {
 		//Currently stoping the civilians from taking the indep clothing from medics.
 		if(_item in ["U_I_CombatUniform"]) then {
 			[_item,false,false,false,false] call life_fnc_handleItem;
+			[] call War_fnc_texturas;
 		};
 	};
-	case independent: {};
+	case independent: {[] call War_fnc_texturas;};
 };

@@ -39,4 +39,5 @@ if (!life_is_alive) then
 	life_is_alive = true;
 };
 player addRating 9999999;
+[] call War_fnc_texturas;
 

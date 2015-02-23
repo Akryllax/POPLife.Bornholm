@@ -22,3 +22,4 @@ player assignItem "ItemWatch";
 [player, uniform player] call War_fnc_texturas;
 
 [] call life_fnc_saveGear;
+[] call War_fnc_texturas;

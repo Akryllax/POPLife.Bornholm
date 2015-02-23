@@ -2,7 +2,7 @@
 /*
 	File: fn_initMerc.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Cop Initialization file.
 */
@@ -31,7 +31,4 @@ if(life_is_arrested) then
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
-
-if(__GETC__(life_adminlevel) > 0) then {
-	adminChannel radioChannelAdd [player];
-};
+[] call War_fnc_texturas;
