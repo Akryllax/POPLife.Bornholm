@@ -25,7 +25,7 @@ if (_caja == 0) exitWith { hint "La caja esta vacia vuelve mas tarde"};
 if ((count nearestObjects [player, ["civilian"], 20]) <= 1) exitWith { hint "No me das miedo tu solo..."};
 
 // Empezamos el robo!
-_robo = true;
+_robando = true;
 _caja = _caja * (count nearestObjects [player, ["civilian"], 20]);
 _vendedor removeAction _accion;
 

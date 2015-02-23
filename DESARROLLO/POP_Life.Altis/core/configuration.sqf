@@ -479,7 +479,7 @@ life_garage_prices =
 	["B_Boat_Armed_01_minigun_F",16500],
 	["B_SDV_01_F",25000],
 	["B_MRAP_01_F",7500],
-	["I_MRAP_03_hmg_F",250000],
+	["O_MRAP_02_hmg_F",250000],
 	["C_Heli_Light_01_civil_F",90000]
 ];
 __CONST__(life_garage_prices,life_garage_prices);
@@ -509,6 +509,7 @@ life_garage_sell =
 	["C_Boat_Civil_01_police_F",4950],
 	["B_Boat_Armed_01_minigun_F",21000],
 	["B_SDV_01_F",45000],
+	["O_MRAP_02_hmg_F",250000],
 	["B_MRAP_01_F",10000]
 ];
 __CONST__(life_garage_sell,life_garage_sell);
