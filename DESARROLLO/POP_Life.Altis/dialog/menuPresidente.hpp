@@ -51,8 +51,8 @@ class life_presidente_menu
 			text = "Legalizar Marihuana";
 			colorBackground[] = {0.4, 0, 0, 0.7};
 			onButtonClick = "[marijuana] spawn AKR_fnc_makeLegal;";
-			x = 15;
-			y = 13;
+			x = 15 * safezoneW + safezoneX;;
+			y = 13 * safezoneW + safezoneX;;
 			w = 10;
 			h = 2;
 		};
@@ -63,8 +63,8 @@ class life_presidente_menu
 			text = "Ilegalizar Marihuana";
 			colorBackground[] = {0.4, 0, 0, 0.7};
 			onButtonClick = "[marijuana] spawn AKR_fnc_makeIlegal;";
-			x = 25;
-			y = 13;
+			x = 25 * safezoneW + safezoneX;;
+			y = 13 * safezoneW + safezoneX;;
 			w = 10;
 			h = 2;
 		};
