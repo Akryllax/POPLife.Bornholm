@@ -16,12 +16,11 @@ if(life_blacklisted) exitWith
 	sleep 30;
 };
 
-if(!(str(player) in [""])) then {
-	if((__GETC__(life_coplevel) == 0) && (__GETC__(life_adminlevel) == 0)) then {
+if((__GETC__(life_coplevel) == 0) && (__GETC__(life_adminlevel) == 0)) then {
 		["NotWhitelisted",false,true] call BIS_fnc_endMission;
 		sleep 35;
-	};
 };
+
 // Donadores
 switch (__GETC__(life_donator)) do
 			{
@@ -65,9 +64,3 @@ life_tiroAtiro = {
 	};
 };
 player addEventHandler ["Fired", "_this call life_tiroAtiro"];
-
-if(__GETC__(life_adminlevel) > 0) then {
-	adminChannel radioChannelAdd [player];
-};
-
-EMSChannel radioChannelAdd [player];

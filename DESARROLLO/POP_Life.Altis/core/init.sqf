@@ -8,31 +8,24 @@ private["_handle","_timeStamp"];
 0 cutText["Setting up client, please wait...","BLACK FADED"];
 0 cutFadeOut 9999999;
 _timeStamp = diag_tickTime;
-//diag_log "------------------------------------------------------------------------------------------------------";
-//diag_log "--------------------------------- Starting Altis Life Client Init ----------------------------------";
-//diag_log "------------------------------------------------------------------------------------------------------";
+
 waitUntil {!isNull player && player == player}; //Wait till the player is ready
-//[] call compile PreprocessFileLineNumbers "core\clientValidator.sqf";
-//Setup initial client core functions
-//diag_log "::Life Client:: Initialization Variables";
+
 [] call compile PreprocessFileLineNumbers "core\configuration.sqf";
-//diag_log "::Life Client:: Variables initialized";
-//diag_log "::Life Client:: Setting up Eventhandlers";
+
 [] call life_fnc_setupEVH;
-//diag_log "::Life Client:: Eventhandlers completed";
-//diag_log "::Life Client:: Setting up user actions";
+
 [] call life_fnc_setupActions;
-//diag_log "::Life Client:: User actions completed";
-//diag_log "::Life Client:: Waiting for server functions to transfer..";
+
 waitUntil {(!isNil {TON_fnc_clientGangLeader})};
-//diag_log "::Life Client:: Received server functions.";
+
 0 cutText ["Waiting for the server to be ready...","BLACK FADED"];
 0 cutFadeOut 99999999;
-//diag_log "::Life Client:: Waiting for the server to be ready..";
+
 waitUntil{!isNil "life_server_isReady"};
 waitUntil{(life_server_isReady OR !isNil "life_server_extDB_notLoaded")};
 if(!isNil "life_server_extDB_notLoaded") exitWith {
-//	diag_log "::Life Client:: Server did not load extDB";
+
 	999999 cutText ["The server-side extension extDB was not loaded into the engine, report this to the server admin.","BLACK FADED"];
 	999999 cutFadeOut 99999999;
 };
@@ -41,7 +34,7 @@ waitUntil {life_session_completed};
 0 cutText["Finishing client setup procedure","BLACK FADED"];
 0 cutFadeOut 9999999;
 
-//diag_log "::Life Client:: Group Base Execution";
+
 [] spawn life_fnc_escInterupt;
 
 [[getPlayerUID player,player getVariable["realname",name player]],"life_fnc_wantedProfUpdate",false,false] spawn life_fnc_MP;
@@ -77,7 +70,7 @@ switch (playerSide) do
 };
 
 //Para la vision y carga de los jugadores
-setViewDistance 1500;
+setViewDistance 1300;
 setTerrainGrid 50;
 
 player setVariable ["BIS_noCoreConversations", true];
@@ -89,16 +82,14 @@ enableEnvironment false;
 player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
 player setVariable["transporting",false,true];
-//diag_log "Past Settings Init";
+
 [] execFSM "core\fsm\client.fsm";
-//diag_log "Executing client.fsm";
+
 waitUntil {!(isNull (findDisplay 46))};
-//diag_log "Display 46 Found";
+
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call life_fnc_keyHandler"];
 player addRating 99999999;
-//diag_log "------------------------------------------------------------------------------------------------------";
-//diag_log format["                End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
-//diag_log "------------------------------------------------------------------------------------------------------";
+
 life_sidechat = true;
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
 0 cutText ["","BLACK IN"];
@@ -122,8 +113,7 @@ life_fnc_garageRefund = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
-// Funciones nuevas de WAR movidas
-// [] execVM "WarBlast\Vehiculosfps\vehicleManager.sqf";
+
 [] execVM "WarBlast\zlt_fastrope.sqf";
 [] execVM "WarBlast\Luces\fn_luces.sqf";
 [] execVM "WarBlast\Luces\fn_luces2.sqf";
@@ -147,6 +137,15 @@ if(isServer) then  {
 //[] execVM "WarBlast\module_monitor\init.sqf";
 
 };
+[] spawn {
+    while{true} do {
+        sleep 10;
+        0 setRain 0;
+        0 setOvercast 0;
+        0 setFog 0;
+        sleep 590;
+    };
+};
 switch(__GETC__(life_donator)) do
 {
 	case 0: {Desc = 1};
@@ -159,3 +158,4 @@ switch(__GETC__(life_donator)) do
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
 player enableFatigue (__GETC__(life_enableFatigue));
+{_x setMarkerAlphaLocal 0} forEach ["helicrash_1","helicrash_2","helicrash_3","helicrash_4","wreck_1","wreck_2","wreck_3","wreck_4"];

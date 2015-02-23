@@ -68,6 +68,7 @@ life_radio_west = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_
 life_radio_civ = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
 life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
 life_radio_east = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
+life_radio_emergencias = radioChannelCreate [[1, 0, 0, 0.8], "Emergencias", "%UNIT_NAME", []];
 
 serv_sv_use = [];
 
@@ -81,8 +82,8 @@ life_gang_list = [];
 publicVariable "life_gang_list";
 life_group_list = [];
 publicVariable "life_group_list";
-robosActivosGLOBAL = [];
-publicVariable "robosActivosGLOBAL";
+//robosActivosGLOBAL = [];
+//publicVariable "robosActivosGLOBAL";
 life_wanted_list = [];
 client_session_list = [];
 

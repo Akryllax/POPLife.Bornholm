@@ -1,7 +1,7 @@
 /*
 	File: fn_managesc.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	User management of whether or not they want to be on a sidechat for their side.
 */
@@ -19,13 +19,15 @@ switch (_side) do
 		if(_bool) then
 		{
 			life_radio_west radioChannelAdd [_unit];
+			life_radio_emergencias radioChannelAdd [_unit];
 		}
 			else
 		{
 			life_radio_west radioChannelRemove [_unit];
+			life_radio_emergencias radioChannelRemove [_unit];
 		};
 	};
-	
+
 	case civilian:
 	{
 		if(_bool) then
@@ -37,16 +39,31 @@ switch (_side) do
 			life_radio_civ radioChannelRemove [_unit];
 		};
 	};
-	
+
 	case independent:
 	{
 		if(_bool) then
 		{
 			life_radio_indep radioChannelAdd [_unit];
+			life_radio_emergencias radioChannelAdd [_unit];
 		}
 			else
 		{
 			life_radio_indep radioChannelRemove [_unit];
+			life_radio_emergencias radioChannelRemove [_unit];
 		};
 	};
+
+	case east:
+	{
+		if(_bool) then
+		{
+			life_radio_east radioChannelAdd [_unit];
+		}
+			else
+		{
+			life_radio_east radioChannelRemove [_unit];
+		};
+	};
+
 };
