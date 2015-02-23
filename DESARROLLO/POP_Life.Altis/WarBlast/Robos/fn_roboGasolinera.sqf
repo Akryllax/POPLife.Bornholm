@@ -21,12 +21,12 @@ if (vehicle player != _ladron) exitWith { hint "Sal del Vehiculo!"};
 if !(alive _ladron) exitWith {};
 if (currentWeapon _ladron == "") exitWith { hint "Sal de aqui pordiosero!"};
 if (_caja == 0) exitWith { hint "La caja esta vacia vuelve mas tarde"};
-//if ((count nearestObjects [player, ["civilian"], 20]) <= 1) exitWith { hint "No me das miedo tu solo..."};
-//if (_polis < _policias) exitWith { hint "Poca policia"};
+// if ((count nearestObjects [player, ["civilian"], 20]) <= 1) exitWith { hint "No me das miedo tu solo..."};
+// if (_polis < _policias) exitWith { hint "Poca policia"};
 
 // Empezamos el robo!
 life_robando = true;
-_caja = _caja * (count nearestObjects [player, ["civilian"], 20]);
+_caja	     = _caja * (count nearestObjects [player, ["civilian"], 20]);
 _vendedor removeAction _accion;
 
 if (_random >= 25) then { hint "El dependiente a activado la alarma! Ahora la poli viene de camino!";
@@ -41,33 +41,31 @@ _max	   = 300;
 _distancia = 25;
 _metros	   = _vendedor distance _ladron;
 
-if (life_robando) then {
-				_pos	 = position _ladron;
-				_marcaID = format ["marca_%1", floor (random 1000)];
-				_marca	 = createMarker [_marcaID, _pos];
-				_marca setMarkerColor "ColorRed";
-				_marca setMarkerText "!ATENCION! Alarma activada!";
-				_marca setMarkerType "mil_warning";
-		while {true} do {
-				_tiempo	 = _tiempo + 1;
-				hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
-				// Miramos
-				if (_tiempo >= _max) exitWith {};
-				if (_ladron distance _vendedor > _distancia) exitWith {};
-				if !(alive _ladron) exitWith {};
-				sleep 1;
-			};
-		if !(alive _ladron) exitWith { _robando = false;
-		};
-		if (_ladron distance _vendedor > _distancia) exitWith { deleteMarker _marca;
-									hint "Te alejastes demasiado!";
-									_robando = false;
-			};
+_pos	 = position _ladron;
+_marcaID = format ["marca_%1", floor (random 1000)];
+_marca	 = createMarker [_marcaID, _pos];
+_marca setMarkerColor "ColorRed";
+_marca setMarkerText "!ATENCION! Alarma activada!";
+_marca setMarkerType "mil_warning";
 
-		titleText [format ["Robastest $%1, ahora largate antes de que llegue la poli!", [_caja] call life_fnc_numberText], "PLAIN"];
-		deleteMarker _marca;
-		life_cash = life_cash + _caja;
-		if !(alive _ladron) exitWith {};
-	};
+while {life_robando} do {
+	if (alive _ladron) then {
+			_tiempo = _tiempo + 1;
+			hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
+			// Miramos
+			if (_tiempo >= _max) exitWith {};
+			if !(alive _ladron) exitWith { _robando = false; };
+			if (_metros > _distancia) exitWith {
+					deleteMarker _marca;
+					hint "Te alejastes demasiado!";
+					life_robando = false;
+				};
+			sleep 1;
+		};
+		if !(alive _ladron) exitWith { _robando = false; };
+};
 sleep 300;
-_accion = _vendedor addAction ["RobarGasolinera", War_fnc_roboGasolinera];
+titleText [format ["Robastest $%1, ahora largate antes de que llegue la poli!", [_caja] call life_fnc_numberText], "PLAIN"];
+deleteMarker _marca;
+life_cash = life_cash + _caja;
+_accion	  = _vendedor addAction ["RobarGasolinera", War_fnc_roboGasolinera];
