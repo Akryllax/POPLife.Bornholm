@@ -482,7 +482,7 @@ class WarBlast
 	class Robos
 	{
 		file= "WarBlast\Robos";
-		class roboGasolinera.sqf;
+		class roboGasolinera;
 	};
 };
 class Quickskill
