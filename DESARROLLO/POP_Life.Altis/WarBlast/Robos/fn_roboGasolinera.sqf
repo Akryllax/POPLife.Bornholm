@@ -52,9 +52,8 @@ while {life_robando} do {
 	if (alive _ladron) then {
 			_tiempo = _tiempo + 1;
 			hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
-			// Miramos
-			if (_tiempo >= _max) exitWith {};
-			if !(alive _ladron) exitWith { _robando = false; };
+			if (_tiempo >= _max) exitWith { life_robando = false; };
+			if !(alive _ladron) exitWith { life_robando = false; };
 			if (_metros > _distancia) exitWith {
 					deleteMarker _marca;
 					hint "Te alejastes demasiado!";
