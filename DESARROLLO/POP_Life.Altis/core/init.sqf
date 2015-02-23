@@ -149,7 +149,7 @@ if(isServer) then  {
 switch(__GETC__(life_donator)) do
 {
 	case 0: {Desc = 1};
-	case 1: {Desc = 0.90};
+	case 1: {Desc = 0.95};
 	case 2: {Desc = 0.85};
 	case 3: {Desc = 0.70};
 	case 4: {Desc = 0.50};
