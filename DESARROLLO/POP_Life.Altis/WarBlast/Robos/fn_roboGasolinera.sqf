@@ -49,7 +49,7 @@ _marca setMarkerText "!ATENCION! Alarma activada!";
 _marca setMarkerType "mil_warning";
 
 while {life_robando && (_timeStamp + _max < time)} do {
-		hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [(_timeStamp - time, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
+		hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [_timeStamp - time, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
 		if !(alive _ladron) exitWith { life_robando = false; };
 		if (_metros > _distancia) exitWith {
 				deleteMarker _marca;
@@ -60,7 +60,7 @@ while {life_robando && (_timeStamp + _max < time)} do {
 		if !(alive _ladron) exitWith { _robando = false; };
 };
 
-life_robando = false; 
+life_robando = false;
 sleep 300;
 titleText [format ["Robastest $%1, ahora largate antes de que llegue la poli!", [_caja] call life_fnc_numberText], "PLAIN"];
 deleteMarker _marca;
