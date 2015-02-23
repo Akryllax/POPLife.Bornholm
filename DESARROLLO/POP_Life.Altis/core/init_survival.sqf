@@ -1,6 +1,6 @@
 [] spawn  {
 	private["_fnc_food","_fnc_water"];
-	_fnc_food = 
+	_fnc_food =
 	{
 		if(life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";}
 		else
@@ -15,8 +15,8 @@
 			};
 		};
 	};
-	
-	_fnc_water = 
+
+	_fnc_water =
 	{
 		if(life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";}
 		else
@@ -24,7 +24,7 @@
 			life_thirst = life_thirst - 10;
 			[] call life_fnc_hudUpdate;
 			if(life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";};
-			switch(life_thirst) do 
+			switch(life_thirst) do
 			{
 				case 30: {hint localize "STR_NOTF_DrinkMSG_1";};
 				case 20: {hint localize "STR_NOTF_DrinkMSG_2"; player setFatigue 1;};
@@ -32,7 +32,7 @@
 			};
 		};
 	};
-	
+
 	while{true} do
 	{
 		sleep 600;
@@ -52,8 +52,9 @@
 		_cfg = getNumber(configFile >> "CfgVehicles" >> (backpack player) >> "maximumload");
 		_load = round(_cfg / 8);
 		life_maxWeight = life_maxWeightT + _load;
+		if ((playerSide == west || playerSide == independent)) then {(unitBackpack player) setObjectTextureGlobal [0,""];};
 		waitUntil {backpack player != _bp};
-		if(backpack player == "") then 
+		if(backpack player == "") then
 		{
 			life_maxWeight = life_maxWeightT;
 		};
@@ -64,7 +65,7 @@
 {
 	while {true} do
 	{
-		sleep 1.5;
+		sleep 2;
 		if(life_carryWeight > life_maxWeight && !isForcedWalk player) then {
 			player forceWalk true;
 			player setFatigue 1;
@@ -77,13 +78,13 @@
 	};
 };
 
-[] spawn  
+[] spawn
 {
 	private["_walkDis","_myLastPos","_MaxWalk","_runHunger","_runDehydrate"];
 	_walkDis = 0;
 	_myLastPos = (getPos player select 0) + (getPos player select 1);
 	_MaxWalk = 1200;
-	while{true} do 
+	while{true} do
 	{
 		sleep 0.5;
 		if(!alive player) then {_walkDis = 0;}
@@ -115,9 +116,9 @@
 		sleep 1;
 		while {((player distance (getMarkerPos "Zona_Radioactiva") < 900) && (player getVariable["Revive",TRUE]))} do
 		{
-		
+
 			player say3D "Geiger";
-			
+
 			if(uniform player == "U_C_Scientist") then
 			{
 				hint "¡ATENCIÓN! Acabas de entrar en una zona radioactiva! No te quites tu traje antiradiación!";
