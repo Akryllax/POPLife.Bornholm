@@ -17,10 +17,10 @@ switch(playerSide) do
 	case west: {[] call War_fnc_texturas;}; //Blah
 	case civilian: {
 		//Currently stoping the civilians from taking the indep clothing from medics.
-		if(_item in ["U_I_CombatUniform"]) then {
-			[_item,false,false,false,false] call life_fnc_handleItem;
+		//if(_item in ["U_I_CombatUniform"]) then {
+		//	[_item,false,false,false,false] call life_fnc_handleItem;
 			[] call War_fnc_texturas;
-		};
+		//};
 	};
 	case independent: {[] call War_fnc_texturas;};
 };
