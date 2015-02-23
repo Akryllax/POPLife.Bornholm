@@ -3,7 +3,7 @@ fn_roboGasolinera.sqf
 WarBlast
 */
 
-private ["_vendedor", "_ladron", "_accion", "_polis", "_random", "_caja", "_robando", "_tiempo", "_max"];
+private ["_vendedor", "_ladron", "_accion", "_polis", "_random", "_caja", "_robando", "_tiempo", "_max", "_robando"];
 
 // Cositas
 _vendedor =     [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
