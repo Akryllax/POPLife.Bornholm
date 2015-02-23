@@ -50,7 +50,7 @@ class life_presidente_menu
 			idc = -1;
 			text = "Legalizar Marihuana";
 			onButtonClick = "[marijuana] spawn AKR_fnc_makeLegal;";
-			x = 0.25;
+			x = 0.35;
 			y = 0.45 ;
 			w = (6.25 / 40);
 			h = (1 / 25);
@@ -60,7 +60,7 @@ class life_presidente_menu
 		{
 			idc = -1;
 			text = "Ilegalizar Marihuana";
-			onButtonClick = "[marijuana] spawn AKR_fnc_makeIlegal;";
+			onButtonClick = "[marijuana,2000] spawn AKR_fnc_makeIlegal;";
 			x = 0.55;
 			y = 0.45 ;
 			w = (6.25 / 40);
