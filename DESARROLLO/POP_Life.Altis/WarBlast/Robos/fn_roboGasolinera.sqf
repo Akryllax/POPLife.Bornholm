@@ -14,7 +14,7 @@ _random	  =     random(100);
 _caja	  =     random(1000);
 
 // Anti bugs etc....
-if (_robando) exitWith { hint "ya lo estas robando!"};
+if (life_robando) exitWith { hint "ya lo estas robando!"};
 if (side _ladron != civilian) exitWith { hint "No puedes robar!"};
 if (_ladron distance _vendedor > 5) exitWith { hint "No te alejes tanto!"};
 if (vehicle player != _ladron) exitWith { hint "Sal del Vehiculo!"};
@@ -40,7 +40,7 @@ _max	   = 300;
 _distancia = 25;
 _metros	   = _vendedor distance _ladron;
 
-if (_robando) then {
+if (life_robando) then {
 		while (true) do {
 				hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
 				sleep 1;
