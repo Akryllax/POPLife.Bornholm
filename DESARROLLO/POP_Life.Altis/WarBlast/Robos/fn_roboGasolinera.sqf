@@ -1,11 +1,11 @@
 /*
 fn_roboGasolinera.sqf
 WarBlast
-        Example: this addAction["Robo Gasolinera kavala",War_fnc_roboGasolinera,[10000,1,3,300,40,true,25,25,"kavala"];
+        Example: this addAction["Robo Gasolinera kavala",War_fnc_roboGasolinera,[10000,1,3,300,40,true,25,25,["kavala"]]];
 
         Example:
 
-                this addAction["Robar X", War_fnc_roboGasolinera, [DINERO,GENTE CERCA,POLICIAS MIN,TIEMPO en SEGUNDOS,METROS MAX,MUTLIPLICADOR x Jugadores,Metros multiplicador, porcentaje Inverso de la alarma ejem 10% = 90,"Nombre final de Gasolinera"];
+                this addAction["Robar X", War_fnc_roboGasolinera, [DINERO,GENTE CERCA,POLICIAS MIN,TIEMPO en SEGUNDOS,METROS MAX,MUTLIPLICADOR x Jugadores,Metros multiplicador, porcentaje Inverso de la alarma ejem 10% = 90,["Nombre final de Gasolinera"]]];
 */
 
 private ["_vendedor", "_ladron", "_accion", "_polis", "_random", "_caja", "_robando", "_tiempo", "_max", "_robando", "_actual", "_policias", "_lista", "_gente" , "_fail"];
@@ -28,20 +28,20 @@ _alarma    =     _lista select 7;
 _nombre	   =     _lista select 8;
 
 // Anti bugs etc....
-if (life_robando) exitWith { hint "ya lo estas robando!"};
+if (life_robandoGas) exitWith { hint "ya lo estas robando!"};
 if (side _ladron != civilian) exitWith { hint "No puedes robar!"};
 if (_ladron distance _vendedor > 5) exitWith { hint "No te alejes tanto!"};
 if (vehicle player != _ladron) exitWith { hint "Sal del Vehiculo!"};
 if !(alive _ladron) exitWith {};
 if (currentWeapon _ladron == "") exitWith { hint "Sal de aqui pordiosero!"};
 if (_caja == 0) exitWith { hint "La caja esta vacia vuelve mas tarde"};
-if ((count nearestObjects [player, ["civilian"], 20]) <= _gente) exitWith { hint "No me das miedo tu solo..."};
+if ((count nearestObjects [player, ["civilian"], _numero]) <= _gente) exitWith { hint "No me das miedo tu solo..."};
 if (_polis < _policias) exitWith { hint "Poca policia"};
 if (life_istazed) exitwith { hint "Ahora no puedes hacer esto" };
 _fail = false;
 
 // Empezamos el robo!
-life_robando = true;
+life_robandoGas = true;
 
 // Multiplicador FELIZ!!!!!!
 if (_multi) then {
@@ -72,25 +72,25 @@ _marca setMarkerText "!ATENCION! Alarma activada!";
 _marca setMarkerType "mil_warning";
 
 //Mientras roban
-while {life_robando} do {
+while {life_robandoGas} do {
 
 	//Si se pasa de tiempo Exito!
 	if (_tiempo > _max) exitWith {
-		life_robando = false;
+		life_robandoGas = false;
 		deleteMarker _marca;
 	    _fail = true;
 	};
 
 	//Si muere adios
 	if !(alive _ladron) exitWith {
-		life_robando = false;
+		life_robandoGas = false;
 		deleteMarker _marca;
 	    _fail = true;
 	};
 
 	//Si le tasean adioss
 	if (life_istazed) exitwith {
-		life_robando = false;
+		life_robandoGas = false;
 	    hint "Te pillaron!";
 	    deleteMarker _marca;
 	    _fail = true;
@@ -100,7 +100,7 @@ while {life_robando} do {
 	if ((_vendedor distance _ladron) > _distancia) exitWith {
 		hint "Te has alejado demasiado";
 		deleteMarker _marca;
-		life_robando = false;
+		life_robandoGas = false;
 		_fail = true;
 	};
 
@@ -119,7 +119,7 @@ while {life_robando} do {
 if (_fail) exitWith {};
 
 //Ya no esta robando
-life_robando = false;
+life_robandoGas = false;
 deleteMarker _marca;
 sleep 2;
 
