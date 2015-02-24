@@ -56,10 +56,10 @@ switch(playerSide) do {
 	case civilian: {
 
 	    switch(__GETC__(life_donator)) do {
-	    case 1: {life_paycheck = life_paycheck + 750;};
+	    case 1: {life_paycheck = life_paycheck + 500;};
 	    case 2: {life_paycheck = life_paycheck + 1500;};
-	    case 3: {life_paycheck = life_paycheck + 2000;};
-        case 4: {life_paycheck = life_paycheck + 2500;};
+	    case 3: {life_paycheck = life_paycheck + 3000;};
+        case 4: {life_paycheck = life_paycheck + 5000;};
         case 5: {life_paycheck = life_paycheck + 3000;};
         };
 		life_is_arrested = _this select 7;
