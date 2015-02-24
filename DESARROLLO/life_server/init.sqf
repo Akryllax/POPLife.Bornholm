@@ -117,15 +117,6 @@ publicVariable "life_illegal_items";
 	};
 };
 
-[] spawn {
-    while{true} do {
-        sleep 10;
-        0 setRain 0;
-        0 setOvercast 0;
-        0 setFog 0;
-        sleep 590;
-    };
-};
 
 //Strip NPC's of weapons
 {
@@ -163,3 +154,12 @@ call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
 
 life_server_isReady = true;
 publicVariable "life_server_isReady";
+
+	[
+		3*60, // seconds to delete dead bodies (0 means don't delete)
+		2*45, // seconds to delete dead vehicles (0 means don't delete)
+		0, // seconds to delete immobile vehicles (0 means don't delete)
+		1*45, // seconds to delete dropped weapons (0 means don't delete)
+		10*60, // seconds to deleted planted explosives (0 means don't delete)
+		0 // seconds to delete dropped smokes/chemlights (0 means don't delete)
+] execVM "WarBlast\repetitive_cleanup.sqf";
