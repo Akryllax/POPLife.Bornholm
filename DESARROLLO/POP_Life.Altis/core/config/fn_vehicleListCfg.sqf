@@ -126,10 +126,10 @@ switch (_shop) do
 
 	case "cop_air":
 	{
-			_return pushBack ["B_Heli_Light_01_F",100000 * Desc];
+			_return pushBack ["B_Heli_Light_01_F",130000 * Desc];
 		if(__GETC__(life_coplevel) > 4) then
 		{
-			_return pushBack ["B_Heli_Transport_01_F",150000 * Desc];
+			_return pushBack ["B_Heli_Transport_01_F",170000 * Desc];
 			_return pushBack ["B_Heli_Transport_03_unarmed_F",250000 * Desc];
 			_return pushBack ["O_Heli_Transport_04_F",350000 * Desc];
 			_return pushBack ["O_Heli_Transport_04_bench_F",350000 * Desc];
@@ -145,10 +145,10 @@ switch (_shop) do
 
 	case "cop_airhq":
 	{
-			_return pushBack ["B_Heli_Light_01_F",100000 * Desc];
+			_return pushBack ["B_Heli_Light_01_F",130000 * Desc];
 		if(__GETC__(life_coplevel) > 4) then
 		{
-			_return pushBack ["B_Heli_Transport_01_F",150000 * Desc];
+			_return pushBack ["B_Heli_Transport_01_F",170000 * Desc];
 			_return pushBack ["B_Heli_Transport_03_unarmed_F",250000 * Desc];
 			_return pushBack ["O_Heli_Transport_04_F",350000 * Desc];
 			_return pushBack ["O_Heli_Transport_04_bench_F",350000 * Desc];
