@@ -1,7 +1,8 @@
 /*
-fn_roboGasolinera.sqf
-WarBlast
-        Example: this addAction["Robo Gasolinera kavala",War_fnc_roboGasolinera,[10000,1,3,300,40,true,25,25,["kavala"]]];
+        Script: fn_roboGasolinera.sqf
+        Author: WarBlast
+        Example:
+        this addAction["Robo Gasolinera kavala",War_fnc_roboGasolinera,[10000,1,3,300,40,true,25,25,["kavala"]]];
 
         Example:
 
