@@ -7,7 +7,7 @@ _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 if(side player == west) exitWith { hint "Eres policia" };
 
 if(isNull _unit) exitWith {}; //if not the thief get bent
-	
+
 //puede pagar?¿
  if(life_cash - _precio < 0) exitWith { hint "No tienes suficiente dinero";[] spawn { sleep 5;hint "";} };
 
@@ -26,7 +26,7 @@ removebackpack _unit;
 
 
 _unit addHeadgear "H_Beret_02";
- _unit addGoggles "G_Balaclava_Lowprofile"; 
+_unit addGoggles "G_Balaclava_Lowprofile";
 
 _unit  addVest "V_TacVest_blk";
 _unit  forceAddUniform "U_B_CombatUniform_mcam_worn";
@@ -34,21 +34,21 @@ _unit setObjectTextureGlobal [0, "textures\TRAJES\otan.jpg"];
 _unit addWeapon 'Binocular';
 
 _unit additem 'ItemWatch';
-_unit assignItem "ItemWatch"; 
-_unit addItem "ItemRadio"; 
-_unit assignItem "ItemRadio"; 
+_unit assignItem "ItemWatch";
+_unit addItem "ItemRadio";
+_unit assignItem "ItemRadio";
 _unit addItem "ItemGPS";
 _unit assignItem "ItemGPS";
 _unit addItem "ItemMap";
 _unit assignItem "ItemMap";
-_unit addItem "ItemCompass"; 
-_unit assignItem "ItemCompass"; 
+_unit addItem "ItemCompass";
+_unit assignItem "ItemCompass";
 
-_unit  addItem "NVGoggles_OPFOR"; 
+_unit  addItem "NVGoggles_OPFOR";
 _unit  assignItem "NVGoggles_OPFOR";
 reload _unit;
 
-_unit  addBackPack "B_Carryall_mcamo"; 
+_unit  addBackPack "B_Carryall_mcamo";
 _mybackpack = unitBackpack _unit ;
 
 _mybackpack setObjectTextureGlobal [0, "#(rgb,8,8,3)color(0,0,0,1)"];
@@ -58,9 +58,9 @@ _mybackpack setObjectTextureGlobal [0, "#(rgb,8,8,3)color(0,0,0,1)"];
 
 _unit spawn {
     while { alive player && uniform player isEqualTo "U_B_CombatUniform_mcam_worn"} do {
-    
+
         player setObjectTextureGlobal [0, "textures\TRAJES\otan.jpg"];
-    
+
         sleep 60;
     };
 };
