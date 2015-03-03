@@ -2870,7 +2870,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1409;
+		items=1410;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -17650,6 +17650,16 @@ class Mission
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
 			init="this enableSimulation false;  this allowDamage false;        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];          this addAction[""Equipar Clase Katiba silenciada 100000$"",QUICK_fnc_comprarClaseTerroristaSilenciado];          this addAction[""Equipar Clase Rifle mk18  150000$"",QUICK_fnc_comprarClaseTerroristaRifle2];        this addAction[""Equipar Clase Rifle mxc  80000$"",QUICK_fnc_comprarClaseTerroristaRifle];";
+		};
+		class Item1409
+		{
+			position[]={18135.047,19.859085,15120.732};
+			azimut=547.198;
+			id=1537;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this allowDamage false; this enableSimulation false; this addAction[""Equipar Clase MDF "",QUICK_fnc_comprarClaseMDF]; this setObjectTexture[0,""textures\CARTELES\equipos.jpg""]";
 		};
 	};
 	class Markers
