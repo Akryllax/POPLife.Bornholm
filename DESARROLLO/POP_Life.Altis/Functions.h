@@ -513,6 +513,7 @@ class Quickskill
         class comprarClasePoliciaMK18 {};
         class comprarClasePoliciaMXSW {};
         class comprarClaseOTAN {};
+         class comprarClaseMDF {};
         class comprarClaseADMIN {};
         class comprarClaseMERCENARIO {};
 	};
