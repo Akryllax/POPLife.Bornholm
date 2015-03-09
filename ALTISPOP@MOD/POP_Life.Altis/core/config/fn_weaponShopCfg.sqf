@@ -439,7 +439,20 @@ switch(_shop) do
 						["hgun_PDW2000_F",nil,20000 * Desc],
 						["30Rnd_9x21_Mag",nil,200 * Desc],
 						["arifle_SDAR_F",nil,25000 * Desc],
-						["30Rnd_556x45_Stanag",nil,100 * Desc]
+						["30Rnd_556x45_Stanag",nil,100 * Desc],
+				        ["RH_g18",nil,30000],
+                        ["RH_33Rnd_9x19_g18",nil,500],
+                        ["RH_vz61",nil,30000],
+                        ["RH_20Rnd_32cal_vz61",nil,500],
+                        ["RH_tec9",nil,30000],												
+                        ["RH_32Rnd_9x19_tec",nil,500],
+                        ["RH_muzi",nil,30000],
+                        ["RH_30Rnd_9x19_UZI",nil,500],
+                        ["hlc_smg_mp5k",nil,30000],
+                        ["hlc_30Rnd_9x19_B_MP5",nil,500],
+	                    ["RH_deagle",nil,75000],
+	                 	["RH_deagleg",nil,80000],
+						["7Rnd_408_Mag",nil,1000]
 					]
 				];
 			};
