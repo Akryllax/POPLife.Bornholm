@@ -25,7 +25,8 @@ switch (_shop) do
 	{
 		_return = [
 			["C_Offroad_01_F",10000 * Desc],
-			["C_SUV_01_F",15000 * Desc]
+			["C_SUV_01_F",15000 * Desc],
+			["ambulancia_f",1000 * Desc]
 		];
 	};
 
@@ -44,7 +45,49 @@ switch (_shop) do
 			["C_Offroad_01_F",12500 * Desc],
 			["C_SUV_01_F",35000 * Desc],
 			["C_Van_01_transport_F",40000 * Desc],
-			["C_Hatchback_01_sport_F",60000 * Desc]
+			["C_Hatchback_01_sport_F",60000 * Desc],
+			["DAR_ChargerCiv",150000 * Desc],
+			["DAR_TahoeCiv",99999 * Desc],
+			["DAR_TahoeCivBlack",99999 * Desc],
+			["DAR_TahoeCivBlue",99999 * Desc],
+			["DAR_TahoeCivRed",99999 * Desc],
+			["DAR_TahoeCivSilver",99999 * Desc],
+			["DAR_FusionCivBlack",70000 * Desc],
+			["DAR_FusionCivBlue",70000 * Desc],
+			["DAR_FusionCivRed",70000 * Desc],
+			["DAR_FusionCiv",70000 * Desc],
+			["DAR_TaurusCivBlack",85000 * Desc],
+			["DAR_TaurusCivBlue",85000 * Desc],
+			["DAR_TaurusCiv",85000 * Desc],
+			["DAR_ImpalaCivA",60000 * Desc],
+			["DAR_ImpalaCivC",60000 * Desc],
+			["DAR_ImpalaCivB",60000 * Desc],
+			["DAR_ImpalaCivD",60000 * Desc],
+			["DAR_ImpalaCiv",60000 * Desc],
+			["DAR_ImpalaCivG",90000 * Desc],
+			["DAR_ImpalaCivF",90000 * Desc],
+			["DAR_ImpalaCivE",90000 * Desc],
+			["exxpensive_mini_cooper_base",25000 * Desc],
+			["exxpensive_volvo_242_base",70000 * Desc],
+			["exxpensive_chevrolet_caprice_base",70000 * Desc],
+			["exxpensive_2cv_base",70000 * Desc],
+			["DAR_M3CivBlack",70000 * Desc],
+			["DAR_M3CivGrey",70000 * Desc],
+			["DAR_M3CivWhite",70000],
+			["DAR_ChallengerCivBlack",70000 * Desc],
+			["DAR_ChallengerOrange",70000 * Desc],
+			["DAR_ChallengerRed",70000 * Desc],
+			["DAR_ChallengerWhite",70000 * Desc],
+			["exxpensive_cadillac_sedan_base",1070000 * Desc],
+			["exxpensive_jaguar_base",1170000 * Desc],
+			["exxpensive_ferrari_458_base",2070000 * Desc],
+			["exxpensive_ford_raptor_base",700000 * Desc],
+			["exxpensive_aventador_base",2217000 * Desc],
+			["exxpensive_BMWM3E46_base",370000 * Desc],
+			["exxpensive_mercedes_sls_base",1070000 * Desc],
+			["exxpensive_audi_R8_base",2070000 * Desc],
+			["exxpensive_bugatti_base",4170000 * Desc],
+			["exxpensive_m5_e34_base",2170000 * Desc]
 		];
 	};
 
@@ -105,6 +148,30 @@ switch (_shop) do
 			{
 		_return pushBack ["B_MRAP_01_hmg_F",30000 * Desc];
 		};
+		if(__GETC__(life_coplevel) > 2) then
+		{
+			_return pushBack ["TDR_Explorer_GC",30000 * Desc];
+		};
+		if(__GETC__(life_coplevel) > 3) then
+		{
+			_return pushBack ["TDR_Tahoe_K",50000 * Desc];
+		};
+		if(__GETC__(life_coplevel) > 3) then
+		{
+			_return pushBack ["TDR_BlindadoGEO",50000 * Desc];
+		};
+		if(__GETC__(life_coplevel) > 3) then
+		{
+			_return pushBack ["TDR_Explorer_K",50000 * Desc];
+		};
+		if(__GETC__(life_coplevel) > 5) then
+		{
+			_return pushBack ["TDR_Taurus_CNP_ST",30000* Desc];
+		};
+		if(__GETC__(life_coplevel) > 6) then
+		{
+			_return pushBack ["Orel_Dingo",60000 * Desc];
+		};
 	};
 
 	case "civ_air":
@@ -140,6 +207,10 @@ switch (_shop) do
 		{
 			_return pushBack ["I_Heli_light_03_unarmed_F",350000 * Desc];
 			_return pushBack ["B_Heli_Transport_03_F", 350000 * Desc];
+		};
+		if(__GETC__(life_coplevel) > 3) then
+		{
+			_return pushBack ["ec135_policia_f", 50000 * Desc];
 		};
 	};
 

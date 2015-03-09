@@ -22,6 +22,326 @@ switch (_vehicle) do
 		];
 	};
 
+	case "DAR_ImpalaCiv":
+	{
+ 		_ret = 
+ 		[
+ 			["#(ai,64,64,1)Fresnel(0.3,3)","civ"],
+			["#(argb,8,8,3)color(0.1,0.1,0.1,0.7)","civ"],
+			["#(argb,8,8,3)color(0.5,0.5,0.5,0.1)","civ"],
+			["#(argb,8,8,3)color(0.3,0.3,0.3,0.8)","civ"],
+			["#(argb,8,8,3)color(1,1,1,1)","civ"],
+			["#(argb,8,8,3)color(1.5,1.6,0.9,0.2)","civ"],
+			["#(argb,8,8,3)color(1,0,0,0.1)","civ"],
+			["#(argb,8,8,3)color(0.01,0.6,1,0.1)","civ"],
+			["#(argb,8,8,3)color(0,0,0.5,0.1)","civ"],
+			["#(argb,8,8,3)color(0.6,0,1,0.01)","civ"],
+			["#(argb,8,8,3)color(0.5,1,0.5,0.05)","civ"],
+			["#(argb,8,8,3)color(1,0,0,1)","civ"],
+			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
+			["#(argb,8,8,3)color(1,0.3,0.01,0.6)","civ"]
+ 		];
+ 	};
+	
+	case "DAR_FusionCiv":
+	{
+ 		_ret = 
+ 		[
+ 			["#(ai,64,64,1)Fresnel(0.3,3)","civ"],
+			["#(argb,8,8,3)color(0.1,0.1,0.1,0.7)","civ"],
+			["#(argb,8,8,3)color(0.5,0.5,0.5,0.1)","civ"],
+			["#(argb,8,8,3)color(0.3,0.3,0.3,0.8)","civ"],
+			["#(argb,8,8,3)color(1,1,1,1)","civ"],
+			["#(argb,8,8,3)color(1.5,1.6,0.9,0.2)","civ"],
+			["#(argb,8,8,3)color(1,0,0,0.1)","civ"],
+			["#(argb,8,8,3)color(0.01,0.6,1,0.1)","civ"],
+			["#(argb,8,8,3)color(0,0,0.5,0.1)","civ"],
+			["#(argb,8,8,3)color(0.6,0,1,0.01)","civ"],
+			["#(argb,8,8,3)color(0.5,1,0.5,0.05)","civ"],
+			["#(argb,8,8,3)color(1,0,0,1)","civ"],
+			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
+			["#(argb,8,8,3)color(1,0.3,0.01,0.6)","civ"]
+ 		];
+ 	};
+	
+	case "DAR_TaurusCiv":
+	{
+ 		_ret = 
+ 		[
+ 			["#(ai,64,64,1)Fresnel(0.3,3)","civ"],
+			["#(argb,8,8,3)color(0.1,0.1,0.1,0.7)","civ"],
+			["#(argb,8,8,3)color(0.5,0.5,0.5,0.1)","civ"],
+			["#(argb,8,8,3)color(0.3,0.3,0.3,0.8)","civ"],
+			["#(argb,8,8,3)color(1,1,1,1)","civ"],
+			["#(argb,8,8,3)color(1.5,1.6,0.9,0.2)","civ"],
+			["#(argb,8,8,3)color(1,0,0,0.1)","civ"],
+			["#(argb,8,8,3)color(0.01,0.6,1,0.1)","civ"],
+			["#(argb,8,8,3)color(0,0,0.5,0.1)","civ"],
+			["#(argb,8,8,3)color(0.6,0,1,0.01)","civ"],
+			["#(argb,8,8,3)color(0.5,1,0.5,0.05)","civ"],
+			["#(argb,8,8,3)color(1,0,0,1)","civ"],
+			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
+			["#(argb,8,8,3)color(1,0.3,0.01,0.6)","civ"]
+ 		];
+ 	};
+	
+	case "DAR_M3CivGrey":
+	{
+ 		_ret = 
+ 		[
+ 			["#(ai,64,64,1)Fresnel(0.3,3)","civ"],
+			["#(argb,8,8,3)color(0.1,0.1,0.1,0.7)","civ"],
+			["#(argb,8,8,3)color(0.5,0.5,0.5,0.1)","civ"],
+			["#(argb,8,8,3)color(0.3,0.3,0.3,0.8)","civ"],
+			["#(argb,8,8,3)color(1,1,1,1)","civ"],
+			["#(argb,8,8,3)color(1.5,1.6,0.9,0.2)","civ"],
+			["#(argb,8,8,3)color(1,0,0,0.1)","civ"],
+			["#(argb,8,8,3)color(0.01,0.6,1,0.1)","civ"],
+			["#(argb,8,8,3)color(0,0,0.5,0.1)","civ"],
+			["#(argb,8,8,3)color(0.6,0,1,0.01)","civ"],
+			["#(argb,8,8,3)color(0.5,1,0.5,0.05)","civ"],
+			["#(argb,8,8,3)color(1,0,0,1)","civ"],
+			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
+			["#(argb,8,8,3)color(1,0.3,0.01,0.6)","civ"]
+ 		];
+ 	};
+	
+	case "DAR_MF1Civ":
+	{
+ 		_ret = 
+ 		[
+ 			["DAR_MF1\Data\Body_coRed.paa","civ"],
+			["DAR_MF1\Data\Body_coBlack.paa","civ"],
+			["DAR_MF1\Data\Body_coSilver","civ"],
+			["DAR_MF1\Data\Body_coOrange","civ"],
+			["DAR_MF1\Data\Body_coBurgundy","civ"],
+			["SAL_A4\Data\Body_co.paa","civ"]
+ 		];
+ 	};
+	
+	case "exxpensive_bmwm3e46_base":
+	 {
+	 _ret = 
+		 [
+			 ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			 ["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		 ];
+	 };
+	
+	case "exxpensive_jaguar_base":	
+	{
+	_ret = 
+		[
+			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		];
+	};
+	
+	case "exxpensive_mercedes_sls_base":
+	{
+	_ret = 
+		[
+			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		];
+	};
+	case "exxpensive_ferrari_458_base":
+	{
+	_ret = 
+		[
+			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		];
+	};
+	 case "exxpensive_aventador_base":
+	 {
+	 _ret = 
+		 [
+			 ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			 ["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		];
+	 };
+	case "exxpensive_mini_cooper_base":
+	 {
+	 _ret = 
+		 [
+			 ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			 ["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		 ];
+	 };
+	case "exxpensive_ford_raptor_base":
+	{
+	_ret = 
+		[
+			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		];
+	};
+	 case "exxpensive_volvo_242_base":
+	 {
+	 _ret = 
+		 [
+			 ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			 ["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		 ];
+	};
+	case "exxpensive_cadillac_sedan":
+	{
+	_ret = 
+		[
+			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		];
+	};
+	 case "exxpensive_2cv_base":
+	 {
+	 _ret = 
+		 [
+			 ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			 ["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		 ];
+	 };
+	case "exxpensive_cadillac_sedan_base":
+	{
+	_ret = 
+		[
+			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		];
+	};
+	case "exxpensive_chevrolet_caprice_base":
+	 {
+	 _ret = 
+		 [
+			 ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			 ["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		 ];
+	 };	
+	 	case "exxpensive_bugatti_base":	 {
+	 _ret = 
+		 [
+			 ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			 ["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		 ];
+	 };	
+	case "exxpensive_audi_R8_base":	 {
+	 _ret = 
+		 [
+			 ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			 ["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		 ];
+	 };	
+	case "exxpensive_m5_e34_base": 	 {
+	 _ret = 
+		 [
+			 ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			 ["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		 ];
+	 };	
+	case "exxpensive_volvo_242_base": {
+	 _ret = 
+		 [
+			 ["#(argb,8,8,3)color(0.05,0.05,0.05,1)","civ"],
+			 ["#(argb,8,8,3)color(1,0,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,0.501961,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,1,0,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(0,0.301961,0.6,1.0,CO)","civ"],
+			 ["#(argb,8,8,3)color(1,1,1,1.0,CO)","civ"]
+		 ];
+	 };
+	
 	case "C_Hatchback_01_sport_F":
 	{
 		_path = "\a3\soft_f_gamma\Hatchback_01\data\";
