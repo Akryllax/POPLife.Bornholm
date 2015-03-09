@@ -32,7 +32,8 @@ switch (_shop) do
 
 	case "med_air_hs": {
 		_return = [
-			["B_Heli_Light_01_F",50000 * Desc]
+			["B_Heli_Light_01_F",50000 * Desc],
+			["dezkit_b206_ems",50000 * Desc]
 		];
 	};
 
@@ -115,6 +116,10 @@ switch (_shop) do
 			["B_Quadbike_01_F",2500 * Desc],
 			["B_G_Offroad_01_F",25000 * Desc],
 			["O_MRAP_02_F",2900000 * Desc],
+			["BAF_Jackal2_GMG_W",2900000 * Desc],
+			["BAF_Jackal2_GMG_D",2900000 * Desc],
+			["BAF_Offroad_W",290000 * Desc],
+			["BAF_Offroad_D",290000 * Desc],
 			["B_Heli_Light_01_F",450000 * Desc]
 		];
 
@@ -172,6 +177,10 @@ switch (_shop) do
 		_return =
 		[
 			["B_Heli_Light_01_F",400000 * Desc],
+			["dezkit_b206x_unarmed",400000 * Desc],
+			["dezkit_b206_news",400000 * Desc],
+			["dezkit_b206_ls",400000 * Desc],
+			["dezkit_b206x_unarmed",400000 * Desc],
 			["C_Heli_Light_01_civil_F", 550000 * Desc],
 			["O_Heli_Light_02_unarmed_F",1250000 * Desc],
 			["I_Heli_Transport_02_F",2450000 * Desc],
@@ -258,10 +267,13 @@ switch (_shop) do
 		_return pushBack	["I_G_Offroad_01_F",9000 * Desc];
 		_return pushBack	["I_G_Offroad_01_armed_F",450000 * Desc];
 		_return pushBack	["C_Hatchback_01_sport_F",9000 * Desc];
+		_return pushBack	["ffaa_et_vamtac_ume",39000 * Desc];
+		_return pushBack	["ffaa_et_anibal",39000 * Desc];
         };
         if(__GETC__(life_merclevel) == 2) then {
 		_return pushBack	["I_MRAP_03_F",1200000 * Desc];
 		_return pushBack	["I_MRAP_03_hmg_F",2500000 * Desc];
+		_return pushBack	["ffaa_et_rg31_samson",2500000 * Desc];
 		_return pushBack	["I_Quadbike_01_F",1000 * Desc];
 		_return pushBack	["I_G_Offroad_01_F",9000 * Desc];
 		_return pushBack	["I_G_Offroad_01_armed_F",450000 * Desc];
