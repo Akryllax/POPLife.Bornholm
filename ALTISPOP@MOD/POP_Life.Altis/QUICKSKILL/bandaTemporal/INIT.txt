@@ -1,0 +1,5 @@
+[player] execVM "scripts\groupsMenu\initGroups.sqf";
+player addEventHandler ["Respawn", {
+        [player] execVM "scripts\groupsMenu\initGroups.sqf";
+    }
+];
