@@ -127,7 +127,7 @@ life_fnc_garageRefund = compileFinal
 //[] execVM "WarBlast\module_cleanup\init.sqf";
 //[] execVM "WarBlast\module_monitor\init.sqf";
 
-};
+
 switch(__GETC__(life_donator)) do
 {
 	case 0: {Desc = 1};
