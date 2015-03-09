@@ -448,10 +448,10 @@ switch(_shop) do
                         ["RH_32Rnd_9x19_tec",nil,500],
                         ["RH_muzi",nil,30000],
                         ["RH_30Rnd_9x19_UZI",nil,500],
-                        ["hlc_smg_mp5k",nil,30000],
-                        ["hlc_30Rnd_9x19_B_MP5",nil,500],
+                     
 	                    ["RH_deagle",nil,75000],
 	                 	["RH_deagleg",nil,80000],
+						["RH_7rnd_50_AE", 750],
 						["7Rnd_408_Mag",nil,1000]
 					]
 				];
