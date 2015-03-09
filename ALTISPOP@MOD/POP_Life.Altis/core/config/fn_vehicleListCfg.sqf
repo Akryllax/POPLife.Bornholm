@@ -94,7 +94,7 @@ switch (_shop) do
 		    };
 		    */
 
-			if(__GETC__(life_donator) > 1) then
+			if(__GETC__(life_donator) >= 1) then
 			{
 		    _return pushBack ["B_Quadbike_01_F",2500 * Desc];
 			_return pushBack ["C_Hatchback_01_F",9500 * Desc];
