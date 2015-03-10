@@ -47,7 +47,6 @@ switch (_shop) do
 			["C_SUV_01_F",35000 * Desc],
 			["C_Van_01_transport_F",40000 * Desc],
 			["C_Hatchback_01_sport_F",60000 * Desc],
-			["DAR_ChargerCiv",150000 * Desc],
 			["DAR_TahoeCiv",99999 * Desc],
 			["DAR_TahoeCivBlack",99999 * Desc],
 			["DAR_TahoeCivBlue",99999 * Desc],
@@ -87,7 +86,6 @@ switch (_shop) do
 			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
-			_return pushBack ["DAR_ChargerCiv",150000 * Desc];
 			_return pushBack ["DAR_TahoeCiv",99999 * Desc];
 			_return pushBack ["DAR_TahoeCivBlack",99999 * Desc];
 			_return pushBack ["DAR_TahoeCivBlue",99999 * Desc];
@@ -126,7 +124,6 @@ switch (_shop) do
 			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
-			_return pushBack ["DAR_ChargerCiv",150000 * Desc];
 			_return pushBack ["DAR_TahoeCiv",99999 * Desc];
 			_return pushBack ["DAR_TahoeCivBlack",99999 * Desc];
 			_return pushBack ["DAR_TahoeCivBlue",99999 * Desc];
@@ -166,7 +163,6 @@ switch (_shop) do
 			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
-			_return pushBack ["DAR_ChargerCiv",150000 * Desc];
 			_return pushBack ["DAR_TahoeCiv",99999 * Desc];
 			_return pushBack ["DAR_TahoeCivBlack",99999 * Desc];
 			_return pushBack ["DAR_TahoeCivBlue",99999 * Desc];
@@ -433,6 +429,8 @@ switch (_shop) do
 		_return pushBack	["I_MRAP_03_F",1200000 * Desc];
 		_return pushBack	["I_MRAP_03_hmg_F",2500000 * Desc];
 		_return pushBack	["ffaa_et_rg31_samson",2500000 * Desc];
+		_return pushBack	["ffaa_et_vamtac_ume",39000 * Desc];
+		_return pushBack	["ffaa_et_anibal",39000 * Desc];
 		_return pushBack	["I_Quadbike_01_F",1000 * Desc];
 		_return pushBack	["I_G_Offroad_01_F",9000 * Desc];
 		_return pushBack	["I_G_Offroad_01_armed_F",450000 * Desc];
