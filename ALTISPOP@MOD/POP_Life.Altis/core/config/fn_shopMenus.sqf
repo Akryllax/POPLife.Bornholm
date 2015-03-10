@@ -1,7 +1,7 @@
 /*
 	File: fn_shopMenus.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master config for a thing that will be gone eventually..
 */
@@ -25,13 +25,13 @@ switch (_shop) do
 		ctrlShow[2513,false];
 		ctrlShow[2514,false];
 	};
-	
+
 	case "cop":
 	{
 		ctrlSetText[2505,"Tienda general de policia"];
 		ctrlShow[2503,false];
 	};
-	
+
 	case "gun":
 	{
 		ctrlSetText[2505,"Armeria"];
@@ -39,7 +39,7 @@ switch (_shop) do
 		ctrlShow[2513,false];
 		ctrlShow[2514,false];
 	};
-	
+
 	case "gang":
 	{
 		ctrlSetText[2505,"Tienda de banda"];
@@ -47,7 +47,7 @@ switch (_shop) do
 		ctrlShow[2513,false];
 		ctrlShow[2514,false];
 	};
-	
+
 	case "dive":
 	{
 		ctrlSetText[2505,"Tienda de buceo"];
@@ -56,30 +56,30 @@ switch (_shop) do
 		ctrlShow[2511,false];
 		ctrlShow[2513,false];
 	};
-	
-	case "donator":
+
+	case "don":
 	{
 		ctrlSetText[2505,"Tienda de donadores"];
 	};
-	
+
 	case "sergeant":
 	{
 		ctrlSetText[2505,"Tienda locales"];
 		ctrlShow[2503,false];
 	};
-	
+
 	case "gen":
 	{
 		ctrlSetText[2505,"Tienda de Altis"];
 		ctrlShow[2503,false];
 	};
-	
+
 	case "officer":
 	{
 		ctrlSetText[2505,"Tienda nacionales"];
 		ctrlShow[2503,false];
 	};
-	
+
 	case "admin":
 	{
 		ctrlSetText[2505,"Tienda admin"];
