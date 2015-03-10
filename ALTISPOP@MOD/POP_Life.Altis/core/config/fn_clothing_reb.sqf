@@ -98,8 +98,8 @@ switch (_filter) do
 			["G_Sport_BlackWhite",nil,20 * Desc],
 			["G_Squares",nil,10 * Desc],
 			["G_Lowprofile",nil,30 * Desc],
-			["G_Combat",nil,55 * Desc]
-			["ffaa_brilat_item_nbq",nil,15000 * Desc],
+			["G_Combat",nil,55 * Desc],
+			["ffaa_brilat_item_nbq",nil,15000 * Desc]
 		];
 	};
 
