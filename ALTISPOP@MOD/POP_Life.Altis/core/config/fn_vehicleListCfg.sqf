@@ -68,20 +68,19 @@ switch (_shop) do
 			["DAR_ImpalaCivG",90000 * Desc],
 			["DAR_ImpalaCivF",90000 * Desc],
 			["DAR_ImpalaCivE",90000 * Desc],
-			["exxpensive_mini_cooper_base",25000 * Desc],
-			["exxpensive_volvo_242_base",70000 * Desc],
-			["exxpensive_chevrolet_caprice_base",70000 * Desc],
-			["exxpensive_2cv_base",70000 * Desc],
-			["exxpensive_cadillac_sedan_base",1070000 * Desc],
-			["exxpensive_jaguar_base",1170000 * Desc],
-			["exxpensive_ferrari_458_base",2070000 * Desc],
-			["exxpensive_ford_raptor_base",700000 * Desc],
-			["exxpensive_aventador_base",2217000 * Desc],
-			["exxpensive_BMWM3E46_base",370000 * Desc],
-			["exxpensive_mercedes_sls_base",1070000 * Desc],
-			["exxpensive_audi_R8_base",2070000 * Desc],
-			["exxpensive_bugatti_base",4170000 * Desc],
-			["exxpensive_m5_e34_base",2170000 * Desc]
+			["cl3_civic_vti_black",67000 * Desc],
+			["cl3_polo_gti_black",70000 * Desc],
+			["cl3_insignia_black",70000 * Desc],
+			["cl3_range_rover_black",70000 * Desc],
+			["Orel_Monster",1070000 * Desc],
+			["cl3_e63_amg_black",1170000 * Desc],
+			["cl3_dodge_charger_s_black",2070000 * Desc],
+			["cl3_z4_2008_black",700000 * Desc],
+			["cl3_carrera_gt_black",2217000 * Desc],
+			["cl3_dbs_volante_black"",3700000 * Desc],
+			["cl3_r8_spyder_black"",2070000 * Desc],
+			["cl3_murcielago_black",2070000 * Desc],
+			["cl3_reventon_black",4170000 * Desc]
 		];
 
 			if(__GETC__(life_donator) == 1) then
