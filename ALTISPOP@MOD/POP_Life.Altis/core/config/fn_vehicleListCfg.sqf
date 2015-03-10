@@ -68,13 +68,13 @@ switch (_shop) do
 			["DAR_ImpalaCivG",90000 * Desc],
 			["DAR_ImpalaCivF",90000 * Desc],
 			["DAR_ImpalaCivE",90000 * Desc],
-			["cl3_civic_vti_black",67000 * Desc],
-			["cl3_polo_gti_black",70000 * Desc],
+			["cl3_civic_vti_black", 67000 * Desc],
+			["cl3_polo_gti_black", 70000 * Desc],
 			["cl3_insignia_black",70000 * Desc],
-			["cl3_range_rover_black",70000 * Desc],
+			["cl3_range_rover_black", 70000 * Desc],
 			["Orel_Monster",1070000 * Desc],
-			["cl3_e63_amg_black",1170000 * Desc],
-			["cl3_dodge_charger_s_black",2070000 * Desc],
+			["cl3_e63_amg_black", 1170000 * Desc],
+			["cl3_dodge_charger_s_black", 2070000 * Desc],
 			["cl3_z4_2008_black",700000 * Desc]
 
 		];
@@ -156,7 +156,7 @@ switch (_shop) do
 			_return pushBack ["cl3_dodge_charger_s_black",2070000 * Desc];
 			_return pushBack ["cl3_z4_2008_black",700000 * Desc];
 			_return pushBack ["cl3_carrera_gt_black",2217000 * Desc];
-			_return pushBack ["cl3_dbs_volante_black"",3700000 * Desc];
+			_return pushBack ["cl3_dbs_volante_black", 3700000 * Desc];
 		};
 			if(__GETC__(life_donator) == 3) then
 			{
