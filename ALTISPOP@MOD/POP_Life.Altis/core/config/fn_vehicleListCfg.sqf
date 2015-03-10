@@ -116,7 +116,7 @@ switch (_shop) do
 			_return pushBack ["cl3_e63_amg_black",1170000 * Desc];
 			_return pushBack ["cl3_dodge_charger_s_black",2070000 * Desc];
 			_return pushBack ["cl3_z4_2008_black",700000 * Desc];
-			_return pushBack ["cl3_carrera_gt_black",2217000 * Desc]
+			_return pushBack ["cl3_carrera_gt_black",2217000 * Desc];
 		};
 			if(__GETC__(life_donator) == 2) then
 			{
@@ -156,7 +156,7 @@ switch (_shop) do
 			_return pushBack ["cl3_dodge_charger_s_black",2070000 * Desc];
 			_return pushBack ["cl3_z4_2008_black",700000 * Desc];
 			_return pushBack ["cl3_carrera_gt_black",2217000 * Desc];
-			_return pushBack ["cl3_dbs_volante_black"",3700000 * Desc]
+			_return pushBack ["cl3_dbs_volante_black"",3700000 * Desc];
 		};
 			if(__GETC__(life_donator) == 3) then
 			{
@@ -197,7 +197,7 @@ switch (_shop) do
 			_return pushBack ["cl3_z4_2008_black",700000 * Desc];
 			_return pushBack ["cl3_carrera_gt_black",2217000 * Desc];
 			_return pushBack ["cl3_dbs_volante_black",3700000 * Desc];
-			_return pushBack ["cl3_r8_spyder_black",2070000 * Desc]
+			_return pushBack ["cl3_r8_spyder_black",2070000 * Desc];
 		};
 			if(__GETC__(life_donator) == 4) then
 			{
@@ -240,7 +240,7 @@ switch (_shop) do
 			_return pushBack ["cl3_dbs_volante_black",3700000 * Desc];
 			_return pushBack ["cl3_r8_spyder_black",2070000 * Desc];
 			_return pushBack ["cl3_murcielago_black",2070000 * Desc];
-			_return pushBack ["cl3_reventon_black",4170000 * Desc]
+			_return pushBack ["cl3_reventon_black",4170000 * Desc];
 		};
 	};
 
