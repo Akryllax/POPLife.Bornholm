@@ -19,11 +19,9 @@ switch (_filter) do
 	{
 		[
 			
-			["U_C_Squelette_Noir",nill, 7500 * Desc],
-            ["U_C_Superman",nil, 15000 * Desc],
-            ["U_C_Travello1",nil, 15000 * Desc],
-            ["U_C_Polo_Barcelona",nil, 15000 * Desc],
-            ["U_C_Ferrari",nil, 15000 * Desc],
+            
+            
+            ["ffaa_ar_uniforme_marinero_item",nil, 15000 * Desc],
             ["Brigada_Esp_delincuente_shirt",nil, 15000 * Desc],
             ["ffaa_brilat_CombatUniform_item_d",nil, 15000 * Desc],
 			["U_IG_Guerilla1_1",nil,5000 * Desc],
@@ -46,6 +44,7 @@ switch (_filter) do
 	case 1:
 	{
 		[
+			["ffaa_brilat_boina",nil, 1500 * Desc],
 			["G_Balaclava_blk",nil, 1500 * Desc],
             ["G_Bandanna_beast",nil, 1500 * Desc],
             ["G_Balaclava_oli",nil, 1500 * Desc],
@@ -107,6 +106,8 @@ switch (_filter) do
 	case 3:
 	{
 		[
+			
+			["ffaa_brilat_chaleco_01_bs",nil, 15000 * Desc],
 			["ffaa_brilat_chaleco_04_ds",nil, 15000 * Desc],
 			["V_Press_F",nil,4000 * Desc],
 			["V_BandollierB_blk",nil,4500 * Desc],
