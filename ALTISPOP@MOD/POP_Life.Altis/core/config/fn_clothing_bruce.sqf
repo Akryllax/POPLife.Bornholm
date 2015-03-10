@@ -5,10 +5,10 @@
 	Description:
 	Master configuration file for Bruce's Outback Outfits.
 */
-private["_filter"];
+private["_filter","_ret"];
 _filter = [_this,0,0,[0]] call BIS_fnc_param;
 //Classname, Custom Display name (use nil for Cfg->DisplayName, price
-
+_ret = [];
 //Shop Title Name
 ctrlSetText[3103,"Bruce's Outback Outfits"];
 
@@ -39,66 +39,63 @@ switch (_filter) do
 	//Hats
 	case 1:
 	{
-		[
-			["H_Bandanna_camo",nil,120],
-			["H_Bandanna_surfer",nil,130],
-			["H_Bandanna_gry",nil,150],
-			["H_Bandanna_cbr",nil,165],
-			["H_Bandanna_surfer",nil,135],
-			["H_Bandanna_khk",nil,145],
-			["H_Bandanna_sgg",nil,160],
-			["H_StrawHat",nil,225],
-			["H_BandMask_blk",nil,300],
-			["H_Booniehat_tan",nil,425],
-			["H_Hat_blue",nil,310],
-			["H_Hat_brown",nil,276],
-			["H_Hat_checker",nil,340],
-			["H_Hat_grey",nil,280],
-			["H_Hat_tan",nil,265],
-			["H_Cap_blu",nil,150],
-			["H_Cap_grn",nil,150],
-			["H_Cap_grn_BI",nil,150],
-			["H_Cap_oli",nil,150],
-			["H_Cap_red",nil,150],
-			["H_Cap_tan",nil,150]
-		];
+			_ret pushBack ["H_Bandanna_camo",nil,120];
+			_ret pushBack ["H_Bandanna_surfer",nil,130];
+			_ret pushBack ["H_Bandanna_gry",nil,150];
+			_ret pushBack ["H_Bandanna_cbr",nil,165];
+			_ret pushBack ["H_Bandanna_surfer",nil,135];
+			_ret pushBack ["H_Bandanna_khk",nil,145];
+			_ret pushBack ["H_Bandanna_sgg",nil,160];
+			_ret pushBack ["H_StrawHat",nil,225];
+			_ret pushBack ["H_BandMask_blk",nil,300];
+			_ret pushBack ["H_Booniehat_tan",nil,425];
+			_ret pushBack ["H_Hat_blue",nil,310];
+			_ret pushBack ["H_Hat_brown",nil,276];
+			_ret pushBack ["H_Hat_checker",nil,340];
+			_ret pushBack ["H_Hat_grey",nil,280];
+			_ret pushBack ["H_Hat_tan",nil,265];
+			_ret pushBack ["H_Cap_blu",nil,150];
+			_ret pushBack ["H_Cap_grn",nil,150];
+			_ret pushBack ["H_Cap_grn_BI",nil,150];
+			_ret pushBack ["H_Cap_oli",nil,150];
+			_ret pushBack ["H_Cap_red",nil,150];
+			_ret pushBack ["H_Cap_tan",nil,150];
+
 	if (__GETC__(life_donator) > 0) then {
-		[
-			["H_Bandanna_camo",nil,120],
-			["H_Bandanna_surfer",nil,130],
-			["H_Bandanna_gry",nil,150],
-			["H_Bandanna_cbr",nil,165],
-			["H_Bandanna_surfer",nil,135],
-			["H_Bandanna_khk",nil,145],
-			["H_Bandanna_sgg",nil,160],
-			["H_StrawHat",nil,225],
-			["H_BandMask_blk",nil,300],
-			["H_Booniehat_tan",nil,425],
-			["H_Hat_blue",nil,310],
-			["H_Hat_brown",nil,276],
-			["H_Hat_checker",nil,340],
-			["H_Hat_grey",nil,280],
-			["H_Hat_tan",nil,265],
-			["H_Cap_blu",nil,150],
-			["H_Cap_grn",nil,150],
-			["H_Cap_grn_BI",nil,150],
-			["H_Cap_oli",nil,150],
-			["H_Cap_red",nil,150],
-		    ["kio_vfv_mask",nil, 15000],
-            ["Kio_Capital_Hat",nil, 15000],
-            ["casco_moto",nil, 15000],
-            ["H_Orel_Mask_Dead",nil, 15000],
-            ["H_Orel_FireFighter",nil, 15000],
-            ["H_Orel_FireFighter_Gaz",nil, 15000],
-            ["Kio_No1_Hat",nil, 15000],
-            ["Kio_Pirate_Hat",nil, 15000],
-            ["Kio_Santa_Hat",nil, 15000],
-            ["H_Soccer_Orange",nil, 15000],
-            ["Kio_Spinning_Hat",nil, 15000],
-            ["H_Spliff",nil, 15000],
-            ["H_Orel_Swat",nil, 15000],
-            ["Kio_Hat",nil, 15000]
-            ];
+			_ret pushBack ["H_Bandanna_camo",nil,120];
+			_ret pushBack ["H_Bandanna_surfer",nil,130];
+			_ret pushBack ["H_Bandanna_gry",nil,150];
+			_ret pushBack ["H_Bandanna_cbr",nil,165];
+			_ret pushBack ["H_Bandanna_surfer",nil,135];
+			_ret pushBack ["H_Bandanna_khk",nil,145];
+			_ret pushBack ["H_Bandanna_sgg",nil,160];
+			_ret pushBack ["H_StrawHat",nil,225];
+			_ret pushBack ["H_BandMask_blk",nil,300];
+			_ret pushBack ["H_Booniehat_tan",nil,425];
+			_ret pushBack ["H_Hat_blue",nil,310];
+			_ret pushBack ["H_Hat_brown",nil,276];
+			_ret pushBack ["H_Hat_checker",nil,340];
+			_ret pushBack ["H_Hat_grey",nil,280];
+			_ret pushBack ["H_Hat_tan",nil,265];
+			_ret pushBack ["H_Cap_blu",nil,150];
+			_ret pushBack ["H_Cap_grn",nil,150];
+			_ret pushBack ["H_Cap_grn_BI",nil,150];
+			_ret pushBack ["H_Cap_oli",nil,150];
+			_ret pushBack ["H_Cap_red",nil,150];
+		    _ret pushBack ["kio_vfv_mask",nil, 15000];
+            _ret pushBack ["Kio_Capital_Hat",nil, 15000];
+            _ret pushBack ["casco_moto",nil, 15000];
+            _ret pushBack ["H_Orel_Mask_Dead",nil, 15000];
+            _ret pushBack ["H_Orel_FireFighter",nil, 15000];
+            _ret pushBack ["H_Orel_FireFighter_Gaz",nil, 15000];
+            _ret pushBack ["Kio_No1_Hat",nil, 15000];
+            _ret pushBack ["Kio_Pirate_Hat",nil, 15000];
+            _ret pushBack ["Kio_Santa_Hat",nil, 15000];
+            _ret pushBack ["H_Soccer_Orange",nil, 15000];
+            _ret pushBack ["Kio_Spinning_Hat",nil, 15000];
+            _ret pushBack ["H_Spliff",nil, 15000];
+            _ret pushBack ["H_Orel_Swat",nil, 15000];
+            _ret pushBack ["Kio_Hat",nil, 15000];
 	    };
     };
 
