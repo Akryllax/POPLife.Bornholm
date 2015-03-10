@@ -63,6 +63,7 @@ switch (_filter) do
 			["H_Cap_tan",nil,150]
 		];
 	if (__GETC__(life_donator) > 0) then {
+		[
 			["H_Bandanna_camo",nil,120],
 			["H_Bandanna_surfer",nil,130],
 			["H_Bandanna_gry",nil,150],
@@ -97,6 +98,7 @@ switch (_filter) do
             ["H_Spliff",nil, 15000],
             ["H_Orel_Swat",nil, 15000],
             ["Kio_Hat",nil, 15000]
+            ];
 	    };
     };
 
