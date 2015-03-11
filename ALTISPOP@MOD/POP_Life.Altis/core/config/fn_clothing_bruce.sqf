@@ -40,7 +40,8 @@ switch (_filter) do
 	case 1:
 	{
 	    [
-			["casco_moto",nil, 1500],
+			
+	        ["casco_moto",nil, 1500],
 			["H_Orel_FireFighter",nil, 1500],
 			["Kio_Pirate_Hat",nil, 1500],
 			["H_Spliff",nil, 1500],
@@ -64,7 +65,8 @@ switch (_filter) do
 			["H_Cap_grn_BI",nil,150],
 			["H_Cap_oli",nil,150],
 			["H_Cap_red",nil,150],
-			["H_Cap_tan",nil,150]
+			["H_Cap_marshal",nil,180],
+		   	["H_Cap_tan",nil,150]
 	    ];
     };
 
