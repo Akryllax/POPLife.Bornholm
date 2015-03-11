@@ -125,9 +125,9 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_U_B_ODTAN", nil, 8000],
 				_ret pushBack ["TRYK_U_B_ODTAN_TshirtTRYK_U_B_BLK_OD", nil, 8000],
 				_ret pushBack ["TRYK_U_B_C01_Tsirt", nil, 8000],
-				_ret pushBack ["TRYK_V_PlateCarrier_JSDF", nil, 8000]
+				_ret pushBack ["TRYK_V_PlateCarrier_JSDF", nil, 8000],
 				
-		;
+		};
 	};
 
 	// Hats
@@ -147,7 +147,7 @@ switch (_filter) do {
 				_ret pushBack ["Kio_Spinning_Hat", nil, 15000],
 				_ret pushBack ["H_Spliff", nil, 15000],
 				_ret pushBack ["H_Orel_Swat", nil, 15000],
-				_ret pushBack ["Kio_Hat", nil, 15000]
+				_ret pushBack ["Kio_Hat", nil, 15000],
 			};
 	};
 
@@ -188,7 +188,7 @@ switch (_filter) do {
 			_ret pushBack ["TRYK_V_PlateCarrier_coyo", nil, 15000],
 			_ret pushBack ["RYK_V_PlateCarrier_wood", nil, 15000],
 			_ret pushBack ["TRYK_V_PlateCarrier_ACU", nil, 15000],
-			_ret pushBack ["TRYK_V_TacVest_coyo", nil, 15000]
+			_ret pushBack ["TRYK_V_TacVest_coyo", nil, 15000],
 			
 			};
 	};
@@ -223,7 +223,7 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_B_Belt_GR", nil, 8000],
 				_ret pushBack ["TRYK_B_Belt_AOR1", nil, 8000],
 				_ret pushBack ["TRYK_B_Belt_AOR2", nil, 8000],
-				_ret pushBack ["TRYK_B_FieldPack_Wood", nil, 8000]
+				_ret pushBack ["TRYK_B_FieldPack_Wood", nil, 8000],
 
 			};
 	};
