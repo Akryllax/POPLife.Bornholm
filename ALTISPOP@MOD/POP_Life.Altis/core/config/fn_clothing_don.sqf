@@ -189,7 +189,7 @@ switch (_filter) do {
 			_ret pushBack ["TRYK_V_PlateCarrier_ACU", nil, 15000],
 			_ret pushBack ["TRYK_V_TacVest_coyo", nil, 15000]
 			
-			;
+			};
 	};
 
 	// Backpacks
@@ -223,9 +223,8 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_B_Belt_AOR1", nil, 8000],
 				_ret pushBack ["TRYK_B_Belt_AOR2", nil, 8000],
 				_ret pushBack ["TRYK_B_FieldPack_Wood", nil, 8000]
-			
-		;
-	};
+
+			};
 	};
 
 _ret;
