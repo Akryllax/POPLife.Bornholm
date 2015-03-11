@@ -240,7 +240,7 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_V_PlateCarrier_JSDF",8000];
 				
 		};
-	};
+
 		if (__GETC__(life_donator) > 3) then
 			{
 			     _ret pushBack ["B_OD_OD_soldier_F",8000 ];
@@ -352,7 +352,7 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_V_PlateCarrier_JSDF",8000];
 				
 		};
-	};
+	
 		if (__GETC__(life_donator) > 4) then
 			{
 			    _ret pushBack ["B_OD_OD_soldier_F",8000 ];
@@ -485,7 +485,7 @@ switch (_filter) do {
 				_ret pushBack ["H_Orel_Swat", 15000];
 				_ret pushBack ["Kio_Hat", 15000];
 			};
-	};
+	
 			if (__GETC__(life_donator) > 2) then
 			{
 				_ret pushBack ["kio_vfv_mask", 15000];
@@ -503,7 +503,7 @@ switch (_filter) do {
 				_ret pushBack ["H_Orel_Swat", 15000];
 				_ret pushBack ["Kio_Hat", 15000];
 				};
-	};
+
 			if (__GETC__(life_donator) > 3) then
 			{
 				_ret pushBack ["kio_vfv_mask", 15000];
@@ -521,7 +521,7 @@ switch (_filter) do {
 				_ret pushBack ["H_Orel_Swat", 15000];
 				_ret pushBack ["Kio_Hat", 15000];
 		};
-	};
+	
 			if (__GETC__(life_donator) > 4) then
 			{
 				_ret pushBack ["kio_vfv_mask", 15000];
@@ -539,7 +539,7 @@ switch (_filter) do {
 				_ret pushBack ["H_Orel_Swat", 15000];
 				_ret pushBack ["Kio_Hat", 15000];
 			};
-	};
+	
 
 	// Glasses
 	case 2: {
@@ -592,7 +592,7 @@ switch (_filter) do {
 			_ret pushBack ["TRYK_V_PlateCarrier_ACU", 15000];
 			_ret pushBack ["TRYK_V_TacVest_coyo", 15000];
 				};
-	};
+	
 			if (__GETC__(life_donator) > 2) then
 			{
 			_ret pushBack ["TRYK_V_ArmorVest_AOR1", 15000];
@@ -622,7 +622,7 @@ switch (_filter) do {
 			_ret pushBack ["TRYK_V_PlateCarrier_ACU", 15000];
 			_ret pushBack ["TRYK_V_TacVest_coyo", 15000];
 				};
-	};
+
 			if (__GETC__(life_donator) > 3) then
 			{
 			_ret pushBack ["TRYK_V_ArmorVest_AOR1", 15000];
@@ -652,7 +652,7 @@ switch (_filter) do {
 			_ret pushBack ["TRYK_V_PlateCarrier_ACU", 15000];
 			_ret pushBack ["TRYK_V_TacVest_coyo", 15000];
 				};
-	};
+
 			if (__GETC__(life_donator) > 4) then
 			{
 			_ret pushBack ["TRYK_V_ArmorVest_AOR1", 15000];
@@ -683,7 +683,7 @@ switch (_filter) do {
 			_ret pushBack ["TRYK_V_TacVest_coyo", 15000];
 			
 			};
-	};
+
 
 	// Backpacks
 	case 4: {
@@ -717,7 +717,7 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_B_Belt_AOR2", 8000];
 				_ret pushBack ["TRYK_B_FieldPack_Wood", 8000];
 		};
-	};
+	
 			if (__GETC__(life_donator) > 2) then
 			{
                 _ret pushBack ["TRYK_B_AssaultPack_Type2camo", 8000];
@@ -748,7 +748,7 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_B_Belt_AOR2", 8000];
 				_ret pushBack ["TRYK_B_FieldPack_Wood", 8000];
 		};
-	};
+
 			if (__GETC__(life_donator) > 3) then
 			{
                 _ret pushBack ["TRYK_B_AssaultPack_Type2camo", 8000];
@@ -779,7 +779,7 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_B_Belt_AOR2", 8000];
 				_ret pushBack ["TRYK_B_FieldPack_Wood", 8000];
 				};
-	};
+
 			if (__GETC__(life_donator) > 4) then
 			{
                 _ret pushBack ["TRYK_B_AssaultPack_Type2camo", 8000];
