@@ -17669,7 +17669,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false; this addAction[""<t color='#ADFF2F'>ZARA DON</t>"",life_fnc_clothingMenu,""don""]; this setObjectTexture[0,""textures\CARTELES\zara.jpg""]";
+			init="this allowDamage false;       this enableSimulation false;         this addAction[""<t color='#ADFF2F'>ZARA DON</t>"",life_fnc_clothingMenu,""don"",0,false,false,"""",' !isNil ""life_donator"" && (call life_donator) > 0 && playerSide == civilian'];  this setObjectTexture[0,""textures\CARTELES\zara.jpg""]";
 		};
 	};
 	class Markers
