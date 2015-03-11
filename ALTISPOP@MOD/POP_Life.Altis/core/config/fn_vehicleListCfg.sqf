@@ -277,6 +277,11 @@ switch (_shop) do
 			["BAF_Jackal2_GMG_D",2900000 * Desc],
 			["BAF_Offroad_W",290000 * Desc],
 			["BAF_Offroad_D",290000 * Desc],
+			["DAR_MK23",290000 * Desc],
+			["DAR_LHS_16",290000 * Desc],
+			["DAR_4X4",290000 * Desc],
+			["DAR_MK27T",290000 * Desc],
+			["DAR_MK23",290000 * Desc],
 			["B_Heli_Light_01_F",450000 * Desc]
 		];
 

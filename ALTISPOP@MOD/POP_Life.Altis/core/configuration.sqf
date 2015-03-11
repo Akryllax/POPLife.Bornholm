@@ -585,7 +585,12 @@ life_garage_sell =
 	["ec135_policia_f", 5000],
 	["ffaa_et_rg31_samson",250000],
 	["ffaa_et_vamtac_ume",3900],
-	["ffaa_et_anibal",3900]
+	["ffaa_et_anibal",3900],
+	["DAR_MK23",29000],
+	["DAR_LHS_16",29000],
+	["DAR_4X4",29000],
+	["DAR_MK27T",29000]
+	["DAR_MK23",29000]
 	
 ];
 __CONST__(life_garage_sell,life_garage_sell);

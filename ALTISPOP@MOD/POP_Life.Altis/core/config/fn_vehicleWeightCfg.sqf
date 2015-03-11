@@ -128,6 +128,11 @@ switch (_className) do
 	case "ambulancia_f": {58};
 	case "dezkit_b206_ems": {58};
 	case "A3L_Bus": {400};
+	case "DAR_MK23": {300};
+	case "DAR_MK27T": {300};
+	case "DAR_4X4": {150};
+	case "DAR_LHS_16": {300};
+	case "DAR_MK23": {300};
 	
 	
 	default {-1};
