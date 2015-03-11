@@ -89,7 +89,7 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_U_B_BLKTANR_CombatUniformTshirt", nil, 8000];
 				_ret pushBack ["TRYK_U_B_ODTAN_CombatUniform", nil, 8000];
 				_ret pushBack ["TRYK_U_B_ODTANR_CombatUniformTshirt", nil, 8000];
-				_ret pushBack ["TRYK_U_B_GRTAN_CombatUniform", nil, 8000],
+				_ret pushBack ["TRYK_U_B_GRTAN_CombatUniform", nil, 8000];
 				_ret pushBack ["TRYK_U_B_GRTANR_CombatUniformTshirt", nil, 8000];
 				_ret pushBack ["TRYK_U_B_wood_CombatUniform", nil, 8000];
 				_ret pushBack ["TRYK_U_B_woodR_CombatUniformTshir", nil, 8000];
@@ -107,7 +107,7 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_U_B_3CD_Delta_BDUTshirt", nil, 8000];
 				_ret pushBack ["TRYK_U_B_3CD_Ranger_BDU", nil, 8000];
 				_ret pushBack ["TRYK_U_B_3CD_Ranger_BDUTshirt", nil, 8000];
-				_ret pushBack ["TRYK_U_B_ACU", nil, 8000],
+				_ret pushBack ["TRYK_U_B_ACU", nil, 8000];
 				_ret pushBack ["TRYK_U_B_ACUTshirt", nil, 8000];
 				_ret pushBack ["TRYK_U_B_MARPAT_Wood", nil, 8000];
 				_ret pushBack ["TRYK_U_B_MARPAT_Wood_Tshirt", nil, 8000];
