@@ -78,7 +78,7 @@ switch (_filter) do {
 				_ret pushBack ["TRYK_U_B_TANTAN_CombatUniform",8000];
 				_ret pushBack ["TRYK_U_B_TANTAN_R_CombatUniform",8000];
 				_ret pushBack ["TRYK_U_B_BLKBLK_CombatUniform",8000];
-				_ret pushBack ["TRYK_U_B_BLKBLK_R_CombatUniform",8000;
+				_ret pushBack ["TRYK_U_B_BLKBLK_R_CombatUniform",8000];
 				_ret pushBack ["TRYK_U_B_GRYOCP_CombatUniform",8000];
 				_ret pushBack ["TRYK_U_B_GRYOCP_R_CombatUniformTshirt",8000];
 				_ret pushBack ["TRYK_U_B_TANOCP_CombatUniform", 8000];
