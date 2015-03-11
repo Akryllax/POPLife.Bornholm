@@ -29,4 +29,5 @@ if(isServer) then  {
 		10*60, // seconds to deleted planted explosives (0 means don't delete)
 		0 // seconds to delete dropped smokes/chemlights (0 means don't delete)
 ] execVM "WarBlast\repetitive_cleanup.sqf";
+{_x setMarkerAlphaLocal 0} forEach ["helicrash_1","helicrash_2","helicrash_3","helicrash_4","wreck_1","wreck_2","wreck_3","wreck_4"];
 StartProgress = true;

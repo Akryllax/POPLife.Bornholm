@@ -378,10 +378,6 @@ class Life_Client_Core
 		class chopShopSell {};
 		class slotmachine {};
 		class slotSpin {};
-		class blackjack {};
-		class BJbet {};
-		class BJhit {};
-		class BJstay {};
 	};
 	
 	class Items
