@@ -19,7 +19,6 @@ switch (_filter) do
 	{
 		[
 			           
-            ["Brigada_Esp_delincuente_shirt",nil, 15000 * Desc],
 			["U_IG_Guerilla1_1",nil,5000 * Desc],
 			["U_I_G_Story_Protagonist_F",nil,7500 * Desc],
 			["U_B_CombatUniform_mcam_tshirt",nil,12500 * Desc],
