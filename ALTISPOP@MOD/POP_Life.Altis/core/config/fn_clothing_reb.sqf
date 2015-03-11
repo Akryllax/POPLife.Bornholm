@@ -18,7 +18,21 @@ switch (_filter) do
 	case 0:
 	{
 		[
-			           
+		    ["TRYK_U_denim_hood_blk",nil,18000 * Desc],
+			["TRYK_U_B_OD_OD_CombatUniform",nil,18000 * Desc],
+			["TRYK_U_B_OD_OD_R_CombatUniform",nil,18000 * Desc],
+			["TRYK_U_B_TANTAN_CombatUniform",nil,18000 * Desc],
+		    ["TRYK_U_B_TANTAN_R_CombatUniform",nil,18000 * Desc],
+			["TRYK_U_B_BLKBLK_CombatUniform",nil,18000 * Desc],
+			["TRYK_U_B_BLKBLK_R_CombatUniform",nil,18000 * Desc],
+		    ["TRYK_U_B_GRYOCP_CombatUniform",nil,18000 * Desc],
+			["TRYK_U_B_GRYOCP_R_CombatUniformTshirt",nil,18000 * Desc],
+		    ["TRYK_U_B_TANOCP_CombatUniform",nil, 18000 * Desc],
+			["TRYK_U_B_TANOCP_R_CombatUniformTshirt",nil,18000 * Desc],
+		    ["TRYK_U_B_BLKOCP_CombatUniform",nil,18000 * Desc],
+			["TRYK_U_B_BLKOCP_R_CombatUniformTshirt",nil,8000 * Desc],
+		    ["TRYK_U_B_BLKTAN_CombatUniform",nil,18000 * Desc],
+		    ["TRYK_U_B_BLKTANR_CombatUniformTshirt",nil,18000 * Desc],          
 			["U_IG_Guerilla1_1",nil,5000 * Desc],
 			["U_I_G_Story_Protagonist_F",nil,7500 * Desc],
 			["U_B_CombatUniform_mcam_tshirt",nil,12500 * Desc],
@@ -101,7 +115,11 @@ switch (_filter) do
 	case 3:
 	{
 		[
-			
+			["TRYK_V_ArmorVest_AOR1",nil, 15000 * Desc],
+			["TRYK_V_ArmorVest_AOR2",nil, 15000 * Desc],
+			["TRYK_V_ArmorVest_coyo",nil, 15000 * Desc],
+			["TRYK_V_ArmorVest_Brown",nil, 15000 * Desc],
+			["TRYK_V_ArmorVest_CBR",nil, 15000 * Desc],
 			["V_Press_F",nil,4000 * Desc],
 			["V_BandollierB_blk",nil,4500 * Desc],
 			["V_BandollierB_cbr",nil,4500 * Desc],
@@ -130,6 +148,15 @@ switch (_filter) do
 	case 4:
 	{
 		[
+			["TRYK_B_AssaultPack_Type2camo",nil, 15000 * Desc],
+			["TRYK_B_AssaultPack_MARPAT_Desert",nil, 15000 * Desc],
+			["TRYK_B_AssaultPack_MARPAT_Wood",nil, 15000 * Desc],
+		    ["TRYK_B_Kitbag_Base",nil, 15000 * Desc],
+			["TRYK_B_Kitbag_blk",nil, 15000 * Desc],
+			["TRYK_B_Kitbag_aaf",nil, 15000 * Desc],
+			["TRYK_B_Carryall_blk",nil, 15000 * Desc],
+			["TRYK_B_Carryall_wood",nil, 15000 *Desc],
+			["TRYK_B_Carryall_JSDF",nil, 15000 *Desc],
 			["B_AssaultPack_cbr",nil,2500 * Desc],
 			["B_AssaultPack_rgr",nil,2500 * Desc],
 			["B_AssaultPack_khk",nil,2500 * Desc],

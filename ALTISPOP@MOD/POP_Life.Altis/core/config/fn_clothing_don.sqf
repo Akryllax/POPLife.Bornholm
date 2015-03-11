@@ -64,8 +64,7 @@ switch (_filter) do
 				  ["TRYK_U_B_BLKTAN",nil,8000],
 				  ["TRYK_U_B_BLKTAN_Tshirt",nil,8000],
 				  ["TRYK_U_B_ODTAN",nil,8000],
-				  ["TRYK_U_B_C01_Tsirt",nil,8000],
-				  ["TRYK_V_PlateCarrier_JSDF",nil,8000]
+				  ["TRYK_U_B_C01_Tsirt",nil,8000]
 		];
 
 	};
