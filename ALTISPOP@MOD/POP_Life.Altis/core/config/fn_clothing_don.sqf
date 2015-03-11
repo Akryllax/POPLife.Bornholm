@@ -35,7 +35,6 @@ switch (_filter) do
 				  ["TRYK_U_B_GRTAN_CombatUniform",nil, 8000],
 				  ["TRYK_U_B_GRTANR_CombatUniformTshirt",nil,8000],
 				  ["TRYK_U_B_wood_CombatUniform",nil, 8000],
-				  ["TRYK_U_B_woodR_CombatUniformTshir",nil, 8000],
 				  ["TRYK_U_B_wood3c_CombatUniform",nil, 8000],
 				  ["TRYK_U_B_wood3c_CombatUniformTshirt",nil, 8000],
 				  ["TRYK_U_B_MARPAT_WOOD_CombatUniform",nil, 8000],
@@ -45,7 +44,6 @@ switch (_filter) do
 				  ["TRYK_U_B_woodtan_CombatUniform",nil,8000],
 				  ["TRYK_U_B_woodtanR_CombatUniformTshirt",nil,8000],
 				  ["TRYK_U_B_JSDF_CombatUniform",nil,8000],
-				  ["RYK_U_B_JSDF_CombatUniformTshirt",nil,8000],
 				  ["TRYK_U_B_3CD_Delta_BDU",nil,8000],
 				  ["TRYK_U_B_3CD_Delta_BDUTshirt",nil,8000],
 				  ["TRYK_U_B_3CD_Ranger_BDU",nil, 8000],
@@ -66,7 +64,6 @@ switch (_filter) do
 				  ["TRYK_U_B_BLKTAN",nil,8000],
 				  ["TRYK_U_B_BLKTAN_Tshirt",nil,8000],
 				  ["TRYK_U_B_ODTAN",nil,8000],
-				  ["TRYK_U_B_ODTAN_TshirtTRYK_U_B_BLK_OD",nil,8000],
 				  ["TRYK_U_B_C01_Tsirt",nil,8000],
 				  ["TRYK_V_PlateCarrier_JSDF",nil,8000]
 		];
@@ -138,7 +135,6 @@ switch (_filter) do
 			  ["TRYK_V_ArmorVest_Brown2",nil, 15000],
 			  ["TRYK_V_ArmorVest_coyo2",nil, 15000],
 			  ["TRYK_V_ArmorVest_cbr2",nil, 15000],
-			  ["RYK_V_ArmorVest_khk2",nil, 15000],
 			  ["TRYK_V_ArmorVest_green2",nil, 15000],
 			  ["TRYK_V_ArmorVest_tan2",nil, 15000],
 			  ["TRYK_V_ArmorVest_Delta2",nil, 15000],
@@ -146,7 +142,6 @@ switch (_filter) do
 		      ["TRYK_V_PlateCarrier_blk",nil, 15000],
 			  ["TRYK_V_PlateCarrier_oli",nil, 15000],
 			  ["TRYK_V_PlateCarrier_coyo",nil, 15000],
-			  ["RYK_V_PlateCarrier_wood",nil, 15000],
 			  ["TRYK_V_PlateCarrier_ACU",nil, 15000],
 			  ["TRYK_V_TacVest_coyo",nil, 15000]
 		];
@@ -174,16 +169,7 @@ switch (_filter) do
 			  ["TRYK_B_Medbag",nil, 15000],
 			  ["TRYK_B_Medbag_OD",nil, 15000],
 			  ["TRYK_B_Medbag_BK",nil, 15000],
-			  ["TRYK_B_Medbag_ucp",nil, 15000],
-			  ["TRYK_B_Belt",nil, 15000],
-			  ["TRYK_B_Belt_BLK",nil, 15000],
-		      ["TRYK_B_Belt_CYT",nil, 15000],
-			  ["TRYK_B_Belt_tan",nil, 15000],
-			  ["TRYK_B_Belt_br",nil, 15000],
-			  ["TRYK_B_Belt_GR",nil, 15000],
-			  ["TRYK_B_Belt_AOR1",nil, 15000],
-			  ["TRYK_B_Belt_AOR2",nil, 15000],
-			  ["TRYK_B_FieldPack_Wood",nil, 15000]
+			  ["TRYK_B_Medbag_ucp",nil, 15000]
 			  
 			];
 	};
