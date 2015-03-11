@@ -570,8 +570,8 @@ class Quickskill
 		class comprarFurgoQuimico {};
 		class cocinarMeta {};
 		class seguridadPrivada{};
-		class extraerPetroleo{};
-		class comprarBarcoPetroleo{};
+		//class extraerPetroleo{};
+		//class comprarBarcoPetroleo{};
 		class transportarDrogaMar{};
 		
 	};
@@ -587,6 +587,7 @@ class Quickskill
 	};
 
 };
+/*
 class Rosen {
 	tag = "ROS";
 	class politica
@@ -602,7 +603,7 @@ class Rosen {
 		class fiesta{};	
 	};
 };
-
+*/
 class Akryllax {
 	tag = "life";
 	class Tracking
