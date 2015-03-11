@@ -2870,7 +2870,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1410;
+		items=1411;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -17661,10 +17661,20 @@ class Mission
 			skill=0.60000002;
 			init="this allowDamage false; this enableSimulation false; this addAction[""Equipar Clase MDF "",QUICK_fnc_comprarClaseMDF]; this setObjectTexture[0,""textures\CARTELES\equipos.jpg""]";
 		};
+		class Item1410
+		{
+			position[]={9176.6289,14.49721,21641.607};
+			azimut=681.70801;
+			id=1538;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V1_F";
+			skill=0.60000002;
+			init="this allowDamage false; this enableSimulation false; this addAction[""<t color='#ADFF2F'>ZARA DON</t>"",life_fnc_clothingMenu,""don""]; this setObjectTexture[0,""textures\CARTELES\zara.jpg""]";
+		};
 	};
 	class Markers
 	{
-		items=504;
+		items=505;
 		class Item0
 		{
 			position[]={20782.402,37.286591,16680.141};
@@ -21478,6 +21488,15 @@ class Mission
 			name="custombase_tlp";
 			type="Empty";
 			angle=643.33099;
+		};
+		class Item504
+		{
+			position[]={9176.7705,14.503424,21641.137};
+			name="Gen_3_4";
+			text="Donadores";
+			type="hd_dot";
+			colorName="ColorGreen";
+			angle=-275.78299;
 		};
 	};
 	class Sensors
