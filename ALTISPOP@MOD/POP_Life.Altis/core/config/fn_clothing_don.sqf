@@ -154,8 +154,9 @@ switch (_filter) do {
 	// Glasses
 	case 2: {
 		_ret =
+		{
 			[]
-		;
+		};
 	};
 
 	// Vest
