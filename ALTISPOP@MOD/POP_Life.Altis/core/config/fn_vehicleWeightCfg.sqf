@@ -127,6 +127,7 @@ switch (_className) do
 	case "BAF_Offroad_D": {58};
 	case "ambulancia_f": {58};
 	case "dezkit_b206_ems": {58};
+	case "A3L_Bus": {400};
 	
 	
 	default {-1};
