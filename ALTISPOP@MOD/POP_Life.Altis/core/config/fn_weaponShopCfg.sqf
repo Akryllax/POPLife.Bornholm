@@ -747,7 +747,7 @@ switch (_shop) do {
 					 ["RH_20Rnd_762x51_M80A1", nil, 15000],
 					 ["RH_Saker762", nil, 15000],
 					 ["RH_accupoint", nil, 15000]
-					 
+
 				 ]
 				];
 			};
@@ -1139,10 +1139,10 @@ switch (_shop) do {
 						 ["ToolKit", nil, 250 * Desc],
 						 ["FirstAidKit", nil, 150 * Desc],
 						 ["NVGoggles", nil, 2000 * Desc],
-						 ["hgun_P07_snds_F", 5500 * Desc],
-						 ["16Rnd_9x21_Mag", 100 * Desc],
-						 ["SMG_02_ACO_F", 6500 * Desc],
-						 ["30Rnd_9x21_Mag", 200 * Desc]
+						 ["hgun_P07_snds_F",nil, 5500 * Desc],
+						 ["16Rnd_9x21_Mag",nil, 100 * Desc],
+						 ["SMG_02_ACO_F",nil, 6500 * Desc],
+						 ["30Rnd_9x21_Mag",nil, 200 * Desc]
 					 ]
 					];
 				};
