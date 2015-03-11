@@ -244,6 +244,7 @@ switch (_shop) do
 	{
 		_return =
 		[
+			["A3L_Bus",750000 * Desc],
 			["C_Van_01_box_F",60000 * Desc],
 			["I_Truck_02_transport_F",75000 * Desc],
 			["I_Truck_02_covered_F",200000 * Desc],
@@ -254,6 +255,7 @@ switch (_shop) do
 			["O_Truck_03_device_F",1500000 * Desc]
 		];
 		if(license_civ_rebel) then {
+			_return pushBack ["A3L_Bus",750000 * Desc];
 			_return pushBack ["O_Truck_02_transport_F",150000 * Desc];
 			_return pushBack ["O_Truck_02_covered_F",225000 * Desc];
 			_return pushBack ["O_Truck_03_transport_F",800000 * Desc];
