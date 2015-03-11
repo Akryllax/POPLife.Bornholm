@@ -14,7 +14,7 @@ switch (_filter) do
 	case 0:
 	{
 		[
-				  ["B_OD_OD_soldier_F",8000 ],
+				  ["TRYK_U_denim_hood_blk",8000],
 				  ["B_OD_OD_R_soldier_F",8000],
 				  ["B_TAN_TAN_soldier_F",8000],
 				  ["B_TAN_TAN_R_soldier_F",8000],
@@ -128,8 +128,6 @@ switch (_filter) do
 	//Goros
 	case 1:
 	{
-		if(__GETC__(life_donator) > 1) then
-		{
 		 [
 	
 				  ["kio_vfv_mask", 15000],
@@ -233,6 +231,6 @@ switch (_filter) do
 			  ["RYK_V_PlateCarrier_wood", 15000],
 			  ["TRYK_V_PlateCarrier_ACU", 15000],
 			  ["TRYK_V_TacVest_coyo", 15000]
-		];
+			];
 	};
 };
