@@ -374,8 +374,6 @@ switch (_shop) do {
 					 ["30Rnd_556x45_Stanag", nil, 1500 * Desc],
 					 ["ffaa_armas_mg4", nil, 350000 * Desc],
 					 ["B_HMG_01_A_weapon_F", nil, 7500 * Desc],
-					 ["ffaa_armas_c90", nil, 850000 * Desc],
-					 ["ffaa_mag_c90", nil, 80000 * Desc],
 					 ["RH_Hk416c", nil, 180000 * Desc],
 					 ["RH_M4m", nil, 180000 * Desc],
 					 ["RH_M4sbr", nil, 180000 * Desc],
@@ -466,8 +464,6 @@ switch (_shop) do {
 					 ["30Rnd_556x45_Stanag", nil, 1500 * Desc],
 					 ["ffaa_armas_mg4", nil, 350000 * Desc],
 					 ["B_HMG_01_A_weapon_F", nil, 7500 * Desc],
-					 ["ffaa_armas_c90", nil, 850000 * Desc],
-					 ["ffaa_mag_c90", nil, 80000 * Desc],
 					 ["RH_Hk416c", nil, 180000 * Desc],
 					 ["RH_M4m", nil, 180000 * Desc],
 					 ["RH_M4sbr", nil, 180000 * Desc],
@@ -750,9 +746,8 @@ switch (_shop) do {
 					 ["RH_SR25EC", nil, 15000],
 					 ["RH_20Rnd_762x51_M80A1", nil, 15000],
 					 ["RH_Saker762", nil, 15000],
-					 ["RH_accupoint", nil, 15000],
-					 ["ffaa_armas_c90", nil, 850000],
-					 ["ffaa_mag_c90", nil, 80000]
+					 ["RH_accupoint", nil, 15000]
+					 
 				 ]
 				];
 			};
