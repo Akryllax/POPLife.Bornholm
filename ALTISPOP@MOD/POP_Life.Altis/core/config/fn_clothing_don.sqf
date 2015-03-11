@@ -13,6 +13,7 @@ switch (_filter) do
 	//Uniformes
 	case 0:
 	{
+	_ret =
 		[
 				  ["TRYK_U_denim_hood_blk",8000],
 				  ["B_OD_OD_R_soldier_F",8000],
@@ -122,14 +123,15 @@ switch (_filter) do
 				  ["TRYK_U_B_C01_Tsirt",8000],
 				  ["TRYK_V_PlateCarrier_JSDF",8000]
 		];
-		
+
 	};
 
 	//Goros
 	case 1:
 	{
+	_ret =
 		 [
-	
+
 				  ["kio_vfv_mask", 15000],
 				  ["Kio_Capital_Hat", 15000],
 				  ["casco_moto", 15000],
@@ -150,6 +152,7 @@ switch (_filter) do
 	//Gafas
 	case 2:
 	{
+	_ret =
 		[
 			["G_Shades_Black",nil,25],
 			["G_Shades_Blue",nil,20],
@@ -170,8 +173,9 @@ switch (_filter) do
 	//Chalecos
 	case 3:
 	{
+	_ret =
 		[
-	
+
 			  ["TRYK_V_ArmorVest_AOR1", 15000],
 			  ["TRYK_V_ArmorVest_AOR2", 15000],
 			  ["TRYK_V_ArmorVest_coyo", 15000],
@@ -204,6 +208,7 @@ switch (_filter) do
 	//Mochilas
 	case 4:
 	{
+	_ret =
 		[
 			  ["TRYK_V_ArmorVest_AOR1", 15000],
 			  ["TRYK_V_ArmorVest_AOR2", 15000],
@@ -234,3 +239,4 @@ switch (_filter) do
 			];
 	};
 };
+_ret;
