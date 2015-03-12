@@ -367,50 +367,7 @@ switch (_vehicle) do
 		};
 	};
 
-	case "exxpensive_jaguar_base":
-	{
-		switch (_index) do
-		{
-			case 0: {_color = "Negro"};
-			case 1: {_color = "Rojo"};
-			case 2: {_color = "Amarillo"};
-			case 3: {_color = "Naranja"};
-			case 4: {_color = "verde"};
-			case 5: {_color = "Gris"};
-			case 6: {_color = "Azul"};
-			case 7: {_color = "Blanco"};
-		};
-	};
-	case "exxpensive_mercedes_sls_base":
-	{
-		switch (_index) do
-		{
-			case 0: {_color = "Negro"};
-			case 1: {_color = "Rojo"};
-			case 2: {_color = "Amarillo"};
-			case 3: {_color = "naranja"};
-			case 4: {_color = "verde"};
-			case 5: {_color = "Gris"};
-			case 6: {_color = "Azul"};
-			case 7: {_color = "Blanco"};
-		};
-	};
-	case "exxpensive_ferrari_458_base":
-	{
-		switch (_index) do
-		{
-			case 0: {_color = "Negro"};
-			case 1: {_color = "Rojo"};
-			case 2: {_color = "Amarillo"};
-			case 3: {_color = "naranja"};
-			case 4: {_color = "verde"};
-			case 5: {_color = "Gris"};
-			case 6: {_color = "Azul"};
-			case 7: {_color = "Blanco"};
-		};
-	};
-	
-	case "exxpensive_aventador_base":
+case "DAR_ImpalaCiv":
 	{
 		 switch (_index) do
 		 {
@@ -425,7 +382,7 @@ switch (_vehicle) do
 		 };
 	};
 	 
-	case "exxpensive_mini_cooper_base":
+	case "DAR_FusionCiv":
 	{
 		 switch (_index) do
 		 {
@@ -440,7 +397,7 @@ switch (_vehicle) do
 		 };
 	};
 	 
-	case "exxpensive_ford_raptor_base":
+	case "DAR_TaurusCiv":
 	{
 		switch (_index) do
 		{
@@ -455,7 +412,7 @@ switch (_vehicle) do
 		};
 	};
 	
-	case "exxpensive_volvo_242_base":
+	case "DAR_ImpalaCivA":
 	 {
 		 switch (_index) do
 		 {
@@ -469,23 +426,7 @@ switch (_vehicle) do
 			 case 7: {_color = "Blanco"};
 		 };
 	};
-	 
-	case "exxpensive_cadillac_sedan":
-	{
-		switch (_index) do
-		{
-			case 0: {_color = "Negro"};
-			case 1: {_color = "Rojo"};
-			case 2: {_color = "Amarillo"};
-			case 3: {_color = "naranja"};
-			case 4: {_color = "verde"};
-			case 5: {_color = "Gris"};
-			case 6: {_color = "Azul"};
-			case 7: {_color = "Blanco"};
-		};
-	};
-	
-	case "exxpensive_2cv_base":
+		case "DAR_TahoeCiv":
 	 {
 		 switch (_index) do
 		 {
@@ -499,94 +440,6 @@ switch (_vehicle) do
 			 case 7: {_color = "Blanco"};
 		 };
 	};
-	 
-	case "exxpensive_cadillac_sedan_base":
-	{
-		switch (_index) do
-		{
-			case 0: {_color = "Negro"};
-			case 1: {_color = "Rojo"};
-			case 2: {_color = "Amarillo"};
-			case 3: {_color = "naranja"};
-			case 4: {_color = "verde"};
-			case 5: {_color = "Gris"};
-			case 6: {_color = "Azul"};
-			case 7: {_color = "Blanco"};
-		};
-	};
-	
-	case "exxpensive_chevrolet_caprice_base":
-	 {
-		 switch (_index) do
-		 {
-			 case 0: {_color = "Negro"};
-			 case 1: {_color = "Rojo"};
-			 case 2: {_color = "Amarillo"};
-			 case 3: {_color = "naranja"};
-			 case 4: {_color = "verde"};
-			 case 5: {_color = "Gris"};
-			 case 6: {_color = "Azul"};
-			 case 7: {_color = "Blanco"};
-		 };
-	};
-	case "exxpensive_bugatti_base": 
-		 {
-		 switch (_index) do
-		 {
-			 case 0: {_color = "Negro"};
-			 case 1: {_color = "Rojo"};
-			 case 2: {_color = "Amarillo"};
-			 case 3: {_color = "naranja"};
-			 case 4: {_color = "verde"};
-			 case 5: {_color = "Gris"};
-			 case 6: {_color = "Azul"};
-			 case 7: {_color = "Blanco"};
-		 };
-	};
-		
-	case "exxpensive_audi_R8_base":
-		 {
-		 switch (_index) do
-		 {
-			 case 0: {_color = "Negro"};
-			 case 1: {_color = "Rojo"};
-			 case 2: {_color = "Amarillo"};
-			 case 3: {_color = "naranja"};
-			 case 4: {_color = "verde"};
-			 case 5: {_color = "Gris"};
-			 case 6: {_color = "Azul"};
-			 case 7: {_color = "Blanco"};
-		 };
-	};
-	case "exxpensive_m5_e34_base":
-		 {
-		 switch (_index) do
-		 {
-			 case 0: {_color = "Negro"};
-			 case 1: {_color = "Rojo"};
-			 case 2: {_color = "Amarillo"};
-			 case 3: {_color = "naranja"};
-			 case 4: {_color = "verde"};
-			 case 5: {_color = "Gris"};
-			 case 6: {_color = "Azul"};
-			 case 7: {_color = "Blanco"};
-		 };
-	};
-	case "exxpensive_volvo_242_base":
-		 {
-		 switch (_index) do
-		 {
-			 case 0: {_color = "Negro"};
-			 case 1: {_color = "Rojo"};
-			 case 2: {_color = "Amarillo"};
-			 case 3: {_color = "naranja"};
-			 case 4: {_color = "verde"};
-			 case 5: {_color = "Gris"};
-			 case 6: {_color = "Azul"};
-			 case 7: {_color = "Blanco"};
-		 };
-	};
-	
 	case "B_Heli_Light_01_F":
 	{
 		switch (_index) do

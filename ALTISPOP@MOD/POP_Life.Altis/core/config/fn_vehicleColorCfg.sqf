@@ -460,7 +460,7 @@ switch (_vehicle) do
 		 ];
 	 };
 	
-	case "exxpensive_jaguar_base":	
+	case "DAR_ImpalaCivA":	
 	{
 	_ret = 
 		[
