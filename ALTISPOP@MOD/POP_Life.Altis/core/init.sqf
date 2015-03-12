@@ -77,7 +77,7 @@ player setVariable ["BIS_noCoreConversations", true];
 enableSentences false;
 enableRadio false;
 0 fadeRadio 0;
-//enableEnvironment false;
+enableEnvironment false;
 
 player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
@@ -140,4 +140,5 @@ switch(__GETC__(life_donator)) do
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
 player enableFatigue (__GETC__(life_enableFatigue));
+{_x setMarkerAlphaLocal 0} forEach ["helicrash_1","helicrash_2","helicrash_3","helicrash_4","wreck_1","wreck_2","wreck_3","wreck_4"];
 [] call War_fnc_texturas;
