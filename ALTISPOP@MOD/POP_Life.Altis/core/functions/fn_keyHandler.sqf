@@ -416,13 +416,10 @@ switch (_code) do
 	};
 	case DIK_F3:
 	{
-		if(__GETC__(life_adminlevel) < 1) exitWith {
-			hint "Desactivado";
-			closeDialog 0;
+		if (vehicle player == player) then {
+			[] call ROS_fnc_fiesta;
 		};
-		_handled = false;
 	};
-
 
 	case DIK_F5: // F5
 	{
