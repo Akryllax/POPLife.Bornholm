@@ -70,9 +70,6 @@ switch (_shop) do
 			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
-			_return pushBack ["DAR_TahoeCiv",99999 * Desc];
-			_return pushBack ["DAR_TaurusCiv",85000 * Desc];
-			_return pushBack ["DAR_ImpalaCivA",60000 * Desc];
 			_return pushBack ["cl3_civic_vti_black",67000 * Desc];
 			_return pushBack ["cl3_polo_gti_black",70000 * Desc];
 			_return pushBack ["cl3_insignia_black",70000 * Desc];
@@ -91,11 +88,6 @@ switch (_shop) do
 			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
-			_return pushBack ["DAR_TahoeCiv",99999 * Desc];
-			_return pushBack ["DAR_FusionCiv",70000 * Desc];
-			_return pushBack ["DAR_TaurusCiv",85000 * Desc];
-			_return pushBack ["DAR_ImpalaCivA",60000 * Desc];
-			_return pushBack ["DAR_ImpalaCivC",60000 * Desc];
 			_return pushBack ["cl3_civic_vti_black",67000 * Desc];
 			_return pushBack ["cl3_polo_gti_black",70000 * Desc];
 			_return pushBack ["cl3_insignia_black",70000 * Desc];
@@ -115,10 +107,6 @@ switch (_shop) do
 			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
-			_return pushBack ["DAR_TahoeCiv",99999 * Desc];
-			_return pushBack ["DAR_FusionCiv",70000 * Desc];
-			_return pushBack ["DAR_TaurusCiv",85000 * Desc];
-			_return pushBack ["DAR_ImpalaCivA",60000 * Desc];
 			_return pushBack ["cl3_civic_vti_black",67000 * Desc];
 			_return pushBack ["cl3_polo_gti_black",70000 * Desc];
 			_return pushBack ["cl3_insignia_black",70000 * Desc];
@@ -139,10 +127,6 @@ switch (_shop) do
 			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
-			_return pushBack ["DAR_TahoeCiv",99999 * Desc];
-			_return pushBack ["DAR_FusionCiv",70000 * Desc];
-			_return pushBack ["DAR_TaurusCiv",85000 * Desc];
-			_return pushBack ["DAR_ImpalaCivA",60000 * Desc];
 			_return pushBack ["cl3_civic_vti_black",67000 * Desc];
 			_return pushBack ["cl3_polo_gti_black",70000 * Desc];
 			_return pushBack ["cl3_insignia_black",70000 * Desc];
@@ -192,8 +176,8 @@ switch (_shop) do
 			["B_Quadbike_01_F",2500 * Desc],
 			["B_G_Offroad_01_F",25000 * Desc],
 			["O_MRAP_02_F",2900000 * Desc],
-			["BAF_Jackal2_GMG_W",2900000 * Desc],
-			["BAF_Jackal2_GMG_D",2900000 * Desc],
+			//["BAF_Jackal2_GMG_W",2900000 * Desc],
+			//["BAF_Jackal2_GMG_D",2900000 * Desc],
 			["BAF_Offroad_W",290000 * Desc],
 			["BAF_Offroad_D",290000 * Desc],
 			["DAR_MK23",290000 * Desc],
