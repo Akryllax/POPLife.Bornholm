@@ -589,7 +589,7 @@ life_garage_sell =
 	["DAR_MK23",29000],
 	["DAR_LHS_16",29000],
 	["DAR_4X4",29000],
-	["DAR_MK27T",29000]
+	["DAR_MK27T",29000],
 	["DAR_MK23",29000]
 	
 ];
