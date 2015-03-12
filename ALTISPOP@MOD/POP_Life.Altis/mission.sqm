@@ -15848,7 +15848,6 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this allowDamage false;   this enableSimulation false;   this addAction[""Insert Coin"",life_fnc_processCasinoSlots,2,0,false,false,"""",' !life_is_processing']; this setObjectTexture [0, ""textures\Slots\slotmachine1000.paa""];";
 		};
 		class Item1228
 		{
