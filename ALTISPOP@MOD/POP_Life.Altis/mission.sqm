@@ -15751,7 +15751,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_GH_MainBuilding_middle_F";
 			skill=0.60000002;
-			init="0 = [this] execVM 'scripts\void_map_marker.sqf'; this allowDamage false; this enableSimulation false;";
+			init="0 =  this allowDamage false; this enableSimulation false;";
 		};
 		class Item1219
 		{
@@ -15762,7 +15762,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_GH_MainBuilding_entry_F";
 			skill=0.60000002;
-			init="0 = [this] execVM 'scripts\void_map_marker.sqf'; this allowDamage false; this enableSimulation false;";
+			init="0 =  this allowDamage false; this enableSimulation false;";
 		};
 		class Item1220
 		{
@@ -15773,7 +15773,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_GH_MainBuilding_left_F";
 			skill=0.60000002;
-			init="0 = [this] execVM 'scripts\void_map_marker.sqf'; this allowDamage false; this enableSimulation false;";
+			init="0 =  this allowDamage false; this enableSimulation false;";
 		};
 		class Item1221
 		{
@@ -15784,7 +15784,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_GH_MainBuilding_right_F";
 			skill=0.60000002;
-			init="0 = [this] execVM 'scripts\void_map_marker.sqf'; this allowDamage false; this enableSimulation false;";
+			init="0 =  this allowDamage false; this enableSimulation false;";
 		};
 		class Item1222
 		{
@@ -17332,7 +17332,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_GH_Gazebo_F";
 			skill=0.60000002;
-			init="0 = [this] execVM 'scripts\void_map_marker.sqf'; this enableSimulation false;  this allowDamage false; ";
+			init="0 = this enableSimulation false;  this allowDamage false; ";
 		};
 		class Item1380
 		{
@@ -17343,7 +17343,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_GH_Gazebo_F";
 			skill=0.60000002;
-			init="0 = [this] execVM 'scripts\void_map_marker.sqf'; this enableSimulation false;  this allowDamage false; ";
+			init="0 = this enableSimulation false;  this allowDamage false; ";
 		};
 		class Item1381
 		{
@@ -18214,7 +18214,7 @@ class Mission
 			vehicle="Land_MarketShelter_F";
 			skill=0.60000002;
 			fuel=0.99000001;
-			init="0 = [this] execVM 'scripts\void_map_marker.sqf'; this enableSimulation false;  this allowDamage false; ";
+			init="0 = this enableSimulation false;  this allowDamage false; ";
 		};
 		class Item1450
 		{
@@ -19410,7 +19410,7 @@ class Mission
 			name="peaches_2";
 			text="Campo de Melocotones";
 			type="loc_Tree";
-			colorName="ColorCIV";
+			colorName="ColorOrange";
 		};
 		class Item87
 		{
