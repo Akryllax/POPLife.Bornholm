@@ -29,6 +29,8 @@ switch (_shop) do {
 					 ["SMG_02_F", nil, 7500 * Desc],
 					 ["30Rnd_9x21_Mag", nil, 50 * Desc],
 					 ["Binocular", nil, 150 * Desc],
+					 ["DDOPP_X26", nil, 50 * Desc],
+					 ["DDOPP_1Rnd_X26", nil, 50 * Desc],
 					 ["Rangefinder", nil, 500 * Desc],
 					 ["ItemGPS", nil, 100 * Desc],
 					 ["ToolKit", nil, 250 * Desc],
