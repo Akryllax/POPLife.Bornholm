@@ -18,7 +18,7 @@ if(isNull _unit) exitWith {}; //Not valid
 if(_time < 1) exitwith {}; //Not Valid
 
 
-[[getPlayerUID _unit,_unit,player,false],"life_fnc_wantedBounty",false,false] spawn life_fnc_MP;
+[[_unit,player,false],"life_fnc_wantedBounty",false,false] spawn life_fnc_MP;
 
 if(isNull _unit) exitWith {}; //Not valid
 detach _unit;
