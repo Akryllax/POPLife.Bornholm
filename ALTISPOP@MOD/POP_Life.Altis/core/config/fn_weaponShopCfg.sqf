@@ -1120,7 +1120,7 @@ switch (_shop) do {
 					 ["prpl_famas_g2_hg_bip", nil, 150000 * Desc],
 					 ["30Rnd_556x45_Stanag", nil, 1500 * Desc],
 					 ["ffaa_armas_mg4", nil, 350000 * Desc],
-					 ["", nil, 7500 * Desc],
+					 ["ffaa_556x45_mg4", nil, 7500 * Desc],
 					 ["ffaa_armas_c90", nil, 850000 * Desc],
 					 ["ffaa_mag_c90", nil, 80000 * Desc],
 					 ["RH_Hk416c", nil, 180000 * Desc],
