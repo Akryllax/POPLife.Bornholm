@@ -18,31 +18,31 @@ while {_time > 0} do {
 	_posDestino = getMarkerPos _destino;
 	_metros =  _furgo distance _posDestino;
 
-
-
-
+	
+	
+    	
 	/// si muere paramos el contador
 		if !(alive _jugador) then {
 			_time = 0;
 		};
 
 	//mientrar si esta cerca del edificio
-	if(_metros > _metros_entregar) then{
-
+	if(_metros > _metros_entregar) then{		
+	
 		//contar tiempo
-		_time = _time - 1;
-		hintSilent format["Destino: %4 \n Tiempo : %1 \n Distancia: %2m ", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metrosTotal,_destino];
+		_time = _time - 1;  
+		hintSilent format["Destino: %4 \n Tiempo : %1 \n Distancia: %2m ", [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring,round (_metros),_metrosTotal,_destino];	
 		sleep 1;
-
+		
 	};
 
 	if(_metros < _metros_entregar )then{
 
 		_pagar_jugador= "si";
 		_time = 0;
-
+		
 	};
-
+    		
 };//end while
 
 if(_time < 1) then{
@@ -51,7 +51,7 @@ if(_time < 1) then{
 	  if (_pagar_jugador=="si" && alive _jugador ) then {
 	    // agregar action de cobrar la pasta y borrar el furgon
 	     hint "Ya puedes entregar la furgoneta";
-	    _furgo addAction["Entregar furgoneta",QUICK_pagarTrabajoSeguridad,_furgo];
+	    _furgo addAction["Entregar furgoneta",QUICK_pagarTrabajoSeguridad,_furgo];	
 	  };
 
 	   if (_pagar_jugador=="no" && alive _jugador ) then {
@@ -62,7 +62,7 @@ if(_time < 1) then{
 
 	  deleteMarker _marcador;
 
-
+	 
 
 
 };//en time < 1
@@ -75,26 +75,26 @@ QUICK_pagarTrabajoSeguridad = {
 
 _gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _caller =[_this,1,Objnull,[Objnull]] call BIS_fnc_param;
- _id = _this select 2;
-
+ _id = _this select 2; 
+ 
 _gen removeAction _id;
 
 _furgo = _this select 3;
 
 //pagar al jugador
-life_cash = life_cash +350000;
+life_cash = life_cash +500000;
 //hint
-hint "Has cobrado 350000$ por tu trabajo";
+hint "Has cobrado 500000$ por tu trabajo";
 //borrar
 deleteVehicle _furgo;
 
 
-
+	
 };
 
 
 QUICK_generarTrabajoSeguridad = {
-
+	
 
 _coche = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 
@@ -111,14 +111,14 @@ life_vehicles pushBack _coche;
 _destinoRandom = "dp" +  str (round random 26 );
 _destino =_destinoRandom;
 
-
+ 				
 _markerDestino = createMarkerLocal ["MarkerTrabajoSeguridad", getMarkerPos _destino ];
-_markerDestino setMarkerShapeLocal "ICON";
+_markerDestino setMarkerShapeLocal "ICON"; 
 _markerDestino setMarkerTypeLocal "mil_warning";
 _markerDestino setMarkerColor "ColorGreen";
 
 
-
+	 		
 _scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrabajoSeguridad;
 
 
@@ -132,19 +132,19 @@ _scriptHandler = [_markerDestino,_coche,_jugador,_destino] spawn QUICK_timerTrab
 //////////////////////////////////////////////////////////
 
 private["_coche"];
-_precio = 1;
+_precio = 350000;
 _jugador = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 _gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 
 if(isNull _jugador) exitWith {}; //if not the thief get bent
 
 //puede pagar?¿
- if(life_ATMcash - _precio < 0) exitWith { hint "No tienes suficiente dinero";[] spawn { sleep 5;hint "";} };
+ if(life_cash - _precio < 0) exitWith { hint "No tienes suficiente dinero";[] spawn { sleep 5;hint "";} };
 
 life_cash = life_cash-_precio;
 
 //crear coche
-[_gen,_jugador] spawn {
+[_gen,_jugador] spawn { 
 
 _gen = _this select 0;
 _jugador = _this select 1;
