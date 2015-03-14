@@ -808,7 +808,7 @@ switch (_shop) do {
                      ["arifle_mas_akms_h",nil,200000 * Desc],
                      ["optic_mas_PSO_eo_c",nil,12000 * Desc],
                      ["LMG_mas_pkm_F",nil,350000 * Desc],
-                     ["100Rnd_mas_762x54_mag",nil,15000 * Desc]
+                     ["100Rnd_mas_762x54_mag",nil,15000 * Desc],
 					 ["RH_sbr9_wdl", nil, 15000 * Desc],
 					 ["RH_32Rnd_9mm_M822", nil, 15000 * Desc],
 					 ["RH_tundra_wdl", nil, 15000 * Desc],
