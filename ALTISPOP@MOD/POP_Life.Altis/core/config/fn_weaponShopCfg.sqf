@@ -555,7 +555,7 @@ switch (_shop) do {
 					 ["ffaa_556x45_g36", nil, 1500],
 					 ["muzzle_snds_M", nil, 1500],
 					 ["ffaa_optic_g36_holo", nil, 9500],
-					 ["RH_ta31rco", nil, 15000]
+					 ["RH_ta31rco", nil, 15000],
 					 ["RH_sbr9_wdl", nil, 150000 * Desc],
 					 ["RH_32Rnd_9mm_M822", nil, 1500 * Desc],
 					 ["RH_tundra_wdl", nil, 15000 * Desc],
