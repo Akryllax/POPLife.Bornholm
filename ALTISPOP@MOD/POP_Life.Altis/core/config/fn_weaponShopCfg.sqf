@@ -564,8 +564,6 @@ switch (_shop) do {
 					 ["ffaa_556x45_g36", nil, 1500 * Desc],
 					 ["muzzle_snds_M", nil, 1500 * Desc],
 					 ["ffaa_optic_g36_holo", nil, 9500 * Desc],
-					 ["prpl_famas", nil, 45000 * Desc],
-					 ["prpl_famas_rds", nil, 7500 * Desc],
 					 ["RH_ta31rco", nil, 15000 * Desc]
 				 ]
 				];
@@ -661,8 +659,6 @@ switch (_shop) do {
 					 ["ffaa_556x45_g36", nil, 15000 * Desc],
 					 ["muzzle_snds_M", nil, 15000 * Desc],
 					 ["ffaa_optic_g36_holo", nil, 15000 * Desc],
-					 ["prpl_famas", nil, 15000 * Desc],
-					 ["prpl_famas_rds", nil, 15000 * Desc],
 					 ["RH_ta31rco", nil, 15000 * Desc],
 					 ["RH_m4a1_ris_tg", nil, 15000 * Desc],
 					 ["RH_60Rnd_556x45_Mk262", nil, 15000 * Desc],
@@ -809,8 +805,6 @@ switch (_shop) do {
 					 ["ffaa_556x45_g36", nil, 15000 * Desc],
 					 ["muzzle_snds_M", nil, 15000 * Desc],
 					 ["ffaa_optic_g36_holo", nil, 15000 * Desc],
-					 ["prpl_famas", nil, 15000 * Desc],
-					 ["prpl_famas_rds", nil, 15000 * Desc],
 					 ["RH_ta31rco", nil, 15000 * Desc],
 					 ["RH_m4a1_ris_tg", nil, 15000 * Desc],
 					 ["RH_60Rnd_556x45_Mk262", nil, 15000 * Desc],
