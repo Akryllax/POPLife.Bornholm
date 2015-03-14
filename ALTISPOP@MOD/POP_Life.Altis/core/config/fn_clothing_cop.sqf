@@ -63,11 +63,12 @@ switch (_filter) do
 		_ret pushBack ["V_Rangemaster_belt",nil,800 * Desc];
 		if(__GETC__(life_coplevel) > 2) then
 		{
-		   _ret pushBack ["V_BandollierB_blk",nil,1500 * Desc];
+		   _ret pushBack ["TRYK_V_ArmorVest_Delta2",nil,1500 * Desc];
+		   _ret pushBack ["TRYK_V_ArmorVest_green2",nil,1500 * Desc];
 	    };
 		if(__GETC__(life_coplevel) > 4) then
 		{
-			_ret pushBack ["V_TacVest_blk_POLICE",nil,3500 * Desc];
+			_ret pushBack ["TRYK_V_ArmorVest_Delta2",nil,3500 * Desc];
 		};
 	};
 
