@@ -50,7 +50,7 @@ if(_lvl == 1) then
 if(_lvl == 2 ) then
 	{
         player forceaddUniform "U_Competitor";
-		player addVest "policia_sniper_vest";
+		player addVest "TRYK_V_ArmorVest_Delta2";
 		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
@@ -74,7 +74,7 @@ if(_lvl == 3 ) then
 	{
 
         player forceaddUniform "policia_man_uniform";
-		player addVest "policia_sniper_vest";
+		player addVest "TRYK_V_ArmorVest_Delta2";
 		player addHeadgear "policia_cnp_gorra";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
@@ -102,7 +102,7 @@ if(_lvl == 3 ) then
 if(_lvl == 4 ) then
 	{
         player forceaddUniform "policia_goes_uniform_camu";
-		player addVest "goes_vest_s_camu";
+		player addVest "TRYK_V_ArmorVest_Delta2";
 		player addHeadgear "policia_cnp_gorra";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
@@ -133,7 +133,7 @@ if(_lvl == 5 ) then
 	{
 
         player forceaddUniform "U_B_CombatUniform_mcam_worn";
-		player addVest "policia_cnp_vest";
+		player addVest "TRYK_V_ArmorVest_Delta2";
 		player addHeadgear "H_Beret_blk_POLICE";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
@@ -166,7 +166,7 @@ if(_lvl == 6) then
         player forceaddUniform "U_B_CombatUniform_mcam_worn";
 		removeHeadGear player;
 		player addHeadgear "H_Watchcap_blk";
-		player addVest "policia_geo_vest";
+		player addVest "TRYK_V_ArmorVest_Delta2";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
@@ -198,7 +198,7 @@ if(_lvl == 7) then
 		player addGoggles "G_Balaclava_Lowprofile";
 		removeHeadGear player;
 		player addHeadgear "policia_sniper_cap";
-		player addVest "policia_geo_vest";
+		player addVest "TRYK_V_ArmorVest_Delta2";
 		player addBackpack "B_Carryall_Base";
 		player addItem "ItemMap";
 		player assignItem "ItemMap";
@@ -230,7 +230,7 @@ if(_lvl == 8) then
 		player forceaddUniform "policia_inspector_uniform_geo";
 		removeHeadGear player;
 		player addHeadgear "policia_cnp_gorra";
-		player addVest "policia_geo_vest";
+		player addVest "TRYK_V_ArmorVest_Delta2";
 		player addBackpack "B_Carryall_Base";
 		player addItem "G_Squares_Tinted";
 		player assignItem "G_Squares_Tinted";
