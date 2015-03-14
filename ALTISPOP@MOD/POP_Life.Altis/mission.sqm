@@ -2978,7 +2978,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=2421;
+		items=2423;
 		class Item0
 		{
 			position[]={20782.309,37.2887,16680.162};
@@ -27344,10 +27344,32 @@ class Mission
 			skill=0.60000002;
 			init="this allowDamage false;this enableSimulation false;";
 		};
+		class Item2421
+		{
+			position[]={3292.9194,2.3210855,12978.078};
+			azimut=177.44246;
+			id=2553;
+			side="EMPTY";
+			vehicle="Land_Atm_02_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Banking Insurance ($1,000)"",{if(Amarok_ATMCash > 1000) then {life_has_insurance = true; [1000, 1, 1] call life_fnc_HandleMoney};},"""",0,false,false,"""",'!life_has_insurance'];";
+		};
+		class Item2422
+		{
+			position[]={3292.9377,2.3193643,12977.816};
+			azimut=-181.07259;
+			offsetY=0.40000001;
+			id=2554;
+			side="EMPTY";
+			vehicle="Land_PortableLight_single_F";
+			leader=1;
+			skill=0.60000002;
+			init="this setVectorup [0,0,1] ";
+		};
 	};
 	class Markers
 	{
-		items=511;
+		items=512;
 		class Item0
 		{
 			position[]={20782.402,37.286591,16680.141};
@@ -31267,6 +31289,14 @@ class Mission
 			name="custombase_nz_air";
 			type="Empty";
 			angle=-385.85541;
+		};
+		class Item511
+		{
+			position[]={3292.8279,2.3206825,12978.036};
+			name="atm_marker_5_1_1";
+			type="loc_Tourism";
+			colorName="ColorGreen";
+			angle=87.442413;
 		};
 	};
 	class Sensors
