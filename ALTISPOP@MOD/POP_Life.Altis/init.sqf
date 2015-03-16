@@ -22,7 +22,7 @@ life_versionInfo = "Altis Life RPG v5";
 };
 if(isServer) then  {
 	[
-		3*60, // seconds to delete dead bodies (0 means don't delete)
+		5*60, // seconds to delete dead bodies (0 means don't delete)
 		2*45, // seconds to delete dead vehicles (0 means don't delete)
 		0, // seconds to delete immobile vehicles (0 means don't delete)
 		1*45, // seconds to delete dropped weapons (0 means don't delete)
