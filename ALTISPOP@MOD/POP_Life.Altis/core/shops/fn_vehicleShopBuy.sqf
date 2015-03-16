@@ -22,9 +22,11 @@ if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg
 _spawnPoints = life_veh_shop select 1;
 _spawnPoint = "";
 
+/*
 if((life_veh_shop select 0) == "med_air_hs") then {
 	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Air"],35]) == 0) exitWith {_spawnPoint = _spawnPoints};
 } else {
+*/
 	//Check if there is multiple spawn points and find a suitable spawnpoint.
 	if(typeName _spawnPoints == typeName []) then {
 		//Find an available spawn point.
@@ -32,7 +34,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	} else {
 		if(count(nearestObjects[(getMarkerPos _spawnPoints),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _spawnPoints};
 	};
-};
+//};
 
 
 if(_spawnPoint == "") exitWith {hint localize "STR_Shop_Veh_Block";};
