@@ -86,11 +86,6 @@ publicVariable "life_group_list";
 //publicVariable "robosActivosGLOBAL";
 life_wanted_list = [];
 client_session_list = [];
-life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],
-	["cocainep",3500],["marijuana",2000],["turtle",3000],["blastingcharge",10000],
-	["boltcutter",500],["meta",50000],["goldbar",95000],["metilamina",35000],
-	["esposas",500],["llaveesposas",500],["semillasMaria",3000],["semillasCoca",5000]];
-publicVariable "life_illegal_items";
 
 [] spawn
 {

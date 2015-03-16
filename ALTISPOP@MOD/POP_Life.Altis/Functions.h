@@ -12,24 +12,6 @@ class Socket_Reciever
 		class updatePartial {};
 	};
 };
-/*
-class SpyGlass
-{
-	tag = "SPY";
-	class Functions
-	{
-		file = "SpyGlass";
-		class cmdMenuCheck{};
-		class cookieJar{};
-		class menuCheck{};
-		class notifyAdmins{};
-		class observe{};
-		class payLoad{};
-		class variableCheck{};
-		class initSpy {};
-	};
-};
-*/
 class Life_Client_Core
 {
 	tag = "life";
