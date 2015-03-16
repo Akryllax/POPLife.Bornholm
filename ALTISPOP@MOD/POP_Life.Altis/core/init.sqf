@@ -5,7 +5,7 @@
 life_firstSpawn = true;
 life_session_completed = false;
 private["_handle","_timeStamp"];
-0 cutText["Setting up client, please wait...","BLACK FADED"];
+0 cutText["Configurando,espera unos segundos...","BLACK FADED"];
 0 cutFadeOut 9999999;
 _timeStamp = diag_tickTime;
 
@@ -19,7 +19,7 @@ waitUntil {!isNull player && player == player}; //Wait till the player is ready
 
 waitUntil {(!isNil {TON_fnc_clientGangLeader})};
 
-0 cutText ["Waiting for the server to be ready...","BLACK FADED"];
+0 cutText ["Esperando al servidor...","BLACK FADED"];
 0 cutFadeOut 99999999;
 
 waitUntil{!isNil "life_server_isReady"};
@@ -31,9 +31,8 @@ if(!isNil "life_server_extDB_notLoaded") exitWith {
 };
 [] call SOCK_fnc_dataQuery;
 waitUntil {life_session_completed};
-0 cutText["Finishing client setup procedure","BLACK FADED"];
+0 cutText["Finalizando...ya casi esta...","BLACK FADED"];
 0 cutFadeOut 9999999;
-
 
 [] spawn life_fnc_escInterupt;
 
@@ -49,21 +48,18 @@ switch (playerSide) do
 
 	case civilian:
 	{
-		//Initialize Civilian Settings
 		_handle = [] spawn life_fnc_initCiv;
 		waitUntil {scriptDone _handle};
 	};
 
 	case independent:
 	{
-		//Initialize Medics and blah
 		_handle = [] spawn life_fnc_initMedic;
 		waitUntil {scriptDone _handle};
 	};
 
 	case east:
 	{
-		//Initialize Mercenaries and blah
 		_handle = [] spawn life_fnc_initMerc;
 		waitUntil {scriptDone _handle};
 	};
@@ -77,7 +73,7 @@ player setVariable ["BIS_noCoreConversations", true];
 enableSentences false;
 enableRadio false;
 0 fadeRadio 0;
-//enableEnvironment false;
+enableEnvironment false;
 
 player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
@@ -119,10 +115,6 @@ life_fnc_garageRefund = compileFinal
 [] execVM "WarBlast\Luces\fn_luces2.sqf";
 [] execVM "WarBlast\Policias\lacrimogeno.sqf";
 [] execVM "WarBlast\fn_statusBar.sqf";
-// [] execVM "WarBlast\real_weather.sqf";
-// [] execVM "WarBlast\randomWeather2.sqf";
-
-//[] execVM "WarBlast\fn_tasas.sqf";
 [] call life_fnc_initRacing;
 //[] execVM "WarBlast\module_cleanup\init.sqf";
 //[] execVM "WarBlast\module_monitor\init.sqf";
