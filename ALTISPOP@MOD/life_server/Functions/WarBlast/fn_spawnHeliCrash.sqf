@@ -28,10 +28,7 @@ while {true} do
 		["",0,"200Rnd_65x39_cased_Box_Tracer",4],
 		["LMG_Zafir_F",1,"150Rnd_762x51_Box_Tracer",1],
 		["",0,"150Rnd_762x51_Box_Tracer",4],
-		["LMG_Zafir_F",2,"",0],
-["RHhb",1,"RH30Rnd762x35FMJ",6],
-["ffaaarmasameli",1,"ffaa556x45ameli",6],
-["ariflemasak74m",1,"30Rndmas545x39mag",6]
+		["LMG_Zafir_F",2,"",0]
 	];
 	// VEST | CANTIDAD | HELM | CANTIDAD
 	/*_dropArray =

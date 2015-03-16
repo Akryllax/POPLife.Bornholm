@@ -17,7 +17,6 @@ _traje     =     _lista select 4;
 _chaleco   =     _lista select 5;
 _mochila   =     _lista select 6;
 _precio    =     _lista select 7;
-_objetos = _lista select 8;
 
 //Comprobaciones
 if !((_bando == _acera) or (_acera == "")) exitWith { hint "No tienes permitido la compra de esta clase";};
@@ -45,10 +44,4 @@ _unit assignItem "ItemCompass";
 
 _unit addWeapon _arma;
 _unit addMagazines _municion;
-_unit additem _mira;
-_unit forceadduniform _traje;
-_unit addvest _chaleco;
-_unit addbackpack _mochila;
-_unit additems _objetos;
-
-
+_unit add
