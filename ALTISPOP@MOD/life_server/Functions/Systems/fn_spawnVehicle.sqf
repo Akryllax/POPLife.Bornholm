@@ -68,12 +68,18 @@ _query = format["UPDATE vehicles SET active='1' WHERE pid='%1' AND id='%2'",_pid
 waitUntil {!DB_Async_Active};
 [_query,false] spawn DB_fnc_asyncCall;
 if(typeName _sp == "STRING") then {
-	_vehicle = createVehicle[(_vInfo select 2),[0,0,999],[],0,"NONE"];
+	_vehicle = createVehicle[(_vInfo select 2),_sp,[],0,"NONE"];
 	waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
 	_vehicle allowDamage false;
+	_vehicle setPos _sp;
+	_vehicle setVectorUp (surfaceNormal _sp);
+	_vehicle setDir _dir;
+	/*
 	_hs = nearestObjects[getMarkerPos _sp,["Land_Hospital_side2_F"],1] select 0;
 	_vehicle setPosATL (_hs modelToWorld [-0.4,-4,12.65]);
+	*/
 	sleep 0.6;
+	_vehicle disableTIEquipment true;
 } else {
 	_vehicle = createVehicle [(_vInfo select 2),_sp,[],0,"NONE"];
 	waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
@@ -81,6 +87,7 @@ if(typeName _sp == "STRING") then {
 	_vehicle setPos _sp;
 	_vehicle setVectorUp (surfaceNormal _sp);
 	_vehicle setDir _dir;
+	_vehicle disableTIEquipment true;
 };
 _vehicle allowDamage true;
 
