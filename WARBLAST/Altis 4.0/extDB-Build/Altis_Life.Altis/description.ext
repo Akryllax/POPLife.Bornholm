@@ -24,9 +24,9 @@ corpseRemovalMinTime = 999;
 corpseRemovalMaxTime = 9999;
 
 //SpyGlass configuration
-SPY_Enable = true;
+//SPY_Enable = true;
 
-#include "Config_Spyglass.hpp"
+//#include "Config_Spyglass.hpp"
 
 #include "dialog\MasterHandler.h"
 #include "Config_Master.hpp"

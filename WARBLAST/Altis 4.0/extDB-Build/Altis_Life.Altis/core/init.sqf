@@ -12,7 +12,7 @@ diag_log "----------------------------------------------------------------------
 diag_log "--------------------------------- Starting Altis Life Client Init ----------------------------------";
 diag_log "------------------------------------------------------------------------------------------------------";
 waitUntil {!isNull player && player == player}; //Wait till the player is ready
-[] call compile PreprocessFileLineNumbers "core\clientValidator.sqf";
+//[] call compile PreprocessFileLineNumbers "core\clientValidator.sqf";
 
 //Setup initial client core functions
 diag_log "::Life Client:: Initialization Variables";
@@ -90,7 +90,14 @@ life_sidechat = true;
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false,true] call life_fnc_MP;
 0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;
-
+/* Configuraciones de FPS del jugador */
+setViewDistance 1300;
+setTerrainGrid 50;
+player setVariable ["BIS_noCoreConversations", true];
+enableSentences false;
+enableRadio false;
+0 fadeRadio 0;
+enableEnvironment false;
 /* Set up frame-by-frame handlers */
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;
