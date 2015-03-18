@@ -4,6 +4,7 @@
 	Author: Tonic
 */
 private["_packet","_array","_flag"];
+last_position = getPos player;
 _packet = [getPlayerUID player,(profileName),playerSide,CASH,BANK];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
@@ -20,6 +21,8 @@ _packet pushBack life_gear;
 switch (playerSide) do {
 	case civilian: {
 		_packet pushBack life_is_arrested;
+		_packet pushBack last_position;
+        _packet pushBack life_is_alive;
 	};
 };
 

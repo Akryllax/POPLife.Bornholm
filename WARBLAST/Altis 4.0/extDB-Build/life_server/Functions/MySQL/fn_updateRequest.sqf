@@ -5,7 +5,7 @@
 	Description:
 	Ain't got time to describe it, READ THE FILE NAME!
 */
-private["_uid","_side","_cash","_bank","_licenses","_gear","_name","_query","_thread"];
+private["_uid","_side","_cash","_bank","_licenses","_gear","_name","_query","_thread","_position","_isalive"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _name = [_this,1,"",[""]] call BIS_fnc_param;
 _side = [_this,2,sideUnknown,[civilian]] call BIS_fnc_param;
@@ -13,6 +13,8 @@ _cash = [_this,3,0,[0]] call BIS_fnc_param;
 _bank = [_this,4,5000,[0]] call BIS_fnc_param;
 _licenses = [_this,5,[],[[]]] call BIS_fnc_param;
 _gear = [_this,6,[],[[]]] call BIS_fnc_param;
+_position = [_this,8,""] call BIS_fnc_param;
+_isalive = [_this select 9] call DB_fnc_bool;
 
 //Get to those error checks.
 if((_uid == "") OR (_name == "")) exitWith {};
@@ -32,6 +34,6 @@ switch (_side) do {
 	case civilian: {_query = format["playerCivilianUpdate:%1:%2:%3:%4:%6:%7:%5",_name,_cash,_bank,_licenses,_uid,_gear,[_this select 7] call DB_fnc_bool];};
 	case independent: {_query = format["playerWestUpdate:%1:%2:%3:%4:%6:%5",_name,_cash,_bank,_licenses,_uid,_gear];};
 };
-
+_query = format["playerPositionUpdate:%1:%2:%3",_position,_isalive,_uid];
 waitUntil {sleep (random 0.3); !DB_Async_Active};
 _queryResult = [_query,1] call DB_fnc_asyncCall;

@@ -33,6 +33,8 @@ life_vdFoot = viewDistance;
 life_vdCar = viewDistance;
 life_vdAir = viewDistance;
 tawvd_addon_disable = true;
+//Variables POP
+last_position = [];
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
@@ -66,12 +68,12 @@ switch (playerSide) do {
 		BANK = 7000; //Starting Bank Money
 		life_paycheck = 500; //Paycheck Amount
 	};
-	
+
 	case civilian: {
 		BANK = 3000; //Starting Bank Money
 		life_paycheck = 350; //Paycheck Amount
 	};
-	
+
 	case independent: {
 		BANK = 6500;
 		life_paycheck = 450;
@@ -90,6 +92,6 @@ switch (playerSide) do {
 {
 	_varName = getText(_x >> "variable");
 	_sideFlag = getText(_x >> "side");
-	
+
 	SVAR_MNS [LICENSE_VARNAME(_varName,_sideFlag),false];
 } foreach ("true" configClasses (missionConfigFile >> "Licenses"));

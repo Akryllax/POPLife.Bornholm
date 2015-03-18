@@ -2,7 +2,7 @@
 /*
 	File: fn_revived.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	THANK YOU JESUS I WAS SAVED!
 */
@@ -38,6 +38,7 @@ life_corpse SVAR ["Revive",nil,TRUE];
 life_corpse SVAR ["name",nil,TRUE];
 [[life_corpse],"life_fnc_corpse",true,false] call life_fnc_MP;
 hideBody life_corpse;
+life_is_alive = true;
 
 player SVAR ["Revive",nil,TRUE];
 player SVAR ["name",nil,TRUE];

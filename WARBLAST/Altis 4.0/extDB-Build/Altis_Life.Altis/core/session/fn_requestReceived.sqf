@@ -70,6 +70,8 @@ switch(playerSide) do {
 			[] spawn life_fnc_initGang;
 		};
 		[] spawn life_fnc_initHouses;
+		last_position = _this select 13;
+        life_is_alive = _this select 14;
 	};
 
 	case independent: {
