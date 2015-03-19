@@ -12843,7 +12843,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false; this addAction[""Equipar Clase MDF "",QUICK_fnc_comprarClaseMDF]; this setObjectTexture[0,""textures\CARTELES\equipos.jpg""]";
+			init="this allowDamage false; this enableSimulation false; this addAction[""Equipar Clase MDF "",QUICK_fnc_comprarClaseMDF]; ";
 		};
 		class Item943
 		{
