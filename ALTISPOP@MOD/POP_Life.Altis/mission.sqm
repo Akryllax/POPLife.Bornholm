@@ -14517,7 +14517,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Orel_NPC_Barman";
 			skill=0.60000002;
-			init="[this,0.064,0.064] call BIS_fnc_setPitchBank;  this enableSimulation false;  this allowDamage false;  this addAction[""Robar Camello del bar"",QUICK_fnc_robosHandler,[""Camello del bar"",400,50000 + round random 130000,35,[""marijuana"",""marijuana"",""cocainep"",""cocainep""],2,""no"",""no"",0]];this setObjectTexture[0,""textures\CARTELES\drogas.jpg""]; ";
+			init="[this,0.064,0.064] call BIS_fnc_setPitchBank;  this enableSimulation false;  this allowDamage false;  this addAction[""Robar Camello del bar"",QUICK_fnc_robosHandler,[""Camello del bar"",400,50000 + round random 130000,35,[""marijuana"",""marijuana"",""cocainep"",""cocainep""],2,""no"",""no"",0]];";
 		};
 		class Item1082
 		{
