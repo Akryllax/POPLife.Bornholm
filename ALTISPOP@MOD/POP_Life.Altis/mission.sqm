@@ -13065,13 +13065,13 @@ class Mission
 		class Item962
 		{
 			position[]={21979.215,28.258177,21036.416};
-			azimut=225.71155;
+			azimut=225.71201;
 			offsetY=0.69999999;
 			id=1092;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false; this addAction [""Play Slots ($2500)"", life_fnc_slotmachine]; this setObjectTexture[0,""textures\CARTELES\slot.jpg""];";
+			init="this enableSimulation false;  this allowDamage false; this addAction [""Play Slots ($2500)"", life_fnc_slotmachine]; ";
 		};
 		class Item963
 		{
@@ -14507,35 +14507,35 @@ class Mission
 		class Item1081
 		{
 			position[]={21977.264,28.205992,21038.646};
-			azimut=225.71155;
+			azimut=225.71201;
 			offsetY=0.69999999;
 			id=1211;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false; this addAction [""Play Slots ($2500)"", life_fnc_slotmachine]; this setObjectTexture[0,""textures\CARTELES\slot.jpg""];";
+			init="this enableSimulation false;  this allowDamage false; this addAction [""Play Slots ($2500)"", life_fnc_slotmachine]; ";
 		};
 		class Item1082
 		{
 			position[]={21983.477,28.296291,21032.154};
-			azimut=225.71155;
+			azimut=225.71201;
 			offsetY=0.69999999;
 			id=1212;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false; this addAction [""Play Slots ($2500)"", life_fnc_slotmachine]; this setObjectTexture[0,""textures\CARTELES\slot.jpg""];";
+			init="this enableSimulation false;  this allowDamage false; this addAction [""Play Slots ($2500)"", life_fnc_slotmachine]; ";
 		};
 		class Item1083
 		{
 			position[]={21981.525,28.289246,21034.385};
-			azimut=225.71155;
+			azimut=225.71201;
 			offsetY=0.69999999;
 			id=1213;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;  this allowDamage false; this addAction [""Play Slots ($2500)"", life_fnc_slotmachine]; this setObjectTexture[0,""textures\CARTELES\slot.jpg""];";
+			init="this enableSimulation false;  this allowDamage false; this addAction [""Play Slots ($2500)"", life_fnc_slotmachine]; ";
 		};
 		class Item1084
 		{
