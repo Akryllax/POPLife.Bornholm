@@ -3,37 +3,10 @@
         Author: WarBlast
         Example:
 
-        this addAction[
-        "Robo Gasolinera kavala",
-        War_fnc_roboGasolinera,
-        [10000,
-        1,
-        3,
-        300,
-        40,
-        true,
-        25,
-        25,
-        ["Gasolinera kavala"],
-        ["goldbar","sand"],
-        1
-        ]];
+        this addAction["Robo Gasolinera kavala",War_fnc_roboGasolinera,[10000,1,3,300,40,true,25,25,["Gasolinera kavala"],["goldbar","sand"],1]];
 
         Example:
-
-                this addAction["Robar X",
-                 War_fnc_roboGasolinera,
-                  [DINERO,
-                  GENTE CERCA,
-                  POLICIAS MIN,
-                  TIEMPO en SEGUNDOS,
-                  METROS MAX,
-                  MUTLIPLICADOR x Jugadores,
-                  Metros multiplicador,
-                  porcentaje Inverso de la alarma ejem 10% = 90,
-                  ["Nombre del robo"],
-                  ["objeto","objeto","todos los que quieras"],
-                  CANTIDAD DE OBJETOS];
+        this addAction["Robar X",War_fnc_roboGasolinera,[DINERO,GENTE CERCA,POLICIAS MIN,TIEMPO en SEGUNDOS,METROS MAX,MUTLIPLICADOR x Jugadores,Metros multiplicador,porcentaje Inverso de la alarma ejem 10% = 90,["Nombre del robo"],["objeto","objeto","todos los que quieras"],CANTIDAD DE OBJETOS];
 */
 
 private ["_vendedor", "_ladron", "_accion", "_polis", "_random", "_caja", "_robando", "_tiempo", "_max", "_robando", "_actual", "_policias", "_lista", "_gente", "_fail"];
