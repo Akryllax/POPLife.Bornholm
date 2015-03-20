@@ -2,11 +2,38 @@
         Script: fn_roboGasolinera.sqf
         Author: WarBlast
         Example:
-        this addAction["Robo Gasolinera kavala",War_fnc_roboGasolinera,[10000,1,3,300,40,true,25,25,["kavala"]]];
+
+        this addAction[
+        "Robo Gasolinera kavala",
+        War_fnc_roboGasolinera,
+        [10000,
+        1,
+        3,
+        300,
+        40,
+        true,
+        25,
+        25,
+        ["Gasolinera kavala"],
+        ["goldbar","sand"],
+        1
+        ]];
 
         Example:
 
-                this addAction["Robar X", War_fnc_roboGasolinera, [DINERO,GENTE CERCA,POLICIAS MIN,TIEMPO en SEGUNDOS,METROS MAX,MUTLIPLICADOR x Jugadores,Metros multiplicador, porcentaje Inverso de la alarma ejem 10% = 90,["Nombre final de Gasolinera"]]];
+                this addAction["Robar X",
+                 War_fnc_roboGasolinera,
+                  [DINERO,
+                  GENTE CERCA,
+                  POLICIAS MIN,
+                  TIEMPO en SEGUNDOS,
+                  METROS MAX,
+                  MUTLIPLICADOR x Jugadores,
+                  Metros multiplicador,
+                  porcentaje Inverso de la alarma ejem 10% = 90,
+                  ["Nombre del robo"],
+                  ["objeto","objeto","todos los que quieras"],
+                  CANTIDAD DE OBJETOS];
 */
 
 private ["_vendedor", "_ladron", "_accion", "_polis", "_random", "_caja", "_robando", "_tiempo", "_max", "_robando", "_actual", "_policias", "_lista", "_gente" , "_fail"];
@@ -27,6 +54,7 @@ _multi	   =     _lista select 5;
 _numero	   =     _lista select 6;
 _alarma    =     _lista select 7;
 _nombre	   =     _lista select 8;
+_objetos   =     _lista select 9;
 
 // Anti bugs etc....
 if (life_robandoGas) exitWith { hint "ya lo estas robando!"};
@@ -54,7 +82,7 @@ _vendedor removeAction _accion;
 
 //ALARMAAAAA
 if (_random >= _alarma) then { hint "El dependiente a activado la alarma! Ahora la poli viene de camino!";
-			  [ [1, format ["ALARMA! La gasolinera %1 esta siendo robada!", _vendedor]], "life_fnc_broadcast", west, false] spawn life_fnc_MP;
+			  [ [1, format ["ALARMA! Estan Robando %1", _vendedor]], "life_fnc_broadcast", west, false] spawn life_fnc_MP;
 	};
 
 // Añadimos delito!
@@ -108,7 +136,15 @@ sleep 2;
 
 //Pagamos y dejamos el rastro
 titleText [format ["Robastest $%1, ahora largate antes de que llegue la poli!", [_caja] call life_fnc_numberText], "PLAIN"];
+
 life_cash = life_cash + _caja;
+
+if((str _objetos) != "[]")then{
+	{
+	  [true,_x,_cantidad] call life_fnc_handleInv;
+	} forEach _objetos;
+
+};
 
 _pos	  = position _ladron;
 _markerID = format ["marker_%1", floor(random 100)];
@@ -122,4 +158,4 @@ deleteMarker _marker;
 
 //Añadimos accion!
 sleep 270;
-_accion	  = _vendedor addAction [format ["RobarGasolinera %1", _nombre], War_fnc_roboGasolinera, _lista];
+_accion	  = _vendedor addAction [format ["Robar  %1", _nombre], War_fnc_roboGasolinera, _lista];
