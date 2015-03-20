@@ -26763,7 +26763,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Orel_NPC_Woman1";
 			skill=0.60000002;
-			init="this addAction[""Robo Joyeria"",War_fnc_roboGasolinera,[150000,0,0,300,40,false,1,5,[""Joyeria""],[""goldbar""],3]];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Robar Joyeria"",QUICK_fnc_robosHandler,[""Joyeria"",400,50000 + round random 130000,50,[""goldbar""],3,""no"",""no"",0]]; ";
 		};
 		class Item2372
 		{
