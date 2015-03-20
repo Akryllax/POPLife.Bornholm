@@ -82,11 +82,14 @@ while {life_robandoGas} do {
 		};
 
 	// Si muere adios // tasean // se aleja
-	if !(alive _ladron) OR (life_istazed) OR ((_vendedor distance _ladron) > _distancia)  exitWith {
+	if !(alive _ladron) OR (life_istazed) exitWith {
 		life_robandoGas = false;
 		deleteMarker _marca;
 		_fail = true;
 	};
+	if((_vendedor distance _ladron) > _distancia)  exitWith {
+		life_robandoGas = false;
+		deleteMarker _marca;
 
 	// Miramos los metros ;D
 	_metros = _vendedor distance _ladron;
