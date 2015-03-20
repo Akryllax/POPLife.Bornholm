@@ -507,6 +507,12 @@ class Quickskill
 		file = "QUICKSKILL\trabajos";
 		class seguridadPrivada{};
 	};
+	    class Robos
+    {
+        file = "QUICKSKILL\robos";
+        class robosHandler {};
+        class timerRobo {};
+    };
 };
 class Akryllax {
 	tag = "life";
