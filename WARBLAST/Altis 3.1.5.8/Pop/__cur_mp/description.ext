@@ -1,0 +1,348 @@
+author = "Tonic, Ciaran, TinyBigJacko and Wilco";
+onLoadName = "Altis Life UK v8.1.0";
+onLoadMission = "An RPG game mode developed by Tonic<br/>(RELEASE 8.1.0) By AltisLife.co.uk";
+loadscreen = "ALUK_Loading.jpg";
+joinUnassigned = 0;
+respawn = BASE;
+respawndelay = 10;
+disabledAI = true;
+disableChannels[]={0,1,2};
+enableDebugConsole = 1;
+respawnDialog = 0;
+scriptedPlayer = 1;
+
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 120;
+};
+
+wreckLimit = 3;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 320;
+corpseLimit = 150;
+corpseRemovalMinTime = 999;
+corpseRemovalMaxTime = 9999;
+
+#include "dialog\MasterHandler.h"
+#include "config_files\spawnPoints.hpp"
+#include "config_files\virtShop.hpp"
+#include "config_files\clothingStore.hpp"
+
+class ALUK_MOD_CONFIG {
+	version = 1.0.0;	
+};
+
+class RscTitles
+{
+	#include "dialog\ui.hpp"
+	#include "dialog\progress.hpp"
+	#include "dialog\hud_nameTags.h"
+
+	class intro 
+	{
+		idd = -1;
+		duration = 999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+		class controls
+		{
+			class RscPicture_1200: Life_RscPicture
+			{
+				idc = -1;
+				text = "intrologo.paa";
+				x = 0.324347 * safezoneW + safezoneX;
+				y = 0.348761 * safezoneH + safezoneY;
+				w = 0.3525 * safezoneW;
+				h = 0.294074 * safezoneH;
+			};
+		};
+	};
+};
+
+class CfgFunctions
+{
+	#include "config_files\functions.hpp"
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	class CencomWail
+	{
+		name = "CencomWail";
+		sound[] = {"\sounds\CencomWail.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class CencomWailYelp
+	{
+		name = "CencomWailYelp";
+		sound[] = {"\sounds\CencomWailYelp.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class CencomHorn
+	{
+		name = "CencomHorn";
+		sound[] = {"\sounds\CencomHorn.ogg", 1.0, 1};
+		titles[] = {};
+	};	
+	
+	class tazersound
+	{
+		name = "Tazersound";
+		sound[] = {"\sounds\tazer.ogg", 0.25, 1};
+		titles[] = {};
+	};
+	
+	class car_lock
+	{
+		name = "car_lock";
+		sound[] = {"\sounds\car_locked_bleep.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class car_unlock
+	{
+		name = "car_unlock";
+		sound[] = {"\sounds\car_unlocked.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class car_lock_stealthy
+	{
+		name = "car_lock_stealthy";
+		sound[] = {"\sounds\car_locked_nobleep.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class RadarBleeps
+	{
+		name = "RadarBleeps";
+		sound[] = {"\sounds\RadarBleeps.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class ZipTie
+	{
+		name = "ZipTie";
+		sound[] = {"\sounds\ziptie.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class giveticket
+	{
+		name = "giveticket";
+		sound[] = {"\sounds\Ticket_Writing.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class cuffson
+	{
+		name = "cuffson";
+		sound[] = {"\sounds\Handcuffs.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class slot_spin
+	{
+		name = "slot_spin";
+		sound[] = {"\sounds\slot_spin.ogg", 1, 1};
+		titles[] = {};
+	};
+	
+	class slot_payoff
+	{
+		name = "slot_payoff";
+		sound[] = {"\sounds\slot_payoff.ogg", 1, 1};
+		titles[] = {};
+	};
+
+	class buy
+	{
+		name = "buy";
+		sound[] = {"\sounds\buy.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class message
+	{
+		name = "message";
+		sound[] = {"\sounds\sms.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class airplane
+	{
+		name = "airplane";
+		sound[] = {"\sounds\airplane.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class lockpick
+	{
+		name = "lockpick";
+		sound[] = {"\sounds\caralarmnew.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class bagopen
+	{
+		name = "bagopen";
+		sound[] = {"\sounds\bagopen.ogg", 1.0, 1};
+		titles[] = {};		
+	};
+
+	class shopalarm
+	{
+		name = "shopalarm";
+		sound[] = {"\sounds\alarm.ogg", 1.0, 1};
+		titles[] = {};	
+	};
+
+	class jailbreak
+	{
+		name = "jailbreak";
+		sound[] = {"\sounds\jailbreak.ogg", 1.0, 1};
+		titles[] = {};	
+	};
+
+	class spike
+	{
+		name = "spike";
+		sound[] = {"\sounds\spike.ogg", 1.0, 1};
+		titles[] = {};	
+	};
+
+	#include "config_files\introSounds.hpp"
+};
+
+class CfgDebriefing
+{
+	class NotWhitelisted
+	{
+		title = "Mission Failed";
+		subtitle = "You are not white-listed to use this slot";
+		description = "Please apply at AltisLife.co.uk in order to join the police department.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+	
+	class Blacklisted
+	{
+		title = "Mission Failed";
+		subtitle = "You are blacklisted from cops";
+		description = "You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+	
+	class SpyGlass
+	{
+		title = "The SpyGlass sees you";
+		subTitle = "You were detected by the SpyGlass";
+		description = "You were detected for cheating and have been reported to the server. Enjoy your day.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+
+	class ALUKAC
+	{
+		title = "ALUK Anticheat Flagged";
+		subTitle = "Ciarans anti-cheat has flagged you.";
+		description = "Have a nice day, your happenings have been reported to the server and will be dealt with.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+
+	class Aborted
+	{
+		title = "Goodbye!";
+		subTitle = "Your data has been sent to the server!";
+		description = "AltisLife.co.uk #1 Altis Life Community and Server in the UK and Europe.";
+		pictureBackground = "outrologo.paa";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+};
+
+class CfgNotifications
+{
+	class MedicalRequestEmerg
+	{
+		title = "EMS Requested";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		duration = 5;
+		priority = 7;
+	};
+	
+	class DeliveryAssigned
+	{
+		title = "Delivery Job Accepted";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		duration = 10;
+		priority = 7;
+	};
+	
+	class DeliveryFailed
+	{
+		title = "Delivery Job Failed";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
+		description = "%1";
+		duration = 7;
+		priority = 7;
+	};
+	
+	class DeliverySucceeded
+	{
+		title = "Delivery Job Completed";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcondone_ca.paa";
+		description = "%1";
+		duration = 6;
+		priority = 6;
+	};
+	
+	class TextMessage
+	{
+		title = "Received A Text Message";
+		iconPicture = "icons\messagenew.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+	
+	class PoliceDispatch
+	{
+		title = "999 Dispatch Center";
+		iconPicture = "icons\messagepolice.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+	
+	class AdminDispatch
+	{
+		title = "Admin Dispatch Center";
+		iconPicture = "icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+	
+	class AdminMessage
+	{
+		title = "Admin Message";
+		iconPicture = "icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 5;
+	};
+};
+
+class CfgRemoteExecCommands {};
