@@ -82,15 +82,26 @@ while {life_robandoGas} do {
 		};
 
 	// Si muere adios // tasean // se aleja
-	if !(alive _ladron) OR (life_istazed) exitWith {
+	if !(alive _ladron) exitWith {
 		life_robandoGas = false;
 		deleteMarker _marca;
 		_fail = true;
 	};
-	if((_vendedor distance _ladron) > _distancia)  exitWith {
+	//Si le tasean adioss
+	if (life_istazed) exitwith {
 		life_robandoGas = false;
-		deleteMarker _marca;
+	    hint "Te pillaron!";
+	    deleteMarker _marca;
+	    _fail = true;
+	};
 
+    //Si te alejas adiosss
+	if ((_vendedor distance _ladron) > _distancia) exitWith {
+		hint "Te has alejado demasiado";
+		deleteMarker _marca;
+		life_robandoGas = false;
+		_fail = true;
+	};
 	// Miramos los metros ;D
 	_metros = _vendedor distance _ladron;
 
