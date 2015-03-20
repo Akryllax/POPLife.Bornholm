@@ -89,7 +89,7 @@ if (_random >= _alarma) then { hint "El dependiente a activado la alarma! Ahora 
 [ [getPlayerUID _ladron, name _ladron, "5"], "life_fnc_wantedAdd", false, false] spawn life_fnc_MP;
 
 //Calculamos tiempo
-_tiempo = 0
+_tiempo = 0;
 
 //El marcador de aviso!
 _pos	 = position _ladron;

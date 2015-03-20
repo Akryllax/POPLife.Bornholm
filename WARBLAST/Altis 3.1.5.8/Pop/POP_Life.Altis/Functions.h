@@ -497,71 +497,20 @@ class Quickskill
         class plantarMaiz {};
         class plantarTomates {};
 	};
-	
 	class EfectosDrogas
 	{
 		file = "QUICKSKILL\items";
 		class drugsEffects {};
 	};
-
-     class Items
-	{
-		file = "QUICKSKILL\items";
-		class gpsEspia {};
-		class kitTortura{};
-		class bombaVelocidad{};
-	};
-	
-	class Espias
-	{
-		file = "QUICKSKILL\espias";
-		class darChivatazo{};
-		
-	};
-	
-	class RoleMode
-	{
-		file = "QUICKSKILL\rolemode";
-		class roleMode {};
-		class roleModeCops {};	
-	};
-	
-	class Robos
-	{
-		file = "QUICKSKILL\robos";
-		class robosHandler {};
-		class timerRobo {};
-	};
-
 	class Trabajos
 	{
 		file = "QUICKSKILL\trabajos";
-		class comprarFurgoQuimico {};
-		class cocinarMeta {};
 		class seguridadPrivada{};
-		class transportarDrogaMar{};
-		
 	};
-
-	class Barrios
-	{
-		file = "QUICKSKILL\barrios";
-		//class capturarBarrio {};
-	
-		//class barrioCapturado{};
-		
-		
-	};
-
 };
 class Akryllax {
 	tag = "life";
-	class Tracking
-	{
-		file = "core\AKR\tracking";
-		class suspectTracking {};
-	};
-	
+
 	class Racing
 	{
 		file = "core\akr\racing";
@@ -578,10 +527,4 @@ class Akryllax {
 		class startTrackAction{};
 		class testing {};
 	};
-	class Cazarrecompensas
-	{
-		file ="core\AKR\cazarrecompensas";
-		class activarCazarrecompensas {};
-	};
-	
 };

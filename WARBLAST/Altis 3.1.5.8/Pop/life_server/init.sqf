@@ -4,7 +4,7 @@ DB_Async_ExtraLock = false;
 life_server_isReady = false;
 publicVariable "life_server_isReady";
 
-[] execFSM "\life_server\cleanup.fsm";
+//[] execFSM "\life_server\cleanup.fsm";
 [] execVM "\life_server\functions.sqf";
 [] execVM "\life_server\eventhandlers.sqf";
 
@@ -82,8 +82,6 @@ life_gang_list = [];
 publicVariable "life_gang_list";
 life_group_list = [];
 publicVariable "life_group_list";
-//robosActivosGLOBAL = [];
-//publicVariable "robosActivosGLOBAL";
 life_wanted_list = [];
 client_session_list = [];
 
@@ -139,22 +137,21 @@ _rsb allowDamage false;
 _dome allowDamage false;
 
 //WarBlast: Mapa Dinamico
-[] execVM "\life_server\Functions\WarBlast\fn_spawnHeliCrash.sqf";
-call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
-[] execVM "\life_server\Functions\WarBlast\fn_spawnNaufragios.sqf";
-call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+//[] execVM "\life_server\Functions\WarBlast\fn_spawnHeliCrash.sqf";
+//call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+//[] execVM "\life_server\Functions\WarBlast\fn_spawnNaufragios.sqf";
+//call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
 //airdrop
-[] execVM "\life_server\Functions\airdrop\config.sqf";
-[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
-
-life_server_isReady = true;
-publicVariable "life_server_isReady";
-
-	[
+//[] execVM "\life_server\Functions\airdrop\config.sqf";
+//[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
+[
 		3*60, // seconds to delete dead bodies (0 means don't delete)
 		2*45, // seconds to delete dead vehicles (0 means don't delete)
 		0, // seconds to delete immobile vehicles (0 means don't delete)
 		1*45, // seconds to delete dropped weapons (0 means don't delete)
 		10*60, // seconds to deleted planted explosives (0 means don't delete)
 		0 // seconds to delete dropped smokes/chemlights (0 means don't delete)
-] execVM "WarBlast\repetitive_cleanup.sqf";
+] execVM "life_server\repetitive_cleanup.sqf";
+
+life_server_isReady = true;
+publicVariable "life_server_isReady";

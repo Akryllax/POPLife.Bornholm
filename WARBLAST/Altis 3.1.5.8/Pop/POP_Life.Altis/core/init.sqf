@@ -111,13 +111,11 @@ life_fnc_garageRefund = compileFinal
 [] execVM "core\init_survival.sqf";
 
 [] execVM "WarBlast\zlt_fastrope.sqf";
-[] execVM "WarBlast\Luces\fn_luces.sqf";
-[] execVM "WarBlast\Luces\fn_luces2.sqf";
+//[] execVM "WarBlast\Luces\fn_luces.sqf";
+//[] execVM "WarBlast\Luces\fn_luces2.sqf";
 [] execVM "WarBlast\Policias\lacrimogeno.sqf";
 [] execVM "WarBlast\fn_statusBar.sqf";
 [] call life_fnc_initRacing;
-//[] execVM "WarBlast\module_cleanup\init.sqf";
-//[] execVM "WarBlast\module_monitor\init.sqf";
 
 
 switch(__GETC__(life_donator)) do
