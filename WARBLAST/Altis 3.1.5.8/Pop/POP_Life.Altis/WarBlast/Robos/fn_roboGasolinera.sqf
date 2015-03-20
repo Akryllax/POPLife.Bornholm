@@ -65,7 +65,7 @@ _tiempo = 0
 
 //El marcador de aviso!
 _pos	 = position _ladron;
-_marcaID = format ["marca_%1", floor (random 1000)];
+_marcaID = format ["marca_%1", floor (random 100)];
 _marca	 = createMarker [_marcaID, _pos];
 _marca setMarkerColor "ColorRed";
 _marca setMarkerText "!ATENCION! Alarma activada!";
@@ -80,27 +80,11 @@ while {life_robandoGas} do {
 		deleteMarker _marca;
 	};
 
-	//Si muere adios
-	if !(alive _ladron) exitWith {
+	//Si muere adios // tasean // se aleja
+	if !(alive _ladron) OR (life_istazed) OR ((_vendedor distance _ladron) > _distancia)  exitWith {
 		life_robandoGas = false;
 		deleteMarker _marca;
 	    _fail = true;
-	};
-
-	//Si le tasean adioss
-	if (life_istazed) exitwith {
-		life_robandoGas = false;
-	    hint "Te pillaron!";
-	    deleteMarker _marca;
-	    _fail = true;
-	};
-
-    //Si te alejas adiosss
-	if ((_vendedor distance _ladron) > _distancia) exitWith {
-		hint "Te has alejado demasiado";
-		deleteMarker _marca;
-		life_robandoGas = false;
-		_fail = true;
 	};
 
 	//Miramos los metros ;D
@@ -127,7 +111,7 @@ titleText [format ["Robastest $%1, ahora largate antes de que llegue la poli!", 
 life_cash = life_cash + _caja;
 
 _pos	  = position _ladron;
-_markerID = format ["marker_%1", floor(random 1000)];
+_markerID = format ["marker_%1", floor(random 100)];
 _marker	  = createMarker [_markerID, _pos];
 _marker setMarkerColor "ColorRed";
 _marker setMarkerText "Ladrón visto aqui por última vez";
