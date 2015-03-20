@@ -77,8 +77,8 @@ while {life_robandoGas} do {
 
 	// Si se pasa de tiempo Exito!
 	if (_tiempo >= _max) exitWith {
-			life_robandoGas = false;
-			deleteMarker _marca;
+		life_robandoGas = false;
+		deleteMarker _marca;
 		};
 
 	// Si muere adios // tasean // se aleja
