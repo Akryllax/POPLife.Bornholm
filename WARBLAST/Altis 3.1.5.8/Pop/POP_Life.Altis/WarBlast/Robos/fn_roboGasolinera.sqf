@@ -61,8 +61,7 @@ if (_random >= _alarma) then { hint "El dependiente a activado la alarma! Ahora 
 [ [getPlayerUID _ladron, name _ladron, "5"], "life_fnc_wantedAdd", false, false] spawn life_fnc_MP;
 
 //Calculamos tiempo
-_actual = time;
-_tiempo = _tiempo + _actual;
+_tiempo = 0
 
 //El marcador de aviso!
 _pos	 = position _ladron;
@@ -76,10 +75,9 @@ _marca setMarkerType "mil_warning";
 while {life_robandoGas} do {
 
 	//Si se pasa de tiempo Exito!
-	if (_tiempo > _max) exitWith {
+	if (_tiempo >= _max) exitWith {
 		life_robandoGas = false;
 		deleteMarker _marca;
-	    _fail = true;
 	};
 
 	//Si muere adios

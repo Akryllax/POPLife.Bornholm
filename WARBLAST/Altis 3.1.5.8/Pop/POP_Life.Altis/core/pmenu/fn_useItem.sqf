@@ -204,7 +204,7 @@ switch (true) do
 			};
 		};
 	};
-   //items defensas
+};
 
 
 [] call life_fnc_p_updateMenu;
