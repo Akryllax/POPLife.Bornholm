@@ -36,7 +36,7 @@
                   CANTIDAD DE OBJETOS];
 */
 
-private ["_vendedor", "_ladron", "_accion", "_polis", "_random", "_caja", "_robando", "_tiempo", "_max", "_robando", "_actual", "_policias", "_lista", "_gente" , "_fail"];
+private ["_vendedor", "_ladron", "_accion", "_polis", "_random", "_caja", "_robando", "_tiempo", "_max", "_robando", "_actual", "_policias", "_lista", "_gente", "_fail"];
 
 // Cositas de War
 _vendedor  =     [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
@@ -52,7 +52,7 @@ _max	   =     _lista select 3;
 _distancia =     _lista select 4;
 _multi	   =     _lista select 5;
 _numero	   =     _lista select 6;
-_alarma    =     _lista select 7;
+_alarma	   =     _lista select 7;
 _nombre	   =     _lista select 8;
 _objetos   =     _lista select 9;
 
@@ -77,21 +77,21 @@ if (_multi) then {
 		_caja = _caja * (count nearestObjects [player, ["civilian"], _numero]);
 	};
 
-//Adios accion
+// Adios accion
 _vendedor removeAction _accion;
 
-//ALARMAAAAA
+// ALARMAAAAA
 if (_random >= _alarma) then { hint "El dependiente a activado la alarma! Ahora la poli viene de camino!";
-			  [ [1, format ["ALARMA! Estan Robando %1", _vendedor]], "life_fnc_broadcast", west, false] spawn life_fnc_MP;
+			       [ [1, format ["ALARMA! Estan Robando %1", _vendedor]], "life_fnc_broadcast", west, false] spawn life_fnc_MP;
 	};
 
 // Añadimos delito!
 [ [getPlayerUID _ladron, name _ladron, "5"], "life_fnc_wantedAdd", false, false] spawn life_fnc_MP;
 
-//Calculamos tiempo
+// Calculamos tiempo
 _tiempo = 0;
 
-//El marcador de aviso!
+// El marcador de aviso!
 _pos	 = position _ladron;
 _marcaID = format ["marca_%1", floor (random 100)];
 _marca	 = createMarker [_marcaID, _pos];
@@ -99,52 +99,51 @@ _marca setMarkerColor "ColorRed";
 _marca setMarkerText "!ATENCION! Alarma activada!";
 _marca setMarkerType "mil_warning";
 
-//Mientras roban
+// Mientras roban
 while {life_robandoGas} do {
 
-	//Si se pasa de tiempo Exito!
+	// Si se pasa de tiempo Exito!
 	if (_tiempo >= _max) exitWith {
-		life_robandoGas = false;
-		deleteMarker _marca;
-	};
+			life_robandoGas = false;
+			deleteMarker _marca;
+		};
 
-	//Si muere adios // tasean // se aleja
+	// Si muere adios // tasean // se aleja
 	if !(alive _ladron) OR (life_istazed) OR ((_vendedor distance _ladron) > _distancia)  exitWith {
 		life_robandoGas = false;
 		deleteMarker _marca;
-	    _fail = true;
+		_fail = true;
 	};
 
-	//Miramos los metros ;D
+	// Miramos los metros ;D
 	_metros = _vendedor distance _ladron;
 
-	//Le ponemos el cartel
+	// Le ponemos el cartel
 	hintSilent format ["Tiempo para robar: %1 \n Distancia: %2m (max %3m)", [((_max) / 60) + .01, "HH:MM"] call BIS_fnc_timetostring, round (_metros), _distancia];
 
-	//COntamos con barrio sesamo
+	// COntamos con barrio sesamo
 	_max = _max - 1;
 	sleep 1;
 };
 
-//Si hicistes fail te jodes
+// Si hicistes fail te jodes
 if (_fail) exitWith {};
 
-//Ya no esta robando
+// Ya no esta robando
 life_robandoGas = false;
 deleteMarker _marca;
 sleep 2;
 
-//Pagamos y dejamos el rastro
+// Pagamos y dejamos el rastro
 titleText [format ["Robastest $%1, ahora largate antes de que llegue la poli!", [_caja] call life_fnc_numberText], "PLAIN"];
 
 life_cash = life_cash + _caja;
 
-if((str _objetos) != "[]")then{
-	{
-	  [true,_x,_cantidad] call life_fnc_handleInv;
-	} forEach _objetos;
-
-};
+if ((str _objetos) != "[]") then {
+		{
+			[true, _x, _cantidad] call life_fnc_handleInv;
+		} forEach _objetos;
+	};
 
 _pos	  = position _ladron;
 _markerID = format ["marker_%1", floor(random 100)];
@@ -156,6 +155,6 @@ _marker setMarkerType "mil_warning";
 sleep 30;
 deleteMarker _marker;
 
-//Añadimos accion!
+// Añadimos accion!
 sleep 270;
-_accion	  = _vendedor addAction [format ["Robar  %1", _nombre], War_fnc_roboGasolinera, _lista];
+_accion = _vendedor addAction [format ["Robar  %1", _nombre], War_fnc_roboGasolinera, _lista];
