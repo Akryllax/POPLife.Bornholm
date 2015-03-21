@@ -402,7 +402,7 @@ buy_array =
 	["maiz",1500],
 
 	//trabajos
-	["meta",25000],
+	["meta",50000],
 	["petroleo",5000],
 	//casino
 	["maletin_casino",1500000]
