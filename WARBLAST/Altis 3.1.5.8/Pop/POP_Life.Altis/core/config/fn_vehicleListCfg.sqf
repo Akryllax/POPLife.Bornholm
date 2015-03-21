@@ -41,9 +41,6 @@ switch (_shop) do
 		_return =
 		[
 			["B_Quadbike_01_F",2500 * Desc],
-			["C_Hatchback_01_F",9500 * Desc],
-			["C_Offroad_01_F",12500 * Desc],
-			["C_SUV_01_F",35000 * Desc],
 			["C_Van_01_transport_F",40000 * Desc],
 			["C_Hatchback_01_sport_F",60000 * Desc],
 			["DAR_TahoeCiv",99999 * Desc],
@@ -64,9 +61,6 @@ switch (_shop) do
 			if(__GETC__(life_donator) == 1) then
 			{
 		    _return pushBack ["B_Quadbike_01_F",2500 * Desc];
-			_return pushBack ["C_Hatchback_01_F",9500 * Desc];
-			_return pushBack ["C_Offroad_01_F",12500 * Desc];
-			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
 			_return pushBack ["cl3_civic_vti_black",67000 * Desc];
@@ -82,9 +76,6 @@ switch (_shop) do
 			if(__GETC__(life_donator) == 2) then
 			{
 		    _return pushBack ["B_Quadbike_01_F",2500 * Desc];
-			_return pushBack ["C_Hatchback_01_F",9500 * Desc];
-			_return pushBack ["C_Offroad_01_F",12500 * Desc];
-			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
 			_return pushBack ["cl3_civic_vti_black",67000 * Desc];
@@ -101,9 +92,6 @@ switch (_shop) do
 			if(__GETC__(life_donator) == 3) then
 			{
 		    _return pushBack ["B_Quadbike_01_F",2500 * Desc];
-			_return pushBack ["C_Hatchback_01_F",9500 * Desc];
-			_return pushBack ["C_Offroad_01_F",12500 * Desc];
-			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
 			_return pushBack ["cl3_civic_vti_black",67000 * Desc];
@@ -121,9 +109,6 @@ switch (_shop) do
 			if(__GETC__(life_donator) == 4) then
 			{
 		    _return pushBack ["B_Quadbike_01_F",2500 * Desc];
-			_return pushBack ["C_Hatchback_01_F",9500 * Desc];
-			_return pushBack ["C_Offroad_01_F",12500 * Desc];
-			_return pushBack ["C_SUV_01_F",35000 * Desc];
 			_return pushBack ["C_Van_01_transport_F",40000 * Desc];
 			_return pushBack ["C_Hatchback_01_sport_F",60000 * Desc];
 			_return pushBack ["cl3_civic_vti_black",67000 * Desc];
@@ -190,10 +175,10 @@ switch (_shop) do
 
 	case "cop_car":
 	{
-		_return pushBack ["B_Quadbike_01_F",1000 * Desc];
-		_return pushBack ["C_Hatchback_01_sport_F",50000 * Desc];
-		_return pushBack ["C_Offroad_01_F",25000 * Desc];
-		_return pushBack ["C_SUV_01_F",35000 * Desc];
+		_return pushBack ["TDR_Taurus_CNP_ST",1000 * Desc];
+		_return pushBack ["TDR_Tahoe_K",30000 * Desc];
+		_return pushBack ["TDR_Explorer_K",30000 * Desc];
+		_return pushBack ["TDR_Taurus_CNP_ST",30000 * Desc];
 
 		if(__GETC__(life_coplevel) >= 6) then
 			{
