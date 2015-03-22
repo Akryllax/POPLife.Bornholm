@@ -71,8 +71,10 @@ class CfgFunctions
 		
 		class Jail_Sys
 		{
-			file = "\life_server\Functions\Jail";
-			class jailSys {};
+            file = "\life_server\Functions\Jail";
+            class jailSys {};
+            class jailTimer {};
+            class jailPlayer {};
 		};
 		
 		class Client_Code
@@ -126,6 +128,7 @@ class CfgFunctions
 			class removeGang {};
 			class updateGang {};
 		};
+
 	};
 };
 
