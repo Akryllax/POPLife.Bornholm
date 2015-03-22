@@ -82,4 +82,3 @@ if(_seco != "") then {_handle = [_seco,true,false,false,false] spawn life_fnc_ha
     };
 } foreach (_hItems);
 
-[] call War_fnc_texturas;

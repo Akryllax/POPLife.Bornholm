@@ -10,4 +10,4 @@ format["Bienvenido %1",profileName] hintC
 	"Puedes ver las normas del servidor usando la tecla M para sacar el mapa o puedes pasarte por nuestra pagina web www.plataoplomo.wtf",
 	"Si ves algun BUG o quieres reportar alguna cosa y no hay nadie en el TeamSpeak puedes usar el foro de nuestra web www.plataoplomo.wtf"
 ];
-[] call War_fnc_texturas;
+

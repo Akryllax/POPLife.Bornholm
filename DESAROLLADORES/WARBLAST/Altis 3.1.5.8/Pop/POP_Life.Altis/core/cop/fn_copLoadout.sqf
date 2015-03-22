@@ -256,5 +256,5 @@ if(_lvl == 8) then
 		player additem "Medikit";
 		player additem "ToolKit";
 	};
-[] call War_fnc_texturas;
+
 [] call life_fnc_saveGear;

@@ -51,17 +51,3 @@ player setVariable["rank",(__GETC__(life_coplevel)),true];
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 player enableFatigue false;
-
-life_tiroAtiro = {
-
-	if((_this select 1) isEqualTo "hgun_P07_snds_F") then {
-		[] spawn {
-			player setAmmo ["hgun_P07_snds_F", 0];
-			sleep taserDelay;
-
-			player setAmmo ["hgun_P07_snds_F", 1];
-		};
-	};
-};
-player addEventHandler ["Fired", "_this call life_tiroAtiro"];
-[] call War_fnc_texturas;

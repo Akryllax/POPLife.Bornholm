@@ -19,7 +19,7 @@ if((_this select 3) in ["cop"] && playerSide != west) exitWith {hint localize "S
 if((_this select 3) in ["dive"] && !license_civ_dive) exitWith { hint localize "STR_Shop_NotaDive"; closeDialog 0;};
 if((_this select 3) in ["merc"] && playerSide != east) exitWith { hint "No eres mercenario"; closeDialog 0;};
 if((_this select 3) in ["don"] && playerSide != civilian && (__GETC__(life_donator) > 0)) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};
-//if((_this select 3) in ["cazarrecompensas"] && CRServicio = false;) exitWith { hint "No tienes tienes activo el servicio!"; closeDialog 0;};
+
 
 life_clothing_store = _this select 3;
 
@@ -121,7 +121,7 @@ life_clothesPurchased = nil;
 if((life_clothing_purchase select 0) == -1) then
 {
 	if(life_oldClothes != uniform player) then {player addUniform life_oldClothes;};
-		[] call War_fnc_texturas;
+
 };
 //Check hat
 if((life_clothing_purchase select 1) == -1) then
@@ -173,4 +173,3 @@ if((life_clothing_purchase select 4) == -1) then
 life_clothing_purchase = [-1,-1,-1,-1,-1];
 
 [] call life_fnc_saveGear;
-[] call War_fnc_texturas;

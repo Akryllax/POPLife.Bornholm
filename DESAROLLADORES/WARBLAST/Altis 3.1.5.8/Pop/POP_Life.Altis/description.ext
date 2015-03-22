@@ -48,13 +48,6 @@ class CfgSounds
 {
 	sounds[] = {};
 
-	class PhotoSound
-	{
-		name = "PhotoSound";
-		sound[] = {"\sounds\camera_shot.ogg",1,1};
-		titles[] = {};
-	};
-
 	class copsiren
 	{
 		name = "copsiren";
@@ -82,72 +75,10 @@ class CfgSounds
 		sound[] = {"\sounds\esposas.ogg", 0.5, 1};
 		titles[] = {};
 	};
-
-	class punch_break
-	{
-		name = "punch_break";
-		sound[] = {"\sounds\punch_break.ogg", 0.5, 1};
-		titles[] = {};
-	};
-
-	class punch
-
-	{
-		name = "punch";
-		sound[] = {"\sounds\punch.ogg", 0.5, 1};
-		titles[] = {};
-	};
-
-	class drugcooking
-
-	{
-		name = "drugcooking";
-		sound[] = {"\sounds\drugcooking.ogg", 0.5, 1};
-		titles[] = {};
-	};
-
-	class Cough
-	{
-		name = "Cough";
-		sound[] = {"\sounds\cough.ogg", 1,1};
-		titles[] = {};
-	};
-
-	class Agony
-	{
-		name = "Agony";
-		sound[] = {"\sounds\agony.ogg", 1,1};
-		titles[] = {};
-	};
-
-	class Geiger
-	{
-		name = "Geiger";
-		sound[] = {"\sounds\geiger.ogg", 1,1};
-		titles[] = {};
-	};
-	class HStimpack
-	{
-		name = "HStimpack";
-		sound[] = {"\sounds\health_stimpack.ogg", 1,1};
-		titles[] = {};
-	};
 	class UnderDrugs
 	{
 		name = "UnderDrugs";
 		sound[] = {"\sounds\under_drugs.ogg",1,1};
-		titles[] = {};
-	};
-	class bailar
-	{
-		name = "bailar";
-		sound[] = {"\sounds\bailar.ogg",1,1};
-		titles[] = {};
-	};
-	class bar
-	{
-		name = "bar";
-		sound[] = {"\sounds\bar.ogg",1,1};
 		titles[] = {};
 	};
 };

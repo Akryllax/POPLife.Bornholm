@@ -130,4 +130,3 @@ switch(__GETC__(life_donator)) do
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
 player enableFatigue (__GETC__(life_enableFatigue));
-[] call War_fnc_texturas;
