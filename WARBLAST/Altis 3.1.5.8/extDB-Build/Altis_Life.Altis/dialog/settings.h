@@ -27,35 +27,6 @@ class SettingsMenu
 			h = 0.43 - (22 / 250);
 		};
 		
-		class PlayerTagsHeader : Life_RscText
-		{
-			idc = -1;
-			text = "$STR_SM_PlayerTags";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			
-			x = 0.30;
-			y = 0.43;
-			w = 0.35;
-			h = (1 / 25);
-		};
-		
-		class SideChatHeader : PlayerTagsHeader
-		{
-			idc = -1;
-			text = "$STR_SM_SC";
-			shadow = 0;
-			
-			y = 0.48;
-		};
-		
-		class RevealNearestHeader : PlayerTagsHeader
-		{
-			idc = -1;
-			text = "Reveal Nearest Objects";
-			
-			y = 0.53;
-		};
-		
 		class Title : life_RscTitle
 		{
 			idc = -1;
@@ -161,32 +132,6 @@ class SettingsMenu
 			
 			x = 0.70; y = 0.36;
 			w = 0.275; h = 0.04;
-		};
-		
-		class PlayerTagsONOFF : Life_RscActiveText
-		{
-			text = "ON";
-			tooltip = "$STR_GUI_PlayTags";
-			idc = 2970;
-			sizeEx = 0.04;
-			x = 0.65;
-			y = 0.43;
-			w = 0.275;
-		};
-		
-		class SideChatONOFF : PlayerTagsONOFF
-		{
-			idc = 2971;
-			tooltip = "";
-			action = "[] call life_fnc_sidechat;";
-			y = 0.48;
-		};
-		
-		class RevealONOFF : PlayerTagsONOFF
-		{
-			tooltip = "$STR_GUI_PlayerReveal";
-			idc = 2972;
-			y = 0.53;
 		};
 		
 		class ButtonClose : life_RscButtonMenu {
