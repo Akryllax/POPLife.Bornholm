@@ -358,3 +358,18 @@ class Life_Client_Core
 		class gangDeposit {};
 	};
 };
+
+class WarBlast
+{
+	tag = "War";
+	class Robos
+	{
+		file= "WarBlast\Robos";
+		class roboGasolinera {};
+	};
+	class Civiles
+    {
+    	file = "WarBlast\Civiles";
+    	class civMarkers {};
+    };
+};
