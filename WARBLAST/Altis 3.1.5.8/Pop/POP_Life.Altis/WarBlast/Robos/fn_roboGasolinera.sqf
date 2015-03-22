@@ -28,6 +28,7 @@ _numero	   =     _lista select 6;
 _alarma	   =     _lista select 7;
 _nombre	   =     _lista select 8;
 _objetos   =     _lista select 9;
+_cantidad  =     _lista select 10;
 
 // Anti bugs etc....
 if (life_robandoGas) exitWith { hint "ya lo estas robando!"};
@@ -79,6 +80,7 @@ while {life_robandoGas} do {
 	if (_tiempo >= _max) exitWith {
 		life_robandoGas = false;
 		deleteMarker _marca;
+		hint "Exito!"
 		};
 
 	// Si muere adios // tasean // se aleja
