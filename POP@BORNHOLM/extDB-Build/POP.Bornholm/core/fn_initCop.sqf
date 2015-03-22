@@ -17,10 +17,10 @@ if(life_blacklisted) exitWith
 };
 
 
-	if((__GETC__(life_coplevel) == 0) && (__GETC__(life_adminlevel) == 0)) then {
+if((__GETC__(life_coplevel) == 0) && (__GETC__(life_adminlevel) == 0)) then {
 		["NotWhitelisted",false,true] call BIS_fnc_endMission;
 		sleep 35;
-	};
+};
 
 
 player setVariable["rank",(__GETC__(life_coplevel)),true];

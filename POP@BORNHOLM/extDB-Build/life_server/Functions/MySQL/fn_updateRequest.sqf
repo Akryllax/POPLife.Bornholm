@@ -1,7 +1,7 @@
 /*
 	File: fn_updateRequest.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Ain't got time to describe it, READ THE FILE NAME!
 */
@@ -33,7 +33,7 @@ _licenses = [_licenses] call DB_fnc_mresArray;
 
 switch (_side) do {
 	case west: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', cop_gear='%4', cop_licenses='%5' WHERE playerid='%6'",_name,_cash,_bank,_gear,_licenses,_uid];};
-	case civilian: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_licenses='%4', civ_gear='%6', arrested='%7' WHERE playerid='%5'",_name,_cash,_bank,_licenses,_uid,_gear,[_this select 7] call DB_fnc_bool];};
+	case civilian: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_gear='%4', civ_licenses='%5', arrested='%7', civPosition='%8', alive='%9' WHERE playerid='%6'", _name, _cash, _bank, _gear, _licenses, _uid, [_this select 7] call DB_fnc_bool,[_this select 8] call DB_fnc_mresArray, [_this select 9] call DB_fnc_bool];};
 	case independent: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_licenses='%4', med_gear='%6' WHERE playerid='%5'",_name,_cash,_bank,_licenses,_uid,_gear];};
 };
 

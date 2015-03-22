@@ -19,6 +19,8 @@ _packet pushBack life_gear;
 switch (playerSide) do {
 	case civilian: {
 		_packet pushBack life_is_arrested;
+        _packet pushBack (getPos player);
+		_packet pushBack life_is_alive;
 	};
 };
 
