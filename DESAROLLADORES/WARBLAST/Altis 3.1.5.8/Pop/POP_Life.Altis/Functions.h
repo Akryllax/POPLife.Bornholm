@@ -459,44 +459,7 @@ class WarBlast
 class Quickskill
 {
 	tag = "QUICK";
-	
-	class Clases
-	{
-		file = "QUICKSKILL\clases";
-		class comprarClaseGangster {};
-		class comprarClasePeriodista {};
-		class comprarClasePiloto {};
-		class comprarClaseTransportista {};
-		class comprarClaseLadron {};
-        class comprarClaseTaliban {};
-        class comprarClaseTerroristaPesado {};
-		class comprarClaseTerroristaRifle {};
-		class comprarClaseTerroristaRifle2 {};
-        class comprarClaseTerroristaSilenciado {};
-        class comprarClaseTerroristaSniper {};
-        class comprarClaseEspia{};
-        class comprarClaseCocheBomba {};
-        class comprarClasePoliciaSting {};
-        class comprarClasePoliciaMK20 {};
-        class comprarClasePoliciaMXC {};
-        class comprarClasePoliciaMX {};
-        class comprarClasePoliciaMXM {};
-        class comprarClasePoliciaMK18 {};
-        class comprarClasePoliciaMXSW {};
-        class comprarClaseOTAN {};
-         class comprarClaseMDF {};
-        class comprarClaseADMIN {};
-        class comprarClaseMERCENARIO {};
-	};
 
-     class Plantar
-	{
-		file = "QUICKSKILL\items";
-        class plantarMaria {};
-        class plantarCoca {};
-        class plantarMaiz {};
-        class plantarTomates {};
-	};
 	class EfectosDrogas
 	{
 		file = "QUICKSKILL\items";
@@ -513,24 +476,4 @@ class Quickskill
         class robosHandler {};
         class timerRobo {};
     };
-};
-class Akryllax {
-	tag = "life";
-
-	class Racing
-	{
-		file = "core\akr\racing";
-		class extras {};
-		class initRacing {};
-		class loadTrack {};
-		class loadVehicle {};
-		class raceAskSession {};
-		class raceCheckStatus {};
-		class raceConf {};
-		class racingEnded {};
-		class racingResponse {};
-		class startRace {};
-		class startTrackAction{};
-		class testing {};
-	};
 };

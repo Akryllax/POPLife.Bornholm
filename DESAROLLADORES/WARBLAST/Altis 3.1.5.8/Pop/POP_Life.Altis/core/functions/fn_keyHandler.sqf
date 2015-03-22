@@ -32,6 +32,22 @@ if(life_action_inUse) exitWith {
 	_handled;
 };
 
+//Desabilitamos
+if((_code in (actionKeys "SelectAll") || _code in (actionKeys "ForceCommandingMode"))) then {_handled = true;};
+
+//Sidechat Off
+if (_code in (actionKeys "PushToTalk") || _code in (actionKeys "PushToTalkSide")) exitWith
+{
+	_chan = "";
+	disableSerialization;
+	_chan = ctrlText ((findDisplay 63) displayCtrl 101);
+	if (_chan == "Side Channel") then {
+		systemChat format["No hables por el Side Channel..", _chan];
+		_handled = true;
+	};
+	_handled;
+};
+
 //Hotfix for Interaction key not being able to be bound on some operation systems.
 if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
