@@ -2882,7 +2882,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=851;
+		items=852;
 		class Item0
 		{
 			position[]={17453.148,1.5375079,4724.2241};
@@ -4935,7 +4935,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_01_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>BANCO</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Banking Insurance ($1,000)"",{if(pop_banco > 1000) then {life_has_insurance = true; [""atm"",""sub"",1000] call life_fnc_changeMoney;};},"""",0,false,false,"""",'!life_has_insurance'];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>BANCO</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Banking Insurance ($1,000)"",{if(life_atmcash > 1000) then {life_has_insurance = true; [""atm"",""sub"",1000] call life_fnc_changeMoney;};},"""",0,false,false,"""",'!life_has_insurance'];";
 		};
 		class Item195
 		{
@@ -5469,7 +5469,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_01_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>BANCO</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Banking Insurance ($1,000)"",{if(pop_banco > 1000) then {life_has_insurance = true; [""atm"",""sub"",1000] call life_fnc_changeMoney;};},"""",0,false,false,"""",'!life_has_insurance'];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>BANCO</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Banking Insurance ($1,000)"",{if(life_atmcash > 1000) then {life_has_insurance = true; [""atm"",""sub"",1000] call life_fnc_changeMoney;};},"""",0,false,false,"""",'!life_has_insurance'];";
 		};
 		class Item245
 		{
@@ -11866,10 +11866,20 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false;";
 		};
+		class Item851
+		{
+			position[]={1612.8054,18.269346,7292.793};
+			azimut=362.79099;
+			id=981;
+			side="EMPTY";
+			vehicle="Orel_PNJ_Doctor";
+			skill=0.60000002;
+			init="this enableSimulation false;  this allowDamage false;this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""med_shop"",independent,[""medicos1""],""med"",""Kavala Hospital""]];                          this addAction[""Helicopter Shop"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,[""medicos1""],""med"",""Kavala Hosptial""]];";
+		};
 	};
 	class Markers
 	{
-		items=292;
+		items=293;
 		class Item0
 		{
 			position[]={17453.09,1.536494,4724.2798};
@@ -14378,6 +14388,13 @@ class Mission
 			type="mil_box";
 			colorName="ColorGrey";
 			angle=0.92193258;
+		};
+		class Item292
+		{
+			position[]={1613.1274,18.276068,7276.2837};
+			name="medicos1";
+			type="Empty";
+			angle=-171.79951;
 		};
 	};
 };
