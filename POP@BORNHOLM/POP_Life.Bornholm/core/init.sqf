@@ -115,15 +115,14 @@ life_fnc_garageRefund = compileFinal
 [] execVM "WarBlast\fn_statusBar.sqf";
 
 
-switch (__GETC__(life_donator)) do
+switch(__GETC__(life_donator)) do
 {
-	case 0: {Desc = 1;};
-	case 1: {Desc = 0.95;};
-	case 2: {Desc = 0.85;};
-	case 3: {Desc = 0.70;};
-	case 4: {Desc = 0.50;};
-	case 5: {Desc = 0.10;};
-	default {Desc = 1;};
+	case 0: {Desc = 1};
+	case 1: {Desc = 0.95};
+	case 2: {Desc = 0.85};
+	case 3: {Desc = 0.70};
+	case 4: {Desc = 0.50};
+	case 5: {Desc = 0.10};
 };
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
