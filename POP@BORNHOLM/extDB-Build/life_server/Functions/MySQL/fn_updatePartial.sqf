@@ -76,7 +76,7 @@ switch(_mode) do {
 		[_uid,_side,_array,0] call TON_fnc_keyManagement;
 	};
 
-    case 8: {
+	case 8: {
 		_value1 = [_this,2,""] call BIS_fnc_param;
 		_value2 = [_this,4,false,[true]] call BIS_fnc_param;
 		_value2 = [_value2] call DB_fnc_bool;
