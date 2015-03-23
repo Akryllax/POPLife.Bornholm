@@ -20,7 +20,7 @@ _flag = switch(playerSide) do {
 
 switch(_mode) do {
 	case 0: {
-		_packet set[2,life_cash];
+		_packet set[2,life_popeur];
 	};
 
 	case 1: {
@@ -52,7 +52,7 @@ switch(_mode) do {
 	};
 
 	case 6: {
-		_packet set[2,life_cash];
+		_packet set[2,life_popeur];
 		_packet set[4,life_atmcash];
 	};
 	case 7: {

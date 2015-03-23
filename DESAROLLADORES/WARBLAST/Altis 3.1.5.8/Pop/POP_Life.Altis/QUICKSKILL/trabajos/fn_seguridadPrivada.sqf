@@ -82,7 +82,7 @@ _gen removeAction _id;
 _furgo = _this select 3;
 
 //pagar al jugador
-life_cash = life_cash +350000;
+life_popeur = life_popeur +350000;
 //hint
 hint "Has cobrado 350000$ por tu trabajo";
 //borrar
@@ -141,7 +141,7 @@ if(isNull _jugador) exitWith {}; //if not the thief get bent
 //puede pagar?¿
  if(life_ATMcash - _precio < 0) exitWith { hint "No tienes suficiente dinero";[] spawn { sleep 5;hint "";} };
 
-life_cash = life_cash-_precio;
+life_popeur = life_popeur-_precio;
 
 //crear coche
 [_gen,_jugador] spawn {

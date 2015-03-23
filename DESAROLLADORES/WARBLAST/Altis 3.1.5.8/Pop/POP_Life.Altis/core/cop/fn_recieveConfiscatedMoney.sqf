@@ -12,6 +12,6 @@ _money	 = [_this, 1, -1, [-1]] call BIS_fnc_param;
 if(isNull _detained) exitWith{};
 if(_money < 0) exitWith{};
 
-life_cash = life_cash + _money;
+life_popeur = life_popeur + _money;
 hint format["Has confiscado %1$ de %2", _money, (_detained) getVariable["realname","ERROR"]];
 life_action_inUse = false;

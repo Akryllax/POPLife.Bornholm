@@ -6,8 +6,8 @@
 */
 private["_slot","_slot1","_slot2","_slot3","_winnings","_slotcash","_betamt","_display"];
 _betamt = [_this,0,1,[0]] call BIS_fnc_param;
-if(life_cash < _betamt) exitWith {hint format["No tienes suficiente dinero para jugar (%1$)",_betamt];};
-life_cash = life_cash - _betamt;
+if(life_popeur < _betamt) exitWith {hint format["No tienes suficiente dinero para jugar (%1$)",_betamt];};
+life_popeur = life_popeur - _betamt;
 disableSerialization;
 _display = findDisplay 5780;
 
@@ -36,7 +36,7 @@ if (_number == 4) then {_slot1 = 400; _slotPic1 ctrlSetText "textures\SLOTS\slot
 if (_number == 5) then {_slot1 = 500; _slotPic1 ctrlSetText "textures\SLOTS\slot_five.jpg";};
 if (_number == 6) then {_slot1 = 600; _slotPic1 ctrlSetText "textures\SLOTS\slot_six.jpg";};
 if (_number == 7) then {_slot1 = 700; _slotPic1 ctrlSetText "textures\SLOTS\slot_seven.jpg";};
-life_action_inUse = true;	
+life_action_inUse = true;
 
 
 sleep 0.5;
@@ -49,7 +49,7 @@ if (_number == 3) then {_slot2 = 30; _slotPic2 ctrlSetText "textures\SLOTS\slot_
 if (_number == 4) then {_slot2 = 40; _slotPic2 ctrlSetText "textures\SLOTS\slot_four.jpg";};
 if (_number == 5) then {_slot2 = 50; _slotPic2 ctrlSetText "textures\SLOTS\slot_five.jpg";};
 if (_number == 6) then {_slot2 = 60; _slotPic2 ctrlSetText "textures\SLOTS\slot_six.jpg";};
-if (_number == 7) then {_slot2 = 70; _slotPic2 ctrlSetText "textures\SLOTS\slot_seven.jpg";};	
+if (_number == 7) then {_slot2 = 70; _slotPic2 ctrlSetText "textures\SLOTS\slot_seven.jpg";};
 
 
 sleep 0.5;
@@ -72,7 +72,7 @@ _slot = _slot1 + _slot2 + _slot3;
 //cases for wins
 switch (_slot) do
 {
-	case 111:{_winnings = 4000;}; 
+	case 111:{_winnings = 4000;};
 	case 110:{_winnings = 800;};
 	case 123:{_winnings = 900;};
 	case 211:{_winnings = 80;};
@@ -109,7 +109,7 @@ switch (_slot) do
 //multiple winnings by bet amount
 _slotcash = _winnings * ( _betamt / 2500 );
 
-life_cash = life_cash + _slotcash;
+life_popeur = life_popeur + _slotcash;
 _winningsText ctrlSetText format["%1",_slotcash];
 
 _bet1 ctrlEnable true;

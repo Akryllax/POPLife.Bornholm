@@ -2,7 +2,7 @@
 /*
 	File: fn_atmMenu.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Opens and manages the bank menu.
 */
@@ -25,7 +25,7 @@ _text = _display displayCtrl 2701;
 _units = _display displayCtrl 2703;
 
 lbClear _units;
-_text ctrlSetStructuredText parseText format["<img size='1.7' image='textures\icons\bank.paa'/> $%1<br/><img size='1.6' image='textures\icons\money.paa'/> $%2",[life_atmcash] call life_fnc_numberText,[life_cash] call life_fnc_numberText];
+_text ctrlSetStructuredText parseText format["<img size='1.7' image='textures\icons\bank.paa'/> $%1<br/><img size='1.6' image='textures\icons\money.paa'/> $%2",[life_atmcash] call life_fnc_numberText,[life_popeur] call life_fnc_numberText];
 
 {
 	if(alive _x) then
@@ -35,7 +35,7 @@ _text ctrlSetStructuredText parseText format["<img size='1.7' image='textures\ic
 			case west: {_type = "Cop"};
 			case civilian: {_type = "Civ"};
 			case independent: {_type = "EMS"};
-			case east: {_type = "Merc"};	
+			case east: {_type = "Merc"};
 		};
 		_units lbAdd format["%1 (%2)",_x getVariable["realname",name _x],_type];
 		_units lbSetData [(lbSize _units)-1,str(_x)];

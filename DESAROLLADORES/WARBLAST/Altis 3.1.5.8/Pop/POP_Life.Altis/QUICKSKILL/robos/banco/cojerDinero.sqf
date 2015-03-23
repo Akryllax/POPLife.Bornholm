@@ -10,22 +10,22 @@ if (!isNil {robo}) then {
 		robo = 2;
 		publicVariable "robo";
 
-		
-		
-		
-		
-		life_cash = life_cash + deposito;
-		
-	
+
+
+
+
+		life_popeur = life_popeur + deposito;
+
+
 		hint format ["Has robado %1$ del casino", deposito];
 		cajaFuerte setPos (getMarkerPos "");
 		sleep 3;
-		
+
 		[] execVM "QUICKSKILL\robos\banco\reset.sqf";
-		
+
 		deposito = 0;
 		publicVariable "deposito";
-		
+
 
 	};
 };

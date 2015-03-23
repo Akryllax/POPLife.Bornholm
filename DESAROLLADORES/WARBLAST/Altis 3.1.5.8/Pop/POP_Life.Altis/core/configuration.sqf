@@ -88,7 +88,7 @@ life_action_in_use = false;
 life_thirst = 100;
 life_hunger = 100;
 __CONST__(life_paycheck_period,5); //Five minutes
-life_cash = 0;
+life_popeur = 0;
 __CONST__(life_impound_car,9500);
 __CONST__(life_impound_boat,15000);
 __CONST__(life_impound_air,17500);

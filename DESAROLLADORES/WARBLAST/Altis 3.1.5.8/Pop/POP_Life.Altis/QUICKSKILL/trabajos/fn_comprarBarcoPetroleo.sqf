@@ -8,12 +8,12 @@ _vendedor = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {}; //if not the thief get bent
 
 //puede pagar?¿
- if(life_cash - _precio < 0) exitWith { hint "No tienes suficiente dinero";[] spawn { sleep 5;hint "";} };
+ if(life_popeur - _precio < 0) exitWith { hint "No tienes suficiente dinero";[] spawn { sleep 5;hint "";} };
 
-life_cash = life_cash-_precio;
+life_popeur = life_popeur-_precio;
 
 //crear coche
-[_vendedor] spawn { 
+[_vendedor] spawn {
 
 _vendedor = _this select 0;
 

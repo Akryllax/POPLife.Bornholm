@@ -49,7 +49,7 @@ while {_time > 0} do {
 			case 2: {robosActivosGLOBAL deleteAT 2};
 			default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
 		    publicVariable "robosActivosGLOBAL";
-	   	    
+
 	    };
 		*/
 	};
@@ -66,9 +66,9 @@ while {_time > 0} do {
 			    case 2: {robosActivosGLOBAL deleteAT 2};
 			    default { hint "Algo fallo en Switch avisa a un ADMINISTRADOR"};
                 publicVariable "robosActivosGLOBAL";
-                
+
         };
-		
+
 		*/
 	};
 
@@ -107,7 +107,7 @@ if(_time < 1) then{
 			hint _nombreRoboHINT;
 
 			//dar pasta
-			life_cash = life_cash + _dinero;
+			life_popeur = life_popeur + _dinero;
 
 
 			//Dar item especiales

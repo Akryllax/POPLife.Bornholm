@@ -3,9 +3,9 @@
 	Author: Tonic
 */
 private["_packet","_array","_flag"];
-_packet = [getPlayerUID player,(profileName),playerSide,life_cash,life_atmcash];
+_packet = [getPlayerUID player,(profileName),playerSide,life_popeur,life_atmcash];
 _array = [];
-_flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; 
+_flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"};
 case independent: {"med"}; case east: {"merc"};};
 {
 	if(_x select 1 == _flag) then
