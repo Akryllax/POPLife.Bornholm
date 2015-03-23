@@ -11879,7 +11879,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=293;
+		items=294;
 		class Item0
 		{
 			position[]={17453.09,1.536494,4724.2798};
@@ -14395,6 +14395,12 @@ class Mission
 			name="medicos1";
 			type="Empty";
 			angle=-171.79951;
+		};
+		class Item293
+		{
+			position[]={9496.918,84.235138,5586.8076};
+			name="civ_spawn_4";
+			type="Empty";
 		};
 	};
 };
