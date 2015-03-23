@@ -36,7 +36,7 @@ if(isNull _curTarget) exitWith {
 	};
 };
 
-if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12} exitWith {
+if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12}) exitWith {
 	[_curTarget] call life_fnc_houseMenu;
 };
 
