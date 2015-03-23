@@ -2,7 +2,7 @@
 /*
 	File: fn_actionKeyHandler.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master action key handler, handles requests for picking up various items and
 	interacting with other players (Cops = Cop Menu for unrestrain,escort,stop escort, arrest (if near cop hq), etc).
@@ -27,7 +27,7 @@ if(isNull _curTarget) exitWith {
  	//};
 };
 
-if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12} OR ((nearestObject [[7912.02,16148.6,0.396378],"Land_i_Barracks_V2_F"]) == _curTarget)) exitWith {
+if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12}) exitWith {
 	[_curTarget] call life_fnc_houseMenu;
 };
 
@@ -72,7 +72,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 		"Cock_random_F", "Hen_random_F", "Goat_random_F", "Sheep_random_F"
 	];
 	_money = "Land_Money_F";
-	
+
 	//It's a vehicle! open the vehicle interaction key!
 	if(_isVehicle && !(typeOf _curTarget == "RoadCone_L_F")) then {
 		if(!dialog) then {
