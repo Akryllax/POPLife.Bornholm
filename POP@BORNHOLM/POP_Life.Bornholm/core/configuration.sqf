@@ -42,7 +42,7 @@ life_my_group = ObjNull;
 bug = 0;
 //robos
 life_robandoGas = false;
-
+Desc = 1;
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
 __CONST__(life_save_yinv,TRUE); //Save Y-Inventory for players?

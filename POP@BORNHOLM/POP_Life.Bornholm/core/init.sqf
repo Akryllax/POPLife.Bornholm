@@ -115,7 +115,7 @@ life_fnc_garageRefund = compileFinal
 [] execVM "WarBlast\fn_statusBar.sqf";
 
 
-switch(__GETC__(life_donator)) do
+switch (__GETC__(life_donator)) do
 {
 	case 0: {Desc = 1;};
 	case 1: {Desc = 0.95;};
