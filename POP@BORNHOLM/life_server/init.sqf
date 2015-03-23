@@ -82,6 +82,8 @@ publicVariable "life_group_list";
 life_wanted_list = [];
 client_session_list = [];
 
+[] execFSM "\life_server\cleanup.fsm";
+
 [] spawn
 {
 	private["_logic","_queue"];
