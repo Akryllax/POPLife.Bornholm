@@ -42,8 +42,6 @@ life_my_group = ObjNull;
 bug = 0;
 //robos
 life_robandoGas = false;
-//Donador...
-Desc = 1;
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
