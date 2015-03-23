@@ -121,13 +121,13 @@ client_session_list = [];
 [] spawn TON_fnc_initHouses;
 
 //WarBlast: Mapa Dinamico
-[] execVM "\life_server\Functions\WarBlast\fn_spawnHeliCrash.sqf";
-call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
-[] execVM "\life_server\Functions\WarBlast\fn_spawnNaufragios.sqf";
-call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+//[] execVM "\life_server\Functions\WarBlast\fn_spawnHeliCrash.sqf";
+//call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+//[] execVM "\life_server\Functions\WarBlast\fn_spawnNaufragios.sqf";
+//call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
 //airdrop
-[] execVM "\life_server\Functions\airdrop\config.sqf";
-[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
+//[] execVM "\life_server\Functions\airdrop\config.sqf";
+//[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
 [
 		10*60, // seconds to delete dead bodies (0 means don't delete)
 		2*60, // seconds to delete dead vehicles (0 means don't delete)
