@@ -370,6 +370,7 @@ switch (_code) do
 
                 };
         };
+     };
 
         // ANTI CTRL + ALT + DEL
         case DIK_DELETE:
@@ -386,6 +387,7 @@ switch (_code) do
             bug = bug - 1;
                 };
         };
+      };
 
         // ANTI CTRL + ESC
         case DIK_ESCAPE:
@@ -403,6 +405,7 @@ switch (_code) do
             bug = bug - 1;
                 };
         };
+       };
         // Tabulando
         case DIK_TAB:
         {
