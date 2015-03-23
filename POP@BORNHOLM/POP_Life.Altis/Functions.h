@@ -432,6 +432,11 @@ class WarBlast
     	file ="WarBlast\Merc";
     	class mercMarkers {};
     };
+    class Policias
+    {
+    	file ="WarBlast\Policias";
+    	class lacrimogeno {};
+    };
     class Civiles
     {
     	file = "WarBlast\Civiles";

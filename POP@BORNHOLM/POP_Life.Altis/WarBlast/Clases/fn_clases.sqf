@@ -49,6 +49,6 @@ _unit additem _mira;
 _unit forceadduniform _traje;
 _unit addvest _chaleco;
 _unit addbackpack _mochila;
-_unit additems _objetos;
+_unit additem _objetos;
 
 
