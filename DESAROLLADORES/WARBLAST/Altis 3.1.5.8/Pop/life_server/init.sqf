@@ -4,7 +4,6 @@ DB_Async_ExtraLock = false;
 life_server_isReady = false;
 publicVariable "life_server_isReady";
 
-//[] execFSM "\life_server\cleanup.fsm";
 [] execVM "\life_server\functions.sqf";
 [] execVM "\life_server\eventhandlers.sqf";
 
@@ -97,8 +96,6 @@ client_session_list = [];
 	};
 };
 
-[] spawn TON_fnc_federalUpdate;
-
 [] spawn
 {
 	while {true} do
@@ -125,25 +122,14 @@ client_session_list = [];
 
 [] spawn TON_fnc_initHouses;
 
-//Lockup the dome
-private["_dome","_rsb"];
-_dome = nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"];
-_rsb = nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"];
-
-for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,true]; _dome animate [format["Door_%1_rot",_i],0];};
-
-_rsb setVariable["bis_disabled_Door_1",1,true];
-_rsb allowDamage false;
-_dome allowDamage false;
-
 //WarBlast: Mapa Dinamico
-//[] execVM "\life_server\Functions\WarBlast\fn_spawnHeliCrash.sqf";
-//call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
-//[] execVM "\life_server\Functions\WarBlast\fn_spawnNaufragios.sqf";
-//call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+[] execVM "\life_server\Functions\WarBlast\fn_spawnHeliCrash.sqf";
+call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+[] execVM "\life_server\Functions\WarBlast\fn_spawnNaufragios.sqf";
+call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
 //airdrop
-//[] execVM "\life_server\Functions\airdrop\config.sqf";
-//[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
+[] execVM "\life_server\Functions\airdrop\config.sqf";
+[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
 [
 		10*60, // seconds to delete dead bodies (0 means don't delete)
 		2*60, // seconds to delete dead vehicles (0 means don't delete)

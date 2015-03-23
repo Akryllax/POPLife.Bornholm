@@ -36,7 +36,7 @@ if(isNull _curTarget) exitWith {
 	};
 };
 
-if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12} OR ((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget OR (nearestObject [[5489.98,14995.3,0],"Land_Dome_Big_F"]) == _curTarget)) exitWith {
+if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12} exitWith {
 	[_curTarget] call life_fnc_houseMenu;
 };
 
@@ -96,17 +96,6 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 		};
 	} else {
 		//Is it a animal type?
-		if((typeOf _curTarget) in _animalTypes) then {
-			if((typeOf _curTarget) == "Turtle_F" && !alive _curTarget) then {
-				private["_handle"];
-				_handle = [_curTarget] spawn life_fnc_catchTurtle;
-				waitUntil {scriptDone _handle};
-			} else {
-				private["_handle"];
-				_handle = [_curTarget] spawn life_fnc_catchFish;
-				waitUntil {scriptDone _handle};
-			};
-		} else {
 			//OK, it wasn't a vehicle so let's see what else it could be?
 			if((typeOf _curTarget) in _miscItems) then {
 				//OK, it was a misc item (food,water,etc).
@@ -124,4 +113,3 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 			};
 		};
 	};
-};
