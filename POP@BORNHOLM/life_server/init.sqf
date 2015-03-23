@@ -71,8 +71,6 @@ life_radio_emergencias = radioChannelCreate [[1, 0, 0, 0.8], "Emergencias", "%UN
 
 serv_sv_use = [];
 
-fed_bank setVariable["safe",(count playableUnits),true];
-
 //General cleanup for clients disconnecting.
 addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect; false;}]; //Do not second guess this, this can be stacked this way.
 

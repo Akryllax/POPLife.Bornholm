@@ -152,17 +152,6 @@ class CfgFunctions
 			class generateAirdrop {};
 		};
 	};
-	
-	class Akryllax
-	{
-		tag = "life";
-	
-		class Racing
-		{
-			file = "\life_server\Functions\AKR\Racing";
-			class raceProcessRequest {};
-		};
-	};
 };
 class CfgVehicles
 {
