@@ -32,9 +32,11 @@ switch (_side) do
 	{
 
 		_return = [
-			["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["civ_spawn_1","Roenne","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["civ_spawn_2","Nexoe","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["civ_spawn_3","SandVig","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["civ_spawn_4","Aakirkeby","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+
 		];
 
 		if(license_civ_rebel) then {
