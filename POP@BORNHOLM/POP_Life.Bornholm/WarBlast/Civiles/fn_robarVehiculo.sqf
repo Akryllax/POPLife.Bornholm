@@ -7,7 +7,7 @@ private["_control","_price","_vehicle","_nearVehicles","_color","_check"];
 _control = ((findDisplay 39400) displayCtrl 39402);
 _price = _control lbValue (lbCurSel _control);
 _price = _price*0.65;
-if(pop_banco < _price) exitWith {hint format["Necesitas %1 para quedartelo",_price]; };
+if(life_atmcash < _price) exitWith {hint format["Necesitas %1 para quedartelo",_price]; };
 _vehicle = _control lbData (lbCurSel _control);
 _vehicle = call compile format["%1", _vehicle];
 _nearVehicles = nearestObjects [getMarkerPos life_chopShop,["Car","Truck","Air"],25];
@@ -89,7 +89,7 @@ _color = 0;
 hint format["Se te cobro %1 para hacerte la copia de las llaves",_price];
 
 //Le cobramos
-pop_banco = pop_banco - _price; [1] call SOCK_fnc_updatePartial;
+life_atmcash = life_atmcash - _price; [1] call SOCK_fnc_updatePartial;
 
 //Eliminamos el vehiculo de su antiguo dueño
 [[_vehicle],"TON_fnc_muerteVehiculos",false,false] spawn life_fnc_MP;

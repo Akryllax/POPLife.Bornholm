@@ -23,7 +23,7 @@ _robber = false;
 
 if(!life_use_atm) then
 {
-	pop_dinero = 0;
+	life_cash = 0;
 	_robber = true;
 };
 

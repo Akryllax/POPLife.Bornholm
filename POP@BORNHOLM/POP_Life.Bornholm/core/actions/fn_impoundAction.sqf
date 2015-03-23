@@ -60,7 +60,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		waitUntil {!life_impound_inuse};
 		hint format[localize "STR_NOTF_Impounded",_type,_price];
 		[[0,"STR_NOTF_HasImpounded",true,[profileName,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-		pop_banco = pop_banco + _price;
+		life_atmcash = life_atmcash + _price;
 	}
 		else
 	{

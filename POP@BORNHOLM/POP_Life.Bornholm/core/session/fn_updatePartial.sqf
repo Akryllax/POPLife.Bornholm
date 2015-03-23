@@ -20,11 +20,11 @@ _flag = switch(playerSide) do {
 
 switch(_mode) do {
 	case 0: {
-		_packet set[2,pop_dinero];
+		_packet set[2,life_cash];
 	};
 
 	case 1: {
-		_packet set[2,pop_banco];
+		_packet set[2,life_atmcash];
 	};
 
 	case 2: {
@@ -52,8 +52,8 @@ switch(_mode) do {
 	};
 
 	case 6: {
-		_packet set[2,pop_dinero];
-		_packet set[4,pop_banco];
+		_packet set[2,life_cash];
+		_packet set[4,life_atmcash];
 	};
 	case 7: {
 		//RESERVED - DO NOT USE

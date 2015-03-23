@@ -60,20 +60,20 @@ if (_speed > _limit) then {
 					[[4],"life_fnc_removeLicenses",_driver,FALSE] spawn life_fnc_MP;
 					[2] call SOCK_fnc_updatePartial;
 			};
-			if(pop_dinero <= _ticket) then
+			if(life_cash <= _ticket) then
 			{
-				if(pop_banco <= _ticket) exitWith
+				if(life_atmcash <= _ticket) exitWith
 				{
 					hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: %4€<br/>Since you are broke and cannot pay, you now have a warrant out for you instead",round _speed,_limit,name _driver,[_ticket] call life_fnc_numberText];
 					[[getPlayerUID _driver,name _driver,"120S"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 				};
-				pop_banco = pop_banco - _ticket;
+				life_atmcash = life_atmcash - _ticket;
 				hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: %4€",round _speed,_limit,name _driver,[_ticket] call life_fnc_numberText];
 				diag_log "Ticket paid from player bank";
 				[1] call SOCK_fnc_updatePartial;
 			} else {
 
-				pop_dinero = pop_dinero - _ticket;
+				life_cash = life_cash - _ticket;
 				hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: $%4",round _speed,_limit,name _driver,[_ticket] call life_fnc_numberText];
 				diag_log "Ticket paid from player cash";
 				[0] call SOCK_fnc_updatePartial;
@@ -94,20 +94,20 @@ if (_speed > _limit) then {
 					};
 					hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>You are now wanted for driving without a license and are subject for arrest",round _speed,_limit,name _driver];
 					[[getPlayerUID _driver,name _driver,"120WL"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-					if(pop_dinero <= _ticketWL) then
+					if(life_cash <= _ticketWL) then
 					{
-						if(pop_banco <= _ticketWL) exitWith
+						if(life_atmcash <= _ticketWL) exitWith
 						{
 							hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: %4€<br/>Since you are broke and cannot pay, you now have a warrant out for you instead",round _speed,_limit,name _driver,[_ticketWL] call life_fnc_numberText];
 							[[getPlayerUID _driver,name _driver,"120S"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 						};
-						pop_banco = pop_banco - _ticketWL;
+						life_atmcash = life_atmcash - _ticketWL;
 						hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: $%4",round _speed,_limit,name _driver,[_ticketWL] call life_fnc_numberText];
 						//diag_log "Ticket paid from player bank";//for logging
 						[1] call SOCK_fnc_updatePartial;
 					} else {
 
-						pop_dinero = pop_dinero - _ticketWL;
+						life_cash = life_cash - _ticketWL;
 						hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>Fine: $%4",round _speed,_limit,name _driver,[_ticketWL] call life_fnc_numberText];
 						//diag_log "Ticket paid from player cash";//for logging
 						[0] call SOCK_fnc_updatePartial;

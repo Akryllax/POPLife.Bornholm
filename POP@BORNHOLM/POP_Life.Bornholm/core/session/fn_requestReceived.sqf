@@ -31,8 +31,8 @@ if((getPlayerUID player) != _this select 0) exitWith {[] call SOCK_fnc_dataQuery
 };
 */
 //Parse basic player information.
-pop_dinero = parseNumber (_this select 2);
-pop_banco = parseNumber (_this select 3);
+life_cash = parseNumber (_this select 2);
+life_atmcash = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
 __CONST__(life_donator,parseNumber(_this select 5));
 
@@ -44,6 +44,13 @@ if(count (_this select 6) > 0) then {
 life_gear = _this select 8;
 [] call life_fnc_loadGear;
 
+	    switch(__GETC__(life_donator)) do {
+	    case 1: {life_paycheck = life_paycheck + 500;};
+	    case 2: {life_paycheck = life_paycheck + 1500;};
+	    case 3: {life_paycheck = life_paycheck + 3000;};
+        case 4: {life_paycheck = life_paycheck + 5000;};
+        case 5: {life_paycheck = life_paycheck + 3000;};
+        };
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
@@ -55,13 +62,6 @@ switch(playerSide) do {
 
 	case civilian: {
 
-	    switch(__GETC__(life_donator)) do {
-	    case 1: {life_paycheck = life_paycheck + 500;};
-	    case 2: {life_paycheck = life_paycheck + 1500;};
-	    case 3: {life_paycheck = life_paycheck + 3000;};
-        case 4: {life_paycheck = life_paycheck + 5000;};
-        case 5: {life_paycheck = life_paycheck + 3000;};
-        };
 		life_is_arrested = _this select 7;
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);

@@ -5,8 +5,8 @@ Script done by Icaruk, if you want to use it, you just have to ask me permission
 
 //if !(life_has_insurance) exitWith {
 //	hint "Debido al reciente robo del banco central, solo hemos podido salvar el 50% de tus ahorros, esto no hubiera pasado con un seguro :( ";
-//	pop_banco = pop_banco * 0.5;
-//	deposito = deposito + (pop_banco * 0.5);
+//	life_atmcash = life_atmcash * 0.5;
+//	deposito = deposito + (life_atmcash * 0.5);
 //	publicVariable "deposito";
 //};
 
