@@ -67,8 +67,6 @@ life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT
 
 serv_sv_use = [];
 
-fed_bank setVariable["safe",(count playableUnits),true];
-
 //General cleanup for clients disconnecting.
 addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect; false;}]; //Do not second guess this, this can be stacked this way.
 
