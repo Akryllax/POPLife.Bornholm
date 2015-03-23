@@ -22,17 +22,14 @@ if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg
 _spawnPoints = life_veh_shop select 1;
 _spawnPoint = "";
 
-if((life_veh_shop select 0) == "med_air_hs") then {
-	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Air"],35]) == 0) exitWith {_spawnPoint = _spawnPoints};
-} else {
-	//Check if there is multiple spawn points and find a suitable spawnpoint.
+
 	if(typeName _spawnPoints == typeName []) then {
 		//Find an available spawn point.
 		{if(count(nearestObjects[(getMarkerPos _x),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _x};} foreach _spawnPoints;
 	} else {
 		if(count(nearestObjects[(getMarkerPos _spawnPoints),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _spawnPoints};
 	};
-};
+
 
 
 if(_spawnPoint == "") exitWith {hint localize "STR_Shop_Veh_Block";};
@@ -41,12 +38,13 @@ hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >
 
 //Spawn the vehicle and prep it.
 if((life_veh_shop select 0) == "med_air_hs") then {
-	_vehicle = createVehicle [_className,[0,0,999],[], 0, "NONE"];
+		_vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
-	_vehicle allowDamage false;
-	_hs = nearestObjects[getMarkerPos _spawnPoint,["Land_Hospital_side2_F"],50] select 0;
-	_vehicle setPosATL (_hs modelToWorld [-0.4,-4,12.65]);
+	_vehicle allowDamage false; //Temp disable damage handling..
 	_vehicle lock 2;
+	_vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
+	_vehicle setDir (markerDir _spawnPoint);
+	_vehicle setPos (getMarkerPos _spawnPoint);
 	[[_vehicle,_colorIndex],"life_fnc_colorVehicle",true,false] spawn life_fnc_MP;
 	[_vehicle] call life_fnc_clearVehicleAmmo;
 	[[_vehicle,"trunk_in_use",false,true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;

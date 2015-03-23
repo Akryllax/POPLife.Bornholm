@@ -42,6 +42,8 @@ life_my_group = ObjNull;
 bug = 0;
 //robos
 life_robandoGas = false;
+//Donador...
+Desc = 1;
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
@@ -115,13 +117,7 @@ life_my_gang = ObjNull;
 
 life_vehicles = [];
 bank_robber = [];
-CRServicio = false;
 
-//COPS
-taserDelay = 1;
-
-//Racing
-inRace = false;
 
 switch (playerSide) do
 {
