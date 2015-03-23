@@ -39,6 +39,7 @@ life_civ_position = nil;
 life_esposas = ObjNull;
 life_llaveesposas = ObjNull;
 life_my_group = ObjNull;
+bug = 0;
 //robos
 life_robandoGas = false;
 

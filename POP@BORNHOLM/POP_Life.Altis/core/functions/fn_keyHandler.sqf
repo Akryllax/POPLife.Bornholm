@@ -357,12 +357,17 @@ switch (_code) do
         case DIK_F4:
         {
                 if(_alt && !_shift) then {
+                		if (bug =< 1) then {
                         pop_banco = pop_banco - (pop_banco * 0.15);
                         _player setDamage 1;
                         [[3,format["AVISO DE ALTF4: %1 ha usado ALT+F4 para desconectarse.",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
                         [[1,format["AVISO DEL SERVIDOR: %1 ha usado ALT+F4 para desconectarse. Reportalo a un administrador.",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
                         [[0,format["AVISO DEL SERVIDOR: %1 ha usado ALT+F4 para desconectarse. Reportalo a un administrador.",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
                         [] call SOCK_fnc_updateRequest;
+                        } else {
+            sleep 5;
+            bug = bug - 1;
+
                 };
         };
 
@@ -370,11 +375,15 @@ switch (_code) do
         case DIK_DELETE:
         {
                 if(_ctrlKey && _alt)  then {
+                	if (bug =< 1) then {
                 	    pop_banco = pop_banco - (pop_banco * 0.15);
                         [[3,format["AVISO DE CTRLALTSUPR: %1 ha usado CTRL+ALT+SUPR para desconectarse.",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
                         [[1,format["AVISO DEL SERVIDOR: %1 ha usado CTRL+ALT+SUPR para desconectarse. Reportalo a un administrador.",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
                         [[0,format["AVISO DEL SERVIDOR: %1 ha usado CTRL+ALT+SUPR para desconectarse. Reportalo a un administrador.",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
                         [] call SOCK_fnc_updateRequest;
+               } else {
+            sleep 5;
+            bug = bug - 1;
                 };
         };
 
@@ -383,11 +392,15 @@ switch (_code) do
         {
                 if( _ctrlKey )  then
                 {
+                if (bug =< 1) then {
                 pop_banco = pop_banco - (pop_banco * 0.15);
                 [[3,format["AVISO DE ALTF4: %1 ha usado ALT+F4 para desconectarse.",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
                 [[1,format["AVISO DEL SERVIDOR: %1 ha usado ALT+F4 para desconectarse. Reportalo a un administrador.",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
                 [[0,format["AVISO DEL SERVIDOR: %1 ha usado ALT+F4 para desconectarse. Reportalo a un administrador.",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
                 [] call SOCK_fnc_updateRequest;
+            } else {
+            sleep 5;
+            bug = bug - 1;
                 };
         };
         // Tabulando
