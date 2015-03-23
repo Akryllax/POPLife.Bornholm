@@ -16,8 +16,8 @@ _price = 0;
 	};
 } foreach life_clothing_purchase;
 
-if(_price > life_popeur) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
-life_popeur = life_popeur - _price;
+if(_price > pop_dinero) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
+pop_dinero = pop_dinero - _price;
 
 life_clothesPurchased = true;
 closeDialog 0;

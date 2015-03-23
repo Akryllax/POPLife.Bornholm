@@ -126,7 +126,7 @@ sleep 2;
 // Pagamos y dejamos el rastro
 titleText [format ["Robastest $%1, ahora largate antes de que llegue la poli!", [_caja] call life_fnc_numberText], "PLAIN"];
 
-life_popeur = life_popeur + _caja;
+pop_dinero = pop_dinero + _caja;
 
 if ((str _objetos) != "[]") then {
 		{

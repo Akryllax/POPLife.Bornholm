@@ -1,7 +1,7 @@
 #include <macro.h>
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Deposits money into the players gang bank.
 */
@@ -12,9 +12,9 @@ _value = parseNumber(ctrlText 2702);
 if(_value > 999999) exitWith {hint localize "STR_ATM_GreaterThan";};
 if(_value < 0) exitWith {};
 if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
-if(_value > life_atmcash) exitWith {hint localize "STR_NOTF_NotEnoughFunds"};
+if(_value > pop_banco) exitWith {hint localize "STR_NOTF_NotEnoughFunds"};
 
-__SUB__(life_atmcash,_value);
+__SUB__(pop_banco,_value);
 _gFund = grpPlayer getVariable ["gang_bank",0];
 _gFund = _gFund + _value;
 grpPlayer setVariable ["gang_bank",_gFund,true];

@@ -107,7 +107,7 @@ if(_time < 1) then{
 			hint _nombreRoboHINT;
 
 			//dar pasta
-			life_popeur = life_popeur + _dinero;
+			pop_dinero = pop_dinero + _dinero;
 
 
 			//Dar item especiales

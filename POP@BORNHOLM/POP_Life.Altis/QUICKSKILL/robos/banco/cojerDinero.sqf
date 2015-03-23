@@ -14,7 +14,7 @@ if (!isNil {robo}) then {
 
 
 
-		life_popeur = life_popeur + deposito;
+		pop_dinero = pop_dinero + deposito;
 
 
 		hint format ["Has robado %1$ del casino", deposito];

@@ -82,7 +82,7 @@ _gen removeAction _id;
 _furgo = _this select 3;
 
 //pagar al jugador
-life_popeur = life_popeur +350000;
+pop_dinero = pop_dinero +350000;
 //hint
 hint "Has cobrado 350000$ por tu trabajo";
 //borrar
@@ -139,9 +139,9 @@ _gen = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _jugador) exitWith {}; //if not the thief get bent
 
 //puede pagar?¿
- if(life_ATMcash - _precio < 0) exitWith { hint "No tienes suficiente dinero";[] spawn { sleep 5;hint "";} };
+ if(pop_banco - _precio < 0) exitWith { hint "No tienes suficiente dinero";[] spawn { sleep 5;hint "";} };
 
-life_popeur = life_popeur-_precio;
+pop_dinero = pop_dinero-_precio;
 
 //crear coche
 [_gen,_jugador] spawn {

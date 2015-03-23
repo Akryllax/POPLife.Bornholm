@@ -24,7 +24,7 @@ _name = [_var] call life_fnc_vartostr;
 if(([false,_type,_amount] call life_fnc_handleInv)) then
 {
 	hint format[localize "STR_Shop_Virt_SellItem",_amount,_name,[_price] call life_fnc_numberText];
-	life_popeur = life_popeur + _price;
+	pop_dinero = pop_dinero + _price;
 	[] call life_fnc_virt_update;
 
 };

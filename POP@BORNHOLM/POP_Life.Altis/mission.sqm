@@ -4935,7 +4935,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_01_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>BANCO</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Banking Insurance ($1,000)"",{if(life_atmcash > 1000) then {life_has_insurance = true; [""atm"",""sub"",1000] call life_fnc_changeMoney;};},"""",0,false,false,"""",'!life_has_insurance'];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>BANCO</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Banking Insurance ($1,000)"",{if(pop_banco > 1000) then {life_has_insurance = true; [""atm"",""sub"",1000] call life_fnc_changeMoney;};},"""",0,false,false,"""",'!life_has_insurance'];";
 		};
 		class Item195
 		{
@@ -5469,7 +5469,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_01_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>BANCO</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Banking Insurance ($1,000)"",{if(life_atmcash > 1000) then {life_has_insurance = true; [""atm"",""sub"",1000] call life_fnc_changeMoney;};},"""",0,false,false,"""",'!life_has_insurance'];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>BANCO</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Banking Insurance ($1,000)"",{if(pop_banco > 1000) then {life_has_insurance = true; [""atm"",""sub"",1000] call life_fnc_changeMoney;};},"""",0,false,false,"""",'!life_has_insurance'];";
 		};
 		class Item245
 		{

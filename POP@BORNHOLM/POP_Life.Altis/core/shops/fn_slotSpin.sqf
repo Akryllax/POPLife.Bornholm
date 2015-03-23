@@ -6,8 +6,8 @@
 */
 private["_slot","_slot1","_slot2","_slot3","_winnings","_slotcash","_betamt","_display"];
 _betamt = [_this,0,1,[0]] call BIS_fnc_param;
-if(life_popeur < _betamt) exitWith {hint format["No tienes suficiente dinero para jugar (%1$)",_betamt];};
-life_popeur = life_popeur - _betamt;
+if(pop_dinero < _betamt) exitWith {hint format["No tienes suficiente dinero para jugar (%1$)",_betamt];};
+pop_dinero = pop_dinero - _betamt;
 disableSerialization;
 _display = findDisplay 5780;
 
@@ -109,7 +109,7 @@ switch (_slot) do
 //multiple winnings by bet amount
 _slotcash = _winnings * ( _betamt / 2500 );
 
-life_popeur = life_popeur + _slotcash;
+pop_dinero = pop_dinero + _slotcash;
 _winningsText ctrlSetText format["%1",_slotcash];
 
 _bet1 ctrlEnable true;

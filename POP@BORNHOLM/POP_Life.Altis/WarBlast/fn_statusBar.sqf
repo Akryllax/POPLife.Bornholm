@@ -18,6 +18,6 @@ systemChat format["Cargando barra de estado...", _rscLayer];
 	{
 		sleep 1;
 		_counter = _counter - 1;
-		((uiNamespace getVariable "osefStatusBar")displayCtrl 1000)ctrlSetText format["FPS: %1 | Policias: %2 | Civiles: %3 | Medicos: %4 | Mercenarios: %7 | Banco: %5 | Posicion: %6", round diag_fps, west countSide playableUnits, civilian countSide playableUnits, independent countSide playableUnits,[life_atmcash] call life_fnc_numberText,mapGridPosition player, opfor countSide playableUnits, _counter];
+		((uiNamespace getVariable "osefStatusBar")displayCtrl 1000)ctrlSetText format["FPS: %1 | Policias: %2 | Civiles: %3 | Medicos: %4 | Mercenarios: %7 | Banco: %5 | Posicion: %6", round diag_fps, west countSide playableUnits, civilian countSide playableUnits, independent countSide playableUnits,[pop_banco] call life_fnc_numberText,mapGridPosition player, opfor countSide playableUnits, _counter];
 	};
 };

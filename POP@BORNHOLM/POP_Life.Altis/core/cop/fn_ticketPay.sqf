@@ -6,16 +6,16 @@
 	Pays the ticket.
 */
 if(isnil {life_ticket_val} OR isNil {life_ticket_cop}) exitWith {};
-if(life_popeur < life_ticket_val) exitWith
+if(pop_dinero < life_ticket_val) exitWith
 {
-	if(life_atmcash < life_ticket_val) exitWith
+	if(pop_banco < life_ticket_val) exitWith
 	{
 		hint localize "STR_Cop_Ticket_NotEnough";
 		[[1,"STR_Cop_Ticket_NotEnoughNOTF",true,[profileName]],"life_fnc_broadcast",life_ticket_cop,false] spawn life_fnc_MP;
 		closeDialog 0;
 	};
 	hint format[localize "STR_Cop_Ticket_Paid",[life_ticket_val] call life_fnc_numberText];
-	life_atmcash = life_atmcash - life_ticket_val;
+	pop_banco = pop_banco - life_ticket_val;
 	life_ticket_paid = true;
 	[[0,"STR_Cop_Ticket_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	[[1,"STR_Cop_Ticket_PaidNOTF_2",true,[profileName]],"life_fnc_broadcast",life_ticket_cop,false] spawn life_fnc_MP;
@@ -24,7 +24,7 @@ if(life_popeur < life_ticket_val) exitWith
 	closeDialog 0;
 };
 
-life_popeur = life_popeur - life_ticket_val;
+pop_dinero = pop_dinero - life_ticket_val;
 life_ticket_paid = true;
 
 [[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;

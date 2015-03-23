@@ -13,17 +13,17 @@ if(isNil "_unit") then { hint "Error: ""_unit"" isNil"};
 if(_unit == player) then {hint "Error: target == player"};
 if(isNull _unit) then {hint "Error: target isNull"};
 
-hint format["%1 te ha consficado %2$", _caller getVariable["realname",name _unit], life_popeur];
-_cash = life_popeur + 0;
-life_popeur = 0;
+hint format["%1 te ha consficado %2$", _caller getVariable["realname",name _unit], pop_dinero];
+_cash = pop_dinero + 0;
+pop_dinero = 0;
 
 live_fnc_conficateHint = {
-	life_popeur = life_popeur + _this select 1;
+	pop_dinero = pop_dinero + _this select 1;
 	hint format["Has confiscado %1$ de %2", _this select 1, (_this select 0) getVariable["realname",objNull]];
 };
 
 publicVariable "live_fnc_conficateHint";
 
-[[_caller,life_popeur,player],"live_fnc_conficateHint", _caller, false] spawn life_fnc_MP;
+[[_caller,pop_dinero,player],"live_fnc_conficateHint", _caller, false] spawn life_fnc_MP;
 [] call life_fnc_p_updateMenu;
 [0] call SOCK_fnc_updatePartial;

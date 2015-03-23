@@ -31,8 +31,8 @@ if((getPlayerUID player) != _this select 0) exitWith {[] call SOCK_fnc_dataQuery
 };
 */
 //Parse basic player information.
-life_popeur = parseNumber (_this select 2);
-life_atmcash = parseNumber (_this select 3);
+pop_dinero = parseNumber (_this select 2);
+pop_banco = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
 __CONST__(life_donator,parseNumber(_this select 5));
 

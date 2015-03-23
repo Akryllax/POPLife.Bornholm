@@ -30,7 +30,7 @@ compileFinal "
 	if(isNull _ret) exitWith {};
 	if(isNil ""_ret"") exitWith {};
 
-	[[life_atmcash,life_popeur,owner player,player],""life_fnc_admininfo"",_ret,false] spawn life_fnc_MP;
+	[[pop_banco,pop_dinero,owner player,player],""life_fnc_admininfo"",_ret,false] spawn life_fnc_MP;
 ";
 publicVariable "TON_fnc_player_query";
 
@@ -43,7 +43,7 @@ compileFinal "
 	_from = _this select 1;
 	if(!([str(_val)] call TON_fnc_isnumber)) exitWith {};
 	if(_from == """") exitWith {};
-	life_atmcash = life_atmcash + _val;
+	pop_banco = pop_banco + _val;
 	hint format[""%1 te ha transferido $%2."",_from,[_val] call life_fnc_numberText];
 
 ";

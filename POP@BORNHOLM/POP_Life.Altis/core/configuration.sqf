@@ -88,7 +88,7 @@ life_action_in_use = false;
 life_thirst = 100;
 life_hunger = 100;
 __CONST__(life_paycheck_period,5); //Five minutes
-life_popeur = 0;
+pop_dinero = 0;
 __CONST__(life_impound_car,9500);
 __CONST__(life_impound_boat,15000);
 __CONST__(life_impound_air,17500);
@@ -109,23 +109,23 @@ switch (playerSide) do
 {
 	case west:
 	{
-		life_atmcash = 50000; //Starting Bank Money
+		pop_banco = 50000; //Starting Bank Money
 		life_paycheck = 1000; //Paycheck Amount
 	};
 	case civilian:
 	{
-		life_atmcash = 50000; //Starting Bank Money
+		pop_banco = 50000; //Starting Bank Money
 		life_paycheck = 1500; //Paycheck Amount
 	};
 
 	case independent: {
-		life_atmcash = 50000;
+		pop_banco = 50000;
 		life_paycheck = 5000;
 	};
 
 	case east:
 	{
-		life_atmcash = 50000; //Starting Bank Money
+		pop_banco = 50000; //Starting Bank Money
 		life_paycheck = 5000; //Paycheck Amount
 	};
 };

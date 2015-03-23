@@ -21,9 +21,9 @@ _objetos = _lista select 8;
 
 //Comprobaciones
 if !((_bando == _acera) or (_acera == "")) exitWith { hint "No tienes permitido la compra de esta clase";};
-if (life_ATMCash < _precio) exitWith { hint "No tienes dinero!";};
+if (pop_banco < _precio) exitWith { hint "No tienes dinero!";};
 if (isNull _unit) exitWith {};
-life_ATMcash = life_ATMcash - _precio;
+pop_banco = pop_banco - _precio;
 
 removeAllWeapons _unit;
 removeallassigneditems _unit;

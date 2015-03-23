@@ -21,7 +21,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
-	life_popeur = life_popeur + _value;
+	pop_dinero = pop_dinero + _value;
 	hint format [localize "STR_ANOTF_Success",[_value] call life_fnc_numberText];
 	closeDialog 0;
 } else {

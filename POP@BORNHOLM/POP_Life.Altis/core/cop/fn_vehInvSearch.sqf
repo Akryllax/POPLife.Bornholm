@@ -2,7 +2,7 @@
 /*
 	File: fn_vehInvSearch.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Searches the vehicle for illegal items.
 */
@@ -18,7 +18,7 @@ _value = 0;
 {
 	_var = _x select 0;
 	_val = _x select 1;
-	
+
 	_index = [_var,life_illegal_items] call TON_fnc_index;
 	if(_index != -1) then
 	{
@@ -33,7 +33,7 @@ _value = 0;
 if(_value > 0) then
 {
 	[[0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-	life_atmcash = life_atmcash + _value;
+	pop_banco = pop_banco + _value;
 	_vehicle setVariable["Trunk",[],true];
 }
 	else
