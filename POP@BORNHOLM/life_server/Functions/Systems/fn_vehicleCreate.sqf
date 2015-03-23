@@ -1,7 +1,7 @@
 /*
 	File: fn_vehicleCreate.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Answers the query request to create the vehicle in the database.
 */
@@ -27,6 +27,7 @@ _side = switch(_side) do
 	case west:{"cop"};
 	case civilian: {"civ"};
 	case independent: {"med"};
+	case east: {"merc"};
 	default {"Error"};
 };
 
