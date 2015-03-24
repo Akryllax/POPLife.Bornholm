@@ -111,7 +111,7 @@ life_fnc_garageRefund = compileFinal
 [] execVM "core\init_survival.sqf";
 
 [] execVM "WarBlast\zlt_fastrope.sqf";
-[] call War_fnc_lacrimogeno;
+//[] call War_fnc_lacrimogeno;
 [] execVM "WarBlast\fn_statusBar.sqf";
 
 
