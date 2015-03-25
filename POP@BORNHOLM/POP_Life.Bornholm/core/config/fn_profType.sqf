@@ -19,38 +19,30 @@ case "cocaine": { _profName = "Droga_Prof";};
 case "marijuana": { _profName = "Droga_Prof";};
 case "copper": { _profName = "Fundicion_Prof"; };
 case "iron": { _profName = "Fundicion_Prof";};
-case "salt": {_profName = "Salt_Prof"; };
-case "sand": { _profName = "Sand_Prof";};
-case "diamond": { _profName = "Diamond_Prof";};
-case "oil": { _profName = "Oil_Prof";};
-case "cement": { _profName = "Rock_Prof";};
+case "salt": {_profName = "Fundicion_Prof"; };
+case "sand": { _profName = "Fundicion_Prof";};
+case "diamond": { _profName = "Geologo_Prof";};
+case "oil": { _profName = "Geologo_Prof";};
+case "cement": { _profName = "Geologo_Prof";};
 case "apple": { _profName = "Granjero_Prof"; };
 case "peach": { _profName = "Granjero_Prof";};
 case "heroinu": {_profName = "Droga_Prof"; };
 case "cannabis": { _profName = "Droga_Prof";};
 case "copperore": { _profName = "Fundicion_Prof"; };
 case "ironore": { _profName = "Fundicion_Prof";};
-case "oilu": { _profName = "Oil_Prof";};
-case "rock": { _profName = "Rock_Prof";};
+case "oilu": { _profName = "Geologo_Prof";};
+case "rock": { _profName = "Geologo_Prof";};
 
 //license to text
 case "Droga_Prof": {_profName = "Drogas"; };
 case "Fundicion_Prof": { _profName = "Herrero"; };
-case "Salt_Prof": {_profName = "Salt"; };
-case "Sand_Prof": { _profName = "Sand";};
-case "Diamond_Prof": { _profName = "Diamond";};
-case "Oil_Prof": { _profName = "Oil";};
-case "Rock_Prof": { _profName = "Rock";};
+case "Geologo_Prof": { _profName = "Geologia";};
 case "Granjero_Prof": { _profName = "Granja"; };
 
 
 case "Drogas": {_profName = "Droga_Prof"; };
 case "Herrero": { _profName = "Fundicion_Prof"; };
-case "Salt": {_profName = "Salt_Prof"; };
-case "Sand": { _profName = "Sand_Prof";};
-case "Diamond": { _profName = "Diamond_Prof";};
-case "Oil": { _profName = "Oil_Prof";};
-case "Rock": { _profName = "Rock_Prof";};
+case "Geologia": { _profName = "Geologo_Prof";};
 case "Granja": { _profName = "Granjero_Prof"; };
 default{""};
 };
