@@ -326,7 +326,7 @@ class playerSettings {
 			h = (1 / 25);
 		};
 		class ProfButton : life_RscButtonMenu {
-           text = "Proficiency";
+           text = "Experiencia";
            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
            onButtonClick = "[] call life_fnc_profSetup;";
            x = 0.11;
