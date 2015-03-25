@@ -1,7 +1,7 @@
 /*
 File: fn_addExp.sqf
 Author: Jacob "PapaBear" Tyler
-
+Edited By: [midgetgrimm]
 Description:
 Add exp to given prof
 */
@@ -13,52 +13,41 @@ _profData = missionNamespace getVariable (_type);
 //0 = level
 //1 = exp
 
-_level = (_profData select 0);
+_level = (_profData select 0);//check this
 _exp = (_profData select 1);
 _nextLevel = 0;
-_nextLevel = 4 * ( _level^3 ) ;
-_nextLevel2 =  6 * ( _level^2 ) ;
-_nextLevel = _nextLevel - _nextLevel2;
-_nextLevel3 = 20 * _level ;
-_nextLevel = _nextLevel + _nextLevel3 + 200 ;
-
+_nextLevel = _level * ( _level - 1) * 500 ;
+if(_nextLevel < 1) then {_nextLevel = 500;};
 _exp = _exp + _amount;
+if( _exp >= _nextLevel ) then {
 
-if( _exp >= _nextLevel ) then
-{
-if( _level == 10 ) then
-{
-if( _exp >= _nextLevel ) then
-{
-_exp = _nextLevel;
-missionNamespace setVariable [_type,[(_profData select 0),(_exp)]];
-}
-else
-{
-missionNamespace setVariable [_type,[(_profData select 0),(_exp)]];
-};
+    if( _level >= 20 ) then {
 
-}
-else
-{
-_exp = _nextLevel - _exp;
-missionNamespace setVariable [_type,[(_profData select 0) + 1,(_exp)]];
-if( _level == 9 ) then
-{
-titleText [format["You are now level %1. Max Level!",_level],"PLAIN"]; titleFadeOut 5;
-}
-else
-{
-missionNamespace setVariable [_type,[(_profData select 0) + 1,(_exp)]];
-_text = [_type] call life_fnc_varToStr;
-titleText [format["%1 is now at level %2.",_text,_level],"PLAIN"]; titleFadeOut 5;
-};
+        if( _exp >= _nextLevel ) then {
+                _exp = _nextLevel;
+                missionNamespace setVariable [_type,[(_profData select 0),(_exp)]];
+        } else {
+                missionNamespace setVariable [_type,[(_profData select 0),(_exp)]];
+        };
+
+    } else {
+        _exp = _nextLevel - _exp;
+        if(_exp < 0) then{_exp = 0;};
+        missionNamespace setVariable [_type,[(_profData select 0) + 1,(_exp)]];
+        if( _level == 20 ) then {
+                _level = (_profData select 0) + 1;
+                _text = [_type] call life_fnc_varToStr;
+                hint parseText format["<t align='center'><t size='1.5'>FELICIDADES!<br/>Ahora eres</t><br/><t color='#FFFF00'><t size='2'>NVL: %1<br/>%2<br/></t></t></t>",_level,_text];
+        } else {
+                missionNamespace setVariable [_type,[(_profData select 0) + 1,(_exp)]];
+                _level = (_profData select 0) + 1;
+                _text = [_type] call life_fnc_varToStr;
+                hint parseText format["<t align='center'><t size='1'>FELICIDADES</t><br/><t color='#FFFF00'><t size='1.5'>%1</t></t><br/><t size='1.5'>AHORA ESTA AL</t><br/><t color='#0088CC'><t size='1.5'>NVL: %2</t></t></t>",_text,_level];
+        };
 
 
-};
+    };
 
-}
-else
-{
-missionNamespace setVariable [_type,[(_profData select 0),(_exp)]];
+} else {
+    missionNamespace setVariable [_type,[(_profData select 0),(_exp)]];
 };

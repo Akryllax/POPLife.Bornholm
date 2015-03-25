@@ -230,6 +230,7 @@ class Life_Client_Core
 		class radarCam {};
 			class profSetUp {};
     class addExp {};
+    class grabSkills {};
 	};
 	
 	class Network
