@@ -12088,21 +12088,21 @@ class Mission
 		{
 			position[]={15642.632,2.5695207,197.82399};
 			name="salt_1";
-			text="Mina de Sal";
+			text="mina  de oro";
 			type="mil_pickup";
 			colorName="ColorOrange";
 			a=0.80000001;
 			b=0.80000001;
-			angle=150.55695;
+			angle=-1.61968;
 		};
 		class Item25
 		{
 			position[]={8214.0293,133.5004,9746.2285};
 			name="Salt";
-			text="Procesado de Sal";
+			text="Procesado de Oro";
 			type="respawn_unknown";
 			colorName="ColorBrown";
-			angle=46.675072;
+			angle=46.675098;
 		};
 		class Item26
 		{
@@ -12170,21 +12170,21 @@ class Mission
 		{
 			position[]={5104.0156,116.17137,15097.814};
 			name="OilP";
-			text="Procesar Petroleo";
+			text="Procesar Platino";
 			type="respawn_unknown";
 			colorName="ColorBrown";
-			angle=89.097908;
+			angle=89.0979;
 		};
 		class Item34
 		{
 			position[]={7942.8096,1.6235596,16433.75};
 			name="sand_1";
-			text="Mina arena";
+			text="Mina de carbon";
 			type="mil_pickup";
 			colorName="ColorOrange";
 			a=0.80000001;
 			b=0.80000001;
-			angle=46.675072;
+			angle=46.675098;
 		};
 		class Item35
 		{
@@ -12328,37 +12328,37 @@ class Mission
 		{
 			position[]={1457.2266,17.397497,14375.424};
 			name="apple_1";
-			text="Campo de Manzanas ";
+			text="Campo de Maiz";
 			type="loc_Tree";
 			colorName="ColorOrange";
-			angle=46.675072;
+			angle=46.675098;
 		};
 		class Item52
 		{
 			position[]={4835.356,52.270237,18923.084};
 			name="apple_2";
-			text="Campo de Manzana";
+			text="Campo de Maiz";
 			type="loc_Tree";
 			colorName="ColorOrange";
-			angle=46.675072;
+			angle=46.675098;
 		};
 		class Item53
 		{
 			position[]={2203.4028,92.547142,14861.809};
 			name="peaches_2";
-			text="Campo de Melocotones";
+			text="Campo de Trigo";
 			type="loc_Tree";
 			colorName="ColorOrange";
-			angle=46.675072;
+			angle=46.675098;
 		};
 		class Item54
 		{
 			position[]={1971.4406,20.425528,7490.4985};
 			name="peaches_1";
-			text="Campo de Melocotones";
+			text="Campo de Trigo";
 			type="loc_Tree";
 			colorName="ColorOrange";
-			angle=46.675072;
+			angle=46.675098;
 		};
 		class Item55
 		{
@@ -12373,16 +12373,16 @@ class Mission
 		{
 			position[]={1800.4352,20.233072,7018.6875};
 			name="apple_3";
-			text="Campo de Manzanas";
+			text="Campo de Maiz";
 			type="loc_Tree";
 			colorName="ColorOrange";
-			angle=46.675072;
+			angle=46.675098;
 		};
 		class Item57
 		{
-			position[]={11170.778,64.600853,14849.344};
+			position[]={16977.393,14.214282,5078.9678};
 			name="apple_4";
-			text="Campo de Manzanas";
+			text="Campo de Maiz";
 			type="loc_Tree";
 			colorName="ColorOrange";
 			angle=46.675098;
@@ -12391,10 +12391,10 @@ class Mission
 		{
 			position[]={4598.8257,33.431866,19425.801};
 			name="peaches_3";
-			text="Campo de Melocotones";
+			text="Campo de Trigo";
 			type="loc_Tree";
 			colorName="ColorOrange";
-			angle=46.675072;
+			angle=46.675098;
 		};
 		class Item59
 		{
@@ -12445,10 +12445,10 @@ class Mission
 		{
 			position[]={1368.3373,8.3996201,12911.062};
 			name="dp_missions";
-			text="Nuevas Misiones SEUR";
+			text="Nuevas Misiones DHL";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=2.3369102;
+			colorName="ColorYellow";
+			angle=2.33691;
 		};
 		class Item65
 		{
@@ -12470,190 +12470,190 @@ class Mission
 		{
 			position[]={11618.19,30.793262,14479.985};
 			name="dp3";
-			text="SEUR DP 3";
+			text="DHL DP 3";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=-61.968506;
+			colorName="ColorYellow";
+			angle=-61.968498;
 		};
 		class Item68
 		{
 			position[]={7307.6191,10.47139,16799.609};
 			name="dp7";
-			text="SEUR DP 7";
+			text="DHL DP 7";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=99.578484;
+			colorName="ColorYellow";
+			angle=99.578499;
 		};
 		class Item69
 		{
 			position[]={4892.4136,45.031994,18790.543};
 			name="dp4";
-			text="SEUR DP 4";
+			text="DHL DP 4";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=92.916656;
+			colorName="ColorYellow";
+			angle=132.20168;
 		};
 		class Item70
 		{
-			position[]={3834.5569,65.916885,12125.848};
+			position[]={3836.6399,65.841103,12113.051};
 			name="dp16";
-			text="SEUR DP 16";
+			text="DHL DP 16";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=226.27592;
+			colorName="ColorYellow";
+			angle=226.276;
 		};
 		class Item71
 		{
 			position[]={14070.228,86.290367,10135.852};
 			name="dp17";
-			text="SEUR DP 17";
+			text="DHL DP 17";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=53.838547;
+			colorName="ColorYellow";
+			angle=53.838501;
 		};
 		class Item72
 		{
 			position[]={10149.455,69.512154,5593.9033};
 			name="dp19";
-			text="SEUR DP 19";
+			text="DHL DP 19";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=335.07358;
+			colorName="ColorYellow";
+			angle=335.07401;
 		};
 		class Item73
 		{
 			position[]={16921.84,3.1325977,4151.4771};
 			name="dp18";
-			text="SEUR DP 18";
+			text="DHL DP 18";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=413.70465;
+			colorName="ColorYellow";
+			angle=413.70499;
 		};
 		class Item74
 		{
 			position[]={16786.283,63.532104,8083.9951};
 			name="dp13";
-			text="SEUR DP 13";
+			text="DHL DP 13";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=312.70914;
+			colorName="ColorYellow";
+			angle=312.70901;
 		};
 		class Item75
 		{
 			position[]={2883.2703,93.996376,16587.871};
 			name="dp12";
-			text="SEUR DP 12";
+			text="DHL DP 12";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=172.78676;
+			colorName="ColorYellow";
+			angle=232.50238;
 		};
 		class Item76
 		{
 			position[]={15407.648,51.210651,5008.6646};
 			name="dp14";
-			text="SEUR DP 14";
+			text="DHL DP 14";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=209.37581;
+			colorName="ColorYellow";
+			angle=209.37601;
 		};
 		class Item77
 		{
 			position[]={15547.182,14.886874,2380.1526};
 			name="dp15";
-			text="SEUR DP 15";
+			text="DHL DP 15";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=231.22229;
+			colorName="ColorYellow";
+			angle=231.222;
 		};
 		class Item78
 		{
 			position[]={11628.681,38.691013,2683.0195};
 			name="dp21";
-			text="SEUR DP 21";
+			text="DHL DP 21";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=248.52199;
+			colorName="ColorYellow";
+			angle=248.522;
 		};
 		class Item79
 		{
-			position[]={9167.1982,103.81164,8684.6123};
+			position[]={9158.3594,102.68097,8686.4531};
 			name="dp22";
-			text="SEUR DP 22";
+			text="DHL DP 22";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=-302.71484;
+			colorName="ColorYellow";
+			angle=-302.715;
 		};
 		class Item80
 		{
 			position[]={5292.2061,113.22346,12988.206};
 			name="dp24";
-			text="SEUR DP 24";
+			text="DHL DP 24";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=27.827618;
+			colorName="ColorYellow";
+			angle=27.8276;
 		};
 		class Item81
 		{
 			position[]={6036.5107,52.175613,5567.52};
 			name="dp23";
-			text="SEUR DP 23";
+			text="DHL DP 23";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=118.57879;
+			colorName="ColorYellow";
+			angle=118.579;
 		};
 		class Item82
 		{
 			position[]={2832.5686,21.860825,11752.013};
 			name="dp5";
-			text="SEUR DP 5";
+			text="DHL DP 5";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=136.96362;
+			colorName="ColorYellow";
+			angle=136.964;
 		};
 		class Item83
 		{
 			position[]={5135.5522,61.697964,9298.5752};
 			name="dp10";
-			text="SEUR DP 10";
+			text="DHL DP 10";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=278.92908;
+			colorName="ColorYellow";
+			angle=278.92899;
 		};
 		class Item84
 		{
 			position[]={6858.3984,116.39623,12651.456};
 			name="dp11";
-			text="SEUR DP 11";
+			text="DHL DP 11";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=115.32497;
+			colorName="ColorYellow";
+			angle=115.325;
 		};
 		class Item85
 		{
-			position[]={2068.5269,20.319517,7669.3179};
+			position[]={2068.9646,20.341684,7667.8799};
 			name="dp9";
-			text="SEUR DP 9";
+			text="DHL DP 9";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=-72.878395;
+			colorName="ColorYellow";
+			angle=-72.878403;
 		};
 		class Item86
 		{
 			position[]={1556.9462,28.165142,13968.618};
 			name="dp8";
-			text="SEUR DP 8";
+			text="DHL DP 8";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=402.78439;
+			colorName="ColorYellow";
+			angle=402.784;
 		};
 		class Item87
 		{
 			position[]={13684.419,61.268185,11995.198};
 			name="dp6";
-			text="SEUR DP 6";
+			text="DHL DP 6";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=184.05675;
+			colorName="ColorYellow";
+			angle=184.05701;
 		};
 		class Item88
 		{
@@ -12661,26 +12661,26 @@ class Mission
 			name="dp1";
 			text="SEUR DP 1";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=-29.576153;
+			colorName="ColorYellow";
+			angle=-40.878105;
 		};
 		class Item89
 		{
 			position[]={4372.3955,117.68209,15761.717};
 			name="dp2";
-			text="SEUR DP 2";
+			text="DHL DP 2";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=106.1878;
+			colorName="ColorYellow";
+			angle=106.188;
 		};
 		class Item90
 		{
 			position[]={5411.3613,18.418257,4280.3931};
 			name="dp25";
-			text="SEUR DP 25";
+			text="DHL DP 25";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=-66.981453;
+			colorName="ColorYellow";
+			angle=-66.981499;
 		};
 		class Item91
 		{
@@ -12695,23 +12695,23 @@ class Mission
 		{
 			position[]={13144.908,104.2384,7833.917};
 			name="oil_2";
-			text="Yacimiento de Petroleo";
+			text="Mina de Platino";
 			type="mil_pickup";
 			colorName="ColorOrange";
 			a=0.80000001;
 			b=0.80000001;
-			angle=2.8665473;
+			angle=2.86655;
 		};
 		class Item93
 		{
 			position[]={5877.6792,112.45929,14355.755};
 			name="oil_1";
-			text="Yacimiento de Petroleo";
+			text="Mina de Platino";
 			type="mil_pickup";
 			colorName="ColorOrange";
 			a=0.80000001;
 			b=0.80000001;
-			angle=46.675072;
+			angle=46.675098;
 		};
 		class Item94
 		{
@@ -12828,12 +12828,12 @@ class Mission
 		};
 		class Item109
 		{
-			position[]={10972.811,106.75324,10152.625};
+			position[]={9589.9883,98.435059,11106.907};
 			name="dp20";
-			text="SEUR DP 20";
+			text="DHL DP 20";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=181.3112;
+			colorName="ColorYellow";
+			angle=309.54419;
 		};
 		class Item110
 		{
@@ -12929,10 +12929,10 @@ class Mission
 		{
 			position[]={14839.828,61.508492,10005.61};
 			name="oil_trader_1";
-			text="Comerciante de Sal";
+			text="Comerciante de Oro";
 			type="b_unknown";
 			colorName="ColorCIV";
-			angle=1.9002496;
+			angle=1.90025;
 		};
 		class Item121
 		{
@@ -13157,21 +13157,21 @@ class Mission
 		{
 			position[]={2502.9829,54.389999,16936.725};
 			name="rock_1";
-			text="Mina de Piedra";
+			text="Mina de Granito";
 			type="mil_pickup";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
-			angle=46.675072;
+			angle=46.675098;
 		};
 		class Item147
 		{
 			position[]={4840.5532,118.3703,13475.493};
 			name="rock_proc";
-			text="Procesar Piedra";
+			text="Procesar Granito";
 			type="respawn_unknown";
 			colorName="ColorBrown";
-			angle=188.9653;
+			angle=188.965;
 		};
 		class Item148
 		{
@@ -13565,10 +13565,10 @@ class Mission
 		{
 			position[]={1668.8862,21.125046,15337.178};
 			name="oil_trader_5";
-			text="Comerciante de Petroleo";
+			text="Comerciante de Platino";
 			type="b_unknown";
 			colorName="ColorCIV";
-			angle=45.640167;
+			angle=45.640202;
 		};
 		class Item197
 		{
@@ -13620,19 +13620,19 @@ class Mission
 		{
 			position[]={4398.9902,9.9833088,19925.854};
 			name="dp_missions_1";
-			text="Nuevas Misiones SEUR";
+			text="Nuevas Misiones DHL";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=-130.45244;
+			colorName="ColorYellow";
+			angle=-130.452;
 		};
 		class Item203
 		{
 			position[]={17434.471,2.213589,4705.9829};
 			name="dp_missions_2";
-			text="Nuevas Misiones SEUR";
+			text="Nuevas Misiones DHL";
 			type="mil_box";
-			colorName="ColorBlue";
-			angle=37.102047;
+			colorName="ColorYellow";
+			angle=37.102001;
 		};
 		class Item204
 		{
