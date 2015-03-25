@@ -86,22 +86,6 @@ switch (_var) do
      case "life_inv_meta":{("Meta")};
      case "life_inv_petroleo":{("Petroleo")};
 
-     //defensas
-     case "life_inv_cono": {("Cono")};
-	 case "life_inv_barrera": {("Barrera")};
-	 case "life_inv_cajaMadera": {("Caja Madera")};
-	 case "life_inv_palet": {("Palet")};
-	 case "life_inv_murallaPalets": {("Muralla Palets")};
-	 case "life_inv_murallaSacosGrande": {("Muralla Sacos Grande")};
-	 case "life_inv_murallaSacosPequena": {("Muralla Sacos Peq")};
-	 case "life_inv_murallaPiedras": {("Muralla Piedra")};
-	 case "life_inv_barrilBasura": {("Barril Basura")};
-	 case "life_inv_barrilArena": {("Barril Arena")};
-	 case "life_inv_barrilArdiendo": {("Barril Ardiendo")};
-	 case "life_inv_pilaRuedas": {("Pila de Neumaticos")};
-	 case "life_inv_defensaChasisCoche": {("Defensa Coche Viejo")};
-	 case "life_inv_contenedorBasura": {("Contenedor de Basura")};
-
      //objetos espia
 	case "life_inv_gpsEspia": { ("GPS espia") };
 	//semillas
@@ -113,9 +97,6 @@ switch (_var) do
 	case "life_inv_tomates": {("Tomates")};
 	case "life_inv_maiz": {("Maiz")};
 	//items Rosen
-	case "llave_casino": {(localize "STR_Item_llave_casino")};
-	case "maletin_casino": {(localize "STR_Item_maletin_casino")};
-
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};
 	case "license_civ_air": {(localize "STR_License_Pilot")};
@@ -140,4 +121,17 @@ switch (_var) do
 	case "license_med_air": {(localize "STR_License_Pilot")};
 	case "license_civ_home": {(localize "STR_License_Home")};
 	case "license_civ_cazarrecompensas": {(localize "STR_License_Cazarrecompensas")};
+
+	//Prof Block
+case "Oil_Prof": {(localize "STR_Prof_Oil")};
+case "Iron_Prof": {(localize "STR_Prof_Iron")};
+case "Copper_Prof": {(localize "STR_Prof_Copper")};
+case "Rock_Prof": {(localize "STR_Prof_Rock")};
+case "Fruit_Prof": {(localize "STR_Prof_Fruit")};
+case "Salt_Prof": {(localize "STR_Prof_Salt")};
+case "Sand_Prof": {(localize "STR_Prof_Sand")};
+case "Diamond_Prof": {(localize "STR_Prof_Diamond")};
+case "Cocain_Prof": {(localize "STR_Prof_Cocain")};
+case "Canabis_Prof": {(localize "STR_Prof_Canabis")};
+case "Heroin_Prof": {(localize "STR_Prof_Heroin")};
 };

@@ -155,6 +155,7 @@ class Life_Client_Core
 		class clothing_cazarrecompensas {};
 		class clothing_merc {};
 		class clothing_don {};
+		class profType {};
 	};
 
 	class Player_Menu
@@ -227,6 +228,8 @@ class Life_Client_Core
 		class loadGear {};
 		class stripDownPlayer {};
 		class radarCam {};
+			class profSetUp {};
+    class addExp {};
 	};
 	
 	class Network
@@ -455,6 +458,7 @@ class WarBlast
 		file= "WarBlast\Robos";
 		class roboGasolinera {};
 	};
+
 };
 class Quickskill
 {
