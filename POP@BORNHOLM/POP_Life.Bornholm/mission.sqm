@@ -12327,7 +12327,7 @@ class Mission
 		class Item51
 		{
 			position[]={1457.2266,17.397497,14375.424};
-			name="apple_1";
+			name="maiz_1";
 			text="Campo de Maiz";
 			type="loc_Tree";
 			colorName="ColorOrange";
@@ -12336,7 +12336,7 @@ class Mission
 		class Item52
 		{
 			position[]={4835.356,52.270237,18923.084};
-			name="apple_2";
+			name="maiz_2";
 			text="Campo de Maiz";
 			type="loc_Tree";
 			colorName="ColorOrange";
@@ -12345,7 +12345,7 @@ class Mission
 		class Item53
 		{
 			position[]={2203.4028,92.547142,14861.809};
-			name="peaches_2";
+			name="trigo_2";
 			text="Campo de Trigo";
 			type="loc_Tree";
 			colorName="ColorOrange";
@@ -12354,7 +12354,7 @@ class Mission
 		class Item54
 		{
 			position[]={1971.4406,20.425528,7490.4985};
-			name="peaches_1";
+			name="trigo_1";
 			text="Campo de Trigo";
 			type="loc_Tree";
 			colorName="ColorOrange";
@@ -12372,7 +12372,7 @@ class Mission
 		class Item56
 		{
 			position[]={1800.4352,20.233072,7018.6875};
-			name="apple_3";
+			name="maiz_3";
 			text="Campo de Maiz";
 			type="loc_Tree";
 			colorName="ColorOrange";
@@ -12381,7 +12381,7 @@ class Mission
 		class Item57
 		{
 			position[]={16977.393,14.214282,5078.9678};
-			name="apple_4";
+			name="maiz_4";
 			text="Campo de Maiz";
 			type="loc_Tree";
 			colorName="ColorOrange";
@@ -12390,7 +12390,7 @@ class Mission
 		class Item58
 		{
 			position[]={4598.8257,33.431866,19425.801};
-			name="peaches_3";
+			name="trigo_3";
 			text="Campo de Trigo";
 			type="loc_Tree";
 			colorName="ColorOrange";
