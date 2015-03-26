@@ -28,7 +28,7 @@ if(_diff == 0) exitWith {hint localize "STR_NOTF_InvFull"};
 life_action_inUse = true;
 
 _time = 0;
-_profName = [_gather] call life_fnc_profType;
+_profName = [_mine] call life_fnc_profType;
 if( _profName != "" ) then
 {
 _data = missionNamespace getVariable (_profName);
