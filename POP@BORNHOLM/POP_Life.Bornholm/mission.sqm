@@ -12076,7 +12076,7 @@ class Mission
 		class Item23
 		{
 			position[]={15552.239,81.423912,6503.6113};
-			name="iron_1";
+			name="hierro_1";
 			text="Mina de Hierro";
 			type="mil_pickup";
 			colorName="ColorOrange";
@@ -12087,7 +12087,7 @@ class Mission
 		class Item24
 		{
 			position[]={15642.632,2.5695207,197.82399};
-			name="salt_1";
+			name="oro_1";
 			text="mina  de oro";
 			type="mil_pickup";
 			colorName="ColorOrange";
@@ -12178,7 +12178,7 @@ class Mission
 		class Item34
 		{
 			position[]={7942.8096,1.6235596,16433.75};
-			name="sand_1";
+			name="carbon_1";
 			text="Mina de carbon";
 			type="mil_pickup";
 			colorName="ColorOrange";
@@ -12207,7 +12207,7 @@ class Mission
 		class Item37
 		{
 			position[]={15232.259,73.112816,6248.854};
-			name="lead_1";
+			name="Cobre_1";
 			text="Mina de Cobre";
 			type="mil_pickup";
 			colorName="ColorOrange";
@@ -12694,7 +12694,7 @@ class Mission
 		class Item92
 		{
 			position[]={13144.908,104.2384,7833.917};
-			name="oil_2";
+			name="platino_2";
 			text="Mina de Platino";
 			type="mil_pickup";
 			colorName="ColorOrange";
@@ -12705,7 +12705,7 @@ class Mission
 		class Item93
 		{
 			position[]={5877.6792,112.45929,14355.755};
-			name="oil_1";
+			name="platino_1";
 			text="Mina de Platino";
 			type="mil_pickup";
 			colorName="ColorOrange";
@@ -13156,7 +13156,7 @@ class Mission
 		class Item146
 		{
 			position[]={2502.9829,54.389999,16936.725};
-			name="rock_1";
+			name="granito_1";
 			text="Mina de Granito";
 			type="mil_pickup";
 			colorName="ColorOrange";

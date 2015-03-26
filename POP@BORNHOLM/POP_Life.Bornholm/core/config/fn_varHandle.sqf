@@ -206,23 +206,6 @@ switch (_mode) do
 			case "life_inv_tomates": {"tomates"};
 			case "life_inv_maiz": {"maiz"};
 			//defensas
-            case "life_inv_cono": {"cono"};
-	        case "life_inv_barrera": {"barrera"};
-	        case "life_inv_cajaMadera": {"cajaMadera"};
-	        case "life_inv_palet": {"palet"};
-	        case "life_inv_murallaPalets": {"murallaPalets"};
-	        case "life_inv_murallaSacosGrande": {"murallaSacosGrande"};
-	        case "life_inv_murallaSacosPequena": {"murallaSacosPequena"};
-	        case "life_inv_murallaPiedras": {"murallaPiedras"};
-	        case "life_inv_barrilBasura": {"barrilBasura"};
-	        case "life_inv_barrilArena": {"barrilArena"};
-	        case "life_inv_barrilArdiendo": {"barrilArdiendo"};
-	        case "life_inv_pilaRuedas": {"pilaRuedas"};
-	        case "life_inv_defensaChasisCoche": {"defensaChasisCoche"};
-	        case "life_inv_contenedorBasura": {"contenedorBasura"};
-			//items Rosen
-			case "llave_casino": {"life_inv_llave_casino"};
-			case "maletin_casino": {"life_inv_maletin_casino"};
 			default {"not found"};
 		};
 	};
