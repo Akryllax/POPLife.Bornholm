@@ -24,7 +24,7 @@ _ownerID = owner _ownerID;
 */
 _query = switch(_side) do {
 	case west: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, cop_prof, blacklist FROM players WHERE playerid='%1'",_uid];};
-	case civilian: {_returnCount = 12; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civ_prof, civPosition, alive   FROM players WHERE playerid='%1'",_uid];};
+	case civilian: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civ_prof FROM players WHERE playerid='%1'",_uid];};
 	case independent: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear, med_prof  FROM players WHERE playerid='%1'",_uid];};
 	case east: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, merclevel, merc_gear, merc_licenses, blacklist FROM players WHERE playerid='%1'",_uid];};
 };
@@ -100,18 +100,11 @@ switch (_side) do {
 		_gangData = _uid spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult pushBack (missionNamespace getVariable[format["gang_%1",_uid],[]]);
-		//Posicion
-		_new = [(_queryResult select 10)] call DB_fnc_mresToArray;
-		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
-		if(count _new != 3 OR (typeName _new != "ARRAY")) then {_new = [0,0,0];};
-		_queryResult set[10,_new];
-		 //alive
-        _queryResult set[11,([_queryResult select 11,1] call DB_fnc_bool)];
 	};
 
 };
 
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
-_queryResult set[14,_keyArr];
+_queryResult set[12,_keyArr];
 
 [_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] spawn life_fnc_MP;

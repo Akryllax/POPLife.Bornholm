@@ -63,20 +63,17 @@ switch(playerSide) do {
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);
 		__CONST__(life_mercLevel,0);
-		life_houses = _this select 12;
+		life_houses = _this select 10;
 		{
 			_house = nearestBuilding (call compile format["%1", _x select 0]);
 			life_vehicles pushBack _house;
 		} foreach life_houses;
 
-		life_gangData = _This select 13;
+		life_gangData = _This select 11;
 		if(count life_gangData != 0) then {
 			[] spawn life_fnc_initGang;
 		};
 		//posicion
-		life_civ_position = [_this, 10, [], [[]]] call BIS_fnc_param;
-		if(count life_civ_position != 3) then {civ_position = [0,0,0];};
-        life_is_alive = [_this, 11, false, [false]] call BIS_fnc_param;
 
 		[] spawn life_fnc_initHouses;
 	};
@@ -94,7 +91,7 @@ switch(playerSide) do {
 	};
 };
 
-if(count (_this select 14) > 0) then {
-	{life_vehicles pushBack _x;} foreach (_this select 14);
+if(count (_this select 13) > 0) then {
+	{life_vehicles pushBack _x;} foreach (_this select 13);
 };
 life_session_completed = true;

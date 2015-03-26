@@ -29,15 +29,14 @@ if (!life_is_alive) then
 		life_is_arrested = false;
 		[player,true] spawn life_fnc_jail;
 	} else {
-		if(life_civ_position isEqualTo [0,0,0]) then {
+		if !(profileNamespace getVariable"posicion") then {
 			[] call _spawnMenu;
 		} else {
-			player setPos life_civ_position;
+			player setPos (profileNamespace getVariable "posicion");
 			hint format["Sigues vivo y estas donde la ultima vez..."];
 		};
 	};
 	life_is_alive = true;
 };
 player addRating 9999999;
-
 

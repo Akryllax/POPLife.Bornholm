@@ -33,9 +33,6 @@ _packet pushBack _profs;
 switch (playerSide) do {
 	case civilian: {
 		_packet pushBack life_is_arrested;
-		//Posicion
-		_packet pushBack (getPos player);
-        _packet pushBack life_is_alive;
 	};
 };
 
