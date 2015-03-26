@@ -35,17 +35,9 @@ if(isNil "life_tagson") then {
 	life_sidechat = true;
 	life_tagson = true;
 	life_revealObjects = false;
+	life_fps = false;
 };
 
-if(life_revealObjects) then {
-	_objs ctrlSetTextColor [0,1,0,1];
-	_objs ctrlSetText "ON";
-	_objs buttonSetAction "[LIFE_ID_RevealObjects,""onEachFrame""] call BIS_fnc_removeStackedEventHandler; life_revealObjects = false; [] call life_fnc_settingsMenu;";
-} else {
-	_objs ctrlSetTextColor [1,0,0,1];
-	_objs ctrlSetText "OFF";
-	_objs buttonSetAction "LIFE_ID_RevealObjects = [""LIFE_RevealObjects"",""onEachFrame"",""life_fnc_revealObjects""] call BIS_fnc_addStackedEventHandler; life_revealObjects = true; [] call life_fnc_settingsMenu;";
-};
 
 if(life_tagson) then {
 	_tags ctrlSetTextColor [0,1,0,1];
@@ -63,4 +55,14 @@ if(life_sidechat) then {
 } else {
 	_side ctrlSetTextColor [1,0,0,1];
 	_side ctrlSetText "OFF";
+};
+
+if(life_fps) then {
+	_objs ctrlSetTextColor [0,1,0,1];
+	_objs ctrlSetText "OFF";
+	_objs buttonSetAction "life_fps = false; [] call War_fnc_fps; [] call life_fnc_settingsMenu;";
+} else {
+	_objs ctrlSetTextColor [1,0,0,1];
+	_objs ctrlSetText "ON";
+	_objs buttonSetAction "life_fps = true; [] call War_fnc_fps; [] call life_fnc_settingsMenu;";
 };

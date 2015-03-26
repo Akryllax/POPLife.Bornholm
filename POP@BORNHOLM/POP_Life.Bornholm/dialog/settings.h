@@ -51,7 +51,7 @@ class SettingsMenu
 		class RevealNearestHeader : PlayerTagsHeader
 		{
 			idc = -1;
-			text = "Reveal Nearest Objects";
+			text = "Mejorar Rendimiento";
 			
 			y = 0.53;
 		};
@@ -184,7 +184,7 @@ class SettingsMenu
 		
 		class RevealONOFF : PlayerTagsONOFF
 		{
-			tooltip = "$STR_GUI_PlayerReveal";
+			tooltip = "Activa y desactiva la hierba del jugador para mejorar el rendimiento";
 			idc = 2972;
 			y = 0.53;
 		};

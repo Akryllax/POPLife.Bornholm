@@ -67,7 +67,7 @@ switch (playerSide) do
 
 //Para la vision y carga de los jugadores
 setViewDistance 1300;
-setTerrainGrid 50;
+//setTerrainGrid 50;
 
 player setVariable ["BIS_noCoreConversations", true];
 enableSentences false;
