@@ -10,9 +10,9 @@ _shop = _this select 0;
 
 switch (_shop) do
 {
-	case "market": {["Mercado de Altis",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","storagesmall","storagebig","semillasMaria","semillasCoca","semillasMaiz","semillasTomate","tomates","maiz"]]};
-	case "rebel": {["Mercado rebelde",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","esposas","llaveesposas"]]};
-	case "gang": {["Mercado de banda", ["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","blastingcharge","boltcutter"]]};
+	case "market": {["Mercado de Altis",["water","rabbit","maiz","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","storagesmall","storagebig","semillasMaria","semillasCoca","semillasMaiz","semillasTomate","tomates","maiz"]]};
+	case "rebel": {["Mercado rebelde",["water","rabbit","maiz","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge","esposas","llaveesposas"]]};
+	case "gang": {["Mercado de banda", ["water","rabbit","maiz","redgull","tbacon","lockpick","pickaxe","fuelF","peach","blastingcharge","boltcutter"]]};
 	case "wongs": {["Venta de tortugas",["turtlesoup","turtle"]]};
 	case "coffee": {["Tienda nexpresso",["coffee","donuts"]]};
 	case "heroin": {["Camello",["cocainep","heroinp","marijuana","meta","metilamina"]]};
@@ -22,7 +22,7 @@ switch (_shop) do
 	case "iron": {["Tienda de metales",["iron_r","copper_r"]]};
 	case "diamond": {["Tienda de diamantes",["diamond","diamondc"]]};
 	case "salt": {["Tienda de sal",["salt_r"]]};
-	case "cop": {["Tienda de policia",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","defusekit"]]};
+	case "cop": {["Tienda de policia",["donuts","coffee","spikeStrip","water","rabbit","maiz","redgull","fuelF","defusekit"]]};
 	case "cement": {["Tienda de cemento",["cement"]]};
 	case "gold": {["Comprador de oro",["goldbar"]]};
 	case "retirado": {["Veterano de guerra",["centralita","trajesoldado","municionmilitar","kevlar","chatarra","piezasmotor","medallas"]]};

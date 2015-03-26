@@ -1,7 +1,7 @@
 /*
 	File: fn_eatFood.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Main handling system for eating food.
 	*Needs to be revised and made more modular and more indept effects*
@@ -13,7 +13,7 @@ if(_food == "") exitWith {};
 if([false,_food,1] call life_fnc_handleInv) then {
 	switch (_food) do
 	{
-		case "apple": {_val = 10};
+		case "maiz": {_val = 10};
 		case "rabbit":{ _val = 20};
 		case "salema": {_val = 30};
 		case "ornate": {_val = 25};

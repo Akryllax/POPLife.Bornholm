@@ -27,7 +27,7 @@ if(_zone == "") exitWith {
 
 //Get the resource that will be gathered from the zone name...
 _item = switch(true) do {
-	case (_zone in ["maiz_1","maiz_2","maiz_3","maiz_4"]): {"apple"};
+	case (_zone in ["maiz_1","maiz_2","maiz_3","maiz_4"]): {"maiz"};
 	case (_zone in ["trigo_1","trigo_2","trigo_3","trigo_4"]): {"peach"};
 	case (_zone in ["heroin_1"]): {"heroinu"};
 	case (_zone in ["cocaine_1"]): {"cocaine"};

@@ -3712,18 +3712,18 @@
 			<Portuguese>Maconha não Processada</Portuguese>
 			<Spanish>Cannabis</Spanish>
 		</Key>
-		<Key ID="STR_Item_Apple">
-			<Original>Apple</Original>
-			<English>Apple</English>
+		<Key ID="STR_Item_maiz">
+			<Original>maiz</Original>
+			<English>maiz</English>
 			<German>Apfel</German>
 			<French>Pomme</French>
 			<Italian>Mela</Italian>
 			<Portuguese>Maçã</Portuguese>
 			<Spanish>Manzana</Spanish>
 		</Key>
-		<Key ID="STR_Item_Apples">
-			<Original>Apples</Original>
-			<English>Apples</English>
+		<Key ID="STR_Item_maizs">
+			<Original>maizs</Original>
+			<English>maizs</English>
 			<German>Äpfel</German>
 			<French>Pommes</French>
 			<Italian>Mele</Italian>
@@ -5233,9 +5233,9 @@
 		</Key>
 	</Package>
 	<Package name="Gather_Items">
-		<Key ID="STR_Gather_Apples">
-			<Original>Gather Apples</Original>
-			<English>Gather Apples</English>
+		<Key ID="STR_Gather_maizs">
+			<Original>Gather maizs</Original>
+			<English>Gather maizs</English>
 			<German>Äpfel sammeln</German>
 			<French>Récolter des pommes</French>
 			<Italian>Raccogli Mele</Italian>

@@ -22,7 +22,7 @@ switch (_mode) do
 			case "heroinp": {"life_inv_heroinp"};
 			case "cannabis": {"life_inv_cannabis"};
 			case "marijuana": {"life_inv_marijuana"};
-			case "apple": {"life_inv_apple"};
+			case "maiz": {"life_inv_maiz"};
 			case "water": {"life_inv_water"};
 			case "rabbit": {"life_inv_rabbit"};
 			case "salema": {"life_inv_salema"};
@@ -130,7 +130,7 @@ switch (_mode) do
 			case "life_inv_heroinp": {"heroinp"};
 			case "life_inv_cannabis": {"cannabis"};
 			case "life_inv_marijuana": {"marijuana"};
-			case "life_inv_apple": {"apple"};
+			case "life_inv_maiz": {"maiz"};
 			case "life_inv_water": {"water"};
 			case "life_inv_rabbit": {"rabbit"};
 			case "life_inv_salema": {"salema"};

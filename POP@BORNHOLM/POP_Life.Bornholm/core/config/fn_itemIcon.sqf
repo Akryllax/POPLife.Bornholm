@@ -18,7 +18,7 @@ switch (_var) do
 	case "life_inv_heroinp": {("textures\icons\items\heroin_processed.paa")};
 	case "life_inv_cannabis": {("textures\icons\items\cannabis.paa")};
 	case "life_inv_marijuana": {("textures\icons\items\marijuana.paa")};
-	case "life_inv_apple": {("textures\icons\items\apple.paa")};
+	case "life_inv_maiz": {("textures\icons\items\maiz.paa")};
 	case "life_inv_rabbit": {("textures\icons\items\meat.paa")};
 	case "life_inv_salema": {("textures\icons\items\fish.paa")};
 	case "life_inv_ornate": {("textures\icons\items\fish.paa")};

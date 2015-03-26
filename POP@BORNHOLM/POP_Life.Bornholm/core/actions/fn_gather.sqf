@@ -28,7 +28,7 @@ if (_zone == "") exitWith {
 
 // Get the resource that will be gathered from the zone name...
 switch (true) do {
-	case (_zone in ["maiz_1", "maiz_2", "maiz_3", "maiz_4"]): {_gather = "apple";
+	case (_zone in ["maiz_1", "maiz_2", "maiz_3", "maiz_4"]): {_gather = "maiz";
 								       _val    = 3;
 	};
 	case (_zone in ["trigo_1", "trigo_2", "trigo_3", "trigo_4"]): {_gather = "peach";

@@ -156,7 +156,7 @@ life_inv_items =
 	"life_inv_heroinp",
 	"life_inv_cannabis",
 	"life_inv_marijuana",
-	"life_inv_apple",
+	"life_inv_maiz",
 	"life_inv_rabbit",
 	"life_inv_salema",
 	"life_inv_ornate",
@@ -314,7 +314,7 @@ life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],
 */
 sell_array =
 [
-	["apple",50],
+	["maiz",50],
 	["heroinu",1850],
 	["heroinp",15000],
 	["salema",45],
@@ -381,7 +381,7 @@ __CONST__(sell_array,sell_array);
 
 buy_array =
 [
-	["apple",65],
+	["maiz",65],
 	["rabbit",75],
 	["salema",55],
 	["ornate",50],

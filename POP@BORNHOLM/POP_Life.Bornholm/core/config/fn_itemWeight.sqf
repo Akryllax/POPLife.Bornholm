@@ -17,7 +17,7 @@ switch (_item) do
 	case "heroinp": {4};
 	case "cannabis": {4};
 	case "marijuana": {3};
-	case "apple": {1};
+	case "maiz": {1};
 	case "water": {1};
 	case "rabbit": {1};
 	case "salema": {2};
@@ -79,15 +79,15 @@ switch (_item) do
 	case "llaveesposas": {1};
 	//defensas
     case "cono": {1};
-	case "barrera": {5};		
+	case "barrera": {5};
 	case "cajaMadera": {5};
-	case "palet": {10};		
+	case "palet": {10};
 	case "murallaPalets": {15};
 	case "murallaSacosGrande": {15};
 	case "murallaSacosPequeña": {15};
-	case "murallaPiedras": {20};		
+	case "murallaPiedras": {20};
 	case "barrilBasura": {15};
-	case "barrilArena": {15};		
+	case "barrilArena": {15};
 	case "barrilArdiendo": {15};
 	case "pilaRuedas": {20};
 	case "defensaChasisCoche": {30};
