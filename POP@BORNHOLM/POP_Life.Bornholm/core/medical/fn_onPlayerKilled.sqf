@@ -92,8 +92,8 @@ if(!isNull _killer && {_killer != _unit}) then {
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
 
-life_hunger = 100;
-life_thirst = 100;
+profileNamespace setVariable ["hambre",100];
+profileNamespace setVariable ["sed",100];
 life_carryWeight = 0;
 life_cash = 0;
 life_is_alive = false;

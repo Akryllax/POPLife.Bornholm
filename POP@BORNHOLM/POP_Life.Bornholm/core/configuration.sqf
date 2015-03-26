@@ -103,8 +103,12 @@ life_use_atm = true;
 life_is_arrested = false;
 life_delivery_in_progress = false;
 life_action_in_use = false;
-life_thirst = 100;
-life_hunger = 100;
+if (isNil {(profileNamespace getVariable "hambre")}) then {
+	profileNamespace setVariable ["hambre",100];
+};
+if (isNil {(profileNamespace getVariable "sed")}) then {
+	profileNamespace setVariable ["sed",100];
+};
 __CONST__(life_paycheck_period,5); //Five minutes
 life_cash = 0;
 __CONST__(life_impound_car,9500);

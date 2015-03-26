@@ -2,13 +2,13 @@
 	private["_fnc_food","_fnc_water"];
 	_fnc_food =
 	{
-		if(life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";}
+		if((profileNamespace getVariable "hambre") < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";}
 		else
 		{
-		life_hunger = life_hunger - 10;
+		profileNamespace setVariable ["hambre",(profileNamespace getVariable "hambre") - 10];
 		[] call life_fnc_hudUpdate;
-		if(life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";};
-		switch(life_hunger) do {
+		if((profileNamespace getVariable "hambre") < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";};
+		switch(profileNamespace getVariable "hambre") do {
 			case 30: {hint localize "STR_NOTF_EatMSG_1";};
 			case 20: {hint localize "STR_NOTF_EatMSG_2";};
 			case 10: {hint localize "STR_NOTF_EatMSG_3";player setFatigue 1;};
@@ -18,13 +18,13 @@
 
 	_fnc_water =
 	{
-		if(life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";}
+		if((profileNamespace getVariable "sed") < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";}
 		else
 		{
-			life_thirst = life_thirst - 10;
+			profileNamespace setVariable ["sed",(profileNamespace getVariable "sed") - 10];
 			[] call life_fnc_hudUpdate;
-			if(life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";};
-			switch(life_thirst) do
+			if((profileNamespace getVariable "sed") < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";};
+			switch(profileNamespace getVariable "sed") do
 			{
 				case 30: {hint localize "STR_NOTF_DrinkMSG_1";};
 				case 20: {hint localize "STR_NOTF_DrinkMSG_2"; player setFatigue 1;};
@@ -97,8 +97,8 @@
 				if(_walkDis == _MaxWalk) then
 				{
 					_walkDis = 0;
-					life_thirst = life_thirst - 5;
-					life_hunger = life_hunger - 5;
+				    profileNamespace setVariable ["hambre",(profileNamespace getVariable "hambre") - 5];
+					profileNamespace setVariable ["sed",(profileNamespace getVariable "sed") - 5];
 					[] call life_fnc_hudUpdate;
 				};
 			};
@@ -106,32 +106,3 @@
 		};
 	};
 };
-/*
-* Este codigo es para zona radiactiva
-[] spawn
-{
-	while {true} do
-	{
-		private["_damage"];
-		sleep 1;
-		while {((player distance (getMarkerPos "Zona_Radioactiva") < 900) && (player getVariable["Revive",TRUE]))} do
-		{
-
-			player say3D "Geiger";
-
-			if(uniform player == "U_C_Scientist") then
-			{
-				hint "¡ATENCIÓN! Acabas de entrar en una zona radioactiva! No te quites tu traje antiradiación!";
-				sleep 5;
-			}else
-			{
-				hint "¡ATENCIÓN! Acabas de entrar en una zona radioactiva! Si no te pones inmediatamente un traje antiradiación, moriras entre terribles sufrimientos!";
-				_damage = damage player;
-				_damage = _damage + 0.1;
-				player setDamage (_damage);
-				[] call life_fnc_hudUpdate;
-				sleep 5;
-			};
-		};
-	};
-}; */

@@ -27,7 +27,7 @@ if([false,_food,1] call life_fnc_handleInv) then {
 		case "peach": {_val = 10};
 	};
 
-	_sum = life_hunger + _val;
+	_sum = (profileNamespace getVariable "hambre") + _val;
 	if(_sum > 100) then {_sum = 100; player setFatigue 1; hint "You have over eaten, you are now feeling fatigued.";};
-	life_hunger = _sum;
+	profileNamespace setVariable ["hambre",_sum];
 };

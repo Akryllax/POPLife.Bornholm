@@ -5,10 +5,13 @@
 	Description:
 	Main function for item effects and functionality through the player menu.
 */
-private["_item"];
+private["_item","_sed","_hambre"];
 disableSerialization;
 if((lbCurSel 2005) == -1) exitWith {hint localize "STR_ISTR_SelectItemFirst";};
 _item = lbData[2005,(lbCurSel 2005)];
+
+_hambre = (profileNamespace getVariable "hambre");
+_sed = (profileNamespace getVariable "sed");
 
 switch (true) do
 {
@@ -16,7 +19,7 @@ switch (true) do
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
-			life_thirst = 100;
+			profileNamespace setVariable ["sed", _sed + 45];
 			player setFatigue 0;
 		};
 	};
@@ -44,7 +47,7 @@ switch (true) do
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
-			life_thirst = 100;
+			profileNamespace setVariable ["sed", _sed + 30];
 			player setFatigue 0;
 			[] spawn
 			{
