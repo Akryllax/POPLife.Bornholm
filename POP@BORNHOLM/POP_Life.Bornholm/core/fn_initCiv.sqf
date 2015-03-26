@@ -29,7 +29,7 @@ if (!life_is_alive) then
 		life_is_arrested = false;
 		[player,true] spawn life_fnc_jail;
 	} else {
-		if !(profileNamespace getVariable"posicion") then {
+		if (isNil {(profileNamespace getVariable "posicion")}) then {
 			[] call _spawnMenu;
 		} else {
 			player setPos (profileNamespace getVariable "posicion");

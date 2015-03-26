@@ -65,7 +65,7 @@
 {
 	while {true} do
 	{
-		sleep 2;
+		sleep 1.8;
 		if(life_carryWeight > life_maxWeight && !isForcedWalk player) then {
 			player forceWalk true;
 			player setFatigue 1;
@@ -78,6 +78,22 @@
 	};
 };
 
+[] spawn
+{
+	private["_pos","_posVieja","_posNueva"];
+	while {true} do
+	{
+	sleep 1.3;
+	_posVieja = profileNamespace getVariable "posicion";
+	_posNueva = getPosATL player;
+	_pos = [_posVieja,_posNueva] call BIS_fnc_areEqual;
+	if !(_pos) then {
+		profileNamespace setVariable ["posicion",_posNueva];
+	};
+};
+
+
+}
 [] spawn
 {
 	private["_walkDis","_myLastPos","_MaxWalk","_runHunger","_runDehydrate"];
