@@ -20,7 +20,7 @@ _spawnMenu = {
 	profilenamespace setVariable ["vivo",true]; //Just to avoid that users appear in the debug island.
 };
 
-if ((isNil {(profileNamespace getVariable "vivo")})) or (profilenamespace getVariable "vivo")  then
+if ((isNil {(profileNamespace getVariable "posicion")})) or ((isNil {(profilenamespace getVariable "vivo")}))  then
 {
 	[] call _spawnMenu;
 } else {
@@ -29,7 +29,7 @@ if ((isNil {(profileNamespace getVariable "vivo")})) or (profilenamespace getVar
 		life_is_arrested = false;
 		[player,true] spawn life_fnc_jail;
 	} else {
-		if (isNil {(profileNamespace getVariable "posicion")}) then {
+		if !(profileNamespace getVariable "vivo") then {
 			[] call _spawnMenu;
 		} else {
 			player setPos (profileNamespace getVariable "posicion");

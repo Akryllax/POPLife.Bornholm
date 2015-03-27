@@ -12,7 +12,7 @@ waitUntil {!(isNull (findDisplay 46))};
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
-if(count _itemArray == 0) exitWith
+if ((count _itemArray == 0) or !(profileNamespace getVariable "vivo")) exitWith
 {
     switch(playerSide) do {
         case west: {
@@ -25,6 +25,9 @@ if(count _itemArray == 0) exitWith
 
         case independent: {
             [] call life_fnc_medicLoadout;
+        };
+        case east: {
+            [] call life_fnc_mercLoadout;
         };
     };
 };

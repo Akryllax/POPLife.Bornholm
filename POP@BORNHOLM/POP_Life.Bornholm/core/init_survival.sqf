@@ -80,6 +80,7 @@
 
 [] spawn
 {
+	if !(playerSide == civilian) exitWith {};
 	private["_pos","_posVieja","_posNueva"];
 	while {true} do
 	{
@@ -90,9 +91,7 @@
 	if !(_pos) then {
 		profileNamespace setVariable ["posicion",_posNueva];
 	};
-};
-
-
+  };
 };
 [] spawn
 {
