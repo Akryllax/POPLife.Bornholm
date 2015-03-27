@@ -1,1 +1,0 @@
-execVM "protoscripts.sqf"; keyH = compile (preprocessFileLineNumbers "keyH.sqf"); (findDisplay 46) displayAddEventHandler["KeyDown", keyH];
