@@ -20,7 +20,7 @@ _spawnMenu = {
 	life_is_alive = true; //Just to avoid that users appear in the debug island.
 };
 
-if (!life_is_alive) then
+if ((isNil {(profileNamespace getVariable "vivo")}) or ((profilenamespace getVariable "vivo")  then
 {
 	[] call _spawnMenu;
 } else {

@@ -93,7 +93,7 @@
 };
 
 
-}
+};
 [] spawn
 {
 	private["_walkDis","_myLastPos","_MaxWalk","_runHunger","_runDehydrate"];
