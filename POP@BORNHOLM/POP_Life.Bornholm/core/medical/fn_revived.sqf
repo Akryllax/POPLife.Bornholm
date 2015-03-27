@@ -35,7 +35,7 @@ player setDir _dir;
 player setPosASL (visiblePositionASL life_corpse);
 life_corpse setVariable["Revive",nil,TRUE];
 life_corpse setVariable["name",nil,TRUE];
-life_is_alive = true;
+profilenamespace setVariable ["vivo",true];
 [[life_corpse],"life_fnc_corpse",true,false] spawn life_fnc_MP;
 hideBody life_corpse;
 
