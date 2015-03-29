@@ -107,6 +107,12 @@ if (isNil {(profileNamespace getVariable "hambre")}) then {
 if (isNil {(profileNamespace getVariable "sed")}) then {
 	profileNamespace setVariable ["sed",100];
 };
+if (isNil {(profileNamespace getVariable "karma")}) then {
+	profileNamespace setVariable ["karma",1500];
+};
+if (isNil {(profileNamespace getVariable "vivo")}) then {
+	profileNamespace setVariable ["vivo",false];
+};
 __CONST__(life_paycheck_period,5); //Five minutes
 life_cash = 0;
 __CONST__(life_impound_car,9500);

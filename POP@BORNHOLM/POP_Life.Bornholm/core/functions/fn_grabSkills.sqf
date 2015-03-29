@@ -19,11 +19,11 @@ _profText = call compile format["%1", _profText];
 _profName = [_profText] call life_fnc_profType;
 
         _data = missionNamespace getVariable (_profName);
-        diag_log format["GSRQ2_data:%1",_data];
+        //diag_log format["GSRQ2_data:%1",_data];
     _profLevel = _data select 0;
-        diag_log format["GSRQ3_profLevel:%1",_profLevel];
+        //diag_log format["GSRQ3_profLevel:%1",_profLevel];
     _profExp = _data select 1;
-        diag_log format["GSRQ4_profExp:%1",_profExp];
+        //diag_log format["GSRQ4_profExp:%1",_profExp];
     _nextLevel = 0;
     _nextLevel = _profLevel * ( _profLevel - 1) * 500 ;
     if(_nextLevel < 1) then {_nextLevel = 500;};

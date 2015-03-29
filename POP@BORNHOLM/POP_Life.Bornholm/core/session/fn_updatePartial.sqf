@@ -58,13 +58,6 @@ switch(_mode) do {
 	case 7: {
 		//RESERVED - DO NOT USE
 	};
-	case 8: {
-		_packet set[2,getPos player];
-		_packet set[4,life_is_alive];
-	};
-	case 9: {
-		_packet set[2,getPos life_is_alive];
-	};
 };
 
 [_packet,"DB_fnc_updatePartial",false,false] call life_fnc_MP;

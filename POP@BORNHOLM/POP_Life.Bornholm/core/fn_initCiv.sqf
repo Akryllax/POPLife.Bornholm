@@ -17,10 +17,10 @@ _spawnMenu = {
 	[] call life_fnc_spawnMenu;
 	waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
-	life_is_alive = true; //Just to avoid that users appear in the debug island.
+	profilenamespace setVariable ["vivo",true]; //Just to avoid that users appear in the debug island.
 };
 
-if ((isNil {(profileNamespace getVariable "vivo")}) or ((profilenamespace getVariable "vivo")  then
+if ((isNil {(profileNamespace getVariable "posicion")}))  then
 {
 	[] call _spawnMenu;
 } else {
@@ -29,14 +29,14 @@ if ((isNil {(profileNamespace getVariable "vivo")}) or ((profilenamespace getVar
 		life_is_arrested = false;
 		[player,true] spawn life_fnc_jail;
 	} else {
-		if (isNil {(profileNamespace getVariable "posicion")}) then {
+		if !(profileNamespace getVariable "vivo") then {
 			[] call _spawnMenu;
 		} else {
 			player setPos (profileNamespace getVariable "posicion");
 			hint format["Sigues vivo y estas donde la ultima vez..."];
 		};
 	};
-	life_is_alive = true;
+	profilenamespace setVariable ["vivo",true];
 };
 player addRating 9999999;
 

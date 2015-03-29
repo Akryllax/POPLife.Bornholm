@@ -5,7 +5,7 @@
 	Description:
 	Updates the HUD when it needs to.
 */
-private["_ui","_food","_water","_health","_sed","_comida"];
+private["_ui","_food","_water","_health","_sed","_comida","_karma"];
 disableSerialization;
 
 _ui = uiNameSpace getVariable ["playerHUD",displayNull];
@@ -13,6 +13,8 @@ if(isNull _ui) then {[] call life_fnc_hudSetup;};
 _food = _ui displayCtrl 23500;
 _water = _ui displayCtrl 23510;
 _health = _ui displayCtrl 23515;
+_happy = _ui displayCtrl 23520;
+_karma = profilenamespace getVariable "karma";
 _comida = profileNamespace getVariable "hambre";
 _sed = profileNamespace getVariable "sed";
 
@@ -44,3 +46,16 @@ if(damage player > 0.5) then {
 	_health ctrlSetBackgroundColor [255, 0, 0, 0.5];
 };
 _health ctrlCommit 0;
+
+_happy ctrlSetPosition [safeZoneX+safeZoneW-0.10,safeZoneY+safeZoneH-0.259];
+_happy ctrlSetText format["%1%2", _karma, "%"];
+_happy ctrlSetBackgroundColor [0,0,0,0.5];
+if ((_karma < 1000) or (_karma > 2000)) then {
+	if (_karma < 1000) then {
+		_happy ctrlSetBackgroundColor [255, 0, 0, 0.5];
+	} else {
+		_happy ctrlSetBackgroundColor [0, 0, 255, 0.5]
+    };
+
+};
+_happy ctrlCommit 0;

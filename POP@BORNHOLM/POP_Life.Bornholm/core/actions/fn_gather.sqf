@@ -8,7 +8,7 @@
 if (isNil "life_action_gathering") then {life_action_gathering = false;
 	};
 private ["_gather", "_itemWeight", "_diff", "_itemName", "_val", "_resourceZones", "_zone"];
-_resourceZones = ["maiz_1", "maiz_2", "maiz_3", "maiz_4", "trigo_1", "trigo_2", "trigo_3", "trigo_4", "heroin_1", "cocaine_1", "weed_1"];
+_resourceZones = ["maiz_1", "maiz_2", "maiz_3", "maiz_4", "trigo_1", "trigo_2", "trigo_3", "trigo_4", "heroin_1", "cocaine_1", "weed_1","_exp"];
 _zone	       = "";
 
 if (life_action_gathering) exitWith {};	// Action is in use, exit to prevent spamming.
@@ -74,7 +74,8 @@ if (( [true, _gather, _diff] call life_fnc_handleInv)) then
 		titleText [format [localize "STR_NOTF_Gather_Success", _itemName, _diff], "PLAIN"];
 		if (_profName != "") then
 			{
-				[_profName, 25] call life_fnc_addExp;
+			    _exp = floor (random 31);
+				[_profName, _exp] call life_fnc_addExp;
 			};
 	};
 

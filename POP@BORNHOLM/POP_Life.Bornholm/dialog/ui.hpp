@@ -42,6 +42,16 @@ class playerHUD
 			w = 0.032; h = 0.042;
 			colorBackground[] = COLOR_HALF_BLACK;
 		};
+
+		class happyHIcon : life_RscPicture            
+			{
+				
+				idc = -1;
+				text = "textures\icons\salud.paa";   
+				x = safeZoneX+safeZoneW-0.15; y = safeZoneY+safeZoneH-0.259;
+				w = 0.032; h = 0.042;
+				colorBackground[] = COLOR_HALF_BLACK;
+			};
 	};
 
 	class controls
@@ -98,6 +108,24 @@ class playerHUD
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=true;
 			text="";
-		};			
+		};
+
+		class happytext              
+			{
+		    type=0;
+			idc=23520;
+			style=0;
+			x=-1;
+			y=-1;
+			w=0.3;
+			h=0.04;
+			sizeEx=0.03;
+			size=1;
+			font="PuristaSemibold";
+			colorBackground[] = COLOR_HALF_BLACK;
+			colorText[] = { 1 , 1 , 1 , 1 };
+			shadow=true;
+			text="";
+			};			
 	};
 };
