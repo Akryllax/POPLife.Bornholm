@@ -349,7 +349,7 @@ sell_array =
 	["iron_r",6500],
 	["copper_r",6500],
 	["oros",6500],
-	["carbon",6500],
+	["carbons",6500],
 	["fuelF",500],
 	["spikeStrip",1200],
 	["granitos",6500],
