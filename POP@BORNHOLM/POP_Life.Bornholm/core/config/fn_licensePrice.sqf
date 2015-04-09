@@ -1,7 +1,7 @@
 /*
 	File: fn_licensePrice.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Returns the license price.
 */
@@ -16,7 +16,7 @@ switch (_type) do
 	case "pilot": {25000}; //Pilot/air license cost
 	case "gun": {10000}; //Firearm/gun license cost
 	case "dive": {2000}; //Diving license cost
-	case "oil": {10000}; //Oil processing license cost
+	case "platino": {10000}; //Oil processing license cost
 	case "cair": {15000}; //Cop Pilot License cost
 	case "swat": {35000}; //Swat License cost
 	case "cg": {8000}; //Coast guard license cost
@@ -27,12 +27,12 @@ switch (_type) do
 	case "rebel": {75000}; //Rebel license cost
 	case "truck": {20000}; //Truck license cost
 	case "diamond": {35000};
-	case "salt": {12000};
+	case "oro": {12000};
 	case "cocaine": {30000};
-	case "sand": {14500};
+	case "carbon": {14500};
 	case "iron": {9500};
 	case "copper": {8000};
-	case "cement": {6500};
+	case "granitos": {6500};
 	case "mair": {15000};
 	case "home": {75000};
 	case "cazarrecompensas": {150000};

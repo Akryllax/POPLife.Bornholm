@@ -44,12 +44,12 @@
 			<French>Dealer de Drogue</French>
 			<Spanish>Camello (drogas)</Spanish>
 		</Key>
-		<Key ID="STR_Shops_Oil">
+		<Key ID="STR_Shops_platino">
 			<Original>Oil Trader</Original>
 			<German>Ölhändler</German>
 			<Italian>Vendita Petrolio</Italian>
 			<French>Acheteur de Pétrole</French>
-			<Spanish>Comerciante de petroleo</Spanish>
+			<Spanish>Comerciante de Platino</Spanish>
 		</Key>
 		<Key ID="STR_Shops_FishMarket">
 			<Original>Local Fish Market</Original>
@@ -58,7 +58,7 @@
 			<French>Marché de Poissons</French>
 			<Spanish>Pescaderia</Spanish>
 		</Key>
-		<Key ID="STR_Shops_Glass">
+		<Key ID="STR_Shops_carbons">
 			<Original>Glass Trader</Original>
 			<German>Glashändler</German>
 			<Italian>Vendita Vetro</Italian>
@@ -79,7 +79,7 @@
 			<French>Equipement de Police</French>
 			<Spanish>Tienda de la Policia</Spanish>
 		</Key>
-		<Key ID="STR_Shops_Cement">
+		<Key ID="STR_Shops_granitos">
 			<Original>Juan's Cement Laying</Original>
 			<German>Juan's Zementleger</German>
 			<Italian>Vendita Cemento</Italian>
@@ -100,7 +100,7 @@
 			<French>Bijouterie</French>
 			<Spanish>Comerciante de diamantes</Spanish>
 		</Key>
-		<Key ID="STR_Shops_Salt">
+		<Key ID="STR_Shops_oro">
 			<Original>Salt Trader</Original>
 			<German>Salzhändler</German>
 			<Italian>Vendita Sale</Italian>
@@ -3766,14 +3766,14 @@
 			<Portuguese>Heroína</Portuguese>
 			<Spanish>Heroína</Spanish>
 		</Key>
-		<Key ID="STR_Item_Oil">
+		<Key ID="STR_Item_platino">
 			<Original>Oil</Original>
 			<English>Oil</English>
 			<German>Öl</German>
 			<French>Pétrole</French>
 			<Italian>Olio</Italian>
 			<Portuguese>Petróleo</Portuguese>
-			<Spanish>Petróleo</Spanish>
+			<Spanish>Platino</Spanish>
 		</Key>
 		<Key ID="STR_Item_Peach">
 			<Original>Peach</Original>
@@ -3793,16 +3793,16 @@
 			<Portuguese>Pêssegos</Portuguese>
 			<Spanish>Melocotones</Spanish>
 		</Key>
-		<Key ID="STR_Item_OilU">
+		<Key ID="STR_Item_platino">
 			<Original>Unprocessed Oil</Original>
 			<English>Unprocessed Oil</English>
 			<German>Unverarbeitetes Öl</German>
 			<French>Pétrole non raffiné</French>
 			<Italian>Olio non processato</Italian>
 			<Portuguese>Petróleo não Refinado</Portuguese>
-			<Spanish>Petróleo sin refinar</Spanish>
+			<Spanish>Platino sin refinar</Spanish>
 		</Key>
-		<Key ID="STR_Item_OilP">
+		<Key ID="STR_Item_platinos">
 			<Original>Processed Oil</Original>
 			<English>Processed Oil</English>
 			<German>Verarbeitetes Öl</German>
@@ -4180,7 +4180,7 @@
 			<Portuguese>Barra de Cobre</Portuguese>
 			<Spanish>Lingote de cobre</Spanish>
 		</Key>
-		<Key ID="STR_Item_Sand">
+		<Key ID="STR_Item_carbon">
 			<Original>Sand</Original>
 			<English>Sand</English>
 			<German>Sand</German>
@@ -4189,7 +4189,7 @@
 			<Portuguese>Areia</Portuguese>
 			<Spanish>Arena</Spanish>
 		</Key>
-		<Key ID="STR_Item_Salt">
+		<Key ID="STR_Item_oro">
 			<Original>Salt</Original>
 			<English>Salt</English>
 			<German>Salz</German>
@@ -4198,7 +4198,7 @@
 			<Portuguese>Sal</Portuguese>
 			<Spanish>Sal</Spanish>
 		</Key>
-		<Key ID="STR_Item_SaltR">
+		<Key ID="STR_Item_oros">
 			<Original>Refined Salt</Original>
 			<English>Refined Salt</English>
 			<German>Raffiniertes Salz</German>
@@ -4207,7 +4207,7 @@
 			<Portuguese>Sal Refinado</Portuguese>
 			<Spanish>Sal refinada</Spanish>
 		</Key>
-		<Key ID="STR_Item_Glass">
+		<Key ID="STR_Item_carbons">
 			<Original>Glass</Original>
 			<English>Glass</English>
 			<German>Glas</German>
@@ -4261,7 +4261,7 @@
 			<Portuguese>Chave Mestra</Portuguese>
 			<Spanish>Ganzua</Spanish>
 		</Key>
-		<Key ID="STR_Item_Rock">
+		<Key ID="STR_Item_granito">
 			<Original>Rock</Original>
 			<English>Rock</English>
 			<German>Stein</German>
@@ -4485,7 +4485,7 @@
 			<Portuguese>Treinamento de Heroina</Portuguese>
 			<Spanish>Entrenamiento en procesar heroína</Spanish>
 		</Key>
-		<Key ID="STR_License_Oil">
+		<Key ID="STR_License_platino">
 			<Original>Oil Processing</Original>
 			<English>Oil Processing</English>
 			<German>Ölverarbeitung</German>
@@ -4638,7 +4638,7 @@
 			<Portuguese>Processamento de Ferro</Portuguese>
 			<Spanish>Entrenamiento para procesar hierro</Spanish>
 		</Key>
-		<Key ID="STR_License_Sand">
+		<Key ID="STR_License_carbon">
 			<Original>Sand Processing</Original>
 			<English>Sand Processing</English>
 			<German>Sandverarbeitung</German>
@@ -4647,7 +4647,7 @@
 			<Portuguese>Processamento de Areia</Portuguese>
 			<Spanish>Entrenamiento para procesar arena</Spanish>
 		</Key>
-		<Key ID="STR_License_Salt">
+		<Key ID="STR_License_oro">
 			<Original>Salt Processing</Original>
 			<English>Salt Processing</English>
 			<German>Salzverarbeitung</German>
@@ -4674,7 +4674,7 @@
 			<Portuguese>Treinamento de Maconha</Portuguese>
 			<Spanish>Entrenamiento para procesar marihuana</Spanish>
 		</Key>
-		<Key ID="STR_License_Cement">
+		<Key ID="STR_License_granitos">
 			<Original>Cement Mixing License</Original>
 			<English>Cement Mixing License</English>
 			<German>Zementmisch-Lizenz</German>
@@ -5033,14 +5033,14 @@
 		</Key>
 	</Package>
 		<Package name="Process_Action">
-		<Key ID="STR_Process_Oil">
+		<Key ID="STR_Process_platino">
 			<Original>Processing Oil</Original>
 			<English>Processing Oil</English>
 			<German>Öl wird verarbeite</German>
 			<French>Raffinage de Pétrole</French>
 			<Italian>Processando l'Olio</Italian>
 			<Portuguese>Processando Oleo</Portuguese>
-			<Spanish>Refinando petróleo</Spanish>
+			<Spanish>Procesando Platino</Spanish>
 		</Key>
 		<Key ID="STR_Process_Diamond">
 			<Original>Cutting Diamonds</Original>
@@ -5114,23 +5114,23 @@
 			<Portuguese>Processando Ferro</Portuguese>
 			<Spanish>Procesando hierro</Spanish>
 		</Key>
-		<Key ID="STR_Process_Sand">
+		<Key ID="STR_Process_carbon">
 			<Original>Processing Sand</Original>
 			<English>Processing Sand</English>
 			<German>Sand wird verarbeitet</German>
 			<French>Fonte du Sable</French>
 			<Italian>Processando Sabbia</Italian>
 			<Portuguese>Processando Areia</Portuguese>
-			<Spanish>Procesando arena</Spanish>
+			<Spanish>Procesando oro</Spanish>
 		</Key>
-		<Key ID="STR_Process_Salt">
+		<Key ID="STR_Process_oro">
 			<Original>Processing Salt</Original>
 			<English>Processing Salt</English>
 			<German>Salz wird verarbeitet</German>
 			<French>Traitement du Sel</French>
 			<Italian>Processando Sale</Italian>
 			<Portuguese>Refinando Sal</Portuguese>
-			<Spanish>Procesando sal</Spanish>
+			<Spanish>Procesando carbon</Spanish>
 		</Key>
 		<Key ID="STR_Process_Cocaine">
 			<Original>Processing Cocain</Original>
@@ -5150,7 +5150,7 @@
 			<Portuguese>Processando Erva</Portuguese>
 			<Spanish>Procesando marihuana</Spanish>
 		</Key>
-		<Key ID="STR_Process_Cement">
+		<Key ID="STR_Process_granitos">
 			<Original>Mixing Cement</Original>
 			<English>Mixing Cement</English>
 			<German>Zement wird gemischt</German>
@@ -6585,7 +6585,7 @@
 		</Key>
 	</Package>
 	<Package name="Life_Prof">
-<Key ID="STR_Prof_Oil">
+<Key ID="STR_Prof_platino">
 <Original>Oil Proficiency</Original>
 <English>Oil Proficiency</English>
 <German>Öl Können</German>
@@ -6593,7 +6593,7 @@
 <Italian>Proficiency olio</Italian>
 <Portuguese>Proficiência Oil</Portuguese>
 </Key>
-<Key ID="STR_Prof_Sand">
+<Key ID="STR_Prof_carbon">
 <Original>Sand Proficiency</Original>
 <English>Sand Proficiency</English>
 <German>Sand Können</German>
@@ -6601,7 +6601,7 @@
 <Italian>Proficiency sabbia</Italian>
 <Portuguese>areia de Proficiência </Portuguese>
 </Key>
-<Key ID="STR_Prof_Rock">
+<Key ID="STR_Prof_granito">
 <Original>Rock Proficiency</Original>
 <English>Rock Proficiency</English>
 <German>Rock Können</German>
@@ -6609,7 +6609,7 @@
 <Italian>Proficiency roccia</Italian>
 <Portuguese>Proficiência Oil</Portuguese>
 </Key>
-<Key ID="STR_Prof_Salt">
+<Key ID="STR_Prof_oro">
 <Original>Salt Proficiency</Original>
 <English>Salt Proficiency</English>
 <German>Öl Können</German>

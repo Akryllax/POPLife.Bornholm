@@ -41,7 +41,7 @@ switch (_filter) do
 	case 1:
 	{
 		[
-			
+
             ["ffaa_brilat_boina",nil, 1500 * Desc],
 			["ffaa_moe_casco_02_2_b",nil, 7500 * Desc],
 			["H_Bandanna_cbr",nil,650 * Desc],
@@ -76,7 +76,7 @@ switch (_filter) do
 			["H_HelmetB_snakeskin",nil,5000 * Desc],
 			["H_HelmetB_desert",nil,5000 * Desc],
 			["H_HelmetB_black",nil,5000 * Desc],
-			["H_HelmetB_sand",nil,5000 * Desc],
+			["H_HelmetB_carbon",nil,5000 * Desc],
 			["H_HelmetB_camo",nil,5000 * Desc]
 		];
 	};

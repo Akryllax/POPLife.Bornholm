@@ -13,8 +13,8 @@ if(_var == "") exitWith {""};
 switch (_var) do
 {
 	//Virtual Inventory Items
-	case "life_inv_oilu": {("Esquirla de platino")};
-	case "life_inv_oilp": {("Onza de platino")};
+	case "life_inv_platino": {("Esquirla de platino")};
+	case "life_inv_platinos": {("Onza de platino")};
 	case "life_inv_heroinu": {(localize "STR_Item_HeroinU")};
 	case "life_inv_heroinp": {(localize "STR_Item_HeroinP")};
 	case "life_inv_cannabis": {(localize "STR_Item_Cannabis")};
@@ -40,10 +40,10 @@ switch (_var) do
 	case "life_inv_ironore": {(localize "STR_Item_IronOre")};
 	case "life_inv_ironr": {(localize "STR_Item_IronIngot")};
 	case "life_inv_copperr": {(localize "STR_Item_CopperIngot")};
-	case "life_inv_sand": {("Roca de Carbon")};
-	case "life_inv_salt": {("Pepita de oro")};
-	case "life_inv_saltr": {("Lingote de oro")};
-	case "life_inv_glass": {("Carbon")};
+	case "life_inv_carbon": {("Roca de Carbon")};
+	case "life_inv_oro": {("Pepita de oro")};
+	case "life_inv_oros": {("Lingote de oro")};
+	case "life_inv_carbons": {("Carbon")};
 	case "life_inv_diamond": {(localize "STR_Item_DiamondU")};
 	case "life_inv_diamondr": {(localize "STR_Item_DiamondC")};
 	case "life_inv_tbacon": {(localize "STR_Item_TBacon")};
@@ -53,8 +53,8 @@ switch (_var) do
 	case "life_inv_coke": {(localize "STR_Item_CocaineU")};
 	case "life_inv_cokep": {(localize "STR_Item_CocaineP")};
 	case "life_inv_spikeStrip": {(localize "STR_Item_SpikeStrip")};
-	case "life_inv_rock": {("Roca de Granito")};
-	case "life_inv_cement": {("Granito")};
+	case "life_inv_granito": {("Roca de Granito")};
+	case "life_inv_granitos": {("Granito")};
 	case "life_inv_goldbar": {(localize "STR_Item_GoldBar")};
 	case "life_inv_blastingcharge": {(localize "STR_Item_BCharge")};
 	case "life_inv_boltcutter": {(localize "STR_Item_BCutter")};
@@ -101,7 +101,7 @@ switch (_var) do
 	case "license_civ_driver": {(localize "STR_License_Driver")};
 	case "license_civ_air": {(localize "STR_License_Pilot")};
 	case "license_civ_heroin": {(localize "STR_License_Heroin")};
-	case "license_civ_oil": {(localize "STR_License_Oil")};
+	case "license_civ_platino": {(localize "Licencia de Platino")};
 	case "license_civ_dive": {(localize "STR_License_Diving")};
 	case "license_civ_boat": {(localize "STR_License_Boat")};
 	case "license_civ_gun": {(localize "STR_License_Firearm")};
@@ -113,11 +113,11 @@ switch (_var) do
 	case "license_civ_diamond": {(localize "STR_License_Diamond")};
 	case "license_civ_copper": {(localize "STR_License_Copper")};
 	case "license_civ_iron": {(localize "STR_License_Iron")};
-	case "license_civ_sand": {("Licencia Carbon")};
-	case "license_civ_salt": {("Licencia de Oro")};
+	case "license_civ_carbon": {("Licencia Carbon")};
+	case "license_civ_oro": {("Licencia de Oro")};
 	case "license_civ_coke": {(localize "STR_License_Cocaine")};
 	case "license_civ_marijuana": {(localize "STR_License_Marijuana")};
-	case "license_civ_cement": {("Licencia Granito")};
+	case "license_civ_granitos": {("Licencia Granito")};
 	case "license_med_air": {(localize "STR_License_Pilot")};
 	case "license_civ_home": {(localize "STR_License_Home")};
 	case "license_civ_cazarrecompensas": {(localize "STR_License_Cazarrecompensas")};

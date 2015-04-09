@@ -101,14 +101,12 @@ life_use_atm = true;
 life_is_arrested = false;
 life_delivery_in_progress = false;
 life_action_in_use = false;
+life_karma = 0;
 if (isNil {(profileNamespace getVariable "hambre")}) then {
 	profileNamespace setVariable ["hambre",100];
 };
 if (isNil {(profileNamespace getVariable "sed")}) then {
 	profileNamespace setVariable ["sed",100];
-};
-if (isNil {(profileNamespace getVariable "karma")}) then {
-	profileNamespace setVariable ["karma",1500];
 };
 if (isNil {(profileNamespace getVariable "vivo")}) then {
 	profileNamespace setVariable ["vivo",false];
@@ -158,8 +156,8 @@ __CONST__(life_vShop_rentalOnly,life_vShop_rentalOnly); //These vehicles can nev
 
 life_inv_items =
 [
-	"life_inv_oilu",
-	"life_inv_oilp",
+	"life_inv_platino",
+	"life_inv_platinos",
 	"life_inv_heroinu",
 	"life_inv_heroinp",
 	"life_inv_cannabis",
@@ -185,10 +183,10 @@ life_inv_items =
 	"life_inv_ironore",
 	"life_inv_ironr",
 	"life_inv_copperr",
-	"life_inv_sand",
-	"life_inv_salt",
-	"life_inv_saltr",
-	"life_inv_glass",
+	"life_inv_carbon",
+	"life_inv_oro",
+	"life_inv_oros",
+	"life_inv_carbons",
 	"life_inv_tbacon",
 	"life_inv_lockpick",
 	"life_inv_redgull",
@@ -198,8 +196,8 @@ life_inv_items =
 	"life_inv_cokep",
 	"life_inv_diamondr",
 	"life_inv_spikeStrip",
-	"life_inv_rock",
-	"life_inv_cement",
+	"life_inv_granito",
+	"life_inv_granitos",
 	"life_inv_goldbar",
 	"life_inv_blastingcharge",
 	"life_inv_boltcutter",
@@ -276,7 +274,7 @@ life_licenses =
 	["license_civ_marijuana","civ"],
 	["license_civ_gang","civ"],
 	["license_civ_boat","civ"],
-	["license_civ_oil","civ"],
+	["license_civ_platino","civ"],
 	["license_civ_dive","civ"],
 	["license_civ_truck","civ"],
 	["license_civ_gun","civ"],
@@ -285,9 +283,9 @@ life_licenses =
 	["license_civ_diamond","civ"],
 	["license_civ_copper","civ"],
 	["license_civ_iron","civ"],
-	["license_civ_sand","civ"],
-	["license_civ_salt","civ"],
-	["license_civ_cement","civ"],
+	["license_civ_carbon","civ"],
+	["license_civ_oro","civ"],
+	["license_civ_granitos","civ"],
 	["license_med_air","med"],
 	["license_civ_home","civ"],
 	["license_civ_cazarrecompensas", "civ"]
@@ -332,7 +330,7 @@ sell_array =
 	["mullet",250],
 	["catshark",300],
 	["rabbit",65],
-	["oilp",6500],
+	["platinos",6500],
 	["turtle",15000],
 	["water",50],
 	["coffee",50],
@@ -350,11 +348,11 @@ sell_array =
 	["diamondc",6500],
 	["iron_r",6500],
 	["copper_r",6500],
-	["salt_r",6500],
-	["glass",6500],
+	["oros",6500],
+	["carbon",6500],
 	["fuelF",500],
 	["spikeStrip",1200],
-	["cement",6500],
+	["granitos",6500],
 	["goldbar",95000],
 	// Helicrash
 	["centralita",5000],

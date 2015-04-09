@@ -11,12 +11,12 @@ switch (true) do
 {
 	case (player distance (getMarkerPos "Cobre_1") < 30): {_mine = "copperore"; _val = 2;};
 	case (player distance (getMarkerPos "hierro_1") < 30): {_mine = "ironore"; _val = 2;};
-	case (player distance (getMarkerPos "oro_1") < 120) : {_mine = "salt"; _val = 4;};
-	case (player distance (getMarkerPos "carbon_1") < 75) : {_mine = "sand"; _val = 5;};
+	case (player distance (getMarkerPos "oro_1") < 120) : {_mine = "oro"; _val = 4;};
+	case (player distance (getMarkerPos "carbon_1") < 75) : {_mine = "carbon"; _val = 5;};
 	case (player distance (getMarkerPos "diamond_1") < 50): {_mine = "diamond"; _val = 1;};
-	case (player distance (getMarkerPos "platino_1") < 40) : {_mine = "oilu"; _val = 1;};
-	case (player distance (getMarkerPos "platino_2") < 40) : {_mine = "oilu"; _val = 1;};
-	case (player distance (getMarkerPos "granito_1") < 50): {_mine = "rock"; _val = 2;};
+	case (player distance (getMarkerPos "platino_1") < 40) : {_mine = "platino"; _val = 1;};
+	case (player distance (getMarkerPos "platino_2") < 40) : {_mine = "platino"; _val = 1;};
+	case (player distance (getMarkerPos "granito_1") < 50): {_mine = "granito"; _val = 2;};
 	default {_mine = "";};
 };
 //Mine check

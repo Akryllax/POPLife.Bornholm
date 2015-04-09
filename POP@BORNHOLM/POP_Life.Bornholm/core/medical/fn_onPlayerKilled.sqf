@@ -65,12 +65,16 @@ if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _ki
 		//Get rid of this if you don't want automatic vehicle license removal.
 		if(!local _killer) then {
 			[[2],"life_fnc_removeLicenses",_killer,FALSE] spawn life_fnc_MP;
+			life_karma = life_karma - 40;
+			call fnc_karma;
 		};
 	} else {
 		[[getPlayerUID _killer,_killer getVariable["realname",name _killer],"2"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 
 		if(!local _killer) then {
 			[[3],"life_fnc_removeLicenses",_killer,FALSE] spawn life_fnc_MP;
+			life_karma = life_karma - 40;
+			call fnc_karma;
 		};
 	};
 };
@@ -82,6 +86,8 @@ if(side _killer == west && playerSide != west) then {
 	if(!life_use_atm && {life_cash > 0}) then {
 		[format[localize "STR_Cop_RobberDead",[life_cash] call life_fnc_numberText],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		life_cash = 0;
+		life_karma = life_karma + 40;
+			call fnc_karma;
 	};
 };
 

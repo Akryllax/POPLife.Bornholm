@@ -12,8 +12,8 @@ if(_var == "") exitWith {""};
 switch (_var) do
 {
 	//Virtual Inventory Items
-	case "life_inv_oilu": {("textures\icons\items\oil_unprocessed.paa")};
-	case "life_inv_oilp": {("textures\icons\items\oil_processed.paa")};
+	case "life_inv_platino": {("textures\icons\items\oil_unprocessed.paa")};
+	case "life_inv_platinos": {("textures\icons\items\oil_processed.paa")};
 	case "life_inv_heroinu": {("textures\icons\items\heroin_unprocessed.paa")};
 	case "life_inv_heroinp": {("textures\icons\items\heroin_processed.paa")};
 	case "life_inv_cannabis": {("textures\icons\items\cannabis.paa")};
@@ -39,10 +39,10 @@ switch (_var) do
 	case "life_inv_ironore": {("textures\icons\items\iron_ore.paa")};
 	case "life_inv_ironr": {("textures\icons\items\iron.paa")};
 	case "life_inv_copperr": {("textures\icons\items\copper.paa")};
-	case "life_inv_sand": {("textures\icons\items\sand.paa")};
-	case "life_inv_salt": {("textures\icons\items\salt_unprocessed.paa")};
-	case "life_inv_saltr": {("textures\icons\items\salt.paa")};
-	case "life_inv_glass": {("textures\icons\items\glass.paa")};
+	case "life_inv_carbon": {("textures\icons\items\sand.paa")};
+	case "life_inv_oro": {("textures\icons\items\salt_unprocessed.paa")};
+	case "life_inv_oros": {("textures\icons\items\salt.paa")};
+	case "life_inv_carbons": {("textures\icons\items\glass.paa")};
 	case "life_inv_diamond": {("textures\icons\items\diamond_unprocessed.paa")};
 	case "life_inv_diamondr": {("textures\icons\items\diamond.paa")};
 	case "life_inv_tbacon": {("textures\icons\items\meat.paa")};
@@ -52,8 +52,8 @@ switch (_var) do
 	case "life_inv_coke": {("textures\icons\items\cocain_unprocessed.paa")};
 	case "life_inv_cokep": {("textures\icons\items\cocain_processed.paa")};
 	case "life_inv_spikeStrip": {("textures\icons\items\spikestrip.paa")};
-	case "life_inv_rock": {("textures\icons\items\rock.paa")};
-	case "life_inv_cement": {("textures\icons\items\cement.paa")};
+	case "life_inv_granito": {("textures\icons\items\rock.paa")};
+	case "life_inv_granitos": {("textures\icons\items\cement.paa")};
 	case "life_inv_goldbar": {("textures\icons\items\goldbar.paa")};
 	case "life_inv_blastingcharge": {("textures\icons\items\blastingcharge.paa")};
 	case "life_inv_boltcutter": {("textures\icons\items\boltcutter.paa")};

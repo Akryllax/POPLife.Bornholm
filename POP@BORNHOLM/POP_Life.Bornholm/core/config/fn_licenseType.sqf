@@ -1,7 +1,7 @@
 /*
 	File: fn_licenseType.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Returns the short-var of the license name to a long var and display name.
 */
@@ -21,7 +21,7 @@ switch (_mode) do
 			case "pilot": {_var = "license_civ_air"}; //Pilot/air license cost
 			case "gun": {_var = "license_civ_gun"}; //Firearm/gun license cost
 			case "dive": {_var = "license_civ_dive"}; //Diving license cost
-			case "oil": {_var = "license_civ_oil"}; //Oil processing license cost
+			case "platino": {_var = "license_civ_platino"}; //Oil processing license cost
 			case "cair": {_var = "license_cop_air"}; //Cop Pilot License cost
 			case "swat": {_var = "license_cop_swat"}; //Swat License cost
 			case "cg": {_var = "license_cop_cg"}; //Coast guard license cost
@@ -32,19 +32,19 @@ switch (_mode) do
 			case "rebel": {_var = "license_civ_rebel"}; //Rebel License
 			case "truck":{_var = "license_civ_truck"}; //Truck License
 			case "diamond": {_var = "license_civ_diamond"};
-			case "salt": {_var = "license_civ_salt"};
+			case "oro": {_var = "license_civ_oro"};
 			case "cocaine": {_var = "license_civ_coke"};
-			case "sand": {_var = "license_civ_sand"};
+			case "carbon": {_var = "license_civ_carbon"};
 			case "iron": {_var = "license_civ_iron"};
 			case "copper": {_var = "license_civ_copper"};
-			case "cement": {_var = "license_civ_cement"};
+			case "granitos": {_var = "license_civ_granitos"};
 			case "mair": {_var = "license_med_air"};
 			case "home": {_var = "license_civ_home"};
 			case "cazarrecompensas": { _var = "license_civ_cazarrecompensas" };
 			default {_var = ""};
 		};
 	};
-	
+
 	case 1:
 	{
 		switch (_type) do
@@ -54,7 +54,7 @@ switch (_mode) do
 			case "license_civ_air": {_var = "pilot"}; //Pilot/air license cost
 			case "license_civ_gun": {_var = "gun"}; //Firearm/gun license cost
 			case "license_civ_dive": {_var = "dive"}; //Diving license cost
-			case "license_civ_oil": {_var = "oil"}; //Oil processing license cost
+			case "license_civ_platino": {_var = "platino"}; //Oil processing license cost
 			case "license_cop_air": {_var = "cair"}; //Cop Pilot License cost
 			case "license_cop_swat": {_var = "swat"}; //Swat License cost
 			case "license_cop_cg": {_var = "cg"}; //Coast guard license cost
@@ -65,12 +65,12 @@ switch (_mode) do
 			case "license_civ_rebel": {_var = "rebel"}; //Rebel License
 			case "license_civ_truck":{_var = "truck"}; //Truck License
 			case "license_civ_diamond": {_var = "diamond"};
-			case "license_civ_salt": {_var = "salt"};
+			case "license_civ_oro": {_var = "oro"};
 			case "license_civ_coke": {_var = "cocaine"};
-			case "license_civ_sand": {_var = "sand"};
+			case "license_civ_carbon": {_var = "carbon"};
 			case "license_civ_iron": {_var = "iron"};
 			case "license_civ_copper": {_var = "copper"};
-			case "license_civ_cement": {_var = "cement"};
+			case "license_civ_granitos": {_var = "granitos"};
 			case "license_med_air": {_var = "mair"};
 			case "license_civ_home": {_var = "home"};
 			case "license_civ_cazarrecompensas": {_var = "cazarrecompensas" };

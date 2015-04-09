@@ -11,8 +11,8 @@ if(_item == "") exitWith {};
 
 switch (_item) do
 {
-	case "oilu": {7};
-	case "oilp": {6};
+	case "platino": {7};
+	case "platinos": {6};
 	case "heroinu": {6};
 	case "heroinp": {4};
 	case "cannabis": {4};
@@ -39,17 +39,17 @@ switch (_item) do
 	case "ironore": {5};
 	case "copper_r": {3};
 	case "iron_r": {3};
-	case "sand": {3};
-	case "salt": {3};
-	case "salt_r": {1};
-	case "glass": {1};
+	case "carbon": {3};
+	case "oro": {3};
+	case "oros": {1};
+	case "carbons": {1};
 	case "diamond": {4};
 	case "diamondc": {2};
 	case "cocaine": {6};
 	case "cocainep": {4};
 	case "spikeStrip": {15};
-	case "rock": {6};
-	case "cement": {5};
+	case "granito": {6};
+	case "granitos": {5};
 	case "goldbar": {12};
 	case "blastingcharge": {15};
 	case "boltcutter": {5};

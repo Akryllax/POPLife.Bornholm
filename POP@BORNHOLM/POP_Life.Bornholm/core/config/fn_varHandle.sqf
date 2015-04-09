@@ -16,8 +16,8 @@ switch (_mode) do
 	{
 		switch (_var) do
 		{
-			case "oilu": {"life_inv_oilu"};
-			case "oilp": {"life_inv_oilp"};
+			case "platino": {"life_inv_platino"};
+			case "platinos": {"life_inv_platinos"};
 			case "heroinu": {"life_inv_heroinu"};
 			case "heroinp": {"life_inv_heroinp"};
 			case "cannabis": {"life_inv_cannabis"};
@@ -44,10 +44,10 @@ switch (_mode) do
 			case "ironore": {"life_inv_ironore"};
 			case "iron_r": {"life_inv_ironr"};
 			case "copper_r": {"life_inv_copperr"};
-			case "salt": {"life_inv_salt"};
-			case "salt_r": {"life_inv_saltr"};
-			case "sand": {"life_inv_sand"};
-			case "glass": {"life_inv_glass"};
+			case "oro": {"life_inv_oro"};
+			case "oros": {"life_inv_oros"};
+			case "carbon": {"life_inv_carbon"};
+			case "carbons": {"life_inv_carbons"};
 			case "tbacon": {"life_inv_tbacon"};
 			case "lockpick": {"life_inv_lockpick"};
 			case "redgull": {"life_inv_redgull"};
@@ -57,8 +57,8 @@ switch (_mode) do
 			case "cocaine": {"life_inv_coke"};
 			case "cocainep": {"life_inv_cokep"};
 			case "spikeStrip": {"life_inv_spikeStrip"};
-			case "cement": {"life_inv_cement"};
-			case "rock": {"life_inv_rock"};
+			case "granitos": {"life_inv_granitos"};
+			case "granito": {"life_inv_granito"};
 			case "goldbar": {"life_inv_goldbar"};
 			case "blastingcharge": {"life_inv_blastingcharge"};
 			case "boltcutter": {"life_inv_boltcutter"};
@@ -124,8 +124,8 @@ switch (_mode) do
 	{
 		switch (_var) do
 		{
-			case "life_inv_oilu": {"oilu"};
-			case "life_inv_oilp": {"oilp"};
+			case "life_inv_platino": {"platino"};
+			case "life_inv_platinos": {"platinos"};
 			case "life_inv_heroinu": {"heroinu"};
 			case "life_inv_heroinp": {"heroinp"};
 			case "life_inv_cannabis": {"cannabis"};
@@ -152,21 +152,21 @@ switch (_mode) do
 			case "life_inv_ironore": {"ironore"};
 			case "life_inv_ironr": {"iron_r"};
 			case "life_inv_copperr": {"copper_r"};
-			case "life_inv_sand": {"sand"};
-			case "life_inv_salt": {"salt"};
-			case "life_inv_glass": {"glass"};
+			case "life_inv_carbon": {"carbon"};
+			case "life_inv_oro": {"oro"};
+			case "life_inv_carbons": {"carbons"};
 			case "life_inv_redgull": {"redgull"};
 			case "life_inv_lockpick": {"lockpick"};
 			case "life_inv_tbacon": {"tbacon"};
 			case "life_inv_peach": {"peach"};
 			case "life_inv_diamond": {"diamond"};
 			case "life_inv_diamondr": {"diamondc"};
-			case "life_inv_saltr": {"salt_r"};
+			case "life_inv_oros": {"oros"};
 			case "life_inv_coke": {"cocaine"};
 			case "life_inv_cokep": {"cocainep"};
 			case "life_inv_spikeStrip": {"spikeStrip"};
-			case "life_inv_cement": {"cement"};
-			case "life_inv_rock": {"rock"};
+			case "life_inv_granitos": {"granitos"};
+			case "life_inv_granito": {"granito"};
 			case "life_inv_goldbar": {"goldbar"};
 			case "life_inv_blastingcharge": {"blastingcharge"};
 			case "life_inv_boltcutter": {"boltcutter"};

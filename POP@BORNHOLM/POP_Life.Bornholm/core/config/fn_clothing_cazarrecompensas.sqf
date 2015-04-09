@@ -70,7 +70,7 @@ switch (_filter) do
 			["H_HelmetB_snakeskin",nil,5000 * Desc],
 			["H_HelmetB_desert",nil,5000 * Desc],
 			["H_HelmetB_black",nil,5000 * Desc],
-			["H_HelmetB_sand",nil,5000 * Desc],
+			["H_HelmetB_carbon",nil,5000 * Desc],
 			["H_HelmetB_camo",nil,5000 * Desc]
 		];
 	};

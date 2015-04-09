@@ -111,8 +111,8 @@ life_fnc_garageRefund = compileFinal
 [] execVM "core\init_survival.sqf";
 
 [] execVM "WarBlast\zlt_fastrope.sqf";
-//[] call War_fnc_lacrimogeno;
 [] execVM "WarBlast\fn_statusBar.sqf";
+[] execVM "WarBlast\funciones.sqf";
 
 
 switch(__GETC__(life_donator)) do

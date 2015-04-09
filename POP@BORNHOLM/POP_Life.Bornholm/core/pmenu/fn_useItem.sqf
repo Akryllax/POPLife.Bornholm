@@ -21,7 +21,7 @@ switch (true) do
 		{
 			profileNamespace setVariable ["sed", _sed + 45];
 			player setFatigue 0;
-			if(_sed > 100) then {_sed = 100; player setFatigue 1; hint "Bebistes demasiado!";};
+			if(_sed > 100) then {_sed = 100; player setFatigue 1; hint "Bebistes demasiado!"; profileNamespace setVariable ["sed",_sed];};
 
 		};
 	};

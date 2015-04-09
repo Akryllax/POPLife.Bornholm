@@ -43,6 +43,8 @@ missionNamespace setVariable [(_x select 0),[parseNumber (_x select 1), parseNum
 } foreach (_this select 9);
 };
 
+life_karma = parseNumber (_this select 10);
+
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
@@ -53,29 +55,29 @@ switch(playerSide) do {
 
 	case civilian: {
 	    switch(__GETC__(life_donator)) do {
+	    case 0: {};
 	    case 1: {life_paycheck = life_paycheck + 500;};
 	    case 2: {life_paycheck = life_paycheck + 1500;};
 	    case 3: {life_paycheck = life_paycheck + 3000;};
         case 4: {life_paycheck = life_paycheck + 5000;};
-        case 5: {life_paycheck = life_paycheck + 3000;};
         };
 		life_is_arrested = _this select 7;
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);
 		__CONST__(life_mercLevel,0);
-		life_houses = _this select 10;
+		life_houses = _this select 11;
 		{
 			_house = nearestBuilding (call compile format["%1", _x select 0]);
 			life_vehicles pushBack _house;
 		} foreach life_houses;
+		[] spawn life_fnc_initHouses;
 
-		life_gangData = _This select 11;
+		life_gangData = _This select 12;
 		if(count life_gangData != 0) then {
 			[] spawn life_fnc_initGang;
 		};
-		//posicion
 
-		[] spawn life_fnc_initHouses;
+
 	};
 
 	case independent: {

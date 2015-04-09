@@ -32,7 +32,7 @@ switch (_filter) do
 		    ["TRYK_U_B_BLKOCP_CombatUniform",nil,18000 * Desc],
 			["TRYK_U_B_BLKOCP_R_CombatUniformTshirt",nil,8000 * Desc],
 		    ["TRYK_U_B_BLKTAN_CombatUniform",nil,18000 * Desc],
-		    ["TRYK_U_B_BLKTANR_CombatUniformTshirt",nil,18000 * Desc],          
+		    ["TRYK_U_B_BLKTANR_CombatUniformTshirt",nil,18000 * Desc],
 			["U_IG_Guerilla1_1",nil,5000 * Desc],
 			["U_I_G_Story_Protagonist_F",nil,7500 * Desc],
 			["U_B_CombatUniform_mcam_tshirt",nil,12500 * Desc],
@@ -53,7 +53,7 @@ switch (_filter) do
 	case 1:
 	{
 		[
-			
+
 			["G_Balaclava_blk",nil, 1500 * Desc],
             ["G_Bandanna_beast",nil, 1500 * Desc],
             ["G_Balaclava_oli",nil, 1500 * Desc],
@@ -89,7 +89,7 @@ switch (_filter) do
 			["H_HelmetB_snakeskin",nil,5000 * Desc],
 			["H_HelmetB_desert",nil,5000 * Desc],
 			["H_HelmetB_black",nil,5000 * Desc],
-			["H_HelmetB_sand",nil,5000 * Desc],
+			["H_HelmetB_carbon",nil,5000 * Desc],
 			["H_HelmetB_camo",nil,5000 * Desc]
 		];
 	};
@@ -107,7 +107,7 @@ switch (_filter) do
 			["G_Squares",nil,10 * Desc],
 			["G_Lowprofile",nil,30 * Desc],
 			["G_Combat",nil,55 * Desc]
-			
+
 		];
 	};
 

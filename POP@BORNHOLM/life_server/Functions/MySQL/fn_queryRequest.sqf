@@ -23,10 +23,10 @@ _ownerID = owner _ownerID;
 	The other part is well the SQL statement.
 */
 _query = switch(_side) do {
-	case west: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, cop_prof, blacklist FROM players WHERE playerid='%1'",_uid];};
-	case civilian: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civ_prof FROM players WHERE playerid='%1'",_uid];};
-	case independent: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear, med_prof  FROM players WHERE playerid='%1'",_uid];};
-	case east: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, merclevel, merc_gear, merc_licenses, blacklist FROM players WHERE playerid='%1'",_uid];};
+	case west: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, cop_prof, karma FROM players WHERE playerid='%1'",_uid];};
+	case civilian: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civ_prof, karma FROM players WHERE playerid='%1'",_uid];};
+	case independent: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear, med_prof, karma  FROM players WHERE playerid='%1'",_uid];};
+	case east: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, merclevel, merc_gear, merc_licenses, karma FROM players WHERE playerid='%1'",_uid];};
 };
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
@@ -89,6 +89,8 @@ _old set[_i,[_data select 0, ([_data select 1,1] call DB_fnc_numberSafe),([_data
 
 _queryResult set[9,_old];
 
+_tmp = _queryResult select 10;
+_queryResult set[10,[_tmp] call Db_fnc_numberSafe];
 
 //Parse data for specific side.
 switch (_side) do {
@@ -105,6 +107,6 @@ switch (_side) do {
 };
 
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
-_queryResult set[12,_keyArr];
+_queryResult set[13,_keyArr];
 
 [_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] spawn life_fnc_MP;

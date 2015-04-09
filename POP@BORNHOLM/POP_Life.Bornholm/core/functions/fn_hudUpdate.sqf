@@ -14,7 +14,7 @@ _food = _ui displayCtrl 23500;
 _water = _ui displayCtrl 23510;
 _health = _ui displayCtrl 23515;
 _happy = _ui displayCtrl 23520;
-_karma = profilenamespace getVariable "karma";
+_karma = life_karma;
 _comida = profileNamespace getVariable "hambre";
 _sed = profileNamespace getVariable "sed";
 
@@ -50,8 +50,8 @@ _health ctrlCommit 0;
 _happy ctrlSetPosition [safeZoneX+safeZoneW-0.10,safeZoneY+safeZoneH-0.259];
 _happy ctrlSetText format["%1%2", _karma, "%"];
 _happy ctrlSetBackgroundColor [0,0,0,0.5];
-if ((_karma < 1000) or (_karma > 2000)) then {
-	if (_karma < 1000) then {
+if ((_karma < 0) or (_karma > 2500)) then {
+	if (_karma < -2500) then {
 		_happy ctrlSetBackgroundColor [255, 0, 0, 0.5];
 	} else {
 		_happy ctrlSetBackgroundColor [0, 0, 255, 0.5]

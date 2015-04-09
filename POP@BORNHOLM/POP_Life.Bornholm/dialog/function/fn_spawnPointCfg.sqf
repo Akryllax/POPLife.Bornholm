@@ -39,7 +39,7 @@ switch (_side) do
 
 		];
 
-		if(license_civ_rebel) then {
+		if(life_karma > -2500) then {
 			_return = _return + [["reb_1","Puesto rebelde 1","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
 			_return = _return + [["reb_2","Puesto rebelde 2","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
 			_return = _return + [["reb_3","Puesto rebelde 3","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]];

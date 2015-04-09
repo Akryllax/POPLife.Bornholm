@@ -28,6 +28,7 @@ _profs pushBack [_x select 0,_data select 0,_data select 1];
 
 } foreach life_prof;
 _packet pushBack _profs;
+_packet pushBack life_karma;
 
 
 switch (playerSide) do {
