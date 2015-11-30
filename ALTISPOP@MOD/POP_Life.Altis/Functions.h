@@ -399,14 +399,7 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
-	};
-	class economy
-	{
-		file = "core\economy";
-		class virt_updatePrice {};
-		class addsubstract {};
-		class openEconomy {};
-		class virt_updateEconomy {};
+		class gangWithdraw {};
 	};
 	class Groups
 	{
@@ -505,109 +498,26 @@ class Quickskill
         class plantarMaiz {};
         class plantarTomates {};
 	};
-	
 	class EfectosDrogas
 	{
 		file = "QUICKSKILL\items";
 		class drugsEffects {};
 	};
-
-     class Items
-	{
-		file = "QUICKSKILL\items";
-		class gpsEspia {};
-		class kitTortura{};
-		class bombaVelocidad{};
-		class ponerObjeto{};
-		class quitarObjeto{};
-
-	};
-	
-	class Espias
-	{
-		file = "QUICKSKILL\espias";
-		class darChivatazo{};
-		
-	};
-	
-	class RoleMode
-	{
-		file = "QUICKSKILL\rolemode";
-		class roleMode {};
-		class roleModeCops {};	
-	};
-	
-	class Robos
-	{
-		file = "QUICKSKILL\robos";
-		class robosHandler {};
-		class timerRobo {};
-		//class robosActivar{};
-		//class robosDesactivar{};
-	};
-
 	class Trabajos
 	{
 		file = "QUICKSKILL\trabajos";
-		class comprarFurgoQuimico {};
-		class cocinarMeta {};
 		class seguridadPrivada{};
-		//class extraerPetroleo{};
-		//class comprarBarcoPetroleo{};
-		class transportarDrogaMar{};
-		
 	};
-
-	class Barrios
-	{
-		file = "QUICKSKILL\barrios";
-		//class capturarBarrio {};
-	
-		//class barrioCapturado{};
-		
-		
-	};
-
+	    class Robos
+    {
+        file = "QUICKSKILL\robos";
+        class robosHandler {};
+        class timerRobo {};
+    };
 };
-/*
-class Rosen {
-	tag = "ROS";
-	class politica
-	{
-		file = "Rosen\politica";
-		class protestar{};
-		class abrirMenuPresidente{};
-	};
-	class items
-	{
-		file = "Rosen\items";
-		class silla{};	
-		class fiesta{};	
-	};
-};
-*/
 class Akryllax {
 	tag = "life";
-	class Tracking
-	{
-		file = "core\AKR\tracking";
-		class suspectTracking {};
-	};
-	
-	class Util
-	{
-		file = "core\AKR\util";
-		class say3DGlobal {};
-	};
-	
-	class MP
-	{
-		file = "core\AKR\mp";
-		class initRem {};
-		class rem {};
-		class remExec {};
-	};
-	
+
 	class Racing
 	{
 		file = "core\akr\racing";
@@ -623,34 +533,5 @@ class Akryllax {
 		class startRace {};
 		class startTrackAction{};
 		class testing {};
-	};
-	
-	class Enfermedades
-	{
-		file = "core\enfermedades";
-		class proximidadCentro{};
-		class CfgEnfermedades {};
-		class contagiar {};
-		class efectoEnfermedad {};
-		class infectarMe {};
-		class infectarMeAction {};
-		class infectarTo {};
-		class curarEnfermedades {};
-		class curarEnfermedadesAction {};
-		class forceCure {};
-	};
-	class Cazarrecompensas
-	{
-		file ="core\AKR\cazarrecompensas";
-		class activarCazarrecompensas {};
-	};
-	
-	class IllegalItems 
-	{
-			file = "core\AKR\illegalItems";
-			class makeIlegal {};
-			class makeLegal {};
-			class querryMakeIlegal {};
-			class querryMakeLegal {};
 	};
 };

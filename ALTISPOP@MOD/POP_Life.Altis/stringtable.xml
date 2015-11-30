@@ -578,6 +578,15 @@
 			<Portuguese>Você não tem todo esse dinhero na sua conta bancária</Portuguese>
 			<Spanish>No tienes tanto dinero en tu cuenta bancaria!</Spanish>
  		</Key>
+		<Key ID="STR_ATM_NotEnoughFundsG">
+ 			<Original>You don't have that much in your bank account!</Original>
+ 			<English>You don't have that much in your bank account!</English>
+			<German>Du hast nicht so viel Geld auf deinem Bankkonto!</German>
+ 			<French>Vous n'avez pas autant dans le compte de votre famille</French>
+			<Italian>Non hai fondi sufficienti nel tuo conto in banca!</Italian>
+			<Portuguese>Você não tem todo esse dinhero na sua conta bancária</Portuguese>
+			<Spanish>No tienes tanto dinero en tu cuenta bancaria de la Banda!</Spanish>
+ 		</Key> 
  		<Key ID="STR_ATM_SentMoneyFail">
  			<Original>You do not have enough money in your bank account, to transfer $%1 you will need $%2 as a tax fee.</Original>
  			<English>You do not have enough money in your bank account, to transfer $%1 you will need $%2 as a tax fee.</English>

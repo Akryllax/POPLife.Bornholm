@@ -92,6 +92,9 @@ switch (_item) do
 	case "pilaRuedas": {20};
 	case "defensaChasisCoche": {30};
 	case "contenedorBasura": {15};
+	//Tarjeta de Credito
+	case "cb": {1};	
+	
 
 	default {1};
 };

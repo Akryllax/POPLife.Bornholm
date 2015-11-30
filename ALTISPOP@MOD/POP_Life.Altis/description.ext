@@ -3,7 +3,7 @@ onLoadName = "Altis Life RPG PoP";
 onLoadMission = "Creado por Tonic y editado por PoP";
 loadscreen = "textures\billboards\server_info.jpg";
 
-joinUnassigned = 0;
+joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 5;
 disabledAI = true;
@@ -25,7 +25,7 @@ class Header
 wreckLimit = 1;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 61;
-corpseLimit = 5;
+corpseLimit = 50;
 corpseRemovalMinTime = 180;
 corpseRemovalMaxTime = 360;
 
@@ -268,13 +268,4 @@ class CfgNotifications
 		priority = 5;
 	};
 };
-class Params
-{
-        // paramsArray[0]
-       class initialWeatherParam {
-          title = "Starting Weather";
-          values[] = {0,1,2,3,4};
-          texts[] = {"Clear","Overcast","Rain","Fog","Random"};
-          default = 4;
-       };
-};
+

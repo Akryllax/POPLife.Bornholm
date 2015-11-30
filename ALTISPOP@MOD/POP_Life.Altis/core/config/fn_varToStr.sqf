@@ -115,6 +115,8 @@ switch (_var) do
 	//items Rosen
 	case "llave_casino": {(localize "STR_Item_llave_casino")};
 	case "maletin_casino": {(localize "STR_Item_maletin_casino")};
+	//Tarjeta de Credito
+	case "life_inv_cb": {"Tarjeta de Credito"};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

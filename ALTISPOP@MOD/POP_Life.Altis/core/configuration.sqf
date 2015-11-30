@@ -242,7 +242,9 @@ life_inv_items =
 	"life_inv_contenedorBasura",
 	//casino
 	"life_inv_llave_casino",
-	"life_inv_maletin_casino"
+	"life_inv_maletin_casino",
+	//Tarjeta de Credito
+	"life_inv_cb"
 
 ];
 
@@ -354,7 +356,10 @@ sell_array =
 	["maiz",1000],
 	//trabajos
 	["meta",50000],
-	["petroleo",5000]
+	["petroleo",5000],
+	//Tarjeta de Credito
+	["cb",3000]
+	
 ];
 __CONST__(sell_array,sell_array);
 
@@ -409,7 +414,9 @@ buy_array =
 	["meta",50000],
 	["petroleo",5000],
 	//casino
-	["maletin_casino",1500000]
+	["maletin_casino",1500000],
+	//Tarjeta de Credito
+	["cb",5000]
 ];
 __CONST__(buy_array,buy_array);
 

@@ -116,6 +116,8 @@ switch (_mode) do
 			//items Rosen
 			case "llave_casino": {"life_inv_llave_casino"};
 			case "maletin_casino": {"life_inv_maletin_casino"};
+			//Tarjeta de Credito
+			 case "cb": {"life_inv_cb"};
 			default {"not found"};
 		};
 	};
@@ -223,6 +225,8 @@ switch (_mode) do
 			//items Rosen
 			case "llave_casino": {"life_inv_llave_casino"};
 			case "maletin_casino": {"life_inv_maletin_casino"};
+			//Tarjeta de Credito  
+			case "cb": {"life_inv_cb"};
 			default {"not found"};
 		};
 	};
